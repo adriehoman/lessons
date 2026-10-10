@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHCAGE013 - Content</title>
+<style>
+  :root{
+    --ink:#1b2530;
+    --soft-ink:#44505c;
+    --paper:#ffffff;
+    --deep:#12384a;      /* banner blue, taken from the Sway title picture */
+    --aqua:#8fe3e8;      /* Sway title colour */
+    --action:#0b6f7c;    /* buttons and links */
+    --card-a:#fbfbf9;
+    --card-b:#ecece8;
+    --edge:#d9d9d4;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    font-size:clamp(17px,1.5vw,30px); line-height:1.55;
+  }
+  main{overflow-x:clip}
+  .wrap{max-width:1500px; margin:0 auto; padding:0 clamp(20px,3vw,60px)}
+
+  /* ---------- banners ---------- */
+  .banner{
+    background:var(--deep) center/cover no-repeat; color:#fff;
+    padding:120px 20px 36px; margin:0;
+  }
+  .banner.first{padding-top:170px}
+  .banner h1,.banner h2{
+    max-width:1500px; margin:0 auto; line-height:1.15; font-weight:700;
+    text-shadow:0 2px 14px rgba(0,0,0,.45);
+  }
+  .banner h1{font-size:clamp(30px,5vw,76px); color:var(--aqua)}
+  .banner h2{font-size:clamp(28px,4.2vw,64px); text-align:center}
+  section{padding:36px 0 12px}
+  .banner + .wrap{padding-top:36px}
+
+  h2.topic{font-size:1.35em; line-height:1.3; margin:44px 0 8px}
+  h3{font-size:1.15em; line-height:1.3; margin:0 0 10px}
+  p{margin:0 0 14px}
+  ul{margin:0 0 14px; padding-left:26px}
+  li{margin:4px 0}
+  li ul{margin:4px 0 6px; list-style:"–  "}
+  a{color:var(--action); text-underline-offset:3px}
+  a.star{font-weight:700; padding:0 4px}
+  .big a{color:#8fe3e8}
+  a:focus-visible,button:focus-visible,.deck:focus-visible{outline:3px solid #f2a900; outline-offset:3px}
+
+  figure.pic{margin:22px 0}
+  figure.pic img{display:block; width:100%; height:auto; max-height:86vh; object-fit:contain; border-radius:4px}
+
+  .video{margin:26px auto; max-width:calc((100vh - 90px) * 16 / 9); aspect-ratio:16/9; background:#0e1a22; border-radius:6px; overflow:hidden; position:relative}
+  .video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+  .video.empty{aspect-ratio:auto; max-width:none; background:#eef3f4; color:var(--soft-ink); padding:18px 20px; border:2px dashed #b9c8cc}
+  .video.empty b{color:var(--ink)}
+
+  .audio{margin:26px 0; padding:16px 18px; background:#eef3f4; border-radius:6px}
+  .audio p{margin:0 0 10px}
+  .audio audio{display:block; width:100%}
+  .watch{margin:-16px 0 26px; font-size:.8em; text-align:center}
+
+  /* ---------- card stack ---------- */
+  .stack{margin:84px auto 40px; width:86%; max-width:1150px; --tilt:.4}
+  .deck{position:relative; cursor:pointer; border-radius:3px; transition:height .3s ease}
+  .pile i{
+    position:absolute; inset:0; background:var(--card-b); border:1px solid var(--edge);
+    box-shadow:0 1px 3px rgba(20,30,40,.10);
+  }
+  .pile i:nth-child(even){background:var(--card-a)}
+  .pile i{transform:rotate(calc(var(--a) * var(--tilt,1))) translate(var(--x),var(--y))}
+  .pile i:nth-child(1){--a:-15deg; --x:-4px; --y:6px}
+  .pile i:nth-child(2){--a:6deg;   --x:6px;  --y:2px}
+  .pile i:nth-child(3){--a:-12deg; --x:3px;  --y:-5px}
+  .pile i:nth-child(4){--a:3deg;   --x:-5px; --y:4px}
+  .pile i:nth-child(5){--a:-10deg; --x:5px;  --y:5px}
+  .pile i:nth-child(6){--a:-2deg;  --x:-3px; --y:-3px}
+  .pile i:nth-child(7){--a:-6deg;  --x:2px;  --y:3px}
+  .pile{position:absolute; inset:0; filter:drop-shadow(0 14px 18px rgba(20,30,40,.16))}
+
+  .card{
+    position:absolute; left:0; top:0; width:100%; height:100%;
+    background:var(--card-a); border:1px solid var(--edge);
+    padding:1.5em 1.8em 1.3em; font-size:clamp(16px,1.4vw,27px); line-height:1.5;
+    opacity:0; pointer-events:none; z-index:1; min-height:7em;
+    transform:rotate(calc(var(--r,-6deg) * var(--tilt,1)));
+    box-shadow:0 2px 6px rgba(20,30,40,.14);
+  }
+  .card.shade{background:var(--card-b)}
+  .card.long{font-size:clamp(14.5px,1.25vw,24px); line-height:1.45}
+  .card.top{opacity:1; pointer-events:auto; z-index:3}
+  .card.arrive{animation:arrive .42s ease-out}
+  .card.leave{opacity:1; z-index:4; animation:leave .42s ease-in forwards}
+  .card.leave-back{opacity:1; z-index:4; animation:leaveBack .42s ease-in forwards}
+  @keyframes arrive{from{transform:rotate(calc(var(--r) * var(--tilt,1) + 5deg)) scale(.96)} to{transform:rotate(calc(var(--r) * var(--tilt,1))) scale(1)}}
+  @keyframes leave{to{transform:translate(58%,-10%) rotate(16deg); opacity:0}}
+  @keyframes leaveBack{to{transform:translate(-58%,-10%) rotate(-18deg); opacity:0}}
+  .card .count{
+    float:right; margin:-6px -8px 6px 14px; font-size:.8em; font-weight:600;
+    color:var(--soft-ink); background:#fff; border:1px solid var(--edge); border-radius:20px; padding:2px 12px;
+  }
+  .card ul{margin-bottom:6px}
+
+  .controls{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin-top:70px}
+  .controls button{
+    font:inherit; font-size:clamp(17px,1.2vw,24px); font-weight:600; cursor:pointer;
+    padding:10px 20px; border-radius:6px; border:2px solid var(--action);
+    background:#fff; color:var(--action); min-height:48px;
+  }
+  .controls button.next{background:var(--action); color:#fff}
+  .controls button:hover{filter:brightness(.94)}
+  .controls .where{min-width:7em; text-align:center; font-weight:700; font-size:clamp(18px,1.25vw,25px)}
+  .hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:10px 0 0}
+
+  /* ---------- full screen view ---------- */
+  .big{position:fixed; inset:0; z-index:50; background:#05090c; color:#fff; display:none}
+  .big.open{display:flex; flex-direction:column}
+  .big .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; font-weight:700}
+  .big .body{flex:1; overflow:auto; padding:8px clamp(20px,7vw,90px) 24px; font-size:clamp(20px,2.9vw,34px); line-height:1.45}
+  .big .body h3{font-size:1.1em; margin-bottom:.5em}
+  .big .body .count{display:none}
+  .big .foot{display:flex; gap:12px; justify-content:center; padding:12px 18px 20px}
+  .big button{
+    font:inherit; font-size:18px; font-weight:600; cursor:pointer; min-height:48px;
+    padding:10px 22px; border-radius:6px; border:2px solid #fff; background:transparent; color:#fff;
+  }
+  .big button.next{background:#fff; color:#05090c}
+
+  @media (max-width:560px){
+    body{font-size:17px}
+    .card{padding:20px 20px 18px; font-size:16px}
+    .card.long{font-size:14.5px}
+    .stack{width:auto; margin-left:14px; margin-right:14px; --tilt:.3}
+    .banner.first{padding-top:110px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .card.arrive,.card.leave,.card.leave-back{animation-duration:.01s}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<main>
+
+<!-- ======================================================================
+     HOW TO EDIT THIS PAGE
+     All the words students see are between here and the line that says
+     "END OF CONTENT". Change the words between the tags. Leave the tags
+     themselves ( the parts inside < > ) as they are.
+
+     A card stack looks like this:
+        <div class="stack">
+          <article class="card"> ...one card... </article>
+          <article class="card"> ...next card... </article>
+        </div>
+     To add a card, copy one whole <article> ... </article> block.
+     The card counter and buttons update by themselves.
+     ====================================================================== -->
+
+<style>
+  /* Extra styles for the index page only. The main style block above is unchanged. */
+  .how{margin:30px 0 26px; padding:16px 24px; background:#eef3f4; border-left:6px solid var(--action); border-radius:6px; font-weight:600}
+  .sl{padding:14px 0 10px; border-top:2px solid var(--edge)}
+  .row{display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 18px; margin:0 0 6px; font-size:1.15em; line-height:1.3}
+  .grp .row{margin-top:10px}
+  .no{font-weight:700; min-width:5.2em}
+  .ty{font-weight:700; font-size:.8em; min-width:7.2em; padding:3px 12px; border-radius:20px; background:#eef3f4; white-space:nowrap}
+  .ty-read{background:#dff1f3} .ty-quiz{background:#fde9c8} .ty-board{background:#e9e2f5} .ty-activity{background:#e2f0dc}
+  .ti{flex:1 1 12em; font-weight:700; min-width:0; overflow-wrap:anywhere}
+  .gh{font-size:1em; margin:0 0 4px; color:var(--soft-ink)}
+  ul.tp{margin:4px 0 6px 5.2em; font-size:.82em; color:var(--soft-ink); columns:2 22em; column-gap:3em}
+  ul.tp ul.tp{margin:2px 0 4px; font-size:1em; columns:auto}
+  ul.tp li{break-inside:avoid}
+  @media (max-width:560px){ ul.tp{margin-left:0} .no{min-width:0} .ty{min-width:0} }
+</style>
+
+<header class="banner first" data-pic="title">
+  <h1>CHCAGE013 - Content</h1>
+</header>
+
+<div class="wrap">
+
+  <p class="how">Find your topic in the list. Go to that slide number in Nearpod. Click a blue title to open the lesson page in a new tab.</p>
+
+  <section class="sl"><p class="row"><span class="no">Slide 1</span><span class="ty ty-start"><span aria-hidden="true">&#127937;</span> Start</span><span class="ti">Work effectively in Aged Care CHCAGE013</span></p></section>
+  <section class="sl"><p class="row"><span class="no">Slide 2</span><span class="ty ty-index"><span aria-hidden="true">&#128203;</span> Index</span><span class="ti">CHCAGE013 - Content (this page)</span></p></section>
+  <section class="sl"><p class="row"><span class="no">Slide 3</span><span class="ty ty-read"><span aria-hidden="true">&#128214;</span> Read</span><span class="ti"><a href="https://adriehoman.github.io/lessons/chcage013/1-part-1.html" target="_blank" rel="noopener">CHCAGE013 Part 1</a></span></p><ul class="tp"><li>1. Overview</li><li>2. Principles and models of support in aged care</li><li>3. Client-focused approaches to care</li><li>4. Person-centered approach and Positive Effect</li><li>5. Strengths-Bases Approach</li><li>6. Empowerment and Positive Effect</li><li>7. Social Role Valorisation (SRV) and Positive Effect</li><li>8. Rights-based approach</li><li>9. The Charter of Aged Care Rights - Rights of the older person</li><li>10. Responsibilities of the older person</li><li>11. Aged Care Quality Standards</li><li>12. Difference between care and support</li><li>13. Empowerment</li><li>14. Dignity of risk</li><li>15. National and state legislation - Safeguarding bodies - Legal frameworks</li><li>16. Legislation and industry standards</li><li>17. Elder abuse</li><li>18. Legal and Ethical concepts - Quizlet link</li><li>19. Video - Mandatory Reporting on child protection</li><li>20. Plug In - Abuse CHCCCS033 &amp; (CHCCCS038-6) &amp; CHCAGE011 (<a href="https://adriehoman.github.io/lessons/chcccs038/6-abuse.html" target="_blank" rel="noopener">lesson page</a>)<ul class="tp"><li>A. Abuse Def - External agencies and complaints</li><li>B. Situations where there is a greater risk of abuse occurring</li><li>C1. Types of abuse and Signs</li><li>C2. Types of Abuse - Indicators - Behaviours of the abuser</li><li>C3. Recommended resources.</li><li>D1. Abuse protection laws in Australia</li><li>D2. Human rights</li><li>D3. Organisational Responsibilities</li><li>D4. Consent to Report</li><li>D5. Mandatory Reporting</li><li>D6. Informed Consent and Actions</li><li>D7. Personnel who have mandatory reporting obligations</li><li>D8. Types of reports</li><li>D9. Reporting information</li><li>D10. Dignity of Risk and Legal Protections</li><li>D11. Understanding Duty of Care</li><li>D12. Code of Conduct for Support Workers</li><li>E. Roles, responsibilities and responding to claims and incidents</li><li>E1. Supporting the person</li><li>E2. Before you can start reassuring the person you will need to assess their wellbeing</li><li>E3. Safeguard strategies</li><li>E4. Video - The National Disability Abuse and Neglect Hotline</li></ul></li><li>21. Steps would you take if you suspected abuse</li><li>22. Video - Serious Incident Response Scheme</li><li>23. Restrictive practice</li><li>24. Video - Restrictive practices</li><li>25. Types of restrictive practices</li><li>26. Parameters for the use of restrictive practices</li><li>27. Working in Aged care</li><li>28. Main types of care</li><li>29. New/contemporary view of living arrangements for those receiving Aged Care support</li><li>30. Contemporary approaches to aged care - Some innovative concepts</li><li>31. Separating the elderly from the mainstream of society and grouping them together</li><li>32. Negative attitudes and stereotypes<ul class="tp"><li>a. Ageism</li><li>b. Paternalism</li><li>c. Stigma</li></ul></li><li>33. Dangers of value judgement</li><li>34. Misconceptions/myths about elderly people</li><li>35. Abbreviation - Quizlet</li><li>36. Common abbreviations</li><li>37. Funding</li><li>38. Issues concerning Aged Care and Community support</li></ul></section>
+  <section class="sl"><p class="row"><span class="no">Slide 4</span><span class="ty ty-activity"><span aria-hidden="true">&#9999;&#65039;</span> Activity</span><span class="ti">Fill In the blanks</span></p><ul class="tp"><li>Australia Aged Care funding</li></ul></section>
+  <section class="sl"><p class="row"><span class="no">Slide 5</span><span class="ty ty-quiz"><span aria-hidden="true">&#10067;</span> Quiz</span><span class="ti">Time to climb</span></p><ul class="tp"><li>Aged care Standards</li></ul></section>
+  <section class="sl"><p class="row"><span class="no">Slide 6</span><span class="ty ty-read"><span aria-hidden="true">&#128214;</span> Read</span><span class="ti"><a href="https://adriehoman.github.io/lessons/chcage013/2-part-2.html" target="_blank" rel="noopener">CHCAGE013 Part 2</a></span></p><ul class="tp"><li>Job roles<ul class="tp"><li>Quizlet Match</li><li>Registered nurses (RN)</li><li>Enrolled nurse (EN)</li><li>Assistant in Nursing (AIN)</li><li>Health service assistant (HSA)</li><li>Lifestyle and leisure worker</li><li>Support worker</li><li>Support worker continue</li><li>Support worker continue</li><li>Physiotherapist</li><li>Podiatrist</li><li>Occupational Therapist</li><li>Speech Pathologist</li><li>Social Worker</li><li>Dietician</li><li>Psychiatrist</li><li>Psychologist</li></ul></li><li>19. Disability-relatd health professionals</li><li>20. Certain conditions must be satisfied by the Registered Nurse before delegation is allowed</li><li>21. Code of conduct</li><li>22. Video Conde of conduct for Aged care</li><li>23. Discussion - Out of your scope of practice</li><li>24. What does culturally competency look like?</li><li>25. Individualised support plans</li><li>26. Individualised support plan contains</li><li>27. Reporting and documentation</li><li>28. WHS</li><li>29. Hazards vs Risk</li><li>30. Support work role with regards to risks</li><li>31. Risks in the homecare setting</li><li>32. Risks outside of the Home, in community or when assisting a person with shopping</li><li>33. Risks around medication in home care setting</li><li>34. Risks around people</li><li>35. Key organisations within the sector - Networking</li><li>36. Self-care</li><li>37. Nature of Psychosocial disability</li><li>38. Psychosocial disability - Difference</li><li>39. Impacts of psychosocial disability</li><li>40. Additional Supports</li></ul></section>
+
+  <p style="margin-bottom:60px"></p>
+</div>
+
+<!-- ============================ END OF CONTENT ============================ -->
+
+</main>
+
+<div class="big" role="dialog" aria-modal="true" aria-label="Card in full screen">
+  <div class="bar"><span class="big-where"></span><button type="button" class="big-close">Close</button></div>
+  <div class="body"></div>
+  <div class="foot"><button type="button" class="big-back">Back</button><button type="button" class="next big-next">Next card</button></div>
+</div>
+
+<script>
+/* PICTURES: the five pictures from the Sway are stored below as long lines of code. Do not edit these lines. */
+var PICTURES = {
+  /* "name": "data:image/jpeg;base64,..."  one line per picture; name matches data-pic */
+};
+
+(function(){
+  var ANGLES = [-8, -5.5, -9, -4.5, -7, -6, -8.5, -4, -6.5];
+  var big = document.querySelector('.big'), bigBody = big.querySelector('.body'),
+      bigWhere = big.querySelector('.big-where'), active = null;
+
+  /* pictures */
+  document.querySelectorAll('[data-pic]').forEach(function(el){
+    var src = PICTURES[el.getAttribute('data-pic')];
+    if(!src) return;
+    if(el.tagName === 'FIGURE'){ el.hidden = false; el.innerHTML = '<img alt="" src="'+src+'">'; }
+    else { el.style.backgroundImage = 'linear-gradient(rgba(10,25,35,.25),rgba(10,25,35,.45)),url('+src+')'; }
+  });
+
+  /* videos */
+  document.querySelectorAll('.video').forEach(function(v){
+    var id = (v.getAttribute('data-youtube')||'').trim(), t = v.getAttribute('data-title')||'Video';
+    if(id){
+      v.innerHTML = '<iframe title="'+t.replace(/"/g,'&quot;')+'" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>';
+      var w = document.createElement('p'); w.className = 'watch';
+      w.innerHTML = 'Video not playing? <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v='+encodeURIComponent(id)+'">Watch "'+t.replace(/</g,'&lt;')+'" on YouTube</a>';
+      v.parentNode.insertBefore(w, v.nextSibling);
+    } else {
+      v.classList.add('empty');
+      v.innerHTML = '<b>Video: '+t+'</b><br>The video link still needs to be added here.';
+    }
+  });
+
+  /* card stacks */
+  document.querySelectorAll('.stack').forEach(function(stack){
+    var cards = [].slice.call(stack.querySelectorAll('.card')), n = cards.length, i = 0, busy = false;
+    var deck = document.createElement('div'); deck.className = 'deck'; deck.tabIndex = 0;
+    deck.setAttribute('role','group');
+    deck.setAttribute('aria-label', (stack.getAttribute('aria-label')||'Cards') + '. Press the right arrow for the next card.');
+    var pile = document.createElement('div'); pile.className = 'pile'; pile.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
+    deck.appendChild(pile);
+    cards.forEach(function(c, k){
+      c.style.setProperty('--r', ANGLES[k % ANGLES.length] + 'deg');
+      if(k % 2) c.classList.add('shade');
+      if(c.textContent.replace(/\s+/g,' ').length > 520) c.classList.add('long');
+      var tag = document.createElement('span'); tag.className = 'count'; tag.textContent = 'Card ' + (k+1) + ' of ' + n;
+      c.insertBefore(tag, c.firstChild);
+      c.setAttribute('aria-hidden', 'true');
+      deck.appendChild(c);
+    });
+    stack.appendChild(deck);
+
+    var controls = document.createElement('div'); controls.className = 'controls';
+    controls.innerHTML = '<button type="button" class="back">Back</button><span class="where" aria-live="polite"></span><button type="button" class="next">Next card</button><button type="button" class="full">Full screen</button>';
+    stack.appendChild(controls);
+    var hint = document.createElement('p'); hint.className = 'hint'; hint.textContent = 'Click the card to see the next card.';
+    stack.appendChild(hint);
+    var where = controls.querySelector('.where');
+
+    var heights = [];
+    function size(){
+      cards.forEach(function(c, k){ c.style.height = 'auto'; heights[k] = c.offsetHeight; c.style.height = ''; });
+      deck.style.height = heights[i] + 'px';
+    }
+    function show(){
+      cards.forEach(function(c, k){ c.classList.toggle('top', k === i); c.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      where.textContent = 'Card ' + (i+1) + ' of ' + n;
+      if(heights.length) deck.style.height = heights[i] + 'px';
+      if(active === api && big.classList.contains('open')) fill();
+    }
+    function go(step){
+      if(busy) return; busy = true;
+      var old = cards[i];
+      i = (i + step + n) % n;
+      var cls = step > 0 ? 'leave' : 'leave-back';
+      show();
+      old.classList.add(cls);
+      cards[i].classList.add('arrive');
+      setTimeout(function(){ old.classList.remove(cls); cards[i].classList.remove('arrive'); busy = false; }, 440);
+    }
+    function fill(){
+      bigBody.innerHTML = cards[i].innerHTML;
+      bigWhere.textContent = 'Card ' + (i+1) + ' of ' + n;
+      bigBody.scrollTop = 0;
+    }
+    var api = { go: go, fill: fill };
+
+    deck.addEventListener('click', function(e){ if(e.target.closest('a')) return; go(1); });
+    deck.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); go(1); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
+    });
+    controls.querySelector('.next').addEventListener('click', function(){ go(1); });
+    controls.querySelector('.back').addEventListener('click', function(){ go(-1); });
+    controls.querySelector('.full').addEventListener('click', function(){
+      active = api; fill(); big.classList.add('open'); big.querySelector('.big-next').focus();
+    });
+
+    size(); show();
+    window.addEventListener('resize', size);
+    window.addEventListener('load', size);
+  });
+
+  /* full screen view */
+  function closeBig(){ big.classList.remove('open'); active = null; }
+  big.querySelector('.big-close').addEventListener('click', closeBig);
+  big.querySelector('.big-next').addEventListener('click', function(){ if(active) active.go(1); });
+  big.querySelector('.big-back').addEventListener('click', function(){ if(active) active.go(-1); });
+  document.addEventListener('keydown', function(e){
+    if(!big.classList.contains('open')) return;
+    if(e.key === 'Escape') closeBig();
+    if(e.key === 'ArrowRight' && active) active.go(1);
+    if(e.key === 'ArrowLeft' && active) active.go(-1);
+  });
+})();
+</script>
+</body>
+</html>
