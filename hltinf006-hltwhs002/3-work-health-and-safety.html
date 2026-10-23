@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HLTINF006 / HLTWHS002 Work health and safety</title>
+<meta name="description" content="Lesson 3 of the Infection Control and WHS cluster: WHS laws, duty of care, policies and procedures, hazards and risk, reporting, manual handling, safety signs, working in a person's home, fire safety, contributing to a safe workplace, stress and burnout.">
+<style>:root{
+  --ink:#1b2530; --soft-ink:#44505c; --paper:#ffffff;
+  --deep:#12384a; --aqua:#8fe3e8; --action:#0b6f7c;
+  --card-a:#fbfbf9; --card-b:#ecece8; --edge:#d9d9d4;
+  --warn:#b45309; --warn-bg:#fff7ed; --ok:#15803d; --bad:#b91c1c;
+  --teach:#4c1d95; --teach-bg:#f5f3ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size:clamp(17px,1.5vw,30px); line-height:1.55}
+main{overflow-x:clip}
+.wrap{max-width:1500px; margin:0 auto; padding:0 clamp(20px,3vw,60px)}
+
+/* banner */
+.banner{position:relative; background:var(--deep); color:#fff; padding:clamp(60px,9vw,140px) 20px 40px; overflow:hidden}
+.banner-inner{position:relative; z-index:2; max-width:1500px; margin:0 auto}
+.banner .kicker{margin:0 0 6px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:.75em; color:var(--aqua)}
+.banner h1{margin:0; font-size:clamp(30px,5vw,76px); line-height:1.1; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.banner .sub{margin:12px 0 0; font-size:1.05em; max-width:28em; color:#e6f6f7}
+.banner svg.hero{position:absolute; right:-2vw; bottom:-4vw; width:min(46vw,620px); height:auto; opacity:.95; z-index:1}
+@media (max-width:800px){.banner svg.hero{opacity:.25}}
+
+/* index */
+#index{margin:30px 0 10px; padding:18px 26px 12px; background:#eef3f4; border-left:6px solid var(--action); border-radius:6px}
+#index h2{font-size:1.2em; margin:0 0 8px}
+#index ul{margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(19em,1fr)); column-gap:3em}
+#index li{margin:4px 0}
+#index a{text-decoration:none; color:var(--ink); display:flex; gap:10px; align-items:baseline}
+#index a:hover{color:var(--action); text-decoration:underline}
+.num{display:inline-flex; align-items:center; justify-content:center; min-width:1.7em; height:1.7em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; font-size:.8em; flex:none}
+.opening{font-size:1.05em; margin:26px 0 10px}
+
+/* slides */
+section.slide{padding:36px 0 18px; border-top:1px solid var(--edge); margin-top:30px; scroll-margin-top:10px}
+section.slide:first-of-type{border-top:0}
+h2.topic{font-size:1.4em; line-height:1.3; margin:0 0 10px; display:flex; gap:14px; align-items:center}
+h2.topic .num{font-size:.7em; min-width:2em; height:2em}
+h3{font-size:1.15em; line-height:1.3; margin:0 0 10px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px; padding-left:26px}
+li{margin:4px 0}
+a{color:var(--action); text-underline-offset:3px}
+a.star{font-weight:700; padding:0 4px; font-size:.8em; text-decoration:none; opacity:.55}
+a.star:hover{opacity:1}
+a.term{text-decoration:underline dotted; color:inherit}
+.intro{font-size:1.05em; color:var(--soft-ink)}
+a:focus-visible,button:focus-visible,.deck:focus-visible{outline:3px solid #f2a900; outline-offset:3px}
+
+ol.points{margin:12px 0 18px; padding-left:0; list-style:none; counter-reset:pt}
+ol.points li{position:relative; padding:10px 14px 10px 3.2em; margin:6px 0; background:#f7f9fa; border-radius:8px; counter-increment:pt}
+ol.points li::before{content:counter(pt); position:absolute; left:.9em; top:.55em; width:1.7em; height:1.7em; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:700; font-size:.85em; display:flex; align-items:center; justify-content:center}
+.ref{display:none; float:right; margin-left:10px; font-size:.65em; color:var(--teach); background:var(--teach-bg); border:1px solid #ddd6fe; border-radius:4px; padding:0 6px}
+body.teacher .ref{display:inline-block}
+
+figure.visual{margin:18px 0 22px; text-align:center}
+figure.visual svg,figure.visual img{max-width:100%; height:auto; max-height:70vh}
+figure.visual figcaption{font-size:.8em; color:var(--soft-ink); margin-top:6px}
+figure.pic{margin:22px 0}
+figure.pic img{display:block; width:100%; height:auto; max-height:86vh; object-fit:contain; border-radius:4px}
+
+.watch-out{margin:14px 0 20px; padding:14px 18px 14px 56px; background:var(--warn-bg); border:2px solid #fdba74; border-radius:8px; position:relative}
+.watch-out::before{content:"!"; position:absolute; left:14px; top:12px; width:30px; height:30px; border-radius:50%; background:var(--warn); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.watch-out b{color:var(--warn); margin-right:6px}
+
+/* audio */
+.say{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:40px; display:inline-flex; gap:8px; align-items:center}
+.say.playing{background:var(--action); color:#fff}
+.say .ico{font-size:.8em}
+.audio-line{display:flex; gap:12px; align-items:center; margin:0 0 14px; flex-wrap:wrap}
+.audio-label{color:var(--soft-ink); font-size:.9em}
+.card-audio{margin-top:10px}
+.playall{margin:0 0 34px; text-align:center}
+
+/* card stack (from the Sway template) */
+.stack{margin:60px auto 40px; width:86%; max-width:1150px; --tilt:.4}
+.deck{position:relative; cursor:pointer; border-radius:3px; transition:height .3s ease}
+.pile i{position:absolute; inset:0; background:var(--card-b); border:1px solid var(--edge); box-shadow:0 1px 3px rgba(20,30,40,.10)}
+.pile i:nth-child(even){background:var(--card-a)}
+.pile i{transform:rotate(calc(var(--a) * var(--tilt,1))) translate(var(--x),var(--y))}
+.pile i:nth-child(1){--a:-15deg; --x:-4px; --y:6px}
+.pile i:nth-child(2){--a:6deg; --x:6px; --y:2px}
+.pile i:nth-child(3){--a:-12deg; --x:3px; --y:-5px}
+.pile i:nth-child(4){--a:3deg; --x:-5px; --y:4px}
+.pile i:nth-child(5){--a:-10deg; --x:5px; --y:5px}
+.pile i:nth-child(6){--a:-2deg; --x:-3px; --y:-3px}
+.pile i:nth-child(7){--a:-6deg; --x:2px; --y:3px}
+.pile{position:absolute; inset:0; filter:drop-shadow(0 14px 18px rgba(20,30,40,.16))}
+.card{position:absolute; left:0; top:0; width:100%; height:100%; background:var(--card-a); border:1px solid var(--edge);
+  padding:1.5em 1.8em 1.3em; font-size:clamp(16px,1.4vw,27px); line-height:1.5; opacity:0; pointer-events:none; z-index:1; min-height:7em;
+  transform:rotate(calc(var(--r,-6deg) * var(--tilt,1))); box-shadow:0 2px 6px rgba(20,30,40,.14)}
+.card.shade{background:var(--card-b)}
+.card.long{font-size:clamp(14.5px,1.25vw,24px); line-height:1.45}
+.card.top{opacity:1; pointer-events:auto; z-index:3}
+.card.arrive{animation:arrive .42s ease-out}
+.card.leave{opacity:1; z-index:4; animation:leave .42s ease-in forwards}
+.card.leave-back{opacity:1; z-index:4; animation:leaveBack .42s ease-in forwards}
+@keyframes arrive{from{transform:rotate(calc(var(--r) * var(--tilt,1) + 5deg)) scale(.96)} to{transform:rotate(calc(var(--r) * var(--tilt,1))) scale(1)}}
+@keyframes leave{to{transform:translate(58%,-10%) rotate(16deg); opacity:0}}
+@keyframes leaveBack{to{transform:translate(-58%,-10%) rotate(-18deg); opacity:0}}
+.card .count{float:right; margin:-6px -8px 6px 14px; font-size:.8em; font-weight:600; color:var(--soft-ink); background:#fff; border:1px solid var(--edge); border-radius:20px; padding:2px 12px}
+.card ul{margin-bottom:6px}
+.card-pic{float:right; width:clamp(90px,22%,220px); margin:0 0 10px 16px}
+.card-pic svg{width:100%; height:auto}
+.controls{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin-top:60px}
+.controls button{font:inherit; font-size:clamp(17px,1.2vw,24px); font-weight:600; cursor:pointer; padding:10px 20px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:48px}
+.controls button.next{background:var(--action); color:#fff}
+.controls button:hover{filter:brightness(.94)}
+.controls .where{min-width:7em; text-align:center; font-weight:700; font-size:clamp(18px,1.25vw,25px)}
+.hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:10px 0 0}
+
+/* full screen */
+.big{position:fixed; inset:0; z-index:50; background:#05090c; color:#fff; display:none}
+.big.open{display:flex; flex-direction:column}
+.big .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; font-weight:700}
+.big .body{flex:1; overflow:auto; padding:8px clamp(20px,7vw,90px) 24px; font-size:clamp(20px,2.9vw,34px); line-height:1.45}
+.big .body h3{font-size:1.1em; margin-bottom:.5em}
+.big .body .count{display:none}
+.big .body .card-pic{width:22%}
+.big .body .say{color:#fff; border-color:#fff; background:transparent}
+.big .foot{display:flex; gap:12px; justify-content:center; padding:12px 18px 20px}
+.big button{font:inherit; font-size:18px; font-weight:600; cursor:pointer; min-height:48px; padding:10px 22px; border-radius:6px; border:2px solid #fff; background:transparent; color:#fff}
+.big button.next{background:#fff; color:#05090c}
+
+/* activities */
+.activity{margin:22px 0 28px; padding:16px 20px 14px; border:2px solid #cfe3e6; border-radius:10px; background:#f4fafb}
+.act-head{display:flex; gap:10px; align-items:center; margin-bottom:6px}
+.act-badge{background:var(--action); color:#fff; font-size:.7em; font-weight:700; padding:2px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:.04em}
+.act-instr{color:var(--soft-ink); font-size:.9em}
+.act-foot{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px}
+.act-foot button{font:inherit; font-size:.9em; font-weight:600; cursor:pointer; padding:8px 18px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:44px}
+.act-foot .act-check{background:var(--action); color:#fff}
+.act-result{font-weight:700}
+.act-result.good{color:var(--ok)} .act-result.bad{color:var(--bad)}
+.chip{display:inline-flex; align-items:center; font-size:.9em; padding:8px 14px; margin:5px; border-radius:8px; border:2px solid #9fc5cb; background:#fff; cursor:pointer; user-select:none; min-height:44px; line-height:1.3}
+.chip.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.chip.right{border-color:var(--ok); background:#ecfdf5}
+.chip.wrong{border-color:var(--bad); background:#fef2f2}
+.chip.placed{cursor:default}
+.bank{min-height:52px; padding:6px; border:2px dashed #9fc5cb; border-radius:8px; margin-bottom:12px; background:#fff}
+.targets{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(16em,1fr))}
+.target{border:2px solid #9fc5cb; border-radius:8px; background:#fff; padding:8px 10px; min-height:70px}
+.target .t-label{font-weight:700; margin-bottom:4px}
+.target .t-drop{min-height:44px; border:2px dashed #e0ecee; border-radius:6px; padding:2px}
+.target.over .t-drop{border-color:var(--action); background:#eef7f8}
+.order{list-style:none; padding:0; margin:0; counter-reset:o}
+.order li{display:flex; gap:10px; align-items:center; background:#fff; border:2px solid #9fc5cb; border-radius:8px; padding:8px 10px; margin:6px 0; cursor:grab}
+.order li .o-n{min-width:2em; height:2em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; font-size:.85em}
+.order li .o-t{flex:1}
+.order li .o-btn{display:flex; gap:4px}
+.order li .o-btn button{font:inherit; min-width:40px; min-height:40px; border-radius:6px; border:1px solid #9fc5cb; background:#fff; cursor:pointer}
+.order li.right{border-color:var(--ok); background:#ecfdf5} .order li.wrong{border-color:var(--bad); background:#fef2f2}
+.order li.dragging{opacity:.5}
+.quiz-q{margin:10px 0 16px}
+.quiz-q .opt{display:block; width:100%; text-align:left; font:inherit; font-size:.95em; padding:10px 14px; margin:6px 0; border-radius:8px; border:2px solid #9fc5cb; background:#fff; cursor:pointer; min-height:44px}
+.quiz-q .opt.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.quiz-q .opt.right{border-color:var(--ok); background:#ecfdf5} .quiz-q .opt.wrong{border-color:var(--bad); background:#fef2f2}
+.quiz-q .why{font-size:.85em; color:var(--soft-ink); margin:4px 0 0 6px; display:none}
+.quiz-q.done .why{display:block}
+.fill-table{width:100%; border-collapse:collapse; font-size:.9em; background:#fff}
+.fill-table th,.fill-table td{border:1px solid #cfe3e6; padding:8px 10px; text-align:left; vertical-align:top}
+.fill-table th{background:#e6f1f3}
+.fill-table select{font:inherit; font-size:.95em; min-height:40px; max-width:100%}
+.fill-table td.right{background:#ecfdf5} .fill-table td.wrong{background:#fef2f2}
+
+/* teacher view */
+.tnotes{display:none; margin:18px 0 6px; padding:12px 16px; background:var(--teach-bg); border:2px dashed #c4b5fd; border-radius:8px; font-size:.82em; color:#2e1065}
+body.teacher .tnotes{display:block}
+.tnotes .t-head{font-weight:800; color:var(--teach); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; font-size:.85em}
+.tnotes ul{margin:4px 0 8px}
+.tnotes .t-trap{background:#fff7ed; border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0}
+.tlink{font:inherit; font-size:1em; color:var(--soft-ink); background:none; border:0; text-decoration:underline; cursor:pointer; padding:0}
+.tpill[hidden]{display:none}
+.tpill{position:fixed; top:10px; right:10px; z-index:45; background:var(--teach); color:#fff; border-radius:30px; padding:6px 8px 6px 16px; display:flex; gap:8px; align-items:center; font-size:15px; font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.tpill button{font:inherit; font-size:14px; font-weight:700; border:0; border-radius:20px; padding:6px 12px; background:#fff; color:var(--teach); cursor:pointer; min-height:34px}
+.tpill button.tp-out{background:transparent; color:#fff; border:1px solid #fff}
+.card-pic.photo img{width:100%; height:auto; border-radius:8px; display:block}
+.grid4{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(11em,1fr)); margin:16px 0 22px}
+.grid4 figure{margin:0; background:#eef3f4; border-radius:12px; overflow:hidden}
+.grid4 img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+.grid4 figcaption{padding:10px 14px 12px; font-size:.9em}
+.grid4 figcaption b{display:block; color:var(--deep); font-size:1.05em}
+.side{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; margin:10px 0 18px}
+.side > div{flex:2 1 420px}
+.side figure{flex:0 1 380px; max-width:440px; margin:0}
+.side figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* Gerry */
+.mascot{position:fixed; left:clamp(6px,1.2vw,24px); top:120px; width:clamp(54px,6vw,110px); z-index:35; cursor:pointer; transition:top .6s cubic-bezier(.3,.9,.4,1.1); filter:drop-shadow(0 6px 10px rgba(0,0,0,.25)); user-select:none}
+.mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.mascot.hop svg{animation:hop .7s ease-out 1, bob 2.6s ease-in-out .7s infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes hop{0%{transform:translateY(0) scale(1,1)} 30%{transform:translateY(-40px) scale(.95,1.08) rotate(14deg)} 60%{transform:translateY(0) scale(1.08,.92)} 100%{transform:translateY(0) scale(1,1)}}
+.gerry-bubble{position:absolute; left:100%; top:0; margin-left:10px; width:max-content; max-width:16em; background:#fff; color:var(--ink); border:2px solid var(--deep); border-radius:14px; padding:8px 12px; font-size:clamp(14px,1vw,18px); line-height:1.35; box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.gerry-bubble::before{content:""; position:absolute; left:-12px; top:16px; border:6px solid transparent; border-right-color:var(--deep)}
+@media (max-width:900px){.mascot{display:none}}
+.mascot.drop{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.drop .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.drop .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+@media (prefers-reduced-motion:reduce){.mascot svg{animation:none}}
+
+.home{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(14px,2vw,32px); z-index:40; background:var(--action); color:#fff; font-weight:700; font-size:clamp(17px,1.2vw,24px); text-decoration:none; padding:12px 22px; border-radius:30px; box-shadow:0 4px 14px rgba(0,0,0,.25); min-height:48px; display:flex; align-items:center; gap:8px}
+.foot{margin:50px 0 90px; padding-top:16px; border-top:1px solid var(--edge); font-size:.75em; color:var(--soft-ink)}
+
+@media (max-width:560px){
+  body{font-size:17px}
+  .card{padding:20px 20px 18px; font-size:16px}
+  .card.long{font-size:14.5px}
+  .stack{width:auto; margin-left:14px; margin-right:14px; --tilt:.3}
+  .card-pic{width:30%}
+  h2.topic{font-size:1.25em}
+}
+@media (prefers-reduced-motion:reduce){
+  .card.arrive,.card.leave,.card.leave-back{animation-duration:.01s}
+  html{scroll-behavior:auto}
+}
+
+/* ordered strips (PPE on / off) */
+.strips{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr)); margin:16px 0 20px}
+.strip{background:#f7f9fa; border-radius:12px; padding:14px 16px}
+.strip-title{font-weight:800; color:var(--deep); margin-bottom:8px}
+.strip-steps{list-style:none; margin:0; padding:0; counter-reset:st}
+.strip-steps li{counter-increment:st; display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px solid #e2e8f0}
+.strip-steps li:last-child{border-bottom:0}
+.strip-steps li::before{content:counter(st); display:inline-flex; align-items:center; justify-content:center; width:1.9em; height:1.9em; border-radius:50%; background:var(--c,#0b6f7c); color:#fff; font-weight:800; font-size:.85em; flex:none}
+table.plain{width:100%; border-collapse:collapse; font-size:.92em; margin:10px 0 18px; background:#fff}
+table.plain th,table.plain td{border:1px solid #cfe3e6; padding:8px 10px; text-align:left; vertical-align:top}
+table.plain th{background:#e6f1f3}
+.tl-high{background:#fee2e2} .tl-med{background:#fef3c7} .tl-low{background:#dcfce7}
+
+/* activity start and blur */
+.act-start[hidden]{display:none}
+.act-start{display:flex; gap:14px; align-items:center; flex-wrap:wrap; padding:6px 0 2px; color:var(--soft-ink); font-size:.9em}
+.act-go{font:inherit; font-size:1em; font-weight:700; cursor:pointer; padding:10px 26px; border-radius:8px; border:0; background:var(--action); color:#fff; min-height:48px}
+.act-tools{margin:0 0 10px}
+.act-peek{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid #9fc5cb; background:#fff; color:var(--action); min-height:40px}
+section.slide.hide-notes > :is(ol.points, .stack, figure.visual, .after, .intro, .watch-out, .vid, .audio-line, .side-points, p){filter:blur(7px); pointer-events:none; user-select:none; transition:filter .3s}
+section.slide.hide-notes .activity{filter:none}
+.vid{margin:20px 0 10px}
+.vid-title{margin:0 0 8px}
+.vid-by{color:var(--soft-ink); font-size:.85em}
+.video{margin:0 auto 6px; max-width:calc((100vh - 90px) * 16 / 9); aspect-ratio:16/9; background:#0e1a22; border-radius:6px; overflow:hidden; position:relative}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.watch{margin:0 0 20px; font-size:.8em; text-align:center}
+
+/* activity locked while the notes are showing */
+.activity.peeking .act-body, .activity.peeking .act-foot{pointer-events:none; opacity:.35; filter:grayscale(1)}
+.activity.peeking .act-tools::after{content:"Read the notes, then press the button to carry on."; margin-left:12px; color:var(--warn); font-weight:700; font-size:.9em}
+/* click to spotlight a part of a diagram */
+.spot [data-spot]{transition:opacity .3s, transform .3s; transform-box:fill-box; transform-origin:center}
+.spot.spotting [data-spot]:not(.lit){opacity:.28}
+.spot [data-spot].lit{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.14)}}
+.spot-hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:-8px 0 14px}
+/* points beside a picture */
+.side-points{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start}
+.side-points > ol.points{flex:2 1 420px; margin-top:0}
+.side-points > figure{flex:0 1 320px; max-width:360px; margin:0}
+.side-points > figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* student-visible Connect source line */
+.source{margin:16px 0 6px; padding:10px 14px 10px 44px; background:#f1f6f8; border-left:4px solid var(--action); border-radius:8px; font-size:.92em; color:var(--soft-ink); position:relative; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center}
+.source::before{content:"\1F4D6"; position:absolute; left:12px; top:8px; font-size:1.2em}
+.source-label{font-weight:700; color:var(--ink)}
+.source a{text-decoration:none; font-weight:600; border:1px solid #cfe3e6; background:#fff; border-radius:999px; padding:2px 10px}
+.source a:hover{background:#e3eef1}
+
+/* Lesson 3: safety signs, RACE, two-up figures */
+.signs{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:12px 0 20px; align-items:start}
+.sign{background:#fff; border:2px solid var(--edge); border-radius:12px; padding:12px 10px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px}
+.sign svg{width:84px; height:84px}
+.sign span{font-weight:700; font-size:.9em; line-height:1.25}
+.signkey{display:flex; flex-wrap:wrap; gap:8px 20px; margin:6px 0 14px; font-size:.92em}
+.signkey i{display:inline-block; width:16px; height:16px; border-radius:50%; vertical-align:-3px; margin-right:6px}
+.race{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:14px 0 20px}
+.race div{border-left:8px solid var(--c); background:#fff; border-radius:10px; padding:12px 14px; box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.race b{display:block; font-size:2.2em; line-height:1; color:var(--c)}
+.race span{display:block; font-weight:700; font-size:1.1em; margin-top:4px}
+.race small{color:var(--soft-ink)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:14px 0}
+.grid2 figure{margin:0}
+.grid2 figcaption{font-size:.85em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > :is(.signs, .signkey, .race, .grid2){filter:blur(7px); pointer-events:none; user-select:none}
+
+/* side-by-side videos */
+.vid-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:16px 0 6px}
+.vid-row .vid{margin:0}
+.vid-row .video{max-width:none}
+section.slide.hide-notes > .vid-row{filter:blur(7px); pointer-events:none}
+
+/* finale: the grand exit */
+.finale{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; margin:24px 0 10px; padding:24px 10px 0; min-height:340px; overflow:hidden}
+.fin-side{display:flex; flex-direction:column; align-items:center; gap:10px; opacity:0; transition:transform .9s cubic-bezier(.2,.8,.3,1.1), opacity .6s}
+.fin-side.left{transform:translateX(-60vw)}
+.fin-side.right{transform:translateX(60vw)}
+.finale.in .fin-side{transform:none; opacity:1}
+.finale.in .fin-side.right{transition-delay:.25s}
+.fin-mascot{width:min(260px,38vw)}
+.fin-mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.fin-bubble{background:#fff; border:3px solid var(--deep); border-radius:18px; padding:14px 18px; font-size:1.08em; line-height:1.4; position:relative; max-width:34em; opacity:0; transform:scale(.7); transition:transform .5s cubic-bezier(.2,.8,.3,1.3), opacity .4s}
+.fin-bubble p{margin:0 0 8px}
+.fin-bubble::after{content:""; position:absolute; bottom:-14px; left:50%; margin-left:-8px; border:8px solid transparent; border-top-color:var(--deep)}
+.finale.in .fin-bubble{opacity:1; transform:none; transition-delay:1s}
+.finale.in .right .fin-bubble{transition-delay:1.5s}
+.fin-side .fin-bubble{order:-1}
+.fin-who{font-weight:800; color:var(--deep); margin:0}
+.fin-after{text-align:center; font-size:1.1em; color:var(--soft-ink); margin:10px 0 20px}
+@media (max-width:700px){.finale{grid-template-columns:1fr; min-height:0} .fin-side.left,.fin-side.right{transform:translateY(40px)} .finale.in .fin-side{transform:none}}
+@media (prefers-reduced-motion:reduce){.fin-side,.fin-bubble{transition:none; transform:none; opacity:1} .fin-mascot svg{animation:none}}
+.sign-pics{display:flex; gap:6px; align-items:center; justify-content:center; height:96px}
+.sign-pics img{max-height:96px; max-width:100%; object-fit:contain}
+.sign-pics img + img{max-height:60px}
+</style>
+</head>
+<body data-np="11">
+<main>
+<header class="banner first" id="top">
+  <div class="banner-inner">
+    <p class="kicker">HLTINF006 / HLTWHS002 · Lesson 3</p>
+    <h1>Work health and safety</h1>
+    <p class="sub">The law, your duties, hazards and how to report them, manual handling, safety signs, fire, and looking after yourself.</p>
+  </div>
+  <svg class="hero" viewBox="0 0 420 300" aria-hidden="true"><g transform="translate(40,30)">
+<ellipse cx="190" cy="200" rx="170" ry="60" fill="#5ec9cf" opacity=".25"/>
+<path d="M60 150 L190 50 L320 150 V240 H60 Z" fill="#e0f2fe" stroke="#8fe3e8" stroke-width="6" stroke-linejoin="round"/>
+<rect x="160" y="170" width="60" height="70" fill="#8fe3e8"/>
+<rect x="90" y="170" width="40" height="40" fill="#fff" stroke="#8fe3e8" stroke-width="4"/><rect x="250" y="170" width="40" height="40" fill="#fff" stroke="#8fe3e8" stroke-width="4"/>
+<path d="M120 60 q70 -70 140 0 v12 h-140z" fill="#f59e0b"/><rect x="108" y="68" width="164" height="14" rx="7" fill="#d97706"/>
+</g></svg>
+</header>
+<div class="wrap">
+  <nav id="index" aria-label="Index"><h2>In this lesson</h2><ul><li><a href="#s1"><span class="num">1</span> Three layers of WHS law</a></li><li><a href="#s2"><span class="num">2</span> Duty of care: what the worker and the employer must do</a></li><li><a href="#s3"><span class="num">3</span> Policy or procedure?</a></li><li><a href="#s4"><span class="num">4</span> Hazards, risks and how to control them</a></li><li><a href="#s5"><span class="num">5</span> Reporting: who to tell, why quickly, and what to write</a></li><li><a href="#s6"><span class="num">6</span> Manual handling: hazardous manual tasks</a></li><li><a href="#s7"><span class="num">7</span> Safety signs: read the picture</a></li><li><a href="#s8"><span class="num">8</span> Working in a person's home</a></li><li><a href="#s9"><span class="num">9</span> Fire safety and smoke alarms</a></li><li><a href="#s10"><span class="num">10</span> Safety is everybody's job</a></li><li><a href="#s11"><span class="num">11</span> Look after yourself: stress, fatigue and burnout</a></li><li><a href="#s12"><span class="num">12</span> The grand exit</a></li></ul></nav>
+  <p class="opening">Gerry the Germ is not the only thing that can hurt you at work. A loose rug, a heavy transfer, a hot heater, a long week with no rest. This lesson is about the law that protects you, the hazards you will meet, and what you do about them.</p>
+  
+<section class="slide" id="s1" data-ref="NP11 S1">
+  <h2 class="topic"><span class="num">1</span> Three layers of WHS law <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F22%7Cb759aa80-e29d-4ad4-8550-f2c5e035780f%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Work health and safety (WHS) law in Australia comes in three layers. Each layer has its own job.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np11-s1.mp3" aria-label="Listen: Three layers of WHS law"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg class="spot" viewBox="40 0 680 330" role="img" aria-label="Three layers of WHS law: the Act on top, the Regulations under it, the Codes of Practice at the base. Click a layer.">
+<g data-spot="Act"><polygon points="380,20 520,110 240,110" fill="#12384a"/><text x="380" y="88" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#8fe3e8">The Act</text></g>
+<g data-spot="Regulations"><polygon points="228,125 532,125 612,215 148,215" fill="#0b6f7c"/><text x="380" y="178" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#fff">The Regulations</text></g>
+<g data-spot="Codes"><polygon points="136,230 624,230 704,320 56,320" fill="#0e9aa7"/><text x="380" y="283" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#fff">Codes of Practice</text></g>
+</svg><figcaption>Click a layer to light it up.</figcaption></figure>
+  <ol class="points"><li id="s1p1"><span class="ref" title="Reference">NP11 S1 P1</span><b>Model WHS Act</b>: one fair and consistent set of rules that protects the health and safety of workers and workplaces right across Australia. (In Queensland it is the <i>Work Health and Safety Act 2011</i>.)</li><li id="s1p2"><span class="ref" title="Reference">NP11 S1 P2</span><b>Model WHS Regulations</b>: the detailed rules that sit under the Act. They say what must be done to follow the law, including licences for some activities and keeping records.</li><li id="s1p3"><span class="ref" title="Reference">NP11 S1 P3</span><b>Model Codes of Practice</b>: practical guides that show <b>how</b> to meet the standards in the Act and the Regulations. For example, the Hazardous Manual Tasks Code of Practice.</li><li id="s1p4"><span class="ref" title="Reference">NP11 S1 P4</span>Think of it as: the Act says <b>you must be safe</b>, the Regulations say <b>what that means</b>, and the Codes say <b>here is how</b>.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305315/View" target="_blank" rel="noopener">WHS legislation</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305317/View" target="_blank" rel="noopener">Work Health Safety (WHS) key principles</a></div>
+  <aside class="tnotes" data-slide="s1" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s2" data-ref="NP11 S2">
+  <h2 class="topic"><span class="num">2</span> Duty of care: what the worker and the employer must do <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F23%7C7d237fbe-e626-4105-b9a3-6159504a6745%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">The WHS Act gives duties to both sides. The employer (the law calls them the <b>person conducting a business or undertaking</b>, or <b>PCBU</b>) and the worker, which is you.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np11-s2.mp3" aria-label="Listen: Duty of care: what the worker and the employer must do"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s2p1"><span class="ref" title="Reference">NP11 S2 P1</span><b>Worker duty 1</b>: take reasonable care of <b>your own</b> health and safety.</li><li id="s2p2"><span class="ref" title="Reference">NP11 S2 P2</span><b>Worker duty 2</b>: take reasonable care that what you do, or do not do, does <b>not harm others</b>.</li><li id="s2p3"><span class="ref" title="Reference">NP11 S2 P3</span><b>Worker duty 3</b>: follow any <b>reasonable instruction</b> about health and safety.</li><li id="s2p4"><span class="ref" title="Reference">NP11 S2 P4</span><b>Worker duty 4</b>: cooperate with the workplace <b>WHS policies and procedures</b>.</li><li id="s2p5"><span class="ref" title="Reference">NP11 S2 P5</span><b>Employer duty 1</b>: provide a <b>safe work environment</b> without risks to health and safety.</li><li id="s2p6"><span class="ref" title="Reference">NP11 S2 P6</span><b>Employer duty 2</b>: provide safe <b>equipment, buildings and work areas</b>, and safe <b>systems of work</b> (procedures).</li><li id="s2p7"><span class="ref" title="Reference">NP11 S2 P7</span><b>Employer duty 3</b>: make sure equipment, materials and <b>substances</b> are used, handled and stored safely.</li><li id="s2p8"><span class="ref" title="Reference">NP11 S2 P8</span><b>Employer duty 4</b>: provide <b>facilities</b> for workers (toilets, drinking water, rest areas).</li><li id="s2p9"><span class="ref" title="Reference">NP11 S2 P9</span><b>Employer duty 5</b>: give <b>information, training, instruction and supervision</b>.</li><li id="s2p10"><span class="ref" title="Reference">NP11 S2 P10</span><b>Employer duty 6</b>: <b>monitor</b> workers' health and workplace conditions to prevent injury and illness.</li></ol>
+  
+  
+  
+  
+  
+  <div class="watch-out"><b>Watch out</b> The assessment asks for duties <b>from the Act</b>. &quot;Wash your hands&quot; or &quot;report hazards&quot; are good habits, but they are not the duties of care. Use the words from this slide: reasonable care, follow instructions, safe workplace, training and supervision.</div>
+  <div class="activity" id="act-s2-1" data-activity='{"type":"sort","title":"Whose duty is it?","instructions":"Tap a duty, then tap Worker or Employer.","buckets":["Worker","Employer"],"items":[{"text":"Take reasonable care of your own health and safety","bucket":"Worker"},{"text":"Provide a safe work environment","bucket":"Employer"},{"text":"Follow reasonable WHS instructions","bucket":"Worker"},{"text":"Provide information, training and supervision","bucket":"Employer"},{"text":"Cooperate with WHS policies and procedures","bucket":"Worker"},{"text":"Provide toilets, drinking water and rest areas","bucket":"Employer"},{"text":"Monitor workers&#39; health and workplace conditions","bucket":"Employer"},{"text":"Take reasonable care not to harm others","bucket":"Worker"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Whose duty is it?</b></div>
+    <p class="act-instr">Tap a duty, then tap Worker or Employer.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div><div class="activity" id="act-s2-2" data-activity='{"type":"quiz","title":"Is this a duty of care from the Act?","instructions":"Some of these are good habits, not duties. Which is which?","questions":[{"q":"\"Wash my hands before and after care.\"","options":["Yes, a duty of care in the Act","No, a good habit, not a duty in the Act"],"answer":1,"why":"Hand hygiene is an infection-control practice. The Act duty behind it is \"take reasonable care not to harm others\"."},{"q":"\"Follow reasonable health and safety instructions from my employer.\"","options":["Yes, a duty of care in the Act","No, a good habit, not a duty in the Act"],"answer":0,"why":"This is one of the four worker duties in the Act."},{"q":"\"Provide training, instruction and supervision.\"","options":["Yes, an employer duty in the Act","No, a nice extra"],"answer":0,"why":"This is an employer (PCBU) duty in the Act."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Is this a duty of care from the Act?</b></div>
+    <p class="act-instr">Some of these are good habits, not duties. Which is which?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305317/View" target="_blank" rel="noopener">Work Health Safety (WHS) key principles</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305321/View" target="_blank" rel="noopener">Follow workplace policies and procedures to minimise risk</a></div>
+  <aside class="tnotes" data-slide="s2" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s3" data-ref="NP11 S3">
+  <h2 class="topic"><span class="num">3</span> Policy or procedure? <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F32%7C9b3329e8-576a-471a-9c8f-e58fae090cb5%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Every workplace has safety policies and safe work procedures. They are not the same thing.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np11-s3.mp3" aria-label="Listen: Policy or procedure?"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 760 240" role="img" aria-label="Two signposts: Policy says what to do, Procedure says how to do it">
+<rect x="150" y="60" width="12" height="170" fill="#8a5a2b"/><rect x="600" y="60" width="12" height="170" fill="#8a5a2b"/>
+<polygon points="40,40 260,40 290,70 260,100 40,100" fill="#12384a"/><text x="150" y="78" text-anchor="middle" font-family="Segoe UI, Arial" font-size="24" font-weight="800" fill="#8fe3e8">POLICY</text>
+<text x="150" y="130" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" font-weight="700" fill="#1b2530">WHAT to do</text>
+<text x="150" y="155" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#44505c">the rules and what is expected</text>
+<polygon points="470,40 690,40 720,70 690,100 470,100" fill="#0b6f7c"/><text x="595" y="78" text-anchor="middle" font-family="Segoe UI, Arial" font-size="24" font-weight="800" fill="#fff">PROCEDURE</text>
+<text x="606" y="130" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" font-weight="700" fill="#1b2530">HOW to do it</text>
+<text x="606" y="155" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#44505c">step by step, safely</text>
+</svg></figure>
+  <ol class="points"><li id="s3p1"><span class="ref" title="Reference">NP11 S3 P1</span>A <b>policy</b> tells people <b>what</b> the rules are and what is expected of them. Policy = <b>what to do</b>.</li><li id="s3p2"><span class="ref" title="Reference">NP11 S3 P2</span><b>Why have a safety policy?</b> It shows the employer is <b>committed to safety</b> and to preventing work-related injury and illness, and it <b>sets the rules and standards</b> everyone must follow.</li><li id="s3p3"><span class="ref" title="Reference">NP11 S3 P3</span>A <b>procedure</b> explains <b>how</b> to do a task safely and correctly, step by step. Procedure = <b>how to do it</b>.</li><li id="s3p4"><span class="ref" title="Reference">NP11 S3 P4</span><b>Why have safe work procedures?</b> So every worker knows the <b>safest way to do the job</b>. A good procedure explains the task <b>step by step</b>, points out the <b>risks</b>, and says how to <b>control</b> them. It also supports training and supervision.</li></ol>
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s3-1" data-activity='{"type":"sort","title":"Policy or procedure?","instructions":"Tap a statement, then tap Policy or Procedure.","buckets":["Policy","Procedure"],"items":[{"text":"\"All staff must use the hoist for non-weight-bearing residents.\"","bucket":"Policy"},{"text":"\"Step 1: check the sling size. Step 2: attach the loops...\"","bucket":"Procedure"},{"text":"\"This organisation is committed to a safe workplace for all.\"","bucket":"Policy"},{"text":"\"How to clean a body fluid spill, steps 1 to 8.\"","bucket":"Procedure"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Policy or procedure?</b></div>
+    <p class="act-instr">Tap a statement, then tap Policy or Procedure.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305319/View" target="_blank" rel="noopener">Policies and procedures</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305321/View" target="_blank" rel="noopener">Follow workplace policies and procedures to minimise risk</a></div>
+  <aside class="tnotes" data-slide="s3" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s4" data-ref="NP11 S4">
+  <h2 class="topic"><span class="num">4</span> Hazards, risks and how to control them <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F26a%7Cundefined%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">A hazard and a risk are not the same. Get these two words right and the rest of WHS makes sense.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np11-s4.mp3" aria-label="Listen: Hazards, risks and how to control them"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s4p1"><span class="ref" title="Reference">NP11 S4 P1</span>A <b>hazard</b> is <b>anything that could cause harm</b>: injury or illness to a person, or damage to property or the environment.</li><li id="s4p2"><span class="ref" title="Reference">NP11 S4 P2</span>A <b>risk</b> is the <b>chance</b> that the hazard actually hurts someone, and <b>how bad</b> it would be.</li><li id="s4p3"><span class="ref" title="Reference">NP11 S4 P3</span>The <b>five hazard categories</b>: <b>Physical</b> (spills, trip hazards, noise, manual handling), <b>Ergonomic</b> (poor lighting, badly set up workstation), <b>Chemical</b> (cleaning products, fumes), <b>Biological</b> (blood and body fluids, germs, animal droppings), <b>Psychological</b> (stress, bullying, violence, fatigue).</li><li id="s4p4"><span class="ref" title="Reference">NP11 S4 P4</span>Common hazards in care work: <b>lifting, supporting and moving people</b>; <b>moving equipment</b> such as wheelchairs and trolleys; <b>slips, trips and falls</b>; <b>work-related stress</b>; <b>occupational violence</b>; <b>bullying and harassment</b>.</li><li id="s4p5"><span class="ref" title="Reference">NP11 S4 P5</span>Once you know the hazard, you control it. The <b>hierarchy of control</b> ranks the options from best to last resort: eliminate, substitute, isolate, engineering, administrative, PPE.</li></ol>
+  
+  <div class="after"><figure class="visual"><svg class="spot" viewBox="0 0 960 400" role="img" aria-label="Hierarchy of control from most effective to least: eliminate, substitute, isolate, engineering, administrative, PPE. Click a level."><g data-spot="Eliminate"><rect x="20" y="14" width="620" height="54" rx="10" fill="#15803d"/><text x="330" y="48" text-anchor="middle" font-family="Segoe UI, Arial" font-size="21" font-weight="800" fill="#fff">Eliminate</text></g><text x="654" y="48" font-family="Segoe UI, Arial" font-size="14" fill="#44505c">remove the hazard completely</text><g data-spot="Substitute"><rect x="50" y="76" width="560" height="54" rx="10" fill="#0b6f7c"/><text x="330" y="110" text-anchor="middle" font-family="Segoe UI, Arial" font-size="21" font-weight="800" fill="#fff">Substitute</text></g><text x="624" y="110" font-family="Segoe UI, Arial" font-size="14" fill="#44505c">swap it for something safer</text><g data-spot="Isolate"><rect x="80" y="138" width="500" height="54" rx="10" fill="#0e9aa7"/><text x="330" y="172" text-anchor="middle" font-family="Segoe UI, Arial" font-size="21" font-weight="800" fill="#fff">Isolate</text></g><text x="594" y="172" font-family="Segoe UI, Arial" font-size="14" fill="#44505c">keep people away from it</text><g data-spot="Engineering"><rect x="110" y="200" width="440" height="54" rx="10" fill="#2563eb"/><text x="330" y="234" text-anchor="middle" font-family="Segoe UI, Arial" font-size="21" font-weight="800" fill="#fff">Engineering</text></g><text x="564" y="234" font-family="Segoe UI, Arial" font-size="14" fill="#44505c">change the equipment or the building</text><g data-spot="Administrative"><rect x="140" y="262" width="380" height="54" rx="10" fill="#b45309"/><text x="330" y="296" text-anchor="middle" font-family="Segoe UI, Arial" font-size="21" font-weight="800" fill="#fff">Administrative</text></g><text x="534" y="296" font-family="Segoe UI, Arial" font-size="14" fill="#44505c">training, procedures, signs, rosters</text><g data-spot="PPE"><rect x="170" y="324" width="320" height="54" rx="10" fill="#9d174d"/><text x="330" y="358" text-anchor="middle" font-family="Segoe UI, Arial" font-size="21" font-weight="800" fill="#fff">PPE</text></g><text x="504" y="358" font-family="Segoe UI, Arial" font-size="14" fill="#44505c">gloves, masks, gowns: the last line</text></svg><figcaption>The hierarchy of control: most effective at the top, least effective at the bottom. Click a level. PPE is the last line, not the first.</figcaption></figure></div>
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Hazard vs. Risk: what is the difference? <span class="vid-by">(Ansell)</span></p><div class="video" data-youtube="gFE0uj1V59A" data-title="Hazard vs. Risk: what is the difference?"></div></div><div class="vid"><p class="vid-title"><b>Watch:</b> Hazards and risks <span class="vid-by">(Training)</span></p><div class="video" data-youtube="n_IPD1ZMXpA" data-title="Hazards and risks"></div></div>
+  
+  
+  <div class="activity" id="act-s4-1" data-activity='{"type":"match","title":"Which hazard family?","instructions":"Tap an example, then tap its category.","pairs":[{"a":"A bottle of bleach without a lid","b":"Chemical"},{"a":"A resident who hits out during showering","b":"Psychological"},{"a":"Used continence pads","b":"Biological"},{"a":"A power cord across the hallway","b":"Physical"},{"a":"A computer screen too low, neck bent all day","b":"Ergonomic"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Which hazard family?</b></div>
+    <p class="act-instr">Tap an example, then tap its category.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305324/View" target="_blank" rel="noopener">Workplace hazards and risks</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305325/View" target="_blank" rel="noopener">Types of workplace hazard</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305329/View" target="_blank" rel="noopener">Hierarchy of control</a></div>
+  <aside class="tnotes" data-slide="s4" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s5" data-ref="NP11 S5">
+  <h2 class="topic"><span class="num">5</span> Reporting: who to tell, why quickly, and what to write <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F17%7C7d6efa26-1199-40ff-a2ce-3b64a92d46a6%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Finding a hazard is only half the job. Reporting it is the other half, and the paperwork protects you.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np11-s5.mp3" aria-label="Listen: Reporting: who to tell, why quickly, and what to write"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 900 230" role="img" aria-label="People you can report a hazard or incident to: supervisor or team leader, manager, health and safety representative, responsible authority, and where appropriate the person, family or carer"><circle cx="90" cy="60" r="28" fill="#0b6f7c"/><path d="M40 150 q0 -50 50 -50 q50 0 50 50 v10 h-100z" fill="#0b6f7c"/><text x="90" y="185" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#1b2530">Supervisor or</text><text x="90" y="203" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#1b2530">team leader</text><circle cx="270" cy="60" r="28" fill="#0e9aa7"/><path d="M220 150 q0 -50 50 -50 q50 0 50 50 v10 h-100z" fill="#0e9aa7"/><text x="270" y="185" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#1b2530">Manager</text><circle cx="450" cy="60" r="28" fill="#2563eb"/><path d="M400 150 q0 -50 50 -50 q50 0 50 50 v10 h-100z" fill="#2563eb"/><text x="450" y="185" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#1b2530">Health and</text><text x="450" y="203" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#1b2530">safety rep</text><circle cx="630" cy="60" r="28" fill="#7c3aed"/><path d="M580 150 q0 -50 50 -50 q50 0 50 50 v10 h-100z" fill="#7c3aed"/><text x="630" y="185" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#1b2530">Responsible</text><text x="630" y="203" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#1b2530">authority</text><circle cx="810" cy="60" r="28" fill="#b45309"/><path d="M760 150 q0 -50 50 -50 q50 0 50 50 v10 h-100z" fill="#b45309"/><text x="810" y="185" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#1b2530">The person,</text><text x="810" y="203" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#1b2530">family or</text><text x="810" y="221" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#1b2530">carer</text></svg><figcaption>The people you report to. Pick the ones that fit your workplace.</figcaption></figure>
+  <ol class="points"><li id="s5p1"><span class="ref" title="Reference">NP11 S5 P1</span><b>Who to report a hazard, an incident or an unsafe practice to</b>: your <b>supervisor or team leader</b>, the <b>manager</b>, the <b>health and safety representative (HSR)</b>, the <b>responsible authority</b> in your organisation, and where it is right to do so, the <b>person, their family or carer</b>. Your <b>colleagues</b> and the person's <b>GP</b> may also need to know about an incident.</li><li id="s5p2"><span class="ref" title="Reference">NP11 S5 P2</span><b>Why report quickly?</b> Other people <b>become aware</b> of the risk. The hazard gets <b>fixed sooner</b>. You meet your <b>duty of care</b> and your <b>legal obligations</b>. And the <b>chance of injury</b> goes down.</li><li id="s5p3"><span class="ref" title="Reference">NP11 S5 P3</span><b>Hazard form</b>: when you find a hazard (for example a home with no smoke alarms), fill in a <b>hazard form</b> (paper or digital, whatever your workplace uses) <b>as soon as possible</b>. Written evidence means it can be <b>investigated and fixed</b>. Tell your <b>line manager, supervisor or team leader</b> straight away, and where appropriate the person and their family or carer.</li><li id="s5p4"><span class="ref" title="Reference">NP11 S5 P4</span><b>Incident report</b>: when someone is <b>injured</b> (for example a colleague hurts their back lowering a falling resident), complete an <b>incident report</b>, electronic or paper, <b>as per workplace policy</b>, <b>as soon as possible</b> after the incident.</li></ol>
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> What is a risk assessment? <span class="vid-by">(Mitti by SafetyCulture)</span></p><div class="video" data-youtube="sfQdP7WUVYQ" data-title="What is a risk assessment?"></div></div>
+  
+  
+  <div class="activity" id="act-s5-1" data-activity='{"type":"quiz","title":"Which form, and when?","instructions":"Choose the best answer.","questions":[{"q":"You notice a home has no smoke alarms. Nobody is hurt. What do you fill in?","options":["An incident report","A hazard form","Nothing, just mention it at handover"],"answer":1,"why":"No one is hurt yet, so it is a hazard. Hazard form as soon as possible, and tell your supervisor."},{"q":"A colleague hurts their back lowering a resident to the floor. What do you fill in?","options":["A hazard form","An incident report","A care plan review"],"answer":1,"why":"Someone was injured, so it is an incident. Incident report, electronic or paper, as per policy, as soon as possible."},{"q":"When should the report be done?","options":["At the end of the roster","As soon as possible","Within a month"],"answer":1,"why":"Reports are done as soon as possible so the risk can be controlled and the facts are fresh."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Which form, and when?</b></div>
+    <p class="act-instr">Choose the best answer.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305331/View" target="_blank" rel="noopener">Reporting WHS incidents and injuries</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305332/View" target="_blank" rel="noopener">Sample hazard form</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305335/View" target="_blank" rel="noopener">Client (person) related risk: Duty of care</a></div>
+  <aside class="tnotes" data-slide="s5" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s6" data-ref="NP11 S6">
+  <h2 class="topic"><span class="num">6</span> Manual handling: hazardous manual tasks <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F24%7Ca2d11ed6-603c-4859-a24c-87c8f89edb7b%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Moving people and things is the biggest cause of injury in care work. The Code of Practice has an exact definition, and the assessment wants it.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np11-s6.mp3" aria-label="Listen: Manual handling: hazardous manual tasks"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 760 360" role="img" aria-label="A worker figure with the five risk factors that make a manual task hazardous: repetitive or sustained force, high or sudden force, repetitive movement, sustained or awkward posture, vibration">
+<circle cx="380" cy="60" r="34" fill="#f1c27d"/><rect x="340" y="100" width="80" height="120" rx="20" fill="#0b6f7c"/>
+<rect x="300" y="110" width="34" height="100" rx="14" fill="#0b6f7c" transform="rotate(25 317 110)"/><rect x="426" y="110" width="34" height="100" rx="14" fill="#0b6f7c" transform="rotate(-25 443 110)"/>
+<rect x="345" y="220" width="32" height="110" rx="12" fill="#12384a"/><rect x="383" y="220" width="32" height="110" rx="12" fill="#12384a"/>
+<g font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#1b2530">
+<rect x="20" y="40" width="230" height="52" rx="10" fill="#fff" stroke="#b45309" stroke-width="3"/><text x="135" y="62" text-anchor="middle">Repetitive or sustained</text><text x="135" y="82" text-anchor="middle">FORCE</text>
+<rect x="20" y="150" width="230" height="52" rx="10" fill="#fff" stroke="#b45309" stroke-width="3"/><text x="135" y="172" text-anchor="middle">High or sudden</text><text x="135" y="192" text-anchor="middle">FORCE</text>
+<rect x="20" y="260" width="230" height="52" rx="10" fill="#fff" stroke="#b45309" stroke-width="3"/><text x="135" y="282" text-anchor="middle">Repetitive</text><text x="135" y="302" text-anchor="middle">MOVEMENT</text>
+<rect x="510" y="90" width="230" height="52" rx="10" fill="#fff" stroke="#b45309" stroke-width="3"/><text x="625" y="112" text-anchor="middle">Sustained or awkward</text><text x="625" y="132" text-anchor="middle">POSTURE</text>
+<rect x="510" y="220" width="230" height="52" rx="10" fill="#fff" stroke="#b45309" stroke-width="3"/><text x="625" y="242" text-anchor="middle">Exposure to</text><text x="625" y="262" text-anchor="middle">VIBRATION</text>
+</g>
+<g stroke="#b45309" stroke-width="3" fill="none" stroke-dasharray="6 5"><path d="M250 66 L300 120"/><path d="M250 176 L330 170"/><path d="M250 286 L345 260"/><path d="M510 116 L440 120"/><path d="M510 246 L415 260"/></g>
+</svg><figcaption>A manual task becomes hazardous when it has one or more of these five risk factors.</figcaption></figure>
+  <ol class="points"><li id="s6p1"><span class="ref" title="Reference">NP11 S6 P1</span>A <b>hazardous manual task</b> is a task where a person must <b>lift, lower, push, pull, carry or otherwise move, hold or restrain</b> any <b>person, animal or thing</b>, <b>and</b> it involves one or more of: <b>repetitive or sustained force</b>, <b>high or sudden force</b>, <b>repetitive movement</b>, <b>sustained or awkward posture</b>, or <b>exposure to vibration</b>. (Hazardous Manual Tasks Code of Practice 2021, WorkSafe Queensland.)</li><li id="s6p2"><span class="ref" title="Reference">NP11 S6 P2</span><b>Strategies to reduce manual handling hazards</b>: use <b>good manual handling technique</b>; <b>assess the weight</b> and <b>get help</b> when a load would be risky; a <b>no-lift approach</b>; <b>read the person's care plan</b> for their mobility and transfer needs; <b>use the right equipment and aids</b> (hoist, slide sheet, walker); <b>avoid twisting</b> and keep your back straight with knees bent; <b>regular manual handling training</b>; <b>report broken or missing equipment</b>; <b>exercise programs</b>.</li><li id="s6p3"><span class="ref" title="Reference">NP11 S6 P3</span><b>How muscles move you</b>: muscle cells can <b>contract</b>, which means <b>shorten or pull</b>. When a muscle contracts it <b>pulls on the bone</b> it is attached to, and that is what makes the body move. A muscle can also contract by <b>holding steady against a load</b> without getting shorter, like holding a resident's arm still. Contraction means <b>pulling the ends together</b>, whether or not the muscle gets shorter.</li><li id="s6p4"><span class="ref" title="Reference">NP11 S6 P4</span><b>Changes in a person's home</b> to reduce injury: <b>remove rugs</b> that could trip someone; use <b>mechanical aids</b> such as a <b>hoist</b>, a <b>wheelie walker</b> or a <b>commode chair</b>; use a <b>trolley</b> or <b>smaller boxes</b> when carrying things in and out; change the layout with <b>ramps, railings, handles</b> and <b>safer flooring edges</b>.</li></ol>
+  
+  <div class="after"><figure class="visual"><video controls muted playsinline preload="metadata" poster="pics/info-muscles.jpg" src="pics/info-muscles.mp4" style="width:100%; max-width:960px; border-radius:12px; display:block; margin:0 auto"></video><figcaption>Press play: eight seconds on how a muscle contracts, pulls on the bone, and moves the arm.</figcaption></figure></div>
+  
+  
+  
+  <div class="watch-out"><b>Watch out</b> For &quot;what is a hazardous manual task&quot;, a one-line definition is <b>not enough</b>. Name the <b>actions</b> (lift, lower, push, pull, carry, hold, restrain) <b>and</b> the <b>five risk factors</b> (force, sudden force, repetitive movement, awkward posture, vibration).</div>
+  <div class="activity" id="act-s6-1" data-activity='{"type":"sort","title":"Hazardous or not?","instructions":"Tap a task, then decide: does it have a risk factor that makes it hazardous?","buckets":["Hazardous manual task","Not hazardous"],"items":[{"text":"Rolling a heavy resident every two hours all shift (repetitive force)","bucket":"Hazardous manual task"},{"text":"Bending over a low bed for 20 minutes to dress a wound (awkward posture)","bucket":"Hazardous manual task"},{"text":"Catching a resident who suddenly starts to fall (sudden force)","bucket":"Hazardous manual task"},{"text":"Carrying a folder to the office","bucket":"Not hazardous"},{"text":"Pushing a floor polisher for an hour (vibration)","bucket":"Hazardous manual task"},{"text":"Handing a cup of tea to a resident","bucket":"Not hazardous"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Hazardous or not?</b></div>
+    <p class="act-instr">Tap a task, then decide: does it have a risk factor that makes it hazardous?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div><div class="activity" id="act-s6-2" data-activity='{"type":"match","title":"Fix the home","instructions":"Match each problem to the change that fixes it.","pairs":[{"a":"Loose rug in the hallway","b":"Remove the rug"},{"a":"Resident cannot stand to transfer","b":"Use a hoist"},{"a":"Two steps at the front door","b":"Install a ramp and a rail"},{"a":"Carrying heavy shopping bags inside","b":"Use a trolley or smaller boxes"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Fix the home</b></div>
+    <p class="act-instr">Match each problem to the change that fixes it.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305277/View" target="_blank" rel="noopener">The meaning of manual handling</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305289/View" target="_blank" rel="noopener">Manual handling hazards</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305291/View" target="_blank" rel="noopener">Manual handling techniques</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305287/View" target="_blank" rel="noopener">Musculoskeletal anatomy (1)</a></div>
+  <aside class="tnotes" data-slide="s6" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s7" data-ref="NP11 S7">
+  <h2 class="topic"><span class="num">7</span> Safety signs: read the picture <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F25%7C932fb016-14a1-4b3e-88b4-89f2e9500b19%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Signs talk without words. The shape and colour tell you the type of message. The picture tells you the detail.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np11-s7.mp3" aria-label="Listen: Safety signs: read the picture"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s7p1"><span class="ref" title="Reference">NP11 S7 P1</span><b>Blue circle</b> = you <b>must</b> do this: gloves, mask, eye protection, hand hygiene, cough etiquette.</li><li id="s7p2"><span class="ref" title="Reference">NP11 S7 P2</span><b>Yellow triangle</b> = <b>warning</b>, a danger is here: clinical waste, sharps, poison, radiation, cytotoxic waste.</li><li id="s7p3"><span class="ref" title="Reference">NP11 S7 P3</span><b>Red</b> = <b>fire</b> equipment (extinguisher, hose) or <b>do not</b>.</li><li id="s7p4"><span class="ref" title="Reference">NP11 S7 P4</span><b>Green</b> = <b>safe</b>: first aid, emergency exit.</li><li id="s7p5"><span class="ref" title="Reference">NP11 S7 P5</span><b>Clinical waste</b> is any waste with blood or body fluids. <b>Clinical sharps waste</b> means needles and blades: use and dispose of sharps safely. <b>Cytotoxic waste</b> comes from chemotherapy drugs and is handled with extra care.</li></ol>
+  
+  <div class="after"><div class="signkey"><span><i style="background:#1d4ed8"></i> Blue circle: you MUST do this</span><span><i style="background:#facc15; border:2px solid #1b2530"></i> Yellow triangle: WARNING, danger here</span><span><i style="background:#dc2626"></i> Red: fire equipment, or do NOT</span><span><i style="background:#15803d"></i> Green: safe, first aid, exit</span></div><div class="signs" role="list" aria-label="Twelve common safety signs"><div class="sign" role="listitem"><div class="sign-pics"><img src="pics/sign-01-clinical-waste.png" alt=""></div><span>Clinical waste</span></div><div class="sign" role="listitem"><div class="sign-pics"><img src="pics/sign-02-sharps.png" alt=""><img src="pics/sign-02b-sharps.png" alt=""></div><span>Clinical sharps waste (use and dispose of sharps safely)</span></div><div class="sign" role="listitem"><div class="sign-pics"><img src="pics/sign-03-eye.png" alt=""></div><span>Eye protection must be worn</span></div><div class="sign" role="listitem"><div class="sign-pics"><img src="pics/sign-04-poison.png" alt=""></div><span>Poison</span></div><div class="sign" role="listitem"><div class="sign-pics"><img src="pics/sign-05-gloves.png" alt=""></div><span>Gloves must be worn</span></div><div class="sign" role="listitem"><div class="sign-pics"><img src="pics/sign-06-mask.png" alt=""></div><span>Masks must be worn</span></div><div class="sign" role="listitem"><div class="sign-pics"><img src="pics/sign-07-first-aid.png" alt=""></div><span>First aid</span></div><div class="sign" role="listitem"><div class="sign-pics"><img src="pics/sign-08-radiation.png" alt=""></div><span>Radiation</span></div><div class="sign" role="listitem"><div class="sign-pics"><img src="pics/sign-09-extinguisher.png" alt=""></div><span>Fire extinguisher</span></div><div class="sign" role="listitem"><div class="sign-pics"><img src="pics/sign-10-cytotoxic.png" alt=""></div><span>Cytotoxic waste</span></div><div class="sign" role="listitem"><div class="sign-pics"><img src="pics/sign-11-hand-hygiene.png" alt=""></div><span>Perform hand hygiene before and after contact with every person</span></div><div class="sign" role="listitem"><div class="sign-pics"><img src="pics/sign-12-cough.png" alt=""></div><span>Follow respiratory hygiene and cough etiquette</span></div></div></div>
+  
+  
+  
+  <div class="watch-out"><b>Watch out</b> Look at the <b>picture</b>, not just the colour. The blue sign with a person covering their nose and mouth means <b>follow respiratory hygiene and cough etiquette</b>. It is not &quot;mask must be worn&quot;. The mask sign shows a mask on a face.</div>
+  <div class="activity" id="act-s7-1" data-activity='{"type":"match","title":"What does the sign mean?","instructions":"Match the description of the sign to its meaning.","pairs":[{"a":"Yellow triangle, a biohazard symbol","b":"Clinical waste"},{"a":"Yellow triangle, a needle","b":"Clinical sharps waste"},{"a":"Blue circle, a person covering nose and mouth","b":"Follow respiratory hygiene and cough etiquette"},{"a":"Blue circle, a mask on a face","b":"Masks must be worn"},{"a":"Yellow triangle, a skull and crossbones","b":"Poison"},{"a":"Green square, a white cross","b":"First aid"},{"a":"Red square, an extinguisher","b":"Fire extinguisher"},{"a":"Yellow triangle, a three-bladed fan symbol","b":"Radiation"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>What does the sign mean?</b></div>
+    <p class="act-instr">Match the description of the sign to its meaning.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305269/View" target="_blank" rel="noopener">Additional safety signs</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305326/View" target="_blank" rel="noopener">Identifying workplace hazards (1)</a></div>
+  <aside class="tnotes" data-slide="s7" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s8" data-ref="NP11 S8">
+  <h2 class="topic"><span class="num">8</span> Working in a person's home <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F27%7Cceb00c89-9159-40cf-b36a-650d5201df6b%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">In community care the person's home is your workplace. Safety there is shared, and you are often working alone.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np11-s8.mp3" aria-label="Listen: Working in a person's home"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 760 330" role="img" aria-label="A home with common hazards marked: loose rug, pet, wet floor, power board, heater near curtain">
+<path d="M60 150 L380 30 L700 150 V310 H60 Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="4" stroke-linejoin="round"/>
+<line x1="60" y1="150" x2="700" y2="150" stroke="#94a3b8" stroke-width="3"/><line x1="380" y1="150" x2="380" y2="310" stroke="#94a3b8" stroke-width="3"/>
+<rect x="120" y="250" width="120" height="30" rx="10" fill="#b45309"/><text x="180" y="300" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="#b45309">loose rug</text>
+<ellipse cx="300" cy="270" rx="26" ry="14" fill="#78716c"/><circle cx="326" cy="262" r="10" fill="#78716c"/><text x="300" y="300" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="#b45309">dog underfoot</text>
+<ellipse cx="470" cy="280" rx="40" ry="10" fill="#93c5fd"/><text x="470" y="302" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="#b45309">wet floor</text>
+<rect x="560" y="260" width="60" height="18" rx="4" fill="#1b2530"/><path d="M570 260 v-20 M585 260 v-20 M600 260 v-20 M615 260 v-20" stroke="#1b2530" stroke-width="3"/><text x="590" y="300" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="#b45309">overloaded board</text>
+<rect x="400" y="185" width="40" height="60" rx="6" fill="#dc2626"/><path d="M448 160 v90 q20 -10 20 -45 q0 -35 -20 -45z" fill="#fbbf24"/><text x="440" y="172" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="#b45309">heater by curtain</text>
+<circle cx="220" cy="166" r="11" fill="#fff" stroke="#0b6f7c" stroke-width="4"/><text x="220" y="195" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="#0b6f7c">smoke alarm</text>
+</svg><figcaption>Common hazards in a home. Spot them before they spot you.</figcaption></figure>
+  <ol class="points"><li id="s8p1"><span class="ref" title="Reference">NP11 S8 P1</span><b>The person receiving support</b> has WHS responsibilities too: keep <b>themselves safe</b> (avoid actions that could injure them); keep <b>others safe</b>; <b>follow safety instructions</b>; help keep the <b>home safe</b> (put <b>pets</b> away, tell you about hazards like a <b>wet floor</b>); <b>respect</b> support workers; take <b>responsibility</b> for their choices; <b>communicate</b> clearly so care can be planned; <b>allow access</b> to the home.</li><li id="s8p2"><span class="ref" title="Reference">NP11 S8 P2</span><b>You, the support worker</b>: <b>work safely</b> at all times; keep <b>others safe</b>; <b>follow WHS procedures</b> and the <b>care plan</b>, and only do the tasks agreed in the service agreement; use <b>PPE and equipment</b> correctly; be <b>properly trained</b>; <b>report hazards and incidents</b> to your supervisor.</li><li id="s8p3"><span class="ref" title="Reference">NP11 S8 P3</span><b>Other risks to your personal safety</b> at work, in residential or community settings: catching an <b>infection</b>; injury during <b>manual handling</b>; <b>stress</b> from the nature of the work (shift work, long hours, palliative care, changed behaviours); <b>verbal or physical aggression</b> from a person or their family; <b>car accidents</b> travelling between visits; <b>robbery</b> when working in the community; being <b>bitten or scratched by pets</b>; <b>poisoning</b> or exposure to harmful substances.</li><li id="s8p4"><span class="ref" title="Reference">NP11 S8 P4</span><b>Getting urgent help</b>: in a <b>residential</b> setting use the <b>call bell or emergency call system</b>. In the <b>community</b> <b>call 000</b>.</li></ol>
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s8-1" data-activity='{"type":"sort","title":"Whose responsibility?","instructions":"Tap a responsibility, then tap who it belongs to.","buckets":["Person receiving support","Support worker"],"items":[{"text":"Put the dog in the yard before the visit","bucket":"Person receiving support"},{"text":"Follow the care plan and only do agreed tasks","bucket":"Support worker"},{"text":"Tell the worker the bathroom floor is wet","bucket":"Person receiving support"},{"text":"Report a broken hoist to the supervisor","bucket":"Support worker"},{"text":"Allow the worker into the home","bucket":"Person receiving support"},{"text":"Wear the gloves and apron provided","bucket":"Support worker"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Whose responsibility?</b></div>
+    <p class="act-instr">Tap a responsibility, then tap who it belongs to.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305295/View" target="_blank" rel="noopener">Safety considerations in a home-based environment</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305308/View" target="_blank" rel="noopener">Personal threats</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305302/View" target="_blank" rel="noopener">Medical emergency</a></div>
+  <aside class="tnotes" data-slide="s8" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s9" data-ref="NP11 S9">
+  <h2 class="topic"><span class="num">9</span> Fire safety and smoke alarms <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F28a%7C33b2eaf9-93db-4f23-b128-c34922878a68%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">House fires kill, and the people you support are the most at risk. Queensland has strict smoke alarm laws, and you need to know them.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np11-s9.mp3" aria-label="Listen: Fire safety and smoke alarms"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 760 300" role="img" aria-label="Floor plan showing where smoke alarms go: each bedroom, the hallway joining bedrooms to the rest of the home, and every level">
+<rect x="20" y="20" width="720" height="260" fill="#f8fafc" stroke="#94a3b8" stroke-width="4"/>
+<rect x="20" y="20" width="200" height="130" fill="#e0f2fe" stroke="#94a3b8" stroke-width="3"/><text x="120" y="50" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="700" fill="#1b2530">Bedroom 1</text>
+<rect x="20" y="150" width="200" height="130" fill="#e0f2fe" stroke="#94a3b8" stroke-width="3"/><text x="120" y="180" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="700" fill="#1b2530">Bedroom 2</text>
+<rect x="220" y="20" width="110" height="260" fill="#fef3c7" stroke="#94a3b8" stroke-width="3"/><text x="275" y="150" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="700" fill="#1b2530" transform="rotate(-90 275 150)">Hallway</text>
+<rect x="330" y="20" width="410" height="260" fill="#fff" stroke="#94a3b8" stroke-width="3"/><text x="535" y="50" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="700" fill="#1b2530">Living and kitchen</text>
+<g fill="#fff" stroke="#dc2626" stroke-width="5"><circle cx="120" cy="100" r="14"/><circle cx="120" cy="230" r="14"/><circle cx="275" cy="60" r="14"/></g>
+<text x="535" y="160" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#44505c">Interconnected: if one sounds,</text><text x="535" y="182" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#44505c">they all sound.</text>
+<text x="535" y="230" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#44505c">Photoelectric. 240 V or a 10-year battery.</text>
+<text x="535" y="252" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#44505c">Every level of the home.</text>
+</svg><figcaption>Where the alarms go. Red circles: a bedroom and the hallway that joins the bedrooms to the rest of the home.</figcaption></figure>
+  <ol class="points"><li id="s9p1"><span class="ref" title="Reference">NP11 S9 P1</span><b>Queensland smoke alarm law, from 1 January 2017</b>: alarms <b>older than 10 years</b> must be replaced with <b>photoelectric</b> alarms that meet <b>Australian Standard AS 3786-2014</b> (the date is stamped on the back); an alarm that <b>fails a test</b> must be replaced <b>immediately</b>; a faulty <b>hardwired</b> alarm must be replaced with a <b>hardwired photoelectric</b> alarm.</li><li id="s9p2"><span class="ref" title="Reference">NP11 S9 P2</span><b>From 1 January 2027</b>: <b>all</b> existing homes, townhouses and units need <b>photoelectric, interconnected</b> alarms (if one sounds, they all sound), either <b>hardwired (240 V)</b> or with a <b>non-removable 10-year battery</b>.</li><li id="s9p3"><span class="ref" title="Reference">NP11 S9 P3</span><b>Where</b>: on <b>every level</b>; in <b>every bedroom</b>; in the <b>hallway</b> that connects bedrooms to the rest of the home (or, if no hallway, between the bedroom and the living areas); and if a level has no bedrooms, in the most likely <b>path to the exit</b>.</li><li id="s9p4"><span class="ref" title="Reference">NP11 S9 P4</span><b>Maintenance</b>: <b>test once a month</b> by pressing the test button (use a broom handle if you cannot reach); <b>keep it clean</b> by vacuuming around it, because dust stops it working; <b>replace removable batteries once a year</b>; <b>never paint</b> a smoke alarm.</li><li id="s9p5"><span class="ref" title="Reference">NP11 S9 P5</span><b>High-risk groups</b>: people <b>aged 65 and over</b>; people with <b>disability</b>; <b>young children</b> (curious about fire).</li><li id="s9p6"><span class="ref" title="Reference">NP11 S9 P6</span><b>Risky behaviours</b>: careless <b>cigarettes, lighters and matches</b>; unsafe <b>candles and oil burners</b>; <b>overloaded power points</b> and <b>faulty electrical</b> equipment; <b>not following fire safety procedures</b>; <b>storing chemicals</b> unsafely; doing <b>electrical or repair work</b> that needs a qualified tradesperson; leaving <b>matches and lighters</b> where children can reach them.</li><li id="s9p7"><span class="ref" title="Reference">NP11 S9 P7</span><b>Help a person prevent fires at home</b>: never leave <b>cooking, candles or open flames</b> unattended; <b>never smoke in bed</b>; keep <b>flammable items</b> away from the cooktop and heaters; put a <b>screen</b> in front of open fires; keep <b>heaters</b> away from curtains, tablecloths and bedding; watch <b>loose clothing</b> near heaters and stoves; keep heaters and cords <b>out of walkways</b>; <b>clean the dryer filter</b> every use; <b>do not overload power points</b> and switch off when not in use; have <b>gas appliances checked</b>.</li><li id="s9p8"><span class="ref" title="Reference">NP11 S9 P8</span><b>R.A.C.E.</b> when there is a fire: <b>Remove</b> people from immediate danger if it is safe; <b>Alert</b> by raising the alarm (break-glass alarm or call 000); <b>Contain</b> the fire by closing doors and windows; <b>Extinguish</b> only if you are trained and it is safe, otherwise <b>Evacuate</b> to the assembly area when directed and account for everyone in your care.</li></ol>
+  
+  <div class="after"><div class="race">
+<div style="--c:#dc2626"><b>R</b><span>Remove</span><small>people from danger, if safe</small></div>
+<div style="--c:#b45309"><b>A</b><span>Alert</span><small>raise the alarm, call 000</small></div>
+<div style="--c:#0b6f7c"><b>C</b><span>Contain</span><small>close doors and windows</small></div>
+<div style="--c:#15803d"><b>E</b><span>Extinguish</span><small>only if safe and trained, or Evacuate</small></div>
+</div></div>
+  
+  <div class="vid-row"><div class="vid"><p class="vid-title"><b>Watch:</b> Fire causes: who is at risk and why <span class="vid-by">(Adrie Homan)</span></p><div class="video" data-youtube="nBFeIHaIwMg" data-title="Fire causes: who is at risk and why"></div></div><div class="vid"><p class="vid-title"><b>Watch:</b> Protect a home from fire <span class="vid-by">(Adrie Homan)</span></p><div class="video" data-youtube="ImM87ComphI" data-title="Protect a home from fire"></div></div></div>
+  
+  
+  <div class="activity" id="act-s9-1" data-activity='{"type":"order","title":"Put R.A.C.E. in order","instructions":"Use the arrows or drag the steps into order.","items":["Remove people from danger if safe","Alert: raise the alarm, call 000","Contain: close doors and windows","Extinguish if safe and trained, or Evacuate"]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Put R.A.C.E. in order</b></div>
+    <p class="act-instr">Use the arrows or drag the steps into order.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div><div class="activity" id="act-s9-2" data-activity='{"type":"quiz","title":"Smoke alarm law","instructions":"Choose the best answer.","questions":[{"q":"A person&#39;s smoke alarm has a date on the back from 2012. What does the law say?","options":["It is fine while it still beeps","It must be replaced with a photoelectric alarm that meets AS 3786-2014","Only landlords have to replace alarms"],"answer":1,"why":"Alarms older than 10 years must be replaced with a photoelectric alarm that meets the Australian Standard."},{"q":"How often should a smoke alarm be tested?","options":["Once a year","Once a month","Only when the battery is changed"],"answer":1,"why":"Press the test button once a month."},{"q":"From 1 January 2027 every home needs alarms that are...","options":["Photoelectric and interconnected","Ionisation and battery powered","Only in the kitchen"],"answer":0,"why":"Photoelectric, interconnected, hardwired or 10-year battery, on every level and in every bedroom and hallway."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Smoke alarm law</b></div>
+    <p class="act-instr">Choose the best answer.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305336/View" target="_blank" rel="noopener">Fire and smoke detectors</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305303/View" target="_blank" rel="noopener">Fire and explosion</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305304/View" target="_blank" rel="noopener">Fire procedures</a></div>
+  <aside class="tnotes" data-slide="s9" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s10" data-ref="NP11 S10">
+  <h2 class="topic"><span class="num">10</span> Safety is everybody's job <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F34%7Ca79c7305-823b-4155-870c-a2e96d2f546e%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">You do not need a title to make the workplace safer. Here is how an ordinary worker contributes, and stays up to date.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np11-s10.mp3" aria-label="Listen: Safety is everybody's job"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s10p1"><span class="ref" title="Reference">NP11 S10 P1</span><b>Report</b> hazards, near misses and injuries.</li><li id="s10p2"><span class="ref" title="Reference">NP11 S10 P2</span><b>Take part</b> in workplace safety checks and inspections.</li><li id="s10p3"><span class="ref" title="Reference">NP11 S10 P3</span><b>Report faulty</b> tools, equipment or machinery.</li><li id="s10p4"><span class="ref" title="Reference">NP11 S10 P4</span><b>Talk about safety</b> regularly with managers and colleagues.</li><li id="s10p5"><span class="ref" title="Reference">NP11 S10 P5</span>Keep your <b>training and competency</b> up to date.</li><li id="s10p6"><span class="ref" title="Reference">NP11 S10 P6</span>Stay <b>informed</b> with current hazard information.</li><li id="s10p7"><span class="ref" title="Reference">NP11 S10 P7</span>Join in <b>regular review and consultation</b> about safety.</li><li id="s10p8"><span class="ref" title="Reference">NP11 S10 P8</span><b>Follow safe work procedures</b> that describe the task, name the hazards, and say how to do the job to reduce the risk.</li><li id="s10p9"><span class="ref" title="Reference">NP11 S10 P9</span><b>Attend training</b>, <b>use equipment properly</b>, and follow safety <b>policies and procedures</b>.</li></ol>
+  
+  <div class="after"><img src="pics/info-duties.jpg" alt="Infographic: shared responsibility, employer duties on the left and worker duties on the right" style="width:100%; max-width:1100px; display:block; margin:0 auto; border-radius:10px"></div>
+  
+  
+  
+  
+  <div class="activity" id="act-s10-1" data-activity='{"type":"quiz","title":"Near miss","instructions":"What should you do?","questions":[{"q":"The hoist sling slipped during a transfer but nobody was hurt. What do you do?","options":["Nothing, nobody was hurt","Report it as a near miss and take the sling out of use","Use a different sling next time and say nothing"],"answer":1,"why":"A near miss is reported so it can be investigated before someone is injured. Faulty equipment is reported and removed."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Near miss</b></div>
+    <p class="act-instr">What should you do?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305347/View" target="_blank" rel="noopener">Contribute to safe workplace practice</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305348/View" target="_blank" rel="noopener">Share information and assist your colleagues</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305346/View" target="_blank" rel="noopener">Safety audits and inspections</a></div>
+  <aside class="tnotes" data-slide="s10" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s11" data-ref="NP11 S11">
+  <h2 class="topic"><span class="num">11</span> Look after yourself: stress, fatigue and burnout <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F35%7Cb3b536ff-ef96-4d66-b4d1-b63b0e54ea0d%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Care work is rewarding and it is tiring. Burnout is a real WHS issue. The best workers are the ones who look after themselves.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np11-s11.mp3" aria-label="Listen: Look after yourself: stress, fatigue and burnout"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 760 170" role="img" aria-label="A battery filling from red (burnt out) to green (recharged)">
+<rect x="40" y="40" width="620" height="90" rx="14" fill="#fff" stroke="#1b2530" stroke-width="6"/><rect x="660" y="65" width="26" height="40" rx="6" fill="#1b2530"/>
+<rect x="54" y="54" width="140" height="62" rx="8" fill="#dc2626"/><rect x="204" y="54" width="140" height="62" rx="8" fill="#f59e0b"/><rect x="354" y="54" width="140" height="62" rx="8" fill="#84cc16"/><rect x="504" y="54" width="140" height="62" rx="8" fill="#15803d"/>
+<text x="124" y="155" text-anchor="middle" font-family="Segoe UI, Arial" font-size="14" font-weight="700" fill="#dc2626">burnt out</text><text x="574" y="155" text-anchor="middle" font-family="Segoe UI, Arial" font-size="14" font-weight="700" fill="#15803d">recharged</text>
+<text x="350" y="30" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#44505c">Rest, food, movement, people and boundaries keep the battery charged.</text>
+</svg></figure>
+  <ol class="points"><li id="s11p1"><span class="ref" title="Reference">NP11 S11 P1</span><b>Strategies to reduce your risk of burnout</b>: get plenty of <b>rest</b>; <b>exercise</b> regularly; eat <b>regular, balanced meals</b>; <b>cut down</b> on alcohol, caffeine, nicotine and other drugs; <b>make time to relax</b>; plan at least <b>one enjoyable activity each day</b>; spend time with <b>people you care about</b>; seek <b>peer support</b> at work; know your <b>limits</b> and keep <b>strong boundaries</b> at work; get <b>professional support</b> when you need it.</li><li id="s11p2"><span class="ref" title="Reference">NP11 S11 P2</span><b>Support people and services</b>: your <b>supervisor, team leader or manager</b>; your <b>GP</b>, who can give counselling and a <b>Mental Health Care Plan</b> to see a psychologist; <b>online and phone services</b> with a trained professional 24 hours a day.</li><li id="s11p3"><span class="ref" title="Reference">NP11 S11 P3</span><b>Phone</b>: <b>13 HEALTH</b> (13 43 25 84); <b>Lifeline</b> 13 11 14; <b>MensLine Australia</b> 1300 789 978; <b>Salvation Army</b> 1300 36 36 22.</li><li id="s11p4"><span class="ref" title="Reference">NP11 S11 P4</span><b>Online</b>: <b>Beyond Blue</b>; <b>Dear Mind</b> (Queensland Health); <b>Anxiety Treatment Australia</b>; the <b>Black Dog Institute</b> Mental Health Workplace Toolkit.</li></ol>
+  <p>Read more: <a href="https://www.beyondblue.org.au/" target="_blank" rel="noopener">Beyond Blue</a>, <a href="https://mentalwellbeing.initiatives.qld.gov.au/" target="_blank" rel="noopener">Dear Mind, Queensland Health</a>, <a href="https://www.lifeline.org.au/" target="_blank" rel="noopener">Lifeline</a>, <a href="https://www.blackdoginstitute.org.au/resources-support/wellbeing/" target="_blank" rel="noopener">Black Dog Institute workplace toolkit</a>.</p>
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s11-1" data-activity='{"type":"sort","title":"Strategy or support?","instructions":"Is it something you do yourself, or someone you can turn to?","buckets":["Strategy (something I do)","Support (someone I turn to)"],"items":[{"text":"Plan one enjoyable thing every day","bucket":"Strategy (something I do)"},{"text":"Lifeline 13 11 14","bucket":"Support (someone I turn to)"},{"text":"Keep strong boundaries at work","bucket":"Strategy (something I do)"},{"text":"My GP and a Mental Health Care Plan","bucket":"Support (someone I turn to)"},{"text":"Regular balanced meals and rest","bucket":"Strategy (something I do)"},{"text":"My team leader","bucket":"Support (someone I turn to)"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Strategy or support?</b></div>
+    <p class="act-instr">Is it something you do yourself, or someone you can turn to?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305351/View" target="_blank" rel="noopener">Stress and fatigue</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305356/View" target="_blank" rel="noopener">Early signs of stress</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305357/View" target="_blank" rel="noopener">Employer assistance</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305360/View" target="_blank" rel="noopener">Managing stress and fatigue when working in a community setting</a></div>
+  <aside class="tnotes" data-slide="s11" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s12" data-ref="NP11 S12">
+  <h2 class="topic"><span class="num">12</span> The grand exit</h2>
+  <p class="intro">That is the end of the cluster. Gerry and Dottie have one last thing to say.</p>
+  
+  
+  
+  
+  
+  
+  
+  <div class="finale" data-finale><div class="fin-side left"><div class="fin-mascot"><svg viewBox="0 0 140 150" role="img" aria-label="Gerry the Germ"><defs><radialGradient id="gg" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#bef264"/><stop offset=".55" stop-color="#4ade80"/><stop offset="1" stop-color="#15803d"/></radialGradient></defs>
+<line x1="114.0" y1="70.0" x2="132.0" y2="70.0" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/><circle cx="132.0" cy="70.0" r="6" fill="#f472b6"/><line x1="105.6" y1="95.9" x2="120.2" y2="106.4" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/><circle cx="120.2" cy="106.4" r="6" fill="#fb923c"/><line x1="83.6" y1="111.8" x2="89.2" y2="129.0" stroke="#facc15" stroke-width="7" stroke-linecap="round"/><circle cx="89.2" cy="129.0" r="6" fill="#facc15"/><line x1="56.4" y1="111.8" x2="50.8" y2="129.0" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/><circle cx="50.8" cy="129.0" r="6" fill="#38bdf8"/><line x1="34.4" y1="95.9" x2="19.8" y2="106.4" stroke="#a78bfa" stroke-width="7" stroke-linecap="round"/><circle cx="19.8" cy="106.4" r="6" fill="#a78bfa"/><line x1="26.0" y1="70.0" x2="8.0" y2="70.0" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/><circle cx="8.0" cy="70.0" r="6" fill="#f472b6"/><line x1="34.4" y1="44.1" x2="19.8" y2="33.6" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/><circle cx="19.8" cy="33.6" r="6" fill="#fb923c"/><line x1="56.4" y1="28.2" x2="50.8" y2="11.0" stroke="#facc15" stroke-width="7" stroke-linecap="round"/><circle cx="50.8" cy="11.0" r="6" fill="#facc15"/><line x1="83.6" y1="28.2" x2="89.2" y2="11.0" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/><circle cx="89.2" cy="11.0" r="6" fill="#38bdf8"/><line x1="105.6" y1="44.1" x2="120.2" y2="33.6" stroke="#a78bfa" stroke-width="7" stroke-linecap="round"/><circle cx="120.2" cy="33.6" r="6" fill="#a78bfa"/>
+<circle cx="70" cy="70" r="46" fill="url(#gg)"/>
+<circle cx="52" cy="58" r="6" fill="#86efac" opacity=".7"/><circle cx="88" cy="92" r="4" fill="#86efac" opacity=".7"/>
+<ellipse cx="56" cy="66" rx="9" ry="11" fill="#fff"/><ellipse cx="84" cy="66" rx="9" ry="11" fill="#fff"/>
+<circle cx="58" cy="68" r="4.5" fill="#1b2530"/><circle cx="86" cy="68" r="4.5" fill="#1b2530"/>
+<circle cx="59.5" cy="66.5" r="1.5" fill="#fff"/><circle cx="87.5" cy="66.5" r="1.5" fill="#fff"/>
+<path d="M54 86 q16 16 32 0" stroke="#1b2530" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M62 88 q8 7 16 0 v3 q-8 5 -16 0z" fill="#fff"/>
+<ellipse cx="56" cy="128" rx="12" ry="6" fill="#15803d"/><ellipse cx="86" cy="128" rx="12" ry="6" fill="#15803d"/>
+<rect x="50" y="112" width="10" height="16" rx="4" fill="#15803d"/><rect x="80" y="112" width="10" height="16" rx="4" fill="#15803d"/>
+</svg></div><div class="fin-bubble"><p>I told my boss I needed a hazard form for the stairs. He said &quot;why?&quot; I said &quot;because every time I take them, I end up on the floor.&quot; Turns out the hazard was me. Anyway, I am off to find a bed rail nobody cleans. See you on placement!</p><button type="button" class="say" data-audio="audio/np11-s12-gerry.mp3" aria-label="Listen: Gerry the Germ"><span class="ico">&#9654;</span> Listen</button></div><p class="fin-who">Gerry the Germ</p></div><div class="fin-side right"><div class="fin-mascot"><svg viewBox="0 0 140 160" role="img" aria-label="Dottie the Drop"><defs><radialGradient id="dg" cx="40%" cy="40%" r="70%"><stop offset="0" stop-color="#bae6fd"/><stop offset=".5" stop-color="#38bdf8"/><stop offset="1" stop-color="#0369a1"/></radialGradient></defs>
+<path d="M70 8 C 70 8, 18 72, 18 102 a52 52 0 0 0 104 0 C 122 72, 70 8, 70 8 z" fill="url(#dg)"/>
+<ellipse cx="46" cy="60" rx="9" ry="16" fill="#fff" opacity=".55" transform="rotate(20 46 60)"/>
+<ellipse cx="56" cy="98" rx="9" ry="11" fill="#fff"/><ellipse cx="84" cy="98" rx="9" ry="11" fill="#fff"/>
+<circle cx="58" cy="100" r="4.5" fill="#1b2530"/><circle cx="86" cy="100" r="4.5" fill="#1b2530"/>
+<circle cx="59.5" cy="98.5" r="1.5" fill="#fff"/><circle cx="87.5" cy="98.5" r="1.5" fill="#fff"/>
+<path d="M54 118 q16 14 32 0" stroke="#1b2530" stroke-width="4" fill="none" stroke-linecap="round"/>
+<circle cx="44" cy="116" r="5" fill="#f9a8d4" opacity=".7"/><circle cx="96" cy="116" r="5" fill="#f9a8d4" opacity=".7"/>
+<g fill="#fde047"><path d="M118 30 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3z"/><path d="M14 44 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2z"/></g>
+<ellipse cx="54" cy="152" rx="11" ry="5" fill="#0369a1"/><ellipse cx="86" cy="152" rx="11" ry="5" fill="#0369a1"/>
+</svg></div><div class="fin-bubble"><p>&quot;Safety is not a sign on the wall. It is the hundred small choices you make before anyone is watching.&quot; Wash your hands, read the plan, report the hazard, and go home safe to the people you love. Thank you for caring.</p><button type="button" class="say" data-audio="audio/np11-s12-drop.mp3" aria-label="Listen: Dottie the Drop"><span class="ico">&#9654;</span> Listen</button></div><p class="fin-who">Dottie the Drop</p></div></div><p class="fin-after">Gerry has left the building. Dottie is still here, and so are your clean hands.</p>
+  
+  
+  
+  <aside class="tnotes" data-slide="s12" aria-label="Teacher notes"></aside>
+</section>
+  <footer class="foot">
+    <p>HLTINF006 / HLTWHS002 · Work health and safety · Built from TAFE Queensland learning resources, 23 Oct 2026. References on this page are written NP11 S(slide) P(point), where NP11 is this page's slide number in Nearpod.</p>
+    <p>Picture credits: Infographics: Adrie Homan (NotebookLM) · Drawn pictures: original</p>
+    <p><a href="0-index.html">Lesson index and glossary</a> · <button type="button" class="tlink">Teacher</button></p>
+  </footer>
+</div>
+<a href="#index" class="home" title="Back to the index"><span aria-hidden="true">&#8679;</span> Home</a>
+<div class="tpill" hidden><span>Teacher view on</span><button type="button" class="tp-hide">Hide</button><button type="button" class="tp-out">Sign out</button></div>
+<div class="mascot gerry" data-mascot="gerry" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 150" role="img" aria-label="Gerry the Germ"><defs><radialGradient id="gg" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#bef264"/><stop offset=".55" stop-color="#4ade80"/><stop offset="1" stop-color="#15803d"/></radialGradient></defs>
+<line x1="114.0" y1="70.0" x2="132.0" y2="70.0" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/><circle cx="132.0" cy="70.0" r="6" fill="#f472b6"/><line x1="105.6" y1="95.9" x2="120.2" y2="106.4" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/><circle cx="120.2" cy="106.4" r="6" fill="#fb923c"/><line x1="83.6" y1="111.8" x2="89.2" y2="129.0" stroke="#facc15" stroke-width="7" stroke-linecap="round"/><circle cx="89.2" cy="129.0" r="6" fill="#facc15"/><line x1="56.4" y1="111.8" x2="50.8" y2="129.0" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/><circle cx="50.8" cy="129.0" r="6" fill="#38bdf8"/><line x1="34.4" y1="95.9" x2="19.8" y2="106.4" stroke="#a78bfa" stroke-width="7" stroke-linecap="round"/><circle cx="19.8" cy="106.4" r="6" fill="#a78bfa"/><line x1="26.0" y1="70.0" x2="8.0" y2="70.0" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/><circle cx="8.0" cy="70.0" r="6" fill="#f472b6"/><line x1="34.4" y1="44.1" x2="19.8" y2="33.6" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/><circle cx="19.8" cy="33.6" r="6" fill="#fb923c"/><line x1="56.4" y1="28.2" x2="50.8" y2="11.0" stroke="#facc15" stroke-width="7" stroke-linecap="round"/><circle cx="50.8" cy="11.0" r="6" fill="#facc15"/><line x1="83.6" y1="28.2" x2="89.2" y2="11.0" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/><circle cx="89.2" cy="11.0" r="6" fill="#38bdf8"/><line x1="105.6" y1="44.1" x2="120.2" y2="33.6" stroke="#a78bfa" stroke-width="7" stroke-linecap="round"/><circle cx="120.2" cy="33.6" r="6" fill="#a78bfa"/>
+<circle cx="70" cy="70" r="46" fill="url(#gg)"/>
+<circle cx="52" cy="58" r="6" fill="#86efac" opacity=".7"/><circle cx="88" cy="92" r="4" fill="#86efac" opacity=".7"/>
+<ellipse cx="56" cy="66" rx="9" ry="11" fill="#fff"/><ellipse cx="84" cy="66" rx="9" ry="11" fill="#fff"/>
+<circle cx="58" cy="68" r="4.5" fill="#1b2530"/><circle cx="86" cy="68" r="4.5" fill="#1b2530"/>
+<circle cx="59.5" cy="66.5" r="1.5" fill="#fff"/><circle cx="87.5" cy="66.5" r="1.5" fill="#fff"/>
+<path d="M54 86 q16 16 32 0" stroke="#1b2530" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M62 88 q8 7 16 0 v3 q-8 5 -16 0z" fill="#fff"/>
+<ellipse cx="56" cy="128" rx="12" ry="6" fill="#15803d"/><ellipse cx="86" cy="128" rx="12" ry="6" fill="#15803d"/>
+<rect x="50" y="112" width="10" height="16" rx="4" fill="#15803d"/><rect x="80" y="112" width="10" height="16" rx="4" fill="#15803d"/>
+</svg></div><div class="mascot drop" data-mascot="drop" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 160" role="img" aria-label="Dottie the Drop"><defs><radialGradient id="dg" cx="40%" cy="40%" r="70%"><stop offset="0" stop-color="#bae6fd"/><stop offset=".5" stop-color="#38bdf8"/><stop offset="1" stop-color="#0369a1"/></radialGradient></defs>
+<path d="M70 8 C 70 8, 18 72, 18 102 a52 52 0 0 0 104 0 C 122 72, 70 8, 70 8 z" fill="url(#dg)"/>
+<ellipse cx="46" cy="60" rx="9" ry="16" fill="#fff" opacity=".55" transform="rotate(20 46 60)"/>
+<ellipse cx="56" cy="98" rx="9" ry="11" fill="#fff"/><ellipse cx="84" cy="98" rx="9" ry="11" fill="#fff"/>
+<circle cx="58" cy="100" r="4.5" fill="#1b2530"/><circle cx="86" cy="100" r="4.5" fill="#1b2530"/>
+<circle cx="59.5" cy="98.5" r="1.5" fill="#fff"/><circle cx="87.5" cy="98.5" r="1.5" fill="#fff"/>
+<path d="M54 118 q16 14 32 0" stroke="#1b2530" stroke-width="4" fill="none" stroke-linecap="round"/>
+<circle cx="44" cy="116" r="5" fill="#f9a8d4" opacity=".7"/><circle cx="96" cy="116" r="5" fill="#f9a8d4" opacity=".7"/>
+<g fill="#fde047"><path d="M118 30 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3z"/><path d="M14 44 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2z"/></g>
+<ellipse cx="54" cy="152" rx="11" ry="5" fill="#0369a1"/><ellipse cx="86" cy="152" rx="11" ry="5" fill="#0369a1"/>
+</svg></div>
+</main>
+<div class="big" role="dialog" aria-modal="true" aria-label="Card in full screen">
+  <div class="bar"><span class="big-where"></span><button type="button" class="big-close">Close</button></div>
+  <div class="body"></div>
+  <div class="foot"><button type="button" class="big-back">Back</button><button type="button" class="next big-next">Next card</button></div>
+</div>
+<script>var TEACHER = {"salt":"r96o1uhHmw1CoJb5bRk27Q==","iv":"Bc6zOCiRo5johLJ5","ct":"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"}; var MASCOT_LINES = {"gerry":{"lines":["Hi, Gerry here. Safety tip: a loose rug is a free trip. Literally.","Why read the care plan? Just lift them. What is the worst that can happen? (Your back. Your back is what can happen.)","Smoke alarm beeping? Take the battery out. Problem solved. Also, house solved.","I store the bleach next to the orange juice. Keeps everyone guessing.","A hazard form? I prefer the hazard shrug. Much faster.","PPE is my first line of defence. And my only line. And I lose it a lot.","Twist, lift, jerk. It is not a dance move. It is my physio's retirement plan.","Never test the smoke alarm. The toast does it for free every morning.","Burnout? I just drink more coffee and stop sleeping. Works great until Wednesday."],"prefix":"gerry-l3-"},"drop":{"lines":["Dottie here. Read the care plan first. The hoist is there because someone thought ahead.","A near miss is a free lesson. Report it before it becomes an injury.","Test the smoke alarm once a month. Broom handle if you cannot reach.","PPE is the LAST line of defence. Get rid of the hazard first.","Hazard form today beats incident report tomorrow.","Bend your knees, keep your back straight, and never twist with a load.","The person's home is your workplace. Ask them to put the dog away. Politely.","Remove, Alert, Contain, Extinguish. Say it until you can say it half asleep.","You cannot pour from an empty cup. Rest is part of the job."],"prefix":"drop-l3-"}};</script>
+<script>(function(){
+  var ANGLES = [-8, -5.5, -9, -4.5, -7, -6, -8.5, -4, -6.5];
+  var big = document.querySelector('.big'), bigBody = big.querySelector('.body'),
+      bigWhere = big.querySelector('.big-where'), active = null;
+
+  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ---------- */
+  (function(){
+    var pill = document.querySelector('.tpill'), tlink = document.querySelector('.tlink'), saved = null, on = '0';
+    var b64 = function(s){ var b = atob(s), a = new Uint8Array(b.length); for(var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; };
+    function decrypt(code){
+      if(!window.crypto || !crypto.subtle) return Promise.reject(new Error('nosubtle'));
+      var enc = new TextEncoder();
+      return crypto.subtle.importKey('raw', enc.encode(code), 'PBKDF2', false, ['deriveKey']).then(function(km){
+        return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(TEACHER.salt), iterations: 150000, hash: 'SHA-256' }, km, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      }).then(function(key){
+        return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(TEACHER.iv) }, key, b64(TEACHER.ct));
+      }).then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
+    }
+    function show(notes){
+      document.querySelectorAll('.tnotes').forEach(function(a){ a.innerHTML = notes[a.getAttribute('data-slide')] || ''; });
+      document.body.classList.add('teacher'); pill.hidden = false;
+      try{ localStorage.setItem('tv_on', '1'); }catch(e){}
+    }
+    function hide(){ document.body.classList.remove('teacher'); pill.hidden = true; try{ localStorage.setItem('tv_on', '0'); }catch(e){} }
+    function unlock(code, quiet){
+      return decrypt(code).then(function(notes){ saved = code; try{ localStorage.setItem('tv_code', code); }catch(e){} show(notes); }, function(err){
+        if(quiet) return;
+        alert(err.message === 'nosubtle' ? 'This browser cannot unlock the teacher view. Use Chrome or Edge.' : 'That code did not work.');
+      });
+    }
+    try{ saved = localStorage.getItem('tv_code'); on = localStorage.getItem('tv_on') || '0'; }catch(e){}
+    var q = new URLSearchParams(location.search);
+    if(q.get('t') === 'off'){ hide(); try{ localStorage.removeItem('tv_code'); }catch(e){} }
+    else if(q.has('t')) unlock(q.get('t'));
+    else if(saved && on === '1') unlock(saved, true);
+    if(tlink) tlink.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')){ hide(); return; }
+      if(saved){ unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); }); } else ask();
+      function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
+    });
+    pill.querySelector('.tp-hide').addEventListener('click', hide);
+    pill.querySelector('.tp-out').addEventListener('click', function(){ hide(); saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open')) hide(); });
+  })();
+
+    /* ---------- audio ---------- */
+  var player = new Audio(), current = null, queue = null;
+  function stopAudio(){ player.pause(); if(current){ current.classList.remove('playing'); current = null; } queue = null; }
+  function playBtn(btn, onEnd){
+    if(current === btn){ stopAudio(); return; }
+    stopAudio();
+    current = btn; btn.classList.add('playing');
+    player.src = btn.getAttribute('data-audio');
+    player.onended = function(){ btn.classList.remove('playing'); current = null; if(onEnd) onEnd(); };
+    player.onerror = function(){ btn.classList.remove('playing'); current = null; btn.title = 'Sound file not found yet'; };
+    player.play().catch(function(){});
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.say'); if(!b) return;
+    e.preventDefault(); e.stopPropagation();
+    var inBig = b.closest('.big');
+    if(inBig && active){ var realBtn = active.card().querySelector('.say'); if(realBtn) b = realBtn; }
+    playBtn(b);
+  });
+
+  /* ---------- mascots follow the scroll ---------- */
+  document.querySelectorAll('.mascot').forEach(function(g, gi){
+    var name = g.getAttribute('data-mascot'), bubble = g.querySelector('.gerry-bubble');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var lastSlide = null, timer = null, ml = MASCOT_LINES[name] || {}, lines = ml.lines || [], prefix = ml.prefix || (name + '-');
+    function place(){
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? window.scrollY / max : 0;
+      var top = 90 + (gi ? 1 - p : p) * (window.innerHeight - 300);
+      g.style.top = top + 'px';
+      var slides = document.querySelectorAll('section.slide'), cur = null;
+      for(var i = 0; i < slides.length; i++){ if(slides[i].getBoundingClientRect().top < window.innerHeight * 0.5) cur = slides[i]; }
+      if(cur !== lastSlide && lastSlide !== null && !reduce){ g.classList.remove('hop'); void g.offsetWidth; g.classList.add('hop'); }
+      lastSlide = cur;
+    }
+    window.addEventListener('scroll', function(){ if(!timer) timer = requestAnimationFrame(function(){ timer = null; place(); }); }, { passive: true });
+    window.addEventListener('resize', place);
+    place();
+    var n = 0;
+    g.addEventListener('click', function(){
+      if(!bubble.hidden){ bubble.hidden = true; return; }
+      var k = n++ % lines.length;
+      bubble.textContent = lines[k]; bubble.hidden = false;
+      stopAudio(); player.src = 'audio/' + prefix + (k + 1) + '.mp3'; player.onended = null; player.onerror = null; player.play().catch(function(){});
+      clearTimeout(bubble._t); bubble._t = setTimeout(function(){ bubble.hidden = true; }, 7000);
+    });
+  });
+
+  /* ---------- finale: big mascots walk in ---------- */
+  document.querySelectorAll('[data-finale]').forEach(function(f){
+    if(!('IntersectionObserver' in window)){ f.classList.add('in'); return; }
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ f.classList.add('in'); io.disconnect(); } }); }, { threshold: 0.35 });
+    io.observe(f);
+  });
+
+  /* ---------- videos ---------- */
+  document.querySelectorAll('.video').forEach(function(v){
+    var id = (v.getAttribute('data-youtube')||'').trim(), t = v.getAttribute('data-title')||'Video';
+    if(!id) return;
+    v.innerHTML = '<iframe title="'+t.replace(/"/g,'&quot;')+'" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>';
+    var w = document.createElement('p'); w.className = 'watch';
+    w.innerHTML = 'Video not playing? <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v='+encodeURIComponent(id)+'">Watch "'+t.replace(/</g,'&lt;')+'" on YouTube</a>';
+    v.parentNode.insertBefore(w, v.nextSibling);
+  });
+
+  /* ---------- click a part of a diagram to make it stand out ---------- */
+  document.querySelectorAll('.spot').forEach(function(sv){
+    var parts = sv.querySelectorAll('[data-spot]');
+    parts.forEach(function(g){
+      g.style.cursor = 'pointer';
+      g.addEventListener('click', function(e){
+        e.stopPropagation();
+        var on = g.classList.contains('lit');
+        parts.forEach(function(x){ x.classList.remove('lit'); });
+        sv.classList.toggle('spotting', !on);
+        if(!on) g.classList.add('lit');
+      });
+    });
+    sv.addEventListener('click', function(){ parts.forEach(function(x){ x.classList.remove('lit'); }); sv.classList.remove('spotting'); });
+  });
+
+  /* ---------- card stacks ---------- */
+  document.querySelectorAll('.stack').forEach(function(stack){
+    var cards = [].slice.call(stack.querySelectorAll('.card')), n = cards.length, i = 0, busy = false;
+    var deck = document.createElement('div'); deck.className = 'deck'; deck.tabIndex = 0;
+    deck.setAttribute('role','group');
+    deck.setAttribute('aria-label', (stack.getAttribute('aria-label')||'Cards') + '. Press the right arrow for the next card.');
+    var pile = document.createElement('div'); pile.className = 'pile'; pile.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
+    deck.appendChild(pile);
+    cards.forEach(function(c, k){
+      c.style.setProperty('--r', ANGLES[k % ANGLES.length] + 'deg');
+      if(k % 2) c.classList.add('shade');
+      if(c.textContent.replace(/\s+/g,' ').length > 520) c.classList.add('long');
+      var tag = document.createElement('span'); tag.className = 'count'; tag.textContent = 'Card ' + (k+1) + ' of ' + n;
+      c.insertBefore(tag, c.firstChild);
+      c.setAttribute('aria-hidden', 'true');
+      deck.appendChild(c);
+    });
+    if(stack.getAttribute('data-playall')){
+      var pa = document.createElement('div'); pa.className = 'playall';
+      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> Play all cards</button>';
+      stack.appendChild(pa);
+      pa.querySelector('button').addEventListener('click', function(ev){
+        ev.stopPropagation();
+        if(queue === stack){ stopAudio(); return; }
+        stopAudio(); queue = stack;
+        function step(){
+          if(queue !== stack) return;
+          var b = cards[i].querySelector('.say');
+          if(!b){ next(); return; }
+          playBtn(b, function(){ setTimeout(function(){ if(queue !== stack) return; if(i === n-1){ queue = null; return; } go(1); step(); }, 900); });
+        }
+        step();
+      }, true);
+    }
+    stack.appendChild(deck);
+
+    var controls = document.createElement('div'); controls.className = 'controls';
+    controls.innerHTML = '<button type="button" class="back">Back</button><span class="where" aria-live="polite"></span><button type="button" class="next">Next card</button><button type="button" class="full">Full screen</button>';
+    stack.appendChild(controls);
+    var hint = document.createElement('p'); hint.className = 'hint'; hint.textContent = 'Click the card to see the next card.';
+    stack.appendChild(hint);
+    var where = controls.querySelector('.where');
+
+    var heights = [];
+    function size(){
+      cards.forEach(function(c, k){ c.style.height = 'auto'; heights[k] = c.offsetHeight; c.style.height = ''; });
+      deck.style.height = heights[i] + 'px';
+    }
+    function show(){
+      cards.forEach(function(c, k){ c.classList.toggle('top', k === i); c.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      where.textContent = 'Card ' + (i+1) + ' of ' + n;
+      if(heights.length) deck.style.height = heights[i] + 'px';
+      if(active === api && big.classList.contains('open')) fill();
+    }
+    function go(step){
+      if(busy) return; busy = true;
+      var old = cards[i];
+      i = (i + step + n) % n;
+      var cls = step > 0 ? 'leave' : 'leave-back';
+      show();
+      old.classList.add(cls);
+      cards[i].classList.add('arrive');
+      setTimeout(function(){ old.classList.remove(cls); cards[i].classList.remove('arrive'); busy = false; }, 440);
+    }
+    function next(){ go(1); }
+    function fill(){
+      bigBody.innerHTML = cards[i].innerHTML;
+      bigWhere.textContent = 'Card ' + (i+1) + ' of ' + n;
+      bigBody.scrollTop = 0;
+    }
+    var api = { go: go, fill: fill, card: function(){ return cards[i]; } };
+
+    deck.addEventListener('click', function(e){ if(e.target.closest('a') || e.target.closest('.say')) return; go(1); });
+    deck.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); go(1); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
+    });
+    controls.querySelector('.next').addEventListener('click', function(){ go(1); });
+    controls.querySelector('.back').addEventListener('click', function(){ go(-1); });
+    controls.querySelector('.full').addEventListener('click', function(){
+      active = api; fill(); big.classList.add('open'); big.querySelector('.big-next').focus();
+    });
+
+    size(); show();
+    window.addEventListener('resize', size);
+    window.addEventListener('load', size);
+    stack.querySelectorAll('img').forEach(function(img){ img.addEventListener('load', size); });
+  });
+
+  function closeBig(){ big.classList.remove('open'); active = null; }
+  big.querySelector('.big-close').addEventListener('click', closeBig);
+  big.querySelector('.big-next').addEventListener('click', function(){ if(active) active.go(1); });
+  big.querySelector('.big-back').addEventListener('click', function(){ if(active) active.go(-1); });
+  document.addEventListener('keydown', function(e){
+    if(!big.classList.contains('open')) return;
+    if(e.key === 'Escape') closeBig();
+    if(e.key === 'ArrowRight' && active) active.go(1);
+    if(e.key === 'ArrowLeft' && active) active.go(-1);
+  });
+
+  /* ---------- activities ---------- */
+  function shuffle(a){ a = a.slice(); for(var i = a.length-1; i > 0; i--){ var j = Math.floor(Math.random()*(i+1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
+  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
+
+  var builders = {
+    /* chips into targets: used by match (one chip per target) and sort (many chips per bucket) */
+    match: function(root, a){ return buildChips(root, a.pairs.map(function(p){ return { text: p.a, target: p.b }; }), shuffle(a.pairs.map(function(p){ return p.b; })), a.labels || null, 1); },
+    sort: function(root, a){ return buildChips(root, a.items.map(function(it){ return { text: it.text, target: it.bucket }; }), a.buckets, null, 99); },
+    order: function(root, a){
+      var list = el('ol', 'order'); root.appendChild(list);
+      var start = a.start == null ? 1 : a.start;
+      function render(items){
+        list.innerHTML = '';
+        items.forEach(function(t, k){
+          var li = el('li'); li.draggable = true; li.setAttribute('data-text', t);
+          li.innerHTML = '<span class="o-n">' + (start + k) + '</span><span class="o-t">' + esc(t) + '</span><span class="o-btn"><button type="button" aria-label="Move up">&#9650;</button><button type="button" aria-label="Move down">&#9660;</button></span>';
+          list.appendChild(li);
+        });
+      }
+      function items(){ return [].map.call(list.children, function(li){ return li.getAttribute('data-text'); }); }
+      function renumber(){ [].forEach.call(list.children, function(li, k){ li.querySelector('.o-n').textContent = start + k; li.classList.remove('right','wrong'); }); }
+      render(shuffle(a.items));
+      list.addEventListener('click', function(e){
+        var b = e.target.closest('button'); if(!b) return;
+        var li = b.closest('li'); var up = b.getAttribute('aria-label') === 'Move up';
+        if(up && li.previousElementSibling) list.insertBefore(li, li.previousElementSibling);
+        if(!up && li.nextElementSibling) list.insertBefore(li.nextElementSibling, li);
+        renumber();
+      });
+      var drag = null;
+      list.addEventListener('dragstart', function(e){ drag = e.target.closest('li'); if(drag) drag.classList.add('dragging'); });
+      list.addEventListener('dragend', function(){ if(drag) drag.classList.remove('dragging'); drag = null; renumber(); });
+      list.addEventListener('dragover', function(e){ e.preventDefault(); var li = e.target.closest('li'); if(!li || li === drag) return; var r = li.getBoundingClientRect(); if(e.clientY < r.top + r.height/2) list.insertBefore(drag, li); else list.insertBefore(drag, li.nextSibling); });
+      return {
+        check: function(){ var ok = 0; [].forEach.call(list.children, function(li, k){ var good = li.getAttribute('data-text') === a.items[k]; li.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, a.items.length]; },
+        reset: function(){ render(shuffle(a.items)); }
+      };
+    },
+    quiz: function(root, a){
+      var qs = [];
+      a.questions.forEach(function(q, qi){
+        var box = el('div', 'quiz-q'); box.innerHTML = '<p><b>' + (qi+1) + '. ' + esc(q.q) + '</b></p>';
+        var sel = -1;
+        q.options.forEach(function(o, oi){
+          var b = el('button', 'opt', esc(o)); b.type = 'button';
+          b.addEventListener('click', function(){ if(box.classList.contains('done')) return; sel = oi; [].forEach.call(box.querySelectorAll('.opt'), function(x){ x.classList.remove('selected'); }); b.classList.add('selected'); });
+          box.appendChild(b);
+        });
+        if(q.why) box.appendChild(el('p', 'why', esc(q.why)));
+        root.appendChild(box);
+        qs.push({ box: box, get: function(){ return sel; }, set: function(v){ sel = v; }, q: q });
+      });
+      return {
+        check: function(){ var ok = 0; qs.forEach(function(x){ var opts = x.box.querySelectorAll('.opt'); x.box.classList.add('done'); opts.forEach(function(o, oi){ o.classList.remove('selected'); if(oi === x.q.answer) o.classList.add('right'); else if(oi === x.get()) o.classList.add('wrong'); }); if(x.get() === x.q.answer) ok++; }); return [ok, qs.length]; },
+        reset: function(){ qs.forEach(function(x){ x.set(-1); x.box.classList.remove('done'); x.box.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected','right','wrong'); }); }); }
+      };
+    },
+    table: function(root, a){
+      var t = el('table', 'fill-table'); root.appendChild(t);
+      t.innerHTML = '<thead><tr>' + a.columns.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead>';
+      var tb = el('tbody'); t.appendChild(tb);
+      a.rows.forEach(function(r){
+        var tr = el('tr'); tr.innerHTML = '<td><b>' + esc(r.label) + '</b></td>';
+        r.cells.forEach(function(c){
+          var td = el('td'); var s = el('select'); s.innerHTML = '<option value="">Choose...</option>' + shuffle(c.options).map(function(o){ return '<option>' + esc(o) + '</option>'; }).join('');
+          s.setAttribute('data-answer', c.answer); td.appendChild(s); tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      return {
+        check: function(){ var ok = 0, n = 0; t.querySelectorAll('select').forEach(function(s){ n++; var td = s.parentNode; td.classList.remove('right','wrong'); var good = s.value === s.getAttribute('data-answer'); td.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, n]; },
+        reset: function(){ t.querySelectorAll('select').forEach(function(s){ s.value = ''; s.parentNode.classList.remove('right','wrong'); }); }
+      };
+    }
+  };
+
+  function buildChips(root, items, targetNames, labels, cap){
+    var bank = el('div', 'bank'); root.appendChild(bank);
+    var tg = el('div', 'targets'); root.appendChild(tg);
+    var selected = null, targets = {};
+    targetNames.forEach(function(name){
+      var t = el('div', 'target'); t.setAttribute('data-name', name);
+      t.innerHTML = '<div class="t-label">' + esc(labels ? (labels[name] || name) : name) + '</div><div class="t-drop"></div>';
+      tg.appendChild(t); targets[name] = t;
+      t.addEventListener('click', function(){ if(selected) place(selected, t); });
+      t.addEventListener('dragover', function(e){ e.preventDefault(); t.classList.add('over'); });
+      t.addEventListener('dragleave', function(){ t.classList.remove('over'); });
+      t.addEventListener('drop', function(e){ e.preventDefault(); t.classList.remove('over'); if(selected) place(selected, t); });
+    });
+    function place(chip, t){
+      var drop = t.querySelector('.t-drop');
+      if(cap === 1 && drop.children.length){ bank.appendChild(drop.firstElementChild); }
+      drop.appendChild(chip); chip.classList.remove('selected','right','wrong'); selected = null;
+    }
+    function mk(it){
+      var c = el('div', 'chip', esc(it.text)); c.setAttribute('data-target', it.target); c.draggable = true; c.tabIndex = 0;
+      c.addEventListener('click', function(e){ e.stopPropagation(); if(c.parentNode !== bank){ bank.appendChild(c); c.classList.remove('right','wrong'); selected = null; return; } if(selected) selected.classList.remove('selected'); selected = c; c.classList.add('selected'); });
+      c.addEventListener('dragstart', function(){ selected = c; c.classList.add('selected'); });
+      c.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); c.click(); } });
+      return c;
+    }
+    function fillBank(){ bank.innerHTML = ''; shuffle(items).forEach(function(it){ bank.appendChild(mk(it)); }); }
+    fillBank();
+    return {
+      check: function(){ var ok = 0; items.length; root.querySelectorAll('.chip').forEach(function(c){ var t = c.closest('.target'); c.classList.remove('right','wrong'); if(!t){ c.classList.add('wrong'); return; } var good = t.getAttribute('data-name') === c.getAttribute('data-target'); c.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, items.length]; },
+      reset: function(){ root.querySelectorAll('.t-drop').forEach(function(d){ d.innerHTML = ''; }); fillBank(); selected = null; }
+    };
+  }
+
+  document.querySelectorAll('.activity').forEach(function(act){
+    var a; try{ a = JSON.parse(act.getAttribute('data-activity')); }catch(e){ return; }
+    var body = act.querySelector('.act-body'), res = act.querySelector('.act-result');
+    var b = builders[a.type]; if(!b) return;
+    var api = b(body, a);
+    var slide = act.closest('section.slide'), peek = act.querySelector('.act-peek'), tools = act.querySelector('.act-tools');
+    function blur(on){ if(slide) slide.classList.toggle('hide-notes', on); peek.textContent = on ? 'Show the notes' : 'Hide the notes to carry on'; act.classList.toggle('peeking', !on && act.classList.contains('started')); }
+    act.querySelector('.act-go').addEventListener('click', function(){
+      act.classList.add('started'); act.querySelector('.act-start').hidden = true; body.hidden = false; tools.hidden = false; blur(true);
+      act.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    peek.addEventListener('click', function(){ blur(!slide.classList.contains('hide-notes')); });
+    act.querySelector('.act-check').addEventListener('click', function(){
+      var r = api.check(); res.className = 'act-result ' + (r[0] === r[1] ? 'good' : 'bad');
+      res.textContent = r[0] === r[1] ? 'All correct. Well done!' : r[0] + ' of ' + r[1] + ' correct. Try the red ones again.';
+      if(r[0] === r[1]){ act.classList.remove('started'); blur(false); }
+    });
+    act.querySelector('.act-reset').addEventListener('click', function(){ api.reset(); res.textContent = ''; res.className = 'act-result'; });
+  });
+})();
+</script>
+</body>
+</html>

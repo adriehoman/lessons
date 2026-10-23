@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HLTINF006 / HLTWHS002 Germs and how infection spreads</title>
+<meta name="description" content="Lesson 1 of the Infection Control and WHS cluster: microorganisms, infection, the chain of infection, reservoirs, transmission, hazards, sharps and cough etiquette.">
+<style>:root{
+  --ink:#1b2530; --soft-ink:#44505c; --paper:#ffffff;
+  --deep:#12384a; --aqua:#8fe3e8; --action:#0b6f7c;
+  --card-a:#fbfbf9; --card-b:#ecece8; --edge:#d9d9d4;
+  --warn:#b45309; --warn-bg:#fff7ed; --ok:#15803d; --bad:#b91c1c;
+  --teach:#4c1d95; --teach-bg:#f5f3ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size:clamp(17px,1.5vw,30px); line-height:1.55}
+main{overflow-x:clip}
+.wrap{max-width:1500px; margin:0 auto; padding:0 clamp(20px,3vw,60px)}
+
+/* banner */
+.banner{position:relative; background:var(--deep); color:#fff; padding:clamp(60px,9vw,140px) 20px 40px; overflow:hidden}
+.banner-inner{position:relative; z-index:2; max-width:1500px; margin:0 auto}
+.banner .kicker{margin:0 0 6px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:.75em; color:var(--aqua)}
+.banner h1{margin:0; font-size:clamp(30px,5vw,76px); line-height:1.1; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.banner .sub{margin:12px 0 0; font-size:1.05em; max-width:28em; color:#e6f6f7}
+.banner svg.hero{position:absolute; right:-2vw; bottom:-4vw; width:min(46vw,620px); height:auto; opacity:.95; z-index:1}
+@media (max-width:800px){.banner svg.hero{opacity:.25}}
+
+/* index */
+#index{margin:30px 0 10px; padding:18px 26px 12px; background:#eef3f4; border-left:6px solid var(--action); border-radius:6px}
+#index h2{font-size:1.2em; margin:0 0 8px}
+#index ul{margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(19em,1fr)); column-gap:3em}
+#index li{margin:4px 0}
+#index a{text-decoration:none; color:var(--ink); display:flex; gap:10px; align-items:baseline}
+#index a:hover{color:var(--action); text-decoration:underline}
+.num{display:inline-flex; align-items:center; justify-content:center; min-width:1.7em; height:1.7em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; font-size:.8em; flex:none}
+.opening{font-size:1.05em; margin:26px 0 10px}
+
+/* slides */
+section.slide{padding:36px 0 18px; border-top:1px solid var(--edge); margin-top:30px; scroll-margin-top:10px}
+section.slide:first-of-type{border-top:0}
+h2.topic{font-size:1.4em; line-height:1.3; margin:0 0 10px; display:flex; gap:14px; align-items:center}
+h2.topic .num{font-size:.7em; min-width:2em; height:2em}
+h3{font-size:1.15em; line-height:1.3; margin:0 0 10px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px; padding-left:26px}
+li{margin:4px 0}
+a{color:var(--action); text-underline-offset:3px}
+a.star{font-weight:700; padding:0 4px; font-size:.8em; text-decoration:none; opacity:.55}
+a.star:hover{opacity:1}
+a.term{text-decoration:underline dotted; color:inherit}
+.intro{font-size:1.05em; color:var(--soft-ink)}
+a:focus-visible,button:focus-visible,.deck:focus-visible{outline:3px solid #f2a900; outline-offset:3px}
+
+ol.points{margin:12px 0 18px; padding-left:0; list-style:none; counter-reset:pt}
+ol.points li{position:relative; padding:10px 14px 10px 3.2em; margin:6px 0; background:#f7f9fa; border-radius:8px; counter-increment:pt}
+ol.points li::before{content:counter(pt); position:absolute; left:.9em; top:.55em; width:1.7em; height:1.7em; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:700; font-size:.85em; display:flex; align-items:center; justify-content:center}
+.ref{display:none; float:right; margin-left:10px; font-size:.65em; color:var(--teach); background:var(--teach-bg); border:1px solid #ddd6fe; border-radius:4px; padding:0 6px}
+body.teacher .ref{display:inline-block}
+
+figure.visual{margin:18px 0 22px; text-align:center}
+figure.visual svg,figure.visual img{max-width:100%; height:auto; max-height:70vh}
+figure.visual figcaption{font-size:.8em; color:var(--soft-ink); margin-top:6px}
+figure.pic{margin:22px 0}
+figure.pic img{display:block; width:100%; height:auto; max-height:86vh; object-fit:contain; border-radius:4px}
+
+.watch-out{margin:14px 0 20px; padding:14px 18px 14px 56px; background:var(--warn-bg); border:2px solid #fdba74; border-radius:8px; position:relative}
+.watch-out::before{content:"!"; position:absolute; left:14px; top:12px; width:30px; height:30px; border-radius:50%; background:var(--warn); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.watch-out b{color:var(--warn); margin-right:6px}
+
+/* audio */
+.say{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:40px; display:inline-flex; gap:8px; align-items:center}
+.say.playing{background:var(--action); color:#fff}
+.say .ico{font-size:.8em}
+.audio-line{display:flex; gap:12px; align-items:center; margin:0 0 14px; flex-wrap:wrap}
+.audio-label{color:var(--soft-ink); font-size:.9em}
+.card-audio{margin-top:10px}
+.playall{margin:0 0 34px; text-align:center}
+
+/* card stack (from the Sway template) */
+.stack{margin:60px auto 40px; width:86%; max-width:1150px; --tilt:.4}
+.deck{position:relative; cursor:pointer; border-radius:3px; transition:height .3s ease}
+.pile i{position:absolute; inset:0; background:var(--card-b); border:1px solid var(--edge); box-shadow:0 1px 3px rgba(20,30,40,.10)}
+.pile i:nth-child(even){background:var(--card-a)}
+.pile i{transform:rotate(calc(var(--a) * var(--tilt,1))) translate(var(--x),var(--y))}
+.pile i:nth-child(1){--a:-15deg; --x:-4px; --y:6px}
+.pile i:nth-child(2){--a:6deg; --x:6px; --y:2px}
+.pile i:nth-child(3){--a:-12deg; --x:3px; --y:-5px}
+.pile i:nth-child(4){--a:3deg; --x:-5px; --y:4px}
+.pile i:nth-child(5){--a:-10deg; --x:5px; --y:5px}
+.pile i:nth-child(6){--a:-2deg; --x:-3px; --y:-3px}
+.pile i:nth-child(7){--a:-6deg; --x:2px; --y:3px}
+.pile{position:absolute; inset:0; filter:drop-shadow(0 14px 18px rgba(20,30,40,.16))}
+.card{position:absolute; left:0; top:0; width:100%; height:100%; background:var(--card-a); border:1px solid var(--edge);
+  padding:1.5em 1.8em 1.3em; font-size:clamp(16px,1.4vw,27px); line-height:1.5; opacity:0; pointer-events:none; z-index:1; min-height:7em;
+  transform:rotate(calc(var(--r,-6deg) * var(--tilt,1))); box-shadow:0 2px 6px rgba(20,30,40,.14)}
+.card.shade{background:var(--card-b)}
+.card.long{font-size:clamp(14.5px,1.25vw,24px); line-height:1.45}
+.card.top{opacity:1; pointer-events:auto; z-index:3}
+.card.arrive{animation:arrive .42s ease-out}
+.card.leave{opacity:1; z-index:4; animation:leave .42s ease-in forwards}
+.card.leave-back{opacity:1; z-index:4; animation:leaveBack .42s ease-in forwards}
+@keyframes arrive{from{transform:rotate(calc(var(--r) * var(--tilt,1) + 5deg)) scale(.96)} to{transform:rotate(calc(var(--r) * var(--tilt,1))) scale(1)}}
+@keyframes leave{to{transform:translate(58%,-10%) rotate(16deg); opacity:0}}
+@keyframes leaveBack{to{transform:translate(-58%,-10%) rotate(-18deg); opacity:0}}
+.card .count{float:right; margin:-6px -8px 6px 14px; font-size:.8em; font-weight:600; color:var(--soft-ink); background:#fff; border:1px solid var(--edge); border-radius:20px; padding:2px 12px}
+.card ul{margin-bottom:6px}
+.card-pic{float:right; width:clamp(90px,22%,220px); margin:0 0 10px 16px}
+.card-pic svg{width:100%; height:auto}
+.controls{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin-top:60px}
+.controls button{font:inherit; font-size:clamp(17px,1.2vw,24px); font-weight:600; cursor:pointer; padding:10px 20px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:48px}
+.controls button.next{background:var(--action); color:#fff}
+.controls button:hover{filter:brightness(.94)}
+.controls .where{min-width:7em; text-align:center; font-weight:700; font-size:clamp(18px,1.25vw,25px)}
+.hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:10px 0 0}
+
+/* full screen */
+.big{position:fixed; inset:0; z-index:50; background:#05090c; color:#fff; display:none}
+.big.open{display:flex; flex-direction:column}
+.big .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; font-weight:700}
+.big .body{flex:1; overflow:auto; padding:8px clamp(20px,7vw,90px) 24px; font-size:clamp(20px,2.9vw,34px); line-height:1.45}
+.big .body h3{font-size:1.1em; margin-bottom:.5em}
+.big .body .count{display:none}
+.big .body .card-pic{width:22%}
+.big .body .say{color:#fff; border-color:#fff; background:transparent}
+.big .foot{display:flex; gap:12px; justify-content:center; padding:12px 18px 20px}
+.big button{font:inherit; font-size:18px; font-weight:600; cursor:pointer; min-height:48px; padding:10px 22px; border-radius:6px; border:2px solid #fff; background:transparent; color:#fff}
+.big button.next{background:#fff; color:#05090c}
+
+/* activities */
+.activity{margin:22px 0 28px; padding:16px 20px 14px; border:2px solid #cfe3e6; border-radius:10px; background:#f4fafb}
+.act-head{display:flex; gap:10px; align-items:center; margin-bottom:6px}
+.act-badge{background:var(--action); color:#fff; font-size:.7em; font-weight:700; padding:2px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:.04em}
+.act-instr{color:var(--soft-ink); font-size:.9em}
+.act-foot{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px}
+.act-foot button{font:inherit; font-size:.9em; font-weight:600; cursor:pointer; padding:8px 18px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:44px}
+.act-foot .act-check{background:var(--action); color:#fff}
+.act-result{font-weight:700}
+.act-result.good{color:var(--ok)} .act-result.bad{color:var(--bad)}
+.chip{display:inline-flex; align-items:center; font-size:.9em; padding:8px 14px; margin:5px; border-radius:8px; border:2px solid #9fc5cb; background:#fff; cursor:pointer; user-select:none; min-height:44px; line-height:1.3}
+.chip.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.chip.right{border-color:var(--ok); background:#ecfdf5}
+.chip.wrong{border-color:var(--bad); background:#fef2f2}
+.chip.placed{cursor:default}
+.bank{min-height:52px; padding:6px; border:2px dashed #9fc5cb; border-radius:8px; margin-bottom:12px; background:#fff}
+.targets{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(16em,1fr))}
+.target{border:2px solid #9fc5cb; border-radius:8px; background:#fff; padding:8px 10px; min-height:70px}
+.target .t-label{font-weight:700; margin-bottom:4px}
+.target .t-drop{min-height:44px; border:2px dashed #e0ecee; border-radius:6px; padding:2px}
+.target.over .t-drop{border-color:var(--action); background:#eef7f8}
+.order{list-style:none; padding:0; margin:0; counter-reset:o}
+.order li{display:flex; gap:10px; align-items:center; background:#fff; border:2px solid #9fc5cb; border-radius:8px; padding:8px 10px; margin:6px 0; cursor:grab}
+.order li .o-n{min-width:2em; height:2em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; font-size:.85em}
+.order li .o-t{flex:1}
+.order li .o-btn{display:flex; gap:4px}
+.order li .o-btn button{font:inherit; min-width:40px; min-height:40px; border-radius:6px; border:1px solid #9fc5cb; background:#fff; cursor:pointer}
+.order li.right{border-color:var(--ok); background:#ecfdf5} .order li.wrong{border-color:var(--bad); background:#fef2f2}
+.order li.dragging{opacity:.5}
+.quiz-q{margin:10px 0 16px}
+.quiz-q .opt{display:block; width:100%; text-align:left; font:inherit; font-size:.95em; padding:10px 14px; margin:6px 0; border-radius:8px; border:2px solid #9fc5cb; background:#fff; cursor:pointer; min-height:44px}
+.quiz-q .opt.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.quiz-q .opt.right{border-color:var(--ok); background:#ecfdf5} .quiz-q .opt.wrong{border-color:var(--bad); background:#fef2f2}
+.quiz-q .why{font-size:.85em; color:var(--soft-ink); margin:4px 0 0 6px; display:none}
+.quiz-q.done .why{display:block}
+.fill-table{width:100%; border-collapse:collapse; font-size:.9em; background:#fff}
+.fill-table th,.fill-table td{border:1px solid #cfe3e6; padding:8px 10px; text-align:left; vertical-align:top}
+.fill-table th{background:#e6f1f3}
+.fill-table select{font:inherit; font-size:.95em; min-height:40px; max-width:100%}
+.fill-table td.right{background:#ecfdf5} .fill-table td.wrong{background:#fef2f2}
+
+/* teacher view */
+.tnotes{display:none; margin:18px 0 6px; padding:12px 16px; background:var(--teach-bg); border:2px dashed #c4b5fd; border-radius:8px; font-size:.82em; color:#2e1065}
+body.teacher .tnotes{display:block}
+.tnotes .t-head{font-weight:800; color:var(--teach); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; font-size:.85em}
+.tnotes ul{margin:4px 0 8px}
+.tnotes .t-trap{background:#fff7ed; border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0}
+.tlink{font:inherit; font-size:1em; color:var(--soft-ink); background:none; border:0; text-decoration:underline; cursor:pointer; padding:0}
+.tpill[hidden]{display:none}
+.tpill{position:fixed; top:10px; right:10px; z-index:45; background:var(--teach); color:#fff; border-radius:30px; padding:6px 8px 6px 16px; display:flex; gap:8px; align-items:center; font-size:15px; font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.tpill button{font:inherit; font-size:14px; font-weight:700; border:0; border-radius:20px; padding:6px 12px; background:#fff; color:var(--teach); cursor:pointer; min-height:34px}
+.tpill button.tp-out{background:transparent; color:#fff; border:1px solid #fff}
+.card-pic.photo img{width:100%; height:auto; border-radius:8px; display:block}
+.grid4{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(11em,1fr)); margin:16px 0 22px}
+.grid4 figure{margin:0; background:#eef3f4; border-radius:12px; overflow:hidden}
+.grid4 img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+.grid4 figcaption{padding:10px 14px 12px; font-size:.9em}
+.grid4 figcaption b{display:block; color:var(--deep); font-size:1.05em}
+.side{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; margin:10px 0 18px}
+.side > div{flex:2 1 420px}
+.side figure{flex:0 1 380px; max-width:440px; margin:0}
+.side figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* Gerry */
+.mascot{position:fixed; left:clamp(6px,1.2vw,24px); top:120px; width:clamp(54px,6vw,110px); z-index:35; cursor:pointer; transition:top .6s cubic-bezier(.3,.9,.4,1.1); filter:drop-shadow(0 6px 10px rgba(0,0,0,.25)); user-select:none}
+.mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.mascot.hop svg{animation:hop .7s ease-out 1, bob 2.6s ease-in-out .7s infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes hop{0%{transform:translateY(0) scale(1,1)} 30%{transform:translateY(-40px) scale(.95,1.08) rotate(14deg)} 60%{transform:translateY(0) scale(1.08,.92)} 100%{transform:translateY(0) scale(1,1)}}
+.gerry-bubble{position:absolute; left:100%; top:0; margin-left:10px; width:max-content; max-width:16em; background:#fff; color:var(--ink); border:2px solid var(--deep); border-radius:14px; padding:8px 12px; font-size:clamp(14px,1vw,18px); line-height:1.35; box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.gerry-bubble::before{content:""; position:absolute; left:-12px; top:16px; border:6px solid transparent; border-right-color:var(--deep)}
+@media (max-width:900px){.mascot{display:none}}
+.mascot.drop{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.drop .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.drop .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+@media (prefers-reduced-motion:reduce){.mascot svg{animation:none}}
+
+.home{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(14px,2vw,32px); z-index:40; background:var(--action); color:#fff; font-weight:700; font-size:clamp(17px,1.2vw,24px); text-decoration:none; padding:12px 22px; border-radius:30px; box-shadow:0 4px 14px rgba(0,0,0,.25); min-height:48px; display:flex; align-items:center; gap:8px}
+.foot{margin:50px 0 90px; padding-top:16px; border-top:1px solid var(--edge); font-size:.75em; color:var(--soft-ink)}
+
+@media (max-width:560px){
+  body{font-size:17px}
+  .card{padding:20px 20px 18px; font-size:16px}
+  .card.long{font-size:14.5px}
+  .stack{width:auto; margin-left:14px; margin-right:14px; --tilt:.3}
+  .card-pic{width:30%}
+  h2.topic{font-size:1.25em}
+}
+@media (prefers-reduced-motion:reduce){
+  .card.arrive,.card.leave,.card.leave-back{animation-duration:.01s}
+  html{scroll-behavior:auto}
+}
+
+/* ordered strips (PPE on / off) */
+.strips{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr)); margin:16px 0 20px}
+.strip{background:#f7f9fa; border-radius:12px; padding:14px 16px}
+.strip-title{font-weight:800; color:var(--deep); margin-bottom:8px}
+.strip-steps{list-style:none; margin:0; padding:0; counter-reset:st}
+.strip-steps li{counter-increment:st; display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px solid #e2e8f0}
+.strip-steps li:last-child{border-bottom:0}
+.strip-steps li::before{content:counter(st); display:inline-flex; align-items:center; justify-content:center; width:1.9em; height:1.9em; border-radius:50%; background:var(--c,#0b6f7c); color:#fff; font-weight:800; font-size:.85em; flex:none}
+table.plain{width:100%; border-collapse:collapse; font-size:.92em; margin:10px 0 18px; background:#fff}
+table.plain th,table.plain td{border:1px solid #cfe3e6; padding:8px 10px; text-align:left; vertical-align:top}
+table.plain th{background:#e6f1f3}
+.tl-high{background:#fee2e2} .tl-med{background:#fef3c7} .tl-low{background:#dcfce7}
+
+/* activity start and blur */
+.act-start[hidden]{display:none}
+.act-start{display:flex; gap:14px; align-items:center; flex-wrap:wrap; padding:6px 0 2px; color:var(--soft-ink); font-size:.9em}
+.act-go{font:inherit; font-size:1em; font-weight:700; cursor:pointer; padding:10px 26px; border-radius:8px; border:0; background:var(--action); color:#fff; min-height:48px}
+.act-tools{margin:0 0 10px}
+.act-peek{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid #9fc5cb; background:#fff; color:var(--action); min-height:40px}
+section.slide.hide-notes > :is(ol.points, .stack, figure.visual, .after, .intro, .watch-out, .vid, .audio-line, .side-points, p){filter:blur(7px); pointer-events:none; user-select:none; transition:filter .3s}
+section.slide.hide-notes .activity{filter:none}
+.vid{margin:20px 0 10px}
+.vid-title{margin:0 0 8px}
+.vid-by{color:var(--soft-ink); font-size:.85em}
+.video{margin:0 auto 6px; max-width:calc((100vh - 90px) * 16 / 9); aspect-ratio:16/9; background:#0e1a22; border-radius:6px; overflow:hidden; position:relative}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.watch{margin:0 0 20px; font-size:.8em; text-align:center}
+
+/* activity locked while the notes are showing */
+.activity.peeking .act-body, .activity.peeking .act-foot{pointer-events:none; opacity:.35; filter:grayscale(1)}
+.activity.peeking .act-tools::after{content:"Read the notes, then press the button to carry on."; margin-left:12px; color:var(--warn); font-weight:700; font-size:.9em}
+/* click to spotlight a part of a diagram */
+.spot [data-spot]{transition:opacity .3s, transform .3s; transform-box:fill-box; transform-origin:center}
+.spot.spotting [data-spot]:not(.lit){opacity:.28}
+.spot [data-spot].lit{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.14)}}
+.spot-hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:-8px 0 14px}
+/* points beside a picture */
+.side-points{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start}
+.side-points > ol.points{flex:2 1 420px; margin-top:0}
+.side-points > figure{flex:0 1 320px; max-width:360px; margin:0}
+.side-points > figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* student-visible Connect source line */
+.source{margin:16px 0 6px; padding:10px 14px 10px 44px; background:#f1f6f8; border-left:4px solid var(--action); border-radius:8px; font-size:.92em; color:var(--soft-ink); position:relative; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center}
+.source::before{content:"\1F4D6"; position:absolute; left:12px; top:8px; font-size:1.2em}
+.source-label{font-weight:700; color:var(--ink)}
+.source a{text-decoration:none; font-weight:600; border:1px solid #cfe3e6; background:#fff; border-radius:999px; padding:2px 10px}
+.source a:hover{background:#e3eef1}
+</style>
+</head>
+<body data-np="3">
+<main>
+<header class="banner first" id="top">
+  <div class="banner-inner">
+    <p class="kicker">HLTINF006 / HLTWHS002 · Lesson 1</p>
+    <h1>Germs and how infection spreads</h1>
+    <p class="sub">What germs are, how they move from one person to the next, and the everyday hazards that let them.</p>
+  </div>
+  <svg class="hero" viewBox="0 0 420 300" aria-hidden="true"><g opacity=".9"><line x1="300" y1="150" x2="395" y2="150" stroke="#8fe3e8" stroke-width="10" stroke-linecap="round"/><line x1="300" y1="150" x2="367.175144212722" y2="217.175144212722" stroke="#8fe3e8" stroke-width="10" stroke-linecap="round"/><line x1="300" y1="150" x2="300" y2="245" stroke="#8fe3e8" stroke-width="10" stroke-linecap="round"/><line x1="300" y1="150" x2="232.824855787278" y2="217.17514421272202" stroke="#8fe3e8" stroke-width="10" stroke-linecap="round"/><line x1="300" y1="150" x2="205" y2="150" stroke="#8fe3e8" stroke-width="10" stroke-linecap="round"/><line x1="300" y1="150" x2="232.82485578727795" y2="82.824855787278" stroke="#8fe3e8" stroke-width="10" stroke-linecap="round"/><line x1="300" y1="150" x2="300" y2="55" stroke="#8fe3e8" stroke-width="10" stroke-linecap="round"/><line x1="300" y1="150" x2="367.175144212722" y2="82.82485578727797" stroke="#8fe3e8" stroke-width="10" stroke-linecap="round"/><circle cx="300" cy="150" r="70" fill="#5ec9cf"/><circle cx="279" cy="139.5" r="9.8" fill="#fff"/><circle cx="321" cy="139.5" r="9.8" fill="#fff"/><circle cx="281.1" cy="140.9" r="4.9" fill="#1b2530"/><circle cx="323.1" cy="140.9" r="4.9" fill="#1b2530"/><path d="M279 169.6 q21 21 42 0" stroke="#1b2530" stroke-width="4.9" fill="none" stroke-linecap="round"/></g><g transform="translate(40,70)"><path d="M60 170 v-80 a14 14 0 0 1 28 0 v60 v-90 a14 14 0 0 1 28 0 v90 v-80 a14 14 0 0 1 28 0 v80 v-60 a14 14 0 0 1 28 0 v110 c0 40 -30 70 -70 70 h-10 c-35 0 -60 -25 -60 -60 v-50 a14 14 0 0 1 28 0 z" fill="#ffd9b3" stroke="#12384a" stroke-width="6" stroke-linejoin="round"/></g></svg>
+</header>
+<div class="wrap">
+  <nav id="index" aria-label="Index"><h2>In this lesson</h2><ul><li><a href="#s1"><span class="num">1</span> Why this matters: Standard 3</a></li><li><a href="#s2"><span class="num">2</span> Three words: colonisation, infection, disease</a></li><li><a href="#s3"><span class="num">3</span> The four kinds of germs</a></li><li><a href="#s4"><span class="num">4</span> The chain of infection</a></li><li><a href="#s5"><span class="num">5</span> How germs travel: four modes of transmission</a></li><li><a href="#s6"><span class="num">6</span> Where germs live: reservoirs</a></li><li><a href="#s7"><span class="num">7</span> Infection hazards and how to control them</a></li><li><a href="#s8"><span class="num">8</span> Sharps and needlestick injuries</a></li><li><a href="#s9"><span class="num">9</span> Cough and sneeze manners (respiratory etiquette)</a></li></ul></nav>
+  <p class="opening">Meet Gerry the Germ. Gerry has one job: to get from one person to the next. Your job as a support worker is to stop him. This lesson shows you how Gerry travels, so you know exactly where to block him.</p>
+  
+<section class="slide" id="s1" data-ref="NP3 S1">
+  <h2 class="topic"><span class="num">1</span> Why this matters: Standard 3 <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F1%7Cc93a5877-36f0-42dd-9b2b-f4f6cf7b52d5%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Australia has a set of national rules for safe health care. They are called the NSQHS Standards. One of them is all about infection.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np3-s1.mp3" aria-label="Listen: Why this matters: Standard 3"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 520 220" role="img" aria-label="NSQHS Standard 3, Preventing and Controlling Infections"><circle cx="110" cy="110" r="90" fill="#12384a"/><circle cx="110" cy="110" r="74" fill="none" stroke="#8fe3e8" stroke-width="6"/><text x="110" y="98" text-anchor="middle" font-size="22" fill="#8fe3e8" font-family="Segoe UI, Arial" font-weight="700">STANDARD</text><text x="110" y="160" text-anchor="middle" font-size="66" fill="#fff" font-family="Segoe UI, Arial" font-weight="800">3</text><text x="230" y="78" font-size="26" fill="#1b2530" font-family="Segoe UI, Arial" font-weight="700">Preventing and</text><text x="230" y="112" font-size="26" fill="#1b2530" font-family="Segoe UI, Arial" font-weight="700">Controlling Infections</text><text x="230" y="150" font-size="18" fill="#44505c" font-family="Segoe UI, Arial">National Safety and Quality</text><text x="230" y="174" font-size="18" fill="#44505c" font-family="Segoe UI, Arial">Health Service (NSQHS) Standards</text></svg></figure>
+  <ol class="points"><li id="s1p1"><span class="ref" title="Reference">NP3 S1 P1</span>The <b>NSQHS Standards</b> (National Safety and Quality Health Service Standards) are national rules for safe, good quality care.</li><li id="s1p2"><span class="ref" title="Reference">NP3 S1 P2</span><b>Standard 3</b> is called <b>Preventing and Controlling Infections</b>.</li><li id="s1p3"><span class="ref" title="Reference">NP3 S1 P3</span>Standard 3 wants to <b>reduce the risk</b> of people (patients, residents, clients and workers) catching an infection that could have been prevented.</li><li id="s1p4"><span class="ref" title="Reference">NP3 S1 P4</span>If an infection does happen, it must be <b>managed well</b>.</li><li id="s1p5"><span class="ref" title="Reference">NP3 S1 P5</span>It also aims to <b>stop antimicrobial resistance</b>, to use <b>antibiotics and other antimicrobials wisely</b>, and to use infection control resources in a sensible, sustainable way.</li></ol>
+  <p>Read more: <a href="https://www.safetyandquality.gov.au/publications-and-resources/resource-library/national-safety-and-quality-health-service-standards-second-edition" target="_blank" rel="noopener">NSQHS Standards, second edition</a>. Standard 3 starts on page 22.</p>
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305316/View" target="_blank" rel="noopener">National Safety and Quality Health Service (NSQHS) Standards</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305226/View" target="_blank" rel="noopener">Standards</a></div>
+  <aside class="tnotes" data-slide="s1" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s2" data-ref="NP3 S2">
+  <h2 class="topic"><span class="num">2</span> Three words: colonisation, infection, disease <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F4%7Cbc121127-662d-434e-89e2-a32b0a99f460%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">These three words sound similar. They mean three different things. Gerry can be on you, in you, or making you sick.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np3-s2.mp3" aria-label="Listen: Three words: colonisation, infection, disease"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 900 260" role="img" aria-label="Colonisation: germs live on the skin and nothing happens. Infection: germs get in and the body fights. Disease: the person is sick with signs and symptoms."><g font-family="Segoe UI, Arial" font-size="22" text-anchor="middle">
+<rect x="10" y="10" width="280" height="240" rx="16" fill="#ecfdf5" stroke="#86efac" stroke-width="3"/><text x="150" y="48" font-weight="700" fill="#166534">Colonisation</text><rect x="60" y="120" width="180" height="40" rx="8" fill="#ffd9b3"/><circle cx="85" cy="108" r="9" fill="#4ade80"/><circle cx="125" cy="108" r="9" fill="#4ade80"/><circle cx="165" cy="108" r="9" fill="#4ade80"/><circle cx="205" cy="108" r="9" fill="#4ade80"/><text x="150" y="200" fill="#166534">Germs live on the skin.</text><text x="150" y="228" fill="#166534">No illness.</text>
+<rect x="310" y="10" width="280" height="240" rx="16" fill="#fff7ed" stroke="#fdba74" stroke-width="3"/><text x="450" y="48" font-weight="700" fill="#9a3412">Infection</text><rect x="360" y="120" width="180" height="40" rx="8" fill="#ffd9b3"/><circle cx="430" cy="140" r="9" fill="#4ade80"/><circle cx="470" cy="140" r="9" fill="#4ade80"/><path d="M405 95 l10 -14 l10 14 M485 95 l10 -14 l10 14" stroke="#ef4444" stroke-width="4" fill="none"/><text x="450" y="200" fill="#9a3412">Germs get inside.</text><text x="450" y="228" fill="#9a3412">The body fights back.</text>
+<rect x="610" y="10" width="280" height="240" rx="16" fill="#fef2f2" stroke="#fca5a5" stroke-width="3"/><text x="750" y="48" font-weight="700" fill="#991b1b">Disease</text><circle cx="750" cy="125" r="34" fill="#ffd9b3"/><circle cx="738" cy="118" r="4" fill="#1b2530"/><circle cx="762" cy="118" r="4" fill="#1b2530"/><path d="M736 142 q14 -10 28 0" stroke="#1b2530" stroke-width="3" fill="none"/><path d="M790 100 q10 -10 14 0" stroke="#ef4444" stroke-width="4" fill="none"/><text x="750" y="200" fill="#991b1b">Signs and symptoms.</text><text x="750" y="228" fill="#991b1b">The person is sick.</text>
+</g></svg></figure>
+  <ol class="points"><li id="s2p1"><span class="ref" title="Reference">NP3 S2 P1</span><b><a class="term" href="0-index.html#g-colonisation" title="See the glossary">Colonisation</a></b>: germs live on or in the body (for example on the skin) but they cause <b>no illness</b> and no signs of infection.</li><li id="s2p2"><span class="ref" title="Reference">NP3 S2 P2</span><b><a class="term" href="0-index.html#g-infection" title="See the glossary">Infection</a></b>: germs (pathogens) get <b>inside</b> the body and the <b>immune system fights back</b>. The person may feel sick, or may feel nothing at all. Everyone reacts differently.</li><li id="s2p3"><span class="ref" title="Reference">NP3 S2 P3</span><b><a class="term" href="0-index.html#g-disease" title="See the glossary">Disease</a></b>: an <b>illness</b> with clear <b>signs and symptoms</b>, for example a fever, weight loss or a sore throat. Some diseases come from infections. Some do not.</li></ol>
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s2-1" data-activity='{"type":"match","title":"Which word is it?","instructions":"Tap a description, then tap the word it belongs to. Or drag it.","pairs":[{"a":"Germs live on the skin but the person is well","b":"Colonisation"},{"a":"Germs get inside and the body fights back","b":"Infection"},{"a":"An illness with signs and symptoms","b":"Disease"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Which word is it?</b></div>
+    <p class="act-instr">Tap a description, then tap the word it belongs to. Or drag it.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305206/View" target="_blank" rel="noopener">Colonisation</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305215/View" target="_blank" rel="noopener">Common terms relating to infections</a></div>
+  <aside class="tnotes" data-slide="s2" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s3" data-ref="NP3 S3">
+  <h2 class="topic"><span class="num">3</span> The four kinds of germs <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F3%7C6956e2ec-9616-402a-ab6c-32c0cfc43dd8%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Germs are microorganisms, living things too small to see. There are four kinds you need to know. Each card has a short explanation you can listen to.</p>
+  
+  <figure class="visual"><img src="pics/microorganisms.jpg" alt="Germs floating through a bright corridor" style="border-radius:12px; max-height:46vh"></figure>
+  
+  
+  
+  <div class="stack" aria-label="The four kinds of germs cards" data-playall="1"><article class="card" id="s3c1" data-ref="NP3 S3 C1">
+      <h3>Virus</h3>
+      <div class="card-pic photo"><img src="pics/virus.jpg" alt=""></div>
+      <p>The smallest and simplest germ. A virus cannot live on its own. It needs a <b>host cell</b> to make copies of itself.</p>
+      <ul><li>Does not survive long outside a living body.</li><li>Gets in through the nose and mouth, or through body fluids.</li><li>Examples: <b>COVID-19, influenza (the flu), HIV, herpes, viral meningitis.</b></li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s3-c1.mp3" aria-label="Listen: Virus"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s3c2" data-ref="NP3 S3 C2">
+      <h3>Bacteria</h3>
+      <div class="card-pic photo"><img src="pics/bacteria.jpg" alt=""></div>
+      <p>A <b>single cell</b> that can <b>copy itself on its own</b>. Bacteria can live on surfaces for days or even weeks.</p>
+      <ul><li>Can enter the body through any opening, natural or not, like a cut.</li><li>Many are harmless or even helpful. Some cause disease.</li><li>Examples: <b>urinary tract infection (UTI), strep throat, tuberculosis (TB), a pressure injury that gets infected, a dental abscess.</b></li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s3-c2.mp3" aria-label="Listen: Bacteria"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s3c3" data-ref="NP3 S3 C3">
+      <h3>Fungi</h3>
+      <div class="card-pic photo"><img src="pics/fungus.jpg" alt=""></div>
+      <p>Tiny living things like <b>yeasts and moulds</b>. They love <b>dark, damp</b> places.</p>
+      <ul><li>Spores are found in rotting plants and animal droppings, for example in a chicken coop. Breathing them in is a common way to get a fungal infection.</li><li>Most fungi are harmless. Some are useful (bread, penicillin). In a person with a weak immune system they can be dangerous.</li><li>Examples: <b>thrush, tinea (athlete's foot), ringworm.</b></li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s3-c3.mp3" aria-label="Listen: Fungi"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s3c4" data-ref="NP3 S3 C4">
+      <h3>Parasites</h3>
+      <div class="card-pic photo"><img src="pics/parasite.jpg" alt=""></div>
+      <p>Living things that <b>live on or in another living thing</b> (the host) and <b>feed from it</b>.</p>
+      <ul><li>Can be microscopic, or big enough to see.</li><li>Some do no harm. Others grow, multiply or release toxins that make the host sick.</li><li>Examples: <b>tapeworm, roundworm, malaria (carried by mosquitoes), scabies mites.</b></li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s3-c4.mp3" aria-label="Listen: Parasites"><span class="ico">&#9654;</span> Listen</button></div>
+    </article></div>
+  
+  <div class="watch-out"><b>Watch out</b> In the assessment you need a short description of each germ <b>and one example</b> of an infection it causes. Give both.</div>
+  <div class="activity" id="act-s3-1" data-activity='{"type":"quiz","title":"Which germ?","instructions":"Pick the best answer for each question, then press Check.","questions":[{"q":"Which germ needs a host cell to make copies of itself?","options":["Bacteria","Virus","Fungi","Parasite"],"answer":1,"why":"A virus cannot copy itself. It hijacks one of your cells to do it."},{"q":"Which germ can copy itself on its own and live on a bed rail for days?","options":["Virus","Parasite","Bacteria","Fungi"],"answer":2,"why":"Bacteria are single cells that reproduce by themselves and survive on surfaces."},{"q":"Thrush and tinea are caused by...","options":["Bacteria","A virus","Fungi","A parasite"],"answer":2,"why":"Both are fungal infections. Fungi like damp, dark places."},{"q":"A tapeworm is an example of a...","options":["Parasite","Virus","Fungus","Bacterium"],"answer":0,"why":"A parasite lives in or on a host and feeds from it."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Which germ?</b></div>
+    <p class="act-instr">Pick the best answer for each question, then press Check.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305207/View" target="_blank" rel="noopener">Pathogenic micro-organisms</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305208/View" target="_blank" rel="noopener">Bacteria</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305209/View" target="_blank" rel="noopener">Viruses</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305210/View" target="_blank" rel="noopener">Fungi, protozoans and parasites</a></div>
+  <aside class="tnotes" data-slide="s3" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s4" data-ref="NP3 S4">
+  <h2 class="topic"><span class="num">4</span> The chain of infection <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F5%7C477e06d7-474b-4193-8444-986c180ce63c%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">For Gerry to reach a new person, six things have to happen in a row. We call this the chain of infection. Break one link and he is stuck.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np3-s4.mp3" aria-label="Listen: The chain of infection"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 600 460" role="img" aria-label="The chain of infection: source, portal of exit, mode of transmission, portal of entry, susceptible host, and the factors that make a host susceptible. Break any link to stop the infection."><circle cx="300" cy="230" r="165" fill="none" stroke="#cbd5e1" stroke-width="18"/><g><circle cx="300" cy="65" r="58" fill="#12384a"/><text x="300" y="61" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Source of</text><text x="300" y="81" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">infection</text><text x="300" y="29" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#e0f2fe">1</text></g><g><circle cx="442.8941916244324" cy="147.5" r="58" fill="#0b6f7c"/><text x="442.8941916244324" y="143.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Portal of</text><text x="442.8941916244324" y="163.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">exit</text><text x="442.8941916244324" y="111.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#e0f2fe">2</text></g><g><circle cx="442.8941916244324" cy="312.5" r="58" fill="#0e9aa7"/><text x="442.8941916244324" y="308.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Mode of</text><text x="442.8941916244324" y="328.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">transmission</text><text x="442.8941916244324" y="276.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#e0f2fe">3</text></g><g><circle cx="300" cy="395" r="58" fill="#2563eb"/><text x="300" y="391" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Portal of</text><text x="300" y="411" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">entry</text><text x="300" y="359" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#e0f2fe">4</text></g><g><circle cx="157.10580837556762" cy="312.5" r="58" fill="#7c3aed"/><text x="157.10580837556762" y="308.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Susceptible</text><text x="157.10580837556762" y="328.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">host</text><text x="157.10580837556762" y="276.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#e0f2fe">5</text></g><g><circle cx="157.10580837556762" cy="147.5" r="58" fill="#9d174d"/><text x="157.10580837556762" y="143.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Why they</text><text x="157.10580837556762" y="163.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">are susceptible</text><text x="157.10580837556762" y="111.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#e0f2fe">6</text></g><text x="300" y="222" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#12384a">Break one link</text><text x="300" y="250" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" fill="#44505c">and the infection stops</text></svg></figure>
+  <ol class="points"><li id="s4p1"><span class="ref" title="Reference">NP3 S4 P1</span><b><a class="term" href="0-index.html#g-source-of-infection" title="See the glossary">Source of infection</a></b>: the person or thing carrying the germ (the pathogen). Also called the reservoir.</li><li id="s4p2"><span class="ref" title="Reference">NP3 S4 P2</span><b><a class="term" href="0-index.html#g-portal-of-exit" title="See the glossary">Portal of exit</a></b>: the way the germ <b>leaves</b> the source. For example a cough, blood, faeces, urine, a weeping wound.</li><li id="s4p3"><span class="ref" title="Reference">NP3 S4 P3</span><b><a class="term" href="0-index.html#g-mode-of-transmission" title="See the glossary">Mode of transmission</a></b>: how the germ <b>travels</b> from one place to the next. How it &quot;hitches a ride&quot;.</li><li id="s4p4"><span class="ref" title="Reference">NP3 S4 P4</span><b><a class="term" href="0-index.html#g-portal-of-entry" title="See the glossary">Portal of entry</a></b>: the way the germ <b>gets into</b> the next person. For example the mouth, nose, eyes, a cut, a needle prick.</li><li id="s4p5"><span class="ref" title="Reference">NP3 S4 P5</span><b><a class="term" href="0-index.html#g-susceptible-host" title="See the glossary">Susceptible host</a></b>: a person who can <b>easily catch</b> the infection.</li><li id="s4p6"><span class="ref" title="Reference">NP3 S4 P6</span><b>Factors that make a person susceptible</b>: being <b>older or very young</b>, having a <b>chronic disease</b>, and <b>how much</b> they are exposed to the germ.</li><li id="s4p7"><span class="ref" title="Reference">NP3 S4 P7</span>Every part of infection control, from hand washing to PPE to cleaning, works by <b>breaking one of these links</b>.</li></ol>
+  
+  <div class="after"><img src="pics/susceptible-host.webp" alt="" style="max-width:420px; width:100%; border-radius:12px; display:block; margin:0 auto 6px"> <i>A susceptible host: older, unwell, or exposed a lot.</i></div>
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> What causes an infection? Breaking the chain of infection <span class="vid-by">(Lecturio Nursing)</span></p><div class="video" data-youtube="EXtTTG6YYAI" data-title="What causes an infection? Breaking the chain of infection"></div></div>
+  
+  <div class="activity" id="act-s4-1" data-activity='{"type":"match","title":"Build the chain","instructions":"Match each description to the correct link in the chain. Tap a description, then tap the link.","pairs":[{"a":"Someone or something carrying the germ","b":"Source of infection"},{"a":"How the germ leaves the source","b":"Portal of exit"},{"a":"How the germ travels (hitches a ride)","b":"Mode of transmission"},{"a":"The way the germ gets into the body","b":"Portal of entry"},{"a":"A person who can easily catch the infection","b":"Susceptible host"},{"a":"Age, chronic disease, amount of exposure","b":"Factors that affect susceptibility"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Build the chain</b></div>
+    <p class="act-instr">Match each description to the correct link in the chain. Tap a description, then tap the link.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305212/View" target="_blank" rel="noopener">Paths of transmission</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305211/View" target="_blank" rel="noopener">Susceptible host</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305215/View" target="_blank" rel="noopener">Common terms relating to infections</a></div>
+  <aside class="tnotes" data-slide="s4" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s5" data-ref="NP3 S5">
+  <h2 class="topic"><span class="num">5</span> How germs travel: four modes of transmission <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F6%7C3fbbeeb5-b1f5-4e65-93ff-92a3cc5c2e93%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Link three of the chain, the mode of transmission, has four main types. You will use these four words in the next slide.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np3-s5.mp3" aria-label="Listen: How germs travel: four modes of transmission"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><div class="grid4">
+        <figure><img src="pics/contact.jpg" alt="A finger pressing a lift button"><figcaption><b>Contact</b> Touching a person or a surface</figcaption></figure>
+        <figure><img src="pics/droplet.jpg" alt="A woman sneezing into a tissue"><figcaption><b>Droplet</b> Big drops that land within about a metre</figcaption></figure>
+        <figure><img src="pics/airborne.jpg" alt="Germs floating in the air of a corridor"><figcaption><b>Airborne</b> Tiny particles that float and travel far</figcaption></figure>
+        <figure><img src="pics/vectorborne.jpg" alt="A mosquito between two people"><figcaption><b>Vector-borne</b> Carried by an insect or animal</figcaption></figure>
+      </div></figure>
+  <ol class="points"><li id="s5p1"><span class="ref" title="Reference">NP3 S5 P1</span><b>Contact</b>: the germ moves by <b>touch</b>. Direct contact is skin to skin. Indirect contact is through something in between, like a bed rail, a towel or your hands.</li><li id="s5p2"><span class="ref" title="Reference">NP3 S5 P2</span><b>Droplet</b>: <b>big drops</b> fly out when someone coughs, sneezes or talks. They land on people and surfaces <b>within about one metre</b>.</li><li id="s5p3"><span class="ref" title="Reference">NP3 S5 P3</span><b>Airborne</b>: <b>tiny particles</b> stay floating in the air and can travel <b>much further</b> than a metre. Measles and TB travel this way.</li><li id="s5p4"><span class="ref" title="Reference">NP3 S5 P4</span><b>Vector-borne</b>: the germ is <b>carried by an insect or animal</b>. A mosquito carrying malaria is the classic example.</li><li id="s5p5"><span class="ref" title="Reference">NP3 S5 P5</span>Many germs use <b>more than one</b> mode. A cold is spread by droplets <b>and</b> by contact with the hands that caught them.</li></ol>
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305212/View" target="_blank" rel="noopener">Paths of transmission</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305241/View" target="_blank" rel="noopener">Transmission (additional) based precautions and preventing infection</a></div>
+  <aside class="tnotes" data-slide="s5" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s6" data-ref="NP3 S6">
+  <h2 class="topic"><span class="num">6</span> Where germs live: reservoirs <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F6%7C3fbbeeb5-b1f5-4e65-93ff-92a3cc5c2e93%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">A reservoir is a place where germs live and multiply. For each one you need to know how the germ gets from there to a person (the method) and which mode of transmission that is.</p>
+  
+  
+  
+  
+  
+  <div class="stack" aria-label="Where germs live: reservoirs cards" data-playall="1"><article class="card" id="s6c1" data-ref="NP3 S6 C1">
+      <h3>People</h3>
+      
+      <p>Other people are the biggest reservoir. Germs leave in body fluids, on skin and in droplets.</p>
+      <ul><li><b>Method:</b> incorrect use of PPE lets germs reach cuts on your hands, your mouth or nose, or lets infected body fluids reach you from a contaminated object.</li><li><b>Mode:</b> droplet and contact.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s6-c1.mp3" aria-label="Listen: People"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s6c2" data-ref="NP3 S6 C2">
+      <h3>Blood and body fluids</h3>
+      
+      <p>Blood, urine, faeces, vomit, saliva and wound fluid can all carry germs.</p>
+      <ul><li><b>Method:</b> germs get in through a needle prick, an open wound, broken skin or a mucous membrane (eyes, nose, mouth).</li><li><b>Mode:</b> droplet (and contact).</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s6-c2.mp3" aria-label="Listen: Blood and body fluids"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s6c3" data-ref="NP3 S6 C3">
+      <h3>Food and water</h3>
+      
+      <p>Contaminated food and water carry germs straight into the gut.</p>
+      <ul><li><b>Method:</b> eating or drinking contaminated food or water. Risky foods include seafood, shellfish, soft cheeses and meat dishes left out too long.</li><li><b>Mode:</b> contact and droplet.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s6-c3.mp3" aria-label="Listen: Food and water"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s6c4" data-ref="NP3 S6 C4">
+      <h3>Animals (for example bats)</h3>
+      
+      <p>Australian bat lyssavirus is carried by bats. It is rare but deadly.</p>
+      <ul><li><b>Method:</b> being bitten or scratched by a bat, or getting bat saliva on broken skin or in your eyes, nose or mouth.</li><li><b>Mode:</b> droplet and contact.</li><li>Never handle a bat. Call a trained, vaccinated wildlife carer.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s6-c4.mp3" aria-label="Listen: Animals (for example bats)"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s6c5" data-ref="NP3 S6 C5">
+      <h3>Bird flu (avian influenza)</h3>
+      
+      <p>A flu virus that lives in birds and can, rarely, pass to people.</p>
+      <ul><li><b>Method:</b> handling sick birds, their droppings or feathers, then touching your mouth or eating without washing your hands.</li><li><b>Mode:</b> droplet and contact.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s6-c5.mp3" aria-label="Listen: Bird flu (avian influenza)"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s6c6" data-ref="NP3 S6 C6">
+      <h3>Insects</h3>
+      
+      <p>Some insects carry germs from one person to another.</p>
+      <ul><li><b>Method:</b> an insect bite. A mosquito carries the malaria parasite (plasmodium) from an infected person to the next.</li><li><b>Mode:</b> vector-borne.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s6-c6.mp3" aria-label="Listen: Insects"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s6c7" data-ref="NP3 S6 C7">
+      <h3>Waste</h3>
+      
+      <p>Rubbish, clinical waste, soiled pads and dressings are full of germs.</p>
+      <ul><li><b>Method:</b> handling waste without the right PPE lets germs reach cuts on your hands, your mouth or nose, or lets infected material from a contaminated object reach you.</li><li><b>Mode:</b> contact, droplet and airborne.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s6-c7.mp3" aria-label="Listen: Waste"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s6c8" data-ref="NP3 S6 C8">
+      <h3>Soil (Legionella)</h3>
+      
+      <p>Potting mix and soil can carry Legionella longbeachae, a bacterium that causes Legionnaires' disease, a type of pneumonia.</p>
+      <ul><li><b>Method:</b> breathing in dust from potting mix or soil, or getting it on your hands and then your face.</li><li><b>Mode:</b> contact and airborne.</li><li>Wear a mask and gloves when gardening. Wet the potting mix first.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s6-c8.mp3" aria-label="Listen: Soil (Legionella)"><span class="ico">&#9654;</span> Listen</button></div>
+    </article></div>
+  
+  <div class="watch-out"><b>Watch out</b> The <b>method</b> column must say <b>how</b> the germ travels: &quot;bitten&quot;, &quot;ingested&quot;, &quot;breathed in&quot;, &quot;through a needle prick&quot;. The word &quot;exposed&quot; on its own is not a method. (The example row in the assessment, Water: ingested, shows the style.)</div>
+  <div class="activity" id="act-s6-1" data-activity='{"type":"table","title":"Fill the reservoir table","instructions":"For each reservoir choose a method and a mode. Then press Check.","columns":["Reservoir","Method of transmission","Mode"],"rows":[{"label":"People","cells":[{"options":["Incorrect PPE use lets germs reach cuts, mouth or nose","Bitten or scratched","Ingested with food","Mosquito bite"],"answer":"Incorrect PPE use lets germs reach cuts, mouth or nose"},{"options":["Droplet, contact","Vector-borne","Contact, airborne"],"answer":"Droplet, contact"}]},{"label":"Animals (bat lyssavirus)","cells":[{"options":["Bitten, scratched or bat saliva on broken skin","Breathing in dust","Ingested with food","Mosquito bite"],"answer":"Bitten, scratched or bat saliva on broken skin"},{"options":["Droplet, contact","Vector-borne","Contact, airborne"],"answer":"Droplet, contact"}]},{"label":"Insects","cells":[{"options":["Mosquito bite carries the parasite","Breathing in dust","Ingested with food","Needle prick"],"answer":"Mosquito bite carries the parasite"},{"options":["Droplet, contact","Vector-borne","Contact, airborne"],"answer":"Vector-borne"}]},{"label":"Soil (Legionella)","cells":[{"options":["Breathing in dust from potting mix","Bitten or scratched","Ingested with food","Needle prick"],"answer":"Breathing in dust from potting mix"},{"options":["Droplet, contact","Vector-borne","Contact, airborne"],"answer":"Contact, airborne"}]},{"label":"Food and water","cells":[{"options":["Eating or drinking contaminated food or water","Bitten or scratched","Breathing in dust","Needle prick"],"answer":"Eating or drinking contaminated food or water"},{"options":["Contact, droplet","Vector-borne","Contact, airborne"],"answer":"Contact, droplet"}]}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Fill the reservoir table</b></div>
+    <p class="act-instr">For each reservoir choose a method and a mode. Then press Check.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305205/View" target="_blank" rel="noopener">Reservoirs</a></div>
+  <aside class="tnotes" data-slide="s6" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s7" data-ref="NP3 S7">
+  <h2 class="topic"><span class="num">7</span> Infection hazards and how to control them <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F2%7C11b52bb1-8b43-4047-bb67-93ce7129e0d2%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">A hazard is anything that could cause harm. For each infection hazard you should be able to say what the risk is and name two ways to control it.</p>
+  
+  <figure class="visual"><img src="pics/dirtyhands.jpg" alt="Two very dirty hands" style="border-radius:12px; max-height:40vh"></figure>
+  
+  
+  
+  <div class="stack" aria-label="Infection hazards and how to control them cards" data-playall="1"><article class="card" id="s7c1" data-ref="NP3 S7 C1">
+      <h3>Hazard: not washing hands after touching a person</h3>
+      <div class="card-pic photo"><img src="pics/hazardcard1.jpg" alt=""></div>
+      
+      <ul><li><b>The risk:</b> you carry germs from that person to the next person, or to yourself. People are put at risk of infection from others who carry infectious agents.</li><li><b>Control 1:</b> make hand washing easy. Soap, water and alcohol-based hand rub must be close by and easy to get to.</li><li><b>Control 2:</b> wash with soap and water when your hands look dirty. When they look clean, soap and water or hand rub are both fine.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s7-c1.mp3" aria-label="Listen: Hazard: not washing hands after touching a person"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s7c2" data-ref="NP3 S7 C2">
+      <h3>Hazard: handling sharps the wrong way</h3>
+      <div class="card-pic photo"><img src="pics/hazardcard2.jpg" alt=""></div>
+      
+      <ul><li><b>The risk:</b> a needle or other sharp pricks the skin and germs from blood go straight into the bloodstream. The big three are <b>hepatitis B, hepatitis C and HIV</b>.</li><li><b>Control 1:</b> eliminate or reduce. Avoid needles and sharps where there is a safer option.</li><li><b>Control 2:</b> isolate the hazard. Use safety-engineered devices (needles that retract or shield) and put sharps straight into a proper sharps container.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s7-c2.mp3" aria-label="Listen: Hazard: handling sharps the wrong way"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s7c3" data-ref="NP3 S7 C3">
+      <h3>Hazard: coughing or sneezing without covering</h3>
+      <div class="card-pic photo"><img src="pics/hazardcard3.jpg" alt=""></div>
+      
+      <ul><li><b>The risk:</b> droplets full of germs spray into the air. Other residents, staff and visitors catch the cold or flu.</li><li><b>Control 1:</b> cover every cough and sneeze with a tissue (bin it straight away) or your elbow, then wash your hands.</li><li><b>Control 2:</b> stay home when you have a respiratory infection until the symptoms are gone.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s7-c3.mp3" aria-label="Listen: Hazard: coughing or sneezing without covering"><span class="ico">&#9654;</span> Listen</button></div>
+    </article></div>
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Medusa: manage risk <span class="vid-by">(Adrie Homan)</span></p><div class="video" data-youtube="pbj67dRV54w" data-title="Medusa: manage risk"></div></div>
+  
+  <div class="activity" id="act-s7-1" data-activity='{"type":"sort","title":"Risk or control?","instructions":"Sort each statement into the right hazard. Tap a statement, then tap the hazard box.","buckets":["Not washing hands","Handling sharps wrongly","Uncovered cough or sneeze"],"items":[{"text":"Germs carried from one person to the next","bucket":"Not washing hands"},{"text":"Soap, water and hand rub easy to reach","bucket":"Not washing hands"},{"text":"Hepatitis B, hepatitis C or HIV from a needle prick","bucket":"Handling sharps wrongly"},{"text":"Use safety devices and a proper sharps container","bucket":"Handling sharps wrongly"},{"text":"Others catch the cold or flu from droplets","bucket":"Uncovered cough or sneeze"},{"text":"Stay home until symptoms have gone","bucket":"Uncovered cough or sneeze"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Risk or control?</b></div>
+    <p class="act-instr">Sort each statement into the right hazard. Tap a statement, then tap the hazard box.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305204/View" target="_blank" rel="noopener">Identify infection hazards</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305222/View" target="_blank" rel="noopener">Identify measures to minimise infection risk</a></div>
+  <aside class="tnotes" data-slide="s7" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s8" data-ref="NP3 S8">
+  <h2 class="topic"><span class="num">8</span> Sharps and needlestick injuries <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F7a%7C908d4ecf-f650-4150-bccf-f21beccb4d9f%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">A needlestick is when a used needle pricks your skin. In the assessment you are pushing rubbish into a public bin and a hidden needle pricks your finger.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np3-s8.mp3" aria-label="Listen: Sharps and needlestick injuries"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><img src="pics/sharpsbin.jpg" alt="A yellow sharps container" style="border-radius:12px; max-height:40vh"></figure>
+  <ol class="points"><li id="s8p1"><span class="ref" title="Reference">NP3 S8 P1</span>A needlestick is a <b>penetrating injury</b>. The needle gives germs a <b>direct road into the bloodstream</b>. Germs that travel this way include <b>hepatitis C and HIV</b>.</li><li id="s8p2"><span class="ref" title="Reference">NP3 S8 P2</span><b>Never recap</b> a used needle. Most needlestick injuries happen while recapping.</li><li id="s8p3"><span class="ref" title="Reference">NP3 S8 P3</span>Put used sharps <b>straight into a sharps container</b>, right where you are. Never leave a sharp on a bench or a bed.</li><li id="s8p4"><span class="ref" title="Reference">NP3 S8 P4</span>Use <b>safety-engineered devices</b> when your employer provides them, and help choose and test them.</li><li id="s8p5"><span class="ref" title="Reference">NP3 S8 P5</span><b>Avoid needles</b> when there is a safe alternative.</li><li id="s8p6"><span class="ref" title="Reference">NP3 S8 P6</span><b>Plan</b> how you will handle and dispose of the sharp <b>before</b> you start.</li><li id="s8p7"><span class="ref" title="Reference">NP3 S8 P7</span><b>Report every</b> needlestick, every sharp injury and every near miss straight away, so you get follow-up care and the hazard gets fixed.</li><li id="s8p8"><span class="ref" title="Reference">NP3 S8 P8</span>Do your <b>infection prevention training</b>.</li></ol>
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Pharmaceutical waste and sharps <span class="vid-by">(Adrie Homan)</span></p><div class="video" data-youtube="0jguhhhI3UI" data-title="Pharmaceutical waste and sharps"></div></div>
+  <div class="watch-out"><b>Watch out</b> For the needlestick question, say <b>how</b> the infection gets in: a penetrating injury gives a direct line into the <b>bloodstream</b>. Then give <b>four</b> controls.</div>
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305242/View" target="_blank" rel="noopener">Penetrating injuries</a></div>
+  <aside class="tnotes" data-slide="s8" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s9" data-ref="NP3 S9">
+  <h2 class="topic"><span class="num">9</span> Cough and sneeze manners (respiratory etiquette) <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F9%7Cd2936f72-8638-4273-8de5-35b5d96c2740%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Your colleague has a cold and keeps sneezing. What four things can you tell them to do so they do not spread it? This is called respiratory hygiene and cough etiquette.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np3-s9.mp3" aria-label="Listen: Cough and sneeze manners (respiratory etiquette)"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><div class="grid4">
+        <figure><img src="pics/tissue-in-bin.jpg" alt="A hand dropping a tissue into a bin"><figcaption><b>1. Tissue, then bin it</b></figcaption></figure>
+        <figure><img src="pics/inelbow.jpg" alt="A boy sneezing into his elbow"><figcaption><b>2. No tissue? Elbow</b></figcaption></figure>
+        <figure><img src="pics/turnaway.jpg" alt="A cardboard sign reading sneeze direction code"><figcaption><b>3. Turn away</b></figcaption></figure>
+        <figure><img src="pics/wahinghands.jpg" alt="Hands being washed with soap under a tap"><figcaption><b>4. Clean your hands</b></figcaption></figure>
+      </div></figure>
+  <ol class="points"><li id="s9p1"><span class="ref" title="Reference">NP3 S9 P1</span><b>Cover</b> your nose and mouth with a <b>disposable tissue</b> when you cough, sneeze or wipe your nose. Put the tissue <b>in the bin straight away</b>. Never use a tissue twice, and no handkerchiefs.</li><li id="s9p2"><span class="ref" title="Reference">NP3 S9 P2</span>No tissue? Cough or sneeze into your <b>upper arm or elbow</b>, not your hands.</li><li id="s9p3"><span class="ref" title="Reference">NP3 S9 P3</span><b>Turn away</b> from other people when you cough or sneeze, and move away from people who are coughing.</li><li id="s9p4"><span class="ref" title="Reference">NP3 S9 P4</span><b>Clean your hands</b> after coughing, sneezing or blowing your nose. Use soap and water, or alcohol-based hand rub if there is no sink.</li><li id="s9p5"><span class="ref" title="Reference">NP3 S9 P5</span>Keep your hands <b>away from your eyes, nose and mouth</b>.</li><li id="s9p6"><span class="ref" title="Reference">NP3 S9 P6</span>Help other people follow the same rules. If there is no bin, put used tissues in a plastic bag.</li></ol>
+  
+  <div class="after"><img src="pics/canva-respiratory-etiquette.jpg" alt="Respiratory and cough etiquette summary: use a tissue, do not reuse it, bin it, no handkerchiefs, sneeze into your elbow, wash hands after, help others, use a plastic bag if there is no bin" style="width:100%; max-width:900px; display:block; margin:0 auto; border-radius:10px"></div>
+  
+  
+  <div class="watch-out"><b>Watch out</b> This question is about <b>coughing and sneezing</b>. A list of general standard precautions (hand hygiene, PPE, linen) does <b>not</b> answer it.</div>
+  <div class="activity" id="act-s9-1" data-activity='{"type":"quiz","title":"Does it answer the question?","instructions":"Your colleague is sneezing. Which answer actually tells them what to do?","questions":[{"q":"Which list answers \"four strategies to reduce the risk of cross infection from a sneezing colleague\"?","options":["Hand hygiene, hand care, use PPE, handle linen safely","Tissue and bin it, elbow if no tissue, turn away, clean hands after","Wear gloves, wear a gown, clean the room, report the hazard","Stay hydrated, rest, take paracetamol, see a doctor"],"answer":1,"why":"The question is about coughing and sneezing. The answer must be the respiratory etiquette steps."},{"q":"There is no tissue. Where should the sneeze go?","options":["Into your hand","Into your upper arm or elbow","Into the air, turned away","Into your sleeve cuff and then wipe it"],"answer":1,"why":"Elbow, not hand. Your hand touches everything next."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Does it answer the question?</b></div>
+    <p class="act-instr">Your colleague is sneezing. Which answer actually tells them what to do?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305243/View" target="_blank" rel="noopener">Follow procedures for respiratory hygiene and cough etiquette</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305229/View" target="_blank" rel="noopener">Cross infection</a></div>
+  <aside class="tnotes" data-slide="s9" aria-label="Teacher notes"></aside>
+</section>
+  <footer class="foot">
+    <p>HLTINF006 / HLTWHS002 · Germs and how infection spreads · Built from TAFE Queensland learning resources, 23 Oct 2026. References on this page are written NP3 S(slide) P(point), where NP3 is this page's slide number in Nearpod.</p>
+    
+    <p><a href="0-index.html">Lesson index and glossary</a> · <button type="button" class="tlink">Teacher</button></p>
+  </footer>
+</div>
+<a href="#index" class="home" title="Back to the index"><span aria-hidden="true">&#8679;</span> Home</a>
+<div class="tpill" hidden><span>Teacher view on</span><button type="button" class="tp-hide">Hide</button><button type="button" class="tp-out">Sign out</button></div>
+<div class="mascot gerry" data-mascot="gerry" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 150" role="img" aria-label="Gerry the Germ"><defs><radialGradient id="gg" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#bef264"/><stop offset=".55" stop-color="#4ade80"/><stop offset="1" stop-color="#15803d"/></radialGradient></defs>
+<line x1="114.0" y1="70.0" x2="132.0" y2="70.0" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/><circle cx="132.0" cy="70.0" r="6" fill="#f472b6"/><line x1="105.6" y1="95.9" x2="120.2" y2="106.4" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/><circle cx="120.2" cy="106.4" r="6" fill="#fb923c"/><line x1="83.6" y1="111.8" x2="89.2" y2="129.0" stroke="#facc15" stroke-width="7" stroke-linecap="round"/><circle cx="89.2" cy="129.0" r="6" fill="#facc15"/><line x1="56.4" y1="111.8" x2="50.8" y2="129.0" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/><circle cx="50.8" cy="129.0" r="6" fill="#38bdf8"/><line x1="34.4" y1="95.9" x2="19.8" y2="106.4" stroke="#a78bfa" stroke-width="7" stroke-linecap="round"/><circle cx="19.8" cy="106.4" r="6" fill="#a78bfa"/><line x1="26.0" y1="70.0" x2="8.0" y2="70.0" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/><circle cx="8.0" cy="70.0" r="6" fill="#f472b6"/><line x1="34.4" y1="44.1" x2="19.8" y2="33.6" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/><circle cx="19.8" cy="33.6" r="6" fill="#fb923c"/><line x1="56.4" y1="28.2" x2="50.8" y2="11.0" stroke="#facc15" stroke-width="7" stroke-linecap="round"/><circle cx="50.8" cy="11.0" r="6" fill="#facc15"/><line x1="83.6" y1="28.2" x2="89.2" y2="11.0" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/><circle cx="89.2" cy="11.0" r="6" fill="#38bdf8"/><line x1="105.6" y1="44.1" x2="120.2" y2="33.6" stroke="#a78bfa" stroke-width="7" stroke-linecap="round"/><circle cx="120.2" cy="33.6" r="6" fill="#a78bfa"/>
+<circle cx="70" cy="70" r="46" fill="url(#gg)"/>
+<circle cx="52" cy="58" r="6" fill="#86efac" opacity=".7"/><circle cx="88" cy="92" r="4" fill="#86efac" opacity=".7"/>
+<ellipse cx="56" cy="66" rx="9" ry="11" fill="#fff"/><ellipse cx="84" cy="66" rx="9" ry="11" fill="#fff"/>
+<circle cx="58" cy="68" r="4.5" fill="#1b2530"/><circle cx="86" cy="68" r="4.5" fill="#1b2530"/>
+<circle cx="59.5" cy="66.5" r="1.5" fill="#fff"/><circle cx="87.5" cy="66.5" r="1.5" fill="#fff"/>
+<path d="M54 86 q16 16 32 0" stroke="#1b2530" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M62 88 q8 7 16 0 v3 q-8 5 -16 0z" fill="#fff"/>
+<ellipse cx="56" cy="128" rx="12" ry="6" fill="#15803d"/><ellipse cx="86" cy="128" rx="12" ry="6" fill="#15803d"/>
+<rect x="50" y="112" width="10" height="16" rx="4" fill="#15803d"/><rect x="80" y="112" width="10" height="16" rx="4" fill="#15803d"/>
+</svg></div>
+</main>
+<div class="big" role="dialog" aria-modal="true" aria-label="Card in full screen">
+  <div class="bar"><span class="big-where"></span><button type="button" class="big-close">Close</button></div>
+  <div class="body"></div>
+  <div class="foot"><button type="button" class="big-back">Back</button><button type="button" class="next big-next">Next card</button></div>
+</div>
+<script>var TEACHER = {"salt":"9Or4hPVq68RYsCJYsiF2Cg==","iv":"GDPCQM2Hort0yyDA","ct":"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"}; var MASCOT_LINES = {"gerry":["Hi, I'm Gerry. Please don't wash your hands. Love, Gerry.","A sneeze is my favourite taxi. No tissue, please!","Bed rails are my holiday home. I can stay for weeks.","Jewellery under gloves? Perfect. I hide under rings.","Recap that needle. Go on. I dare you.","You washed for 20 seconds? That's just rude.","Damp hands, dry gloves? Thank you, I'll move in.","Soap and water is my kryptonite. Shh.","I love a hand that touches a face. Any face."]};</script>
+<script>(function(){
+  var ANGLES = [-8, -5.5, -9, -4.5, -7, -6, -8.5, -4, -6.5];
+  var big = document.querySelector('.big'), bigBody = big.querySelector('.body'),
+      bigWhere = big.querySelector('.big-where'), active = null;
+
+  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ---------- */
+  (function(){
+    var pill = document.querySelector('.tpill'), tlink = document.querySelector('.tlink'), saved = null, on = '0';
+    var b64 = function(s){ var b = atob(s), a = new Uint8Array(b.length); for(var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; };
+    function decrypt(code){
+      if(!window.crypto || !crypto.subtle) return Promise.reject(new Error('nosubtle'));
+      var enc = new TextEncoder();
+      return crypto.subtle.importKey('raw', enc.encode(code), 'PBKDF2', false, ['deriveKey']).then(function(km){
+        return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(TEACHER.salt), iterations: 150000, hash: 'SHA-256' }, km, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      }).then(function(key){
+        return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(TEACHER.iv) }, key, b64(TEACHER.ct));
+      }).then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
+    }
+    function show(notes){
+      document.querySelectorAll('.tnotes').forEach(function(a){ a.innerHTML = notes[a.getAttribute('data-slide')] || ''; });
+      document.body.classList.add('teacher'); pill.hidden = false;
+      try{ localStorage.setItem('tv_on', '1'); }catch(e){}
+    }
+    function hide(){ document.body.classList.remove('teacher'); pill.hidden = true; try{ localStorage.setItem('tv_on', '0'); }catch(e){} }
+    function unlock(code, quiet){
+      return decrypt(code).then(function(notes){ saved = code; try{ localStorage.setItem('tv_code', code); }catch(e){} show(notes); }, function(err){
+        if(quiet) return;
+        alert(err.message === 'nosubtle' ? 'This browser cannot unlock the teacher view. Use Chrome or Edge.' : 'That code did not work.');
+      });
+    }
+    try{ saved = localStorage.getItem('tv_code'); on = localStorage.getItem('tv_on') || '0'; }catch(e){}
+    var q = new URLSearchParams(location.search);
+    if(q.get('t') === 'off'){ hide(); try{ localStorage.removeItem('tv_code'); }catch(e){} }
+    else if(q.has('t')) unlock(q.get('t'));
+    else if(saved && on === '1') unlock(saved, true);
+    if(tlink) tlink.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')){ hide(); return; }
+      if(saved){ unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); }); } else ask();
+      function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
+    });
+    pill.querySelector('.tp-hide').addEventListener('click', hide);
+    pill.querySelector('.tp-out').addEventListener('click', function(){ hide(); saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open')) hide(); });
+  })();
+
+    /* ---------- audio ---------- */
+  var player = new Audio(), current = null, queue = null;
+  function stopAudio(){ player.pause(); if(current){ current.classList.remove('playing'); current = null; } queue = null; }
+  function playBtn(btn, onEnd){
+    if(current === btn){ stopAudio(); return; }
+    stopAudio();
+    current = btn; btn.classList.add('playing');
+    player.src = btn.getAttribute('data-audio');
+    player.onended = function(){ btn.classList.remove('playing'); current = null; if(onEnd) onEnd(); };
+    player.onerror = function(){ btn.classList.remove('playing'); current = null; btn.title = 'Sound file not found yet'; };
+    player.play().catch(function(){});
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.say'); if(!b) return;
+    e.preventDefault(); e.stopPropagation();
+    var inBig = b.closest('.big');
+    if(inBig && active){ var realBtn = active.card().querySelector('.say'); if(realBtn) b = realBtn; }
+    playBtn(b);
+  });
+
+  /* ---------- mascots follow the scroll ---------- */
+  document.querySelectorAll('.mascot').forEach(function(g, gi){
+    var name = g.getAttribute('data-mascot'), bubble = g.querySelector('.gerry-bubble');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var lastSlide = null, timer = null, lines = MASCOT_LINES[name] || [];
+    function place(){
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? window.scrollY / max : 0;
+      var top = 90 + (gi ? 1 - p : p) * (window.innerHeight - 300);
+      g.style.top = top + 'px';
+      var slides = document.querySelectorAll('section.slide'), cur = null;
+      for(var i = 0; i < slides.length; i++){ if(slides[i].getBoundingClientRect().top < window.innerHeight * 0.5) cur = slides[i]; }
+      if(cur !== lastSlide && lastSlide !== null && !reduce){ g.classList.remove('hop'); void g.offsetWidth; g.classList.add('hop'); }
+      lastSlide = cur;
+    }
+    window.addEventListener('scroll', function(){ if(!timer) timer = requestAnimationFrame(function(){ timer = null; place(); }); }, { passive: true });
+    window.addEventListener('resize', place);
+    place();
+    var n = 0;
+    g.addEventListener('click', function(){
+      if(!bubble.hidden){ bubble.hidden = true; return; }
+      var k = n++ % lines.length;
+      bubble.textContent = lines[k]; bubble.hidden = false;
+      stopAudio(); player.src = 'audio/' + name + '-' + (k + 1) + '.mp3'; player.onended = null; player.onerror = null; player.play().catch(function(){});
+      clearTimeout(bubble._t); bubble._t = setTimeout(function(){ bubble.hidden = true; }, 7000);
+    });
+  });
+
+  /* ---------- videos ---------- */
+  document.querySelectorAll('.video').forEach(function(v){
+    var id = (v.getAttribute('data-youtube')||'').trim(), t = v.getAttribute('data-title')||'Video';
+    if(!id) return;
+    v.innerHTML = '<iframe title="'+t.replace(/"/g,'&quot;')+'" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>';
+    var w = document.createElement('p'); w.className = 'watch';
+    w.innerHTML = 'Video not playing? <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v='+encodeURIComponent(id)+'">Watch "'+t.replace(/</g,'&lt;')+'" on YouTube</a>';
+    v.parentNode.insertBefore(w, v.nextSibling);
+  });
+
+  /* ---------- click a part of a diagram to make it stand out ---------- */
+  document.querySelectorAll('.spot').forEach(function(sv){
+    var parts = sv.querySelectorAll('[data-spot]');
+    parts.forEach(function(g){
+      g.style.cursor = 'pointer';
+      g.addEventListener('click', function(e){
+        e.stopPropagation();
+        var on = g.classList.contains('lit');
+        parts.forEach(function(x){ x.classList.remove('lit'); });
+        sv.classList.toggle('spotting', !on);
+        if(!on) g.classList.add('lit');
+      });
+    });
+    sv.addEventListener('click', function(){ parts.forEach(function(x){ x.classList.remove('lit'); }); sv.classList.remove('spotting'); });
+  });
+
+  /* ---------- card stacks ---------- */
+  document.querySelectorAll('.stack').forEach(function(stack){
+    var cards = [].slice.call(stack.querySelectorAll('.card')), n = cards.length, i = 0, busy = false;
+    var deck = document.createElement('div'); deck.className = 'deck'; deck.tabIndex = 0;
+    deck.setAttribute('role','group');
+    deck.setAttribute('aria-label', (stack.getAttribute('aria-label')||'Cards') + '. Press the right arrow for the next card.');
+    var pile = document.createElement('div'); pile.className = 'pile'; pile.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
+    deck.appendChild(pile);
+    cards.forEach(function(c, k){
+      c.style.setProperty('--r', ANGLES[k % ANGLES.length] + 'deg');
+      if(k % 2) c.classList.add('shade');
+      if(c.textContent.replace(/\s+/g,' ').length > 520) c.classList.add('long');
+      var tag = document.createElement('span'); tag.className = 'count'; tag.textContent = 'Card ' + (k+1) + ' of ' + n;
+      c.insertBefore(tag, c.firstChild);
+      c.setAttribute('aria-hidden', 'true');
+      deck.appendChild(c);
+    });
+    if(stack.getAttribute('data-playall')){
+      var pa = document.createElement('div'); pa.className = 'playall';
+      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> Play all cards</button>';
+      stack.appendChild(pa);
+      pa.querySelector('button').addEventListener('click', function(ev){
+        ev.stopPropagation();
+        if(queue === stack){ stopAudio(); return; }
+        stopAudio(); queue = stack;
+        function step(){
+          if(queue !== stack) return;
+          var b = cards[i].querySelector('.say');
+          if(!b){ next(); return; }
+          playBtn(b, function(){ setTimeout(function(){ if(queue !== stack) return; if(i === n-1){ queue = null; return; } go(1); step(); }, 900); });
+        }
+        step();
+      }, true);
+    }
+    stack.appendChild(deck);
+
+    var controls = document.createElement('div'); controls.className = 'controls';
+    controls.innerHTML = '<button type="button" class="back">Back</button><span class="where" aria-live="polite"></span><button type="button" class="next">Next card</button><button type="button" class="full">Full screen</button>';
+    stack.appendChild(controls);
+    var hint = document.createElement('p'); hint.className = 'hint'; hint.textContent = 'Click the card to see the next card.';
+    stack.appendChild(hint);
+    var where = controls.querySelector('.where');
+
+    var heights = [];
+    function size(){
+      cards.forEach(function(c, k){ c.style.height = 'auto'; heights[k] = c.offsetHeight; c.style.height = ''; });
+      deck.style.height = heights[i] + 'px';
+    }
+    function show(){
+      cards.forEach(function(c, k){ c.classList.toggle('top', k === i); c.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      where.textContent = 'Card ' + (i+1) + ' of ' + n;
+      if(heights.length) deck.style.height = heights[i] + 'px';
+      if(active === api && big.classList.contains('open')) fill();
+    }
+    function go(step){
+      if(busy) return; busy = true;
+      var old = cards[i];
+      i = (i + step + n) % n;
+      var cls = step > 0 ? 'leave' : 'leave-back';
+      show();
+      old.classList.add(cls);
+      cards[i].classList.add('arrive');
+      setTimeout(function(){ old.classList.remove(cls); cards[i].classList.remove('arrive'); busy = false; }, 440);
+    }
+    function next(){ go(1); }
+    function fill(){
+      bigBody.innerHTML = cards[i].innerHTML;
+      bigWhere.textContent = 'Card ' + (i+1) + ' of ' + n;
+      bigBody.scrollTop = 0;
+    }
+    var api = { go: go, fill: fill, card: function(){ return cards[i]; } };
+
+    deck.addEventListener('click', function(e){ if(e.target.closest('a') || e.target.closest('.say')) return; go(1); });
+    deck.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); go(1); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
+    });
+    controls.querySelector('.next').addEventListener('click', function(){ go(1); });
+    controls.querySelector('.back').addEventListener('click', function(){ go(-1); });
+    controls.querySelector('.full').addEventListener('click', function(){
+      active = api; fill(); big.classList.add('open'); big.querySelector('.big-next').focus();
+    });
+
+    size(); show();
+    window.addEventListener('resize', size);
+    window.addEventListener('load', size);
+    stack.querySelectorAll('img').forEach(function(img){ img.addEventListener('load', size); });
+  });
+
+  function closeBig(){ big.classList.remove('open'); active = null; }
+  big.querySelector('.big-close').addEventListener('click', closeBig);
+  big.querySelector('.big-next').addEventListener('click', function(){ if(active) active.go(1); });
+  big.querySelector('.big-back').addEventListener('click', function(){ if(active) active.go(-1); });
+  document.addEventListener('keydown', function(e){
+    if(!big.classList.contains('open')) return;
+    if(e.key === 'Escape') closeBig();
+    if(e.key === 'ArrowRight' && active) active.go(1);
+    if(e.key === 'ArrowLeft' && active) active.go(-1);
+  });
+
+  /* ---------- activities ---------- */
+  function shuffle(a){ a = a.slice(); for(var i = a.length-1; i > 0; i--){ var j = Math.floor(Math.random()*(i+1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
+  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
+
+  var builders = {
+    /* chips into targets: used by match (one chip per target) and sort (many chips per bucket) */
+    match: function(root, a){ return buildChips(root, a.pairs.map(function(p){ return { text: p.a, target: p.b }; }), shuffle(a.pairs.map(function(p){ return p.b; })), a.labels || null, 1); },
+    sort: function(root, a){ return buildChips(root, a.items.map(function(it){ return { text: it.text, target: it.bucket }; }), a.buckets, null, 99); },
+    order: function(root, a){
+      var list = el('ol', 'order'); root.appendChild(list);
+      var start = a.start == null ? 1 : a.start;
+      function render(items){
+        list.innerHTML = '';
+        items.forEach(function(t, k){
+          var li = el('li'); li.draggable = true; li.setAttribute('data-text', t);
+          li.innerHTML = '<span class="o-n">' + (start + k) + '</span><span class="o-t">' + esc(t) + '</span><span class="o-btn"><button type="button" aria-label="Move up">&#9650;</button><button type="button" aria-label="Move down">&#9660;</button></span>';
+          list.appendChild(li);
+        });
+      }
+      function items(){ return [].map.call(list.children, function(li){ return li.getAttribute('data-text'); }); }
+      function renumber(){ [].forEach.call(list.children, function(li, k){ li.querySelector('.o-n').textContent = start + k; li.classList.remove('right','wrong'); }); }
+      render(shuffle(a.items));
+      list.addEventListener('click', function(e){
+        var b = e.target.closest('button'); if(!b) return;
+        var li = b.closest('li'); var up = b.getAttribute('aria-label') === 'Move up';
+        if(up && li.previousElementSibling) list.insertBefore(li, li.previousElementSibling);
+        if(!up && li.nextElementSibling) list.insertBefore(li.nextElementSibling, li);
+        renumber();
+      });
+      var drag = null;
+      list.addEventListener('dragstart', function(e){ drag = e.target.closest('li'); if(drag) drag.classList.add('dragging'); });
+      list.addEventListener('dragend', function(){ if(drag) drag.classList.remove('dragging'); drag = null; renumber(); });
+      list.addEventListener('dragover', function(e){ e.preventDefault(); var li = e.target.closest('li'); if(!li || li === drag) return; var r = li.getBoundingClientRect(); if(e.clientY < r.top + r.height/2) list.insertBefore(drag, li); else list.insertBefore(drag, li.nextSibling); });
+      return {
+        check: function(){ var ok = 0; [].forEach.call(list.children, function(li, k){ var good = li.getAttribute('data-text') === a.items[k]; li.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, a.items.length]; },
+        reset: function(){ render(shuffle(a.items)); }
+      };
+    },
+    quiz: function(root, a){
+      var qs = [];
+      a.questions.forEach(function(q, qi){
+        var box = el('div', 'quiz-q'); box.innerHTML = '<p><b>' + (qi+1) + '. ' + esc(q.q) + '</b></p>';
+        var sel = -1;
+        q.options.forEach(function(o, oi){
+          var b = el('button', 'opt', esc(o)); b.type = 'button';
+          b.addEventListener('click', function(){ if(box.classList.contains('done')) return; sel = oi; [].forEach.call(box.querySelectorAll('.opt'), function(x){ x.classList.remove('selected'); }); b.classList.add('selected'); });
+          box.appendChild(b);
+        });
+        if(q.why) box.appendChild(el('p', 'why', esc(q.why)));
+        root.appendChild(box);
+        qs.push({ box: box, get: function(){ return sel; }, set: function(v){ sel = v; }, q: q });
+      });
+      return {
+        check: function(){ var ok = 0; qs.forEach(function(x){ var opts = x.box.querySelectorAll('.opt'); x.box.classList.add('done'); opts.forEach(function(o, oi){ o.classList.remove('selected'); if(oi === x.q.answer) o.classList.add('right'); else if(oi === x.get()) o.classList.add('wrong'); }); if(x.get() === x.q.answer) ok++; }); return [ok, qs.length]; },
+        reset: function(){ qs.forEach(function(x){ x.set(-1); x.box.classList.remove('done'); x.box.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected','right','wrong'); }); }); }
+      };
+    },
+    table: function(root, a){
+      var t = el('table', 'fill-table'); root.appendChild(t);
+      t.innerHTML = '<thead><tr>' + a.columns.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead>';
+      var tb = el('tbody'); t.appendChild(tb);
+      a.rows.forEach(function(r){
+        var tr = el('tr'); tr.innerHTML = '<td><b>' + esc(r.label) + '</b></td>';
+        r.cells.forEach(function(c){
+          var td = el('td'); var s = el('select'); s.innerHTML = '<option value="">Choose...</option>' + shuffle(c.options).map(function(o){ return '<option>' + esc(o) + '</option>'; }).join('');
+          s.setAttribute('data-answer', c.answer); td.appendChild(s); tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      return {
+        check: function(){ var ok = 0, n = 0; t.querySelectorAll('select').forEach(function(s){ n++; var td = s.parentNode; td.classList.remove('right','wrong'); var good = s.value === s.getAttribute('data-answer'); td.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, n]; },
+        reset: function(){ t.querySelectorAll('select').forEach(function(s){ s.value = ''; s.parentNode.classList.remove('right','wrong'); }); }
+      };
+    }
+  };
+
+  function buildChips(root, items, targetNames, labels, cap){
+    var bank = el('div', 'bank'); root.appendChild(bank);
+    var tg = el('div', 'targets'); root.appendChild(tg);
+    var selected = null, targets = {};
+    targetNames.forEach(function(name){
+      var t = el('div', 'target'); t.setAttribute('data-name', name);
+      t.innerHTML = '<div class="t-label">' + esc(labels ? (labels[name] || name) : name) + '</div><div class="t-drop"></div>';
+      tg.appendChild(t); targets[name] = t;
+      t.addEventListener('click', function(){ if(selected) place(selected, t); });
+      t.addEventListener('dragover', function(e){ e.preventDefault(); t.classList.add('over'); });
+      t.addEventListener('dragleave', function(){ t.classList.remove('over'); });
+      t.addEventListener('drop', function(e){ e.preventDefault(); t.classList.remove('over'); if(selected) place(selected, t); });
+    });
+    function place(chip, t){
+      var drop = t.querySelector('.t-drop');
+      if(cap === 1 && drop.children.length){ bank.appendChild(drop.firstElementChild); }
+      drop.appendChild(chip); chip.classList.remove('selected','right','wrong'); selected = null;
+    }
+    function mk(it){
+      var c = el('div', 'chip', esc(it.text)); c.setAttribute('data-target', it.target); c.draggable = true; c.tabIndex = 0;
+      c.addEventListener('click', function(e){ e.stopPropagation(); if(c.parentNode !== bank){ bank.appendChild(c); c.classList.remove('right','wrong'); selected = null; return; } if(selected) selected.classList.remove('selected'); selected = c; c.classList.add('selected'); });
+      c.addEventListener('dragstart', function(){ selected = c; c.classList.add('selected'); });
+      c.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); c.click(); } });
+      return c;
+    }
+    function fillBank(){ bank.innerHTML = ''; shuffle(items).forEach(function(it){ bank.appendChild(mk(it)); }); }
+    fillBank();
+    return {
+      check: function(){ var ok = 0; items.length; root.querySelectorAll('.chip').forEach(function(c){ var t = c.closest('.target'); c.classList.remove('right','wrong'); if(!t){ c.classList.add('wrong'); return; } var good = t.getAttribute('data-name') === c.getAttribute('data-target'); c.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, items.length]; },
+      reset: function(){ root.querySelectorAll('.t-drop').forEach(function(d){ d.innerHTML = ''; }); fillBank(); selected = null; }
+    };
+  }
+
+  document.querySelectorAll('.activity').forEach(function(act){
+    var a; try{ a = JSON.parse(act.getAttribute('data-activity')); }catch(e){ return; }
+    var body = act.querySelector('.act-body'), res = act.querySelector('.act-result');
+    var b = builders[a.type]; if(!b) return;
+    var api = b(body, a);
+    var slide = act.closest('section.slide'), peek = act.querySelector('.act-peek'), tools = act.querySelector('.act-tools');
+    function blur(on){ if(slide) slide.classList.toggle('hide-notes', on); peek.textContent = on ? 'Show the notes' : 'Hide the notes to carry on'; act.classList.toggle('peeking', !on && act.classList.contains('started')); }
+    act.querySelector('.act-go').addEventListener('click', function(){
+      act.classList.add('started'); act.querySelector('.act-start').hidden = true; body.hidden = false; tools.hidden = false; blur(true);
+      act.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    peek.addEventListener('click', function(){ blur(!slide.classList.contains('hide-notes')); });
+    act.querySelector('.act-check').addEventListener('click', function(){
+      var r = api.check(); res.className = 'act-result ' + (r[0] === r[1] ? 'good' : 'bad');
+      res.textContent = r[0] === r[1] ? 'All correct. Well done!' : r[0] + ' of ' + r[1] + ' correct. Try the red ones again.';
+      if(r[0] === r[1]){ act.classList.remove('started'); blur(false); }
+    });
+    act.querySelector('.act-reset').addEventListener('click', function(){ api.reset(); res.textContent = ''; res.className = 'act-result'; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HLTINF006 / HLTWHS002 Practical skills day</title>
+<meta name="description" content="Lesson 4 of the Infection Control and WHS cluster: the practical day. Skills stations, the home inspection, the hazard form and risk matrix, the risk assessment, the WHS meeting, the Davis Butler emergency scenario, PPE for gastro, cleaning, the incident form, progress notes and the debrief.">
+<style>:root{
+  --ink:#1b2530; --soft-ink:#44505c; --paper:#ffffff;
+  --deep:#12384a; --aqua:#8fe3e8; --action:#0b6f7c;
+  --card-a:#fbfbf9; --card-b:#ecece8; --edge:#d9d9d4;
+  --warn:#b45309; --warn-bg:#fff7ed; --ok:#15803d; --bad:#b91c1c;
+  --teach:#4c1d95; --teach-bg:#f5f3ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size:clamp(17px,1.5vw,30px); line-height:1.55}
+main{overflow-x:clip}
+.wrap{max-width:1500px; margin:0 auto; padding:0 clamp(20px,3vw,60px)}
+
+/* banner */
+.banner{position:relative; background:var(--deep); color:#fff; padding:clamp(60px,9vw,140px) 20px 40px; overflow:hidden}
+.banner-inner{position:relative; z-index:2; max-width:1500px; margin:0 auto}
+.banner .kicker{margin:0 0 6px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:.75em; color:var(--aqua)}
+.banner h1{margin:0; font-size:clamp(30px,5vw,76px); line-height:1.1; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.banner .sub{margin:12px 0 0; font-size:1.05em; max-width:28em; color:#e6f6f7}
+.banner svg.hero{position:absolute; right:-2vw; bottom:-4vw; width:min(46vw,620px); height:auto; opacity:.95; z-index:1}
+@media (max-width:800px){.banner svg.hero{opacity:.25}}
+
+/* index */
+#index{margin:30px 0 10px; padding:18px 26px 12px; background:#eef3f4; border-left:6px solid var(--action); border-radius:6px}
+#index h2{font-size:1.2em; margin:0 0 8px}
+#index ul{margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(19em,1fr)); column-gap:3em}
+#index li{margin:4px 0}
+#index a{text-decoration:none; color:var(--ink); display:flex; gap:10px; align-items:baseline}
+#index a:hover{color:var(--action); text-decoration:underline}
+.num{display:inline-flex; align-items:center; justify-content:center; min-width:1.7em; height:1.7em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; font-size:.8em; flex:none}
+.opening{font-size:1.05em; margin:26px 0 10px}
+
+/* slides */
+section.slide{padding:36px 0 18px; border-top:1px solid var(--edge); margin-top:30px; scroll-margin-top:10px}
+section.slide:first-of-type{border-top:0}
+h2.topic{font-size:1.4em; line-height:1.3; margin:0 0 10px; display:flex; gap:14px; align-items:center}
+h2.topic .num{font-size:.7em; min-width:2em; height:2em}
+h3{font-size:1.15em; line-height:1.3; margin:0 0 10px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px; padding-left:26px}
+li{margin:4px 0}
+a{color:var(--action); text-underline-offset:3px}
+a.star{font-weight:700; padding:0 4px; font-size:.8em; text-decoration:none; opacity:.55}
+a.star:hover{opacity:1}
+a.term{text-decoration:underline dotted; color:inherit}
+.intro{font-size:1.05em; color:var(--soft-ink)}
+a:focus-visible,button:focus-visible,.deck:focus-visible{outline:3px solid #f2a900; outline-offset:3px}
+
+ol.points{margin:12px 0 18px; padding-left:0; list-style:none; counter-reset:pt}
+ol.points li{position:relative; padding:10px 14px 10px 3.2em; margin:6px 0; background:#f7f9fa; border-radius:8px; counter-increment:pt}
+ol.points li::before{content:counter(pt); position:absolute; left:.9em; top:.55em; width:1.7em; height:1.7em; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:700; font-size:.85em; display:flex; align-items:center; justify-content:center}
+.ref{display:none; float:right; margin-left:10px; font-size:.65em; color:var(--teach); background:var(--teach-bg); border:1px solid #ddd6fe; border-radius:4px; padding:0 6px}
+body.teacher .ref{display:inline-block}
+
+figure.visual{margin:18px 0 22px; text-align:center}
+figure.visual svg,figure.visual img{max-width:100%; height:auto; max-height:70vh}
+figure.visual figcaption{font-size:.8em; color:var(--soft-ink); margin-top:6px}
+figure.pic{margin:22px 0}
+figure.pic img{display:block; width:100%; height:auto; max-height:86vh; object-fit:contain; border-radius:4px}
+
+.watch-out{margin:14px 0 20px; padding:14px 18px 14px 56px; background:var(--warn-bg); border:2px solid #fdba74; border-radius:8px; position:relative}
+.watch-out::before{content:"!"; position:absolute; left:14px; top:12px; width:30px; height:30px; border-radius:50%; background:var(--warn); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.watch-out b{color:var(--warn); margin-right:6px}
+
+/* audio */
+.say{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:40px; display:inline-flex; gap:8px; align-items:center}
+.say.playing{background:var(--action); color:#fff}
+.say .ico{font-size:.8em}
+.audio-line{display:flex; gap:12px; align-items:center; margin:0 0 14px; flex-wrap:wrap}
+.audio-label{color:var(--soft-ink); font-size:.9em}
+.card-audio{margin-top:10px}
+.playall{margin:0 0 34px; text-align:center}
+
+/* card stack (from the Sway template) */
+.stack{margin:60px auto 40px; width:86%; max-width:1150px; --tilt:.4}
+.deck{position:relative; cursor:pointer; border-radius:3px; transition:height .3s ease}
+.pile i{position:absolute; inset:0; background:var(--card-b); border:1px solid var(--edge); box-shadow:0 1px 3px rgba(20,30,40,.10)}
+.pile i:nth-child(even){background:var(--card-a)}
+.pile i{transform:rotate(calc(var(--a) * var(--tilt,1))) translate(var(--x),var(--y))}
+.pile i:nth-child(1){--a:-15deg; --x:-4px; --y:6px}
+.pile i:nth-child(2){--a:6deg; --x:6px; --y:2px}
+.pile i:nth-child(3){--a:-12deg; --x:3px; --y:-5px}
+.pile i:nth-child(4){--a:3deg; --x:-5px; --y:4px}
+.pile i:nth-child(5){--a:-10deg; --x:5px; --y:5px}
+.pile i:nth-child(6){--a:-2deg; --x:-3px; --y:-3px}
+.pile i:nth-child(7){--a:-6deg; --x:2px; --y:3px}
+.pile{position:absolute; inset:0; filter:drop-shadow(0 14px 18px rgba(20,30,40,.16))}
+.card{position:absolute; left:0; top:0; width:100%; height:100%; background:var(--card-a); border:1px solid var(--edge);
+  padding:1.5em 1.8em 1.3em; font-size:clamp(16px,1.4vw,27px); line-height:1.5; opacity:0; pointer-events:none; z-index:1; min-height:7em;
+  transform:rotate(calc(var(--r,-6deg) * var(--tilt,1))); box-shadow:0 2px 6px rgba(20,30,40,.14)}
+.card.shade{background:var(--card-b)}
+.card.long{font-size:clamp(14.5px,1.25vw,24px); line-height:1.45}
+.card.top{opacity:1; pointer-events:auto; z-index:3}
+.card.arrive{animation:arrive .42s ease-out}
+.card.leave{opacity:1; z-index:4; animation:leave .42s ease-in forwards}
+.card.leave-back{opacity:1; z-index:4; animation:leaveBack .42s ease-in forwards}
+@keyframes arrive{from{transform:rotate(calc(var(--r) * var(--tilt,1) + 5deg)) scale(.96)} to{transform:rotate(calc(var(--r) * var(--tilt,1))) scale(1)}}
+@keyframes leave{to{transform:translate(58%,-10%) rotate(16deg); opacity:0}}
+@keyframes leaveBack{to{transform:translate(-58%,-10%) rotate(-18deg); opacity:0}}
+.card .count{float:right; margin:-6px -8px 6px 14px; font-size:.8em; font-weight:600; color:var(--soft-ink); background:#fff; border:1px solid var(--edge); border-radius:20px; padding:2px 12px}
+.card ul{margin-bottom:6px}
+.card-pic{float:right; width:clamp(90px,22%,220px); margin:0 0 10px 16px}
+.card-pic svg{width:100%; height:auto}
+.controls{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin-top:60px}
+.controls button{font:inherit; font-size:clamp(17px,1.2vw,24px); font-weight:600; cursor:pointer; padding:10px 20px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:48px}
+.controls button.next{background:var(--action); color:#fff}
+.controls button:hover{filter:brightness(.94)}
+.controls .where{min-width:7em; text-align:center; font-weight:700; font-size:clamp(18px,1.25vw,25px)}
+.hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:10px 0 0}
+
+/* full screen */
+.big{position:fixed; inset:0; z-index:50; background:#05090c; color:#fff; display:none}
+.big.open{display:flex; flex-direction:column}
+.big .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; font-weight:700}
+.big .body{flex:1; overflow:auto; padding:8px clamp(20px,7vw,90px) 24px; font-size:clamp(20px,2.9vw,34px); line-height:1.45}
+.big .body h3{font-size:1.1em; margin-bottom:.5em}
+.big .body .count{display:none}
+.big .body .card-pic{width:22%}
+.big .body .say{color:#fff; border-color:#fff; background:transparent}
+.big .foot{display:flex; gap:12px; justify-content:center; padding:12px 18px 20px}
+.big button{font:inherit; font-size:18px; font-weight:600; cursor:pointer; min-height:48px; padding:10px 22px; border-radius:6px; border:2px solid #fff; background:transparent; color:#fff}
+.big button.next{background:#fff; color:#05090c}
+
+/* activities */
+.activity{margin:22px 0 28px; padding:16px 20px 14px; border:2px solid #cfe3e6; border-radius:10px; background:#f4fafb}
+.act-head{display:flex; gap:10px; align-items:center; margin-bottom:6px}
+.act-badge{background:var(--action); color:#fff; font-size:.7em; font-weight:700; padding:2px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:.04em}
+.act-instr{color:var(--soft-ink); font-size:.9em}
+.act-foot{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px}
+.act-foot button{font:inherit; font-size:.9em; font-weight:600; cursor:pointer; padding:8px 18px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:44px}
+.act-foot .act-check{background:var(--action); color:#fff}
+.act-result{font-weight:700}
+.act-result.good{color:var(--ok)} .act-result.bad{color:var(--bad)}
+.chip{display:inline-flex; align-items:center; font-size:.9em; padding:8px 14px; margin:5px; border-radius:8px; border:2px solid #9fc5cb; background:#fff; cursor:pointer; user-select:none; min-height:44px; line-height:1.3}
+.chip.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.chip.right{border-color:var(--ok); background:#ecfdf5}
+.chip.wrong{border-color:var(--bad); background:#fef2f2}
+.chip.placed{cursor:default}
+.bank{min-height:52px; padding:6px; border:2px dashed #9fc5cb; border-radius:8px; margin-bottom:12px; background:#fff}
+.targets{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(16em,1fr))}
+.target{border:2px solid #9fc5cb; border-radius:8px; background:#fff; padding:8px 10px; min-height:70px}
+.target .t-label{font-weight:700; margin-bottom:4px}
+.target .t-drop{min-height:44px; border:2px dashed #e0ecee; border-radius:6px; padding:2px}
+.target.over .t-drop{border-color:var(--action); background:#eef7f8}
+.order{list-style:none; padding:0; margin:0; counter-reset:o}
+.order li{display:flex; gap:10px; align-items:center; background:#fff; border:2px solid #9fc5cb; border-radius:8px; padding:8px 10px; margin:6px 0; cursor:grab}
+.order li .o-n{min-width:2em; height:2em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; font-size:.85em}
+.order li .o-t{flex:1}
+.order li .o-btn{display:flex; gap:4px}
+.order li .o-btn button{font:inherit; min-width:40px; min-height:40px; border-radius:6px; border:1px solid #9fc5cb; background:#fff; cursor:pointer}
+.order li.right{border-color:var(--ok); background:#ecfdf5} .order li.wrong{border-color:var(--bad); background:#fef2f2}
+.order li.dragging{opacity:.5}
+.quiz-q{margin:10px 0 16px}
+.quiz-q .opt{display:block; width:100%; text-align:left; font:inherit; font-size:.95em; padding:10px 14px; margin:6px 0; border-radius:8px; border:2px solid #9fc5cb; background:#fff; cursor:pointer; min-height:44px}
+.quiz-q .opt.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.quiz-q .opt.right{border-color:var(--ok); background:#ecfdf5} .quiz-q .opt.wrong{border-color:var(--bad); background:#fef2f2}
+.quiz-q .why{font-size:.85em; color:var(--soft-ink); margin:4px 0 0 6px; display:none}
+.quiz-q.done .why{display:block}
+.fill-table{width:100%; border-collapse:collapse; font-size:.9em; background:#fff}
+.fill-table th,.fill-table td{border:1px solid #cfe3e6; padding:8px 10px; text-align:left; vertical-align:top}
+.fill-table th{background:#e6f1f3}
+.fill-table select{font:inherit; font-size:.95em; min-height:40px; max-width:100%}
+.fill-table td.right{background:#ecfdf5} .fill-table td.wrong{background:#fef2f2}
+
+/* teacher view */
+.tnotes{display:none; margin:18px 0 6px; padding:12px 16px; background:var(--teach-bg); border:2px dashed #c4b5fd; border-radius:8px; font-size:.82em; color:#2e1065}
+body.teacher .tnotes{display:block}
+.tnotes .t-head{font-weight:800; color:var(--teach); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; font-size:.85em}
+.tnotes ul{margin:4px 0 8px}
+.tnotes .t-trap{background:#fff7ed; border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0}
+.tlink{font:inherit; font-size:1em; color:var(--soft-ink); background:none; border:0; text-decoration:underline; cursor:pointer; padding:0}
+.tpill[hidden]{display:none}
+.tpill{position:fixed; top:10px; right:10px; z-index:45; background:var(--teach); color:#fff; border-radius:30px; padding:6px 8px 6px 16px; display:flex; gap:8px; align-items:center; font-size:15px; font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.tpill button{font:inherit; font-size:14px; font-weight:700; border:0; border-radius:20px; padding:6px 12px; background:#fff; color:var(--teach); cursor:pointer; min-height:34px}
+.tpill button.tp-out{background:transparent; color:#fff; border:1px solid #fff}
+.card-pic.photo img{width:100%; height:auto; border-radius:8px; display:block}
+.grid4{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(11em,1fr)); margin:16px 0 22px}
+.grid4 figure{margin:0; background:#eef3f4; border-radius:12px; overflow:hidden}
+.grid4 img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+.grid4 figcaption{padding:10px 14px 12px; font-size:.9em}
+.grid4 figcaption b{display:block; color:var(--deep); font-size:1.05em}
+.side{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; margin:10px 0 18px}
+.side > div{flex:2 1 420px}
+.side figure{flex:0 1 380px; max-width:440px; margin:0}
+.side figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* Gerry */
+.mascot{position:fixed; left:clamp(6px,1.2vw,24px); top:120px; width:clamp(54px,6vw,110px); z-index:35; cursor:pointer; transition:top .6s cubic-bezier(.3,.9,.4,1.1); filter:drop-shadow(0 6px 10px rgba(0,0,0,.25)); user-select:none}
+.mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.mascot.hop svg{animation:hop .7s ease-out 1, bob 2.6s ease-in-out .7s infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes hop{0%{transform:translateY(0) scale(1,1)} 30%{transform:translateY(-40px) scale(.95,1.08) rotate(14deg)} 60%{transform:translateY(0) scale(1.08,.92)} 100%{transform:translateY(0) scale(1,1)}}
+.gerry-bubble{position:absolute; left:100%; top:0; margin-left:10px; width:max-content; max-width:16em; background:#fff; color:var(--ink); border:2px solid var(--deep); border-radius:14px; padding:8px 12px; font-size:clamp(14px,1vw,18px); line-height:1.35; box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.gerry-bubble::before{content:""; position:absolute; left:-12px; top:16px; border:6px solid transparent; border-right-color:var(--deep)}
+@media (max-width:900px){.mascot{display:none}}
+.mascot.drop{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.drop .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.drop .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+@media (prefers-reduced-motion:reduce){.mascot svg{animation:none}}
+
+.home{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(14px,2vw,32px); z-index:40; background:var(--action); color:#fff; font-weight:700; font-size:clamp(17px,1.2vw,24px); text-decoration:none; padding:12px 22px; border-radius:30px; box-shadow:0 4px 14px rgba(0,0,0,.25); min-height:48px; display:flex; align-items:center; gap:8px}
+.foot{margin:50px 0 90px; padding-top:16px; border-top:1px solid var(--edge); font-size:.75em; color:var(--soft-ink)}
+
+@media (max-width:560px){
+  body{font-size:17px}
+  .card{padding:20px 20px 18px; font-size:16px}
+  .card.long{font-size:14.5px}
+  .stack{width:auto; margin-left:14px; margin-right:14px; --tilt:.3}
+  .card-pic{width:30%}
+  h2.topic{font-size:1.25em}
+}
+@media (prefers-reduced-motion:reduce){
+  .card.arrive,.card.leave,.card.leave-back{animation-duration:.01s}
+  html{scroll-behavior:auto}
+}
+
+/* ordered strips (PPE on / off) */
+.strips{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr)); margin:16px 0 20px}
+.strip{background:#f7f9fa; border-radius:12px; padding:14px 16px}
+.strip-title{font-weight:800; color:var(--deep); margin-bottom:8px}
+.strip-steps{list-style:none; margin:0; padding:0; counter-reset:st}
+.strip-steps li{counter-increment:st; display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px solid #e2e8f0}
+.strip-steps li:last-child{border-bottom:0}
+.strip-steps li::before{content:counter(st); display:inline-flex; align-items:center; justify-content:center; width:1.9em; height:1.9em; border-radius:50%; background:var(--c,#0b6f7c); color:#fff; font-weight:800; font-size:.85em; flex:none}
+table.plain{width:100%; border-collapse:collapse; font-size:.92em; margin:10px 0 18px; background:#fff}
+table.plain th,table.plain td{border:1px solid #cfe3e6; padding:8px 10px; text-align:left; vertical-align:top}
+table.plain th{background:#e6f1f3}
+.tl-high{background:#fee2e2} .tl-med{background:#fef3c7} .tl-low{background:#dcfce7}
+
+/* activity start and blur */
+.act-start[hidden]{display:none}
+.act-start{display:flex; gap:14px; align-items:center; flex-wrap:wrap; padding:6px 0 2px; color:var(--soft-ink); font-size:.9em}
+.act-go{font:inherit; font-size:1em; font-weight:700; cursor:pointer; padding:10px 26px; border-radius:8px; border:0; background:var(--action); color:#fff; min-height:48px}
+.act-tools{margin:0 0 10px}
+.act-peek{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid #9fc5cb; background:#fff; color:var(--action); min-height:40px}
+section.slide.hide-notes > :is(ol.points, .stack, figure.visual, .after, .intro, .watch-out, .vid, .audio-line, .side-points, p){filter:blur(7px); pointer-events:none; user-select:none; transition:filter .3s}
+section.slide.hide-notes .activity{filter:none}
+.vid{margin:20px 0 10px}
+.vid-title{margin:0 0 8px}
+.vid-by{color:var(--soft-ink); font-size:.85em}
+.video{margin:0 auto 6px; max-width:calc((100vh - 90px) * 16 / 9); aspect-ratio:16/9; background:#0e1a22; border-radius:6px; overflow:hidden; position:relative}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.watch{margin:0 0 20px; font-size:.8em; text-align:center}
+
+/* activity locked while the notes are showing */
+.activity.peeking .act-body, .activity.peeking .act-foot{pointer-events:none; opacity:.35; filter:grayscale(1)}
+.activity.peeking .act-tools::after{content:"Read the notes, then press the button to carry on."; margin-left:12px; color:var(--warn); font-weight:700; font-size:.9em}
+/* click to spotlight a part of a diagram */
+.spot [data-spot]{transition:opacity .3s, transform .3s; transform-box:fill-box; transform-origin:center}
+.spot.spotting [data-spot]:not(.lit){opacity:.28}
+.spot [data-spot].lit{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.14)}}
+.spot-hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:-8px 0 14px}
+/* points beside a picture */
+.side-points{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start}
+.side-points > ol.points{flex:2 1 420px; margin-top:0}
+.side-points > figure{flex:0 1 320px; max-width:360px; margin:0}
+.side-points > figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* student-visible Connect source line */
+.source{margin:16px 0 6px; padding:10px 14px 10px 44px; background:#f1f6f8; border-left:4px solid var(--action); border-radius:8px; font-size:.92em; color:var(--soft-ink); position:relative; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center}
+.source::before{content:"\1F4D6"; position:absolute; left:12px; top:8px; font-size:1.2em}
+.source-label{font-weight:700; color:var(--ink)}
+.source a{text-decoration:none; font-weight:600; border:1px solid #cfe3e6; background:#fff; border-radius:999px; padding:2px 10px}
+.source a:hover{background:#e3eef1}
+
+/* Lesson 3: safety signs, RACE, two-up figures */
+.signs{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:12px 0 20px; align-items:start}
+.sign{background:#fff; border:2px solid var(--edge); border-radius:12px; padding:12px 10px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px}
+.sign svg{width:84px; height:84px}
+.sign span{font-weight:700; font-size:.9em; line-height:1.25}
+.signkey{display:flex; flex-wrap:wrap; gap:8px 20px; margin:6px 0 14px; font-size:.92em}
+.signkey i{display:inline-block; width:16px; height:16px; border-radius:50%; vertical-align:-3px; margin-right:6px}
+.race{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:14px 0 20px}
+.race div{border-left:8px solid var(--c); background:#fff; border-radius:10px; padding:12px 14px; box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.race b{display:block; font-size:2.2em; line-height:1; color:var(--c)}
+.race span{display:block; font-weight:700; font-size:1.1em; margin-top:4px}
+.race small{color:var(--soft-ink)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:14px 0}
+.grid2 figure{margin:0}
+.grid2 figcaption{font-size:.85em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > :is(.signs, .signkey, .race, .grid2){filter:blur(7px); pointer-events:none; user-select:none}
+
+/* side-by-side videos */
+.vid-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:16px 0 6px}
+.vid-row .vid{margin:0}
+.vid-row .video{max-width:none}
+section.slide.hide-notes > .vid-row{filter:blur(7px); pointer-events:none}
+
+/* finale: the grand exit */
+.finale{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; margin:24px 0 10px; padding:24px 10px 0; min-height:340px; overflow:hidden}
+.fin-side{display:flex; flex-direction:column; align-items:center; gap:10px; opacity:0; transition:transform .9s cubic-bezier(.2,.8,.3,1.1), opacity .6s}
+.fin-side.left{transform:translateX(-60vw)}
+.fin-side.right{transform:translateX(60vw)}
+.finale.in .fin-side{transform:none; opacity:1}
+.finale.in .fin-side.right{transition-delay:.25s}
+.fin-mascot{width:min(260px,38vw)}
+.fin-mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.fin-bubble{background:#fff; border:3px solid var(--deep); border-radius:18px; padding:14px 18px; font-size:1.08em; line-height:1.4; position:relative; max-width:34em; opacity:0; transform:scale(.7); transition:transform .5s cubic-bezier(.2,.8,.3,1.3), opacity .4s}
+.fin-bubble p{margin:0 0 8px}
+.fin-bubble::after{content:""; position:absolute; bottom:-14px; left:50%; margin-left:-8px; border:8px solid transparent; border-top-color:var(--deep)}
+.finale.in .fin-bubble{opacity:1; transform:none; transition-delay:1s}
+.finale.in .right .fin-bubble{transition-delay:1.5s}
+.fin-side .fin-bubble{order:-1}
+.fin-who{font-weight:800; color:var(--deep); margin:0}
+.fin-after{text-align:center; font-size:1.1em; color:var(--soft-ink); margin:10px 0 20px}
+@media (max-width:700px){.finale{grid-template-columns:1fr; min-height:0} .fin-side.left,.fin-side.right{transform:translateY(40px)} .finale.in .fin-side{transform:none}}
+@media (prefers-reduced-motion:reduce){.fin-side,.fin-bubble{transition:none; transform:none; opacity:1} .fin-mascot svg{animation:none}}
+.sign-pics{display:flex; gap:6px; align-items:center; justify-content:center; height:96px}
+.sign-pics img{max-height:96px; max-width:100%; object-fit:contain}
+.sign-pics img + img{max-height:60px}
+
+/* Lesson 4: risk matrix */
+table.matrix{border-collapse:collapse; margin:0 auto; font-size:.95em}
+table.matrix th, table.matrix td{border:2px solid #fff; padding:10px 12px; text-align:center}
+table.matrix thead th{background:#12384a; color:#fff; font-weight:700}
+table.matrix tbody th{background:#0b6f7c; color:#fff; text-align:left; font-weight:700}
+table.matrix .corner{background:#1b2530; font-size:.8em}
+table.matrix td.m-L{background:#bbf7d0; color:#14532d; font-weight:700}
+table.matrix td.m-M{background:#fde68a; color:#78350f; font-weight:700}
+table.matrix td.m-H{background:#fca5a5; color:#7f1d1d; font-weight:700}
+@media (max-width:700px){table.matrix{font-size:.75em} table.matrix th, table.matrix td{padding:6px 4px}}
+</style>
+</head>
+<body data-np="0">
+<main>
+<header class="banner first" id="top">
+  <div class="banner-inner">
+    <p class="kicker">HLTINF006 / HLTWHS002 · Lesson 4</p>
+    <h1>Practical skills day</h1>
+    <p class="sub">What happens on the day, what you must show, and how to fill in every form.</p>
+  </div>
+  <svg class="hero" viewBox="0 0 420 300" aria-hidden="true"><g transform="translate(60,20)">
+<ellipse cx="150" cy="230" rx="150" ry="40" fill="#5ec9cf" opacity=".25"/>
+<rect x="60" y="30" width="180" height="230" rx="16" fill="#e0f2fe" stroke="#8fe3e8" stroke-width="6"/>
+<rect x="110" y="14" width="80" height="34" rx="10" fill="#8fe3e8"/>
+<path d="M95 110 l25 25 l60 -60" stroke="#0b6f7c" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90 170 h120 M90 200 h120 M90 230 h80" stroke="#8fe3e8" stroke-width="8" stroke-linecap="round"/>
+</g></svg>
+</header>
+<div class="wrap">
+  <nav id="index" aria-label="Index"><h2>In this lesson</h2><ul><li><a href="#s1"><span class="num">1</span> How the day runs</a></li><li><a href="#s2"><span class="num">2</span> Before the demonstration: hands</a></li><li><a href="#s3"><span class="num">3</span> The demonstration: PPE and the spill kit</a></li><li><a href="#s4"><span class="num">4</span> Part 1: the hazard hunt and the inspection checklist</a></li><li><a href="#s5"><span class="num">5</span> The hazard form and the risk matrix</a></li><li><a href="#s6"><span class="num">6</span> The risk assessment form: three ways to lower the risk</a></li><li><a href="#s7"><span class="num">7</span> The safety meeting: report, record, upload</a></li><li><a href="#s8"><span class="num">8</span> Part 2: Davis Butler has fallen</a></li><li><a href="#s9"><span class="num">9</span> Cleaning up after gastro: zones, spill, bowl, surfaces</a></li><li><a href="#s10"><span class="num">10</span> The paperwork: incident form and progress note</a></li><li><a href="#s11"><span class="num">11</span> The debrief: report the WHS issues, and say how you are</a></li><li><a href="#s12"><span class="num">12</span> Before you leave</a></li></ul></nav>
+  <p class="opening">Three lessons of theory become one day of doing. On the practical day you walk through a home looking for hazards, write them up, present one to a WHS meeting, and then handle an emergency with Davis Butler, who has gastro and has just fallen. This page tells you what to expect and what the assessor is watching for. Read it before the day, and keep it open on the day.</p>
+  
+<section class="slide" id="s1" data-ref="L4 S1">
+  <h2 class="topic"><span class="num">1</span> How the day runs</h2>
+  <p class="intro">The practical assessment (AT2) has two parts. Part 1 is a workplace inspection, done in groups. Part 2 is a workplace emergency. The day starts with a demonstration so you see the skills before you use them.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/l4-s1.mp3" aria-label="Listen: How the day runs"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 1140 190" role="img" aria-label="The practical day in six blocks: demonstration, practical room with Davis and the hazard hunt, kitchen and toilets, group paperwork, safety meeting, debrief"><line x1="40" y1="60" x2="1100" y2="60" stroke="#cbd5e1" stroke-width="6"/><circle cx="95" cy="60" r="28" fill="#0b6f7c"/><text x="95" y="68" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#fff">1</text><text x="95" y="118" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="700" fill="#1b2530">Demo</text><text x="95" y="140" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#44505c">PPE on and off, spill kit</text><circle cx="285" cy="60" r="28" fill="#dc2626"/><text x="285" y="68" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#fff">2</text><text x="285" y="118" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="700" fill="#1b2530">Prac room</text><text x="285" y="140" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#44505c">Davis on the floor, hazard hunt</text><circle cx="475" cy="60" r="28" fill="#2563eb"/><text x="475" y="68" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#fff">3</text><text x="475" y="118" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="700" fill="#1b2530">Kitchen, toilets</text><text x="475" y="140" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#44505c">real hazards on campus</text><circle cx="665" cy="60" r="28" fill="#7c3aed"/><text x="665" y="68" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#fff">4</text><text x="665" y="118" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="700" fill="#1b2530">Group paperwork</text><text x="665" y="140" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#44505c">all the forms, together</text><circle cx="855" cy="60" r="28" fill="#b45309"/><text x="855" y="68" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#fff">5</text><text x="855" y="118" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="700" fill="#1b2530">Safety meeting</text><text x="855" y="140" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#44505c">whole class, one note taker</text><circle cx="1045" cy="60" r="28" fill="#15803d"/><text x="1045" y="68" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#fff">6</text><text x="1045" y="118" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="700" fill="#1b2530">Debrief</text><text x="1045" y="140" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#44505c">with your supervisor</text></svg></figure>
+  <ol class="points"><li id="s1p1"><span class="ref" title="Reference">L4 S1 P1</span><b>1. Demonstration.</b> Your teacher shows PPE going on and coming off, opens the spill kit, and walks through the steps for cleaning up a spill such as vomit. Watch closely: you do all of this yourself later in the day.</li><li id="s1p2"><span class="ref" title="Reference">L4 S1 P2</span><b>2. The practical room.</b> When your group walks in, <b>Davis Butler</b> (played by a classmate) is on the floor. He has gastro and has fallen. Look after him first: check him, keep him safe, then talk him up from the floor onto a chair, step by step, as you would with a person who has a little dementia. Then inspect the room with the printed <b>Environmental Assessment</b> checklist from your assessment. Hazards have been set up in the room. Find them all, and note any real hazards you see as well.</li><li id="s1p3"><span class="ref" title="Reference">L4 S1 P3</span><b>3. Kitchen and toilets.</b> Your group then inspects the kitchen in the other block and the campus toilets, looking for <b>real</b> hazards, and adds them to the checklist.</li><li id="s1p4"><span class="ref" title="Reference">L4 S1 P4</span><b>4. Group paperwork.</b> Back in the classroom, the group works together on the forms: the inspection checklist, <b>Section 1 of the Hazard Form</b> for the one hazard that cannot be eliminated, the <b>Risk Assessment Form</b> with three strategies, and for Davis an <b>incident form</b> and a <b>progress note</b>. While you write, the next group is in the practical room.</li><li id="s1p5"><span class="ref" title="Reference">L4 S1 P5</span><b>The group rule</b>: the group passes together. If one person's paperwork is not complete, the group is not finished. Help each other. That is the collaboration part of the assessment.</li><li id="s1p6"><span class="ref" title="Reference">L4 S1 P6</span><b>5. Safety meeting.</b> The whole class meets. One person takes the notes on the meeting template. Each group reports the hazards it found and the controls that were put in place. The notes go into OneNote, and everyone uploads a copy with the assessment in Connect.</li><li id="s1p7"><span class="ref" title="Reference">L4 S1 P7</span><b>6. Debrief.</b> A conversation with your supervisor (a classmate) about the WHS issues you saw and how you felt looking after Davis.</li><li id="s1p8"><span class="ref" title="Reference">L4 S1 P8</span><b>What to wear and bring</b>: respectful clothing, <b>closed shoes</b>, <b>no jewellery</b>, <b>no long or artificial nails</b>, <b>long hair tied back</b>, and a <b>pen</b>.</li><li id="s1p9"><span class="ref" title="Reference">L4 S1 P9</span><b>Safety rules on the day</b>: follow the teacher's directions, respect privacy and other students' turns, control hazards as you go, leave the area tidy, report any damage, and <b>no photos or videos</b>. You get <b>two attempts</b>.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305318/View" target="_blank" rel="noopener">Safety induction training</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305320/View" target="_blank" rel="noopener">Procedures for commencing tasks</a></div>
+  <aside class="tnotes" data-slide="s1" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s2" data-ref="L4 S2">
+  <h2 class="topic"><span class="num">2</span> Before the demonstration: hands</h2>
+  <p class="intro">Every other skill on the day starts and ends with your hands. Check your hands before the demonstration starts, and use the sink whenever you need it.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/l4-s2.mp3" aria-label="Listen: Before the demonstration: hands"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s2p1"><span class="ref" title="Reference">L4 S2 P1</span>Routine hand wash, steps <b>0 to 11</b>, 20 to 30 seconds. Step 0 is <b>wet your hands first</b>. Go back to [Lesson 2, slide 6](2-standard-precautions.html#s6) if you need the steps.</li><li id="s2p2"><span class="ref" title="Reference">L4 S2 P2</span>Alcohol-based hand rub: <b>cover every surface</b> and rub <b>until dry</b>, about 20 seconds. [Lesson 2, slide 7](2-standard-precautions.html#s7).</li><li id="s2p3"><span class="ref" title="Reference">L4 S2 P3</span><b>Gastro changes the rule.</b> The viruses that cause gastroenteritis are <b>not reliably killed by hand rub</b>. In the Davis scenario, use <b>soap and water</b> after any contact with Davis, the bowl, the linen or the surfaces.</li><li id="s2p4"><span class="ref" title="Reference">L4 S2 P4</span><b>Glow gel check</b>: rub the gel in, wash as normal, then hold your hands under the UV lamp. The glowing patches are the spots you missed. Thumbs, fingertips and the backs of the hands are the usual ones.</li><li id="s2p5"><span class="ref" title="Reference">L4 S2 P5</span>Before you start, check yourself: <b>bare below the elbows</b>, no rings, no watch, nails short, no polish, cuts covered with a <b>waterproof dressing</b>.</li></ol>
+  
+  <div class="after"><figure class="visual"><img src="pics/wahinghands.jpg" alt="Hands being washed under running water" style="max-width:560px; width:100%; border-radius:12px"></figure></div>
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305231/View" target="_blank" rel="noopener">Hand washing techniques 1</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305232/View" target="_blank" rel="noopener">Hand washing techniques 2</a></div>
+  <aside class="tnotes" data-slide="s2" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s3" data-ref="L4 S3">
+  <h2 class="topic"><span class="num">3</span> The demonstration: PPE and the spill kit</h2>
+  <p class="intro">Your teacher demonstrates first. Watch the PPE go on and off, then the spill kit. Davis has a diagnosed infection, so standard precautions are not enough: for gastro you add contact precautions, and droplet precautions while he is vomiting.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/l4-s3.mp3" aria-label="Listen: The demonstration: PPE and the spill kit"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s3p1"><span class="ref" title="Reference">L4 S3 P1</span><b>What to wear for Davis</b>: <b>gloves</b>, a <b>gown or waterproof apron</b>, a <b>surgical mask</b>, and <b>eye protection</b> (vomit splashes). Put it on <b>before</b> you go into the room, and take it off <b>before</b> you leave.</li><li id="s3p2"><span class="ref" title="Reference">L4 S3 P2</span><b>On, 1 to 5</b>: hand hygiene, gown, mask, eye protection, gloves. [Lesson 2, slide 14](2-standard-precautions.html#s14).</li><li id="s3p3"><span class="ref" title="Reference">L4 S3 P3</span><b>Off, 1 to 8</b>: gloves, hand hygiene, gown, hand hygiene, eye protection, hand hygiene, mask, hand hygiene. The dirtiest item comes off first, and hands are cleaned between every item.</li><li id="s3p4"><span class="ref" title="Reference">L4 S3 P4</span><b>Say it as you do it.</b> The assessor must see each step. &quot;Gloves off, hand hygiene, gown off, hand hygiene...&quot; out loud is not strange, it is professional.</li><li id="s3p5"><span class="ref" title="Reference">L4 S3 P5</span>Used PPE goes in the <b>waste bag in the dirty zone</b>, not on the bed, not on the trolley.</li><li id="s3p6"><span class="ref" title="Reference">L4 S3 P6</span><b>The spill kit</b>: gloves, apron, mask and eye protection; <b>absorbent granules</b> (clumping agent); a <b>disposable scraper and pan</b>; <b>waste bags</b> or a sealed container; <b>detergent</b> and <b>sodium hypochlorite</b> (bleach) solution or wipes; paper towel; a sign or barrier. Check it is complete before you need it.</li><li id="s3p7"><span class="ref" title="Reference">L4 S3 P7</span><b>Spill clean-up, steps 1 to 8</b> ([Lesson 2, slide 16](2-standard-precautions.html#s16)): PPE on; cover the spill with absorbent granules and wait; scrape and scoop into the pan; everything into a sealed bag; discard as clinical waste; mop with detergent; wipe with bleach solution and let it dry; hand hygiene. You will use these steps on the vomit you find in the room.</li></ol>
+  
+  <div class="after"><div class="grid2"><figure><img src="pics/info-donning.jpg" alt="Infographic: putting on PPE in order" style="width:100%; border-radius:12px"></figure><figure><img src="pics/canva-doffing.jpg" alt="Infographic: taking off PPE in order with hand hygiene between each item" style="width:100%; border-radius:12px"></figure></div></div>
+  
+  
+  
+  
+  <div class="activity" id="act-s3-1" data-activity='{"type":"order","title":"PPE off, in order","instructions":"Put the eight steps in order.","items":["Gloves off","Hand hygiene","Gown off","Hand hygiene","Eye protection off","Hand hygiene","Mask off","Hand hygiene"]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>PPE off, in order</b></div>
+    <p class="act-instr">Put the eight steps in order.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305239/View" target="_blank" rel="noopener">PPE types, use and maintenance</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305240/View" target="_blank" rel="noopener">Guidelines for the use of gloves</a></div>
+  <aside class="tnotes" data-slide="s3" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s4" data-ref="L4 S4">
+  <h2 class="topic"><span class="num">4</span> Part 1: the hazard hunt and the inspection checklist</h2>
+  <p class="intro">Your group walks the practical room, then the kitchen and the toilets, with the printed Environmental Assessment checklist. Tick Yes or No for every item. The comment column is where the marks are.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/l4-s4.mp3" aria-label="Listen: Part 1: the hazard hunt and the inspection checklist"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s4p1"><span class="ref" title="Reference">L4 S4 P1</span>The form is grouped by area: <b>outside</b> (parking, gates, paths, steps, pets, lighting), <b>electrical and gas</b>, <b>equipment</b> (vacuum, mop, iron, washing machine, hot water), <b>bathroom</b>, <b>kitchen</b>, <b>laundry</b>, <b>bedrooms</b>, <b>lounge</b>, <b>hazardous substances</b>, and <b>other issues</b> (aggression, infection risk, manual handling).</li><li id="s4p2"><span class="ref" title="Reference">L4 S4 P2</span><b>Yes</b> means the item is <b>safe or in order</b>. <b>No</b> means there is a <b>hazard or something missing</b>. Read each line carefully: &quot;Pets present, restrained&quot; with a dog running loose is a <b>No</b>.</li><li id="s4p3"><span class="ref" title="Reference">L4 S4 P3</span><b>Every No needs a comment</b>: what you saw, and the <b>action to manage</b> it. &quot;Cracked path from tree roots, uneven, trip hazard. Rope off, get landscaper quotes.&quot;</li><li id="s4p4"><span class="ref" title="Reference">L4 S4 P4</span>Write a comment for a <b>Yes</b> too when it adds something useful: &quot;Vacuum supplied by staff&quot;, &quot;No gas on the premises&quot;.</li><li id="s4p5"><span class="ref" title="Reference">L4 S4 P5</span>Look for the hazards that are <b>easy to miss</b>: lighting on the path at night, a light switch that has to be jiggled, a heater near bedding, cleaning products not in their original bottle, the hot water temperature.</li><li id="s4p6"><span class="ref" title="Reference">L4 S4 P6</span>Fill in the top of the form: <b>address, phone, your name, date, which door you enter by</b>.</li><li id="s4p7"><span class="ref" title="Reference">L4 S4 P7</span><b>In the practical room</b>: hazards have been set up for you. Look high and low, on surfaces, on the walls, in the bathroom. Deal with each one the safe way as you find it: a spill is cleaned with the spill kit in PPE; a sharp goes into the sharps container with tongs or a scoop, never fingers; anything you cannot fix is <b>reported</b>, not ignored. Say what you found and what you did, so your group can write it down.</li><li id="s4p8"><span class="ref" title="Reference">L4 S4 P8</span><b>In the kitchen and toilets</b>: these are real workplaces. Look for the everyday hazards: wet floors, cords, cluttered walkways, chemicals, hot water, broken fittings, missing signs, bins, hand washing facilities. Do not touch other people's food or belongings.</li></ol>
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s4-1" data-activity='{"type":"quiz","title":"Yes or No?","instructions":"How would you tick these lines?","questions":[{"q":"\"Pets: present, restrained, separated from worker.\" The dog is loose in the hallway.","options":["Yes","No, and write a comment"],"answer":1,"why":"The dog is not restrained, so the line is a No. Comment: ask the person to put the dog outside during visits."},{"q":"\"Substances in original container.\" The bleach is in an old soft drink bottle.","options":["Yes","No, and write a comment"],"answer":1,"why":"Not in its original container: poisoning risk. Comment: replace with a labelled bottle, store up high."},{"q":"\"Steps/stairs: level, non-slip, uncluttered.\" The house has no steps.","options":["Tick Yes and comment \"no stairs\"","Leave it blank"],"answer":0,"why":"Never leave a line blank. Tick Yes (no hazard) and write \"no stairs into house\"."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Yes or No?</b></div>
+    <p class="act-instr">How would you tick these lines?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305326/View" target="_blank" rel="noopener">Identifying workplace hazards (1)</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305327/View" target="_blank" rel="noopener">Identifying workplace hazards (2)</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305334/View" target="_blank" rel="noopener">Workplace hazard identification</a></div>
+  <aside class="tnotes" data-slide="s4" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s5" data-ref="L4 S5">
+  <h2 class="topic"><span class="num">5</span> The hazard form and the risk matrix</h2>
+  <p class="intro">From your inspection, your group chooses one hazard that cannot simply be removed on the spot: something that needs a tradesperson, money or management to fix. A loose rug can be picked up, so it is a poor choice.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/l4-s5.mp3" aria-label="Listen: The hazard form and the risk matrix"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s5p1"><span class="ref" title="Reference">L4 S5 P1</span><b>Section 1 of the Hazard Reporting Form</b> is yours: <b>your name, date and time</b>; a <b>description and location</b> of the hazard (the area, the task, the equipment or people involved); and <b>actions</b> you suggest or have already taken.</li><li id="s5p2"><span class="ref" title="Reference">L4 S5 P2</span>Then score it on the <b>risk matrix</b>. Go <b>down</b> for <b>probability</b> (how likely it is to hurt someone: rare, unlikely, moderate, likely, highly likely) and <b>across</b> for <b>severity</b> (how bad: very small, minor, moderate, major, catastrophic). The cell gives <b>Low, Medium or High</b>.</li><li id="s5p3"><span class="ref" title="Reference">L4 S5 P3</span><b>Medium or High means act now.</b> Write the score in the box.</li><li id="s5p4"><span class="ref" title="Reference">L4 S5 P4</span>The bottom of the form (action taken, score after action, close-out signatures) belongs to the <b>person responsible for fixing it</b>. You only complete Section 1 on the day.</li><li id="s5p5"><span class="ref" title="Reference">L4 S5 P5</span>Example: cracked path used <b>many times a day</b> by an older person at night, with poor lighting. Probability <b>highly likely</b>, severity <b>major</b> (a fall could mean a broken hip). Score: <b>High</b>.</li></ol>
+  
+  <div class="after"><figure class="visual"><table class="matrix" aria-label="Risk matrix: probability down the side, severity across the top"><thead><tr><th class="corner">Probability ↓ Severity →</th><th>Very small</th><th>Minor</th><th>Moderate</th><th>Major</th><th>Catastrophic</th></tr></thead><tbody><tr><th>Rare</th><td class="m-L">Low</td><td class="m-L">Low</td><td class="m-L">Low</td><td class="m-M">Medium</td><td class="m-M">Medium</td></tr><tr><th>Unlikely</th><td class="m-L">Low</td><td class="m-L">Low</td><td class="m-M">Medium</td><td class="m-M">Medium</td><td class="m-M">Medium</td></tr><tr><th>Moderate</th><td class="m-L">Low</td><td class="m-M">Medium</td><td class="m-M">Medium</td><td class="m-M">Medium</td><td class="m-H">High</td></tr><tr><th>Likely</th><td class="m-M">Medium</td><td class="m-M">Medium</td><td class="m-M">Medium</td><td class="m-H">High</td><td class="m-H">High</td></tr><tr><th>Highly likely</th><td class="m-M">Medium</td><td class="m-M">Medium</td><td class="m-H">High</td><td class="m-H">High</td><td class="m-H">High</td></tr></tbody></table><figcaption>The matrix from the hazard form. Find the probability row, then the severity column.</figcaption></figure></div>
+  
+  
+  
+  
+  <div class="activity" id="act-s5-1" data-activity='{"type":"quiz","title":"Score it on the matrix","instructions":"Use the matrix above.","questions":[{"q":"A frayed kettle cord next to the sink. It is used every day. Probability: likely. Severity: major (electric shock).","options":["Medium","High","Low"],"answer":1,"why":"Likely row, Major column: High. Act now."},{"q":"A wobbly garden gnome on the back step that nobody uses. Probability: rare. Severity: minor.","options":["Low","Medium","High"],"answer":0,"why":"Rare row, Minor column: Low."},{"q":"A loose carpet edge in a hallway used a few times a day. Probability: moderate. Severity: moderate (a sprain or bruise).","options":["Low","Medium","High"],"answer":1,"why":"Moderate row, Moderate column: Medium. Still needs action."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Score it on the matrix</b></div>
+    <p class="act-instr">Use the matrix above.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305328/View" target="_blank" rel="noopener">Workplace risk</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305332/View" target="_blank" rel="noopener">Sample hazard form</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305330/View" target="_blank" rel="noopener">What does it mean to assess a risk?</a></div>
+  <aside class="tnotes" data-slide="s5" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s6" data-ref="L4 S6">
+  <h2 class="topic"><span class="num">6</span> The risk assessment form: three ways to lower the risk</h2>
+  <p class="intro">The risk assessment form takes the same hazard and goes deeper. The important box is the last one: three control strategies.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/l4-s6.mp3" aria-label="Listen: The risk assessment form: three ways to lower the risk"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s6p1"><span class="ref" title="Reference">L4 S6 P1</span>Fill in: <b>date</b>, <b>your name</b>, the <b>hazard description</b>, the <b>potential effects</b> (what could happen: trip and fall, electric shock, burn), <b>who is at risk</b> (the person, staff, visitors, family), <b>how often</b> people are exposed, <b>severity</b>, <b>likelihood</b>, and the <b>risk level</b>.</li><li id="s6p2"><span class="ref" title="Reference">L4 S6 P2</span><b>Three control strategies</b>, and make them <b>different levels of the hierarchy of control</b> ([Lesson 3, slide 4](3-work-health-and-safety.html#s4)). For the cracked path: <b>isolate</b> it (rope off, signs, a temporary mowed path), <b>engineer</b> a fix (landscaper removes the root, path re-laid), and <b>engineer</b> the lighting (sensor light) or <b>administer</b> it (daytime visits only until fixed).</li><li id="s6p3"><span class="ref" title="Reference">L4 S6 P3</span>A strategy says <b>who does what, by when</b>: &quot;Three landscaper quotes this week, best quote engaged as soon as possible.&quot;</li><li id="s6p4"><span class="ref" title="Reference">L4 S6 P4</span>Avoid strategies that only say &quot;be careful&quot; or &quot;tell the person&quot;. They are administrative controls at best, and they do not lower the risk much on their own.</li><li id="s6p5"><span class="ref" title="Reference">L4 S6 P5</span>Sign it and set a <b>review date</b>.</li></ol>
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s6-1" data-activity='{"type":"sort","title":"Which level of control?","instructions":"Tap a strategy, then tap its level in the hierarchy.","buckets":["Eliminate","Isolate","Engineering","Administrative","PPE"],"items":[{"text":"Rope off the cracked path and put up a sign","bucket":"Isolate"},{"text":"Landscaper removes the tree root and re-lays the path","bucket":"Engineering"},{"text":"Only visit in daylight until the lighting is fixed","bucket":"Administrative"},{"text":"Throw out the frayed kettle and buy a new one","bucket":"Eliminate"},{"text":"Install a sensor light over the front path","bucket":"Engineering"},{"text":"Wear gloves when handling the cleaning chemicals","bucket":"PPE"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Which level of control?</b></div>
+    <p class="act-instr">Tap a strategy, then tap its level in the hierarchy.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305329/View" target="_blank" rel="noopener">Hierarchy of control</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305330/View" target="_blank" rel="noopener">What does it mean to assess a risk?</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305292/View" target="_blank" rel="noopener">Apply control measures</a></div>
+  <aside class="tnotes" data-slide="s6" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s7" data-ref="L4 S7">
+  <h2 class="topic"><span class="num">7</span> The safety meeting: report, record, upload</h2>
+  <p class="intro">When every group has finished the hunt and the paperwork, the whole class holds a safety meeting. This is what a real Health and Safety Committee does: workers report, the record is kept, actions are assigned.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/l4-s7.mp3" aria-label="Listen: The safety meeting: report, record, upload"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s7p1"><span class="ref" title="Reference">L4 S7 P1</span><b>Roles</b>: your teacher chairs. <b>One student takes the notes</b> on the meeting template. Everyone else reports. Decide the note taker before the meeting starts.</li><li id="s7p2"><span class="ref" title="Reference">L4 S7 P2</span><b>Download the template</b>: [WHS Meeting Notes Template (Word)](WHS_Meeting_Notes_Template.docx). It has the meeting details, attendance by group, a table for every hazard reported, a section for the hazards that could not be eliminated, other matters, an action list and the close.</li><li id="s7p3"><span class="ref" title="Reference">L4 S7 P3</span><b>Each group reports</b>, hazard by hazard: <b>what and where</b>, the <b>risk score</b> from the matrix, the <b>control put in place</b> and its <b>level</b> in the hierarchy, and any <b>further action</b> still needed, with <b>who</b> and <b>by when</b>. The note taker writes one row per hazard.</li><li id="s7p4"><span class="ref" title="Reference">L4 S7 P4</span><b>The hazard that could not be eliminated</b> gets its own row in section 5: the three strategies from your Risk Assessment Form, who is responsible, and the interim control until it is fixed.</li><li id="s7p5"><span class="ref" title="Reference">L4 S7 P5</span><b>Participate.</b> Ask one question or add one control when another group reports. The assessor is listening for your voice.</li><li id="s7p6"><span class="ref" title="Reference">L4 S7 P6</span><b>After the meeting</b>: the note taker saves the file to the <b>class OneNote</b>. <b>Every student uploads a copy</b> of the meeting notes with their AT2 assessment in <b>Connect</b>. No notes uploaded, no evidence that you attended.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305339/View" target="_blank" rel="noopener">Raising WHS issues</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305340/View" target="_blank" rel="noopener">Health and Safety Representatives (HSRs)</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305342/View" target="_blank" rel="noopener">Health and Safety Committees (HSCs)</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305344/View" target="_blank" rel="noopener">Participation</a></div>
+  <aside class="tnotes" data-slide="s7" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s8" data-ref="L4 S8">
+  <h2 class="topic"><span class="num">8</span> Part 2: Davis Butler has fallen</h2>
+  <p class="intro">Davis Butler has had two days of nausea, vomiting and cramps. His GP has diagnosed viral gastroenteritis and staff have been told to use additional precautions. He has been vomiting into a bowl on the edge of his bed. His eyes close, he goes limp, and he slides onto the floor. When your group walks into the practical room, that is where you find him.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/l4-s8.mp3" aria-label="Listen: Part 2: Davis Butler has fallen"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s8p1"><span class="ref" title="Reference">L4 S8 P1</span><b>Two versions, one story</b>: in the <b>aged care</b> version Davis is 83 and lives at home with community support; in the <b>disability</b> version he is 30 and lives in a Supported Independent Living house. Your teacher tells you which one you are doing.</li><li id="s8p2"><span class="ref" title="Reference">L4 S8 P2</span><b>First minutes</b>: check for danger to you (vomit on the floor, the bowl, the bed), check if he responds, put him in the <b>recovery position</b>, <b>call the ambulance (000)</b>, and <b>call your coordinator or supervisor</b>. Stay with him and keep talking to him.</li><li id="s8p3"><span class="ref" title="Reference">L4 S8 P3</span>When he comes round he is confused and wants to get up. Do not pull him up. <b>Check him first</b>: any pain, anywhere he cannot move, any bleeding, hit his head? If he is hurt, he <b>stays on the floor</b>, warm and comfortable, until the paramedics check him.</li><li id="s8p4"><span class="ref" title="Reference">L4 S8 P4</span><b>If he is not hurt and the coordinator agrees, help him up without lifting him.</b> Davis does the work, you guide and steady. <b>Talk him up, one step at a time</b>, as you would with a person who has a little dementia: his name first, short simple words, one instruction, wait, repeat if needed, praise each step.</li><li id="s8p5"><span class="ref" title="Reference">L4 S8 P5</span><b>The floor-to-chair steps</b>: 1 bring a <b>sturdy chair</b> close; 2 &quot;Davis, roll onto your side towards me&quot;; 3 &quot;Push up onto your hands and knees&quot;; 4 &quot;Crawl to the chair and put your hands on the seat&quot;; 5 &quot;Bring your strong foot forward, flat on the floor&quot;; 6 &quot;Push up with your hands and your leg&quot; (you steady him at the hips, you do not lift); 7 &quot;Turn, feel the chair behind your legs, sit down&quot;. Then check him again and stay with him.</li><li id="s8p6"><span class="ref" title="Reference">L4 S8 P6</span><b>No lifting from the floor</b>, not under the arms, not by the hands. If he cannot get up this way, he waits on the floor for the paramedics. (The hoist comes in a later practical day.)</li><li id="s8p7"><span class="ref" title="Reference">L4 S8 P7</span><b>Say the hazards out loud</b> as you see them: &quot;Vomit on the floor, slip risk, I will go around it.&quot; &quot;The table is in the way, I will move it before he crawls.&quot; &quot;I am keeping my back straight and my knees bent.&quot; The assessor needs to hear you identify hazards, not just avoid them.</li><li id="s8p8"><span class="ref" title="Reference">L4 S8 P8</span><b>Scope of practice</b>: you do first aid and comfort, you report, you clean. You do not diagnose, you do not give medication, and you do not decide whether he goes to hospital. Be ready to explain who does what: the GP, the paramedics, the coordinator, the cleaner, you.</li></ol>
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s8-1" data-activity='{"type":"order","title":"First minutes with Davis","instructions":"Put the steps in order.","items":["Check for danger to you (vomit, bowl, bed)","Check if Davis responds","Recovery position","Call 000","Call the coordinator or supervisor","When he wakes, check for injury before anyone moves him"]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>First minutes with Davis</b></div>
+    <p class="act-instr">Put the steps in order.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div><div class="activity" id="act-s8-2" data-activity='{"type":"order","title":"Talk Davis up from the floor","instructions":"Put the seven steps in order.","items":["Bring a sturdy chair close","Roll onto your side towards me","Push up onto your hands and knees","Crawl to the chair, hands on the seat","Strong foot forward, flat on the floor","Push up with your hands and your leg","Turn, feel the chair, sit down"]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Talk Davis up from the floor</b></div>
+    <p class="act-instr">Put the seven steps in order.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305302/View" target="_blank" rel="noopener">Medical emergency</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305290/View" target="_blank" rel="noopener">Positions and movements</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305294/View" target="_blank" rel="noopener">Communication with the person</a></div>
+  <aside class="tnotes" data-slide="s8" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s9" data-ref="L4 S9">
+  <h2 class="topic"><span class="num">9</span> Cleaning up after gastro: zones, spill, bowl, surfaces</h2>
+  <p class="intro">Once Davis is safe on the chair, the coordinator asks you to clean up while you wait for the ambulance. Vomit has splashed on the floor, the table and the furniture. This is the infection control part of the assessment, and it is also a manual handling task.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/l4-s9.mp3" aria-label="Listen: Cleaning up after gastro: zones, spill, bowl, surfaces"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 760 220" role="img" aria-label="Clean zone on the left with clean equipment and the worker's clean hands, dirty zone on the right with the vomit bowl, used PPE and waste bag">
+<rect x="20" y="20" width="350" height="180" rx="14" fill="#dcfce7" stroke="#15803d" stroke-width="4"/><text x="195" y="56" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#15803d">CLEAN zone</text>
+<text x="195" y="95" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#1b2530">clean equipment, fresh linen,</text><text x="195" y="118" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#1b2530">the trolley top, your clean hands,</text><text x="195" y="141" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#1b2530">the progress notes and pen</text>
+<rect x="390" y="20" width="350" height="180" rx="14" fill="#fee2e2" stroke="#dc2626" stroke-width="4"/><text x="565" y="56" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#dc2626">DIRTY zone</text>
+<text x="565" y="95" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#1b2530">the vomit bowl, soiled linen,</text><text x="565" y="118" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#1b2530">used PPE, the waste bag,</text><text x="565" y="141" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#1b2530">the splashed floor and table</text>
+<text x="380" y="190" text-anchor="middle" font-family="Segoe UI, Arial" font-size="14" font-weight="700" fill="#44505c">Nothing crosses from dirty to clean without hand hygiene in between.</text>
+</svg></figure>
+  <ol class="points"><li id="s9p1"><span class="ref" title="Reference">L4 S9 P1</span><b>Set up the zones first.</b> Decide out loud what is clean (trolley top, fresh linen, your notes) and what is dirty (bowl, soiled linen, used PPE, waste bag, the splashed floor and table). Nothing goes from dirty to clean without hand hygiene in between.</li><li id="s9p2"><span class="ref" title="Reference">L4 S9 P2</span><b>PPE on</b> before you touch anything: gloves, gown or apron, mask, eye protection.</li><li id="s9p3"><span class="ref" title="Reference">L4 S9 P3</span><b>The spill, steps 1 to 8</b> ([Lesson 2, slide 16](2-standard-precautions.html#s16)): PPE; cover with absorbent agent; scrape and scoop into the pan; everything into a sealed bag or container; discard; mop with detergent; wipe with sodium hypochlorite (bleach solution) and let it dry; hand hygiene.</li><li id="s9p4"><span class="ref" title="Reference">L4 S9 P4</span><b>The vomit bowl</b>: empty into the toilet, not a hand basin; wash with detergent and hot water; disinfect or send for reprocessing according to procedure; let it dry. It is <b>semi-critical</b> if it touches mucous membranes, so check the workplace procedure.</li><li id="s9p5"><span class="ref" title="Reference">L4 S9 P5</span><b>Surfaces</b>: detergent first, then disinfectant, on everything splashed: table, bed rail, floor. Work from <b>clean to dirty</b> and from <b>top to bottom</b>. A fresh cloth for each area.</li><li id="s9p6"><span class="ref" title="Reference">L4 S9 P6</span><b>Protect your back while you clean</b>: move the table instead of reaching under it, kneel on one knee instead of bending from the waist, use a long-handled mop, and ask for help with the furniture. Say what you are doing and why.</li><li id="s9p7"><span class="ref" title="Reference">L4 S9 P7</span><b>Hands last</b>: PPE off in order, then <b>soap and water</b>, not just rub, because it is gastro.</li></ol>
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s9-1" data-activity='{"type":"sort","title":"Clean zone or dirty zone?","instructions":"Tap an item, then tap the zone it belongs in.","buckets":["Clean zone","Dirty zone"],"items":[{"text":"The vomit bowl","bucket":"Dirty zone"},{"text":"Fresh pillowcase","bucket":"Clean zone"},{"text":"Your gloves after wiping the table","bucket":"Dirty zone"},{"text":"The progress notes and your pen","bucket":"Clean zone"},{"text":"The waste bag","bucket":"Dirty zone"},{"text":"Unopened disinfectant wipes on the trolley","bucket":"Clean zone"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Clean zone or dirty zone?</b></div>
+    <p class="act-instr">Tap an item, then tap the zone it belongs in.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305265/View" target="_blank" rel="noopener">Remove spills in accordance with policies and procedures</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305271/View" target="_blank" rel="noopener">Identify, separate and maintain clean and contaminated zones</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305272/View" target="_blank" rel="noopener">Clean and contaminated areas</a></div>
+  <aside class="tnotes" data-slide="s9" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s10" data-ref="L4 S10">
+  <h2 class="topic"><span class="num">10</span> The paperwork: incident form and progress note</h2>
+  <p class="intro">Two documents, two jobs. The incident form tells the organisation what happened. The progress note tells the next worker what happened to Davis.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/l4-s10.mp3" aria-label="Listen: The paperwork: incident form and progress note"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s10p1"><span class="ref" title="Reference">L4 S10 P1</span><b>Incident, injury, near miss and illness record</b>: Davis's <b>details</b> (name, date of birth, address); the <b>circumstances</b> in order (sitting on the bed vomiting, put the bowl down, eyes closed, went limp, slid to the floor, no response); <b>products or structures involved</b> (nil, or the bed); <b>location, time, date, witness</b> (you); <b>nature of injury</b> (tick what applies, or none found); the <b>illness</b> section (diagnosed viral gastroenteritis, additional precautions in place); <b>action taken</b> (recovery position, stayed with him, comfort, ambulance called, coordinator called); <b>medical personnel contacted: Yes, ambulance</b>; <b>your name, signature, the time and date you wrote it</b>; and the <b>notifications</b> you made (coordinator, next of kin, with times).</li><li id="s10p2"><span class="ref" title="Reference">L4 S10 P2</span><b>Progress note</b>: date and <b>time</b> (24-hour clock), then what you <b>saw</b> and <b>did</b>, in order, in plain words, with <b>no opinions</b>: &quot;Davis sat on the side of the bed and vomited a moderate amount into the bowl. He placed the bowl on the table, closed his eyes, went limp and slid to the floor. He did not respond to voice. Placed in recovery position. Ambulance and coordinator called. Began responding after a few minutes. Vomit bowl and table cleaned. Taken to hospital by ambulance.&quot; Then your <b>name, role and signature</b>.</li><li id="s10p3"><span class="ref" title="Reference">L4 S10 P3</span><b>Industry standard</b> means: <b>facts</b> not feelings, <b>times</b>, <b>full names</b>, <b>no blank boxes</b> (write &quot;nil&quot; or &quot;N/A&quot;), <b>black pen</b>, a <b>single line</b> through any mistake with your initials, and written <b>as soon as possible</b> after the event.</li><li id="s10p4"><span class="ref" title="Reference">L4 S10 P4</span>Write the note from the <b>clean zone</b>, with clean hands, after the clean-up is finished.</li></ol>
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s10-1" data-activity='{"type":"quiz","title":"Good note or not?","instructions":"Which line belongs in a progress note?","questions":[{"q":"Which is written to industry standard?","options":["\"Davis fainted because of the gastro and I think he was dehydrated.\"","\"Davis closed his eyes, went limp and slid from the bed to the floor. Did not respond to voice.\""],"answer":1,"why":"Facts you saw, no diagnosis, no guess about the cause."},{"q":"The \"Products or structures involved\" box does not apply. What do you write?","options":["Leave it blank","\"Nil\""],"answer":1,"why":"No blank boxes. Nil or N/A shows you read it."},{"q":"You wrote the wrong time. How do you fix it?","options":["Scribble it out so it cannot be read","One line through it, write the correct time, add your initials"],"answer":1,"why":"A single line keeps the record honest and readable."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Good note or not?</b></div>
+    <p class="act-instr">Which line belongs in a progress note?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305331/View" target="_blank" rel="noopener">Reporting WHS incidents and injuries</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305221/View" target="_blank" rel="noopener">Document and report activities and tasks of infection risk</a></div>
+  <aside class="tnotes" data-slide="s10" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s11" data-ref="L4 S11">
+  <h2 class="topic"><span class="num">11</span> The debrief: report the WHS issues, and say how you are</h2>
+  <p class="intro">The last task is a conversation with your supervisor (another student plays the role). It has two halves, and the assessor needs to hear both.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/l4-s11.mp3" aria-label="Listen: The debrief: report the WHS issues, and say how you are"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s11p1"><span class="ref" title="Reference">L4 S11 P1</span><b>Half one, the WHS issues.</b> List the hazards and risks you saw: the fall itself, vomit on the floor (slip), the infection risk to you and others, the awkward postures while cleaning, working alone, anything about the room or equipment. Say what you did about each one and what should change.</li><li id="s11p2"><span class="ref" title="Reference">L4 S11 P2</span><b>Half two, you.</b> How did it feel while it was happening, and how do you feel now? Racing heart, shaky hands, calm until afterwards, worried you did the wrong thing: all normal. Name it. Then say what you will do to look after yourself ([Lesson 3, slide 11](3-work-health-and-safety.html#s11)): a break, a chat with a colleague, a walk, sleep, and who you would go to if it stayed with you.</li><li id="s11p3"><span class="ref" title="Reference">L4 S11 P3</span>If you are the <b>supervisor</b>: ask open questions. &quot;Talk me through what happened.&quot; &quot;What worried you most?&quot; &quot;What would make it safer next time?&quot; &quot;How are you feeling now?&quot; Listen more than you talk.</li><li id="s11p4"><span class="ref" title="Reference">L4 S11 P4</span>This is the part students skip because it feels soft. It is an <b>observation criterion</b>. Reflecting on your own stress is part of safe work.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305351/View" target="_blank" rel="noopener">Stress and fatigue</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305356/View" target="_blank" rel="noopener">Early signs of stress</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305357/View" target="_blank" rel="noopener">Employer assistance</a></div>
+  <aside class="tnotes" data-slide="s11" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s12" data-ref="L4 S12">
+  <h2 class="topic"><span class="num">12</span> Before you leave</h2>
+  <p class="intro">A last check so nothing is missed.</p>
+  
+  
+  <ol class="points"><li id="s12p1"><span class="ref" title="Reference">L4 S12 P1</span><b>Part 1 handed in</b>: Environmental Assessment (every line ticked, every No commented), Hazard Form Section 1 with the matrix score, Risk Assessment Form with three strategies, and you presented at the meeting.</li><li id="s12p2"><span class="ref" title="Reference">L4 S12 P2</span><b>Part 2 handed in</b>: Incident form (no blank boxes) and progress note (time, facts, signature) for Davis, and you did the debrief.</li><li id="s12p3"><span class="ref" title="Reference">L4 S12 P3</span><b>The room</b>: clean, tidy, equipment back, waste bagged, hands washed.</li><li id="s12p4"><span class="ref" title="Reference">L4 S12 P4</span><b>You</b>: the assessor has given feedback. If anything is not yet satisfactory, you know what it is and when your second attempt is.</li></ol>
+  
+  
+  
+  
+  <div class="finale" data-finale><div class="fin-side left"><div class="fin-mascot"><svg viewBox="0 0 140 150" role="img" aria-label="Gerry the Germ"><defs><radialGradient id="gg" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#bef264"/><stop offset=".55" stop-color="#4ade80"/><stop offset="1" stop-color="#15803d"/></radialGradient></defs>
+<line x1="114.0" y1="70.0" x2="132.0" y2="70.0" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/><circle cx="132.0" cy="70.0" r="6" fill="#f472b6"/><line x1="105.6" y1="95.9" x2="120.2" y2="106.4" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/><circle cx="120.2" cy="106.4" r="6" fill="#fb923c"/><line x1="83.6" y1="111.8" x2="89.2" y2="129.0" stroke="#facc15" stroke-width="7" stroke-linecap="round"/><circle cx="89.2" cy="129.0" r="6" fill="#facc15"/><line x1="56.4" y1="111.8" x2="50.8" y2="129.0" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/><circle cx="50.8" cy="129.0" r="6" fill="#38bdf8"/><line x1="34.4" y1="95.9" x2="19.8" y2="106.4" stroke="#a78bfa" stroke-width="7" stroke-linecap="round"/><circle cx="19.8" cy="106.4" r="6" fill="#a78bfa"/><line x1="26.0" y1="70.0" x2="8.0" y2="70.0" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/><circle cx="8.0" cy="70.0" r="6" fill="#f472b6"/><line x1="34.4" y1="44.1" x2="19.8" y2="33.6" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/><circle cx="19.8" cy="33.6" r="6" fill="#fb923c"/><line x1="56.4" y1="28.2" x2="50.8" y2="11.0" stroke="#facc15" stroke-width="7" stroke-linecap="round"/><circle cx="50.8" cy="11.0" r="6" fill="#facc15"/><line x1="83.6" y1="28.2" x2="89.2" y2="11.0" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/><circle cx="89.2" cy="11.0" r="6" fill="#38bdf8"/><line x1="105.6" y1="44.1" x2="120.2" y2="33.6" stroke="#a78bfa" stroke-width="7" stroke-linecap="round"/><circle cx="120.2" cy="33.6" r="6" fill="#a78bfa"/>
+<circle cx="70" cy="70" r="46" fill="url(#gg)"/>
+<circle cx="52" cy="58" r="6" fill="#86efac" opacity=".7"/><circle cx="88" cy="92" r="4" fill="#86efac" opacity=".7"/>
+<ellipse cx="56" cy="66" rx="9" ry="11" fill="#fff"/><ellipse cx="84" cy="66" rx="9" ry="11" fill="#fff"/>
+<circle cx="58" cy="68" r="4.5" fill="#1b2530"/><circle cx="86" cy="68" r="4.5" fill="#1b2530"/>
+<circle cx="59.5" cy="66.5" r="1.5" fill="#fff"/><circle cx="87.5" cy="66.5" r="1.5" fill="#fff"/>
+<path d="M54 86 q16 16 32 0" stroke="#1b2530" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M62 88 q8 7 16 0 v3 q-8 5 -16 0z" fill="#fff"/>
+<ellipse cx="56" cy="128" rx="12" ry="6" fill="#15803d"/><ellipse cx="86" cy="128" rx="12" ry="6" fill="#15803d"/>
+<rect x="50" y="112" width="10" height="16" rx="4" fill="#15803d"/><rect x="80" y="112" width="10" height="16" rx="4" fill="#15803d"/>
+</svg></div><div class="fin-bubble"><p>Well. That was a terrible day for me. Zones, bleach, soap and water, hands washed eleven times. I did not get into a single person. I am going to go and sit in a sponge somewhere and think about my choices.</p><button type="button" class="say" data-audio="audio/l4-s12-gerry.mp3" aria-label="Listen: Gerry the Germ"><span class="ico">&#9654;</span> Listen</button></div><p class="fin-who">Gerry the Germ</p></div><div class="fin-side right"><div class="fin-mascot"><svg viewBox="0 0 140 160" role="img" aria-label="Dottie the Drop"><defs><radialGradient id="dg" cx="40%" cy="40%" r="70%"><stop offset="0" stop-color="#bae6fd"/><stop offset=".5" stop-color="#38bdf8"/><stop offset="1" stop-color="#0369a1"/></radialGradient></defs>
+<path d="M70 8 C 70 8, 18 72, 18 102 a52 52 0 0 0 104 0 C 122 72, 70 8, 70 8 z" fill="url(#dg)"/>
+<ellipse cx="46" cy="60" rx="9" ry="16" fill="#fff" opacity=".55" transform="rotate(20 46 60)"/>
+<ellipse cx="56" cy="98" rx="9" ry="11" fill="#fff"/><ellipse cx="84" cy="98" rx="9" ry="11" fill="#fff"/>
+<circle cx="58" cy="100" r="4.5" fill="#1b2530"/><circle cx="86" cy="100" r="4.5" fill="#1b2530"/>
+<circle cx="59.5" cy="98.5" r="1.5" fill="#fff"/><circle cx="87.5" cy="98.5" r="1.5" fill="#fff"/>
+<path d="M54 118 q16 14 32 0" stroke="#1b2530" stroke-width="4" fill="none" stroke-linecap="round"/>
+<circle cx="44" cy="116" r="5" fill="#f9a8d4" opacity=".7"/><circle cx="96" cy="116" r="5" fill="#f9a8d4" opacity=".7"/>
+<g fill="#fde047"><path d="M118 30 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3z"/><path d="M14 44 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2z"/></g>
+<ellipse cx="54" cy="152" rx="11" ry="5" fill="#0369a1"/><ellipse cx="86" cy="152" rx="11" ry="5" fill="#0369a1"/>
+</svg></div><div class="fin-bubble"><p>&quot;The standard you walk past is the standard you accept.&quot; Today you did not walk past anything. Take that habit onto placement, and take care of the carer too. See you on the floor.</p><button type="button" class="say" data-audio="audio/l4-s12-drop.mp3" aria-label="Listen: Dottie the Drop"><span class="ico">&#9654;</span> Listen</button></div><p class="fin-who">Dottie the Drop</p></div></div><p class="fin-after">End of the cluster. Gerry has gone to sit in a sponge. Dottie is proud of you.</p>
+  
+  
+  
+  <aside class="tnotes" data-slide="s12" aria-label="Teacher notes"></aside>
+</section>
+  <footer class="foot">
+    <p>HLTINF006 / HLTWHS002 · Practical skills day · Built from TAFE Queensland learning resources, 23 Oct 2026. References on this page are written L4 S(slide) P(point).</p>
+    <p>Picture credits: Pictures: Adrie Homan, Adobe Stock, Wikimedia Commons · Forms described here are the KAMA Community Services forms in your assessment pack</p>
+    <p><a href="0-index.html">Lesson index and glossary</a> · <button type="button" class="tlink">Teacher</button></p>
+  </footer>
+</div>
+<a href="#index" class="home" title="Back to the index"><span aria-hidden="true">&#8679;</span> Home</a>
+<div class="tpill" hidden><span>Teacher view on</span><button type="button" class="tp-hide">Hide</button><button type="button" class="tp-out">Sign out</button></div>
+<div class="mascot gerry" data-mascot="gerry" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 150" role="img" aria-label="Gerry the Germ"><defs><radialGradient id="gg" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#bef264"/><stop offset=".55" stop-color="#4ade80"/><stop offset="1" stop-color="#15803d"/></radialGradient></defs>
+<line x1="114.0" y1="70.0" x2="132.0" y2="70.0" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/><circle cx="132.0" cy="70.0" r="6" fill="#f472b6"/><line x1="105.6" y1="95.9" x2="120.2" y2="106.4" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/><circle cx="120.2" cy="106.4" r="6" fill="#fb923c"/><line x1="83.6" y1="111.8" x2="89.2" y2="129.0" stroke="#facc15" stroke-width="7" stroke-linecap="round"/><circle cx="89.2" cy="129.0" r="6" fill="#facc15"/><line x1="56.4" y1="111.8" x2="50.8" y2="129.0" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/><circle cx="50.8" cy="129.0" r="6" fill="#38bdf8"/><line x1="34.4" y1="95.9" x2="19.8" y2="106.4" stroke="#a78bfa" stroke-width="7" stroke-linecap="round"/><circle cx="19.8" cy="106.4" r="6" fill="#a78bfa"/><line x1="26.0" y1="70.0" x2="8.0" y2="70.0" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/><circle cx="8.0" cy="70.0" r="6" fill="#f472b6"/><line x1="34.4" y1="44.1" x2="19.8" y2="33.6" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/><circle cx="19.8" cy="33.6" r="6" fill="#fb923c"/><line x1="56.4" y1="28.2" x2="50.8" y2="11.0" stroke="#facc15" stroke-width="7" stroke-linecap="round"/><circle cx="50.8" cy="11.0" r="6" fill="#facc15"/><line x1="83.6" y1="28.2" x2="89.2" y2="11.0" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/><circle cx="89.2" cy="11.0" r="6" fill="#38bdf8"/><line x1="105.6" y1="44.1" x2="120.2" y2="33.6" stroke="#a78bfa" stroke-width="7" stroke-linecap="round"/><circle cx="120.2" cy="33.6" r="6" fill="#a78bfa"/>
+<circle cx="70" cy="70" r="46" fill="url(#gg)"/>
+<circle cx="52" cy="58" r="6" fill="#86efac" opacity=".7"/><circle cx="88" cy="92" r="4" fill="#86efac" opacity=".7"/>
+<ellipse cx="56" cy="66" rx="9" ry="11" fill="#fff"/><ellipse cx="84" cy="66" rx="9" ry="11" fill="#fff"/>
+<circle cx="58" cy="68" r="4.5" fill="#1b2530"/><circle cx="86" cy="68" r="4.5" fill="#1b2530"/>
+<circle cx="59.5" cy="66.5" r="1.5" fill="#fff"/><circle cx="87.5" cy="66.5" r="1.5" fill="#fff"/>
+<path d="M54 86 q16 16 32 0" stroke="#1b2530" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M62 88 q8 7 16 0 v3 q-8 5 -16 0z" fill="#fff"/>
+<ellipse cx="56" cy="128" rx="12" ry="6" fill="#15803d"/><ellipse cx="86" cy="128" rx="12" ry="6" fill="#15803d"/>
+<rect x="50" y="112" width="10" height="16" rx="4" fill="#15803d"/><rect x="80" y="112" width="10" height="16" rx="4" fill="#15803d"/>
+</svg></div><div class="mascot drop" data-mascot="drop" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 160" role="img" aria-label="Dottie the Drop"><defs><radialGradient id="dg" cx="40%" cy="40%" r="70%"><stop offset="0" stop-color="#bae6fd"/><stop offset=".5" stop-color="#38bdf8"/><stop offset="1" stop-color="#0369a1"/></radialGradient></defs>
+<path d="M70 8 C 70 8, 18 72, 18 102 a52 52 0 0 0 104 0 C 122 72, 70 8, 70 8 z" fill="url(#dg)"/>
+<ellipse cx="46" cy="60" rx="9" ry="16" fill="#fff" opacity=".55" transform="rotate(20 46 60)"/>
+<ellipse cx="56" cy="98" rx="9" ry="11" fill="#fff"/><ellipse cx="84" cy="98" rx="9" ry="11" fill="#fff"/>
+<circle cx="58" cy="100" r="4.5" fill="#1b2530"/><circle cx="86" cy="100" r="4.5" fill="#1b2530"/>
+<circle cx="59.5" cy="98.5" r="1.5" fill="#fff"/><circle cx="87.5" cy="98.5" r="1.5" fill="#fff"/>
+<path d="M54 118 q16 14 32 0" stroke="#1b2530" stroke-width="4" fill="none" stroke-linecap="round"/>
+<circle cx="44" cy="116" r="5" fill="#f9a8d4" opacity=".7"/><circle cx="96" cy="116" r="5" fill="#f9a8d4" opacity=".7"/>
+<g fill="#fde047"><path d="M118 30 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3z"/><path d="M14 44 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2z"/></g>
+<ellipse cx="54" cy="152" rx="11" ry="5" fill="#0369a1"/><ellipse cx="86" cy="152" rx="11" ry="5" fill="#0369a1"/>
+</svg></div>
+</main>
+<div class="big" role="dialog" aria-modal="true" aria-label="Card in full screen">
+  <div class="bar"><span class="big-where"></span><button type="button" class="big-close">Close</button></div>
+  <div class="body"></div>
+  <div class="foot"><button type="button" class="big-back">Back</button><button type="button" class="next big-next">Next card</button></div>
+</div>
+<script>var TEACHER = {"salt":"U9m3NslQwf1VTEH/IuajKg==","iv":"mcu7AVIYOJ4aKiiF","ct":"b1tX3jTiA61TxYqk0zShugN3kW2fvpR43Dc0SmwjDAxdxxmRskEO1Btcukos41gaGS1RrWqXEMZgsGyuaSlXxaTXK8f+ow9ivSZCzRY0Q20V+jHfzWM5I6lK+kKNc6Fs6VdXlDZFrN6XPPN1HyX8t2VT3rQagNY7m47d5Chg4Ny+H9l3UOJZ8iMpyQmKdGxeXyOIc8wjJmwla/FMN5FIl+BAzSRwhoU3bkCEfRvQpjLPGl0YOlCC/uiI/LBJGblKpGfztyXNWoYJGERh7b6luMOKzqanNUz8/p2qWwzMMj6IoW70Ea/9vp0TpN0cOXfFnMlDKTzL3l6eT8WRxZXpb+vZCg0We0KjhLOC185V/i0ACR+L401/s85ioUlu6G/lyexgHqexekP8BE8ESxMgP0d1Ee+DrY5TGo9yJv6RPfHvTJR7UfF86cZeQE7ndWaNrI/PLVqUZyfAUyyi9zHSx7xEq356XzlrtNzzt5r5zWqFv3iPb/BJb4pnp+tdpME6v0mvzuDthLTjgkBRH7KJh3WfBM5lKByCKGFyhjPtFBNRcyj311ygRD6SCHiBoSK4OiBkIDthykdbcBKnvMoOXh2PbQnbgMdufeoeN4p72LhOsRVoDgsAz/b69halian7WS8MxS407r1XXlVYew8NJAz3/01nPAfBpQI7MGzrNDwUy4Moa1CqrHO0+7Sm04rR5RDWp6JZjaYEG0CWwa7VGwsJJHYlbdBZt6XfP8/mWGBwQM697+aSzH+OHRpcFLuUo3yHMe/BTxQkybdjajgBcVE+ulJM9OXY66XIMB4nlLZHduFyA4Z3CWvR2fEuup8Ar/MC4NC+WlGToSyFcFv0VQPhp8mnj7xaaau94Y8OiAvW8RJ5GFn0ifH+/6PWPBNpxYEnvVJY17BEraVZv6hmJaO5y0stCWd4pV16HPKXI5XNB0UNPLrKzN2HSrkKpFapOCyiYOwYV3Xh190rGtSP4LL108B2zymUD8P9kxGNwQ58/ZSyYVitnj5J5G/6EUlbiSM03bkVvvFv0S06xzdb0xzJpTqnadpnGRUHHImdWVzxrXug4MCrhtBQrerfqAXTw8o3Rwilw1wOpJqo5OY4zMPZybMq03hcVNG10O+nYNAcAFHEkR/vjMtumYiUR7cE0TVZDvWMvLRIlzr+hmwMBM8kV6GaquBCcB4fUiHfTseLaYJ4dJFDclvpIIwiKirYqrISfhfEScW/ifWaLCNrYJ0XkpWf01x9WjJDTZAzHlo3gT2l9mK6q/V/lqQdxnYrzpGbZwIn4DA4o/22P3slXKq6uP4eSV1L9a9jW1eCxC31yGhUuwxSIumf41r/hyOI3Iqn87boOCPLMrHWCQnLNA2nM2d19idh1cNMR9SDbQkTjuIyO8BZZzfexmAb8GJNhuzVKa5WRq7puaKOBdFHDsTodB0wF2WzOd3uUqfBbDzMvO1ETagxGcVHjQHKR6NirHZnLy+MKGZse23I5Dg1S7YmJUWAhfSUvd7mibdguT7ql3xr2lbNGD1Xm9KMiL687RVQzAE5dAwEQxeuVx+WVpBTA53SzXsmOHAmZO/jQ7vvbVzkHK0K93WxTcGcygRytp+2rwKk34VYY8FG1f6lGqozcTYCwAbuRSO7RL0ddCbjkdK0Kcouzi1+v5RxpIM8utvpWQ4yunlaWt2mbQHDZ5wAXMW30dkrzwvNuPblPau5IqTMbRdE/k4mP/pwqH4dEdsBWrk2FhveNoYqIHKveKORh4DjdLTkzw7rZ+poTYwIkrJA/Z8qYTEnipJAiJwcv6tqrthmAm9NuxhQ/BiJFe+vur111JZ7hcoheBAMQFzdRFl9Mg0fh13sjvP7L32SyakE8kzz3ZV3qLUYqC8kgpuVOCwgfeIIxW09kRgrShN9GehhLz3NabsjUmdXGOJ8olxezIUXS+t/YsaGcZwIxhg57HvBu9nchWgmp5PnCyQb9YjISdLpZszvWltjDjqRN/0cmvSwQQm6dhPtVFnp7ZT75T/1mu5I2blel+mXjG/wU3AyVdHPLqArCaSKan7hm8Dx6bMO1RjqTRoe/aE8eQbS8zzpDSjNmPR/KKalsr+8vjwHJErc/7G8IvCNCdm4Us3mBQXlBW2vBBW/+vdc7wz9w1DzwovUG/Jd70/0fweS3Hn7+QDSFSPdGccTiJ7N+0elGiBtpHI2/adxqEFcdok26VNthvZ8b/EqXVaGQy+itK678EFUR0jYdC7bnd+OlVDiCQw8OzFW8tRaeBHSMopKX9YhSeIFVJNTy/jYN0qflPqRXPFpHM5DRMeGAjv9zJNWTpSaoSv8XIliFDg8J0vVX7Oozu79fVoSCWRFuiN+j25xAcgj/7nxVtaHuIdZhh4GkXCecDvAKxB36ss5YXOKPXjd/2lE5f4MGQNPp6NxNerfTvLARTLK5HgLnNy0yUrn025GpwrTsKGDXocei1h8IbP2WQzV62iMsaqL0IBj9NX5PXMFvdiLRq2vwecahn51H17la+sTC+tABbSN+CYfgBrb/kX9dYe0wQiw5prrpgLdtOiKFf9il18ZR++PCu0euoP5Gn5tC+VvB/vLztEYQ+9/AJoziRGNzRqqjC0R60KWml32kY62XhQGmvY1fuZEWzwTEqJRearFuviaSzhk+TtASHBeeKysyELiZX0SpNic6NIOwAoHd5Yi5jOPV2TDbNT8iXTZkYGVmq3Q9nlmw3mwno5FfhwOf4AezbaUzrjOhw10BkCANdixJFWN1OzXTVvx+xkJIAg53SbIKVQ0xh6QHsUHiLcLMAqct8iy7gtz/+d1Aw6fXOlD/W4MB7AQqyF77n2bMpMnMjxnSMflcRuo6C2u8oxgvQnaJkK/po6k79T+JYeJkLQCRtQRyPdE9G1FUiyNqq1yHyiIQmxEi2OpqtgVMhWzlDkhGvVExYEh0dGIVq09sJRRVAIjWLjwE/vDK3RNZdc6DbeCSj9cCpX3etbE0QtF3zfRQn3UnHRorz0lb8o16XXwGBqwoVp2iBzVrWgxdKYDfPTHGlCRWBO6kwK76D1Y+iw5vv/4eInDRsjirXKfRIz59lbMBmSSlKfDWuOVesW+5F3zXkzoh7gXepISf2eXMptuoYsMHQqSAL4pbS7crchXyoXP83sLvxEIVGX5p0yovksDnAkIo3h5Gv6mV2lmwmyMo46JQLhATjMJHmWQr2K0tc7Ge/cQQovpBAnn6lmEsfsMB8gX1yqcEjUPy7bIj4v2FpjAfyg5ll6X2kvRWdlqwS8wT2ejoUupT5CLdP2bB+CowZjL3yL3rAV6bRpAooll05ruUkCaLWSlN3A1Gmz1zbGIYiPkVeUl2qL49BDbt/fHWBtAuM/5PxJIGySVCqI/Vhg6F3yzR1SZNp4rriSDfPBnDOn20mXvP7f1xFEoLXsmPMQ7VTlPq+tSNcHeU+iWK/La7uxKZ2Q4PpKoaj0WdL9RzcHdh9ZIVPhwxK1Qz/UMzR8xB/eLDndn7DC273Lkx6mUXBFr5eZDgtb1X23d/xRKR9SlzM/69YrSPlOpqbJroYwpuNM3j6B49WJ9En/uIJxNabfYk0G8F5HQCBiwQ9kjKkbaL1fOzMk+T0g72kZjUyKZPMfjRvt1tW7o3topIrP4xXKYfO5Xr8Qaak/3X3VyDCK92I6dO9AgfR72TgWT1GKKDzQyPA7anI+8uSRSPp/38oIwCqGiwGEo/dVbeyN12eBRYeDk5JB/fhlObAmvo3LreWgOjGIfS6LcQjjLcHs3LFOre+lT9nH9W0VmYmgiAF1GckZibCDjueuGHT41HttaMi0tfn93oTrljhPgfv6nrcUINsBXAvxkO//8tjUe99gKhWDWadmExsqJy/jTh8SUNKHS7bNx6eol529NGxqEqFsPdm4iE7+ipDPHlJFkYD42Osm7YIMuSOUfgnHyACvN9j2S52CeaT2bULqko8Z6rnQwkF2AUxt63sQV0g6mBETWNN4z0e0glf1eBA7NUpJl9KpmlJ0Q58E0YQrtppdE6IOya9RFC1tEKxO46OckSZh691GaljPN4dHPAZ9oadBMUF4zb5rKiPYU1vb8C0toP8dC081KxKtjoItk8Hn0mvfhFTcOnmOMRpsF+rmgUCBj5JvREpF8RR/H+ddy4PgSRzkF8/PwJrugwB0LJ1h0X5VAD7gJH5vwZk0Gn64G5WbI0Dlibsqy6kmBghQddCKAiEsAjnC5nDkUVgbYu+uu7oYy3Hwo4U1tzM7x8aeUc7FOFWf2PR9DClfvIRBiIqk/pDlWp1Q6uIvgop0nxAOVAklp6jr7JB3uhfut8svWU4U3/nSJxSaKuw2MaKuHCGlUiwVtDjZBKvwsQP88FiotRRMAQU9J5+trjWiAzAbZEfNUdcX8pA3GoFPoT1bSWYFF0SEzBMxufANr7uRIpmBn/5y4b6/Pe7wkX7VAHxnbd4G0OeMPINLKnByUmKDhurwIVNbjVa/Ay/x4fKr6KvRzT5f6aA1yH8s5GCMWjfd0EcdKbGSlY7bpopteQS2JcGGpFRz/Hj+l25UU3GgkOWYmmwTzSUW8zok3NB1siDijs2WKClpXR0/ljR9ZKChmVPeVPR0TUdvmGM7N4RitEaATq66UCCokwxUQlVhnwBkYdzw3EgIN4WwdDK1lTPoOfpqZd6guBfu/EDbYoXcHsUQR+/CRGuX5FxwOlp7Wb9Zw25Nj/67tevEY9LGZQ57RTmxi2al23pPDH/r1bh9gTg3RhWkmbnSYrAT/JToKuBUG6+v2bpYgRvh+s9v/DAZPtyeA/OW3h7JPyPSgSeKDXE+USJQ73OYBOOElfhYBUQhzWkZOFsAfKcrJ/HOgY9+2xee+2ETa/kBHIMwPca++k/h6BS7fcrNgFtUG8yANwKn+VKwrZieRb+mol2rG4oGivH7Q5PqeHX7ywAORlOclxN4wV0LbbJtu/xwOyS+ddPMmJp3i0GL/vGfPdE/swfCmI8C6QkJfWDmyI4ajfYsb9GgnoZIPiHx2XGWG17vHHaH/fezL31A62pZS3XXL/nFZCN7H7UeGiBRjQuI7I1rJNOMBKtgeZHKRslFO8zg4KpzZ4k5kxhiKAdL4nk+8nN05ycmAewcsZohKq/t8Gm0WRtPmD+RDBsbGqujNmFrGrbDGPnCeITZQfkPCjAjxy9vEFJMhhYsHmMg9vqNakwyltQKF6Hl2Y0g6U0PUootE2U5Lm9SZMaGK34DHt0sk824hWyqND6OmUdyL22nK/LvyTxujNw6L010o9+X9Wm6S8hFIphD7jPAHZtwlK7XBYfFhZErzj3FaZ/uM1zfTpFwJ5ddDWL5hKaGFJNjohomveTPt98nc/TMfNGFDEYso4g0k6fliePAbc3qgsCMjOXQoLPilyzGBhbb/DNcgKQbK/GlOU8Aqh72pP09wpde7YhtNQbFxR2CMbFmSWvXH6biFzL6N4W0KJ1gkdzaZzw/0nhefYWRb52/cRthlwkhoILjqRC4cZZWmluytFc2GiiF2ddTrcMPZkYu2EyMeVMz5SjkBt1RbeWs68Zay9Dwj3XlrAP+P1cekyV4jWPJcwGKmbBB7GLIw5eeZIwZUT5eQG/w24YsJL2eswwsJfU+BQ9qFey3zHGV/UKtFImm3/leKC6FzskzcDZPpmg6x9eNyWA1TGh6qqxmPVcXMBhwpuZPqCLpNv2Q2CNiYtiJc3PBY5WW+g0b/7pgjnA8PeZ6u1Y2bFaf/KWQR1dceWJZboobP8c5dBYnMufI/Jh75vDppK7uDf53JGvX2icBXy88TJaYMzdxa0LNZWv5BXcEoZqZucuxp/9YpOMLJqpJfWL+j6mq/C2rKNXp1BWDqCR7lUrNYWyvVWCciT5lwluxx0GuAhX6577NI1WYfx3UiaED+NAvhOC2CMF6NoyjPO24LZl2EULeMYy2cLXXDFdVrDppRfejO7f6mq6JRS41L9qQlDi2Dzh7kEQp2ZhOSCM8IWtVFvO1WD3f6dUL7xcNIHMB5CAnwnBPxIJlacKoWk9NmZWVh0EDLEJxiOk7h3MIuXahxXK+v7AZsSHC9rMh/qYaTyDfFcoVwnlAwHPoWL2j/Ib0U1gtmykEKWF4lK6aUpAFWnxqFBhYHjrv9vMXJ+zLBLSb7MoIWLuknTMH/tMl3W+E/O1LpzMtD+P/cjy6E3sy3JYSKYMBh9mlDTrTvg/Wh39iDElfDRKZgC+1oP5RPDNgd10rx4WRUADSTe0TZY8NxneGYOhrXVhgfijT+xmWdh5tcV0JzJXoJm31WTAgyte9B2EHAr1UEwnZ4jxXaHZ4gjkfAhGl4mAzZODr1NyEuXCMdt+EaVx/9sMA41uoG9ca2UZxT8E7ItO9oqiaKBncffM24uxXmP5rzwNM256bzau9swUMn4scqz2oILZeUb57wkdLEwtpPAHyZLWnpROrmJfQ8ID/G4qj2F9n71OXdTef+mJW6sxgFD5L5mcmCmtvuBLJQmEqRJO+kQo/6MNaUJNUyFzyvdensz7CtpaFHwJ/c7gkF1gj6D3kj63gnWpUofSaxdyoKjx0yO0hjiuch1Xf+12rGx+ipCVcAFBCSqY9HFoGzqFcK73vtsOOwkgmICsXTnUzxEnQ2aGxyEJbNcO+5dkVvmtp63xuM3E65PYLrhtLtESPjhBkHoq30L4lG7gVu8AJvD8tg3S52nh362l2ijG009iFQoHDicyWxPQHsl3y1+35KkI2/XDKQo/qRpo5fsyB//z1i6u4W4hJ5KoqaIVhndA/cBmvghuUCTp1hxn4QvsBnp2bAfg2n+XAJfjndiNBVnxLKV9//QArVxjWvY5j1SF5QUFCz0TJdTB0tpbcyPzdHeTQwZxzhKArwpG7KAtH8cXz4wMuP18/91uLxL6JfXrg75PJ50YhyXhdEi3sheDNatc6EbS491KwBfkuGJK45rGHjIDHKl2oafPSbZxCxvnmZhVokSFG6XvvdarUkryl+AIxLKDiWT9bjQqZ92Uw82+360bcReJt1EHA9Y9w/9ZrxNDkakkAaYqj1YVOyToeBKCq56Uhdl/HkVwPS525eV91n8eJhFYSyZ5527NPdJPbZdadjziImvH3wbCeZkR1772eQfKWohGRUeHUhBEFFt9ws4Oo4CUwWoTHDBOFf6CeKSLLIYX8Oi56i1LI/IfuxJYPEIfsRLGRRM2g3A16MnNGVr9h09L6+XDzZR3zog5XOFPASrOBstmHBSmOE5IcdWmxzQCTzU99WVrNBCwmqxUYdSNotaGoU89DxZy6xCRGCYEdBFLO36WUdlnAyXV6Hn4NlC7X1MdqE45TI344QF9sx4wMnjLm6zIDRer23sUJbSy6PEZtWIkaXmcgOcN9UUITYUaZD8sh4P23jjBL6Ran2Q5hiXD4EPP0ZogyNgFjy24JtaM1iSQ/eIhn6XL4vATN3MAfgLYxfz0IAEX6J0WHoBKjze2yAHwh/wsV0XJwO8imoyv9o1kREx+NgDP1XVQqexEpApTQjYhRu8KE6ZSK49ZLSnR4n/jrGztq5aI2qYerM8Hu7QFB1nde1pGQL5OuRWjSPtkc3kH2x+avx7IZaMHqQcTBTfVSUS6xwz1+HS+oWpoF9aa8ZFjPbgjodvcpMiBlNewKsp6LNiBabNKA3dBbzEIbBrBdY09PtQlvziMPKur+GOGZ29UY9D8DH3KKhrFRokfuK2ZudMcx4jQjNtgiu5yLeNQRB5XVk9PPMRvVBRbOlUYdqxJQZsEF0einwlCYIEMALXrngYe2CYED5CexBEUXoObFDBwEqhLxCbt40+OS+9WUpQua736o9xCgtfI8O8DTxiNxI40OAESZrunooK3EDttjL0DY1CdPPd6QNO0HjptgxereUmKdJfmnsS0Rt2SH1hybol0fUSote4p5krPDb2PxnnWiKquCi4nT1zjUaH44Mz+LsOP2cehZV+TQlbYu+K4m9WFSxE4wcoSVLuoZHENFoCD3IHleoerLw1PYqtWsXHRp2sKIqXmuK0GZoelIScdZxQc8d3SBXbtZBZvOQF20IxIhKkLL2WYfp1EOm/TEjsaBBCwgUB2hsj6zUtnNBFmq0svpxkadNDLpwPmXJqtYvJeMIArvozM5NiTPxETiWx7/Ep+yImpbdX9vuY52i+XPAfQAiNqfvBdfBgGc6kcdd5EnnFOoIYxIxPDilaFmTyEy8/zJhLNHzMm2cz5Q8z6uEuqa3kX0//k80oGHZIEqoakK9M8ZXNfNZ3KTKDTbYn3aNaGJE+lg6rL3KzMYFY68P4aZRr01vv5cpaBVUyYCG3jOfQXvrc/wK8c/4y9Wkym54P6FTHFn8gruF7kP7tW42UGP1SrqrXYwEPr1hzN0Qk6JO+gOwCTZz6E2HH9Eu4WeuBORxRyTZJ3Ihvde8IKLsd1B5/aDMLS1XWvrlxzrqnYcCNQ+1A9g7vamT6Rk8k0HuWBqaLTWcwgQZgY5nkfe9aXRbvVlmAZcD00NheefdEcoQfAOns8+aAHguo4qCpUyU0gR7dIP9pYs+Bik/9Nhvy1W6r5OyeAY+L9D/QS7XokJVIr4QraKd0FidQv4S2dSXP7Neq2PUI90LH6DQF6tRAXZlYR0XK+VN4TJasGxua1pHrPcTB41sRZgkkz5MJWk+FTC69bb6/CPnHv7OppSwt+3DyiqridJGtMtPgxlAk5ToE/DG28rG148rSK86NQOVsNsoKy1P6/y8GjG87HdgVpQgCNdqGrLe4GgZP9KcGacvAUUnHWVzpGJy0Dcws5NHF1y2s9RhvU5vjBNc20ZYuMfePgo4X8/b2D4bMLL+3tMsKz3/dc51yEo1KF7/yASGxa/ROQpK+3fSN33ssBBXdw7uSIavlVtw9PKYSXAI6XrJp2K64+KgoByjiyjybdNdB9xw/NCmPqf10uWR0d8DIssf+lTIUOwWFSHYX7iUsD8BV+yxjZO7y5cOPdVPavq2REpcF81jL75EhntjAPLFv5JqtCpgVATWdy0uiWZwmwYRw37irL8OvZwlP/tW+41DyC5FCF1ftU5bvpxT6vUojHW4pav0F/x+UjuleCyeqCCU8CYn+8ZxnOmIFCEkIaEXyEkDdhOFPNV0FsjFJdQ7RS7h25KS5kGFx6wfgdYdEQ3RH8hJ+YqysV8PEWS3RW9V/FwImaWOJjd9c17hi+mt3uPy1vfqJ/O17LWhbnBkuwlgg8sOwgG1Ucjz9IMwrUijHFyM9oydG2SqZgCGNLog0yTz6uqQ1fwHFCuYYWztN/bpNf1TiRN2ygEVSB4bUs1T7qF2VWrti0C5fwCiDvnaWbjkrvFRaOo9pMd6OOH0Kd97AA++u6HsUAXurqaVm3Aq+XbfkCrnujgTGtuheKavUSB1S9jklf75M8kzlPN3oL8kVsttbZU9mIros/FHS0nKS67CBSvASlfXcFYYnPbdGpO9Ix/1oXwPSaJGjWoR2HRBDFJObWzJoy/ybZWSK/6QexuzgVk9OB9lYD2t5JEhq+O2lJQsWhSAS8A42PSfcksnnqxVif4gn7AFgLkDuj73a6YHWcUKuZWcwHmGnoFoYXU2T5xHkdV86U9akPlaraSVKaNScrjAXMxDA6XLe17XtEWuyqZxW2myLk1gW1xZKkewLWUiI08NYagtL6v9xkbKp2NaHWUi1UwyOc09ewwdaF2ojWBJX2jad/RP55x9QhPzxNpk6oRM4g9nfzVK0KNCyGxj8eZkIcgOfcytb3F4ua87e4cMo74QxIa4dA9kkWH1z2KgSpm9k+nl0lHl3nOHmmRYvfDHhNb6jDQe+2U9OG4l+S1J8Lv5X3oiSI2/tmuNRyHy4lz5KTYMLpb3IyN8gp7d0uojMrmaokHvVx2Ft8M03FZFS1owogNtuqFjaxNDU5EfMVDpT1j/29+u97SxFndyjNTyjkcKXpujsFMft7bevio9KtwMfmVhyGqBIxEpqBIblj2vzAMUbUGQZUHljgw77YPb4o7DyS8JalKleRJBOgX9StqLhJrvXHaXQVFvlWVWyXbDmv4mJQa0Wy0Xkm4EFc4GUVBMvy0ijJshEEHts2LBm7q5ChfsDcpzlf+x+yq3uP7eJNC3RGgmoN8W5eyMNvVcFYnZn/t7q1lt5WYAaIfwauxFToRxxPI98+T6iEyPSwvvHIW7F9Rz+GgsOPpG1N/WvMfv6Hj5wUVDXvkznDGAEjKGqsKmy2+6pEWHBZqnBmkcAzWL7Xm7n5TbyQXSdfbEK5p+N0mGsAdTmnvvBHmjCMGMf8VlE9gcX5xEHntwPKS73fJqfUpqP24bf1pwcf4SOP6TQ+Cagjr/uK9omM9qwBj6gwjDKOEbttZ+zdjPpl5QA0eiLXYj9pXV0yKSzTmbGMvxjI+IKR1RstG1zr6GU/89CzYq1qMt4STUCBn25gAAXrHdYm3gYwH9aa77JfQqJbFGgQFjuYX7bn99STavTfUdNcgL4Mb5gTxglMuCaIzPWyXM5WU19cbhDnlinlRipa3C9pmAQZygTcdMkGV4tJ6vqD35Gj9TwNdTkQ8fGDt62KIH0bd/qE3PzQljDaEPPg09qsGi+4XWn3pL1Vat5ue5HOrXdaoIbL43hAoTqIoOHKiLht9qRVCpFRj2wsqkti/y7ZnfC/iLf8hnXetHFfdE9tJqieHpy4/6cYcgDTsk6A+sAiiuhQGybuh/OYrPm+Re3MxF9RcPPOfTQbk5lmn1pWoQ9KruUktTBNHqp1aL3xbhdvXftOAyyM/9LY5SSJkp8QeRYI/4Gx74"}; var MASCOT_LINES = {"gerry":{"lines":["Gerry here. Practical day! I have put a loose rug by the door. You are welcome.","Gastro is my masterpiece. One vomit bowl, a whole house. Admire it.","Hand rub kills most of my mates. Not the gastro gang. Soap and water? Do not tell the students.","A clean zone and a dirty zone? I prefer one big mixed zone. More friends.","Hazard form? Risk matrix? Just write 'low' and go home.","Davis fell off the bed? Lift him straight up by the arms. What could go wrong?"],"prefix":"gerry-l4-"},"drop":{"lines":["Dottie here. On practical day, slow down and say what you are doing out loud. The assessor needs to hear it.","Gastro germs laugh at hand rub. Soap and water, twenty seconds, after every contact.","Gloves on last, gloves off first. Hand hygiene between every piece of PPE.","If he has fallen, keep him on the floor. Comfortable, warm, and checked before anyone moves him.","Fill in the forms as if the supervisor was not in the room. Facts, times, names.","The debrief is not a test. Say how you felt. That is the WHS part too."],"prefix":"drop-l4-"}};</script>
+<script>(function(){
+  var ANGLES = [-8, -5.5, -9, -4.5, -7, -6, -8.5, -4, -6.5];
+  var big = document.querySelector('.big'), bigBody = big.querySelector('.body'),
+      bigWhere = big.querySelector('.big-where'), active = null;
+
+  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ---------- */
+  (function(){
+    var pill = document.querySelector('.tpill'), tlink = document.querySelector('.tlink'), saved = null, on = '0';
+    var b64 = function(s){ var b = atob(s), a = new Uint8Array(b.length); for(var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; };
+    function decrypt(code){
+      if(!window.crypto || !crypto.subtle) return Promise.reject(new Error('nosubtle'));
+      var enc = new TextEncoder();
+      return crypto.subtle.importKey('raw', enc.encode(code), 'PBKDF2', false, ['deriveKey']).then(function(km){
+        return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(TEACHER.salt), iterations: 150000, hash: 'SHA-256' }, km, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      }).then(function(key){
+        return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(TEACHER.iv) }, key, b64(TEACHER.ct));
+      }).then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
+    }
+    function show(notes){
+      document.querySelectorAll('.tnotes').forEach(function(a){ a.innerHTML = notes[a.getAttribute('data-slide')] || ''; });
+      document.body.classList.add('teacher'); pill.hidden = false;
+      try{ localStorage.setItem('tv_on', '1'); }catch(e){}
+    }
+    function hide(){ document.body.classList.remove('teacher'); pill.hidden = true; try{ localStorage.setItem('tv_on', '0'); }catch(e){} }
+    function unlock(code, quiet){
+      return decrypt(code).then(function(notes){ saved = code; try{ localStorage.setItem('tv_code', code); }catch(e){} show(notes); }, function(err){
+        if(quiet) return;
+        alert(err.message === 'nosubtle' ? 'This browser cannot unlock the teacher view. Use Chrome or Edge.' : 'That code did not work.');
+      });
+    }
+    try{ saved = localStorage.getItem('tv_code'); on = localStorage.getItem('tv_on') || '0'; }catch(e){}
+    var q = new URLSearchParams(location.search);
+    if(q.get('t') === 'off'){ hide(); try{ localStorage.removeItem('tv_code'); }catch(e){} }
+    else if(q.has('t')) unlock(q.get('t'));
+    else if(saved && on === '1') unlock(saved, true);
+    if(tlink) tlink.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')){ hide(); return; }
+      if(saved){ unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); }); } else ask();
+      function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
+    });
+    pill.querySelector('.tp-hide').addEventListener('click', hide);
+    pill.querySelector('.tp-out').addEventListener('click', function(){ hide(); saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open')) hide(); });
+  })();
+
+    /* ---------- audio ---------- */
+  var player = new Audio(), current = null, queue = null;
+  function stopAudio(){ player.pause(); if(current){ current.classList.remove('playing'); current = null; } queue = null; }
+  function playBtn(btn, onEnd){
+    if(current === btn){ stopAudio(); return; }
+    stopAudio();
+    current = btn; btn.classList.add('playing');
+    player.src = btn.getAttribute('data-audio');
+    player.onended = function(){ btn.classList.remove('playing'); current = null; if(onEnd) onEnd(); };
+    player.onerror = function(){ btn.classList.remove('playing'); current = null; btn.title = 'Sound file not found yet'; };
+    player.play().catch(function(){});
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.say'); if(!b) return;
+    e.preventDefault(); e.stopPropagation();
+    var inBig = b.closest('.big');
+    if(inBig && active){ var realBtn = active.card().querySelector('.say'); if(realBtn) b = realBtn; }
+    playBtn(b);
+  });
+
+  /* ---------- mascots follow the scroll ---------- */
+  document.querySelectorAll('.mascot').forEach(function(g, gi){
+    var name = g.getAttribute('data-mascot'), bubble = g.querySelector('.gerry-bubble');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var lastSlide = null, timer = null, ml = MASCOT_LINES[name] || {}, lines = ml.lines || [], prefix = ml.prefix || (name + '-');
+    function place(){
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? window.scrollY / max : 0;
+      var top = 90 + (gi ? 1 - p : p) * (window.innerHeight - 300);
+      g.style.top = top + 'px';
+      var slides = document.querySelectorAll('section.slide'), cur = null;
+      for(var i = 0; i < slides.length; i++){ if(slides[i].getBoundingClientRect().top < window.innerHeight * 0.5) cur = slides[i]; }
+      if(cur !== lastSlide && lastSlide !== null && !reduce){ g.classList.remove('hop'); void g.offsetWidth; g.classList.add('hop'); }
+      lastSlide = cur;
+    }
+    window.addEventListener('scroll', function(){ if(!timer) timer = requestAnimationFrame(function(){ timer = null; place(); }); }, { passive: true });
+    window.addEventListener('resize', place);
+    place();
+    var n = 0;
+    g.addEventListener('click', function(){
+      if(!bubble.hidden){ bubble.hidden = true; return; }
+      var k = n++ % lines.length;
+      bubble.textContent = lines[k]; bubble.hidden = false;
+      stopAudio(); player.src = 'audio/' + prefix + (k + 1) + '.mp3'; player.onended = null; player.onerror = null; player.play().catch(function(){});
+      clearTimeout(bubble._t); bubble._t = setTimeout(function(){ bubble.hidden = true; }, 7000);
+    });
+  });
+
+  /* ---------- finale: big mascots walk in ---------- */
+  document.querySelectorAll('[data-finale]').forEach(function(f){
+    if(!('IntersectionObserver' in window)){ f.classList.add('in'); return; }
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ f.classList.add('in'); io.disconnect(); } }); }, { threshold: 0.35 });
+    io.observe(f);
+  });
+
+  /* ---------- videos ---------- */
+  document.querySelectorAll('.video').forEach(function(v){
+    var id = (v.getAttribute('data-youtube')||'').trim(), t = v.getAttribute('data-title')||'Video';
+    if(!id) return;
+    v.innerHTML = '<iframe title="'+t.replace(/"/g,'&quot;')+'" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>';
+    var w = document.createElement('p'); w.className = 'watch';
+    w.innerHTML = 'Video not playing? <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v='+encodeURIComponent(id)+'">Watch "'+t.replace(/</g,'&lt;')+'" on YouTube</a>';
+    v.parentNode.insertBefore(w, v.nextSibling);
+  });
+
+  /* ---------- click a part of a diagram to make it stand out ---------- */
+  document.querySelectorAll('.spot').forEach(function(sv){
+    var parts = sv.querySelectorAll('[data-spot]');
+    parts.forEach(function(g){
+      g.style.cursor = 'pointer';
+      g.addEventListener('click', function(e){
+        e.stopPropagation();
+        var on = g.classList.contains('lit');
+        parts.forEach(function(x){ x.classList.remove('lit'); });
+        sv.classList.toggle('spotting', !on);
+        if(!on) g.classList.add('lit');
+      });
+    });
+    sv.addEventListener('click', function(){ parts.forEach(function(x){ x.classList.remove('lit'); }); sv.classList.remove('spotting'); });
+  });
+
+  /* ---------- card stacks ---------- */
+  document.querySelectorAll('.stack').forEach(function(stack){
+    var cards = [].slice.call(stack.querySelectorAll('.card')), n = cards.length, i = 0, busy = false;
+    var deck = document.createElement('div'); deck.className = 'deck'; deck.tabIndex = 0;
+    deck.setAttribute('role','group');
+    deck.setAttribute('aria-label', (stack.getAttribute('aria-label')||'Cards') + '. Press the right arrow for the next card.');
+    var pile = document.createElement('div'); pile.className = 'pile'; pile.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
+    deck.appendChild(pile);
+    cards.forEach(function(c, k){
+      c.style.setProperty('--r', ANGLES[k % ANGLES.length] + 'deg');
+      if(k % 2) c.classList.add('shade');
+      if(c.textContent.replace(/\s+/g,' ').length > 520) c.classList.add('long');
+      var tag = document.createElement('span'); tag.className = 'count'; tag.textContent = 'Card ' + (k+1) + ' of ' + n;
+      c.insertBefore(tag, c.firstChild);
+      c.setAttribute('aria-hidden', 'true');
+      deck.appendChild(c);
+    });
+    if(stack.getAttribute('data-playall')){
+      var pa = document.createElement('div'); pa.className = 'playall';
+      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> Play all cards</button>';
+      stack.appendChild(pa);
+      pa.querySelector('button').addEventListener('click', function(ev){
+        ev.stopPropagation();
+        if(queue === stack){ stopAudio(); return; }
+        stopAudio(); queue = stack;
+        function step(){
+          if(queue !== stack) return;
+          var b = cards[i].querySelector('.say');
+          if(!b){ next(); return; }
+          playBtn(b, function(){ setTimeout(function(){ if(queue !== stack) return; if(i === n-1){ queue = null; return; } go(1); step(); }, 900); });
+        }
+        step();
+      }, true);
+    }
+    stack.appendChild(deck);
+
+    var controls = document.createElement('div'); controls.className = 'controls';
+    controls.innerHTML = '<button type="button" class="back">Back</button><span class="where" aria-live="polite"></span><button type="button" class="next">Next card</button><button type="button" class="full">Full screen</button>';
+    stack.appendChild(controls);
+    var hint = document.createElement('p'); hint.className = 'hint'; hint.textContent = 'Click the card to see the next card.';
+    stack.appendChild(hint);
+    var where = controls.querySelector('.where');
+
+    var heights = [];
+    function size(){
+      cards.forEach(function(c, k){ c.style.height = 'auto'; heights[k] = c.offsetHeight; c.style.height = ''; });
+      deck.style.height = heights[i] + 'px';
+    }
+    function show(){
+      cards.forEach(function(c, k){ c.classList.toggle('top', k === i); c.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      where.textContent = 'Card ' + (i+1) + ' of ' + n;
+      if(heights.length) deck.style.height = heights[i] + 'px';
+      if(active === api && big.classList.contains('open')) fill();
+    }
+    function go(step){
+      if(busy) return; busy = true;
+      var old = cards[i];
+      i = (i + step + n) % n;
+      var cls = step > 0 ? 'leave' : 'leave-back';
+      show();
+      old.classList.add(cls);
+      cards[i].classList.add('arrive');
+      setTimeout(function(){ old.classList.remove(cls); cards[i].classList.remove('arrive'); busy = false; }, 440);
+    }
+    function next(){ go(1); }
+    function fill(){
+      bigBody.innerHTML = cards[i].innerHTML;
+      bigWhere.textContent = 'Card ' + (i+1) + ' of ' + n;
+      bigBody.scrollTop = 0;
+    }
+    var api = { go: go, fill: fill, card: function(){ return cards[i]; } };
+
+    deck.addEventListener('click', function(e){ if(e.target.closest('a') || e.target.closest('.say')) return; go(1); });
+    deck.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); go(1); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
+    });
+    controls.querySelector('.next').addEventListener('click', function(){ go(1); });
+    controls.querySelector('.back').addEventListener('click', function(){ go(-1); });
+    controls.querySelector('.full').addEventListener('click', function(){
+      active = api; fill(); big.classList.add('open'); big.querySelector('.big-next').focus();
+    });
+
+    size(); show();
+    window.addEventListener('resize', size);
+    window.addEventListener('load', size);
+    stack.querySelectorAll('img').forEach(function(img){ img.addEventListener('load', size); });
+  });
+
+  function closeBig(){ big.classList.remove('open'); active = null; }
+  big.querySelector('.big-close').addEventListener('click', closeBig);
+  big.querySelector('.big-next').addEventListener('click', function(){ if(active) active.go(1); });
+  big.querySelector('.big-back').addEventListener('click', function(){ if(active) active.go(-1); });
+  document.addEventListener('keydown', function(e){
+    if(!big.classList.contains('open')) return;
+    if(e.key === 'Escape') closeBig();
+    if(e.key === 'ArrowRight' && active) active.go(1);
+    if(e.key === 'ArrowLeft' && active) active.go(-1);
+  });
+
+  /* ---------- activities ---------- */
+  function shuffle(a){ a = a.slice(); for(var i = a.length-1; i > 0; i--){ var j = Math.floor(Math.random()*(i+1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
+  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
+
+  var builders = {
+    /* chips into targets: used by match (one chip per target) and sort (many chips per bucket) */
+    match: function(root, a){ return buildChips(root, a.pairs.map(function(p){ return { text: p.a, target: p.b }; }), shuffle(a.pairs.map(function(p){ return p.b; })), a.labels || null, 1); },
+    sort: function(root, a){ return buildChips(root, a.items.map(function(it){ return { text: it.text, target: it.bucket }; }), a.buckets, null, 99); },
+    order: function(root, a){
+      var list = el('ol', 'order'); root.appendChild(list);
+      var start = a.start == null ? 1 : a.start;
+      function render(items){
+        list.innerHTML = '';
+        items.forEach(function(t, k){
+          var li = el('li'); li.draggable = true; li.setAttribute('data-text', t);
+          li.innerHTML = '<span class="o-n">' + (start + k) + '</span><span class="o-t">' + esc(t) + '</span><span class="o-btn"><button type="button" aria-label="Move up">&#9650;</button><button type="button" aria-label="Move down">&#9660;</button></span>';
+          list.appendChild(li);
+        });
+      }
+      function items(){ return [].map.call(list.children, function(li){ return li.getAttribute('data-text'); }); }
+      function renumber(){ [].forEach.call(list.children, function(li, k){ li.querySelector('.o-n').textContent = start + k; li.classList.remove('right','wrong'); }); }
+      render(shuffle(a.items));
+      list.addEventListener('click', function(e){
+        var b = e.target.closest('button'); if(!b) return;
+        var li = b.closest('li'); var up = b.getAttribute('aria-label') === 'Move up';
+        if(up && li.previousElementSibling) list.insertBefore(li, li.previousElementSibling);
+        if(!up && li.nextElementSibling) list.insertBefore(li.nextElementSibling, li);
+        renumber();
+      });
+      var drag = null;
+      list.addEventListener('dragstart', function(e){ drag = e.target.closest('li'); if(drag) drag.classList.add('dragging'); });
+      list.addEventListener('dragend', function(){ if(drag) drag.classList.remove('dragging'); drag = null; renumber(); });
+      list.addEventListener('dragover', function(e){ e.preventDefault(); var li = e.target.closest('li'); if(!li || li === drag) return; var r = li.getBoundingClientRect(); if(e.clientY < r.top + r.height/2) list.insertBefore(drag, li); else list.insertBefore(drag, li.nextSibling); });
+      return {
+        check: function(){ var ok = 0; [].forEach.call(list.children, function(li, k){ var good = li.getAttribute('data-text') === a.items[k]; li.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, a.items.length]; },
+        reset: function(){ render(shuffle(a.items)); }
+      };
+    },
+    quiz: function(root, a){
+      var qs = [];
+      a.questions.forEach(function(q, qi){
+        var box = el('div', 'quiz-q'); box.innerHTML = '<p><b>' + (qi+1) + '. ' + esc(q.q) + '</b></p>';
+        var sel = -1;
+        q.options.forEach(function(o, oi){
+          var b = el('button', 'opt', esc(o)); b.type = 'button';
+          b.addEventListener('click', function(){ if(box.classList.contains('done')) return; sel = oi; [].forEach.call(box.querySelectorAll('.opt'), function(x){ x.classList.remove('selected'); }); b.classList.add('selected'); });
+          box.appendChild(b);
+        });
+        if(q.why) box.appendChild(el('p', 'why', esc(q.why)));
+        root.appendChild(box);
+        qs.push({ box: box, get: function(){ return sel; }, set: function(v){ sel = v; }, q: q });
+      });
+      return {
+        check: function(){ var ok = 0; qs.forEach(function(x){ var opts = x.box.querySelectorAll('.opt'); x.box.classList.add('done'); opts.forEach(function(o, oi){ o.classList.remove('selected'); if(oi === x.q.answer) o.classList.add('right'); else if(oi === x.get()) o.classList.add('wrong'); }); if(x.get() === x.q.answer) ok++; }); return [ok, qs.length]; },
+        reset: function(){ qs.forEach(function(x){ x.set(-1); x.box.classList.remove('done'); x.box.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected','right','wrong'); }); }); }
+      };
+    },
+    table: function(root, a){
+      var t = el('table', 'fill-table'); root.appendChild(t);
+      t.innerHTML = '<thead><tr>' + a.columns.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead>';
+      var tb = el('tbody'); t.appendChild(tb);
+      a.rows.forEach(function(r){
+        var tr = el('tr'); tr.innerHTML = '<td><b>' + esc(r.label) + '</b></td>';
+        r.cells.forEach(function(c){
+          var td = el('td'); var s = el('select'); s.innerHTML = '<option value="">Choose...</option>' + shuffle(c.options).map(function(o){ return '<option>' + esc(o) + '</option>'; }).join('');
+          s.setAttribute('data-answer', c.answer); td.appendChild(s); tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      return {
+        check: function(){ var ok = 0, n = 0; t.querySelectorAll('select').forEach(function(s){ n++; var td = s.parentNode; td.classList.remove('right','wrong'); var good = s.value === s.getAttribute('data-answer'); td.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, n]; },
+        reset: function(){ t.querySelectorAll('select').forEach(function(s){ s.value = ''; s.parentNode.classList.remove('right','wrong'); }); }
+      };
+    }
+  };
+
+  function buildChips(root, items, targetNames, labels, cap){
+    var bank = el('div', 'bank'); root.appendChild(bank);
+    var tg = el('div', 'targets'); root.appendChild(tg);
+    var selected = null, targets = {};
+    targetNames.forEach(function(name){
+      var t = el('div', 'target'); t.setAttribute('data-name', name);
+      t.innerHTML = '<div class="t-label">' + esc(labels ? (labels[name] || name) : name) + '</div><div class="t-drop"></div>';
+      tg.appendChild(t); targets[name] = t;
+      t.addEventListener('click', function(){ if(selected) place(selected, t); });
+      t.addEventListener('dragover', function(e){ e.preventDefault(); t.classList.add('over'); });
+      t.addEventListener('dragleave', function(){ t.classList.remove('over'); });
+      t.addEventListener('drop', function(e){ e.preventDefault(); t.classList.remove('over'); if(selected) place(selected, t); });
+    });
+    function place(chip, t){
+      var drop = t.querySelector('.t-drop');
+      if(cap === 1 && drop.children.length){ bank.appendChild(drop.firstElementChild); }
+      drop.appendChild(chip); chip.classList.remove('selected','right','wrong'); selected = null;
+    }
+    function mk(it){
+      var c = el('div', 'chip', esc(it.text)); c.setAttribute('data-target', it.target); c.draggable = true; c.tabIndex = 0;
+      c.addEventListener('click', function(e){ e.stopPropagation(); if(c.parentNode !== bank){ bank.appendChild(c); c.classList.remove('right','wrong'); selected = null; return; } if(selected) selected.classList.remove('selected'); selected = c; c.classList.add('selected'); });
+      c.addEventListener('dragstart', function(){ selected = c; c.classList.add('selected'); });
+      c.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); c.click(); } });
+      return c;
+    }
+    function fillBank(){ bank.innerHTML = ''; shuffle(items).forEach(function(it){ bank.appendChild(mk(it)); }); }
+    fillBank();
+    return {
+      check: function(){ var ok = 0; items.length; root.querySelectorAll('.chip').forEach(function(c){ var t = c.closest('.target'); c.classList.remove('right','wrong'); if(!t){ c.classList.add('wrong'); return; } var good = t.getAttribute('data-name') === c.getAttribute('data-target'); c.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, items.length]; },
+      reset: function(){ root.querySelectorAll('.t-drop').forEach(function(d){ d.innerHTML = ''; }); fillBank(); selected = null; }
+    };
+  }
+
+  document.querySelectorAll('.activity').forEach(function(act){
+    var a; try{ a = JSON.parse(act.getAttribute('data-activity')); }catch(e){ return; }
+    var body = act.querySelector('.act-body'), res = act.querySelector('.act-result');
+    var b = builders[a.type]; if(!b) return;
+    var api = b(body, a);
+    var slide = act.closest('section.slide'), peek = act.querySelector('.act-peek'), tools = act.querySelector('.act-tools');
+    function blur(on){ if(slide) slide.classList.toggle('hide-notes', on); peek.textContent = on ? 'Show the notes' : 'Hide the notes to carry on'; act.classList.toggle('peeking', !on && act.classList.contains('started')); }
+    act.querySelector('.act-go').addEventListener('click', function(){
+      act.classList.add('started'); act.querySelector('.act-start').hidden = true; body.hidden = false; tools.hidden = false; blur(true);
+      act.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    peek.addEventListener('click', function(){ blur(!slide.classList.contains('hide-notes')); });
+    act.querySelector('.act-check').addEventListener('click', function(){
+      var r = api.check(); res.className = 'act-result ' + (r[0] === r[1] ? 'good' : 'bad');
+      res.textContent = r[0] === r[1] ? 'All correct. Well done!' : r[0] + ' of ' + r[1] + ' correct. Try the red ones again.';
+      if(r[0] === r[1]){ act.classList.remove('started'); blur(false); }
+    });
+    act.querySelector('.act-reset').addEventListener('click', function(){ api.reset(); res.textContent = ''; res.className = 'act-result'; });
+  });
+})();
+</script>
+</body>
+</html>

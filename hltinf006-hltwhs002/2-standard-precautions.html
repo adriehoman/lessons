@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HLTINF006 / HLTWHS002 Standard precautions: protect yourself and others</title>
+<meta name="description" content="Lesson 2 of the Infection Control and WHS cluster: hand hygiene, personal hygiene, PPE, exposure to blood and body fluids, spills, cleaning, Spaulding categories, linen and aseptic technique.">
+<style>:root{
+  --ink:#1b2530; --soft-ink:#44505c; --paper:#ffffff;
+  --deep:#12384a; --aqua:#8fe3e8; --action:#0b6f7c;
+  --card-a:#fbfbf9; --card-b:#ecece8; --edge:#d9d9d4;
+  --warn:#b45309; --warn-bg:#fff7ed; --ok:#15803d; --bad:#b91c1c;
+  --teach:#4c1d95; --teach-bg:#f5f3ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size:clamp(17px,1.5vw,30px); line-height:1.55}
+main{overflow-x:clip}
+.wrap{max-width:1500px; margin:0 auto; padding:0 clamp(20px,3vw,60px)}
+
+/* banner */
+.banner{position:relative; background:var(--deep); color:#fff; padding:clamp(60px,9vw,140px) 20px 40px; overflow:hidden}
+.banner-inner{position:relative; z-index:2; max-width:1500px; margin:0 auto}
+.banner .kicker{margin:0 0 6px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:.75em; color:var(--aqua)}
+.banner h1{margin:0; font-size:clamp(30px,5vw,76px); line-height:1.1; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.banner .sub{margin:12px 0 0; font-size:1.05em; max-width:28em; color:#e6f6f7}
+.banner svg.hero{position:absolute; right:-2vw; bottom:-4vw; width:min(46vw,620px); height:auto; opacity:.95; z-index:1}
+@media (max-width:800px){.banner svg.hero{opacity:.25}}
+
+/* index */
+#index{margin:30px 0 10px; padding:18px 26px 12px; background:#eef3f4; border-left:6px solid var(--action); border-radius:6px}
+#index h2{font-size:1.2em; margin:0 0 8px}
+#index ul{margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(19em,1fr)); column-gap:3em}
+#index li{margin:4px 0}
+#index a{text-decoration:none; color:var(--ink); display:flex; gap:10px; align-items:baseline}
+#index a:hover{color:var(--action); text-decoration:underline}
+.num{display:inline-flex; align-items:center; justify-content:center; min-width:1.7em; height:1.7em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; font-size:.8em; flex:none}
+.opening{font-size:1.05em; margin:26px 0 10px}
+
+/* slides */
+section.slide{padding:36px 0 18px; border-top:1px solid var(--edge); margin-top:30px; scroll-margin-top:10px}
+section.slide:first-of-type{border-top:0}
+h2.topic{font-size:1.4em; line-height:1.3; margin:0 0 10px; display:flex; gap:14px; align-items:center}
+h2.topic .num{font-size:.7em; min-width:2em; height:2em}
+h3{font-size:1.15em; line-height:1.3; margin:0 0 10px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px; padding-left:26px}
+li{margin:4px 0}
+a{color:var(--action); text-underline-offset:3px}
+a.star{font-weight:700; padding:0 4px; font-size:.8em; text-decoration:none; opacity:.55}
+a.star:hover{opacity:1}
+a.term{text-decoration:underline dotted; color:inherit}
+.intro{font-size:1.05em; color:var(--soft-ink)}
+a:focus-visible,button:focus-visible,.deck:focus-visible{outline:3px solid #f2a900; outline-offset:3px}
+
+ol.points{margin:12px 0 18px; padding-left:0; list-style:none; counter-reset:pt}
+ol.points li{position:relative; padding:10px 14px 10px 3.2em; margin:6px 0; background:#f7f9fa; border-radius:8px; counter-increment:pt}
+ol.points li::before{content:counter(pt); position:absolute; left:.9em; top:.55em; width:1.7em; height:1.7em; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:700; font-size:.85em; display:flex; align-items:center; justify-content:center}
+.ref{display:none; float:right; margin-left:10px; font-size:.65em; color:var(--teach); background:var(--teach-bg); border:1px solid #ddd6fe; border-radius:4px; padding:0 6px}
+body.teacher .ref{display:inline-block}
+
+figure.visual{margin:18px 0 22px; text-align:center}
+figure.visual svg,figure.visual img{max-width:100%; height:auto; max-height:70vh}
+figure.visual figcaption{font-size:.8em; color:var(--soft-ink); margin-top:6px}
+figure.pic{margin:22px 0}
+figure.pic img{display:block; width:100%; height:auto; max-height:86vh; object-fit:contain; border-radius:4px}
+
+.watch-out{margin:14px 0 20px; padding:14px 18px 14px 56px; background:var(--warn-bg); border:2px solid #fdba74; border-radius:8px; position:relative}
+.watch-out::before{content:"!"; position:absolute; left:14px; top:12px; width:30px; height:30px; border-radius:50%; background:var(--warn); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.watch-out b{color:var(--warn); margin-right:6px}
+
+/* audio */
+.say{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:40px; display:inline-flex; gap:8px; align-items:center}
+.say.playing{background:var(--action); color:#fff}
+.say .ico{font-size:.8em}
+.audio-line{display:flex; gap:12px; align-items:center; margin:0 0 14px; flex-wrap:wrap}
+.audio-label{color:var(--soft-ink); font-size:.9em}
+.card-audio{margin-top:10px}
+.playall{margin:0 0 34px; text-align:center}
+
+/* card stack (from the Sway template) */
+.stack{margin:60px auto 40px; width:86%; max-width:1150px; --tilt:.4}
+.deck{position:relative; cursor:pointer; border-radius:3px; transition:height .3s ease}
+.pile i{position:absolute; inset:0; background:var(--card-b); border:1px solid var(--edge); box-shadow:0 1px 3px rgba(20,30,40,.10)}
+.pile i:nth-child(even){background:var(--card-a)}
+.pile i{transform:rotate(calc(var(--a) * var(--tilt,1))) translate(var(--x),var(--y))}
+.pile i:nth-child(1){--a:-15deg; --x:-4px; --y:6px}
+.pile i:nth-child(2){--a:6deg; --x:6px; --y:2px}
+.pile i:nth-child(3){--a:-12deg; --x:3px; --y:-5px}
+.pile i:nth-child(4){--a:3deg; --x:-5px; --y:4px}
+.pile i:nth-child(5){--a:-10deg; --x:5px; --y:5px}
+.pile i:nth-child(6){--a:-2deg; --x:-3px; --y:-3px}
+.pile i:nth-child(7){--a:-6deg; --x:2px; --y:3px}
+.pile{position:absolute; inset:0; filter:drop-shadow(0 14px 18px rgba(20,30,40,.16))}
+.card{position:absolute; left:0; top:0; width:100%; height:100%; background:var(--card-a); border:1px solid var(--edge);
+  padding:1.5em 1.8em 1.3em; font-size:clamp(16px,1.4vw,27px); line-height:1.5; opacity:0; pointer-events:none; z-index:1; min-height:7em;
+  transform:rotate(calc(var(--r,-6deg) * var(--tilt,1))); box-shadow:0 2px 6px rgba(20,30,40,.14)}
+.card.shade{background:var(--card-b)}
+.card.long{font-size:clamp(14.5px,1.25vw,24px); line-height:1.45}
+.card.top{opacity:1; pointer-events:auto; z-index:3}
+.card.arrive{animation:arrive .42s ease-out}
+.card.leave{opacity:1; z-index:4; animation:leave .42s ease-in forwards}
+.card.leave-back{opacity:1; z-index:4; animation:leaveBack .42s ease-in forwards}
+@keyframes arrive{from{transform:rotate(calc(var(--r) * var(--tilt,1) + 5deg)) scale(.96)} to{transform:rotate(calc(var(--r) * var(--tilt,1))) scale(1)}}
+@keyframes leave{to{transform:translate(58%,-10%) rotate(16deg); opacity:0}}
+@keyframes leaveBack{to{transform:translate(-58%,-10%) rotate(-18deg); opacity:0}}
+.card .count{float:right; margin:-6px -8px 6px 14px; font-size:.8em; font-weight:600; color:var(--soft-ink); background:#fff; border:1px solid var(--edge); border-radius:20px; padding:2px 12px}
+.card ul{margin-bottom:6px}
+.card-pic{float:right; width:clamp(90px,22%,220px); margin:0 0 10px 16px}
+.card-pic svg{width:100%; height:auto}
+.controls{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin-top:60px}
+.controls button{font:inherit; font-size:clamp(17px,1.2vw,24px); font-weight:600; cursor:pointer; padding:10px 20px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:48px}
+.controls button.next{background:var(--action); color:#fff}
+.controls button:hover{filter:brightness(.94)}
+.controls .where{min-width:7em; text-align:center; font-weight:700; font-size:clamp(18px,1.25vw,25px)}
+.hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:10px 0 0}
+
+/* full screen */
+.big{position:fixed; inset:0; z-index:50; background:#05090c; color:#fff; display:none}
+.big.open{display:flex; flex-direction:column}
+.big .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; font-weight:700}
+.big .body{flex:1; overflow:auto; padding:8px clamp(20px,7vw,90px) 24px; font-size:clamp(20px,2.9vw,34px); line-height:1.45}
+.big .body h3{font-size:1.1em; margin-bottom:.5em}
+.big .body .count{display:none}
+.big .body .card-pic{width:22%}
+.big .body .say{color:#fff; border-color:#fff; background:transparent}
+.big .foot{display:flex; gap:12px; justify-content:center; padding:12px 18px 20px}
+.big button{font:inherit; font-size:18px; font-weight:600; cursor:pointer; min-height:48px; padding:10px 22px; border-radius:6px; border:2px solid #fff; background:transparent; color:#fff}
+.big button.next{background:#fff; color:#05090c}
+
+/* activities */
+.activity{margin:22px 0 28px; padding:16px 20px 14px; border:2px solid #cfe3e6; border-radius:10px; background:#f4fafb}
+.act-head{display:flex; gap:10px; align-items:center; margin-bottom:6px}
+.act-badge{background:var(--action); color:#fff; font-size:.7em; font-weight:700; padding:2px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:.04em}
+.act-instr{color:var(--soft-ink); font-size:.9em}
+.act-foot{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px}
+.act-foot button{font:inherit; font-size:.9em; font-weight:600; cursor:pointer; padding:8px 18px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:44px}
+.act-foot .act-check{background:var(--action); color:#fff}
+.act-result{font-weight:700}
+.act-result.good{color:var(--ok)} .act-result.bad{color:var(--bad)}
+.chip{display:inline-flex; align-items:center; font-size:.9em; padding:8px 14px; margin:5px; border-radius:8px; border:2px solid #9fc5cb; background:#fff; cursor:pointer; user-select:none; min-height:44px; line-height:1.3}
+.chip.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.chip.right{border-color:var(--ok); background:#ecfdf5}
+.chip.wrong{border-color:var(--bad); background:#fef2f2}
+.chip.placed{cursor:default}
+.bank{min-height:52px; padding:6px; border:2px dashed #9fc5cb; border-radius:8px; margin-bottom:12px; background:#fff}
+.targets{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(16em,1fr))}
+.target{border:2px solid #9fc5cb; border-radius:8px; background:#fff; padding:8px 10px; min-height:70px}
+.target .t-label{font-weight:700; margin-bottom:4px}
+.target .t-drop{min-height:44px; border:2px dashed #e0ecee; border-radius:6px; padding:2px}
+.target.over .t-drop{border-color:var(--action); background:#eef7f8}
+.order{list-style:none; padding:0; margin:0; counter-reset:o}
+.order li{display:flex; gap:10px; align-items:center; background:#fff; border:2px solid #9fc5cb; border-radius:8px; padding:8px 10px; margin:6px 0; cursor:grab}
+.order li .o-n{min-width:2em; height:2em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; font-size:.85em}
+.order li .o-t{flex:1}
+.order li .o-btn{display:flex; gap:4px}
+.order li .o-btn button{font:inherit; min-width:40px; min-height:40px; border-radius:6px; border:1px solid #9fc5cb; background:#fff; cursor:pointer}
+.order li.right{border-color:var(--ok); background:#ecfdf5} .order li.wrong{border-color:var(--bad); background:#fef2f2}
+.order li.dragging{opacity:.5}
+.quiz-q{margin:10px 0 16px}
+.quiz-q .opt{display:block; width:100%; text-align:left; font:inherit; font-size:.95em; padding:10px 14px; margin:6px 0; border-radius:8px; border:2px solid #9fc5cb; background:#fff; cursor:pointer; min-height:44px}
+.quiz-q .opt.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.quiz-q .opt.right{border-color:var(--ok); background:#ecfdf5} .quiz-q .opt.wrong{border-color:var(--bad); background:#fef2f2}
+.quiz-q .why{font-size:.85em; color:var(--soft-ink); margin:4px 0 0 6px; display:none}
+.quiz-q.done .why{display:block}
+.fill-table{width:100%; border-collapse:collapse; font-size:.9em; background:#fff}
+.fill-table th,.fill-table td{border:1px solid #cfe3e6; padding:8px 10px; text-align:left; vertical-align:top}
+.fill-table th{background:#e6f1f3}
+.fill-table select{font:inherit; font-size:.95em; min-height:40px; max-width:100%}
+.fill-table td.right{background:#ecfdf5} .fill-table td.wrong{background:#fef2f2}
+
+/* teacher view */
+.tnotes{display:none; margin:18px 0 6px; padding:12px 16px; background:var(--teach-bg); border:2px dashed #c4b5fd; border-radius:8px; font-size:.82em; color:#2e1065}
+body.teacher .tnotes{display:block}
+.tnotes .t-head{font-weight:800; color:var(--teach); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; font-size:.85em}
+.tnotes ul{margin:4px 0 8px}
+.tnotes .t-trap{background:#fff7ed; border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0}
+.tlink{font:inherit; font-size:1em; color:var(--soft-ink); background:none; border:0; text-decoration:underline; cursor:pointer; padding:0}
+.tpill[hidden]{display:none}
+.tpill{position:fixed; top:10px; right:10px; z-index:45; background:var(--teach); color:#fff; border-radius:30px; padding:6px 8px 6px 16px; display:flex; gap:8px; align-items:center; font-size:15px; font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.tpill button{font:inherit; font-size:14px; font-weight:700; border:0; border-radius:20px; padding:6px 12px; background:#fff; color:var(--teach); cursor:pointer; min-height:34px}
+.tpill button.tp-out{background:transparent; color:#fff; border:1px solid #fff}
+.card-pic.photo img{width:100%; height:auto; border-radius:8px; display:block}
+.grid4{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(11em,1fr)); margin:16px 0 22px}
+.grid4 figure{margin:0; background:#eef3f4; border-radius:12px; overflow:hidden}
+.grid4 img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+.grid4 figcaption{padding:10px 14px 12px; font-size:.9em}
+.grid4 figcaption b{display:block; color:var(--deep); font-size:1.05em}
+.side{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; margin:10px 0 18px}
+.side > div{flex:2 1 420px}
+.side figure{flex:0 1 380px; max-width:440px; margin:0}
+.side figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* Gerry */
+.mascot{position:fixed; left:clamp(6px,1.2vw,24px); top:120px; width:clamp(54px,6vw,110px); z-index:35; cursor:pointer; transition:top .6s cubic-bezier(.3,.9,.4,1.1); filter:drop-shadow(0 6px 10px rgba(0,0,0,.25)); user-select:none}
+.mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.mascot.hop svg{animation:hop .7s ease-out 1, bob 2.6s ease-in-out .7s infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes hop{0%{transform:translateY(0) scale(1,1)} 30%{transform:translateY(-40px) scale(.95,1.08) rotate(14deg)} 60%{transform:translateY(0) scale(1.08,.92)} 100%{transform:translateY(0) scale(1,1)}}
+.gerry-bubble{position:absolute; left:100%; top:0; margin-left:10px; width:max-content; max-width:16em; background:#fff; color:var(--ink); border:2px solid var(--deep); border-radius:14px; padding:8px 12px; font-size:clamp(14px,1vw,18px); line-height:1.35; box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.gerry-bubble::before{content:""; position:absolute; left:-12px; top:16px; border:6px solid transparent; border-right-color:var(--deep)}
+@media (max-width:900px){.mascot{display:none}}
+.mascot.drop{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.drop .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.drop .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+@media (prefers-reduced-motion:reduce){.mascot svg{animation:none}}
+
+.home{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(14px,2vw,32px); z-index:40; background:var(--action); color:#fff; font-weight:700; font-size:clamp(17px,1.2vw,24px); text-decoration:none; padding:12px 22px; border-radius:30px; box-shadow:0 4px 14px rgba(0,0,0,.25); min-height:48px; display:flex; align-items:center; gap:8px}
+.foot{margin:50px 0 90px; padding-top:16px; border-top:1px solid var(--edge); font-size:.75em; color:var(--soft-ink)}
+
+@media (max-width:560px){
+  body{font-size:17px}
+  .card{padding:20px 20px 18px; font-size:16px}
+  .card.long{font-size:14.5px}
+  .stack{width:auto; margin-left:14px; margin-right:14px; --tilt:.3}
+  .card-pic{width:30%}
+  h2.topic{font-size:1.25em}
+}
+@media (prefers-reduced-motion:reduce){
+  .card.arrive,.card.leave,.card.leave-back{animation-duration:.01s}
+  html{scroll-behavior:auto}
+}
+
+/* ordered strips (PPE on / off) */
+.strips{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr)); margin:16px 0 20px}
+.strip{background:#f7f9fa; border-radius:12px; padding:14px 16px}
+.strip-title{font-weight:800; color:var(--deep); margin-bottom:8px}
+.strip-steps{list-style:none; margin:0; padding:0; counter-reset:st}
+.strip-steps li{counter-increment:st; display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px solid #e2e8f0}
+.strip-steps li:last-child{border-bottom:0}
+.strip-steps li::before{content:counter(st); display:inline-flex; align-items:center; justify-content:center; width:1.9em; height:1.9em; border-radius:50%; background:var(--c,#0b6f7c); color:#fff; font-weight:800; font-size:.85em; flex:none}
+table.plain{width:100%; border-collapse:collapse; font-size:.92em; margin:10px 0 18px; background:#fff}
+table.plain th,table.plain td{border:1px solid #cfe3e6; padding:8px 10px; text-align:left; vertical-align:top}
+table.plain th{background:#e6f1f3}
+.tl-high{background:#fee2e2} .tl-med{background:#fef3c7} .tl-low{background:#dcfce7}
+
+/* activity start and blur */
+.act-start[hidden]{display:none}
+.act-start{display:flex; gap:14px; align-items:center; flex-wrap:wrap; padding:6px 0 2px; color:var(--soft-ink); font-size:.9em}
+.act-go{font:inherit; font-size:1em; font-weight:700; cursor:pointer; padding:10px 26px; border-radius:8px; border:0; background:var(--action); color:#fff; min-height:48px}
+.act-tools{margin:0 0 10px}
+.act-peek{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid #9fc5cb; background:#fff; color:var(--action); min-height:40px}
+section.slide.hide-notes > :is(ol.points, .stack, figure.visual, .after, .intro, .watch-out, .vid, .audio-line, .side-points, p){filter:blur(7px); pointer-events:none; user-select:none; transition:filter .3s}
+section.slide.hide-notes .activity{filter:none}
+.vid{margin:20px 0 10px}
+.vid-title{margin:0 0 8px}
+.vid-by{color:var(--soft-ink); font-size:.85em}
+.video{margin:0 auto 6px; max-width:calc((100vh - 90px) * 16 / 9); aspect-ratio:16/9; background:#0e1a22; border-radius:6px; overflow:hidden; position:relative}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.watch{margin:0 0 20px; font-size:.8em; text-align:center}
+
+/* activity locked while the notes are showing */
+.activity.peeking .act-body, .activity.peeking .act-foot{pointer-events:none; opacity:.35; filter:grayscale(1)}
+.activity.peeking .act-tools::after{content:"Read the notes, then press the button to carry on."; margin-left:12px; color:var(--warn); font-weight:700; font-size:.9em}
+/* click to spotlight a part of a diagram */
+.spot [data-spot]{transition:opacity .3s, transform .3s; transform-box:fill-box; transform-origin:center}
+.spot.spotting [data-spot]:not(.lit){opacity:.28}
+.spot [data-spot].lit{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.14)}}
+.spot-hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:-8px 0 14px}
+/* points beside a picture */
+.side-points{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start}
+.side-points > ol.points{flex:2 1 420px; margin-top:0}
+.side-points > figure{flex:0 1 320px; max-width:360px; margin:0}
+.side-points > figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* student-visible Connect source line */
+.source{margin:16px 0 6px; padding:10px 14px 10px 44px; background:#f1f6f8; border-left:4px solid var(--action); border-radius:8px; font-size:.92em; color:var(--soft-ink); position:relative; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center}
+.source::before{content:"\1F4D6"; position:absolute; left:12px; top:8px; font-size:1.2em}
+.source-label{font-weight:700; color:var(--ink)}
+.source a{text-decoration:none; font-weight:600; border:1px solid #cfe3e6; background:#fff; border-radius:999px; padding:2px 10px}
+.source a:hover{background:#e3eef1}
+</style>
+</head>
+<body data-np="6">
+<main>
+<header class="banner first" id="top">
+  <div class="banner-inner">
+    <p class="kicker">HLTINF006 / HLTWHS002 · Lesson 2</p>
+    <h1>Standard precautions: protect yourself and others</h1>
+    <p class="sub">The habits you use with every person, every time: hands, clothing, PPE, spills, cleaning and linen.</p>
+  </div>
+  <svg class="hero" viewBox="0 0 420 300" aria-hidden="true"><g transform="translate(40,40)"><ellipse cx="200" cy="150" rx="150" ry="110" fill="#5ec9cf" opacity=".25"/><path d="M90 120 q110 -60 220 0 v40 q-110 70 -220 0z" fill="#e0f2fe" stroke="#8fe3e8" stroke-width="6"/><path d="M90 120 q-40 0 -40 30 q0 30 40 10 M310 120 q40 0 40 30 q0 30 -40 10" stroke="#8fe3e8" stroke-width="6" fill="none"/><path d="M120 140 h160 M120 160 h160" stroke="#8fe3e8" stroke-width="4" stroke-linecap="round"/></g></svg>
+</header>
+<div class="wrap">
+  <nav id="index" aria-label="Index"><h2>In this lesson</h2><ul><li><a href="#s1"><span class="num">1</span> What are standard precautions?</a></li><li><a href="#s2"><span class="num">2</span> Hand hygiene: why it matters</a></li><li><a href="#s3"><span class="num">3</span> The 5 Moments for hand hygiene</a></li><li><a href="#s4"><span class="num">4</span> Other times to clean your hands</a></li><li><a href="#s5"><span class="num">5</span> Three types of hand hygiene, and which one for which task</a></li><li><a href="#s6"><span class="num">6</span> Routine hand wash: the 12 steps (0 to 11)</a></li><li><a href="#s7"><span class="num">7</span> Alcohol-based hand rub: how, and when not</a></li><li><a href="#s8"><span class="num">8</span> Look after your hands</a></li><li><a href="#s9"><span class="num">9</span> Bare below the elbows and personal hygiene</a></li><li><a href="#s10"><span class="num">10</span> Soiled linen and clothing</a></li><li><a href="#s11"><span class="num">11</span> Cleaning the environment: how often, and with what</a></li><li><a href="#s12"><span class="num">12</span> Reprocessing equipment: the Spaulding categories</a></li><li><a href="#s13"><span class="num">13</span> PPE: what each item does and when to use it</a></li><li><a href="#s14"><span class="num">14</span> Putting on, taking off, and throwing away PPE</a></li><li><a href="#s15"><span class="num">15</span> Exposure to blood or body fluids</a></li><li><a href="#s16"><span class="num">16</span> Cleaning up a body fluid spill (1 to 8)</a></li><li><a href="#s17"><span class="num">17</span> Aseptic technique: five principles</a></li></ul></nav>
+  <p class="opening">In Lesson 1 you learned how Gerry the Germ travels. This lesson is about blocking him. Everything here is a standard precaution: something you do with every person, every time, whether or not you know they have an infection.</p>
+  
+<section class="slide" id="s1" data-ref="NP6 S1">
+  <h2 class="topic"><span class="num">1</span> What are standard precautions?</h2>
+  <p class="intro">Standard precautions are the basic safety steps for every person, every time. You do not wait to find out if someone has an infection. You assume anyone could.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s1.mp3" aria-label="Listen: What are standard precautions?"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg class="spot" viewBox="0 0 600 440" role="img" aria-label="Standard precautions: hand hygiene, PPE, cough manners, safe sharps, cleaning, linen and waste. Click a circle to highlight it."><line x1="300" y1="220" x2="300" y2="70" stroke="#cbd5e1" stroke-width="6"/><line x1="300" y1="220" x2="417.2747223702045" y2="126.47652972118998" stroke="#cbd5e1" stroke-width="6"/><line x1="300" y1="220" x2="446.23918682727356" y2="253.37814009344717" stroke="#cbd5e1" stroke-width="6"/><line x1="300" y1="220" x2="365.08256086763373" y2="355.14533018536287" stroke="#cbd5e1" stroke-width="6"/><line x1="300" y1="220" x2="234.9174391323662" y2="355.1453301853628" stroke="#cbd5e1" stroke-width="6"/><line x1="300" y1="220" x2="153.76081317272644" y2="253.37814009344717" stroke="#cbd5e1" stroke-width="6"/><line x1="300" y1="220" x2="182.72527762979553" y2="126.47652972118999" stroke="#cbd5e1" stroke-width="6"/><g data-spot="Hand hygiene"><circle cx="300" cy="70" r="52" fill="#0b6f7c"/><text x="300" y="66" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Hand</text><text x="300" y="86" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">hygiene</text></g><g data-spot="PPE"><circle cx="417.2747223702045" cy="126.47652972118998" r="52" fill="#0e9aa7"/><text x="417.2747223702045" y="132.47652972119" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">PPE</text></g><g data-spot="Cough manners"><circle cx="446.23918682727356" cy="253.37814009344717" r="52" fill="#2563eb"/><text x="446.23918682727356" y="249.37814009344717" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Cough</text><text x="446.23918682727356" y="269.3781400934472" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">manners</text></g><g data-spot="Safe sharps"><circle cx="365.08256086763373" cy="355.14533018536287" r="52" fill="#7c3aed"/><text x="365.08256086763373" y="351.14533018536287" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Safe</text><text x="365.08256086763373" y="371.14533018536287" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">sharps</text></g><g data-spot="Cleaning"><circle cx="234.9174391323662" cy="355.1453301853628" r="52" fill="#9d174d"/><text x="234.9174391323662" y="361.1453301853628" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Cleaning</text></g><g data-spot="Linen"><circle cx="153.76081317272644" cy="253.37814009344717" r="52" fill="#b45309"/><text x="153.76081317272644" y="259.3781400934472" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Linen</text></g><g data-spot="Waste"><circle cx="182.72527762979553" cy="126.47652972118999" r="52" fill="#15803d"/><text x="182.72527762979553" y="132.47652972119" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Waste</text></g><circle cx="300" cy="220" r="62" fill="#12384a"/><text x="300" y="214" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="800" fill="#8fe3e8">EVERY PERSON</text><text x="300" y="234" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="800" fill="#8fe3e8">EVERY TIME</text></svg><figcaption>Click a circle to light it up.</figcaption></figure>
+  <ol class="points"><li id="s1p1"><span class="ref" title="Reference">NP6 S1 P1</span><b>Hand hygiene</b>: clean hands at the right moments.</li><li id="s1p2"><span class="ref" title="Reference">NP6 S1 P2</span><b>PPE</b>: gloves, gowns, masks and eye protection when there is a risk.</li><li id="s1p3"><span class="ref" title="Reference">NP6 S1 P3</span><b>Cough and sneeze manners</b>: cover, bin, clean your hands.</li><li id="s1p4"><span class="ref" title="Reference">NP6 S1 P4</span><b>Safe sharps</b>: straight into the sharps container, never recapped.</li><li id="s1p5"><span class="ref" title="Reference">NP6 S1 P5</span><b>Cleaning</b>: equipment and surfaces, the right solution at the right time.</li><li id="s1p6"><span class="ref" title="Reference">NP6 S1 P6</span><b>Linen and waste</b>: handled so germs stay inside the bag.</li><li id="s1p7"><span class="ref" title="Reference">NP6 S1 P7</span>If a person is known to have an infection, <b>extra</b> steps are added. Those are called <b>transmission-based precautions</b>.</li></ol>
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305227/View" target="_blank" rel="noopener">Standard precautions</a></div>
+  <aside class="tnotes" data-slide="s1" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s2" data-ref="NP6 S2">
+  <h2 class="topic"><span class="num">2</span> Hand hygiene: why it matters <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F10a%7C8eba362f-7207-41c0-8e8e-0bbc51601738%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Hand hygiene means cleaning your hands with soap and water, or with alcohol-based hand rub. It is the single most effective way to stop infection spreading.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s2.mp3" aria-label="Listen: Hand hygiene: why it matters"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s2p1"><span class="ref" title="Reference">NP6 S2 P1</span>The <b>main aim</b> of hand hygiene is to <b>reduce the spread of infection</b> and to <b>reduce antimicrobial resistance</b>.</li><li id="s2p2"><span class="ref" title="Reference">NP6 S2 P2</span>It protects <b>the person you support</b>, <b>you</b>, and <b>everyone else</b> in the workplace.</li><li id="s2p3"><span class="ref" title="Reference">NP6 S2 P3</span>Hands are Gerry's favourite taxi. Clean hands take the taxi off the road.</li></ol>
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305228/View" target="_blank" rel="noopener">Follow hand hygiene practices</a></div>
+  <aside class="tnotes" data-slide="s2" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s3" data-ref="NP6 S3">
+  <h2 class="topic"><span class="num">3</span> The 5 Moments for hand hygiene <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F10i%7C511d2b3f-6516-4035-92c3-4c51b25a618f%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Australia uses the 5 Moments. They tell you exactly when to clean your hands around a person.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s3.mp3" aria-label="Listen: The 5 Moments for hand hygiene"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><img src="pics/info-5moments.jpg" alt="Infographic: the WHO 5 Moments of hand hygiene around a patient in bed" style="border-radius:12px"></figure>
+  <ol class="points"><li id="s3p1"><span class="ref" title="Reference">NP6 S3 P1</span><b>Moment 1: before touching the person.</b></li><li id="s3p2"><span class="ref" title="Reference">NP6 S3 P2</span><b>Moment 2: before a procedure</b> (for example a wound dressing or helping with a catheter).</li><li id="s3p3"><span class="ref" title="Reference">NP6 S3 P3</span><b>Moment 3: after a procedure or after any body fluid exposure.</b></li><li id="s3p4"><span class="ref" title="Reference">NP6 S3 P4</span><b>Moment 4: after touching the person.</b></li><li id="s3p5"><span class="ref" title="Reference">NP6 S3 P5</span><b>Moment 5: after touching the person's surroundings</b> (bed, table, chair, equipment) even if you did not touch the person.</li></ol>
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Hand Hygiene Australia: 5 Moments for Hand Hygiene <span class="vid-by">(Hand Hygiene Australia)</span></p><div class="video" data-youtube="wLfT2-LYvV8" data-title="Hand Hygiene Australia: 5 Moments for Hand Hygiene"></div></div>
+  
+  <div class="activity" id="act-s3-1" data-activity='{"type":"order","title":"Put the 5 Moments in order","instructions":"Use the arrows or drag the moments into order 1 to 5.","items":["Before touching the person","Before a procedure","After a procedure or body fluid exposure","After touching the person","After touching the person&#39;s surroundings"]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Put the 5 Moments in order</b></div>
+    <p class="act-instr">Use the arrows or drag the moments into order 1 to 5.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305230/View" target="_blank" rel="noopener">Five moments of hand hygiene</a></div>
+  <aside class="tnotes" data-slide="s3" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s4" data-ref="NP6 S4">
+  <h2 class="topic"><span class="num">4</span> Other times to clean your hands <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F10d%7C6b5c935e-74bb-4f27-ae9e-d04e5684aae5%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">The 5 Moments cover care. There are other everyday times at work when you must wash or rub your hands.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s4.mp3" aria-label="Listen: Other times to clean your hands"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s4p1"><span class="ref" title="Reference">NP6 S4 P1</span>When you <b>start work</b> and when you <b>leave work</b>.</li><li id="s4p2"><span class="ref" title="Reference">NP6 S4 P2</span>Before you <b>eat, or handle food or drinks</b> (your own, or the person's).</li><li id="s4p3"><span class="ref" title="Reference">NP6 S4 P3</span>After using a <b>computer keyboard, tablet or phone</b> in a care area.</li><li id="s4p4"><span class="ref" title="Reference">NP6 S4 P4</span>Before you <b>put on gloves</b> and after you <b>take them off</b>.</li><li id="s4p5"><span class="ref" title="Reference">NP6 S4 P5</span>After the <b>toilet</b>.</li><li id="s4p6"><span class="ref" title="Reference">NP6 S4 P6</span>After handling <b>laundry, equipment or waste</b>.</li><li id="s4p7"><span class="ref" title="Reference">NP6 S4 P7</span>After <b>blowing your nose, or touching your nose or mouth</b>.</li><li id="s4p8"><span class="ref" title="Reference">NP6 S4 P8</span>After <b>smoking</b>.</li></ol>
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s4-1" data-activity='{"type":"quiz","title":"Hand hygiene or not?","instructions":"Do you need to clean your hands here?","questions":[{"q":"You just typed the progress notes on the ward computer and are going to help Mrs Lee eat lunch.","options":["No, the computer is clean","Yes, after the keyboard and before food"],"answer":1,"why":"Keyboards in care areas carry germs, and you are about to handle food."},{"q":"You took your gloves off after a pad change.","options":["No, the gloves protected my hands","Yes, gloves can leak and hands sweat"],"answer":1,"why":"Always clean hands after removing gloves. Gloves are not a substitute."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Hand hygiene or not?</b></div>
+    <p class="act-instr">Do you need to clean your hands here?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305230/View" target="_blank" rel="noopener">Five moments of hand hygiene</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305228/View" target="_blank" rel="noopener">Follow hand hygiene practices</a></div>
+  <aside class="tnotes" data-slide="s4" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s5" data-ref="NP6 S5">
+  <h2 class="topic"><span class="num">5</span> Three types of hand hygiene, and which one for which task <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F10j%7Cf7f31be4-0f12-4689-83ee-21a9562ebd0d%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Not every task needs the same hand wash. There are three types.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s5.mp3" aria-label="Listen: Three types of hand hygiene, and which one for which task"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 900 300" role="img" aria-label="Three types of hand hygiene: routine or social, clinical, surgical">
+<circle cx="150" cy="120" r="100" fill="#0e9aa7"/><text x="150" y="112" text-anchor="middle" font-family="Segoe UI, Arial" font-size="24" font-weight="800" fill="#fff">Routine (social)</text><text x="150" y="142" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#e0f2fe">wash 20 to 30 s, or rub</text><text x="150" y="262" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" fill="#1b2530">everyday care</text><circle cx="450" cy="120" r="100" fill="#2563eb"/><text x="450" y="112" text-anchor="middle" font-family="Segoe UI, Arial" font-size="24" font-weight="800" fill="#fff">Clinical</text><text x="450" y="142" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#e0f2fe">wash 60 s</text><text x="450" y="262" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" fill="#1b2530">before and after clinical tasks</text><circle cx="750" cy="120" r="100" fill="#7c3aed"/><text x="750" y="112" text-anchor="middle" font-family="Segoe UI, Arial" font-size="24" font-weight="800" fill="#fff">Surgical</text><text x="750" y="142" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#e0f2fe">wash 2 to 5 min</text><text x="750" y="262" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" fill="#1b2530">before surgery</text>
+</svg></figure>
+  <ol class="points"><li id="s5p1"><span class="ref" title="Reference">NP6 S5 P1</span><b>Routine (social) hand hygiene</b>: soap and water for 20 to 30 seconds, <b>or</b> alcohol-based hand rub. For everyday care.</li><li id="s5p2"><span class="ref" title="Reference">NP6 S5 P2</span><b>Clinical hand wash</b>: soap and water for about 60 seconds. Before and after clinical tasks and after body fluid contact.</li><li id="s5p3"><span class="ref" title="Reference">NP6 S5 P3</span><b>Surgical hand wash</b>: 2 to 5 minutes with antimicrobial soap, up to the elbows. Only before surgery.</li><li id="s5p4"><span class="ref" title="Reference">NP6 S5 P4</span>Removing general waste: <b>routine hand rub</b>. Using a computer: <b>routine hand rub</b>.</li><li id="s5p5"><span class="ref" title="Reference">NP6 S5 P5</span>Assisting a person with personal hygiene: <b>routine hand WASH</b>. Before food preparation: <b>routine hand WASH</b>.</li><li id="s5p6"><span class="ref" title="Reference">NP6 S5 P6</span>Changing a dressing: <b>clinical</b>. After exposure to body fluids: <b>clinical</b>.</li><li id="s5p7"><span class="ref" title="Reference">NP6 S5 P7</span>Before a surgical procedure: <b>surgical</b>.</li></ol>
+  
+  
+  
+  
+  <div class="watch-out"><b>Watch out</b> Helping someone with personal hygiene (shower, toileting) needs a <b>routine hand WASH</b> with soap and water, not just a hand rub. Students get this one wrong most often.</div>
+  <div class="activity" id="act-s5-1" data-activity='{"type":"sort","title":"Which hand hygiene for this task?","instructions":"Tap a task, then tap the type of hand hygiene it needs.","buckets":["Routine hand rub","Routine hand wash","Clinical","Surgical"],"items":[{"text":"Removing general waste","bucket":"Routine hand rub"},{"text":"Using a computer","bucket":"Routine hand rub"},{"text":"Assisting a person with personal hygiene","bucket":"Routine hand wash"},{"text":"Before food preparation","bucket":"Routine hand wash"},{"text":"Changing a dressing","bucket":"Clinical"},{"text":"After exposure to body fluids","bucket":"Clinical"},{"text":"Before a surgical procedure","bucket":"Surgical"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Which hand hygiene for this task?</b></div>
+    <p class="act-instr">Tap a task, then tap the type of hand hygiene it needs.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305231/View" target="_blank" rel="noopener">Hand washing techniques 1</a></div>
+  <aside class="tnotes" data-slide="s5" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s6" data-ref="NP6 S6">
+  <h2 class="topic"><span class="num">6</span> Routine hand wash: the 12 steps (0 to 11) <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F10e%7C08d47729-012f-4f17-a3eb-831e20cf7869%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">A routine hand wash takes 20 to 30 seconds. The steps are numbered 0 to 11, and step 0 is the one everyone forgets.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s6.mp3" aria-label="Listen: Routine hand wash: the 12 steps (0 to 11)"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s6p1"><span class="ref" title="Reference">NP6 S6 P1</span><b>0</b> Wet hands with water.</li><li id="s6p2"><span class="ref" title="Reference">NP6 S6 P2</span><b>1</b> Apply enough soap to cover all hand surfaces.</li><li id="s6p3"><span class="ref" title="Reference">NP6 S6 P3</span><b>2</b> Rub hands palm to palm.</li><li id="s6p4"><span class="ref" title="Reference">NP6 S6 P4</span><b>3</b> Right palm over the back of the left hand (the dorsum) with fingers interlaced, then swap.</li><li id="s6p5"><span class="ref" title="Reference">NP6 S6 P5</span><b>4</b> Palm to palm with fingers interlaced.</li><li id="s6p6"><span class="ref" title="Reference">NP6 S6 P6</span><b>5</b> Backs of fingers to opposing palms with fingers interlocked.</li><li id="s6p7"><span class="ref" title="Reference">NP6 S6 P7</span><b>6</b> Rotational rubbing of the left thumb clasped in the right palm, then swap.</li><li id="s6p8"><span class="ref" title="Reference">NP6 S6 P8</span><b>7</b> Rotational rubbing, backwards and forwards, with clasped fingers of the right hand in the left palm, then swap.</li><li id="s6p9"><span class="ref" title="Reference">NP6 S6 P9</span><b>8</b> Rinse hands with water.</li><li id="s6p10"><span class="ref" title="Reference">NP6 S6 P10</span><b>9</b> Dry hands thoroughly with a single-use towel.</li><li id="s6p11"><span class="ref" title="Reference">NP6 S6 P11</span><b>10</b> Use the towel to turn off the tap.</li><li id="s6p12"><span class="ref" title="Reference">NP6 S6 P12</span><b>11</b> Your hands are now safe.</li></ol><figure><img src="pics/commons-handwash-steps.jpg" alt="Ten photos of hand washing steps" style="max-width:300px"></figure></div>
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Hand-washing steps using the WHO technique <span class="vid-by">(Johns Hopkins Medicine)</span></p><div class="video" data-youtube="IisgnbMfKvI" data-title="Hand-washing steps using the WHO technique"></div></div>
+  <div class="watch-out"><b>Watch out</b> Number from <b>0 to 11</b>, not 1 to 12. The two pairs students swap: step 3 (<b>back of hand</b>) comes before step 4 (<b>palm to palm, fingers interlaced</b>), and step 9 (<b>dry</b>) comes before step 10 (<b>towel on the tap</b>).</div>
+  <div class="activity" id="act-s6-1" data-activity='{"type":"order","title":"Put the hand wash in order (0 to 11)","instructions":"Drag or use the arrows. The first step is number 0.","start":0,"items":["Wet hands with water","Apply enough soap to cover all hand surfaces","Rub hands palm to palm","Right palm over left dorsum with interlaced fingers and vice versa","Palm to palm with fingers interlaced","Backs of fingers to opposing palms with fingers interlocked","Rotational rubbing of left thumb clasped in right palm and vice versa","Rotational rubbing, backwards and forwards with clasped fingers of right hand in left palm and vice versa","Rinse hands with water","Dry hands thoroughly with a single use towel","Use towel to turn off faucet/tap","Your hands are now safe"]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Put the hand wash in order (0 to 11)</b></div>
+    <p class="act-instr">Drag or use the arrows. The first step is number 0.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305231/View" target="_blank" rel="noopener">Hand washing techniques 1</a></div>
+  <aside class="tnotes" data-slide="s6" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s7" data-ref="NP6 S7">
+  <h2 class="topic"><span class="num">7</span> Alcohol-based hand rub: how, and when not <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F10f%7C55d17de2-9fe0-453b-bbfb-63603c8979e8%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Alcohol-based hand rub (ABHR) is quick and kills most germs. But it does not work on everything.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s7.mp3" aria-label="Listen: Alcohol-based hand rub: how, and when not"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><img src="pics/commons-sanitiser-dispenser.jpg" alt="A hand sanitiser dispenser stand that says clean hands are safe hands" style="max-height:38vh; border-radius:12px"></figure>
+  <ol class="points"><li id="s7p1"><span class="ref" title="Reference">NP6 S7 P1</span>Put the amount the <b>manufacturer recommends</b> onto <b>dry</b> hands.</li><li id="s7p2"><span class="ref" title="Reference">NP6 S7 P2</span>Rub hands together so the rub touches <b>every surface</b>: fingertips, thumbs and between the fingers.</li><li id="s7p3"><span class="ref" title="Reference">NP6 S7 P3</span>Keep rubbing until the rub has <b>evaporated and your hands are dry</b>. Do not wipe it off.</li><li id="s7p4"><span class="ref" title="Reference">NP6 S7 P4</span>Use <b>soap and water instead</b> when your hands look <b>dirty or soiled</b>.</li><li id="s7p5"><span class="ref" title="Reference">NP6 S7 P5</span>Use soap and water after contact with <b>spore-forming germs</b> such as <i>C. difficile</i> (a gut bug that causes diarrhoea). Alcohol does not kill the spores.</li><li id="s7p6"><span class="ref" title="Reference">NP6 S7 P6</span>Alcohol also works poorly against some <b>tropical parasites and protozoan cysts</b>. Soap and water wash them off.</li></ol>
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Hand rubbing steps using the WHO technique <span class="vid-by">(Johns Hopkins Medicine)</span></p><div class="video" data-youtube="B3eq5fLzAOo" data-title="Hand rubbing steps using the WHO technique"></div></div>
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305232/View" target="_blank" rel="noopener">Hand washing techniques 2</a></div>
+  <aside class="tnotes" data-slide="s7" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s8" data-ref="NP6 S8">
+  <h2 class="topic"><span class="num">8</span> Look after your hands <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F10b%7C089c168f-d04f-4628-93d8-314184019fc5%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Cracked, dry skin is a doorway for germs. Healthy skin is part of infection control.</p>
+  
+  
+  
+  
+  
+  <div class="stack" aria-label="Look after your hands cards" data-playall="1"><article class="card" id="s8c1" data-ref="NP6 S8 C1">
+      <h3>Keep your skin healthy</h3>
+      
+      
+      <ul><li>Use hand hygiene products that contain <b>moisturiser</b> or lotion.</li><li>Follow the <b>hand hygiene guidelines</b> at work and at home.</li><li><b>Dry gently</b>. Rough paper towels irritate the skin.</li><li><b>Never put gloves on damp hands.</b></li><li>Do not <b>double up</b>: no hand rub straight after soap and water.</li><li><b>Treat</b> skin irritation and <b>cover</b> any breaks in the skin.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np6-s8-c1.mp3" aria-label="Listen: Keep your skin healthy"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s8c2" data-ref="NP6 S8 C2">
+      <h3>Cuts, grazes and skin conditions</h3>
+      
+      
+      <ul><li>Cover every cut and graze with a <b>waterproof dressing</b>. Brightly coloured ones are easy to see if they fall off.</li><li>This stops germs getting <b>in</b> to you and stops germs getting <b>out</b> to the person.</li><li>If you have a skin condition (eczema, dermatitis), <b>get it treated</b> and tell your supervisor. Broken skin is a portal of entry.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np6-s8-c2.mp3" aria-label="Listen: Cuts, grazes and skin conditions"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s8c3" data-ref="NP6 S8 C3">
+      <h3>Jewellery, watches, nails and polish</h3>
+      
+      
+      <ul><li>Watches, rings and other jewellery are <b>strongly discouraged</b> during care.</li><li>If you must wear a ring, a <b>plain band only</b>, and <b>move it</b> during hand hygiene so the skin under it gets cleaned.</li><li>In <b>high-risk areas</b> (operating theatres) <b>no jewellery at all</b>, not even a plain band.</li><li><b>No artificial nails, no nail polish</b>. They hide germs.</li><li>Follow your <b>workplace policy</b>, including for body piercings.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np6-s8-c3.mp3" aria-label="Listen: Jewellery, watches, nails and polish"><span class="ico">&#9654;</span> Listen</button></div>
+    </article></div>
+  
+  <div class="watch-out"><b>Watch out</b> For &quot;three actions to maintain skin integrity&quot;, give <b>skin care</b> actions (moisturiser, dry gently, no gloves on damp hands). &quot;Wash hands in warm water&quot; is hand hygiene, not skin care.</div>
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305234/View" target="_blank" rel="noopener">Implement hand care procedures and cover cuts and abrasions</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305235/View" target="_blank" rel="noopener">Caring for your hands</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305236/View" target="_blank" rel="noopener">Bare below the elbows</a></div>
+  <aside class="tnotes" data-slide="s8" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s9" data-ref="NP6 S9">
+  <h2 class="topic"><span class="num">9</span> Bare below the elbows and personal hygiene <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F8%7C5580b409-01e1-4127-9227-5b327ef6670d%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Bare below the elbows means nothing on your arms and hands that germs can hide in: short sleeves, no watch, no bracelets, clean short nails.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s9.mp3" aria-label="Listen: Bare below the elbows and personal hygiene"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s9p1"><span class="ref" title="Reference">NP6 S9 P1</span><b>Long hair</b>: keep it clean, <b>tied back and secured</b> at work.</li><li id="s9p2"><span class="ref" title="Reference">NP6 S9 P2</span><b>Fingernails</b>: keep them <b>short, neat and natural</b>. Artificial, painted or long nails harbour germs.</li><li id="s9p3"><span class="ref" title="Reference">NP6 S9 P3</span><b>You are ill</b>: <b>do not go to work</b>. Stay home and tell your supervisor, because you could pass the infection on.</li><li id="s9p4"><span class="ref" title="Reference">NP6 S9 P4</span><b>Jewellery</b>: avoid all except a <b>plain band ring</b>.</li><li id="s9p5"><span class="ref" title="Reference">NP6 S9 P5</span><b>Cuts and wounds</b>: cover completely with a <b>wound strip or waterproof bandage</b> (brightly coloured is best).</li><li id="s9p6"><span class="ref" title="Reference">NP6 S9 P6</span><b>Work clothing</b>: wash it <b>at home, separately</b> from other items.</li></ol>
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Bare Below The Elbows <span class="vid-by">(Darling Downs Health)</span></p><div class="video" data-youtube="cLNPpBcIbMA" data-title="Bare Below The Elbows"></div></div>
+  
+  <div class="activity" id="act-s9-1" data-activity='{"type":"match","title":"Match the rule","instructions":"Tap a rule, then tap what it is about.","pairs":[{"a":"Keep clean, tie back and secure at work","b":"Long hair"},{"a":"Short, neat and natural","b":"Fingernails"},{"a":"Stay home and notify your supervisor","b":"You are ill"},{"a":"Avoid all except a plain band ring","b":"Jewellery"},{"a":"Cover completely with a waterproof strip","b":"Cuts and wounds"},{"a":"Wash at home, separately from other items","b":"Work clothing"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Match the rule</b></div>
+    <p class="act-instr">Tap a rule, then tap what it is about.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305236/View" target="_blank" rel="noopener">Bare below the elbows</a></div>
+  <aside class="tnotes" data-slide="s9" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s10" data-ref="NP6 S10">
+  <h2 class="topic"><span class="num">10</span> Soiled linen and clothing <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F20%7Ce3e475c9-6c68-447f-973f-b023dd50d6a0%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Used linen is full of skin cells, sweat and sometimes body fluids. Handled badly it spreads germs through the air and onto you.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s10.mp3" aria-label="Listen: Soiled linen and clothing"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s10p1"><span class="ref" title="Reference">NP6 S10 P1</span>Follow your <b>organisation's policy</b> on collecting, transporting and storing linen.</li><li id="s10p2"><span class="ref" title="Reference">NP6 S10 P2</span>Wear <b>gloves</b>, and a <b>gown or apron</b> if needed, so skin and clothing do not touch body fluids.</li><li id="s10p3"><span class="ref" title="Reference">NP6 S10 P3</span><b>Bag linen where it is used.</b> Bring the linen skip to the bedside and put linen straight into it.</li><li id="s10p4"><span class="ref" title="Reference">NP6 S10 P4</span><b>Never shake linen</b> and never carry it loose against your body. Never leave it on the floor or on furniture.</li><li id="s10p5"><span class="ref" title="Reference">NP6 S10 P5</span>Linen soiled with body fluids goes into a <b>leak-proof bag</b> (or a dissolvable laundry bag if your workplace uses them).</li><li id="s10p6"><span class="ref" title="Reference">NP6 S10 P6</span>Roll dirty linen <b>inwards</b>, remove it <b>promptly</b>, and store it in the <b>dirty linen area, away from clean linen</b>.</li><li id="s10p7"><span class="ref" title="Reference">NP6 S10 P7</span><b>Hand hygiene</b> before and after handling linen.</li><li id="s10p8"><span class="ref" title="Reference">NP6 S10 P8</span>Washing uses <b>detergent and hot water</b>, and a <b>dryer</b> for drying.</li></ol>
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Linen management <span class="vid-by">(Adrie Homan)</span></p><div class="video" data-youtube="tuesIT26D6g" data-title="Linen management"></div></div>
+  
+  <div class="activity" id="act-s10-1" data-activity='{"type":"quiz","title":"Spot the mistake","instructions":"Which action is wrong?","questions":[{"q":"Which of these is the wrong way to handle a soiled sheet?","options":["Roll it inwards and put it straight in the skip","Shake it out first to get the crumbs off","Put body-fluid-soiled linen in a leak-proof bag","Clean your hands after"],"answer":1,"why":"Shaking linen spreads germs into the air."},{"q":"Where does the linen skip go while you strip the bed?","options":["In the corridor, you carry the sheets to it","At the bedside","In the dirty utility room"],"answer":1,"why":"Bag linen where it is used. Carrying it loose spreads germs."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Spot the mistake</b></div>
+    <p class="act-instr">Which action is wrong?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305271/View" target="_blank" rel="noopener">Identify, separate and maintain clean and contaminated zones</a></div>
+  <aside class="tnotes" data-slide="s10" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s11" data-ref="NP6 S11">
+  <h2 class="topic"><span class="num">11</span> Cleaning the environment: how often, and with what <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F18%7C2a4cdef5-42c0-4c54-ad36-31a2263fade1%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Cleaning is decided by risk. Things that are touched often and likely to be dirty are high risk and need more. Detergent cleans. Disinfectant kills. Sometimes you need both.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s11.mp3" aria-label="Listen: Cleaning the environment: how often, and with what"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><table class="plain"><thead><tr><th>Item and risk level</th><th>When to clean</th><th>Solution</th></tr></thead><tbody>
+        <tr class="tl-high"><td>Bed rails (high risk)</td><td>Daily and after discharge</td><td>Detergent + disinfectant (MRO risk)</td></tr>
+        <tr class="tl-med"><td>Bedside table (medium risk)</td><td>Daily</td><td>Detergent + disinfectant</td></tr>
+        <tr class="tl-med"><td>Computer and keyboard, fixed to a desk (medium risk)</td><td>Daily, or when visibly soiled</td><td>Manufacturer's recommendation</td></tr>
+        <tr class="tl-med"><td>Hoist, manual handling (medium risk)</td><td>Contact points after each use</td><td>Detergent + disinfectant (MRO risk)</td></tr>
+        <tr class="tl-low"><td>Blood pressure cuff (low risk)</td><td>After each use</td><td>Detergent</td></tr>
+        <tr class="tl-high"><td>General horizontal surfaces in the person's room, e.g. ledges</td><td>Daily and after discharge</td><td>Detergent + disinfectant (MRO risk)</td></tr>
+        <tr class="tl-high"><td>Chair (high risk)</td><td>Twice daily</td><td>Detergent</td></tr>
+        <tr class="tl-low"><td>Microwave (low risk)</td><td>Daily</td><td>Detergent</td></tr>
+        <tr class="tl-high"><td>Telephone (high risk)</td><td>Daily, and spot clean after use</td><td>Detergent</td></tr>
+        <tr class="tl-med"><td>Toilet (medium risk)</td><td>Daily</td><td>Detergent + disinfectant</td></tr>
+      </tbody></table></figure>
+  <ol class="points"><li id="s11p1"><span class="ref" title="Reference">NP6 S11 P1</span><b>High risk:</b> touched often by many hands, likely to be contaminated. Bed rails, chairs, telephones, ledges in the room.</li><li id="s11p2"><span class="ref" title="Reference">NP6 S11 P2</span><b>Medium risk:</b> less often touched but still in the person's environment. Bedside table, toilet, hoist, keyboard.</li><li id="s11p3"><span class="ref" title="Reference">NP6 S11 P3</span><b>Low risk:</b> rarely touched, unlikely to spread infection. Blood pressure cuff, microwave.</li><li id="s11p4"><span class="ref" title="Reference">NP6 S11 P4</span><b>Detergent</b> removes dirt and most germs. <b>Disinfectant</b> kills the germs left behind. Where there is a risk of a <b>multi-resistant organism (MRO)</b>, use <b>detergent + disinfectant</b>.</li><li id="s11p5"><span class="ref" title="Reference">NP6 S11 P5</span>A <b>stricter</b> schedule than the table (twice daily instead of daily) is fine. A <b>looser</b> one is not.</li></ol>
+  <p>Read more: <a href="https://www.nhmrc.gov.au/about-us/publications/australian-guidelines-prevention-and-control-infection-healthcare-2019" target="_blank" rel="noopener">Australian Guidelines for the Prevention and Control of Infection in Healthcare (NHMRC, 2019)</a>, section 3.1 on routine environmental cleaning. For aged care: <a href="https://www.safetyandquality.gov.au/sites/default/files/2024-08/the_aged_care_ipc_guide_-_chapter_6.pdf" target="_blank" rel="noopener">The Aged Care IPC Guide, chapter 6, Environmental cleaning (ACSQHC)</a>. Queensland: <a href="https://www.health.qld.gov.au/clinical-practice/guidelines-procedures/diseases-infection/infection-prevention/clean-safe-environment/cleaning-and-disinfection-of-the-healthcare-environment" target="_blank" rel="noopener">Cleaning and disinfection of the healthcare environment (Queensland Health)</a>.</p>
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Cleaning <span class="vid-by">(Adrie Homan)</span></p><div class="video" data-youtube="PGDjCnhgAGE" data-title="Cleaning"></div></div>
+  <div class="watch-out"><b>Watch out</b> Check the <b>solution</b> column, not just the frequency. Bed rails, bedside table and toilet need <b>detergent + disinfectant</b>; detergent alone is wrong. The blood pressure cuff is cleaned <b>after each use</b>, not daily.</div>
+  <div class="activity" id="act-s11-1" data-activity='{"type":"table","title":"Fill the cleaning schedule","instructions":"Choose when and with what for each item.","columns":["Item","When to clean","Solution"],"rows":[{"label":"Bed rails (high risk)","cells":[{"options":["Daily and after discharge","Weekly","After each use"],"answer":"Daily and after discharge"},{"options":["Detergent + disinfectant","Detergent only","Water only"],"answer":"Detergent + disinfectant"}]},{"label":"Bedside table (medium risk)","cells":[{"options":["Daily","Weekly","After discharge only"],"answer":"Daily"},{"options":["Detergent + disinfectant","Detergent only","Water only"],"answer":"Detergent + disinfectant"}]},{"label":"Blood pressure cuff (low risk)","cells":[{"options":["After each use","Daily","Weekly"],"answer":"After each use"},{"options":["Detergent","Detergent + disinfectant","Bleach"],"answer":"Detergent"}]},{"label":"Toilet (medium risk)","cells":[{"options":["Daily","Weekly","After discharge only"],"answer":"Daily"},{"options":["Detergent + disinfectant","Detergent only","Water only"],"answer":"Detergent + disinfectant"}]},{"label":"Chair (high risk)","cells":[{"options":["Twice daily","Weekly","After discharge only"],"answer":"Twice daily"},{"options":["Detergent","Bleach","Water only"],"answer":"Detergent"}]}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Fill the cleaning schedule</b></div>
+    <p class="act-instr">Choose when and with what for each item.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305271/View" target="_blank" rel="noopener">Identify, separate and maintain clean and contaminated zones</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305272/View" target="_blank" rel="noopener">Clean and contaminated areas</a></div>
+  <aside class="tnotes" data-slide="s11" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s12" data-ref="NP6 S12">
+  <h2 class="topic"><span class="num">12</span> Reprocessing equipment: the Spaulding categories <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F19%7Cdf52e84b-932a-4bd5-aeea-c3fe1ba92142%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Reprocessing means cleaning equipment so it is safe to use again. The Spaulding system sorts equipment into three categories by how it touches the body.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s12.mp3" aria-label="Listen: Reprocessing equipment: the Spaulding categories"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 700 330" role="img" aria-label="Spaulding categories: critical at the top, semi-critical, non-critical at the base">
+<polygon points="350,20 500,120 200,120" fill="#9d174d"/><text x="350" y="92" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#fff">Critical</text>
+<polygon points="190,135 510,135 590,225 110,225" fill="#b45309"/><text x="350" y="190" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#fff">Semi-critical</text>
+<polygon points="100,240 600,240 680,320 20,320" fill="#0b6f7c"/><text x="350" y="290" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#fff">Non-critical</text>
+<text x="620" y="70" font-family="Segoe UI, Arial" font-size="15" fill="#44505c">sterile tissue, bloodstream</text><text x="620" y="92" font-family="Segoe UI, Arial" font-size="15" fill="#44505c">→ sterilise</text>
+<text x="600" y="175" font-family="Segoe UI, Arial" font-size="15" fill="#44505c">mucous membrane, broken skin</text><text x="600" y="197" font-family="Segoe UI, Arial" font-size="15" fill="#44505c">→ clean + sterilise or high-level disinfect</text>
+</svg></figure>
+  <ol class="points"><li id="s12p1"><span class="ref" title="Reference">NP6 S12 P1</span><b>Critical:</b> enters <b>sterile tissue, a body cavity or the bloodstream</b> (surgical instruments, needles). Clean thoroughly as soon as possible after use, then <b>sterilise</b>.</li><li id="s12p2"><span class="ref" title="Reference">NP6 S12 P2</span><b>Semi-critical:</b> touches <b>mucous membranes or broken skin</b> (a respiratory mask, a thermometer probe). Clean thoroughly straight after use, then <b>steam sterilise</b>. If the item cannot take steam, use <b>high-level chemical or thermal disinfection</b>.</li><li id="s12p3"><span class="ref" title="Reference">NP6 S12 P3</span><b>Non-critical:</b> touches <b>intact skin only</b> (blood pressure cuff, hoist sling, commode). Clean thoroughly with <b>detergent</b>. If it was used on a person on transmission-based precautions, <b>disinfect</b> after cleaning with a TGA-registered disinfectant.</li></ol>
+  <p>Read more: <a href="https://www.nhmrc.gov.au/about-us/publications/australian-guidelines-prevention-and-control-infection-healthcare-2019" target="_blank" rel="noopener">Australian Guidelines for the Prevention and Control of Infection in Healthcare (NHMRC, 2019)</a>, section 3.2 on reprocessing reusable equipment. Also <a href="https://www.health.qld.gov.au/clinical-practice/guidelines-procedures/diseases-infection/infection-prevention/clean-safe-environment/cleaning-and-disinfection-of-shared-patient-equipment" target="_blank" rel="noopener">Cleaning and disinfection of shared patient care equipment (Queensland Health)</a> and the <a href="https://www.safetyandquality.gov.au/accreditation/advisories/advisory-di2104-disinfection-requirements-reusable-medical-devices" target="_blank" rel="noopener">ACSQHC advisory on disinfection requirements for reusable medical devices</a>.</p>
+  
+  
+  
+  
+  <div class="activity" id="act-s12-1" data-activity='{"type":"sort","title":"Sort the equipment","instructions":"Tap an item, then tap its Spaulding category.","buckets":["Critical","Semi-critical","Non-critical"],"items":[{"text":"Surgical scissors used in a wound","bucket":"Critical"},{"text":"Needle for an injection","bucket":"Critical"},{"text":"Thermometer probe in the mouth","bucket":"Semi-critical"},{"text":"Oxygen mask","bucket":"Semi-critical"},{"text":"Blood pressure cuff","bucket":"Non-critical"},{"text":"Hoist sling","bucket":"Non-critical"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Sort the equipment</b></div>
+    <p class="act-instr">Tap an item, then tap its Spaulding category.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305274/View" target="_blank" rel="noopener">Confine contaminated instruments and equipment</a></div>
+  <aside class="tnotes" data-slide="s12" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s13" data-ref="NP6 S13">
+  <h2 class="topic"><span class="num">13</span> PPE: what each item does and when to use it <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F11%7Cfc72bfcb-316d-489b-9a56-efede6ada7b4%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">PPE is personal protective equipment. Each item blocks one of Gerry's roads. Each card gives the purpose and two examples of when to use it.</p>
+  
+  <figure class="visual"><div class="side"><div><img src="pics/ppe-words.webp" alt="" style="max-width:360px; width:100%"></div><figure><img src="pics/commons-ppe-faceshield.jpg" alt="A health worker wearing a face shield and a respirator mask"></figure></div></figure>
+  
+  <p>Why does it matter that PPE is put on, worn and taken off correctly? Because PPE only works if it is a complete barrier. Done wrongly, it spreads germs from the PPE onto you, onto the environment and onto other people. The next slide shows the order.</p>
+  
+  <div class="stack" aria-label="PPE: what each item does and when to use it cards" data-playall="1"><article class="card" id="s13c1" data-ref="NP6 S13 C1">
+      <h3>Gloves</h3>
+      
+      
+      <ul><li><b>Purpose:</b> protect both the person and you from germs carried on hands.</li><li><b>Use when:</b> touching blood, body fluids or waste.</li><li><b>Use when:</b> there is a risk of contact with blood or body fluids, for example a pad change or wound care.</li><li>Gloves are <b>not</b> a substitute for hand hygiene. Clean hands before and after.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np6-s13-c1.mp3" aria-label="Listen: Gloves"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s13c2" data-ref="NP6 S13 C2">
+      <h3>Gowns and waterproof aprons</h3>
+      
+      
+      <ul><li><b>Purpose:</b> protect your skin and your clothing from blood, body fluids and other infectious material.</li><li><b>Use when:</b> close contact with a person, materials or equipment could contaminate your skin or uniform.</li><li><b>Use when:</b> there is a risk of splashes of blood, body fluids, secretions or excretions, for example showering someone or emptying a catheter bag.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np6-s13-c2.mp3" aria-label="Listen: Gowns and waterproof aprons"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s13c3" data-ref="NP6 S13 C3">
+      <h3>Face shields, goggles and protective eyewear</h3>
+      
+      
+      <ul><li><b>Purpose:</b> reduce the risk of splashes or sprays of blood or body fluids reaching your eyes and face.</li><li><b>Use when:</b> there is a chance of splashing or spattering, for example cleaning up blood or vomit.</li><li><b>Use when:</b> a person is coughing hard during close care, or during a procedure that can spray.</li><li>Your own glasses are <b>not</b> eye protection. They leave the sides open.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np6-s13-c3.mp3" aria-label="Listen: Face shields, goggles and protective eyewear"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s13c4" data-ref="NP6 S13 C4">
+      <h3>Masks, and when you need a P2 or N95</h3>
+      
+      
+      <ul><li><b>Purpose:</b> protect your nose and mouth from splashes, sprays and droplets.</li><li><b>Use when:</b> there is a risk from airborne droplets, for example a person with a productive (wet) cough.</li><li><b>Use when:</b> a person has an airborne or droplet-spread disease, such as influenza.</li><li><b>P2 or N95 respirator:</b> a tighter mask that filters tiny particles. Needed when giving direct care in a <b>high-risk COVID-19 zone</b> or with airborne diseases like TB and measles.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np6-s13-c4.mp3" aria-label="Listen: Masks, and when you need a P2 or N95"><span class="ico">&#9654;</span> Listen</button></div>
+    </article></div>
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Differences between N95, P2, KN95 and cloth masks <span class="vid-by">(George Forgan-Smith)</span></p><div class="video" data-youtube="K6UPJmOVCjs" data-title="Differences between N95, P2, KN95 and cloth masks"></div></div>
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305238/View" target="_blank" rel="noopener">PPE</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305239/View" target="_blank" rel="noopener">PPE types, use and maintenance</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305240/View" target="_blank" rel="noopener">Guidelines for the use of gloves</a></div>
+  <aside class="tnotes" data-slide="s13" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s14" data-ref="NP6 S14">
+  <h2 class="topic"><span class="num">14</span> Putting on, taking off, and throwing away PPE <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F14a%7C729833d4-9205-4282-8ffd-c481cf40f268%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">The order matters. Putting on goes from cleanest to dirtiest. Taking off removes the dirtiest item first, with hand hygiene in between.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s14.mp3" aria-label="Listen: Putting on, taking off, and throwing away PPE"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><div class="side"><div class="strips" style="flex:2 1 420px"><div class="strip"><div class="strip-title">Putting on (1 to 5)</div><ol class="strip-steps"><li style="--c:#0b6f7c">Hand hygiene</li><li style="--c:#0b6f7c">Gown</li><li style="--c:#0b6f7c">Mask</li><li style="--c:#0b6f7c">Eye protection</li><li style="--c:#0b6f7c">Gloves</li></ol></div><div class="strip"><div class="strip-title">Taking off (1 to 8)</div><ol class="strip-steps"><li style="--c:#9d174d">Gloves</li><li style="--c:#9d174d">Hand hygiene</li><li style="--c:#9d174d">Gown</li><li style="--c:#9d174d">Hand hygiene</li><li style="--c:#9d174d">Eye protection</li><li style="--c:#9d174d">Hand hygiene</li><li style="--c:#9d174d">Mask</li><li style="--c:#9d174d">Hand hygiene</li></ol></div></div><figure><img src="pics/info-donning.jpg" alt="Infographic: sequence for putting on PPE, hand hygiene, gown, mask, protective eyewear, gloves" style="max-width:330px"></figure></div></figure>
+  <ol class="points"><li id="s14p1"><span class="ref" title="Reference">NP6 S14 P1</span><b>Putting on (donning), 1 to 5:</b> hand hygiene, gown, mask, protective eyewear or face shield, gloves.</li><li id="s14p2"><span class="ref" title="Reference">NP6 S14 P2</span><b>Taking off (doffing), 1 to 8:</b> gloves, hand hygiene, gown, hand hygiene, protective eyewear or face shield, hand hygiene, mask, hand hygiene.</li><li id="s14p3"><span class="ref" title="Reference">NP6 S14 P3</span>Take gloves off <b>without touching the outside</b>. Roll the gown <b>inwards</b>. Handle eyewear by the <b>headband</b>. Take the mask off by the <b>ties or loops</b>, never the front.</li><li id="s14p4"><span class="ref" title="Reference">NP6 S14 P4</span><b>Disposal:</b> soiled PPE goes into the <b>infectious (clinical) waste</b> container, following your local council rules, the facility's waste procedures and workplace policy.</li></ol>
+  
+  <div class="after"><img src="pics/canva-doffing.jpg" alt="Infographic: safe PPE removal sequence, gloves, hand hygiene, gown, hand hygiene, eyewear or face shield, hand hygiene, mask, hand hygiene" style="width:100%; max-width:1100px; display:block; margin:0 auto; border-radius:10px"></div>
+  
+  
+  <div class="watch-out"><b>Watch out</b> Taking off PPE <b>starts with gloves</b>, not hand hygiene, and <b>ends with hand hygiene after the mask</b>. A paper that starts with hand hygiene has every step shifted by one.</div>
+  <div class="activity" id="act-s14-1" data-activity='{"type":"order","title":"Taking off PPE: put the 8 steps in order","instructions":"Drag or use the arrows. Remember what comes off first.","items":["Gloves","Hand hygiene (1st)","Gown","Hand hygiene (2nd)","Protective eyewear or face shield","Hand hygiene (3rd)","Mask","Hand hygiene (4th, final)"]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Taking off PPE: put the 8 steps in order</b></div>
+    <p class="act-instr">Drag or use the arrows. Remember what comes off first.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div><div class="activity" id="act-s14-2" data-activity='{"type":"order","title":"Putting on PPE: put the 5 steps in order","instructions":"Clean to dirty.","items":["Hand hygiene","Gown","Mask","Protective eyewear or face shield","Gloves"]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Putting on PPE: put the 5 steps in order</b></div>
+    <p class="act-instr">Clean to dirty.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305239/View" target="_blank" rel="noopener">PPE types, use and maintenance</a></div>
+  <aside class="tnotes" data-slide="s14" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s15" data-ref="NP6 S15">
+  <h2 class="topic"><span class="num">15</span> Exposure to blood or body fluids <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F15a%7Ce16241b0-8b9f-478d-8811-aed11c1c32a9%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">A colleague cuts themselves badly. While you help, some of their blood splashes your face. What now? The Queensland Health guideline gives the steps.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s15.mp3" aria-label="Listen: Exposure to blood or body fluids"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 900 160" role="img" aria-label="Exposure, then first aid, then report, then follow-up">
+<rect x="20" y="30" width="200" height="100" rx="14" fill="#9d174d"/><text x="120" y="72" text-anchor="middle" font-family="Segoe UI, Arial" font-size="24" font-weight="800" fill="#fff">Exposure</text><text x="120" y="100" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#e0f2fe">blood or body fluid</text><path d="M222 80 l16 0" stroke="#44505c" stroke-width="6"/><path d="M232 70 l12 10 l-12 10" fill="none" stroke="#44505c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="240" y="30" width="200" height="100" rx="14" fill="#0e9aa7"/><text x="340" y="72" text-anchor="middle" font-family="Segoe UI, Arial" font-size="24" font-weight="800" fill="#fff">First aid</text><text x="340" y="100" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#e0f2fe">wash, flush, rinse, change</text><path d="M442 80 l16 0" stroke="#44505c" stroke-width="6"/><path d="M452 70 l12 10 l-12 10" fill="none" stroke="#44505c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="460" y="30" width="200" height="100" rx="14" fill="#2563eb"/><text x="560" y="72" text-anchor="middle" font-family="Segoe UI, Arial" font-size="24" font-weight="800" fill="#fff">Report</text><text x="560" y="100" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#e0f2fe">supervisor or manager, now</text><path d="M662 80 l16 0" stroke="#44505c" stroke-width="6"/><path d="M672 70 l12 10 l-12 10" fill="none" stroke="#44505c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="680" y="30" width="200" height="100" rx="14" fill="#15803d"/><text x="780" y="72" text-anchor="middle" font-family="Segoe UI, Arial" font-size="24" font-weight="800" fill="#fff">Follow-up</text><text x="780" y="100" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" fill="#e0f2fe">tests, treatment, support</text>
+</svg></figure>
+  <ol class="points"><li id="s15p1"><span class="ref" title="Reference">NP6 S15 P1</span><b>Skin:</b> wash wounds and any skin that touched blood or body fluid with <b>soap and water</b>.</li><li id="s15p2"><span class="ref" title="Reference">NP6 S15 P2</span><b>Eyes and mucous membranes:</b> flush with <b>water or saline</b> for at least <b>30 seconds</b>. Take contact lenses out first. Keep the eyes open while rinsing.</li><li id="s15p3"><span class="ref" title="Reference">NP6 S15 P3</span><b>Mouth:</b> <b>spit</b> the fluid out and <b>rinse several times</b> with water.</li><li id="s15p4"><span class="ref" title="Reference">NP6 S15 P4</span><b>Clothing:</b> take off contaminated clothing and <b>shower</b> if needed.</li><li id="s15p5"><span class="ref" title="Reference">NP6 S15 P5</span><b>Report it:</b> tell your <b>supervisor, manager or other responsible person as soon as possible</b>, so you can be assessed and get follow-up (blood tests, vaccination, treatment) in time.</li><li id="s15p6"><span class="ref" title="Reference">NP6 S15 P6</span><b>PPE you should have worn</b> to help a bleeding colleague: <b>gown, gloves, mask and goggles</b> (eye protection), because the risk is contact and droplet.</li></ol>
+  
+  <div class="after"><img src="pics/info-exposure.jpg" alt="Infographic: blood and body fluid exposure, immediate actions and reporting" style="width:100%; max-width:1000px; display:block; margin:0 auto; border-radius:10px"></div>
+  
+  
+  <div class="watch-out"><b>Watch out</b> This question has <b>two halves</b>: four immediate actions <b>and</b> the reporting process. Many students write four good actions and stop. Always add: report to your supervisor or manager straight away so assessment and follow-up can happen.</div>
+  <div class="activity" id="act-s15-1" data-activity='{"type":"sort","title":"First aid or reporting?","instructions":"Sort each step into the right part of the answer.","buckets":["Immediate action","Reporting process"],"items":[{"text":"Wash the skin with soap and water","bucket":"Immediate action"},{"text":"Flush eyes with water or saline for 30 seconds","bucket":"Immediate action"},{"text":"Spit out and rinse the mouth","bucket":"Immediate action"},{"text":"Remove soiled clothing and shower","bucket":"Immediate action"},{"text":"Tell your supervisor or manager as soon as possible","bucket":"Reporting process"},{"text":"So assessment and follow-up can start in time","bucket":"Reporting process"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>First aid or reporting?</b></div>
+    <p class="act-instr">Sort each step into the right part of the answer.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305264/View" target="_blank" rel="noopener">Follow protocols for care after exposure to blood or other body fluids</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305268/View" target="_blank" rel="noopener">Follow up actions</a></div>
+  <aside class="tnotes" data-slide="s15" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s16" data-ref="NP6 S16">
+  <h2 class="topic"><span class="num">16</span> Cleaning up a body fluid spill (1 to 8) <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F16%7C1b33fe15-e975-440a-9fe1-4876a15f08e8%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Melissa works at a lifestyle centre. A visitor who had been coughing vomits at the entrance. Vomit is an infection risk, so Melissa cleans it up using the spill kit.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s16.mp3" aria-label="Listen: Cleaning up a body fluid spill (1 to 8)"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s16p1"><span class="ref" title="Reference">NP6 S16 P1</span><b>1</b> Select and put on appropriate <b>PPE</b> (gloves, apron, eye protection if there is splash risk).</li><li id="s16p2"><span class="ref" title="Reference">NP6 S16 P2</span><b>2</b> Cover the spill with an <b>absorbent clumping agent</b> and let it absorb.</li><li id="s16p3"><span class="ref" title="Reference">NP6 S16 P3</span><b>3</b> Use the disposable <b>scraper and pan</b> to scoop up the absorbent material and any fluid.</li><li id="s16p4"><span class="ref" title="Reference">NP6 S16 P4</span><b>4</b> Place everything contaminated into a <b>leak-proof (impervious) container or plastic bag</b>.</li><li id="s16p5"><span class="ref" title="Reference">NP6 S16 P5</span><b>5</b> <b>Discard</b> the contaminated materials in the clinical waste.</li><li id="s16p6"><span class="ref" title="Reference">NP6 S16 P6</span><b>6</b> <b>Mop</b> the area with <b>detergent</b> solution.</li><li id="s16p7"><span class="ref" title="Reference">NP6 S16 P7</span><b>7</b> <b>Wipe</b> the area with <b>sodium hypochlorite</b> (bleach solution) and let it <b>dry</b>.</li><li id="s16p8"><span class="ref" title="Reference">NP6 S16 P8</span><b>8</b> <b>Perform hand hygiene.</b></li></ol>
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s16-1" data-activity='{"type":"order","title":"Clean up the spill: order the 8 steps","instructions":"Drag or use the arrows.","items":["Select appropriate PPE","Cover the spill with absorbent clumping agent and allow to absorb","Use disposable scraper and pan to scoop up the material","Place contaminated items into a leak-proof container or plastic bag","Discard contaminated materials","Mop the area with detergent solution","Wipe the area with sodium hypochlorite and allow to dry","Perform hand hygiene"]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Clean up the spill: order the 8 steps</b></div>
+    <p class="act-instr">Drag or use the arrows.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305265/View" target="_blank" rel="noopener">Remove spills in accordance with policies and procedures</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305266/View" target="_blank" rel="noopener">Spill and chemical kits</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305267/View" target="_blank" rel="noopener">Procedures for cleaning up blood and bodily fluids spills</a></div>
+  <aside class="tnotes" data-slide="s16" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s17" data-ref="NP6 S17">
+  <h2 class="topic"><span class="num">17</span> Aseptic technique: five principles <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F21%7C47ae4c7b-686c-4192-8121-b0ba6ecebc8a%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Aseptic means free of germs. Aseptic technique is the way a procedure, like a wound dressing, is done so no germs reach the person. It has five principles.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s17.mp3" aria-label="Listen: Aseptic technique: five principles"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 760 360" role="img" aria-label="Five principles of aseptic technique shown as five fingers: sequencing, environmental control, hand hygiene, aseptic field, PPE">
+<path d="M190 340 v-150 a22 22 0 0 1 44 0 v110 v-170 a22 22 0 0 1 44 0 v170 v-190 a22 22 0 0 1 44 0 v190 v-160 a22 22 0 0 1 44 0 v180 c0 50 -40 80 -90 80 h-20 c-50 0 -80 -30 -80 -80 v-70 a22 22 0 0 1 44 0z" fill="#ffd9b3" stroke="#12384a" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="198" cy="262" r="18" fill="#0b6f7c" stroke="#fff" stroke-width="3"/><text x="198" y="269" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" font-weight="800" fill="#fff">1</text><circle cx="212" cy="165" r="18" fill="#0b6f7c" stroke="#fff" stroke-width="3"/><text x="212" y="172" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" font-weight="800" fill="#fff">2</text><circle cx="256" cy="145" r="18" fill="#0b6f7c" stroke="#fff" stroke-width="3"/><text x="256" y="152" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" font-weight="800" fill="#fff">3</text><circle cx="300" cy="125" r="18" fill="#0b6f7c" stroke="#fff" stroke-width="3"/><text x="300" y="132" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" font-weight="800" fill="#fff">4</text><circle cx="344" cy="155" r="18" fill="#0b6f7c" stroke="#fff" stroke-width="3"/><text x="344" y="162" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" font-weight="800" fill="#fff">5</text>
+<circle cx="440" cy="50" r="18" fill="#0b6f7c"/><text x="440" y="57" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" font-weight="800" fill="#fff">1</text><text x="470" y="57" font-family="Segoe UI, Arial" font-size="22" font-weight="700" fill="#12384a">Sequencing</text><circle cx="440" cy="112" r="18" fill="#0b6f7c"/><text x="440" y="119" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" font-weight="800" fill="#fff">2</text><text x="470" y="119" font-family="Segoe UI, Arial" font-size="22" font-weight="700" fill="#12384a">Environmental control</text><circle cx="440" cy="174" r="18" fill="#0b6f7c"/><text x="440" y="181" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" font-weight="800" fill="#fff">3</text><text x="470" y="181" font-family="Segoe UI, Arial" font-size="22" font-weight="700" fill="#12384a">Hand hygiene</text><circle cx="440" cy="236" r="18" fill="#0b6f7c"/><text x="440" y="243" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" font-weight="800" fill="#fff">4</text><text x="470" y="243" font-family="Segoe UI, Arial" font-size="22" font-weight="700" fill="#12384a">Aseptic field</text><circle cx="440" cy="298" r="18" fill="#0b6f7c"/><text x="440" y="305" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" font-weight="800" fill="#fff">5</text><text x="470" y="305" font-family="Segoe UI, Arial" font-size="22" font-weight="700" fill="#12384a">PPE</text>
+</svg></figure>
+  <ol class="points"><li id="s17p1"><span class="ref" title="Reference">NP6 S17 P1</span><b>1 Sequencing:</b> do things in the right order. Risk assess, prepare, do the procedure, then the after steps: clean up, hand over and document.</li><li id="s17p2"><span class="ref" title="Reference">NP6 S17 P2</span><b>2 Environmental control:</b> before you start, remove nearby risks that could spread germs. No bed making or commode use close by. Close windows if it is dusty.</li><li id="s17p3"><span class="ref" title="Reference">NP6 S17 P3</span><b>3 Hand hygiene:</b> clean hands before the procedure, and again after, or after any contact with body fluids.</li><li id="s17p4"><span class="ref" title="Reference">NP6 S17 P4</span><b>4 Maintaining the aseptic field:</b> clean or disinfect the equipment and the person's skin first, set up a clean field, use sterile equipment, protect the key parts and key sites, and use a non-touch technique.</li><li id="s17p5"><span class="ref" title="Reference">NP6 S17 P5</span><b>5 PPE:</b> choose and use the correct sterile and non-sterile PPE for the task.</li></ol>
+  <p>Read more: <a href="https://www.safetyandquality.gov.au/our-work/infection-prevention-and-control/aseptic-technique" target="_blank" rel="noopener">Aseptic technique (Australian Commission on Safety and Quality in Health Care)</a> and the <a href="https://www.nhmrc.gov.au/about-us/publications/australian-guidelines-prevention-and-control-infection-healthcare-2019" target="_blank" rel="noopener">Australian Guidelines (NHMRC, 2019)</a>, section 3.1.6 on aseptic technique.</p>
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305270/View" target="_blank" rel="noopener">Minimise contamination of materials, equipment and instruments by aerosols and splatter</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305273/View" target="_blank" rel="noopener">Confine records, materials and medicaments to a well-designed clean zone</a></div>
+  <aside class="tnotes" data-slide="s17" aria-label="Teacher notes"></aside>
+</section>
+  <footer class="foot">
+    <p>HLTINF006 / HLTWHS002 · Standard precautions: protect yourself and others · Built from TAFE Queensland learning resources, 23 Oct 2026. References on this page are written NP6 S(slide) P(point), where NP6 is this page's slide number in Nearpod.</p>
+    <p>Picture credits: Hand washing steps infographic: Wikimedia Commons, CC0 · Hand sanitiser dispenser: Wikimedia Commons, CC BY-SA 4.0 · Face shield and respirator: Wikimedia Commons, CC BY 2.0 · Other pictures: Adrie Homan and Adobe Stock</p>
+    <p><a href="0-index.html">Lesson index and glossary</a> · <button type="button" class="tlink">Teacher</button></p>
+  </footer>
+</div>
+<a href="#index" class="home" title="Back to the index"><span aria-hidden="true">&#8679;</span> Home</a>
+<div class="tpill" hidden><span>Teacher view on</span><button type="button" class="tp-hide">Hide</button><button type="button" class="tp-out">Sign out</button></div>
+<div class="mascot gerry" data-mascot="gerry" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 150" role="img" aria-label="Gerry the Germ"><defs><radialGradient id="gg" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#bef264"/><stop offset=".55" stop-color="#4ade80"/><stop offset="1" stop-color="#15803d"/></radialGradient></defs>
+<line x1="114.0" y1="70.0" x2="132.0" y2="70.0" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/><circle cx="132.0" cy="70.0" r="6" fill="#f472b6"/><line x1="105.6" y1="95.9" x2="120.2" y2="106.4" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/><circle cx="120.2" cy="106.4" r="6" fill="#fb923c"/><line x1="83.6" y1="111.8" x2="89.2" y2="129.0" stroke="#facc15" stroke-width="7" stroke-linecap="round"/><circle cx="89.2" cy="129.0" r="6" fill="#facc15"/><line x1="56.4" y1="111.8" x2="50.8" y2="129.0" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/><circle cx="50.8" cy="129.0" r="6" fill="#38bdf8"/><line x1="34.4" y1="95.9" x2="19.8" y2="106.4" stroke="#a78bfa" stroke-width="7" stroke-linecap="round"/><circle cx="19.8" cy="106.4" r="6" fill="#a78bfa"/><line x1="26.0" y1="70.0" x2="8.0" y2="70.0" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/><circle cx="8.0" cy="70.0" r="6" fill="#f472b6"/><line x1="34.4" y1="44.1" x2="19.8" y2="33.6" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/><circle cx="19.8" cy="33.6" r="6" fill="#fb923c"/><line x1="56.4" y1="28.2" x2="50.8" y2="11.0" stroke="#facc15" stroke-width="7" stroke-linecap="round"/><circle cx="50.8" cy="11.0" r="6" fill="#facc15"/><line x1="83.6" y1="28.2" x2="89.2" y2="11.0" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/><circle cx="89.2" cy="11.0" r="6" fill="#38bdf8"/><line x1="105.6" y1="44.1" x2="120.2" y2="33.6" stroke="#a78bfa" stroke-width="7" stroke-linecap="round"/><circle cx="120.2" cy="33.6" r="6" fill="#a78bfa"/>
+<circle cx="70" cy="70" r="46" fill="url(#gg)"/>
+<circle cx="52" cy="58" r="6" fill="#86efac" opacity=".7"/><circle cx="88" cy="92" r="4" fill="#86efac" opacity=".7"/>
+<ellipse cx="56" cy="66" rx="9" ry="11" fill="#fff"/><ellipse cx="84" cy="66" rx="9" ry="11" fill="#fff"/>
+<circle cx="58" cy="68" r="4.5" fill="#1b2530"/><circle cx="86" cy="68" r="4.5" fill="#1b2530"/>
+<circle cx="59.5" cy="66.5" r="1.5" fill="#fff"/><circle cx="87.5" cy="66.5" r="1.5" fill="#fff"/>
+<path d="M54 86 q16 16 32 0" stroke="#1b2530" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M62 88 q8 7 16 0 v3 q-8 5 -16 0z" fill="#fff"/>
+<ellipse cx="56" cy="128" rx="12" ry="6" fill="#15803d"/><ellipse cx="86" cy="128" rx="12" ry="6" fill="#15803d"/>
+<rect x="50" y="112" width="10" height="16" rx="4" fill="#15803d"/><rect x="80" y="112" width="10" height="16" rx="4" fill="#15803d"/>
+</svg></div><div class="mascot drop" data-mascot="drop" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 160" role="img" aria-label="Dottie the Drop"><defs><radialGradient id="dg" cx="40%" cy="40%" r="70%"><stop offset="0" stop-color="#bae6fd"/><stop offset=".5" stop-color="#38bdf8"/><stop offset="1" stop-color="#0369a1"/></radialGradient></defs>
+<path d="M70 8 C 70 8, 18 72, 18 102 a52 52 0 0 0 104 0 C 122 72, 70 8, 70 8 z" fill="url(#dg)"/>
+<ellipse cx="46" cy="60" rx="9" ry="16" fill="#fff" opacity=".55" transform="rotate(20 46 60)"/>
+<ellipse cx="56" cy="98" rx="9" ry="11" fill="#fff"/><ellipse cx="84" cy="98" rx="9" ry="11" fill="#fff"/>
+<circle cx="58" cy="100" r="4.5" fill="#1b2530"/><circle cx="86" cy="100" r="4.5" fill="#1b2530"/>
+<circle cx="59.5" cy="98.5" r="1.5" fill="#fff"/><circle cx="87.5" cy="98.5" r="1.5" fill="#fff"/>
+<path d="M54 118 q16 14 32 0" stroke="#1b2530" stroke-width="4" fill="none" stroke-linecap="round"/>
+<circle cx="44" cy="116" r="5" fill="#f9a8d4" opacity=".7"/><circle cx="96" cy="116" r="5" fill="#f9a8d4" opacity=".7"/>
+<g fill="#fde047"><path d="M118 30 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3z"/><path d="M14 44 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2z"/></g>
+<ellipse cx="54" cy="152" rx="11" ry="5" fill="#0369a1"/><ellipse cx="86" cy="152" rx="11" ry="5" fill="#0369a1"/>
+</svg></div>
+</main>
+<div class="big" role="dialog" aria-modal="true" aria-label="Card in full screen">
+  <div class="bar"><span class="big-where"></span><button type="button" class="big-close">Close</button></div>
+  <div class="body"></div>
+  <div class="foot"><button type="button" class="big-back">Back</button><button type="button" class="next big-next">Next card</button></div>
+</div>
+<script>var TEACHER = {"salt":"uhvO4KZpdfAMQ/HrZbTCCA==","iv":"QVoyBOplOHGrs4Pd","ct":"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"}; var MASCOT_LINES = {"gerry":["Hi, I'm Gerry. Please don't wash your hands. Love, Gerry.","A sneeze is my favourite taxi. No tissue, please!","Bed rails are my holiday home. I can stay for weeks.","Jewellery under gloves? Perfect. I hide under rings.","Recap that needle. Go on. I dare you.","You washed for 20 seconds? That's just rude.","Damp hands, dry gloves? Thank you, I'll move in.","Soap and water is my kryptonite. Shh.","I love a hand that touches a face. Any face."],"drop":["Hi, I'm Dottie the Drop. Wash your hands and Gerry has nowhere to go.","Twenty to thirty seconds. Sing happy birthday twice, quietly.","Step zero: wet your hands first. Soap needs water to work.","Dry your hands properly. Wet hands pick up germs faster.","Hand rub is great, unless your hands look dirty. Then it's me and soap.","Five moments. Before, before, after, after, after.","Gloves off? Hands clean. Every single time.","C diff spores laugh at alcohol. They do not laugh at soap and water.","Cover that cut with a waterproof dressing. Gerry hates a closed door."]};</script>
+<script>(function(){
+  var ANGLES = [-8, -5.5, -9, -4.5, -7, -6, -8.5, -4, -6.5];
+  var big = document.querySelector('.big'), bigBody = big.querySelector('.body'),
+      bigWhere = big.querySelector('.big-where'), active = null;
+
+  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ---------- */
+  (function(){
+    var pill = document.querySelector('.tpill'), tlink = document.querySelector('.tlink'), saved = null, on = '0';
+    var b64 = function(s){ var b = atob(s), a = new Uint8Array(b.length); for(var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; };
+    function decrypt(code){
+      if(!window.crypto || !crypto.subtle) return Promise.reject(new Error('nosubtle'));
+      var enc = new TextEncoder();
+      return crypto.subtle.importKey('raw', enc.encode(code), 'PBKDF2', false, ['deriveKey']).then(function(km){
+        return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(TEACHER.salt), iterations: 150000, hash: 'SHA-256' }, km, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      }).then(function(key){
+        return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(TEACHER.iv) }, key, b64(TEACHER.ct));
+      }).then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
+    }
+    function show(notes){
+      document.querySelectorAll('.tnotes').forEach(function(a){ a.innerHTML = notes[a.getAttribute('data-slide')] || ''; });
+      document.body.classList.add('teacher'); pill.hidden = false;
+      try{ localStorage.setItem('tv_on', '1'); }catch(e){}
+    }
+    function hide(){ document.body.classList.remove('teacher'); pill.hidden = true; try{ localStorage.setItem('tv_on', '0'); }catch(e){} }
+    function unlock(code, quiet){
+      return decrypt(code).then(function(notes){ saved = code; try{ localStorage.setItem('tv_code', code); }catch(e){} show(notes); }, function(err){
+        if(quiet) return;
+        alert(err.message === 'nosubtle' ? 'This browser cannot unlock the teacher view. Use Chrome or Edge.' : 'That code did not work.');
+      });
+    }
+    try{ saved = localStorage.getItem('tv_code'); on = localStorage.getItem('tv_on') || '0'; }catch(e){}
+    var q = new URLSearchParams(location.search);
+    if(q.get('t') === 'off'){ hide(); try{ localStorage.removeItem('tv_code'); }catch(e){} }
+    else if(q.has('t')) unlock(q.get('t'));
+    else if(saved && on === '1') unlock(saved, true);
+    if(tlink) tlink.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')){ hide(); return; }
+      if(saved){ unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); }); } else ask();
+      function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
+    });
+    pill.querySelector('.tp-hide').addEventListener('click', hide);
+    pill.querySelector('.tp-out').addEventListener('click', function(){ hide(); saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open')) hide(); });
+  })();
+
+    /* ---------- audio ---------- */
+  var player = new Audio(), current = null, queue = null;
+  function stopAudio(){ player.pause(); if(current){ current.classList.remove('playing'); current = null; } queue = null; }
+  function playBtn(btn, onEnd){
+    if(current === btn){ stopAudio(); return; }
+    stopAudio();
+    current = btn; btn.classList.add('playing');
+    player.src = btn.getAttribute('data-audio');
+    player.onended = function(){ btn.classList.remove('playing'); current = null; if(onEnd) onEnd(); };
+    player.onerror = function(){ btn.classList.remove('playing'); current = null; btn.title = 'Sound file not found yet'; };
+    player.play().catch(function(){});
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.say'); if(!b) return;
+    e.preventDefault(); e.stopPropagation();
+    var inBig = b.closest('.big');
+    if(inBig && active){ var realBtn = active.card().querySelector('.say'); if(realBtn) b = realBtn; }
+    playBtn(b);
+  });
+
+  /* ---------- mascots follow the scroll ---------- */
+  document.querySelectorAll('.mascot').forEach(function(g, gi){
+    var name = g.getAttribute('data-mascot'), bubble = g.querySelector('.gerry-bubble');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var lastSlide = null, timer = null, lines = MASCOT_LINES[name] || [];
+    function place(){
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? window.scrollY / max : 0;
+      var top = 90 + (gi ? 1 - p : p) * (window.innerHeight - 300);
+      g.style.top = top + 'px';
+      var slides = document.querySelectorAll('section.slide'), cur = null;
+      for(var i = 0; i < slides.length; i++){ if(slides[i].getBoundingClientRect().top < window.innerHeight * 0.5) cur = slides[i]; }
+      if(cur !== lastSlide && lastSlide !== null && !reduce){ g.classList.remove('hop'); void g.offsetWidth; g.classList.add('hop'); }
+      lastSlide = cur;
+    }
+    window.addEventListener('scroll', function(){ if(!timer) timer = requestAnimationFrame(function(){ timer = null; place(); }); }, { passive: true });
+    window.addEventListener('resize', place);
+    place();
+    var n = 0;
+    g.addEventListener('click', function(){
+      if(!bubble.hidden){ bubble.hidden = true; return; }
+      var k = n++ % lines.length;
+      bubble.textContent = lines[k]; bubble.hidden = false;
+      stopAudio(); player.src = 'audio/' + name + '-' + (k + 1) + '.mp3'; player.onended = null; player.onerror = null; player.play().catch(function(){});
+      clearTimeout(bubble._t); bubble._t = setTimeout(function(){ bubble.hidden = true; }, 7000);
+    });
+  });
+
+  /* ---------- videos ---------- */
+  document.querySelectorAll('.video').forEach(function(v){
+    var id = (v.getAttribute('data-youtube')||'').trim(), t = v.getAttribute('data-title')||'Video';
+    if(!id) return;
+    v.innerHTML = '<iframe title="'+t.replace(/"/g,'&quot;')+'" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>';
+    var w = document.createElement('p'); w.className = 'watch';
+    w.innerHTML = 'Video not playing? <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v='+encodeURIComponent(id)+'">Watch "'+t.replace(/</g,'&lt;')+'" on YouTube</a>';
+    v.parentNode.insertBefore(w, v.nextSibling);
+  });
+
+  /* ---------- click a part of a diagram to make it stand out ---------- */
+  document.querySelectorAll('.spot').forEach(function(sv){
+    var parts = sv.querySelectorAll('[data-spot]');
+    parts.forEach(function(g){
+      g.style.cursor = 'pointer';
+      g.addEventListener('click', function(e){
+        e.stopPropagation();
+        var on = g.classList.contains('lit');
+        parts.forEach(function(x){ x.classList.remove('lit'); });
+        sv.classList.toggle('spotting', !on);
+        if(!on) g.classList.add('lit');
+      });
+    });
+    sv.addEventListener('click', function(){ parts.forEach(function(x){ x.classList.remove('lit'); }); sv.classList.remove('spotting'); });
+  });
+
+  /* ---------- card stacks ---------- */
+  document.querySelectorAll('.stack').forEach(function(stack){
+    var cards = [].slice.call(stack.querySelectorAll('.card')), n = cards.length, i = 0, busy = false;
+    var deck = document.createElement('div'); deck.className = 'deck'; deck.tabIndex = 0;
+    deck.setAttribute('role','group');
+    deck.setAttribute('aria-label', (stack.getAttribute('aria-label')||'Cards') + '. Press the right arrow for the next card.');
+    var pile = document.createElement('div'); pile.className = 'pile'; pile.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
+    deck.appendChild(pile);
+    cards.forEach(function(c, k){
+      c.style.setProperty('--r', ANGLES[k % ANGLES.length] + 'deg');
+      if(k % 2) c.classList.add('shade');
+      if(c.textContent.replace(/\s+/g,' ').length > 520) c.classList.add('long');
+      var tag = document.createElement('span'); tag.className = 'count'; tag.textContent = 'Card ' + (k+1) + ' of ' + n;
+      c.insertBefore(tag, c.firstChild);
+      c.setAttribute('aria-hidden', 'true');
+      deck.appendChild(c);
+    });
+    if(stack.getAttribute('data-playall')){
+      var pa = document.createElement('div'); pa.className = 'playall';
+      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> Play all cards</button>';
+      stack.appendChild(pa);
+      pa.querySelector('button').addEventListener('click', function(ev){
+        ev.stopPropagation();
+        if(queue === stack){ stopAudio(); return; }
+        stopAudio(); queue = stack;
+        function step(){
+          if(queue !== stack) return;
+          var b = cards[i].querySelector('.say');
+          if(!b){ next(); return; }
+          playBtn(b, function(){ setTimeout(function(){ if(queue !== stack) return; if(i === n-1){ queue = null; return; } go(1); step(); }, 900); });
+        }
+        step();
+      }, true);
+    }
+    stack.appendChild(deck);
+
+    var controls = document.createElement('div'); controls.className = 'controls';
+    controls.innerHTML = '<button type="button" class="back">Back</button><span class="where" aria-live="polite"></span><button type="button" class="next">Next card</button><button type="button" class="full">Full screen</button>';
+    stack.appendChild(controls);
+    var hint = document.createElement('p'); hint.className = 'hint'; hint.textContent = 'Click the card to see the next card.';
+    stack.appendChild(hint);
+    var where = controls.querySelector('.where');
+
+    var heights = [];
+    function size(){
+      cards.forEach(function(c, k){ c.style.height = 'auto'; heights[k] = c.offsetHeight; c.style.height = ''; });
+      deck.style.height = heights[i] + 'px';
+    }
+    function show(){
+      cards.forEach(function(c, k){ c.classList.toggle('top', k === i); c.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      where.textContent = 'Card ' + (i+1) + ' of ' + n;
+      if(heights.length) deck.style.height = heights[i] + 'px';
+      if(active === api && big.classList.contains('open')) fill();
+    }
+    function go(step){
+      if(busy) return; busy = true;
+      var old = cards[i];
+      i = (i + step + n) % n;
+      var cls = step > 0 ? 'leave' : 'leave-back';
+      show();
+      old.classList.add(cls);
+      cards[i].classList.add('arrive');
+      setTimeout(function(){ old.classList.remove(cls); cards[i].classList.remove('arrive'); busy = false; }, 440);
+    }
+    function next(){ go(1); }
+    function fill(){
+      bigBody.innerHTML = cards[i].innerHTML;
+      bigWhere.textContent = 'Card ' + (i+1) + ' of ' + n;
+      bigBody.scrollTop = 0;
+    }
+    var api = { go: go, fill: fill, card: function(){ return cards[i]; } };
+
+    deck.addEventListener('click', function(e){ if(e.target.closest('a') || e.target.closest('.say')) return; go(1); });
+    deck.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); go(1); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
+    });
+    controls.querySelector('.next').addEventListener('click', function(){ go(1); });
+    controls.querySelector('.back').addEventListener('click', function(){ go(-1); });
+    controls.querySelector('.full').addEventListener('click', function(){
+      active = api; fill(); big.classList.add('open'); big.querySelector('.big-next').focus();
+    });
+
+    size(); show();
+    window.addEventListener('resize', size);
+    window.addEventListener('load', size);
+    stack.querySelectorAll('img').forEach(function(img){ img.addEventListener('load', size); });
+  });
+
+  function closeBig(){ big.classList.remove('open'); active = null; }
+  big.querySelector('.big-close').addEventListener('click', closeBig);
+  big.querySelector('.big-next').addEventListener('click', function(){ if(active) active.go(1); });
+  big.querySelector('.big-back').addEventListener('click', function(){ if(active) active.go(-1); });
+  document.addEventListener('keydown', function(e){
+    if(!big.classList.contains('open')) return;
+    if(e.key === 'Escape') closeBig();
+    if(e.key === 'ArrowRight' && active) active.go(1);
+    if(e.key === 'ArrowLeft' && active) active.go(-1);
+  });
+
+  /* ---------- activities ---------- */
+  function shuffle(a){ a = a.slice(); for(var i = a.length-1; i > 0; i--){ var j = Math.floor(Math.random()*(i+1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
+  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
+
+  var builders = {
+    /* chips into targets: used by match (one chip per target) and sort (many chips per bucket) */
+    match: function(root, a){ return buildChips(root, a.pairs.map(function(p){ return { text: p.a, target: p.b }; }), shuffle(a.pairs.map(function(p){ return p.b; })), a.labels || null, 1); },
+    sort: function(root, a){ return buildChips(root, a.items.map(function(it){ return { text: it.text, target: it.bucket }; }), a.buckets, null, 99); },
+    order: function(root, a){
+      var list = el('ol', 'order'); root.appendChild(list);
+      var start = a.start == null ? 1 : a.start;
+      function render(items){
+        list.innerHTML = '';
+        items.forEach(function(t, k){
+          var li = el('li'); li.draggable = true; li.setAttribute('data-text', t);
+          li.innerHTML = '<span class="o-n">' + (start + k) + '</span><span class="o-t">' + esc(t) + '</span><span class="o-btn"><button type="button" aria-label="Move up">&#9650;</button><button type="button" aria-label="Move down">&#9660;</button></span>';
+          list.appendChild(li);
+        });
+      }
+      function items(){ return [].map.call(list.children, function(li){ return li.getAttribute('data-text'); }); }
+      function renumber(){ [].forEach.call(list.children, function(li, k){ li.querySelector('.o-n').textContent = start + k; li.classList.remove('right','wrong'); }); }
+      render(shuffle(a.items));
+      list.addEventListener('click', function(e){
+        var b = e.target.closest('button'); if(!b) return;
+        var li = b.closest('li'); var up = b.getAttribute('aria-label') === 'Move up';
+        if(up && li.previousElementSibling) list.insertBefore(li, li.previousElementSibling);
+        if(!up && li.nextElementSibling) list.insertBefore(li.nextElementSibling, li);
+        renumber();
+      });
+      var drag = null;
+      list.addEventListener('dragstart', function(e){ drag = e.target.closest('li'); if(drag) drag.classList.add('dragging'); });
+      list.addEventListener('dragend', function(){ if(drag) drag.classList.remove('dragging'); drag = null; renumber(); });
+      list.addEventListener('dragover', function(e){ e.preventDefault(); var li = e.target.closest('li'); if(!li || li === drag) return; var r = li.getBoundingClientRect(); if(e.clientY < r.top + r.height/2) list.insertBefore(drag, li); else list.insertBefore(drag, li.nextSibling); });
+      return {
+        check: function(){ var ok = 0; [].forEach.call(list.children, function(li, k){ var good = li.getAttribute('data-text') === a.items[k]; li.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, a.items.length]; },
+        reset: function(){ render(shuffle(a.items)); }
+      };
+    },
+    quiz: function(root, a){
+      var qs = [];
+      a.questions.forEach(function(q, qi){
+        var box = el('div', 'quiz-q'); box.innerHTML = '<p><b>' + (qi+1) + '. ' + esc(q.q) + '</b></p>';
+        var sel = -1;
+        q.options.forEach(function(o, oi){
+          var b = el('button', 'opt', esc(o)); b.type = 'button';
+          b.addEventListener('click', function(){ if(box.classList.contains('done')) return; sel = oi; [].forEach.call(box.querySelectorAll('.opt'), function(x){ x.classList.remove('selected'); }); b.classList.add('selected'); });
+          box.appendChild(b);
+        });
+        if(q.why) box.appendChild(el('p', 'why', esc(q.why)));
+        root.appendChild(box);
+        qs.push({ box: box, get: function(){ return sel; }, set: function(v){ sel = v; }, q: q });
+      });
+      return {
+        check: function(){ var ok = 0; qs.forEach(function(x){ var opts = x.box.querySelectorAll('.opt'); x.box.classList.add('done'); opts.forEach(function(o, oi){ o.classList.remove('selected'); if(oi === x.q.answer) o.classList.add('right'); else if(oi === x.get()) o.classList.add('wrong'); }); if(x.get() === x.q.answer) ok++; }); return [ok, qs.length]; },
+        reset: function(){ qs.forEach(function(x){ x.set(-1); x.box.classList.remove('done'); x.box.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected','right','wrong'); }); }); }
+      };
+    },
+    table: function(root, a){
+      var t = el('table', 'fill-table'); root.appendChild(t);
+      t.innerHTML = '<thead><tr>' + a.columns.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead>';
+      var tb = el('tbody'); t.appendChild(tb);
+      a.rows.forEach(function(r){
+        var tr = el('tr'); tr.innerHTML = '<td><b>' + esc(r.label) + '</b></td>';
+        r.cells.forEach(function(c){
+          var td = el('td'); var s = el('select'); s.innerHTML = '<option value="">Choose...</option>' + shuffle(c.options).map(function(o){ return '<option>' + esc(o) + '</option>'; }).join('');
+          s.setAttribute('data-answer', c.answer); td.appendChild(s); tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      return {
+        check: function(){ var ok = 0, n = 0; t.querySelectorAll('select').forEach(function(s){ n++; var td = s.parentNode; td.classList.remove('right','wrong'); var good = s.value === s.getAttribute('data-answer'); td.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, n]; },
+        reset: function(){ t.querySelectorAll('select').forEach(function(s){ s.value = ''; s.parentNode.classList.remove('right','wrong'); }); }
+      };
+    }
+  };
+
+  function buildChips(root, items, targetNames, labels, cap){
+    var bank = el('div', 'bank'); root.appendChild(bank);
+    var tg = el('div', 'targets'); root.appendChild(tg);
+    var selected = null, targets = {};
+    targetNames.forEach(function(name){
+      var t = el('div', 'target'); t.setAttribute('data-name', name);
+      t.innerHTML = '<div class="t-label">' + esc(labels ? (labels[name] || name) : name) + '</div><div class="t-drop"></div>';
+      tg.appendChild(t); targets[name] = t;
+      t.addEventListener('click', function(){ if(selected) place(selected, t); });
+      t.addEventListener('dragover', function(e){ e.preventDefault(); t.classList.add('over'); });
+      t.addEventListener('dragleave', function(){ t.classList.remove('over'); });
+      t.addEventListener('drop', function(e){ e.preventDefault(); t.classList.remove('over'); if(selected) place(selected, t); });
+    });
+    function place(chip, t){
+      var drop = t.querySelector('.t-drop');
+      if(cap === 1 && drop.children.length){ bank.appendChild(drop.firstElementChild); }
+      drop.appendChild(chip); chip.classList.remove('selected','right','wrong'); selected = null;
+    }
+    function mk(it){
+      var c = el('div', 'chip', esc(it.text)); c.setAttribute('data-target', it.target); c.draggable = true; c.tabIndex = 0;
+      c.addEventListener('click', function(e){ e.stopPropagation(); if(c.parentNode !== bank){ bank.appendChild(c); c.classList.remove('right','wrong'); selected = null; return; } if(selected) selected.classList.remove('selected'); selected = c; c.classList.add('selected'); });
+      c.addEventListener('dragstart', function(){ selected = c; c.classList.add('selected'); });
+      c.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); c.click(); } });
+      return c;
+    }
+    function fillBank(){ bank.innerHTML = ''; shuffle(items).forEach(function(it){ bank.appendChild(mk(it)); }); }
+    fillBank();
+    return {
+      check: function(){ var ok = 0; items.length; root.querySelectorAll('.chip').forEach(function(c){ var t = c.closest('.target'); c.classList.remove('right','wrong'); if(!t){ c.classList.add('wrong'); return; } var good = t.getAttribute('data-name') === c.getAttribute('data-target'); c.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, items.length]; },
+      reset: function(){ root.querySelectorAll('.t-drop').forEach(function(d){ d.innerHTML = ''; }); fillBank(); selected = null; }
+    };
+  }
+
+  document.querySelectorAll('.activity').forEach(function(act){
+    var a; try{ a = JSON.parse(act.getAttribute('data-activity')); }catch(e){ return; }
+    var body = act.querySelector('.act-body'), res = act.querySelector('.act-result');
+    var b = builders[a.type]; if(!b) return;
+    var api = b(body, a);
+    var slide = act.closest('section.slide'), peek = act.querySelector('.act-peek'), tools = act.querySelector('.act-tools');
+    function blur(on){ if(slide) slide.classList.toggle('hide-notes', on); peek.textContent = on ? 'Show the notes' : 'Hide the notes to carry on'; act.classList.toggle('peeking', !on && act.classList.contains('started')); }
+    act.querySelector('.act-go').addEventListener('click', function(){
+      act.classList.add('started'); act.querySelector('.act-start').hidden = true; body.hidden = false; tools.hidden = false; blur(true);
+      act.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    peek.addEventListener('click', function(){ blur(!slide.classList.contains('hide-notes')); });
+    act.querySelector('.act-check').addEventListener('click', function(){
+      var r = api.check(); res.className = 'act-result ' + (r[0] === r[1] ? 'good' : 'bad');
+      res.textContent = r[0] === r[1] ? 'All correct. Well done!' : r[0] + ' of ' + r[1] + ' correct. Try the red ones again.';
+      if(r[0] === r[1]){ act.classList.remove('started'); blur(false); }
+    });
+    act.querySelector('.act-reset').addEventListener('click', function(){ api.reset(); res.textContent = ''; res.className = 'act-result'; });
+  });
+})();
+</script>
+</body>
+</html>
