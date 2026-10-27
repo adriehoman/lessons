@@ -246,18 +246,29 @@
     codes = codes || [];
     var shown = codes.length ? ' Winner code' + (codes.length > 1 ? 's: ' : ': ') + codes.join(', ') + '.' : '';
     var spoken = codes.length ? ' Winner code' + (codes.length > 1 ? 's: ' : ': ') + codes.map(function(c){ return c.split('').join(' '); }).join(', and ') + '.' : '';
-    var gerry = document.querySelector('.mascot[data-mascot="gerry"]'), drop = document.querySelector('.mascot[data-mascot="drop"]');
     var who = n === 1 ? '1 student' : n + ' students';
-    var gLine = n === 0 ? 'Ha! Nobody got every activity right on the first try. Not yet!'
-                        : 'Oh no! ' + who + ' got every activity right on the first try. They know all my tricks!';
-    var dLine = n === 0 ? 'Keep going, everyone. You can still beat Gerry!'
-                        : 'Well done! ' + who + ' got all ' + ACT_IDS.length + ' right first time. Gerry is in trouble now!';
+    /* Each unit can give its own mascots their own lines (window.ANNOUNCE, written by the unit's build from site.js).
+       Without it, the original Gerry and Dottie lines are used, so older pages work as before. */
+    var A = window.ANNOUNCE, ms = document.querySelectorAll('.mascot'), first, second, fLine, sLine, fV = 'William', fP = 1.15, sV = 'Natasha', sP = 1;
+    if(A && A.first){
+      var fill = function(t){ return String(t || '').replace(/\{who\}/g, who).replace(/\{n\}/g, ACT_IDS.length); };
+      first = document.querySelector('.mascot[data-mascot="' + A.first.mascot + '"]') || ms[0];
+      second = A.second ? (document.querySelector('.mascot[data-mascot="' + A.second.mascot + '"]') || null) : null;
+      fLine = fill(n === 0 ? A.first.none : A.first.some); fV = A.first.voice || fV; fP = A.first.pitch || fP;
+      if(A.second){ sLine = fill(n === 0 ? A.second.none : A.second.some); sV = A.second.voice || sV; sP = A.second.pitch || sP; }
+    } else {
+      first = document.querySelector('.mascot[data-mascot="gerry"]'); second = document.querySelector('.mascot[data-mascot="drop"]');
+      fLine = n === 0 ? 'Ha! Nobody got every activity right on the first try. Not yet!'
+                      : 'Oh no! ' + who + ' got every activity right on the first try. They know all my tricks!';
+      sLine = n === 0 ? 'Keep going, everyone. You can still beat Gerry!'
+                      : 'Well done! ' + who + ' got all ' + ACT_IDS.length + ' right first time. Gerry is in trouble now!';
+    }
     if(window.speechSynthesis) speechSynthesis.cancel();
-    if(!drop){ bubble(gerry, gLine + shown); say(gLine + spoken, 'William', 1.15); return; }
-    bubble(gerry, gLine);
-    say(gLine, 'William', 1.15).then(function(){
-      bubble(drop, dLine + shown);
-      return say(dLine + spoken, 'Natasha', 1);
+    if(!second){ bubble(first, fLine + shown); say(fLine + spoken, fV, fP); return; }
+    bubble(first, fLine);
+    say(fLine, fV, fP).then(function(){
+      bubble(second, sLine + shown);
+      return say(sLine + spoken, sV, sP);
     });
   }
   if(window.speechSynthesis){ speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged = function(){ speechSynthesis.getVoices(); }; }
