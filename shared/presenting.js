@@ -26,6 +26,9 @@
   function el(tag, cls, txt){ var e = document.createElement(tag); if(cls) e.className = cls; if(txt != null) e.textContent = txt; return e; }
   function titleOf(act){ var b = act.querySelector('.act-head b'); return b ? b.textContent.trim() : act.id; }
 
+  /* winner code: the same 3 digits on the student's screen and on the teacher's panel */
+  function winCode(dev, sid){ var h = 5381, t = dev + '|' + sid; for(var i = 0; i < t.length; i++) h = ((h * 33) ^ t.charCodeAt(i)) >>> 0; return String(100 + h % 900); }
+
   var LESSON = (location.pathname.replace(/^\/lessons\//, '').replace(/\.html$/, '').replace(/[.#$\[\]\/]/g, '_')) || 'page';
   var DEVICE = ls('pv_dev'); if(!DEVICE){ DEVICE = rid(12); ls('pv_dev', DEVICE); }
   var ACT_IDS = acts.map(function(a){ return a.id; });
@@ -91,6 +94,11 @@
     '.pv-win{position:fixed; left:50%; top:50%; transform:translate(-50%,-50%); z-index:60; width:min(560px,calc(100vw - 32px)); background:#fffbeb; border:4px solid #f59e0b; border-radius:20px; padding:26px 24px 22px; text-align:center; box-shadow:0 20px 60px rgba(0,0,0,.35); font-size:clamp(18px,1.4vw,26px)}',
     '.pv-win .big{font-size:3em; line-height:1}',
     '.pv-win p{margin:10px 0 18px; font-weight:700; color:#78350f}',
+    '.pv-win .code{display:inline-block; margin:0 0 16px; font-size:1.6em; font-weight:900; letter-spacing:.12em; color:#fff; background:#b45309; border-radius:14px; padding:6px 18px}',
+    '.pv-code{position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(14px,2vw,32px); z-index:41; background:#fffbeb; color:#78350f; border:3px solid #f59e0b; border-radius:30px; padding:8px 18px; font-weight:800; font-size:clamp(16px,1.2vw,22px); box-shadow:0 4px 14px rgba(0,0,0,.2)}',
+    '.pv-code b{letter-spacing:.1em; color:#b45309}',
+    '.ppanel .codes{font-size:.85em; color:#78350f; padding:0 0 4px}',
+    '.ppanel .codes b{letter-spacing:.08em}',
     '.pv-win button{font:inherit; font-weight:700; border:0; border-radius:24px; padding:10px 24px; background:#b45309; color:#fff; cursor:pointer; min-height:44px}'
   ].join('\n');
   document.head.appendChild(css);
@@ -125,6 +133,7 @@
     if(mine.sid && mine.sid !== sid){ mine.a = {}; }   /* a new class session: start fresh */
     mine.sid = sid; saveMine();
     pushAll();
+    maybeCelebrate();
   }
 
   document.addEventListener('click', function(e){
@@ -148,15 +157,25 @@
     if(btn.classList.contains('act-check')) maybeCelebrate();
   }, false);
 
-  var celebrated = false;
+  var codeTag = null;
   function maybeCelebrate(){
-    if(celebrated || !liveSid || iAmPresenting()) return;
+    if(!liveSid || iAmPresenting()) return;
     var all = ACT_IDS.every(function(id){ return mine.a[id] && mine.a[id].f === true; });
     if(!all) return;
-    celebrated = true;
+    var code = winCode(DEVICE, liveSid);
+    /* the code stays in the corner, even after Close or a reload */
+    if(!codeTag){
+      codeTag = el('div', 'pv-code'); codeTag.setAttribute('role', 'status');
+      codeTag.appendChild(document.createTextNode('\u2B50 Winner code ')); codeTag.appendChild(el('b', null, code));
+      document.body.appendChild(codeTag);
+    }
+    if(mine.won === liveSid) return;   /* pop-up only once */
+    mine.won = liveSid; saveMine();
     var w = el('div', 'pv-win'); w.setAttribute('role', 'dialog'); w.setAttribute('aria-label', 'Well done');
-    w.appendChild(el('div', 'big', '⭐'));
-    w.appendChild(el('p', null, 'You got all ' + ACT_IDS.length + ' activities right on the first try! Show your teacher.'));
+    w.appendChild(el('div', 'big', '\u2B50'));
+    w.appendChild(el('p', null, 'You got all ' + ACT_IDS.length + ' activities right on the first try! Show your teacher this code:'));
+    w.appendChild(el('div', 'code', code));
+    w.appendChild(el('p', null, 'Your code stays in the bottom corner of the page.'));
     var ok = el('button', null, 'Close'); ok.type = 'button'; ok.addEventListener('click', function(){ w.remove(); });
     w.appendChild(ok); document.body.appendChild(w); ok.focus();
   }
@@ -193,11 +212,11 @@
     list.appendChild(li);
   });
 
-  var mySid = ls('pv_teach_' + LESSON), unwatch = null, lastPerfect = 0;
+  var mySid = ls('pv_teach_' + LESSON), unwatch = null, lastPerfect = 0, lastCodes = [];
 
   /* ---------- mascots announce the result ---------- */
   var annBtn = el('button', 'pv-ann', '\uD83D\uDCE3 Announce'); annBtn.type = 'button';
-  annBtn.addEventListener('click', function(){ announce(lastPerfect); });
+  annBtn.addEventListener('click', function(){ announce(lastPerfect, lastCodes); });
   panel.querySelector('h3').appendChild(annBtn);
   function pickVoice(want){
     var vs = (window.speechSynthesis && speechSynthesis.getVoices()) || [];
@@ -223,7 +242,10 @@
     mascot.classList.remove('hop'); void mascot.offsetWidth; mascot.classList.add('hop');
     clearTimeout(b._t); b._t = setTimeout(function(){ b.hidden = true; }, 12000);
   }
-  function announce(n){
+  function announce(n, codes){
+    codes = codes || [];
+    var shown = codes.length ? ' Winner code' + (codes.length > 1 ? 's: ' : ': ') + codes.join(', ') + '.' : '';
+    var spoken = codes.length ? ' Winner code' + (codes.length > 1 ? 's: ' : ': ') + codes.map(function(c){ return c.split('').join(' '); }).join(', and ') + '.' : '';
     var gerry = document.querySelector('.mascot[data-mascot="gerry"]'), drop = document.querySelector('.mascot[data-mascot="drop"]');
     var who = n === 1 ? '1 student' : n + ' students';
     var gLine = n === 0 ? 'Ha! Nobody got every activity right on the first try. Not yet!'
@@ -231,11 +253,11 @@
     var dLine = n === 0 ? 'Keep going, everyone. You can still beat Gerry!'
                         : 'Well done! ' + who + ' got all ' + ACT_IDS.length + ' right first time. Gerry is in trouble now!';
     if(window.speechSynthesis) speechSynthesis.cancel();
+    if(!drop){ bubble(gerry, gLine + shown); say(gLine + spoken, 'William', 1.15); return; }
     bubble(gerry, gLine);
     say(gLine, 'William', 1.15).then(function(){
-      if(!drop) return;
-      bubble(drop, dLine);
-      return say(dLine, 'Natasha', 1);
+      bubble(drop, dLine + shown);
+      return say(dLine + spoken, 'Natasha', 1);
     });
   }
   if(window.speechSynthesis){ speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged = function(){ speechSynthesis.getVoices(); }; }
@@ -261,18 +283,20 @@
     });
 
     /* first-try counts across ALL activities on the page */
-    var perfect = 0, onTrack = 0;
+    var perfect = 0, onTrack = 0, codes = [];
     Object.keys(devs).forEach(function(d){
       var tried = 0, firstOk = 0;
       ACT_IDS.forEach(function(id){ var r = (data[id] || {})[d]; if(r && r.f !== null && r.f !== undefined){ tried++; if(r.f === true) firstOk++; } });
-      if(tried && firstOk === tried){ if(tried === ACT_IDS.length) perfect++; else onTrack++; }
+      if(tried && firstOk === tried){ if(tried === ACT_IDS.length){ perfect++; codes.push(winCode(d, mySid)); } else onTrack++; }
     });
     var sum = panel.querySelector('.sum'); sum.innerHTML = '';
     var r1 = el('div', 'star'); r1.appendChild(el('span', null, '⭐ All ' + ACT_IDS.length + ' right first try')); r1.appendChild(el('b', null, String(perfect)));
     var r2 = el('div'); r2.appendChild(el('span', null, 'Still on track (no mistakes yet)')); r2.appendChild(el('b', null, String(onTrack)));
-    sum.appendChild(r1); sum.appendChild(r2);
+    sum.appendChild(r1);
+    if(codes.length){ var cr = el('div', 'codes'); cr.appendChild(document.createTextNode('Winner codes: ')); cr.appendChild(el('b', null, codes.sort().join(' \u00B7 '))); sum.appendChild(cr); }
+    sum.appendChild(r2);
     sum.appendChild(el('div', 'pv-note', 'Peeking at the notes before the first Check counts as a miss.'));
-    lastPerfect = perfect;
+    lastPerfect = perfect; lastCodes = codes;
   }
 
   function startPresenting(resume){
