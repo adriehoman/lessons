@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHCAGE013 Work effectively in aged care: Your role and the team</title>
+<meta name="description" content="CHCAGE013 Lesson 5: job roles (RN, EN, support worker), scope of practice, delegation, the interdisciplinary team, cultural competence, individualised plans, reporting and documentation, and key organisations.">
+<style>:root{
+  --ink:#1b2530; --soft-ink:#44505c; --paper:#ffffff;
+  --deep:#12384a; --aqua:#8fe3e8; --action:#0b6f7c;
+  --card-a:#fbfbf9; --card-b:#ecece8; --edge:#d9d9d4;
+  --warn:#b45309; --warn-bg:#fff7ed; --ok:#15803d; --bad:#b91c1c;
+  --teach:#4c1d95; --teach-bg:#f5f3ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size:clamp(17px,1.5vw,30px); line-height:1.55}
+main{overflow-x:clip}
+.wrap{max-width:1500px; margin:0 auto; padding:0 clamp(20px,3vw,60px)}
+
+/* banner */
+.banner{position:relative; background:var(--deep); color:#fff; padding:clamp(60px,9vw,140px) 20px 40px; overflow:hidden}
+.banner-inner{position:relative; z-index:2; max-width:1500px; margin:0 auto}
+.banner .kicker{margin:0 0 6px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:.75em; color:var(--aqua)}
+.banner h1{margin:0; font-size:clamp(30px,5vw,76px); line-height:1.1; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.banner .sub{margin:12px 0 0; font-size:1.05em; max-width:28em; color:#f3e6d2}
+.banner svg.hero{position:absolute; right:-2vw; bottom:-4vw; width:min(46vw,620px); height:auto; opacity:.95; z-index:1}
+@media (max-width:800px){.banner svg.hero{opacity:.25}}
+
+/* index */
+#index{margin:30px 0 10px; padding:18px 26px 12px; background:#efe5d3; border-left:6px solid var(--action); border-radius:6px}
+#index h2{font-size:1.2em; margin:0 0 8px}
+#index ul{margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(19em,1fr)); column-gap:3em}
+#index li{margin:4px 0}
+#index a{text-decoration:none; color:var(--ink); display:flex; gap:10px; align-items:baseline}
+#index a:hover{color:var(--action); text-decoration:underline}
+.num{display:inline-flex; align-items:center; justify-content:center; min-width:1.7em; height:1.7em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; font-size:.8em; flex:none}
+.opening{font-size:1.05em; margin:26px 0 10px}
+
+/* slides */
+section.slide{padding:36px 0 18px; border-top:1px solid var(--edge); margin-top:30px; scroll-margin-top:10px}
+section.slide:first-of-type{border-top:0}
+h2.topic{font-size:1.4em; line-height:1.3; margin:0 0 10px; display:flex; gap:14px; align-items:center}
+h2.topic .num{font-size:.7em; min-width:2em; height:2em}
+h3{font-size:1.15em; line-height:1.3; margin:0 0 10px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px; padding-left:26px}
+li{margin:4px 0}
+a{color:var(--action); text-underline-offset:3px}
+a.star{font-weight:700; padding:0 4px; font-size:.8em; text-decoration:none; opacity:.55}
+a.star:hover{opacity:1}
+a.term{text-decoration:underline dotted; color:inherit}
+.intro{font-size:1.05em; color:var(--soft-ink)}
+a:focus-visible,button:focus-visible,.deck:focus-visible{outline:3px solid #f2a900; outline-offset:3px}
+
+ol.points{margin:12px 0 18px; padding-left:0; list-style:none; counter-reset:pt}
+ol.points li{position:relative; padding:10px 14px 10px 3.2em; margin:6px 0; background:#fffaf1; border-radius:8px; counter-increment:pt}
+ol.points li::before{content:counter(pt); position:absolute; left:.9em; top:.55em; width:1.7em; height:1.7em; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:700; font-size:.85em; display:flex; align-items:center; justify-content:center}
+.ref{display:none; float:right; margin-left:10px; font-size:.65em; color:var(--teach); background:var(--teach-bg); border:1px solid #ddd6fe; border-radius:4px; padding:0 6px}
+body.teacher .ref{display:inline-block}
+
+figure.visual{margin:18px 0 22px; text-align:center}
+figure.visual svg,figure.visual img{max-width:100%; height:auto; max-height:70vh}
+figure.visual figcaption{font-size:.8em; color:var(--soft-ink); margin-top:6px}
+figure.pic{margin:22px 0}
+figure.pic img{display:block; width:100%; height:auto; max-height:86vh; object-fit:contain; border-radius:4px}
+
+.watch-out{margin:14px 0 20px; padding:14px 18px 14px 56px; background:var(--warn-bg); border:2px solid #fdba74; border-radius:8px; position:relative}
+.watch-out::before{content:"!"; position:absolute; left:14px; top:12px; width:30px; height:30px; border-radius:50%; background:var(--warn); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.watch-out b{color:var(--warn); margin-right:6px}
+
+/* audio */
+.say{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:40px; display:inline-flex; gap:8px; align-items:center}
+.say.playing{background:var(--action); color:#fff}
+.say .ico{font-size:.8em}
+.audio-line{display:flex; gap:12px; align-items:center; margin:0 0 14px; flex-wrap:wrap}
+.audio-label{color:var(--soft-ink); font-size:.9em}
+.card-audio{margin-top:10px}
+.playall{margin:0 0 34px; text-align:center}
+
+/* card stack (from the Sway template) */
+.stack{margin:60px auto 40px; width:86%; max-width:1150px; --tilt:.4}
+.deck{position:relative; cursor:pointer; border-radius:3px; transition:height .3s ease}
+.pile i{position:absolute; inset:0; background:var(--card-b); border:1px solid var(--edge); box-shadow:0 1px 3px rgba(20,30,40,.10)}
+.pile i:nth-child(even){background:var(--card-a)}
+.pile i{transform:rotate(calc(var(--a) * var(--tilt,1))) translate(var(--x),var(--y))}
+.pile i:nth-child(1){--a:-15deg; --x:-4px; --y:6px}
+.pile i:nth-child(2){--a:6deg; --x:6px; --y:2px}
+.pile i:nth-child(3){--a:-12deg; --x:3px; --y:-5px}
+.pile i:nth-child(4){--a:3deg; --x:-5px; --y:4px}
+.pile i:nth-child(5){--a:-10deg; --x:5px; --y:5px}
+.pile i:nth-child(6){--a:-2deg; --x:-3px; --y:-3px}
+.pile i:nth-child(7){--a:-6deg; --x:2px; --y:3px}
+.pile{position:absolute; inset:0; filter:drop-shadow(0 14px 18px rgba(20,30,40,.16))}
+.card{position:absolute; left:0; top:0; width:100%; height:100%; background:var(--card-a); border:1px solid var(--edge);
+  padding:1.5em 1.8em 1.3em; font-size:clamp(16px,1.4vw,27px); line-height:1.5; opacity:0; pointer-events:none; z-index:1; min-height:7em;
+  transform:rotate(calc(var(--r,-6deg) * var(--tilt,1))); box-shadow:0 2px 6px rgba(20,30,40,.14)}
+.card.shade{background:var(--card-b)}
+.card.long{font-size:clamp(14.5px,1.25vw,24px); line-height:1.45}
+.card.top{opacity:1; pointer-events:auto; z-index:3}
+.card.arrive{animation:arrive .42s ease-out}
+.card.leave{opacity:1; z-index:4; animation:leave .42s ease-in forwards}
+.card.leave-back{opacity:1; z-index:4; animation:leaveBack .42s ease-in forwards}
+@keyframes arrive{from{transform:rotate(calc(var(--r) * var(--tilt,1) + 5deg)) scale(.96)} to{transform:rotate(calc(var(--r) * var(--tilt,1))) scale(1)}}
+@keyframes leave{to{transform:translate(58%,-10%) rotate(16deg); opacity:0}}
+@keyframes leaveBack{to{transform:translate(-58%,-10%) rotate(-18deg); opacity:0}}
+.card .count{float:right; margin:-6px -8px 6px 14px; font-size:.8em; font-weight:600; color:var(--soft-ink); background:#fff; border:1px solid var(--edge); border-radius:20px; padding:2px 12px}
+.card ul{margin-bottom:6px}
+.card-pic{float:right; width:clamp(90px,22%,220px); margin:0 0 10px 16px}
+.card-pic svg{width:100%; height:auto}
+.controls{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin-top:60px}
+.controls button{font:inherit; font-size:clamp(17px,1.2vw,24px); font-weight:600; cursor:pointer; padding:10px 20px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:48px}
+.controls button.next{background:var(--action); color:#fff}
+.controls button:hover{filter:brightness(.94)}
+.controls .where{min-width:7em; text-align:center; font-weight:700; font-size:clamp(18px,1.25vw,25px)}
+.hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:10px 0 0}
+
+/* full screen */
+.big{position:fixed; inset:0; z-index:50; background:#05090c; color:#fff; display:none}
+.big.open{display:flex; flex-direction:column}
+.big .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; font-weight:700}
+.big .body{flex:1; overflow:auto; padding:8px clamp(20px,7vw,90px) 24px; font-size:clamp(20px,2.9vw,34px); line-height:1.45}
+.big .body h3{font-size:1.1em; margin-bottom:.5em}
+.big .body .count{display:none}
+.big .body .card-pic{width:22%}
+.big .body .say{color:#fff; border-color:#fff; background:transparent}
+.big .foot{display:flex; gap:12px; justify-content:center; padding:12px 18px 20px}
+.big button{font:inherit; font-size:18px; font-weight:600; cursor:pointer; min-height:48px; padding:10px 22px; border-radius:6px; border:2px solid #fff; background:transparent; color:#fff}
+.big button.next{background:#fff; color:#05090c}
+
+/* activities */
+.activity{margin:22px 0 28px; padding:16px 20px 14px; border:2px solid #d8c9b2; border-radius:10px; background:#f1f5ec}
+.act-head{display:flex; gap:10px; align-items:center; margin-bottom:6px}
+.act-badge{background:var(--action); color:#fff; font-size:.7em; font-weight:700; padding:2px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:.04em}
+.act-instr{color:var(--soft-ink); font-size:.9em}
+.act-foot{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px}
+.act-foot button{font:inherit; font-size:.9em; font-weight:600; cursor:pointer; padding:8px 18px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:44px}
+.act-foot .act-check{background:var(--action); color:#fff}
+.act-result{font-weight:700}
+.act-result.good{color:var(--ok)} .act-result.bad{color:var(--bad)}
+.chip{display:inline-flex; align-items:center; font-size:.9em; padding:8px 14px; margin:5px; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; user-select:none; min-height:44px; line-height:1.3}
+.chip.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.chip.right{border-color:var(--ok); background:#ecfdf5}
+.chip.wrong{border-color:var(--bad); background:#fef2f2}
+.chip.placed{cursor:default}
+.bank{min-height:52px; padding:6px; border:2px dashed #b9a68a; border-radius:8px; margin-bottom:12px; background:#fff}
+.targets{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(16em,1fr))}
+.target{border:2px solid #b9a68a; border-radius:8px; background:#fff; padding:8px 10px; min-height:70px}
+.target .t-label{font-weight:700; margin-bottom:4px}
+.target .t-drop{min-height:44px; border:2px dashed #e8dcc6; border-radius:6px; padding:2px}
+.target.over .t-drop{border-color:var(--action); background:#f6efe2}
+.order{list-style:none; padding:0; margin:0; counter-reset:o}
+.order li{display:flex; gap:10px; align-items:center; background:#fff; border:2px solid #b9a68a; border-radius:8px; padding:8px 10px; margin:6px 0; cursor:grab}
+.order li .o-n{min-width:2em; height:2em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; font-size:.85em}
+.order li .o-t{flex:1}
+.order li .o-btn{display:flex; gap:4px}
+.order li .o-btn button{font:inherit; min-width:40px; min-height:40px; border-radius:6px; border:1px solid #b9a68a; background:#fff; cursor:pointer}
+.order li.right{border-color:var(--ok); background:#ecfdf5} .order li.wrong{border-color:var(--bad); background:#fef2f2}
+.order li.dragging{opacity:.5}
+.quiz-q{margin:10px 0 16px}
+.quiz-q .opt{display:block; width:100%; text-align:left; font:inherit; font-size:.95em; padding:10px 14px; margin:6px 0; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; min-height:44px}
+.quiz-q .opt.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.quiz-q .opt.right{border-color:var(--ok); background:#ecfdf5} .quiz-q .opt.wrong{border-color:var(--bad); background:#fef2f2}
+.quiz-q .why{font-size:.85em; color:var(--soft-ink); margin:4px 0 0 6px; display:none}
+.quiz-q.done .why{display:block}
+.fill-table{width:100%; border-collapse:collapse; font-size:.9em; background:#fff}
+.fill-table th,.fill-table td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+.fill-table th{background:#efe5d3}
+.fill-table select{font:inherit; font-size:.95em; min-height:40px; max-width:100%}
+.fill-table td.right{background:#ecfdf5} .fill-table td.wrong{background:#fef2f2}
+
+/* teacher view */
+.tnotes{display:none; margin:18px 0 6px; padding:12px 16px; background:var(--teach-bg); border:2px dashed #c4b5fd; border-radius:8px; font-size:.82em; color:#2e1065}
+body.teacher .tnotes{display:block}
+.tnotes .t-head{font-weight:800; color:var(--teach); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; font-size:.85em}
+.tnotes ul{margin:4px 0 8px}
+.tnotes .t-trap{background:#fff7ed; border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0}
+.tlink{font:inherit; font-size:1em; color:var(--soft-ink); background:none; border:0; text-decoration:underline; cursor:pointer; padding:0}
+.tpill[hidden]{display:none}
+.tpill{position:fixed; top:10px; right:10px; z-index:45; background:var(--teach); color:#fff; border-radius:30px; padding:6px 8px 6px 16px; display:flex; gap:8px; align-items:center; font-size:15px; font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.tpill button{font:inherit; font-size:14px; font-weight:700; border:0; border-radius:20px; padding:6px 12px; background:#fff; color:var(--teach); cursor:pointer; min-height:34px}
+.tpill button.tp-out{background:transparent; color:#fff; border:1px solid #fff}
+.card-pic.photo img{width:100%; height:auto; border-radius:8px; display:block}
+.grid4{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(11em,1fr)); margin:16px 0 22px}
+.grid4 figure{margin:0; background:#efe5d3; border-radius:12px; overflow:hidden}
+.grid4 img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+.grid4 figcaption{padding:10px 14px 12px; font-size:.9em}
+.grid4 figcaption b{display:block; color:var(--deep); font-size:1.05em}
+.side{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; margin:10px 0 18px}
+.side > div{flex:2 1 420px}
+.side figure{flex:0 1 380px; max-width:440px; margin:0}
+.side figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* Gerry */
+.mascot{position:fixed; left:clamp(6px,1.2vw,24px); top:120px; width:clamp(54px,6vw,110px); z-index:35; cursor:pointer; transition:top .6s cubic-bezier(.3,.9,.4,1.1); filter:drop-shadow(0 6px 10px rgba(0,0,0,.25)); user-select:none}
+.mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.mascot.hop svg{animation:hop .7s ease-out 1, bob 2.6s ease-in-out .7s infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes hop{0%{transform:translateY(0) scale(1,1)} 30%{transform:translateY(-40px) scale(.95,1.08) rotate(14deg)} 60%{transform:translateY(0) scale(1.08,.92)} 100%{transform:translateY(0) scale(1,1)}}
+.gerry-bubble{position:absolute; left:100%; top:0; margin-left:10px; width:max-content; max-width:16em; background:#fff; color:var(--ink); border:2px solid var(--deep); border-radius:14px; padding:8px 12px; font-size:clamp(14px,1vw,18px); line-height:1.35; box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.gerry-bubble::before{content:""; position:absolute; left:-12px; top:16px; border:6px solid transparent; border-right-color:var(--deep)}
+@media (max-width:900px){.mascot{display:none}}
+.mascot.drop{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.drop .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.drop .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+@media (prefers-reduced-motion:reduce){.mascot svg{animation:none}}
+
+.home{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(14px,2vw,32px); z-index:40; background:var(--action); color:#fff; font-weight:700; font-size:clamp(17px,1.2vw,24px); text-decoration:none; padding:12px 22px; border-radius:30px; box-shadow:0 4px 14px rgba(0,0,0,.25); min-height:48px; display:flex; align-items:center; gap:8px}
+.foot{margin:50px 0 90px; padding-top:16px; border-top:1px solid var(--edge); font-size:.75em; color:var(--soft-ink)}
+
+@media (max-width:560px){
+  body{font-size:17px}
+  .card{padding:20px 20px 18px; font-size:16px}
+  .card.long{font-size:14.5px}
+  .stack{width:auto; margin-left:14px; margin-right:14px; --tilt:.3}
+  .card-pic{width:30%}
+  h2.topic{font-size:1.25em}
+}
+@media (prefers-reduced-motion:reduce){
+  .card.arrive,.card.leave,.card.leave-back{animation-duration:.01s}
+  html{scroll-behavior:auto}
+}
+
+/* ordered strips (PPE on / off) */
+.strips{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr)); margin:16px 0 20px}
+.strip{background:#fffaf1; border-radius:12px; padding:14px 16px}
+.strip-title{font-weight:800; color:var(--deep); margin-bottom:8px}
+.strip-steps{list-style:none; margin:0; padding:0; counter-reset:st}
+.strip-steps li{counter-increment:st; display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px solid #e2e8f0}
+.strip-steps li:last-child{border-bottom:0}
+.strip-steps li::before{content:counter(st); display:inline-flex; align-items:center; justify-content:center; width:1.9em; height:1.9em; border-radius:50%; background:var(--c,#0b6f7c); color:#fff; font-weight:800; font-size:.85em; flex:none}
+table.plain{width:100%; border-collapse:collapse; font-size:.92em; margin:10px 0 18px; background:#fff}
+table.plain th,table.plain td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+table.plain th{background:#efe5d3}
+.tl-high{background:#fee2e2} .tl-med{background:#fef3c7} .tl-low{background:#dcfce7}
+
+/* activity start and blur */
+.act-start[hidden]{display:none}
+.act-start{display:flex; gap:14px; align-items:center; flex-wrap:wrap; padding:6px 0 2px; color:var(--soft-ink); font-size:.9em}
+.act-go{font:inherit; font-size:1em; font-weight:700; cursor:pointer; padding:10px 26px; border-radius:8px; border:0; background:var(--action); color:#fff; min-height:48px}
+.act-tools{margin:0 0 10px}
+.act-peek{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid #b9a68a; background:#fff; color:var(--action); min-height:40px}
+section.slide.hide-notes > :is(ol.points, .stack, figure.visual, .after, .intro, .watch-out, .vid, .audio-line, .side-points, p){filter:blur(7px); pointer-events:none; user-select:none; transition:filter .3s}
+section.slide.hide-notes .activity{filter:none}
+.vid{margin:20px 0 10px}
+.vid-title{margin:0 0 8px}
+.vid-by{color:var(--soft-ink); font-size:.85em}
+.video{margin:0 auto 6px; max-width:calc((100vh - 90px) * 16 / 9); aspect-ratio:16/9; background:#0e1a22; border-radius:6px; overflow:hidden; position:relative}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.watch{margin:0 0 20px; font-size:.8em; text-align:center}
+
+/* activity locked while the notes are showing */
+.activity.peeking .act-body, .activity.peeking .act-foot{pointer-events:none; opacity:.35; filter:grayscale(1)}
+.activity.peeking .act-tools::after{content:"Read the notes, then press the button to carry on."; margin-left:12px; color:var(--warn); font-weight:700; font-size:.9em}
+/* click to spotlight a part of a diagram */
+.spot [data-spot]{transition:opacity .3s, transform .3s; transform-box:fill-box; transform-origin:center}
+.spot.spotting [data-spot]:not(.lit){opacity:.28}
+.spot [data-spot].lit{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.14)}}
+.spot-hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:-8px 0 14px}
+/* points beside a picture */
+.side-points{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start}
+.side-points > ol.points{flex:2 1 420px; margin-top:0}
+.side-points > figure{flex:0 1 320px; max-width:360px; margin:0}
+.side-points > figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* student-visible Connect source line */
+.source{margin:16px 0 6px; padding:10px 14px 10px 44px; background:#f6efe2; border-left:4px solid var(--action); border-radius:8px; font-size:.92em; color:var(--soft-ink); position:relative; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center}
+.source::before{content:"\1F4D6"; position:absolute; left:12px; top:8px; font-size:1.2em}
+.source-label{font-weight:700; color:var(--ink)}
+.source a{text-decoration:none; font-weight:600; border:1px solid #d8c9b2; background:#fff; border-radius:999px; padding:2px 10px}
+.source a:hover{background:#efe5d3}
+
+/* Lesson 3: safety signs, RACE, two-up figures */
+.signs{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:12px 0 20px; align-items:start}
+.sign{background:#fff; border:2px solid var(--edge); border-radius:12px; padding:12px 10px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px}
+.sign svg{width:84px; height:84px}
+.sign span{font-weight:700; font-size:.9em; line-height:1.25}
+.signkey{display:flex; flex-wrap:wrap; gap:8px 20px; margin:6px 0 14px; font-size:.92em}
+.signkey i{display:inline-block; width:16px; height:16px; border-radius:50%; vertical-align:-3px; margin-right:6px}
+.race{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:14px 0 20px}
+.race div{border-left:8px solid var(--c); background:#fff; border-radius:10px; padding:12px 14px; box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.race b{display:block; font-size:2.2em; line-height:1; color:var(--c)}
+.race span{display:block; font-weight:700; font-size:1.1em; margin-top:4px}
+.race small{color:var(--soft-ink)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:14px 0}
+.grid2 figure{margin:0}
+.grid2 figcaption{font-size:.85em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > :is(.signs, .signkey, .race, .grid2){filter:blur(7px); pointer-events:none; user-select:none}
+
+/* side-by-side videos */
+.vid-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:16px 0 6px}
+.vid-row .vid{margin:0}
+.vid-row .video{max-width:none}
+section.slide.hide-notes > .vid-row{filter:blur(7px); pointer-events:none}
+
+/* finale: the grand exit */
+.finale{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; margin:24px 0 10px; padding:24px 10px 0; min-height:340px; overflow:hidden}
+.fin-side{display:flex; flex-direction:column; align-items:center; gap:10px; opacity:0; transition:transform .9s cubic-bezier(.2,.8,.3,1.1), opacity .6s}
+.fin-side.left{transform:translateX(-60vw)}
+.fin-side.right{transform:translateX(60vw)}
+.finale.in .fin-side{transform:none; opacity:1}
+.finale.in .fin-side.right{transition-delay:.25s}
+.fin-mascot{width:min(260px,38vw)}
+.fin-mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.fin-bubble{background:#fff; border:3px solid var(--deep); border-radius:18px; padding:14px 18px; font-size:1.08em; line-height:1.4; position:relative; max-width:34em; opacity:0; transform:scale(.7); transition:transform .5s cubic-bezier(.2,.8,.3,1.3), opacity .4s}
+.fin-bubble p{margin:0 0 8px}
+.fin-bubble::after{content:""; position:absolute; bottom:-14px; left:50%; margin-left:-8px; border:8px solid transparent; border-top-color:var(--deep)}
+.finale.in .fin-bubble{opacity:1; transform:none; transition-delay:1s}
+.finale.in .right .fin-bubble{transition-delay:1.5s}
+.fin-side .fin-bubble{order:-1}
+.fin-who{font-weight:800; color:var(--deep); margin:0}
+.fin-after{text-align:center; font-size:1.1em; color:var(--soft-ink); margin:10px 0 20px}
+@media (max-width:700px){.finale{grid-template-columns:1fr; min-height:0} .fin-side.left,.fin-side.right{transform:translateY(40px)} .finale.in .fin-side{transform:none}}
+@media (prefers-reduced-motion:reduce){.fin-side,.fin-bubble{transition:none; transform:none; opacity:1} .fin-mascot svg{animation:none}}
+.sign-pics{display:flex; gap:6px; align-items:center; justify-content:center; height:96px}
+.sign-pics img{max-height:96px; max-width:100%; object-fit:contain}
+.sign-pics img + img{max-height:60px}
+
+/* Lesson 4: risk matrix */
+table.matrix{border-collapse:collapse; margin:0 auto; font-size:.95em}
+table.matrix th, table.matrix td{border:2px solid #fff; padding:10px 12px; text-align:center}
+table.matrix thead th{background:#12384a; color:#fff; font-weight:700}
+table.matrix tbody th{background:#0b6f7c; color:#fff; text-align:left; font-weight:700}
+table.matrix .corner{background:#1b2530; font-size:.8em}
+table.matrix td.m-L{background:#bbf7d0; color:#14532d; font-weight:700}
+table.matrix td.m-M{background:#fde68a; color:#78350f; font-weight:700}
+table.matrix td.m-H{background:#fca5a5; color:#7f1d1d; font-weight:700}
+@media (max-width:700px){table.matrix{font-size:.75em} table.matrix th, table.matrix td{padding:6px 4px}}
+
+
+/* ===================== CHCAGE013 rustic theme (27 Oct 2026) ===================== */
+:root{
+  --ink:#2b2420; --soft-ink:#574a40; --paper:#f6f0e4;
+  --deep:#4a3222; --aqua:#ecd9bb; --action:#4f6a4a;
+  --card-a:#fffaf1; --card-b:#f3ead9; --edge:#d8c9b2;
+  --wood:#6b4a33; --sage-bg:#e9efe2; --clay:#a8542c;
+}
+body{background-color:var(--paper); background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .42 0 0 0 0 .32 0 0 0 0 .22 0 0 0 .06 0'/></filter><rect width='180' height='180' filter='url(%23n)'/></svg>")}
+h1,h2,h3,.banner h1{font-family:Georgia,"Times New Roman",serif}
+.banner{background-color:#3b2718; background-image:linear-gradient(90deg,rgba(38,22,12,.82) 0%,rgba(38,22,12,.58) 55%,rgba(38,22,12,.32) 100%),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='700' height='420'><filter id='b' x='0' y='0' width='100%' height='100%'><feTurbulence type='turbulence' baseFrequency='0.022 0.0035' numOctaves='4' seed='11' result='ridge'/><feTurbulence type='fractalNoise' baseFrequency='0.06 0.02' numOctaves='3' seed='4' result='warp'/><feDisplacementMap in='ridge' in2='warp' scale='38' xChannelSelector='R' yChannelSelector='G' result='d'/><feColorMatrix in='d' type='luminanceToAlpha' result='h'/><feDiffuseLighting in='h' lighting-color='%23b89874' surfaceScale='14' diffuseConstant='1.1' result='lit'><feDistantLight azimuth='200' elevation='34'/></feDiffuseLighting><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='2' result='g'/><feColorMatrix in='g' type='matrix' values='0 0 0 0 0.3 0 0 0 0 0.25 0 0 0 0 0.2 0 0 0 0.25 0' result='grain'/><feBlend in='grain' in2='lit' mode='multiply'/></filter><rect width='700' height='420' filter='url(%23b)'/></svg>");
+  background-size:auto,700px 420px; border-bottom:8px solid #7a5a3f; padding:clamp(40px,6vw,96px) 20px clamp(26px,3vw,44px)}
+.banner h1{text-shadow:0 2px 10px rgba(0,0,0,.75)}
+.banner .sub{color:#f3e6d2; text-shadow:0 1px 6px rgba(0,0,0,.7)}
+.banner .kicker{color:var(--aqua)}
+.lessonbar{display:flex; flex-wrap:wrap; gap:8px 10px; padding:12px clamp(20px,3vw,60px); background:#efe5d3; border-bottom:1px solid var(--edge); font-size:clamp(14px,.95vw,19px)}
+.lessonbar a{padding:6px 14px; border-radius:20px; background:var(--card-a); border:1px solid var(--edge); color:var(--wood); text-decoration:none; font-weight:600; white-space:nowrap}
+.lessonbar a:hover{border-color:var(--wood)}
+.lessonbar a.on{background:var(--action); border-color:var(--action); color:#fff}
+#index{background:#efe5d3; border-left-color:var(--wood)}
+h2.topic{color:var(--wood); border-bottom:2px dashed var(--edge); padding-bottom:8px}
+h2.topic .num{background:var(--wood)}
+ol.points li{background:var(--card-a); border:1px solid var(--edge); box-shadow:0 1px 0 #e6d9c4}
+ol.points li::before{border-color:var(--wood); color:var(--wood)}
+section.slide{border-top-color:var(--edge)}
+.activity{background:var(--sage-bg); border-color:#c6d3bb}
+a.term{text-decoration-color:var(--clay)}
+.tag{display:inline-block; font-family:"Segoe UI",Arial,sans-serif; font-size:.68em; font-weight:700; padding:1px 10px; border-radius:12px; margin:0 6px; vertical-align:middle; white-space:nowrap}
+.tag.old{background:#e5e1db; color:#4a4540; border:1px solid #b9b2a8}
+.tag.repl{background:#fdf0dc; color:#8a4b12; border:1px solid #e8b878}
+.tag.new{background:#e2efdc; color:#2f5a2a; border:1px solid #9cc290}
+.vid.local video{display:block; width:100%; max-width:1100px; max-height:72vh; margin:0 auto; border-radius:8px; background:#000}
+.mascot.side-right{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.side-right .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.side-right .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+.gerry-bubble{border-color:var(--wood)}
+.home{background:var(--wood)}
+.side-points figure img{border-radius:10px; border:1px solid var(--edge)}
+figure.visual img{border-radius:10px}
+.watch-out b{margin-right:0}
+.watch-out > b:first-child{margin-right:6px}
+body.presenting .mascot{z-index:45}
+@media (max-width:700px){
+  .lessonbar{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:thin; padding-bottom:10px}
+  .lessonbar a{flex:0 0 auto}
+}
+.fill-table select{width:100%}
+
+/* infographics: big, centred, click for full screen */
+figure.infopic{margin:22px auto 26px; text-align:center}
+figure.infopic img{display:block; margin:0 auto; width:100%; max-width:1300px; max-height:82vh; object-fit:contain; border-radius:12px; border:1px solid var(--edge); background:#fff; cursor:zoom-in}
+figure.infopic .info-svg{max-width:1300px; margin:0 auto; background:#fffdf8; border:1px solid var(--edge); border-radius:12px; padding:10px; cursor:zoom-in}
+figure.infopic figcaption{font-size:.75em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > figure.infopic{filter:blur(7px); pointer-events:none; user-select:none}
+.zoombox{position:fixed; inset:0; z-index:70; background:rgba(20,14,10,.92); display:flex; align-items:center; justify-content:center; cursor:zoom-out; padding:2vh 2vw}
+.zoombox img,.zoombox svg{max-width:96vw; max-height:94vh; width:auto; height:auto; background:#fff; border-radius:10px}
+.zoombox .info-svg{width:96vw; max-height:94vh; background:#fffdf8; border-radius:10px; padding:10px}
+.zoombox .info-svg svg{width:100%; max-height:90vh}
+.zoombox .zclose{position:fixed; top:14px; right:18px; font:inherit; font-weight:700; border:0; border-radius:20px; padding:8px 18px; background:#fff; color:var(--wood); cursor:pointer}
+/* external (sign-in) videos and handouts */
+.vid.ext{margin:18px 0}
+.ext-play{display:flex; align-items:center; gap:16px; padding:16px 20px; background:#2f2a24; color:#fff8ec; border-radius:12px; text-decoration:none; max-width:760px; box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.ext-play:hover,.ext-play:focus{background:#4a3b2d; outline:3px solid var(--action)}
+.ext-icon{flex:0 0 56px; height:56px; border-radius:50%; background:var(--action); display:grid; place-items:center; font-size:26px; padding-left:4px}
+.ext-play b{display:block; font-size:1.05em}
+.ext-play small{display:block; opacity:.85; margin-top:3px; font-size:.82em}
+.docs{background:#fbf7ef; border:1px solid #e3d6bf; border-left:6px solid var(--wood); border-radius:10px; padding:12px 20px; margin:16px 0}
+.docs-title{margin:0 0 6px}
+.docs ul{margin:0; padding-left:22px}
+.docs li{margin:6px 0}
+section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events:none}
+.t-demo .t-sub{margin:8px 0 2px; font-weight:700; color:#7a4a1e}
+.t-demo ul,.t-links ul{margin:2px 0 6px; padding-left:20px}
+.t-note{color:#666; font-size:.9em}
+</style>
+</head>
+<body data-np="12">
+<main>
+<header class="banner first" id="top">
+  <div class="banner-inner">
+    <p class="kicker">CHCAGE013 Work effectively in aged care · Lesson 5</p>
+    <h1>Your role and the team</h1>
+    <p class="sub">The job roles in aged care, your scope of practice, delegation, the wider team, care plans and good records.</p>
+  </div>
+  
+</header>
+<nav class="lessonbar" aria-label="Lessons in this unit"><a href="0-index.html">&#8962; Lessons</a><a href="1-aged-care-in-australia.html">1 Aged care in Australia</a><a href="2-the-person-at-the-centre.html">2 The person at the centre</a><a href="3-laws-standards-and-duties.html">3 Laws and standards</a><a href="4-keeping-people-safe.html">4 Keeping people safe</a><a href="5-your-role-and-the-team.html" class="on" aria-current="page">5 Your role and the team</a><a href="6-safe-work-and-self-care.html">6 Safe work and self-care</a><a href="7-marys-simulated-shift.html">7 Mary's simulated shift</a><a href="0-index.html#glossary">Glossary</a></nav>
+<div class="wrap">
+  <nav id="index" aria-label="Index"><h2>In this lesson</h2><ul><li><a href="#s1"><span class="num">1</span> Job roles in aged care</a></li><li><a href="#s2"><span class="num">2</span> Registered nurse (RN)</a></li><li><a href="#s3"><span class="num">3</span> Enrolled nurse (EN)</a></li><li><a href="#s4"><span class="num">4</span> Support worker: role and duties</a></li><li><a href="#s5"><span class="num">5</span> Scope of practice</a></li><li><a href="#s6"><span class="num">6</span> Delegation: the 5 requirements</a></li><li><a href="#s7"><span class="num">7</span> Not competent? Not in your scope?</a></li><li><a href="#s8"><span class="num">8</span> The interdisciplinary team</a></li><li><a href="#s9"><span class="num">9</span> Cultural competence</a></li><li><a href="#s10"><span class="num">10</span> Individualised plans</a></li><li><a href="#s11"><span class="num">11</span> Reporting and documentation</a></li><li><a href="#s12"><span class="num">12</span> Organisations you can network with</a></li></ul></nav>
+  <p class="opening">You are part of a <b>team</b>. This lesson shows you <b>who does what</b> in aged care, what <b>you</b> may and may not do (your <b>scope of practice</b>), how nurses <b>delegate</b> tasks to you, and how the <b>care plan</b> and your <b>notes</b> keep everyone working together.</p>
+  
+<section class="slide" id="s1" data-ref="NP12 S1">
+  <h2 class="topic"><span class="num">1</span> Job roles in aged care</h2>
+  <p class="intro">Many workers help older people with their <b>activities of daily living (ADLs)</b>. Each role has different training and different tasks.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np12-s1.mp3" aria-label="Listen: Job roles in aged care"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s1p1"><span class="ref" title="Reference">NP12 S1 P1</span><b>Registered nurse (RN)</b>: gives the highest level of clinical (health) care and leads the team. Slide 2.</li><li id="s1p2"><span class="ref" title="Reference">NP12 S1 P2</span><b>Enrolled nurse (EN)</b>: works under the RN. Slide 3.</li><li id="s1p3"><span class="ref" title="Reference">NP12 S1 P3</span><b>Assistant in nursing (AIN)</b> and <b>health service assistant (HSA)</b>: support the nurses with simple care tasks, rehab exercises and setting up for procedures. Qualification: Certificate III in Health Services Assistance. They report to the RN.</li><li id="s1p4"><span class="ref" title="Reference">NP12 S1 P4</span><b>Lifestyle and leisure worker</b>: plans activities like craft, bingo, music and outings, for the body and the mind.</li><li id="s1p5"><span class="ref" title="Reference">NP12 S1 P5</span><b>Support worker</b>: that is you. Slide 4.</li></ol><figure><img src="pics/p2-top-jobs-banner.jpg" alt="Two nurses with stethoscopes" style="max-width:380px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302683/View" target="_blank" rel="noopener">Job roles in the aged care sector</a></div>
+  
+  <aside class="tnotes" data-slide="s1" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s2" data-ref="NP12 S2">
+  <h2 class="topic"><span class="num">2</span> Registered nurse (RN) <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ5%7C495a98f3-a717-4c0e-8d79-e1d0c34d5a93%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">The <b>registered nurse</b> gives the <b>highest level of clinical care</b> in the aged care home. <b>Reports to:</b> the <b>clinical nurse (CN)</b> or the <b>clinical manager (CM)</b>.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np12-s2.mp3" aria-label="Listen: Registered nurse (RN)"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s2p1"><span class="ref" title="Reference">NP12 S2 P1</span><b>Assesses</b> the health and wellbeing of the older person, to see changes <b>early</b> and act quickly.</li><li id="s2p2"><span class="ref" title="Reference">NP12 S2 P2</span><b>Leads</b> the delivery of care.</li><li id="s2p3"><span class="ref" title="Reference">NP12 S2 P3</span><b>Coordinates, delegates to and supervises</b> the enrolled nurses and care workers.</li><li id="s2p4"><span class="ref" title="Reference">NP12 S2 P4</span>Gives and manages <b>medicines</b>, following medicine guidelines.</li><li id="s2p5"><span class="ref" title="Reference">NP12 S2 P5</span>Does <b>wound care</b>.</li><li id="s2p6"><span class="ref" title="Reference">NP12 S2 P6</span>Leads <b>infection prevention and control</b>.</li><li id="s2p7"><span class="ref" title="Reference">NP12 S2 P7</span>Manages <b>behaviours in dementia care</b> safely.</li><li id="s2p8"><span class="ref" title="Reference">NP12 S2 P8</span>Looks after the <b>care plans</b>.</li><li id="s2p9"><span class="ref" title="Reference">NP12 S2 P9</span><b>Talks with the family</b> of the older person.</li><li id="s2p10"><span class="ref" title="Reference">NP12 S2 P10</span>Works with <b>doctors and the interdisciplinary team</b>.</li><li id="s2p11"><span class="ref" title="Reference">NP12 S2 P11</span><b>Monitors and evaluates</b> (checks) the services given to older people.</li><li id="s2p12"><span class="ref" title="Reference">NP12 S2 P12</span>Must meet the requirements of the <b>Nursing and Midwifery Board of Australia</b>.</li></ol><figure><img src="pics/p2-p3-rn.jpg" alt="A registered nurse in a blue uniform" style="max-width:260px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302683/View" target="_blank" rel="noopener">Job roles in the aged care sector</a></div>
+  
+  <aside class="tnotes" data-slide="s2" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s3" data-ref="NP12 S3">
+  <h2 class="topic"><span class="num">3</span> Enrolled nurse (EN) <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ5%7C495a98f3-a717-4c0e-8d79-e1d0c34d5a93%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">The <b>enrolled nurse</b> works under the direction of the RN and gives <b>more clinical care</b> than an AIN. <b>Reports to:</b> the <b>RN</b>.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np12-s3.mp3" aria-label="Listen: Enrolled nurse (EN)"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s3p1"><span class="ref" title="Reference">NP12 S3 P1</span>Takes <b>observations</b> (for example blood pressure, pulse, temperature).</li><li id="s3p2"><span class="ref" title="Reference">NP12 S3 P2</span><b>Reports any changes</b> to the RN or the doctor.</li><li id="s3p3"><span class="ref" title="Reference">NP12 S3 P3</span>Keeps <b>detailed documentation</b> (records).</li><li id="s3p4"><span class="ref" title="Reference">NP12 S3 P4</span>Helps with <b>giving medicines</b>.</li><li id="s3p5"><span class="ref" title="Reference">NP12 S3 P5</span>Does <b>wound dressings</b>.</li><li id="s3p6"><span class="ref" title="Reference">NP12 S3 P6</span><b>Follows the care plan</b>.</li><li id="s3p7"><span class="ref" title="Reference">NP12 S3 P7</span>Helps with the older person's <b>personal hygiene</b>.</li><li id="s3p8"><span class="ref" title="Reference">NP12 S3 P8</span>Is <b>accountable</b> for their own practice and follows the <b>Nursing and Midwifery Board of Australia</b>.</li><li id="s3p9"><span class="ref" title="Reference">NP12 S3 P9</span>Qualification: <b>Diploma of Nursing</b>.</li></ol><figure><img src="pics/p2-p4-en.jpg" alt="An enrolled nurse looking around a door" style="max-width:200px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s3-1" data-activity='{"type":"sort","title":"RN or EN?","instructions":"Who does this? Sort each task into RN or EN.","buckets":["Registered nurse (RN)","Enrolled nurse (EN)"],"items":[{"text":"Delegates tasks to staff and supervises them","bucket":"Registered nurse (RN)"},{"text":"Reports to the clinical nurse or clinical manager","bucket":"Registered nurse (RN)"},{"text":"Monitors and evaluates the services given","bucket":"Registered nurse (RN)"},{"text":"Reports to the RN","bucket":"Enrolled nurse (EN)"},{"text":"Has a Diploma of Nursing","bucket":"Enrolled nurse (EN)"},{"text":"Takes observations and reports changes to the RN","bucket":"Enrolled nurse (EN)"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>RN or EN?</b></div>
+    <p class="act-instr">Who does this? Sort each task into RN or EN.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302683/View" target="_blank" rel="noopener">Job roles in the aged care sector</a></div>
+  
+  <aside class="tnotes" data-slide="s3" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s4" data-ref="NP12 S4">
+  <h2 class="topic"><span class="num">4</span> Support worker: role and duties <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ6%7Cca1ba0e8-8c54-4841-b741-3e0ed6f3b3c4%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">A <b>job description</b> (or position description) lists the <b>role requirements</b> (what you need to be and know) and the <b>duties</b> (what you do). Here are the common ones for an aged care support worker.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np12-s4.mp3" aria-label="Listen: Support worker: role and duties"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s4p1"><span class="ref" title="Reference">NP12 S4 P1</span><b>Duties</b>: help with a range of <b>daily activities</b>.</li><li id="s4p2"><span class="ref" title="Reference">NP12 S4 P2</span><b>Duties</b>: support with <b>self-care</b> such as <b>showering and dressing</b>.</li><li id="s4p3"><span class="ref" title="Reference">NP12 S4 P3</span><b>Duties</b>: help with <b>laundry and household tasks</b> (in home care also cooking, cleaning and transport to shopping or appointments).</li><li id="s4p4"><span class="ref" title="Reference">NP12 S4 P4</span><b>Duties</b>: take part in <b>social and recreational activities</b> with the person.</li><li id="s4p5"><span class="ref" title="Reference">NP12 S4 P5</span><b>Duties</b>: give <b>social, emotional and spiritual support</b>.</li><li id="s4p6"><span class="ref" title="Reference">NP12 S4 P6</span><b>Role requirements</b>: good <b>spoken and written communication</b>, so you can help with <b>care plan</b> documentation.</li><li id="s4p7"><span class="ref" title="Reference">NP12 S4 P7</span><b>Role requirements</b>: work within <b>professional boundaries</b> and workplace <b>guidelines</b>.</li><li id="s4p8"><span class="ref" title="Reference">NP12 S4 P8</span><b>Role requirements</b>: <b>computer skills</b>, and being <b>accurate</b> with new systems.</li><li id="s4p9"><span class="ref" title="Reference">NP12 S4 P9</span><b>Role requirements</b>: be <b>pleasant, kind (compassionate) and keen (enthusiastic)</b>.</li></ol><figure><img src="pics/p2-p8-sw1.jpg" alt="A support worker playing chess with an older man" style="max-width:300px"></figure></div>
+  
+  <p>Find a real job description, for example on <a href="https://au.indeed.com/hire/job-description/aged-care-worker" target="_blank" rel="noopener">Indeed: aged care worker job description</a>. <b>Download it, save it, and upload it with your assessment.</b></p>
+  
+  
+  
+  
+  
+  
+  <div class="watch-out"><b>Watch out</b> Two things go wrong most: the <b>job description is not uploaded</b>, and the answer is not split into <b>role requirements</b> and <b>duties</b>. Do both.</div>
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302683/View" target="_blank" rel="noopener">Job roles in the aged care sector</a></div>
+  
+  <aside class="tnotes" data-slide="s4" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s5" data-ref="NP12 S5">
+  <h2 class="topic"><span class="num">5</span> Scope of practice <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ7%20A%7C9d43e877-4439-4a47-9421-a93ccde02353%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Your <b><a class="term" href="0-index.html#g-scope-of-practice" title="See the glossary">scope of practice</a></b> is everything you are <b>trained and allowed</b> to do in your job. Some requests from a client are <b>outside</b> your scope.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np12-s5.mp3" aria-label="Listen: Scope of practice"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s5p1"><span class="ref" title="Reference">NP12 S5 P1</span>Your scope includes the tasks you have been <b>educated in</b> and are <b>competent</b> (skilled) to do. It is set by <b>professional standards</b> and the law.</li><li id="s5p2"><span class="ref" title="Reference">NP12 S5 P2</span>Examples <b>outside</b> a support worker's scope: helping with the person's <b>finances</b> (money), giving <b>advice about medicines</b>, doing <b>wound care or dressings</b>, <b>cutting toenails</b>.</li><li id="s5p3"><span class="ref" title="Reference">NP12 S5 P3</span>If you are <b>not sure</b> what your role and responsibilities are, ask your <b>supervisor</b>.</li></ol><figure><img src="pics/p2-p10-sw3.jpg" alt="A support worker smiling" style="max-width:260px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s5-1" data-activity='{"type":"quiz","title":"Inside or outside your scope?","instructions":"Can a support worker do this?","questions":[{"q":"Mr Jones asks you to help him shower.","options":["Inside my scope","Outside my scope"],"answer":0,"why":"Personal care is a normal support worker task."},{"q":"Mrs Chan asks you to look after her bank card and pay her bills.","options":["Inside my scope","Outside my scope"],"answer":1,"why":"Managing a person&#39;s finances is outside your scope."},{"q":"Mr Ali asks you to cut his toenails.","options":["Inside my scope","Outside my scope"],"answer":1,"why":"Toenail care is done by a podiatrist or nurse."},{"q":"You are not sure if a task is part of your role. Who do you ask?","options":["Another resident","Your supervisor","Google"],"answer":1,"why":"Always ask your supervisor to clarify your role."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Inside or outside your scope?</b></div>
+    <p class="act-instr">Can a support worker do this?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302683/View" target="_blank" rel="noopener">Job roles in the aged care sector</a></div>
+  
+  <aside class="tnotes" data-slide="s5" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s6" data-ref="NP12 S6">
+  <h2 class="topic"><span class="num">6</span> Delegation: the 5 requirements <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ8%7C7ab3518b-15dd-4246-8a28-7ba2cfaff65c%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro"><b><a class="term" href="0-index.html#g-delegation" title="See the glossary">Delegation</a></b> means the RN gives the responsibility for a task to someone else, for example to you. The RN stays <b>accountable</b>. Before the RN can delegate, <b>5 requirements</b> must be met.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np12-s6.mp3" aria-label="Listen: Delegation: the 5 requirements"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s6p1"><span class="ref" title="Reference">NP12 S6 P1</span><b>Consultation</b>: the RN talks with <b>everyone involved</b>.</li><li id="s6p2"><span class="ref" title="Reference">NP12 S6 P2</span><b>Consent</b>: from the <b>older person</b>, or their <b>decision maker</b>.</li><li id="s6p3"><span class="ref" title="Reference">NP12 S6 P3</span>A <b>risk assessment</b> of the task.</li><li id="s6p4"><span class="ref" title="Reference">NP12 S6 P4</span><b>Education</b>: the RN <b>teaches the worker</b> how to do this task, for this person.</li><li id="s6p5"><span class="ref" title="Reference">NP12 S6 P5</span><b>Competence</b>: the RN <b>checks that the worker can do the task</b> safely.</li><li id="s6p6"><span class="ref" title="Reference">NP12 S6 P6</span>After this, the RN also <b>supervises</b> the worker when they do the task.</li></ol>
+  <figure class="infopic"><img src="pics/p2-p20-q8.jpg" alt="Picture: RN delegation checklist, 5 requirements for safe practice" tabindex="0"><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s6-1" data-activity='{"type":"order","title":"Consult, consent, risk, teach, check","instructions":"Put the five requirements in order.","items":["Consult with everyone involved","Get consent from the person or their decision maker","Do a risk assessment of the task","Teach the worker the task","Check that the worker is competent"]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Consult, consent, risk, teach, check</b></div>
+    <p class="act-instr">Put the five requirements in order.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302684/View" target="_blank" rel="noopener">Delegation and supervision</a></div>
+  
+  <aside class="tnotes" data-slide="s6" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s7" data-ref="NP12 S7">
+  <h2 class="topic"><span class="num">7</span> Not competent? Not in your scope? <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ8%7C7ab3518b-15dd-4246-8a28-7ba2cfaff65c%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Two different situations. Two different answers. You are <b>responsible</b> for telling the RN.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np12-s7.mp3" aria-label="Listen: Not competent? Not in your scope?"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s7p1"><span class="ref" title="Reference">NP12 S7 P1</span><b>You do not feel competent</b> (skilled or confident) for a task the RN delegates: <b>tell the RN</b> you do not feel competent, and <b>ask for more training</b> before you try the task.</li><li id="s7p2"><span class="ref" title="Reference">NP12 S7 P2</span>The task is <b>outside your scope of practice</b>: <b>tell the RN</b> it is outside your scope, and that <b>you cannot do it</b>.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="watch-out"><b>Watch out</b> Write <b>two separate answers</b>. Not competent = <b>ask for training</b>. Outside scope = <b>say you cannot do it</b>.</div>
+  <div class="activity" id="act-s7-1" data-activity='{"type":"quiz","title":"What do you say to the RN?","instructions":"Choose the best answer.","questions":[{"q":"The RN asks you to use a new type of hoist that you have never been trained on.","options":["\"I&#39;m not competent with this hoist yet. Can I get training first?\"","\"That is outside my scope. I cannot do it.\"","Try it and see."],"answer":0,"why":"It is a support worker task, but you are not yet competent: ask for training."},{"q":"The RN asks you to give an injection.","options":["\"Can I get training first?\"","\"That is outside my scope of practice, so I cannot do it.\"","Do it carefully."],"answer":1,"why":"Injections are outside a support worker&#39;s scope of practice."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>What do you say to the RN?</b></div>
+    <p class="act-instr">Choose the best answer.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302684/View" target="_blank" rel="noopener">Delegation and supervision</a></div>
+  
+  <aside class="tnotes" data-slide="s7" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s8" data-ref="NP12 S8">
+  <h2 class="topic"><span class="num">8</span> The interdisciplinary team <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ10%7C8d201f67-5060-4c08-aedc-0a4b9242e154%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">The <b><a class="term" href="0-index.html#g-interdisciplinary-team" title="See the glossary">interdisciplinary team</a></b> is the group of health workers from different professions who support the older person. Flip the cards.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np12-s8.mp3" aria-label="Listen: The interdisciplinary team"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  
+  
+  
+  
+  <div class="stack" aria-label="The interdisciplinary team cards" data-playall="1"><article class="card" id="s8c1" data-ref="NP12 S8 C1">
+      <h3>Physiotherapist</h3>
+      <div class="card-pic photo"><img src="pics/p2-p11-physio.jpg" alt=""></div>
+      <p>Assesses the person and helps with <b>exercise programs</b> and <b>hands-on therapy</b> for problems with muscles and joints, the nerves and brain, and breathing.</p>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np12-s8-c1.mp3" aria-label="Listen: Physiotherapist"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s8c2" data-ref="NP12 S8 C2">
+      <h3>Podiatrist</h3>
+      <div class="card-pic photo"><img src="pics/p2-p12-podiatrist.jpg" alt=""></div>
+      <p>Assesses and cares for <b>feet</b>: <b>trims toenails</b>, suggests the right <b>footwear</b>, and manages foot problems, especially with <b>diabetes</b> and <b>arthritis</b>.</p>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np12-s8-c2.mp3" aria-label="Listen: Podiatrist"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s8c3" data-ref="NP12 S8 C3">
+      <h3>Occupational therapist (OT)</h3>
+      <div class="card-pic photo"><img src="pics/p2-p13-ot.jpg" alt=""></div>
+      <p>Helps the person learn <b>new ways to do personal care and daily activities</b> after an injury or illness, finds the right <b>equipment</b>, and suggests <b>changes to the home</b>.</p>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np12-s8-c3.mp3" aria-label="Listen: Occupational therapist (OT)"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s8c4" data-ref="NP12 S8 C4">
+      <h3>Speech pathologist</h3>
+      <div class="card-pic photo"><img src="pics/p2-p14-speech.jpg" alt=""></div>
+      <p>Works with people who have trouble with <b>swallowing</b>, <b>communication</b>, <b>speech</b> or <b>language</b>, because of ageing, injury or illness.</p>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np12-s8-c4.mp3" aria-label="Listen: Speech pathologist"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s8c5" data-ref="NP12 S8 C5">
+      <h3>Social worker</h3>
+      <div class="card-pic photo"><img src="pics/p2-p15-social.jpg" alt=""></div>
+      <p>Gives <b>counselling</b>, or <b>refers</b> the person to other specialists, to help them manage <b>social or personal problems</b>.</p>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np12-s8-c5.mp3" aria-label="Listen: Social worker"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s8c6" data-ref="NP12 S8 C6">
+      <h3>Dietician</h3>
+      <div class="card-pic photo"><img src="pics/p2-p16-dietician.jpg" alt=""></div>
+      <p>Gives advice on <b>diet, nutrition, supplements and menu planning</b> to improve health, and helps manage conditions like <b>diabetes</b>, <b>obesity</b>, <b>food intolerances</b> and <b>allergies</b>.</p>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np12-s8-c6.mp3" aria-label="Listen: Dietician"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s8c7" data-ref="NP12 S8 C7">
+      <h3>Lifestyle and leisure worker</h3>
+      <div class="card-pic photo"><img src="pics/p2-p7-lifestyle.jpg" alt=""></div>
+      <p>Works with volunteers and therapists to <b>plan and run programs</b> people can <b>choose</b> to join: gentle exercise, craft, music and other activities.</p>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np12-s8-c7.mp3" aria-label="Listen: Lifestyle and leisure worker"><span class="ico">&#9654;</span> Listen</button></div>
+    </article></div>
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s8-1" data-activity='{"type":"match","title":"Who am I?","instructions":"Match each job to the team member.","pairs":[{"a":"I plan exercises and hands-on therapy for muscles and breathing.","b":"Physiotherapist"},{"a":"I trim toenails and help with foot problems in diabetes.","b":"Podiatrist"},{"a":"I help with daily activities after illness and suggest home changes.","b":"Occupational therapist"},{"a":"I help with swallowing and communication problems.","b":"Speech pathologist"},{"a":"I give counselling for social or personal problems.","b":"Social worker"},{"a":"I give advice on nutrition and plan menus.","b":"Dietician"},{"a":"I run craft, music and exercise programs people can choose to join.","b":"Lifestyle and leisure worker"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Who am I?</b></div>
+    <p class="act-instr">Match each job to the team member.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302683/View" target="_blank" rel="noopener">Job roles in the aged care sector</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302689/View" target="_blank" rel="noopener">Working with others</a></div>
+  
+  <aside class="tnotes" data-slide="s8" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s9" data-ref="NP12 S9">
+  <h2 class="topic"><span class="num">9</span> Cultural competence <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ9%7C6a6a14b1-f5e9-4619-b5f2-9637a8f8f116%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">You will support people from <b>many cultures, beliefs and backgrounds</b>. Being <b><a class="term" href="0-index.html#g-culturally-competent" title="See the glossary">culturally competent</a></b> helps you do this well.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np12-s9.mp3" aria-label="Listen: Cultural competence"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s9p1"><span class="ref" title="Reference">NP12 S9 P1</span><b>Cultural competence</b> means being able to <b>work and live well with people from other cultures</b>, at work and in your personal life.</li><li id="s9p2"><span class="ref" title="Reference">NP12 S9 P2</span>First, <b>know your own culture</b> and values.</li><li id="s9p3"><span class="ref" title="Reference">NP12 S9 P3</span>Then <b>respect other people's cultures</b> too.</li><li id="s9p4"><span class="ref" title="Reference">NP12 S9 P4</span><b>Value the differences</b>: they bring a variety of life experiences.</li><li id="s9p5"><span class="ref" title="Reference">NP12 S9 P5</span><i>Example</i>: a resident may want a carer of the <b>same gender</b> for showering, or may not eat certain foods, or may want to pray at certain times. You find out, and you respect it.</li></ol><figure><img src="pics/p2-p24-cultural.jpg" alt="People in traditional dress at a cultural festival" style="max-width:380px"></figure></div>
+  
+  
+  
+  
+  <div class="vid-row"><div class="vid"><p class="vid-title"><b>Watch:</b> Cultural Competence</p><div class="video" data-youtube="2ugzWjl2tv0" data-title="Cultural Competence"></div></div><div class="vid"><p class="vid-title"><b>Watch:</b> Respecting the differences between people (TEDx) <span class="vid-by">(Mariana Chartier)</span></p><div class="video" data-youtube="_qtpmi4yzSs" data-title="Respecting the differences between people (TEDx)"></div></div></div>
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302686/View" target="_blank" rel="noopener">Cultural diversity and competence</a></div>
+  
+  <aside class="tnotes" data-slide="s9" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s10" data-ref="NP12 S10">
+  <h2 class="topic"><span class="num">10</span> Individualised plans <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ12%7Ca1bd3aef-b881-45fc-bb1d-bb640818797d%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Every person has their own <b>individualised plan</b> (also called a <b>care plan</b> or <b>support plan</b>). You do not write it, but you <b>must read it and follow it</b>.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np12-s10.mp3" aria-label="Listen: Individualised plans"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s10p1"><span class="ref" title="Reference">NP12 S10 P1</span><b>Purpose</b>: the plan <b>directs the services and support</b> the person needs, and it makes sure <b>every worker gives the same support</b> (consistency).</li><li id="s10p2"><span class="ref" title="Reference">NP12 S10 P2</span>It is made <b>together with</b> the older person, their family, the doctor, nurses and other health professionals. It must show the <b>older person's own views and wishes</b>.</li><li id="s10p3"><span class="ref" title="Reference">NP12 S10 P3</span>The older person must <b>approve</b> the plan before it is used.</li><li id="s10p4"><span class="ref" title="Reference">NP12 S10 P4</span><b>Key areas in a plan</b>: personal information, <b>client goals</b>, special interests, interventions (what will be done), <b>evaluation</b> (checking how it is going), mobility needs, communication needs, activities of daily living, nutrition, social needs and religious preferences.</li><li id="s10p5"><span class="ref" title="Reference">NP12 S10 P5</span><b>Goals</b> and <b>evaluation</b> must <b>always</b> be in the plan. The plan is <b>reviewed and changed</b> when the person's needs change.</li><li id="s10p6"><span class="ref" title="Reference">NP12 S10 P6</span>If you notice that a goal has been reached, or a new need, <b>tell your supervisor</b> so the plan can be updated.</li></ol>
+  <figure class="infopic"><img src="pics/p2-p25-q12.jpg" alt="Picture: the individualised plan, a blueprint for person-centred care" tabindex="0"><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  
+  
+  
+  
+  
+  
+  
+  <div class="watch-out"><b>Watch out</b> When you list five key areas, <b>client goals</b> and <b>evaluation</b> must be two of them.</div>
+  <div class="activity" id="act-s10-1" data-activity='{"type":"quiz","title":"Plan check","instructions":"Choose the best answer.","questions":[{"q":"Which TWO areas must always be in your list of five key areas?","options":["Mobility and nutrition","Client goals and evaluation","Religion and social needs"],"answer":1,"why":"Client goals and evaluation are compulsory. Add any three others."},{"q":"Who must approve the plan before it is used?","options":["The support worker","The older person","The cleaner"],"answer":1,"why":"The older person approves the plan."},{"q":"You notice Mrs Kim can now walk to lunch without help. What do you do?","options":["Nothing, the plan is already written","Tell your supervisor so the plan can be reviewed"],"answer":1,"why":"Report changes so the plan can be updated."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Plan check</b></div>
+    <p class="act-instr">Choose the best answer.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302687/View" target="_blank" rel="noopener">Individualised support plans</a></div>
+  
+  <aside class="tnotes" data-slide="s10" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s11" data-ref="NP12 S11">
+  <h2 class="topic"><span class="num">11</span> Reporting and documentation</h2>
+  <p class="intro"><b>Documentation</b> means writing down what you did and what you saw. It can be on paper or on a computer.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np12-s11.mp3" aria-label="Listen: Reporting and documentation"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s11p1"><span class="ref" title="Reference">NP12 S11 P1</span>Good notes are <b>clear</b>, <b>concise</b> (short), <b>legible</b> (easy to read), <b>accurate</b> (correct), and they <b>meet legal requirements</b>.</li><li id="s11p2"><span class="ref" title="Reference">NP12 S11 P2</span>Write about <b>changes</b> in the person and anything you <b>noticed or checked</b>.</li><li id="s11p3"><span class="ref" title="Reference">NP12 S11 P3</span>Write <b>facts</b>: what you <b>saw and heard</b>, and the person's <b>own words</b> in quotation marks. Do <b>not</b> write your opinion or guesses.</li><li id="s11p4"><span class="ref" title="Reference">NP12 S11 P4</span><b>Why it matters</b>: everyone knows the person's <b>current needs</b>, the team gives the <b>same care</b>, changes are <b>reported quickly</b>, and there is <b>proof</b> the care was given.</li><li id="s11p5"><span class="ref" title="Reference">NP12 S11 P5</span>Good records <b>protect you</b> if there is ever a <b>legal problem</b>. The Strengthened Standards require them too.</li><li id="s11p6"><span class="ref" title="Reference">NP12 S11 P6</span>Not sure how to write something? <b>Ask your supervisor.</b></li></ol><figure><img src="pics/p2-p26-folders.jpg" alt="Folders and a magnifying glass" style="max-width:300px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s11-1" data-activity='{"type":"sort","title":"Fact or opinion?","instructions":"Good notes only use facts. Sort each sentence.","buckets":["Fact","Opinion"],"items":[{"text":"At 10:15 am I saw a 5 cm bruise on Mr Lee&#39;s left forearm.","bucket":"Fact"},{"text":"Mrs Smith said, \"My son took my money.\"","bucket":"Fact"},{"text":"Her son is a thief.","bucket":"Opinion"},{"text":"Mr Lee is being difficult on purpose.","bucket":"Opinion"},{"text":"There was half a carton of milk and no other food in the fridge.","bucket":"Fact"},{"text":"She is probably just lonely.","bucket":"Opinion"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Fact or opinion?</b></div>
+    <p class="act-instr">Good notes only use facts. Sort each sentence.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302688/View" target="_blank" rel="noopener">Reporting and documentation</a></div>
+  
+  <aside class="tnotes" data-slide="s11" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s12" data-ref="NP12 S12">
+  <h2 class="topic"><span class="num">12</span> Organisations you can network with <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ11%7Cc5e493e1-1f89-4ca8-96bc-768c2d72ff40%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro"><b>Networking</b> means building links with other organisations. It helps keep care services <b>good and getting better</b>.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np12-s12.mp3" aria-label="Listen: Organisations you can network with"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s12p1"><span class="ref" title="Reference">NP12 S12 P1</span><b>Queensland Community Care Network (QCCN)</b>: connects <b>volunteers</b> with older people to build friendships and reduce <b>loneliness</b>.</li><li id="s12p2"><span class="ref" title="Reference">NP12 S12 P2</span><b>Older Persons Advocacy Network (OPAN)</b>: helps older people <b>understand and use their rights</b> and solve problems with their provider.</li><li id="s12p3"><span class="ref" title="Reference">NP12 S12 P3</span><b>Dementia Australia</b>: information, a <b>helpline</b> and counselling for people with dementia, families and carers; education for workers.</li><li id="s12p4"><span class="ref" title="Reference">NP12 S12 P4</span><b>Australian Institute of Health and Welfare (AIHW)</b>: collects <b>statistics</b> about health and welfare to help plan services.</li><li id="s12p5"><span class="ref" title="Reference">NP12 S12 P5</span><b>Diabetes Australia</b>, <b>Continence Foundation of Australia</b> and <b>Palliative Care Australia</b>: information and support for these needs.</li><li id="s12p6"><span class="ref" title="Reference">NP12 S12 P6</span><b>Carers Gateway</b>: free government support for <b>carers</b>, for example counselling and emergency <b>respite</b>.</li><li id="s12p7"><span class="ref" title="Reference">NP12 S12 P7</span><b>My Aged Care</b>: the government's <b>information and entry point</b> for aged care services.</li><li id="s12p8"><span class="ref" title="Reference">NP12 S12 P8</span>Also: <b>Queensland Health</b> and <b>other aged care organisations</b>.</li></ol><figure><img src="pics/p2-p35-network.jpg" alt="Hands joined in a circle: care network" style="max-width:280px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302690/View" target="_blank" rel="noopener">Key organisations within the sector</a></div>
+  <div class="finale" data-finale><div class="fin-side left"><div class="fin-mascot"><svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rusty the Rush Clock">
+  <g stroke="#6b4a33" stroke-linecap="round" fill="none" stroke-width="3" opacity=".55"><path d="M4 70h16M2 84h14M6 98h12"/></g>
+  <line x1="50" y1="128" x2="38" y2="152" stroke="#6b4a33" stroke-width="7" stroke-linecap="round"/>
+  <line x1="92" y1="128" x2="108" y2="148" stroke="#6b4a33" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="34" cy="154" rx="11" ry="5" fill="#3d2a1c"/><ellipse cx="112" cy="150" rx="11" ry="5" fill="#3d2a1c"/>
+  <path d="M30 30 a16 16 0 0 1 26 -8" stroke="#8a5a3a" stroke-width="5" fill="none"/>
+  <path d="M84 22 a16 16 0 0 1 26 8" stroke="#8a5a3a" stroke-width="5" fill="none"/>
+  <circle cx="34" cy="30" r="15" fill="#b5653a" stroke="#6b4a33" stroke-width="3"/>
+  <circle cx="106" cy="30" r="15" fill="#b5653a" stroke="#6b4a33" stroke-width="3"/>
+  <rect x="64" y="14" width="12" height="10" rx="3" fill="#6b4a33"/>
+  <circle cx="70" cy="82" r="52" fill="#c9893f" stroke="#6b4a33" stroke-width="5"/>
+  <circle cx="70" cy="82" r="41" fill="#fff8ec"/>
+  <g fill="#6b4a33"><circle cx="70" cy="46" r="2.5"/><circle cx="106" cy="82" r="2.5"/><circle cx="70" cy="118" r="2.5"/><circle cx="34" cy="82" r="2.5"/></g>
+  <path d="M52 64 l12 4 M88 64 l-12 4" stroke="#2b2420" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="58" cy="74" r="5" fill="#2b2420"/><circle cx="82" cy="74" r="5" fill="#2b2420"/>
+  <line x1="70" y1="84" x2="70" y2="58" stroke="#b5653a" stroke-width="4" stroke-linecap="round"/>
+  <line x1="70" y1="84" x2="90" y2="92" stroke="#b5653a" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="70" cy="84" r="4" fill="#6b4a33"/>
+  <path d="M56 104 q14 -9 28 0" stroke="#2b2420" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M112 54 q14 -6 20 4" stroke="#6b4a33" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M28 104 q-14 10 -20 2" stroke="#6b4a33" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg></div><div class="fin-bubble"><p>So I can't do everything myself? ...That actually sounds like less work.</p><button type="button" class="say" data-audio="audio/np12-s12-rusty.mp3" aria-label="Listen: Rusty the Rush Clock"><span class="ico">&#9654;</span> Listen</button></div><p class="fin-who">Rusty the Rush Clock</p></div><div class="fin-side right"><div class="fin-mascot"><svg viewBox="0 0 140 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daisy the Dignity Daisy">
+  <path d="M70 100 C68 125 72 145 70 166" stroke="#5f7a5a" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M70 132 C52 118 34 122 26 132 C40 140 58 140 70 132Z" fill="#7d9a6f" stroke="#4f6a4a" stroke-width="2"/>
+  <path d="M71 146 C88 132 106 134 114 144 C100 152 82 152 71 146Z" fill="#7d9a6f" stroke="#4f6a4a" stroke-width="2"/>
+  <g fill="#fffdf7" stroke="#d8c9b2" stroke-width="2">
+    <ellipse cx="70" cy="22" rx="13" ry="21"/><ellipse cx="70" cy="98" rx="13" ry="21" />
+    <ellipse cx="32" cy="60" rx="21" ry="13"/><ellipse cx="108" cy="60" rx="21" ry="13"/>
+    <ellipse cx="43" cy="33" rx="13" ry="21" transform="rotate(-45 43 33)"/><ellipse cx="97" cy="33" rx="13" ry="21" transform="rotate(45 97 33)"/>
+    <ellipse cx="43" cy="87" rx="13" ry="21" transform="rotate(45 43 87)"/><ellipse cx="97" cy="87" rx="13" ry="21" transform="rotate(-45 97 87)"/>
+  </g>
+  <circle cx="70" cy="60" r="27" fill="#f2b632" stroke="#c98a12" stroke-width="3"/>
+  <circle cx="60" cy="56" r="4" fill="#2b2420"/><circle cx="80" cy="56" r="4" fill="#2b2420"/>
+  <circle cx="61.5" cy="54.5" r="1.3" fill="#fff"/><circle cx="81.5" cy="54.5" r="1.3" fill="#fff"/>
+  <circle cx="54" cy="66" r="4" fill="#e8956b" opacity=".6"/><circle cx="86" cy="66" r="4" fill="#e8956b" opacity=".6"/>
+  <path d="M58 68 q12 11 24 0" stroke="#2b2420" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg></div><div class="fin-bubble"><p>Know your role, ask when unsure, read the plan, and write the facts. Great team work!</p><button type="button" class="say" data-audio="audio/np12-s12-daisy.mp3" aria-label="Listen: Daisy the Dignity Daisy"><span class="ico">&#9654;</span> Listen</button></div><p class="fin-who">Daisy the Dignity Daisy</p></div></div><p class="fin-after">Next lesson: safe work, looking after yourself, and getting ready for Mary's simulated shift.</p>
+  <aside class="tnotes" data-slide="s12" aria-label="Teacher notes"></aside>
+</section>
+  <footer class="foot">
+    <p>CHCAGE013 · Your role and the team · Built from TAFE Queensland learning resources, 27 Oct 2026. References on this page are written NP12 S(slide) P(point), where NP12 is this page's slide number in Nearpod.</p>
+    <p>Picture credits: Pictures: Adrie Homan and Adobe Stock</p>
+    <p><a href="0-index.html">Lesson index and glossary</a> · <button type="button" class="tlink">Teacher</button></p>
+  </footer>
+</div>
+<a href="#index" class="home" title="Back to the index"><span aria-hidden="true">&#8679;</span> Home</a>
+<div class="tpill" hidden><span>Teacher view on</span><button type="button" class="tp-hide">Hide</button><button type="button" class="tp-out">Sign out</button></div>
+<div class="mascot rusty side-left" data-mascot="rusty" title="Rusty the Rush Clock" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rusty the Rush Clock">
+  <g stroke="#6b4a33" stroke-linecap="round" fill="none" stroke-width="3" opacity=".55"><path d="M4 70h16M2 84h14M6 98h12"/></g>
+  <line x1="50" y1="128" x2="38" y2="152" stroke="#6b4a33" stroke-width="7" stroke-linecap="round"/>
+  <line x1="92" y1="128" x2="108" y2="148" stroke="#6b4a33" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="34" cy="154" rx="11" ry="5" fill="#3d2a1c"/><ellipse cx="112" cy="150" rx="11" ry="5" fill="#3d2a1c"/>
+  <path d="M30 30 a16 16 0 0 1 26 -8" stroke="#8a5a3a" stroke-width="5" fill="none"/>
+  <path d="M84 22 a16 16 0 0 1 26 8" stroke="#8a5a3a" stroke-width="5" fill="none"/>
+  <circle cx="34" cy="30" r="15" fill="#b5653a" stroke="#6b4a33" stroke-width="3"/>
+  <circle cx="106" cy="30" r="15" fill="#b5653a" stroke="#6b4a33" stroke-width="3"/>
+  <rect x="64" y="14" width="12" height="10" rx="3" fill="#6b4a33"/>
+  <circle cx="70" cy="82" r="52" fill="#c9893f" stroke="#6b4a33" stroke-width="5"/>
+  <circle cx="70" cy="82" r="41" fill="#fff8ec"/>
+  <g fill="#6b4a33"><circle cx="70" cy="46" r="2.5"/><circle cx="106" cy="82" r="2.5"/><circle cx="70" cy="118" r="2.5"/><circle cx="34" cy="82" r="2.5"/></g>
+  <path d="M52 64 l12 4 M88 64 l-12 4" stroke="#2b2420" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="58" cy="74" r="5" fill="#2b2420"/><circle cx="82" cy="74" r="5" fill="#2b2420"/>
+  <line x1="70" y1="84" x2="70" y2="58" stroke="#b5653a" stroke-width="4" stroke-linecap="round"/>
+  <line x1="70" y1="84" x2="90" y2="92" stroke="#b5653a" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="70" cy="84" r="4" fill="#6b4a33"/>
+  <path d="M56 104 q14 -9 28 0" stroke="#2b2420" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M112 54 q14 -6 20 4" stroke="#6b4a33" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M28 104 q-14 10 -20 2" stroke="#6b4a33" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg></div><div class="mascot daisy side-right" data-mascot="daisy" title="Daisy the Dignity Daisy" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daisy the Dignity Daisy">
+  <path d="M70 100 C68 125 72 145 70 166" stroke="#5f7a5a" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M70 132 C52 118 34 122 26 132 C40 140 58 140 70 132Z" fill="#7d9a6f" stroke="#4f6a4a" stroke-width="2"/>
+  <path d="M71 146 C88 132 106 134 114 144 C100 152 82 152 71 146Z" fill="#7d9a6f" stroke="#4f6a4a" stroke-width="2"/>
+  <g fill="#fffdf7" stroke="#d8c9b2" stroke-width="2">
+    <ellipse cx="70" cy="22" rx="13" ry="21"/><ellipse cx="70" cy="98" rx="13" ry="21" />
+    <ellipse cx="32" cy="60" rx="21" ry="13"/><ellipse cx="108" cy="60" rx="21" ry="13"/>
+    <ellipse cx="43" cy="33" rx="13" ry="21" transform="rotate(-45 43 33)"/><ellipse cx="97" cy="33" rx="13" ry="21" transform="rotate(45 97 33)"/>
+    <ellipse cx="43" cy="87" rx="13" ry="21" transform="rotate(45 43 87)"/><ellipse cx="97" cy="87" rx="13" ry="21" transform="rotate(-45 97 87)"/>
+  </g>
+  <circle cx="70" cy="60" r="27" fill="#f2b632" stroke="#c98a12" stroke-width="3"/>
+  <circle cx="60" cy="56" r="4" fill="#2b2420"/><circle cx="80" cy="56" r="4" fill="#2b2420"/>
+  <circle cx="61.5" cy="54.5" r="1.3" fill="#fff"/><circle cx="81.5" cy="54.5" r="1.3" fill="#fff"/>
+  <circle cx="54" cy="66" r="4" fill="#e8956b" opacity=".6"/><circle cx="86" cy="66" r="4" fill="#e8956b" opacity=".6"/>
+  <path d="M58 68 q12 11 24 0" stroke="#2b2420" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg></div>
+</main>
+<div class="big" role="dialog" aria-modal="true" aria-label="Card in full screen">
+  <div class="bar"><span class="big-where"></span><button type="button" class="big-close">Close</button></div>
+  <div class="body"></div>
+  <div class="foot"><button type="button" class="big-back">Back</button><button type="button" class="next big-next">Next card</button></div>
+</div>
+<script>var TEACHER = {"salt":"s2hCEMeHMpbtFLmSmbciZg==","iv":"3JYNTWVmRN/SUkL8","ct":"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"}; var ANNOUNCE = {"first":{"mascot":"rusty","voice":"William","pitch":1.1,"none":"Tick tock! Nobody got every activity right first time. Rushing wins again!","some":"Oh no! {who} got every activity right first time. Slowing down works. Who knew?"},"second":{"mascot":"daisy","voice":"Natasha","pitch":1.05,"none":"Keep going, everyone. Take your time and you will beat Rusty.","some":"Well done! {who} got all {n} right first time. Slow and kind wins, Rusty."}}; var MASCOT_LINES = {"rusty":{"lines":["Cut his toenails? Sure, I've got scissors in my bag!","The RN asked me to do a dressing I've never done. I will just try it and see.","Care plan? I know what she needs. I've been here a week.","Notes: 'Shower done. Fine.' That's enough, right?","Who reports to whom? I report to nobody. Tick tock!"],"prefix":"rusty-l5-"},"daisy":{"lines":["Not sure if it's your job? Ask your supervisor.","If you are not trained for a task, tell the RN and ask for training.","Read the care plan before you start, every shift.","Good notes are clear, short, accurate and on time.","Know who's in the team. The physio, the dietitian, the OT. You're not alone."],"prefix":"daisy-l5-"}};</script>
+<script>(function(){
+  var ANGLES = [-8, -5.5, -9, -4.5, -7, -6, -8.5, -4, -6.5];
+  var big = document.querySelector('.big'), bigBody = big.querySelector('.body'),
+      bigWhere = big.querySelector('.big-where'), active = null;
+
+  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ---------- */
+  (function(){
+    var pill = document.querySelector('.tpill'), tlink = document.querySelector('.tlink'), saved = null, on = '0';
+    var b64 = function(s){ var b = atob(s), a = new Uint8Array(b.length); for(var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; };
+    function decrypt(code){
+      if(!window.crypto || !crypto.subtle) return Promise.reject(new Error('nosubtle'));
+      var enc = new TextEncoder();
+      return crypto.subtle.importKey('raw', enc.encode(code), 'PBKDF2', false, ['deriveKey']).then(function(km){
+        return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(TEACHER.salt), iterations: 150000, hash: 'SHA-256' }, km, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      }).then(function(key){
+        return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(TEACHER.iv) }, key, b64(TEACHER.ct));
+      }).then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
+    }
+    function show(notes){
+      document.querySelectorAll('.tnotes').forEach(function(a){ a.innerHTML = notes[a.getAttribute('data-slide')] || ''; });
+      document.body.classList.add('teacher'); pill.hidden = false;
+      try{ localStorage.setItem('tv_on', '1'); }catch(e){}
+    }
+    function hide(){ document.body.classList.remove('teacher'); pill.hidden = true; try{ localStorage.setItem('tv_on', '0'); }catch(e){} }
+    function unlock(code, quiet){
+      return decrypt(code).then(function(notes){ saved = code; try{ localStorage.setItem('tv_code', code); }catch(e){} show(notes); }, function(err){
+        if(quiet) return;
+        alert(err.message === 'nosubtle' ? 'This browser cannot unlock the teacher view. Use Chrome or Edge.' : 'That code did not work.');
+      });
+    }
+    try{ saved = localStorage.getItem('tv_code'); on = localStorage.getItem('tv_on') || '0'; }catch(e){}
+    var q = new URLSearchParams(location.search);
+    if(q.get('t') === 'off'){ hide(); try{ localStorage.removeItem('tv_code'); }catch(e){} }
+    else if(q.has('t')) unlock(q.get('t'));
+    else if(saved && on === '1') unlock(saved, true);
+    if(tlink) tlink.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')){ hide(); return; }
+      if(saved){ unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); }); } else ask();
+      function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
+    });
+    pill.querySelector('.tp-hide').addEventListener('click', hide);
+    pill.querySelector('.tp-out').addEventListener('click', function(){ hide(); saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open')) hide(); });
+  })();
+
+    /* ---------- audio ---------- */
+  var player = new Audio(), current = null, queue = null;
+  function stopAudio(){ player.pause(); if(current){ current.classList.remove('playing'); current = null; } queue = null; }
+  function playBtn(btn, onEnd){
+    if(current === btn){ stopAudio(); return; }
+    stopAudio();
+    current = btn; btn.classList.add('playing');
+    player.src = btn.getAttribute('data-audio');
+    player.onended = function(){ btn.classList.remove('playing'); current = null; if(onEnd) onEnd(); };
+    player.onerror = function(){ btn.classList.remove('playing'); current = null; btn.title = 'Sound file not found yet'; };
+    player.play().catch(function(){});
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.say'); if(!b) return;
+    e.preventDefault(); e.stopPropagation();
+    var inBig = b.closest('.big');
+    if(inBig && active){ var realBtn = active.card().querySelector('.say'); if(realBtn) b = realBtn; }
+    playBtn(b);
+  });
+
+  /* ---------- mascots follow the scroll ---------- */
+  document.querySelectorAll('.mascot').forEach(function(g, gi){
+    var name = g.getAttribute('data-mascot'), bubble = g.querySelector('.gerry-bubble');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var lastSlide = null, timer = null, ml = MASCOT_LINES[name] || {}, lines = ml.lines || [], prefix = ml.prefix || (name + '-');
+    function place(){
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? window.scrollY / max : 0;
+      var top = 90 + (gi ? 1 - p : p) * (window.innerHeight - 300);
+      g.style.top = top + 'px';
+      var slides = document.querySelectorAll('section.slide'), cur = null;
+      for(var i = 0; i < slides.length; i++){ if(slides[i].getBoundingClientRect().top < window.innerHeight * 0.5) cur = slides[i]; }
+      if(cur !== lastSlide && lastSlide !== null && !reduce){ g.classList.remove('hop'); void g.offsetWidth; g.classList.add('hop'); }
+      lastSlide = cur;
+    }
+    window.addEventListener('scroll', function(){ if(!timer) timer = requestAnimationFrame(function(){ timer = null; place(); }); }, { passive: true });
+    window.addEventListener('resize', place);
+    place();
+    var n = 0;
+    g.addEventListener('click', function(){
+      if(!bubble.hidden){ bubble.hidden = true; return; }
+      var k = n++ % lines.length;
+      bubble.textContent = lines[k]; bubble.hidden = false;
+      stopAudio(); player.src = 'audio/' + prefix + (k + 1) + '.mp3'; player.onended = null; player.onerror = null; player.play().catch(function(){});
+      clearTimeout(bubble._t); bubble._t = setTimeout(function(){ bubble.hidden = true; }, 7000);
+    });
+  });
+
+  /* ---------- finale: big mascots walk in ---------- */
+  document.querySelectorAll('[data-finale]').forEach(function(f){
+    if(!('IntersectionObserver' in window)){ f.classList.add('in'); return; }
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ f.classList.add('in'); io.disconnect(); } }); }, { threshold: 0.35 });
+    io.observe(f);
+  });
+
+  /* ---------- videos ---------- */
+  document.querySelectorAll('.video').forEach(function(v){
+    var id = (v.getAttribute('data-youtube')||'').trim(), t = v.getAttribute('data-title')||'Video';
+    if(!id) return;
+    v.innerHTML = '<iframe title="'+t.replace(/"/g,'&quot;')+'" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>';
+    var w = document.createElement('p'); w.className = 'watch';
+    w.innerHTML = 'Video not playing? <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v='+encodeURIComponent(id)+'">Watch "'+t.replace(/</g,'&lt;')+'" on YouTube</a>';
+    v.parentNode.insertBefore(w, v.nextSibling);
+  });
+
+  /* ---------- click a part of a diagram to make it stand out ---------- */
+  document.querySelectorAll('.spot').forEach(function(sv){
+    var parts = sv.querySelectorAll('[data-spot]');
+    parts.forEach(function(g){
+      g.style.cursor = 'pointer';
+      g.addEventListener('click', function(e){
+        e.stopPropagation();
+        var on = g.classList.contains('lit');
+        parts.forEach(function(x){ x.classList.remove('lit'); });
+        sv.classList.toggle('spotting', !on);
+        if(!on) g.classList.add('lit');
+      });
+    });
+    sv.addEventListener('click', function(){ parts.forEach(function(x){ x.classList.remove('lit'); }); sv.classList.remove('spotting'); });
+  });
+
+  /* ---------- card stacks ---------- */
+  document.querySelectorAll('.stack').forEach(function(stack){
+    var cards = [].slice.call(stack.querySelectorAll('.card')), n = cards.length, i = 0, busy = false;
+    var deck = document.createElement('div'); deck.className = 'deck'; deck.tabIndex = 0;
+    deck.setAttribute('role','group');
+    deck.setAttribute('aria-label', (stack.getAttribute('aria-label')||'Cards') + '. Press the right arrow for the next card.');
+    var pile = document.createElement('div'); pile.className = 'pile'; pile.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
+    deck.appendChild(pile);
+    cards.forEach(function(c, k){
+      c.style.setProperty('--r', ANGLES[k % ANGLES.length] + 'deg');
+      if(k % 2) c.classList.add('shade');
+      if(c.textContent.replace(/\s+/g,' ').length > 520) c.classList.add('long');
+      var tag = document.createElement('span'); tag.className = 'count'; tag.textContent = 'Card ' + (k+1) + ' of ' + n;
+      c.insertBefore(tag, c.firstChild);
+      c.setAttribute('aria-hidden', 'true');
+      deck.appendChild(c);
+    });
+    if(stack.getAttribute('data-playall')){
+      var pa = document.createElement('div'); pa.className = 'playall';
+      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> Play all cards</button>';
+      stack.appendChild(pa);
+      pa.querySelector('button').addEventListener('click', function(ev){
+        ev.stopPropagation();
+        if(queue === stack){ stopAudio(); return; }
+        stopAudio(); queue = stack;
+        function step(){
+          if(queue !== stack) return;
+          var b = cards[i].querySelector('.say');
+          if(!b){ next(); return; }
+          playBtn(b, function(){ setTimeout(function(){ if(queue !== stack) return; if(i === n-1){ queue = null; return; } go(1); step(); }, 900); });
+        }
+        step();
+      }, true);
+    }
+    stack.appendChild(deck);
+
+    var controls = document.createElement('div'); controls.className = 'controls';
+    controls.innerHTML = '<button type="button" class="back">Back</button><span class="where" aria-live="polite"></span><button type="button" class="next">Next card</button><button type="button" class="full">Full screen</button>';
+    stack.appendChild(controls);
+    var hint = document.createElement('p'); hint.className = 'hint'; hint.textContent = 'Click the card to see the next card.';
+    stack.appendChild(hint);
+    var where = controls.querySelector('.where');
+
+    var heights = [];
+    function size(){
+      cards.forEach(function(c, k){ c.style.height = 'auto'; heights[k] = c.offsetHeight; c.style.height = ''; });
+      deck.style.height = heights[i] + 'px';
+    }
+    function show(){
+      cards.forEach(function(c, k){ c.classList.toggle('top', k === i); c.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      where.textContent = 'Card ' + (i+1) + ' of ' + n;
+      if(heights.length) deck.style.height = heights[i] + 'px';
+      if(active === api && big.classList.contains('open')) fill();
+    }
+    function go(step){
+      if(busy) return; busy = true;
+      var old = cards[i];
+      i = (i + step + n) % n;
+      var cls = step > 0 ? 'leave' : 'leave-back';
+      show();
+      old.classList.add(cls);
+      cards[i].classList.add('arrive');
+      setTimeout(function(){ old.classList.remove(cls); cards[i].classList.remove('arrive'); busy = false; }, 440);
+    }
+    function next(){ go(1); }
+    function fill(){
+      bigBody.innerHTML = cards[i].innerHTML;
+      bigWhere.textContent = 'Card ' + (i+1) + ' of ' + n;
+      bigBody.scrollTop = 0;
+    }
+    var api = { go: go, fill: fill, card: function(){ return cards[i]; } };
+
+    deck.addEventListener('click', function(e){ if(e.target.closest('a') || e.target.closest('.say')) return; go(1); });
+    deck.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); go(1); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
+    });
+    controls.querySelector('.next').addEventListener('click', function(){ go(1); });
+    controls.querySelector('.back').addEventListener('click', function(){ go(-1); });
+    controls.querySelector('.full').addEventListener('click', function(){
+      active = api; fill(); big.classList.add('open'); big.querySelector('.big-next').focus();
+    });
+
+    size(); show();
+    window.addEventListener('resize', size);
+    window.addEventListener('load', size);
+    stack.querySelectorAll('img').forEach(function(img){ img.addEventListener('load', size); });
+  });
+
+  function closeBig(){ big.classList.remove('open'); active = null; }
+  big.querySelector('.big-close').addEventListener('click', closeBig);
+  big.querySelector('.big-next').addEventListener('click', function(){ if(active) active.go(1); });
+  big.querySelector('.big-back').addEventListener('click', function(){ if(active) active.go(-1); });
+  document.addEventListener('keydown', function(e){
+    if(!big.classList.contains('open')) return;
+    if(e.key === 'Escape') closeBig();
+    if(e.key === 'ArrowRight' && active) active.go(1);
+    if(e.key === 'ArrowLeft' && active) active.go(-1);
+  });
+
+  /* ---------- activities ---------- */
+  function shuffle(a){ a = a.slice(); for(var i = a.length-1; i > 0; i--){ var j = Math.floor(Math.random()*(i+1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
+  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
+
+  var builders = {
+    /* chips into targets: used by match (one chip per target) and sort (many chips per bucket) */
+    match: function(root, a){ return buildChips(root, a.pairs.map(function(p){ return { text: p.a, target: p.b }; }), shuffle(a.pairs.map(function(p){ return p.b; })), a.labels || null, 1); },
+    sort: function(root, a){ return buildChips(root, a.items.map(function(it){ return { text: it.text, target: it.bucket }; }), a.buckets, null, 99); },
+    order: function(root, a){
+      var list = el('ol', 'order'); root.appendChild(list);
+      var start = a.start == null ? 1 : a.start;
+      function render(items){
+        list.innerHTML = '';
+        items.forEach(function(t, k){
+          var li = el('li'); li.draggable = true; li.setAttribute('data-text', t);
+          li.innerHTML = '<span class="o-n">' + (start + k) + '</span><span class="o-t">' + esc(t) + '</span><span class="o-btn"><button type="button" aria-label="Move up">&#9650;</button><button type="button" aria-label="Move down">&#9660;</button></span>';
+          list.appendChild(li);
+        });
+      }
+      function items(){ return [].map.call(list.children, function(li){ return li.getAttribute('data-text'); }); }
+      function renumber(){ [].forEach.call(list.children, function(li, k){ li.querySelector('.o-n').textContent = start + k; li.classList.remove('right','wrong'); }); }
+      render(shuffle(a.items));
+      list.addEventListener('click', function(e){
+        var b = e.target.closest('button'); if(!b) return;
+        var li = b.closest('li'); var up = b.getAttribute('aria-label') === 'Move up';
+        if(up && li.previousElementSibling) list.insertBefore(li, li.previousElementSibling);
+        if(!up && li.nextElementSibling) list.insertBefore(li.nextElementSibling, li);
+        renumber();
+      });
+      var drag = null;
+      list.addEventListener('dragstart', function(e){ drag = e.target.closest('li'); if(drag) drag.classList.add('dragging'); });
+      list.addEventListener('dragend', function(){ if(drag) drag.classList.remove('dragging'); drag = null; renumber(); });
+      list.addEventListener('dragover', function(e){ e.preventDefault(); var li = e.target.closest('li'); if(!li || li === drag) return; var r = li.getBoundingClientRect(); if(e.clientY < r.top + r.height/2) list.insertBefore(drag, li); else list.insertBefore(drag, li.nextSibling); });
+      return {
+        check: function(){ var ok = 0; [].forEach.call(list.children, function(li, k){ var good = li.getAttribute('data-text') === a.items[k]; li.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, a.items.length]; },
+        reset: function(){ render(shuffle(a.items)); }
+      };
+    },
+    quiz: function(root, a){
+      var qs = [];
+      a.questions.forEach(function(q, qi){
+        var box = el('div', 'quiz-q'); box.innerHTML = '<p><b>' + (qi+1) + '. ' + esc(q.q) + '</b></p>';
+        var sel = -1;
+        q.options.forEach(function(o, oi){
+          var b = el('button', 'opt', esc(o)); b.type = 'button';
+          b.addEventListener('click', function(){ if(box.classList.contains('done')) return; sel = oi; [].forEach.call(box.querySelectorAll('.opt'), function(x){ x.classList.remove('selected'); }); b.classList.add('selected'); });
+          box.appendChild(b);
+        });
+        if(q.why) box.appendChild(el('p', 'why', esc(q.why)));
+        root.appendChild(box);
+        qs.push({ box: box, get: function(){ return sel; }, set: function(v){ sel = v; }, q: q });
+      });
+      return {
+        check: function(){ var ok = 0; qs.forEach(function(x){ var opts = x.box.querySelectorAll('.opt'); x.box.classList.add('done'); opts.forEach(function(o, oi){ o.classList.remove('selected'); if(oi === x.q.answer) o.classList.add('right'); else if(oi === x.get()) o.classList.add('wrong'); }); if(x.get() === x.q.answer) ok++; }); return [ok, qs.length]; },
+        reset: function(){ qs.forEach(function(x){ x.set(-1); x.box.classList.remove('done'); x.box.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected','right','wrong'); }); }); }
+      };
+    },
+    table: function(root, a){
+      var t = el('table', 'fill-table'); root.appendChild(t);
+      t.innerHTML = '<thead><tr>' + a.columns.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead>';
+      var tb = el('tbody'); t.appendChild(tb);
+      a.rows.forEach(function(r){
+        var tr = el('tr'); tr.innerHTML = '<td><b>' + esc(r.label) + '</b></td>';
+        r.cells.forEach(function(c){
+          var td = el('td'); var s = el('select'); s.innerHTML = '<option value="">Choose...</option>' + shuffle(c.options).map(function(o){ return '<option>' + esc(o) + '</option>'; }).join('');
+          s.setAttribute('data-answer', c.answer); td.appendChild(s); tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      return {
+        check: function(){ var ok = 0, n = 0; t.querySelectorAll('select').forEach(function(s){ n++; var td = s.parentNode; td.classList.remove('right','wrong'); var good = s.value === s.getAttribute('data-answer'); td.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, n]; },
+        reset: function(){ t.querySelectorAll('select').forEach(function(s){ s.value = ''; s.parentNode.classList.remove('right','wrong'); }); }
+      };
+    }
+  };
+
+  function buildChips(root, items, targetNames, labels, cap){
+    var bank = el('div', 'bank'); root.appendChild(bank);
+    var tg = el('div', 'targets'); root.appendChild(tg);
+    var selected = null, targets = {};
+    targetNames.forEach(function(name){
+      var t = el('div', 'target'); t.setAttribute('data-name', name);
+      t.innerHTML = '<div class="t-label">' + esc(labels ? (labels[name] || name) : name) + '</div><div class="t-drop"></div>';
+      tg.appendChild(t); targets[name] = t;
+      t.addEventListener('click', function(){ if(selected) place(selected, t); });
+      t.addEventListener('dragover', function(e){ e.preventDefault(); t.classList.add('over'); });
+      t.addEventListener('dragleave', function(){ t.classList.remove('over'); });
+      t.addEventListener('drop', function(e){ e.preventDefault(); t.classList.remove('over'); if(selected) place(selected, t); });
+    });
+    function place(chip, t){
+      var drop = t.querySelector('.t-drop');
+      if(cap === 1 && drop.children.length){ bank.appendChild(drop.firstElementChild); }
+      drop.appendChild(chip); chip.classList.remove('selected','right','wrong'); selected = null;
+    }
+    function mk(it){
+      var c = el('div', 'chip', esc(it.text)); c.setAttribute('data-target', it.target); c.draggable = true; c.tabIndex = 0;
+      c.addEventListener('click', function(e){ e.stopPropagation(); if(c.parentNode !== bank){ bank.appendChild(c); c.classList.remove('right','wrong'); selected = null; return; } if(selected) selected.classList.remove('selected'); selected = c; c.classList.add('selected'); });
+      c.addEventListener('dragstart', function(){ selected = c; c.classList.add('selected'); });
+      c.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); c.click(); } });
+      return c;
+    }
+    function fillBank(){ bank.innerHTML = ''; shuffle(items).forEach(function(it){ bank.appendChild(mk(it)); }); }
+    fillBank();
+    return {
+      check: function(){ var ok = 0; items.length; root.querySelectorAll('.chip').forEach(function(c){ var t = c.closest('.target'); c.classList.remove('right','wrong'); if(!t){ c.classList.add('wrong'); return; } var good = t.getAttribute('data-name') === c.getAttribute('data-target'); c.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, items.length]; },
+      reset: function(){ root.querySelectorAll('.t-drop').forEach(function(d){ d.innerHTML = ''; }); fillBank(); selected = null; }
+    };
+  }
+
+  document.querySelectorAll('.activity').forEach(function(act){
+    var a; try{ a = JSON.parse(act.getAttribute('data-activity')); }catch(e){ return; }
+    var body = act.querySelector('.act-body'), res = act.querySelector('.act-result');
+    var b = builders[a.type]; if(!b) return;
+    var api = b(body, a);
+    var slide = act.closest('section.slide'), peek = act.querySelector('.act-peek'), tools = act.querySelector('.act-tools');
+    function blur(on){ if(slide) slide.classList.toggle('hide-notes', on); peek.textContent = on ? 'Show the notes' : 'Hide the notes to carry on'; act.classList.toggle('peeking', !on && act.classList.contains('started')); }
+    act.querySelector('.act-go').addEventListener('click', function(){
+      act.classList.add('started'); act.querySelector('.act-start').hidden = true; body.hidden = false; tools.hidden = false; blur(true);
+      act.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    peek.addEventListener('click', function(){ blur(!slide.classList.contains('hide-notes')); });
+    act.querySelector('.act-check').addEventListener('click', function(){
+      var r = api.check(); res.className = 'act-result ' + (r[0] === r[1] ? 'good' : 'bad');
+      res.textContent = r[0] === r[1] ? 'All correct. Well done!' : r[0] + ' of ' + r[1] + ' correct. Try the red ones again.';
+      if(r[0] === r[1]){ act.classList.remove('started'); blur(false); }
+    });
+    act.querySelector('.act-reset').addEventListener('click', function(){ api.reset(); res.textContent = ''; res.className = 'act-result'; });
+  });
+})();
+
+/* ---------- infographics: click for full screen (CHCAGE013) ---------- */
+(function(){
+  function open(node){
+    var box = document.createElement('div'); box.className = 'zoombox'; box.setAttribute('role','dialog'); box.setAttribute('aria-label','Picture full screen');
+    box.appendChild(node.cloneNode(true));
+    var c = document.createElement('button'); c.className = 'zclose'; c.type = 'button'; c.textContent = 'Close'; box.appendChild(c);
+    function shut(){ box.remove(); document.removeEventListener('keydown', key); }
+    function key(e){ if(e.key === 'Escape') shut(); }
+    box.addEventListener('click', shut); document.addEventListener('keydown', key);
+    document.body.appendChild(box);
+  }
+  document.querySelectorAll('figure.infopic img, figure.infopic .info-svg').forEach(function(el){
+    el.addEventListener('click', function(){ open(el); });
+    el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(el); } });
+  });
+})();
+</script>
+<script src="../shared/presenting.js"></script>
+</body>
+</html>

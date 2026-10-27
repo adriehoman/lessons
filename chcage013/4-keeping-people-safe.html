@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHCAGE013 Work effectively in aged care: Keeping people safe</title>
+<meta name="description" content="CHCAGE013 Lesson 4: elder abuse, situations of greater risk, signs of six types of abuse, the steps to take, SIRS and the IMS, and restrictive practices.">
+<style>:root{
+  --ink:#1b2530; --soft-ink:#44505c; --paper:#ffffff;
+  --deep:#12384a; --aqua:#8fe3e8; --action:#0b6f7c;
+  --card-a:#fbfbf9; --card-b:#ecece8; --edge:#d9d9d4;
+  --warn:#b45309; --warn-bg:#fff7ed; --ok:#15803d; --bad:#b91c1c;
+  --teach:#4c1d95; --teach-bg:#f5f3ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size:clamp(17px,1.5vw,30px); line-height:1.55}
+main{overflow-x:clip}
+.wrap{max-width:1500px; margin:0 auto; padding:0 clamp(20px,3vw,60px)}
+
+/* banner */
+.banner{position:relative; background:var(--deep); color:#fff; padding:clamp(60px,9vw,140px) 20px 40px; overflow:hidden}
+.banner-inner{position:relative; z-index:2; max-width:1500px; margin:0 auto}
+.banner .kicker{margin:0 0 6px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:.75em; color:var(--aqua)}
+.banner h1{margin:0; font-size:clamp(30px,5vw,76px); line-height:1.1; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.banner .sub{margin:12px 0 0; font-size:1.05em; max-width:28em; color:#f3e6d2}
+.banner svg.hero{position:absolute; right:-2vw; bottom:-4vw; width:min(46vw,620px); height:auto; opacity:.95; z-index:1}
+@media (max-width:800px){.banner svg.hero{opacity:.25}}
+
+/* index */
+#index{margin:30px 0 10px; padding:18px 26px 12px; background:#efe5d3; border-left:6px solid var(--action); border-radius:6px}
+#index h2{font-size:1.2em; margin:0 0 8px}
+#index ul{margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(19em,1fr)); column-gap:3em}
+#index li{margin:4px 0}
+#index a{text-decoration:none; color:var(--ink); display:flex; gap:10px; align-items:baseline}
+#index a:hover{color:var(--action); text-decoration:underline}
+.num{display:inline-flex; align-items:center; justify-content:center; min-width:1.7em; height:1.7em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; font-size:.8em; flex:none}
+.opening{font-size:1.05em; margin:26px 0 10px}
+
+/* slides */
+section.slide{padding:36px 0 18px; border-top:1px solid var(--edge); margin-top:30px; scroll-margin-top:10px}
+section.slide:first-of-type{border-top:0}
+h2.topic{font-size:1.4em; line-height:1.3; margin:0 0 10px; display:flex; gap:14px; align-items:center}
+h2.topic .num{font-size:.7em; min-width:2em; height:2em}
+h3{font-size:1.15em; line-height:1.3; margin:0 0 10px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px; padding-left:26px}
+li{margin:4px 0}
+a{color:var(--action); text-underline-offset:3px}
+a.star{font-weight:700; padding:0 4px; font-size:.8em; text-decoration:none; opacity:.55}
+a.star:hover{opacity:1}
+a.term{text-decoration:underline dotted; color:inherit}
+.intro{font-size:1.05em; color:var(--soft-ink)}
+a:focus-visible,button:focus-visible,.deck:focus-visible{outline:3px solid #f2a900; outline-offset:3px}
+
+ol.points{margin:12px 0 18px; padding-left:0; list-style:none; counter-reset:pt}
+ol.points li{position:relative; padding:10px 14px 10px 3.2em; margin:6px 0; background:#fffaf1; border-radius:8px; counter-increment:pt}
+ol.points li::before{content:counter(pt); position:absolute; left:.9em; top:.55em; width:1.7em; height:1.7em; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:700; font-size:.85em; display:flex; align-items:center; justify-content:center}
+.ref{display:none; float:right; margin-left:10px; font-size:.65em; color:var(--teach); background:var(--teach-bg); border:1px solid #ddd6fe; border-radius:4px; padding:0 6px}
+body.teacher .ref{display:inline-block}
+
+figure.visual{margin:18px 0 22px; text-align:center}
+figure.visual svg,figure.visual img{max-width:100%; height:auto; max-height:70vh}
+figure.visual figcaption{font-size:.8em; color:var(--soft-ink); margin-top:6px}
+figure.pic{margin:22px 0}
+figure.pic img{display:block; width:100%; height:auto; max-height:86vh; object-fit:contain; border-radius:4px}
+
+.watch-out{margin:14px 0 20px; padding:14px 18px 14px 56px; background:var(--warn-bg); border:2px solid #fdba74; border-radius:8px; position:relative}
+.watch-out::before{content:"!"; position:absolute; left:14px; top:12px; width:30px; height:30px; border-radius:50%; background:var(--warn); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.watch-out b{color:var(--warn); margin-right:6px}
+
+/* audio */
+.say{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:40px; display:inline-flex; gap:8px; align-items:center}
+.say.playing{background:var(--action); color:#fff}
+.say .ico{font-size:.8em}
+.audio-line{display:flex; gap:12px; align-items:center; margin:0 0 14px; flex-wrap:wrap}
+.audio-label{color:var(--soft-ink); font-size:.9em}
+.card-audio{margin-top:10px}
+.playall{margin:0 0 34px; text-align:center}
+
+/* card stack (from the Sway template) */
+.stack{margin:60px auto 40px; width:86%; max-width:1150px; --tilt:.4}
+.deck{position:relative; cursor:pointer; border-radius:3px; transition:height .3s ease}
+.pile i{position:absolute; inset:0; background:var(--card-b); border:1px solid var(--edge); box-shadow:0 1px 3px rgba(20,30,40,.10)}
+.pile i:nth-child(even){background:var(--card-a)}
+.pile i{transform:rotate(calc(var(--a) * var(--tilt,1))) translate(var(--x),var(--y))}
+.pile i:nth-child(1){--a:-15deg; --x:-4px; --y:6px}
+.pile i:nth-child(2){--a:6deg; --x:6px; --y:2px}
+.pile i:nth-child(3){--a:-12deg; --x:3px; --y:-5px}
+.pile i:nth-child(4){--a:3deg; --x:-5px; --y:4px}
+.pile i:nth-child(5){--a:-10deg; --x:5px; --y:5px}
+.pile i:nth-child(6){--a:-2deg; --x:-3px; --y:-3px}
+.pile i:nth-child(7){--a:-6deg; --x:2px; --y:3px}
+.pile{position:absolute; inset:0; filter:drop-shadow(0 14px 18px rgba(20,30,40,.16))}
+.card{position:absolute; left:0; top:0; width:100%; height:100%; background:var(--card-a); border:1px solid var(--edge);
+  padding:1.5em 1.8em 1.3em; font-size:clamp(16px,1.4vw,27px); line-height:1.5; opacity:0; pointer-events:none; z-index:1; min-height:7em;
+  transform:rotate(calc(var(--r,-6deg) * var(--tilt,1))); box-shadow:0 2px 6px rgba(20,30,40,.14)}
+.card.shade{background:var(--card-b)}
+.card.long{font-size:clamp(14.5px,1.25vw,24px); line-height:1.45}
+.card.top{opacity:1; pointer-events:auto; z-index:3}
+.card.arrive{animation:arrive .42s ease-out}
+.card.leave{opacity:1; z-index:4; animation:leave .42s ease-in forwards}
+.card.leave-back{opacity:1; z-index:4; animation:leaveBack .42s ease-in forwards}
+@keyframes arrive{from{transform:rotate(calc(var(--r) * var(--tilt,1) + 5deg)) scale(.96)} to{transform:rotate(calc(var(--r) * var(--tilt,1))) scale(1)}}
+@keyframes leave{to{transform:translate(58%,-10%) rotate(16deg); opacity:0}}
+@keyframes leaveBack{to{transform:translate(-58%,-10%) rotate(-18deg); opacity:0}}
+.card .count{float:right; margin:-6px -8px 6px 14px; font-size:.8em; font-weight:600; color:var(--soft-ink); background:#fff; border:1px solid var(--edge); border-radius:20px; padding:2px 12px}
+.card ul{margin-bottom:6px}
+.card-pic{float:right; width:clamp(90px,22%,220px); margin:0 0 10px 16px}
+.card-pic svg{width:100%; height:auto}
+.controls{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin-top:60px}
+.controls button{font:inherit; font-size:clamp(17px,1.2vw,24px); font-weight:600; cursor:pointer; padding:10px 20px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:48px}
+.controls button.next{background:var(--action); color:#fff}
+.controls button:hover{filter:brightness(.94)}
+.controls .where{min-width:7em; text-align:center; font-weight:700; font-size:clamp(18px,1.25vw,25px)}
+.hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:10px 0 0}
+
+/* full screen */
+.big{position:fixed; inset:0; z-index:50; background:#05090c; color:#fff; display:none}
+.big.open{display:flex; flex-direction:column}
+.big .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; font-weight:700}
+.big .body{flex:1; overflow:auto; padding:8px clamp(20px,7vw,90px) 24px; font-size:clamp(20px,2.9vw,34px); line-height:1.45}
+.big .body h3{font-size:1.1em; margin-bottom:.5em}
+.big .body .count{display:none}
+.big .body .card-pic{width:22%}
+.big .body .say{color:#fff; border-color:#fff; background:transparent}
+.big .foot{display:flex; gap:12px; justify-content:center; padding:12px 18px 20px}
+.big button{font:inherit; font-size:18px; font-weight:600; cursor:pointer; min-height:48px; padding:10px 22px; border-radius:6px; border:2px solid #fff; background:transparent; color:#fff}
+.big button.next{background:#fff; color:#05090c}
+
+/* activities */
+.activity{margin:22px 0 28px; padding:16px 20px 14px; border:2px solid #d8c9b2; border-radius:10px; background:#f1f5ec}
+.act-head{display:flex; gap:10px; align-items:center; margin-bottom:6px}
+.act-badge{background:var(--action); color:#fff; font-size:.7em; font-weight:700; padding:2px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:.04em}
+.act-instr{color:var(--soft-ink); font-size:.9em}
+.act-foot{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px}
+.act-foot button{font:inherit; font-size:.9em; font-weight:600; cursor:pointer; padding:8px 18px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:44px}
+.act-foot .act-check{background:var(--action); color:#fff}
+.act-result{font-weight:700}
+.act-result.good{color:var(--ok)} .act-result.bad{color:var(--bad)}
+.chip{display:inline-flex; align-items:center; font-size:.9em; padding:8px 14px; margin:5px; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; user-select:none; min-height:44px; line-height:1.3}
+.chip.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.chip.right{border-color:var(--ok); background:#ecfdf5}
+.chip.wrong{border-color:var(--bad); background:#fef2f2}
+.chip.placed{cursor:default}
+.bank{min-height:52px; padding:6px; border:2px dashed #b9a68a; border-radius:8px; margin-bottom:12px; background:#fff}
+.targets{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(16em,1fr))}
+.target{border:2px solid #b9a68a; border-radius:8px; background:#fff; padding:8px 10px; min-height:70px}
+.target .t-label{font-weight:700; margin-bottom:4px}
+.target .t-drop{min-height:44px; border:2px dashed #e8dcc6; border-radius:6px; padding:2px}
+.target.over .t-drop{border-color:var(--action); background:#f6efe2}
+.order{list-style:none; padding:0; margin:0; counter-reset:o}
+.order li{display:flex; gap:10px; align-items:center; background:#fff; border:2px solid #b9a68a; border-radius:8px; padding:8px 10px; margin:6px 0; cursor:grab}
+.order li .o-n{min-width:2em; height:2em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; font-size:.85em}
+.order li .o-t{flex:1}
+.order li .o-btn{display:flex; gap:4px}
+.order li .o-btn button{font:inherit; min-width:40px; min-height:40px; border-radius:6px; border:1px solid #b9a68a; background:#fff; cursor:pointer}
+.order li.right{border-color:var(--ok); background:#ecfdf5} .order li.wrong{border-color:var(--bad); background:#fef2f2}
+.order li.dragging{opacity:.5}
+.quiz-q{margin:10px 0 16px}
+.quiz-q .opt{display:block; width:100%; text-align:left; font:inherit; font-size:.95em; padding:10px 14px; margin:6px 0; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; min-height:44px}
+.quiz-q .opt.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.quiz-q .opt.right{border-color:var(--ok); background:#ecfdf5} .quiz-q .opt.wrong{border-color:var(--bad); background:#fef2f2}
+.quiz-q .why{font-size:.85em; color:var(--soft-ink); margin:4px 0 0 6px; display:none}
+.quiz-q.done .why{display:block}
+.fill-table{width:100%; border-collapse:collapse; font-size:.9em; background:#fff}
+.fill-table th,.fill-table td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+.fill-table th{background:#efe5d3}
+.fill-table select{font:inherit; font-size:.95em; min-height:40px; max-width:100%}
+.fill-table td.right{background:#ecfdf5} .fill-table td.wrong{background:#fef2f2}
+
+/* teacher view */
+.tnotes{display:none; margin:18px 0 6px; padding:12px 16px; background:var(--teach-bg); border:2px dashed #c4b5fd; border-radius:8px; font-size:.82em; color:#2e1065}
+body.teacher .tnotes{display:block}
+.tnotes .t-head{font-weight:800; color:var(--teach); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; font-size:.85em}
+.tnotes ul{margin:4px 0 8px}
+.tnotes .t-trap{background:#fff7ed; border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0}
+.tlink{font:inherit; font-size:1em; color:var(--soft-ink); background:none; border:0; text-decoration:underline; cursor:pointer; padding:0}
+.tpill[hidden]{display:none}
+.tpill{position:fixed; top:10px; right:10px; z-index:45; background:var(--teach); color:#fff; border-radius:30px; padding:6px 8px 6px 16px; display:flex; gap:8px; align-items:center; font-size:15px; font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.tpill button{font:inherit; font-size:14px; font-weight:700; border:0; border-radius:20px; padding:6px 12px; background:#fff; color:var(--teach); cursor:pointer; min-height:34px}
+.tpill button.tp-out{background:transparent; color:#fff; border:1px solid #fff}
+.card-pic.photo img{width:100%; height:auto; border-radius:8px; display:block}
+.grid4{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(11em,1fr)); margin:16px 0 22px}
+.grid4 figure{margin:0; background:#efe5d3; border-radius:12px; overflow:hidden}
+.grid4 img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+.grid4 figcaption{padding:10px 14px 12px; font-size:.9em}
+.grid4 figcaption b{display:block; color:var(--deep); font-size:1.05em}
+.side{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; margin:10px 0 18px}
+.side > div{flex:2 1 420px}
+.side figure{flex:0 1 380px; max-width:440px; margin:0}
+.side figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* Gerry */
+.mascot{position:fixed; left:clamp(6px,1.2vw,24px); top:120px; width:clamp(54px,6vw,110px); z-index:35; cursor:pointer; transition:top .6s cubic-bezier(.3,.9,.4,1.1); filter:drop-shadow(0 6px 10px rgba(0,0,0,.25)); user-select:none}
+.mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.mascot.hop svg{animation:hop .7s ease-out 1, bob 2.6s ease-in-out .7s infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes hop{0%{transform:translateY(0) scale(1,1)} 30%{transform:translateY(-40px) scale(.95,1.08) rotate(14deg)} 60%{transform:translateY(0) scale(1.08,.92)} 100%{transform:translateY(0) scale(1,1)}}
+.gerry-bubble{position:absolute; left:100%; top:0; margin-left:10px; width:max-content; max-width:16em; background:#fff; color:var(--ink); border:2px solid var(--deep); border-radius:14px; padding:8px 12px; font-size:clamp(14px,1vw,18px); line-height:1.35; box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.gerry-bubble::before{content:""; position:absolute; left:-12px; top:16px; border:6px solid transparent; border-right-color:var(--deep)}
+@media (max-width:900px){.mascot{display:none}}
+.mascot.drop{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.drop .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.drop .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+@media (prefers-reduced-motion:reduce){.mascot svg{animation:none}}
+
+.home{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(14px,2vw,32px); z-index:40; background:var(--action); color:#fff; font-weight:700; font-size:clamp(17px,1.2vw,24px); text-decoration:none; padding:12px 22px; border-radius:30px; box-shadow:0 4px 14px rgba(0,0,0,.25); min-height:48px; display:flex; align-items:center; gap:8px}
+.foot{margin:50px 0 90px; padding-top:16px; border-top:1px solid var(--edge); font-size:.75em; color:var(--soft-ink)}
+
+@media (max-width:560px){
+  body{font-size:17px}
+  .card{padding:20px 20px 18px; font-size:16px}
+  .card.long{font-size:14.5px}
+  .stack{width:auto; margin-left:14px; margin-right:14px; --tilt:.3}
+  .card-pic{width:30%}
+  h2.topic{font-size:1.25em}
+}
+@media (prefers-reduced-motion:reduce){
+  .card.arrive,.card.leave,.card.leave-back{animation-duration:.01s}
+  html{scroll-behavior:auto}
+}
+
+/* ordered strips (PPE on / off) */
+.strips{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr)); margin:16px 0 20px}
+.strip{background:#fffaf1; border-radius:12px; padding:14px 16px}
+.strip-title{font-weight:800; color:var(--deep); margin-bottom:8px}
+.strip-steps{list-style:none; margin:0; padding:0; counter-reset:st}
+.strip-steps li{counter-increment:st; display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px solid #e2e8f0}
+.strip-steps li:last-child{border-bottom:0}
+.strip-steps li::before{content:counter(st); display:inline-flex; align-items:center; justify-content:center; width:1.9em; height:1.9em; border-radius:50%; background:var(--c,#0b6f7c); color:#fff; font-weight:800; font-size:.85em; flex:none}
+table.plain{width:100%; border-collapse:collapse; font-size:.92em; margin:10px 0 18px; background:#fff}
+table.plain th,table.plain td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+table.plain th{background:#efe5d3}
+.tl-high{background:#fee2e2} .tl-med{background:#fef3c7} .tl-low{background:#dcfce7}
+
+/* activity start and blur */
+.act-start[hidden]{display:none}
+.act-start{display:flex; gap:14px; align-items:center; flex-wrap:wrap; padding:6px 0 2px; color:var(--soft-ink); font-size:.9em}
+.act-go{font:inherit; font-size:1em; font-weight:700; cursor:pointer; padding:10px 26px; border-radius:8px; border:0; background:var(--action); color:#fff; min-height:48px}
+.act-tools{margin:0 0 10px}
+.act-peek{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid #b9a68a; background:#fff; color:var(--action); min-height:40px}
+section.slide.hide-notes > :is(ol.points, .stack, figure.visual, .after, .intro, .watch-out, .vid, .audio-line, .side-points, p){filter:blur(7px); pointer-events:none; user-select:none; transition:filter .3s}
+section.slide.hide-notes .activity{filter:none}
+.vid{margin:20px 0 10px}
+.vid-title{margin:0 0 8px}
+.vid-by{color:var(--soft-ink); font-size:.85em}
+.video{margin:0 auto 6px; max-width:calc((100vh - 90px) * 16 / 9); aspect-ratio:16/9; background:#0e1a22; border-radius:6px; overflow:hidden; position:relative}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.watch{margin:0 0 20px; font-size:.8em; text-align:center}
+
+/* activity locked while the notes are showing */
+.activity.peeking .act-body, .activity.peeking .act-foot{pointer-events:none; opacity:.35; filter:grayscale(1)}
+.activity.peeking .act-tools::after{content:"Read the notes, then press the button to carry on."; margin-left:12px; color:var(--warn); font-weight:700; font-size:.9em}
+/* click to spotlight a part of a diagram */
+.spot [data-spot]{transition:opacity .3s, transform .3s; transform-box:fill-box; transform-origin:center}
+.spot.spotting [data-spot]:not(.lit){opacity:.28}
+.spot [data-spot].lit{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.14)}}
+.spot-hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:-8px 0 14px}
+/* points beside a picture */
+.side-points{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start}
+.side-points > ol.points{flex:2 1 420px; margin-top:0}
+.side-points > figure{flex:0 1 320px; max-width:360px; margin:0}
+.side-points > figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* student-visible Connect source line */
+.source{margin:16px 0 6px; padding:10px 14px 10px 44px; background:#f6efe2; border-left:4px solid var(--action); border-radius:8px; font-size:.92em; color:var(--soft-ink); position:relative; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center}
+.source::before{content:"\1F4D6"; position:absolute; left:12px; top:8px; font-size:1.2em}
+.source-label{font-weight:700; color:var(--ink)}
+.source a{text-decoration:none; font-weight:600; border:1px solid #d8c9b2; background:#fff; border-radius:999px; padding:2px 10px}
+.source a:hover{background:#efe5d3}
+
+/* Lesson 3: safety signs, RACE, two-up figures */
+.signs{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:12px 0 20px; align-items:start}
+.sign{background:#fff; border:2px solid var(--edge); border-radius:12px; padding:12px 10px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px}
+.sign svg{width:84px; height:84px}
+.sign span{font-weight:700; font-size:.9em; line-height:1.25}
+.signkey{display:flex; flex-wrap:wrap; gap:8px 20px; margin:6px 0 14px; font-size:.92em}
+.signkey i{display:inline-block; width:16px; height:16px; border-radius:50%; vertical-align:-3px; margin-right:6px}
+.race{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:14px 0 20px}
+.race div{border-left:8px solid var(--c); background:#fff; border-radius:10px; padding:12px 14px; box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.race b{display:block; font-size:2.2em; line-height:1; color:var(--c)}
+.race span{display:block; font-weight:700; font-size:1.1em; margin-top:4px}
+.race small{color:var(--soft-ink)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:14px 0}
+.grid2 figure{margin:0}
+.grid2 figcaption{font-size:.85em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > :is(.signs, .signkey, .race, .grid2){filter:blur(7px); pointer-events:none; user-select:none}
+
+/* side-by-side videos */
+.vid-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:16px 0 6px}
+.vid-row .vid{margin:0}
+.vid-row .video{max-width:none}
+section.slide.hide-notes > .vid-row{filter:blur(7px); pointer-events:none}
+
+/* finale: the grand exit */
+.finale{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; margin:24px 0 10px; padding:24px 10px 0; min-height:340px; overflow:hidden}
+.fin-side{display:flex; flex-direction:column; align-items:center; gap:10px; opacity:0; transition:transform .9s cubic-bezier(.2,.8,.3,1.1), opacity .6s}
+.fin-side.left{transform:translateX(-60vw)}
+.fin-side.right{transform:translateX(60vw)}
+.finale.in .fin-side{transform:none; opacity:1}
+.finale.in .fin-side.right{transition-delay:.25s}
+.fin-mascot{width:min(260px,38vw)}
+.fin-mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.fin-bubble{background:#fff; border:3px solid var(--deep); border-radius:18px; padding:14px 18px; font-size:1.08em; line-height:1.4; position:relative; max-width:34em; opacity:0; transform:scale(.7); transition:transform .5s cubic-bezier(.2,.8,.3,1.3), opacity .4s}
+.fin-bubble p{margin:0 0 8px}
+.fin-bubble::after{content:""; position:absolute; bottom:-14px; left:50%; margin-left:-8px; border:8px solid transparent; border-top-color:var(--deep)}
+.finale.in .fin-bubble{opacity:1; transform:none; transition-delay:1s}
+.finale.in .right .fin-bubble{transition-delay:1.5s}
+.fin-side .fin-bubble{order:-1}
+.fin-who{font-weight:800; color:var(--deep); margin:0}
+.fin-after{text-align:center; font-size:1.1em; color:var(--soft-ink); margin:10px 0 20px}
+@media (max-width:700px){.finale{grid-template-columns:1fr; min-height:0} .fin-side.left,.fin-side.right{transform:translateY(40px)} .finale.in .fin-side{transform:none}}
+@media (prefers-reduced-motion:reduce){.fin-side,.fin-bubble{transition:none; transform:none; opacity:1} .fin-mascot svg{animation:none}}
+.sign-pics{display:flex; gap:6px; align-items:center; justify-content:center; height:96px}
+.sign-pics img{max-height:96px; max-width:100%; object-fit:contain}
+.sign-pics img + img{max-height:60px}
+
+/* Lesson 4: risk matrix */
+table.matrix{border-collapse:collapse; margin:0 auto; font-size:.95em}
+table.matrix th, table.matrix td{border:2px solid #fff; padding:10px 12px; text-align:center}
+table.matrix thead th{background:#12384a; color:#fff; font-weight:700}
+table.matrix tbody th{background:#0b6f7c; color:#fff; text-align:left; font-weight:700}
+table.matrix .corner{background:#1b2530; font-size:.8em}
+table.matrix td.m-L{background:#bbf7d0; color:#14532d; font-weight:700}
+table.matrix td.m-M{background:#fde68a; color:#78350f; font-weight:700}
+table.matrix td.m-H{background:#fca5a5; color:#7f1d1d; font-weight:700}
+@media (max-width:700px){table.matrix{font-size:.75em} table.matrix th, table.matrix td{padding:6px 4px}}
+
+
+/* ===================== CHCAGE013 rustic theme (27 Oct 2026) ===================== */
+:root{
+  --ink:#2b2420; --soft-ink:#574a40; --paper:#f6f0e4;
+  --deep:#4a3222; --aqua:#ecd9bb; --action:#4f6a4a;
+  --card-a:#fffaf1; --card-b:#f3ead9; --edge:#d8c9b2;
+  --wood:#6b4a33; --sage-bg:#e9efe2; --clay:#a8542c;
+}
+body{background-color:var(--paper); background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .42 0 0 0 0 .32 0 0 0 0 .22 0 0 0 .06 0'/></filter><rect width='180' height='180' filter='url(%23n)'/></svg>")}
+h1,h2,h3,.banner h1{font-family:Georgia,"Times New Roman",serif}
+.banner{background-color:#3b2718; background-image:linear-gradient(90deg,rgba(38,22,12,.82) 0%,rgba(38,22,12,.58) 55%,rgba(38,22,12,.32) 100%),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='700' height='420'><filter id='b' x='0' y='0' width='100%' height='100%'><feTurbulence type='turbulence' baseFrequency='0.022 0.0035' numOctaves='4' seed='11' result='ridge'/><feTurbulence type='fractalNoise' baseFrequency='0.06 0.02' numOctaves='3' seed='4' result='warp'/><feDisplacementMap in='ridge' in2='warp' scale='38' xChannelSelector='R' yChannelSelector='G' result='d'/><feColorMatrix in='d' type='luminanceToAlpha' result='h'/><feDiffuseLighting in='h' lighting-color='%23b89874' surfaceScale='14' diffuseConstant='1.1' result='lit'><feDistantLight azimuth='200' elevation='34'/></feDiffuseLighting><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='2' result='g'/><feColorMatrix in='g' type='matrix' values='0 0 0 0 0.3 0 0 0 0 0.25 0 0 0 0 0.2 0 0 0 0.25 0' result='grain'/><feBlend in='grain' in2='lit' mode='multiply'/></filter><rect width='700' height='420' filter='url(%23b)'/></svg>");
+  background-size:auto,700px 420px; border-bottom:8px solid #7a5a3f; padding:clamp(40px,6vw,96px) 20px clamp(26px,3vw,44px)}
+.banner h1{text-shadow:0 2px 10px rgba(0,0,0,.75)}
+.banner .sub{color:#f3e6d2; text-shadow:0 1px 6px rgba(0,0,0,.7)}
+.banner .kicker{color:var(--aqua)}
+.lessonbar{display:flex; flex-wrap:wrap; gap:8px 10px; padding:12px clamp(20px,3vw,60px); background:#efe5d3; border-bottom:1px solid var(--edge); font-size:clamp(14px,.95vw,19px)}
+.lessonbar a{padding:6px 14px; border-radius:20px; background:var(--card-a); border:1px solid var(--edge); color:var(--wood); text-decoration:none; font-weight:600; white-space:nowrap}
+.lessonbar a:hover{border-color:var(--wood)}
+.lessonbar a.on{background:var(--action); border-color:var(--action); color:#fff}
+#index{background:#efe5d3; border-left-color:var(--wood)}
+h2.topic{color:var(--wood); border-bottom:2px dashed var(--edge); padding-bottom:8px}
+h2.topic .num{background:var(--wood)}
+ol.points li{background:var(--card-a); border:1px solid var(--edge); box-shadow:0 1px 0 #e6d9c4}
+ol.points li::before{border-color:var(--wood); color:var(--wood)}
+section.slide{border-top-color:var(--edge)}
+.activity{background:var(--sage-bg); border-color:#c6d3bb}
+a.term{text-decoration-color:var(--clay)}
+.tag{display:inline-block; font-family:"Segoe UI",Arial,sans-serif; font-size:.68em; font-weight:700; padding:1px 10px; border-radius:12px; margin:0 6px; vertical-align:middle; white-space:nowrap}
+.tag.old{background:#e5e1db; color:#4a4540; border:1px solid #b9b2a8}
+.tag.repl{background:#fdf0dc; color:#8a4b12; border:1px solid #e8b878}
+.tag.new{background:#e2efdc; color:#2f5a2a; border:1px solid #9cc290}
+.vid.local video{display:block; width:100%; max-width:1100px; max-height:72vh; margin:0 auto; border-radius:8px; background:#000}
+.mascot.side-right{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.side-right .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.side-right .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+.gerry-bubble{border-color:var(--wood)}
+.home{background:var(--wood)}
+.side-points figure img{border-radius:10px; border:1px solid var(--edge)}
+figure.visual img{border-radius:10px}
+.watch-out b{margin-right:0}
+.watch-out > b:first-child{margin-right:6px}
+body.presenting .mascot{z-index:45}
+@media (max-width:700px){
+  .lessonbar{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:thin; padding-bottom:10px}
+  .lessonbar a{flex:0 0 auto}
+}
+.fill-table select{width:100%}
+
+/* infographics: big, centred, click for full screen */
+figure.infopic{margin:22px auto 26px; text-align:center}
+figure.infopic img{display:block; margin:0 auto; width:100%; max-width:1300px; max-height:82vh; object-fit:contain; border-radius:12px; border:1px solid var(--edge); background:#fff; cursor:zoom-in}
+figure.infopic .info-svg{max-width:1300px; margin:0 auto; background:#fffdf8; border:1px solid var(--edge); border-radius:12px; padding:10px; cursor:zoom-in}
+figure.infopic figcaption{font-size:.75em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > figure.infopic{filter:blur(7px); pointer-events:none; user-select:none}
+.zoombox{position:fixed; inset:0; z-index:70; background:rgba(20,14,10,.92); display:flex; align-items:center; justify-content:center; cursor:zoom-out; padding:2vh 2vw}
+.zoombox img,.zoombox svg{max-width:96vw; max-height:94vh; width:auto; height:auto; background:#fff; border-radius:10px}
+.zoombox .info-svg{width:96vw; max-height:94vh; background:#fffdf8; border-radius:10px; padding:10px}
+.zoombox .info-svg svg{width:100%; max-height:90vh}
+.zoombox .zclose{position:fixed; top:14px; right:18px; font:inherit; font-weight:700; border:0; border-radius:20px; padding:8px 18px; background:#fff; color:var(--wood); cursor:pointer}
+/* external (sign-in) videos and handouts */
+.vid.ext{margin:18px 0}
+.ext-play{display:flex; align-items:center; gap:16px; padding:16px 20px; background:#2f2a24; color:#fff8ec; border-radius:12px; text-decoration:none; max-width:760px; box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.ext-play:hover,.ext-play:focus{background:#4a3b2d; outline:3px solid var(--action)}
+.ext-icon{flex:0 0 56px; height:56px; border-radius:50%; background:var(--action); display:grid; place-items:center; font-size:26px; padding-left:4px}
+.ext-play b{display:block; font-size:1.05em}
+.ext-play small{display:block; opacity:.85; margin-top:3px; font-size:.82em}
+.docs{background:#fbf7ef; border:1px solid #e3d6bf; border-left:6px solid var(--wood); border-radius:10px; padding:12px 20px; margin:16px 0}
+.docs-title{margin:0 0 6px}
+.docs ul{margin:0; padding-left:22px}
+.docs li{margin:6px 0}
+section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events:none}
+.t-demo .t-sub{margin:8px 0 2px; font-weight:700; color:#7a4a1e}
+.t-demo ul,.t-links ul{margin:2px 0 6px; padding-left:20px}
+.t-note{color:#666; font-size:.9em}
+</style>
+</head>
+<body data-np="10">
+<main>
+<header class="banner first" id="top">
+  <div class="banner-inner">
+    <p class="kicker">CHCAGE013 Work effectively in aged care · Lesson 4</p>
+    <h1>Keeping people safe</h1>
+    <p class="sub">Elder abuse: who is at risk, the signs, and what you do. Then the rules for restrictive practices.</p>
+  </div>
+  
+</header>
+<nav class="lessonbar" aria-label="Lessons in this unit"><a href="0-index.html">&#8962; Lessons</a><a href="1-aged-care-in-australia.html">1 Aged care in Australia</a><a href="2-the-person-at-the-centre.html">2 The person at the centre</a><a href="3-laws-standards-and-duties.html">3 Laws and standards</a><a href="4-keeping-people-safe.html" class="on" aria-current="page">4 Keeping people safe</a><a href="5-your-role-and-the-team.html">5 Your role and the team</a><a href="6-safe-work-and-self-care.html">6 Safe work and self-care</a><a href="7-marys-simulated-shift.html">7 Mary's simulated shift</a><a href="0-index.html#glossary">Glossary</a></nav>
+<div class="wrap">
+  <nav id="index" aria-label="Index"><h2>In this lesson</h2><ul><li><a href="#s1"><span class="num">1</span> What is elder abuse?</a></li><li><a href="#s2"><span class="num">2</span> Who is at greater risk?</a></li><li><a href="#s3"><span class="num">3</span> Signs of abuse (1): financial, physical, psychological</a></li><li><a href="#s4"><span class="num">4</span> Signs of abuse (2): sexual, neglect, systems</a></li><li><a href="#s5"><span class="num">5</span> What you do if you suspect abuse</a></li><li><a href="#s6"><span class="num">6</span> SIRS and the IMS</a></li><li><a href="#s7"><span class="num">7</span> Restrictive practices: the 5 types</a></li><li><a href="#s8"><span class="num">8</span> The rules for using a restrictive practice</a></li></ul></nav>
+  <p class="opening">This lesson is about <b>protecting older people from harm</b>. Some topics are hard to talk about. If something in this lesson upsets you, talk to your teacher. You will learn how to <b>recognise abuse</b>, what to <b>do</b> about it, and the strict <b>rules for restrictive practices</b>. On Wednesday you will use this in <b>Mary's simulated shift</b>.</p>
+  
+<section class="slide" id="s1" data-ref="NP10 S1">
+  <h2 class="topic"><span class="num">1</span> What is elder abuse? <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ17%7C10fab87c-0d9b-469d-a191-b66598a9b03e%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro"><b><a class="term" href="0-index.html#g-elder-abuse" title="See the glossary">Elder abuse</a></b> is when an older person is <b>mistreated</b> (harmed) by someone in a <b>relationship of trust</b>, for example a family member, friend or carer.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np10-s1.mp3" aria-label="Listen: What is elder abuse?"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s1p1"><span class="ref" title="Reference">NP10 S1 P1</span>In Australia, &quot;older&quot; usually means <b>65 and over</b>. For <b>Aboriginal and Torres Strait Islander people</b>, it is from <b>45 to 50</b> and over.</li><li id="s1p2"><span class="ref" title="Reference">NP10 S1 P2</span>Abuse can happen <b>anywhere</b>: in the person's own home, in the community or in an aged care home.</li><li id="s1p3"><span class="ref" title="Reference">NP10 S1 P3</span>The abuser can be <b>anyone</b>: family, friends, carers, health workers, or another resident.</li><li id="s1p4"><span class="ref" title="Reference">NP10 S1 P4</span>There are <b>6 types</b>: <b>financial</b>, <b>physical</b>, <b>psychological or emotional</b>, <b>sexual</b>, <b>neglect</b> and <b>systems</b> abuse.</li><li id="s1p5"><span class="ref" title="Reference">NP10 S1 P5</span>If you <b>notice the signs early</b>, help can start early, and the outcome for the person is <b>better</b>.</li></ol><figure><img src="pics/p1-p17-elder-hands.jpg" alt="An older person with their head down on their hands" style="max-width:360px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302670/View" target="_blank" rel="noopener">Elder abuse</a></div>
+  
+  <aside class="tnotes" data-slide="s1" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s2" data-ref="NP10 S2">
+  <h2 class="topic"><span class="num">2</span> Who is at greater risk? <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ17%7C10fab87c-0d9b-469d-a191-b66598a9b03e%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Abuse can happen to anyone. But in some <b>situations</b> the risk of abuse is <b>higher</b>. Often it is because the person <b>depends on others</b>, or the carer is <b>stressed</b>.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np10-s2.mp3" aria-label="Listen: Who is at greater risk?"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s2p1"><span class="ref" title="Reference">NP10 S2 P1</span>The person lives with a <b>disability</b>.</li><li id="s2p2"><span class="ref" title="Reference">NP10 S2 P2</span>The person <b>depends on others</b> for daily care.</li><li id="s2p3"><span class="ref" title="Reference">NP10 S2 P3</span>The person lives with <b>dementia</b> or another <b>cognitive impairment</b> (problems with memory and thinking).</li><li id="s2p4"><span class="ref" title="Reference">NP10 S2 P4</span><b>Poor quality relationships</b>, or a <b>history of family violence, abuse or conflict</b>.</li><li id="s2p5"><span class="ref" title="Reference">NP10 S2 P5</span><b>Low social support</b> or <b>social isolation</b>: the person sees very few people.</li><li id="s2p6"><span class="ref" title="Reference">NP10 S2 P6</span><b>Low income</b> or <b>poverty</b>.</li><li id="s2p7"><span class="ref" title="Reference">NP10 S2 P7</span><b>Poor physical health</b>, or mental health problems such as <b>depression</b>.</li><li id="s2p8"><span class="ref" title="Reference">NP10 S2 P8</span><b>Alienation from the community</b>: the person feels cut off and does not belong.</li><li id="s2p9"><span class="ref" title="Reference">NP10 S2 P9</span>In aged care homes: <b>resident-to-resident abuse</b>.</li><li id="s2p10"><span class="ref" title="Reference">NP10 S2 P10</span><b>Unregulated restrictive practices</b>: restrictions used without following the rules (see slide 7).</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="watch-out"><b>Watch out</b> This is about <b>what makes a person more vulnerable</b> (easier to harm), for example dementia or isolation. It is not about who the abuser is.</div>
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302670/View" target="_blank" rel="noopener">Elder abuse</a></div>
+  
+  <aside class="tnotes" data-slide="s2" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s3" data-ref="NP10 S3">
+  <h2 class="topic"><span class="num">3</span> Signs of abuse (1): financial, physical, psychological <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ18%7Cc6f16d7c-2185-4bb0-81ea-1fc842454ded%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">A <b>sign</b> is something you see or hear that tells you something may be wrong. One sign alone does not prove abuse. But you must <b>report</b> what you notice. Flip the cards.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np10-s3.mp3" aria-label="Listen: Signs of abuse (1): financial, physical, psychological"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  
+  
+  
+  
+  <div class="stack" aria-label="Signs of abuse (1): financial, physical, psychological cards" data-playall="1"><article class="card" id="s3c1" data-ref="NP10 S3 C1">
+      <h3>Financial abuse</h3>
+      
+      <p>Someone misuses or takes the person's money or belongings.</p>
+      <ul><li>The person <b>cannot get to their own money</b> or bank account.</li><li><b>Strange withdrawals</b> from their account.</li><li><b>Not enough money</b> for normal things like food or bills.</li><li><b>Valuables or belongings go missing</b>.</li><li><b>Receipts for unusual purchases</b>.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np10-s3-c1.mp3" aria-label="Listen: Financial abuse"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s3c2" data-ref="NP10 S3 C2">
+      <h3>Physical abuse</h3>
+      
+      <p>Someone hurts the person's body.</p>
+      <ul><li><b>Bruises, swelling, cuts or burns</b> that nobody can explain, including <b>cigarette burns</b>.</li><li><b>Broken bones</b> or <b>dislocations</b> that nobody can explain.</li><li><b>Rope marks</b> on any part of the body.</li><li>Injuries to the <b>teeth, eyes or ears</b>.</li><li><b>Bite marks</b>.</li><li>The person seems <b>afraid of a certain person</b>.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np10-s3-c2.mp3" aria-label="Listen: Physical abuse"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s3c3" data-ref="NP10 S3 C3">
+      <h3>Psychological or emotional abuse</h3>
+      
+      <p>Someone hurts the person with words or behaviour: threats, put-downs, ignoring them.</p>
+      <ul><li><b>Anxiety attacks</b>.</li><li><b>Self-harm</b>.</li><li><b>Challenging behaviours</b>.</li><li>Being <b>very compliant</b> (always agreeing, doing anything they are told).</li><li>Saying they feel <b>worthless</b>, <b>low self-esteem</b>.</li><li><b>Depression</b>, <b>withdrawn</b> from people.</li><li><b>Fear of a certain person</b>.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np10-s3-c3.mp3" aria-label="Listen: Psychological or emotional abuse"><span class="ico">&#9654;</span> Listen</button></div>
+    </article></div>
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s3-1" data-activity='{"type":"sort","title":"Which type of abuse?","instructions":"Sort each sign into the type of abuse it most likely shows.","buckets":["Financial","Physical","Psychological or emotional"],"items":[{"text":"Mrs Lam has no money left for groceries after pension day.","bucket":"Financial"},{"text":"Mr Kerr&#39;s watch and wedding ring are missing.","bucket":"Financial"},{"text":"A bruise on Mrs Hill&#39;s upper arm that nobody can explain.","bucket":"Physical"},{"text":"Small round burn marks on Mr Dean&#39;s hand.","bucket":"Physical"},{"text":"Mrs Patel keeps saying she is useless and a nuisance.","bucket":"Psychological or emotional"},{"text":"Mr Ford has become withdrawn and has anxiety attacks.","bucket":"Psychological or emotional"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Which type of abuse?</b></div>
+    <p class="act-instr">Sort each sign into the type of abuse it most likely shows.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302670/View" target="_blank" rel="noopener">Elder abuse</a></div>
+  
+  <aside class="tnotes" data-slide="s3" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s4" data-ref="NP10 S4">
+  <h2 class="topic"><span class="num">4</span> Signs of abuse (2): sexual, neglect, systems <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ18%7Cc6f16d7c-2185-4bb0-81ea-1fc842454ded%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Three more types. <b>Systems abuse</b> is when the <b>organisation or system</b> fails the person, not one person.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np10-s4.mp3" aria-label="Listen: Signs of abuse (2): sexual, neglect, systems"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  
+  
+  
+  
+  <div class="stack" aria-label="Signs of abuse (2): sexual, neglect, systems cards" data-playall="1"><article class="card" id="s4c1" data-ref="NP10 S4 C1">
+      <h3>Sexual abuse</h3>
+      
+      <p>Any sexual act or contact the person did not agree to, or could not agree to.</p>
+      <ul><li>The person <b>tells you</b> about it, directly or by hints.</li><li><b>Difficulty sitting or walking</b>.</li><li><b>Bruising, bleeding or discharge</b> in the genital area or inner thighs.</li><li><b>Blood stains</b> on underwear or bed linen.</li><li>A <b>sexually transmitted infection</b>.</li><li><b>Disturbed sleep</b>, <b>panic attacks</b>.</li><li><b>Refuses to go</b> to usual places, for example respite care.</li><li><b>Fear of a certain person</b>.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np10-s4-c1.mp3" aria-label="Listen: Sexual abuse"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s4c2" data-ref="NP10 S4 C2">
+      <h3>Neglect</h3>
+      
+      <p>The person does not get the care they need.</p>
+      <ul><li><b>Unwashed body</b>, <b>bad teeth</b>, <b>body odour</b>.</li><li>Always wearing the <b>same clothes</b>.</li><li><b>Wrong clothes for the weather</b>.</li><li>Always eating <b>poor quality food</b>.</li><li><b>No chance to see other people</b>.</li><li><b>Missed appointments</b>, <b>medicines not taken</b> as prescribed.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np10-s4-c2.mp3" aria-label="Listen: Neglect"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s4c3" data-ref="NP10 S4 C3">
+      <h3>Systems abuse</h3>
+      
+      <p>The organisation or the system fails the person.</p>
+      <ul><li><b>No suitable individual program</b> or plan made for the person.</li><li><b>No staff of the same gender</b> to help with personal care when the person needs it.</li><li>The person <b>refuses some support</b> because they are <b>not comfortable</b> with the staff sent.</li><li>The organisation is <b>slow to respond</b> to the person's concerns.</li></ul>
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np10-s4-c3.mp3" aria-label="Listen: Systems abuse"><span class="ico">&#9654;</span> Listen</button></div>
+    </article></div>
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s4-1" data-activity='{"type":"sort","title":"Which type of abuse?","instructions":"Sort each sign into the type of abuse it most likely shows.","buckets":["Sexual","Neglect","Systems"],"items":[{"text":"Mrs Ross has trouble sitting and there is blood on her sheets.","bucket":"Sexual"},{"text":"Mr Ahmed suddenly refuses to go to respite and has panic attacks.","bucket":"Sexual"},{"text":"Mr Bell wears the same dirty clothes all week and smells.","bucket":"Neglect"},{"text":"Mrs Lo has missed her doctor&#39;s appointments and her tablets are still in the pack.","bucket":"Neglect"},{"text":"Mrs Wong asked for a female carer for showers, but the service keeps sending men.","bucket":"Systems"},{"text":"Mr Grant complained three weeks ago and nobody has replied.","bucket":"Systems"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Which type of abuse?</b></div>
+    <p class="act-instr">Sort each sign into the type of abuse it most likely shows.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302670/View" target="_blank" rel="noopener">Elder abuse</a></div>
+  
+  <aside class="tnotes" data-slide="s4" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s5" data-ref="NP10 S5">
+  <h2 class="topic"><span class="num">5</span> What you do if you suspect abuse <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ17%7C10fab87c-0d9b-469d-a191-b66598a9b03e%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Follow your workplace's <b>Incident Management System (IMS)</b>. The steps are:</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np10-s5.mp3" aria-label="Listen: What you do if you suspect abuse"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s5p1"><span class="ref" title="Reference">NP10 S5 P1</span><b>Make sure the person is safe right now.</b> If they are in <b>danger right now</b>, call the <b>police (000)</b>.</li><li id="s5p2"><span class="ref" title="Reference">NP10 S5 P2</span><b>Report to your supervisor straight away.</b></li><li id="s5p3"><span class="ref" title="Reference">NP10 S5 P3</span><b>Write down (document)</b> what you <b>saw and heard</b>: the facts, the date and time, and the person's <b>own words</b>.</li><li id="s5p4"><span class="ref" title="Reference">NP10 S5 P4</span><b>Keep it private</b>: only talk to the people who need to know (<b>privacy and confidentiality</b>).</li><li id="s5p5"><span class="ref" title="Reference">NP10 S5 P5</span>Do <b>not</b> promise to keep it a secret. Explain kindly that you must pass it on to keep the person safe.</li><li id="s5p6"><span class="ref" title="Reference">NP10 S5 P6</span>Do <b>not</b> investigate it yourself, and do not confront the person you think is the abuser. Your supervisor follows the process from here.</li></ol>
+  <figure class="infopic"><div class="info-svg" tabindex="0" role="button" aria-label="Make the picture bigger"><svg viewBox="0 0 1200 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four steps if you suspect abuse: keep them safe, tell your supervisor, write it down, keep it private" style="width:100%;height:auto;max-height:80vh">
+  <text x="600" y="52" font-size="38" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">If you suspect abuse: follow the IMS</text>
+  <rect x="30" y="90" width="270" height="360" rx="22" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><circle cx="165" cy="150" r="34" fill="#6b4a33"/><text x="165" y="163" font-size="36" text-anchor="middle" font-weight="700" fill="#fff" font-family="Segoe UI, Arial, sans-serif">1</text><g transform="translate(165,265)"><g transform="translate(0,10) scale(1.3)"><circle cx="0" cy="-30" r="24" fill="#f1d3b3" stroke="#6b4a33" stroke-width="3"/><path d="M-22 -40 q22 -26 44 0" fill="#ddd" stroke="#6b4a33" stroke-width="2"/><path d="M-40 40 q0 -46 40 -46 q40 0 40 46 Z" fill="#a8542c" stroke="#6b4a33" stroke-width="3"/><circle cx="-8" cy="-30" r="3" fill="#2b2420"/><circle cx="8" cy="-30" r="3" fill="#2b2420"/><path d="M-8 -18 q8 6 16 0" stroke="#2b2420" stroke-width="2.5" fill="none"/></g></g><text x="165" y="375" font-size="28" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Keep them safe</text><text x="165" y="415" font-size="21" text-anchor="middle" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Danger now? Call 000</text>
+  <rect x="325" y="90" width="270" height="360" rx="22" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><circle cx="460" cy="150" r="34" fill="#6b4a33"/><text x="460" y="163" font-size="36" text-anchor="middle" font-weight="700" fill="#fff" font-family="Segoe UI, Arial, sans-serif">2</text><g transform="translate(460,265)"><rect x="-50" y="-40" width="100" height="62" rx="16" fill="#e9efe2" stroke="#5f7a5a" stroke-width="4"/><path d="M-20 22 l-12 22 l30 -22" fill="#e9efe2" stroke="#5f7a5a" stroke-width="4"/><line x1="-30" y1="-18" x2="30" y2="-18" stroke="#5f7a5a" stroke-width="5"/><line x1="-30" y1="0" x2="16" y2="0" stroke="#5f7a5a" stroke-width="5"/></g><text x="460" y="375" font-size="28" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Tell your supervisor</text><text x="460" y="415" font-size="21" text-anchor="middle" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Straight away</text>
+  <rect x="620" y="90" width="270" height="360" rx="22" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><circle cx="755" cy="150" r="34" fill="#6b4a33"/><text x="755" y="163" font-size="36" text-anchor="middle" font-weight="700" fill="#fff" font-family="Segoe UI, Arial, sans-serif">3</text><g transform="translate(755,265)"><rect x="-40" y="-50" width="80" height="100" rx="6" fill="#fff" stroke="#6b4a33" stroke-width="4"/><line x1="-26" y1="-28" x2="26" y2="-28" stroke="#d8c9b2" stroke-width="4"/><line x1="-26" y1="-10" x2="26" y2="-10" stroke="#d8c9b2" stroke-width="4"/><line x1="-26" y1="8" x2="26" y2="8" stroke="#d8c9b2" stroke-width="4"/><line x1="-26" y1="26" x2="26" y2="26" stroke="#d8c9b2" stroke-width="4"/><path d="M30 30 l26 -46 l10 6 l-26 46 Z" fill="#c9893f" stroke="#6b4a33" stroke-width="2"/></g><text x="755" y="375" font-size="28" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Write it down</text><text x="755" y="415" font-size="21" text-anchor="middle" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Facts, time, their words</text>
+  <rect x="915" y="90" width="270" height="360" rx="22" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><circle cx="1050" cy="150" r="34" fill="#6b4a33"/><text x="1050" y="163" font-size="36" text-anchor="middle" font-weight="700" fill="#fff" font-family="Segoe UI, Arial, sans-serif">4</text><g transform="translate(1050,265)"><rect x="-48" y="-30" width="96" height="70" rx="8" fill="#c9893f" stroke="#6b4a33" stroke-width="4"/><path d="M-26 -30 v-18 a26 26 0 0 1 52 0 v18" stroke="#6b4a33" stroke-width="7" fill="none"/><circle cx="0" cy="2" r="9" fill="#6b4a33"/></g><text x="1050" y="375" font-size="28" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Keep it private</text><text x="1050" y="415" font-size="21" text-anchor="middle" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Only who needs to know</text>
+</svg></div><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  
+  
+  
+  
+  
+  
+  
+  <div class="watch-out"><b>Watch out</b> In your job you <b>report to your supervisor</b> and follow the IMS. You do <b>not</b> go straight to the Ombudsman. You only call the police yourself if there is <b>danger right now</b>.</div>
+  <div class="activity" id="act-s5-1" data-activity='{"type":"order","title":"Put the steps in order","instructions":"Use the arrows or drag the steps into the right order.","items":["Make sure the person is safe right now","Report to your supervisor straight away","Write down what you saw and heard","Keep the information private"]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Put the steps in order</b></div>
+    <p class="act-instr">Use the arrows or drag the steps into the right order.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302670/View" target="_blank" rel="noopener">Elder abuse</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302671/View" target="_blank" rel="noopener">Serious Incident Response Scheme (SIRS)</a></div>
+  
+  <aside class="tnotes" data-slide="s5" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s6" data-ref="NP10 S6">
+  <h2 class="topic"><span class="num">6</span> SIRS and the IMS <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ24%7C13195175-cb3f-4b7a-ba41-ac70e5b60791%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Two more short forms. Remember: <b>full words first</b>, then <b>what it means</b>.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np10-s6.mp3" aria-label="Listen: SIRS and the IMS"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s6p1"><span class="ref" title="Reference">NP10 S6 P1</span><b>SIRS: Serious Incident Response Scheme.</b> A scheme run by the <b>Aged Care Quality and Safety Commission</b> to reduce <b>abuse and neglect</b> of older people in government-funded aged care.</li><li id="s6p2"><span class="ref" title="Reference">NP10 S6 P2</span>SIRS started in <b>residential care on 1 April 2021</b>, and in <b>home care on 1 December 2022</b>.</li><li id="s6p3"><span class="ref" title="Reference">NP10 S6 P3</span>Under SIRS, providers must <b>report serious incidents</b> (for example abuse) <b>to the Commission</b> within set time limits.</li><li id="s6p4"><span class="ref" title="Reference">NP10 S6 P4</span><b>IMS: Incident Management System.</b> The system <b>each workplace</b> uses to <b>report and manage incidents</b>, for example suspected abuse, falls or medication errors.</li><li id="s6p5"><span class="ref" title="Reference">NP10 S6 P5</span>A good IMS helps the workplace <b>find risks</b>, <b>fix problems</b>, <b>train staff</b> and <b>stop it happening again</b>. Every provider <b>must</b> have one.</li></ol>
+  
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Aged Care Quality and Safety Commission: What is the Serious Incident Response Scheme?</p><div class="video" data-youtube="dFrDLc4N-DE" data-title="Aged Care Quality and Safety Commission: What is the Serious Incident Response Scheme?"></div></div>
+  
+  
+  
+  
+  <div class="activity" id="act-s6-1" data-activity='{"type":"quiz","title":"SIRS or IMS?","instructions":"Choose the right answer.","questions":[{"q":"Which one is your workplace&#39;s own system for reporting and managing incidents?","options":["SIRS","IMS"],"answer":1,"why":"IMS: Incident Management System, used inside each workplace."},{"q":"Which one is run by the Aged Care Quality and Safety Commission?","options":["SIRS","IMS"],"answer":0,"why":"SIRS: Serious Incident Response Scheme, run by the Commission."},{"q":"What does SIRS stand for?","options":["Safety Incident Reporting System","Serious Incident Response Scheme","Support Incident Response Service"],"answer":1,"why":"Serious Incident Response Scheme."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>SIRS or IMS?</b></div>
+    <p class="act-instr">Choose the right answer.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302671/View" target="_blank" rel="noopener">Serious Incident Response Scheme (SIRS)</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302680/View" target="_blank" rel="noopener">Terminology</a></div>
+  
+  <aside class="tnotes" data-slide="s6" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s7" data-ref="NP10 S7">
+  <h2 class="topic"><span class="num">7</span> Restrictive practices: the 5 types <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ23%7Caeb30297-23ff-4c2b-96fd-19626142f57f%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">A <b><a class="term" href="0-index.html#g-restrictive-practice" title="See the glossary">restrictive practice</a></b> is anything that <b>limits a person's rights or their freedom to move</b>. There are <b>5 types</b>.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np10-s7.mp3" aria-label="Listen: Restrictive practices: the 5 types"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s7p1"><span class="ref" title="Reference">NP10 S7 P1</span><b>Chemical restraint</b>: using a <b>medicine</b> to change or control a person's <b>behaviour</b>.</li><li id="s7p2"><span class="ref" title="Reference">NP10 S7 P2</span><b>Environmental restraint</b>: <b>limiting where a person can go</b> or what they can reach, to control behaviour. <i>Example</i>: putting the person's walking frame out of reach.</li><li id="s7p3"><span class="ref" title="Reference">NP10 S7 P3</span><b>Mechanical restraint</b>: using a <b>device</b> to stop or limit movement, to control behaviour. <i>Examples</i>: bed rails, a lap belt in a wheelchair.</li><li id="s7p4"><span class="ref" title="Reference">NP10 S7 P4</span><b>Physical restraint</b>: using <b>physical force</b> (hands or body) to stop or limit movement. (Gently guiding a person away from danger is not restraint.)</li><li id="s7p5"><span class="ref" title="Reference">NP10 S7 P5</span><b>Seclusion</b>: keeping a person <b>alone in a room or space</b> they <b>cannot leave</b>.</li></ol><figure><img src="pics/p1-p25-bars.jpg" alt="Hands holding bars" style="max-width:320px"></figure></div>
+  
+  
+  
+  
+  <div class="vid-row"><div class="vid"><p class="vid-title"><b>Watch:</b> What are restrictive practices?</p><div class="video" data-youtube="etqRy42qW7A" data-title="What are restrictive practices?"></div></div><div class="vid"><p class="vid-title"><b>Watch:</b> Types of restraint</p><div class="video" data-youtube="JdPXhm173xs" data-title="Types of restraint"></div></div></div>
+  
+  
+  
+  
+  <div class="activity" id="act-s7-1" data-activity='{"type":"match","title":"Name the restraint","instructions":"Match each example to the type of restrictive practice.","pairs":[{"a":"A medicine is given to make a restless resident calm and sleepy.","b":"Chemical"},{"a":"Mrs Bo&#39;s walking frame is put across the room so she cannot get up.","b":"Environmental"},{"a":"A lap belt keeps Mr Ray in his wheelchair so he cannot wander.","b":"Mechanical"},{"a":"Two staff hold a resident&#39;s arms to stop him moving.","b":"Physical"},{"a":"A resident is locked alone in a quiet room.","b":"Seclusion"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Name the restraint</b></div>
+    <p class="act-instr">Match each example to the type of restrictive practice.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302674/View" target="_blank" rel="noopener">Types of restrictive practice</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302673/View" target="_blank" rel="noopener">Introduction: Restrictive practice</a></div>
+  
+  <aside class="tnotes" data-slide="s7" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s8" data-ref="NP10 S8">
+  <h2 class="topic"><span class="num">8</span> The rules for using a restrictive practice <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ23%7Caeb30297-23ff-4c2b-96fd-19626142f57f%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">There are <b>strict rules</b>. A restrictive practice is <b>never a shortcut</b>. Two rules are a <b>must</b> in every answer: the <b>behaviour support plan</b> and <b>monitoring</b>.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np10-s8.mp3" aria-label="Listen: The rules for using a restrictive practice"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s8p1"><span class="ref" title="Reference">NP10 S8 P1</span>It is used only as a <b>last resort</b>, after other ways to support the person's behaviour have been <b>tried and written down</b>.</li><li id="s8p2"><span class="ref" title="Reference">NP10 S8 P2</span><b>A behaviour support plan must be in place</b> whenever a restrictive practice is considered or used.</li><li id="s8p3"><span class="ref" title="Reference">NP10 S8 P3</span>There must be <b><a class="term" href="0-index.html#g-informed-consent" title="See the glossary">informed consent</a></b> from the person, or their <b>substitute decision maker</b>.</li><li id="s8p4"><span class="ref" title="Reference">NP10 S8 P4</span>An <b>approved health practitioner</b> who <b>knows the person well</b> must assess them as a <b>risk of harm to themselves or others</b>. All of this is <b>written down</b>.</li><li id="s8p5"><span class="ref" title="Reference">NP10 S8 P5</span><b>The person must be monitored</b> for any <b>bad effects</b> (side effects) and for their <b>general wellbeing</b>.</li><li id="s8p6"><span class="ref" title="Reference">NP10 S8 P6</span><b>How well it works must be monitored</b> (its effectiveness).</li><li id="s8p7"><span class="ref" title="Reference">NP10 S8 P7</span>It must be the <b>least restrictive</b> option, for the <b>shortest time</b> possible.</li><li id="s8p8"><span class="ref" title="Reference">NP10 S8 P8</span>For <b>chemical restraint</b>: a <b>medical practitioner</b> or <b>nurse practitioner</b> assesses the person and <b>prescribes</b> the medicine, and it is written in the <b>care plan</b>.</li></ol>
+  <figure class="infopic"><div class="info-svg" tabindex="0" role="button" aria-label="Make the picture bigger"><svg viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rules for using a restrictive practice: last resort, behaviour support plan (must), informed consent, assessed by a health practitioner, monitor the person (must), check it works, least restrictive for the shortest time, chemical restraint prescribed and in the care plan" style="width:100%;height:auto;max-height:80vh">
+  <text x="600" y="50" font-size="38" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Rules for using a restrictive practice</text>
+  <text x="600" y="88" font-size="24" text-anchor="middle" font-weight="700" fill="#a8542c" font-family="Segoe UI, Arial, sans-serif">A last resort, never a shortcut. Rules 2 and 5 must always be in your answer.</text>
+  <g><rect x="30" y="120" width="560" height="112" rx="22" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><circle cx="82" cy="176" r="32" fill="#6b4a33"/><text x="82" y="188" font-size="32" text-anchor="middle" font-weight="700" fill="#fff" font-family="Segoe UI, Arial, sans-serif">1</text><g transform="translate(158,176) scale(.85)"><path d="M0 -30 L30 22 H-30 Z" fill="#c9893f" stroke="#6b4a33" stroke-width="3"/><text x="0" y="16" font-size="30" text-anchor="middle" font-weight="700" fill="#2b2420">!</text></g><text x="202" y="168" font-size="26" text-anchor="start" font-weight="700" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Last resort only</text><text x="202" y="204" font-size="22" text-anchor="start" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Other ways tried first, written down</text></g>
+  <g><rect x="30" y="250" width="560" height="112" rx="22" fill="#fdf0dc" stroke="#d8c9b2" stroke-width="3"/><rect x="30" y="250" width="560" height="112" rx="22" fill="none" stroke="#a8542c" stroke-width="4"/><circle cx="82" cy="306" r="32" fill="#a8542c"/><text x="82" y="318" font-size="32" text-anchor="middle" font-weight="700" fill="#fff" font-family="Segoe UI, Arial, sans-serif">2</text><g transform="translate(158,306) scale(.85)"><rect x="-24" y="-30" width="48" height="60" rx="5" fill="#fff" stroke="#6b4a33" stroke-width="3"/><rect x="-10" y="-36" width="20" height="10" rx="3" fill="#6b4a33"/><path d="M-12 -6 l6 6 l14 -14 M-12 14 h24" stroke="#5f7a5a" stroke-width="4" fill="none"/></g><text x="202" y="298" font-size="26" text-anchor="start" font-weight="700" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Behaviour support plan</text><text x="202" y="334" font-size="22" text-anchor="start" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">In place before it is used</text><rect x="430" y="236" width="96" height="30" rx="15" fill="#a8542c"/><text x="478" y="258" font-size="18" text-anchor="middle" font-weight="700" fill="#fff" font-family="Segoe UI, Arial, sans-serif">MUST</text></g>
+  <g><rect x="30" y="380" width="560" height="112" rx="22" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><circle cx="82" cy="436" r="32" fill="#6b4a33"/><text x="82" y="448" font-size="32" text-anchor="middle" font-weight="700" fill="#fff" font-family="Segoe UI, Arial, sans-serif">3</text><g transform="translate(158,436) scale(.85)"><path d="M-26 6 l14 14 l38 -38" stroke="#5f7a5a" stroke-width="9" fill="none" stroke-linecap="round"/></g><text x="202" y="428" font-size="26" text-anchor="start" font-weight="700" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Informed consent</text><text x="202" y="464" font-size="22" text-anchor="start" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">From the person or decision maker</text></g>
+  <g><rect x="30" y="510" width="560" height="112" rx="22" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><circle cx="82" cy="566" r="32" fill="#6b4a33"/><text x="82" y="578" font-size="32" text-anchor="middle" font-weight="700" fill="#fff" font-family="Segoe UI, Arial, sans-serif">4</text><g transform="translate(158,566) scale(.85)"><circle cx="0" cy="-14" r="13" fill="#f1d3b3" stroke="#6b4a33" stroke-width="3"/><path d="M-24 28 q0 -26 24 -26 q24 0 24 26 Z" fill="#fff" stroke="#6b4a33" stroke-width="3"/><path d="M-6 4 v14 a6 6 0 0 0 12 0" stroke="#a8542c" stroke-width="3" fill="none"/></g><text x="202" y="558" font-size="26" text-anchor="start" font-weight="700" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Health practitioner assesses</text><text x="202" y="594" font-size="22" text-anchor="start" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Risk of harm, all written down</text></g>
+  <g><rect x="610" y="120" width="560" height="112" rx="22" fill="#fdf0dc" stroke="#d8c9b2" stroke-width="3"/><rect x="610" y="120" width="560" height="112" rx="22" fill="none" stroke="#a8542c" stroke-width="4"/><circle cx="662" cy="176" r="32" fill="#a8542c"/><text x="662" y="188" font-size="32" text-anchor="middle" font-weight="700" fill="#fff" font-family="Segoe UI, Arial, sans-serif">5</text><g transform="translate(738,176) scale(.85)"><circle r="22" fill="#fff" stroke="#6b4a33" stroke-width="3"/><circle r="9" fill="#6b4a33"/><path d="M-34 0 q34 -30 68 0 q-34 30 -68 0" fill="none" stroke="#6b4a33" stroke-width="3"/></g><text x="782" y="168" font-size="26" text-anchor="start" font-weight="700" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Monitor the person</text><text x="782" y="204" font-size="22" text-anchor="start" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Side effects and wellbeing</text><rect x="1010" y="106" width="96" height="30" rx="15" fill="#a8542c"/><text x="1058" y="128" font-size="18" text-anchor="middle" font-weight="700" fill="#fff" font-family="Segoe UI, Arial, sans-serif">MUST</text></g>
+  <g><rect x="610" y="250" width="560" height="112" rx="22" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><circle cx="662" cy="306" r="32" fill="#6b4a33"/><text x="662" y="318" font-size="32" text-anchor="middle" font-weight="700" fill="#fff" font-family="Segoe UI, Arial, sans-serif">6</text><g transform="translate(738,306) scale(.85)"><rect x="-26" y="-6" width="12" height="28" fill="#c9893f"/><rect x="-6" y="-18" width="12" height="40" fill="#a8542c"/><rect x="14" y="-30" width="12" height="52" fill="#5f7a5a"/></g><text x="782" y="298" font-size="26" text-anchor="start" font-weight="700" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Check that it works</text><text x="782" y="334" font-size="22" text-anchor="start" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Monitor how well it works</text></g>
+  <g><rect x="610" y="380" width="560" height="112" rx="22" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><circle cx="662" cy="436" r="32" fill="#6b4a33"/><text x="662" y="448" font-size="32" text-anchor="middle" font-weight="700" fill="#fff" font-family="Segoe UI, Arial, sans-serif">7</text><g transform="translate(738,436) scale(.85)"><circle r="26" fill="#fff" stroke="#6b4a33" stroke-width="3"/><path d="M0 0 v-16 M0 0 l12 6" stroke="#6b4a33" stroke-width="4"/></g><text x="782" y="428" font-size="26" text-anchor="start" font-weight="700" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Least restrictive</text><text x="782" y="464" font-size="22" text-anchor="start" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">For the shortest time possible</text></g>
+  <g><rect x="610" y="510" width="560" height="112" rx="22" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><circle cx="662" cy="566" r="32" fill="#6b4a33"/><text x="662" y="578" font-size="32" text-anchor="middle" font-weight="700" fill="#fff" font-family="Segoe UI, Arial, sans-serif">8</text><g transform="translate(738,566) scale(.85)"><rect x="-28" y="-12" width="56" height="24" rx="12" fill="#dfe9ef" stroke="#6b4a33" stroke-width="3"/><path d="M0 -12 v24" stroke="#6b4a33" stroke-width="3"/><rect x="-28" y="-12" width="28" height="24" rx="12" fill="#a8542c"/></g><text x="782" y="558" font-size="26" text-anchor="start" font-weight="700" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Chemical: prescribed</text><text x="782" y="594" font-size="22" text-anchor="start" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">By a doctor, in the care plan</text></g>
+</svg></div><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  <p>Using a restrictive practice <b>without</b> following these rules is a <b>reportable incident</b> under SIRS. As a support worker, <b>follow the behaviour support plan</b>, <b>never</b> use a restriction that is not in the plan, and <b>report</b> anything you are worried about.</p>
+  
+  
+  
+  <div class="vid local"><p class="vid-title"><b>Watch:</b> Restrictive Practices: Max</p><video controls preload="metadata" playsinline src="media/restrictive-practices-max.mp4"></video></div>
+  
+  
+  
+  <div class="activity" id="act-s8-1" data-activity='{"type":"quiz","title":"Rule check","instructions":"Choose the best answer.","questions":[{"q":"Which TWO rules must always be in your answer?","options":["Shortest time and least restrictive","Behaviour support plan and monitoring","Consent and last resort"],"answer":1,"why":"The behaviour support plan and monitoring must be two of your five rules."},{"q":"A resident is restless. A worker wants to use a lap belt so she can finish her other jobs. Is this OK?","options":["Yes, if it is quick","No, it is not a last resort and not in a behaviour support plan"],"answer":1,"why":"A restrictive practice is never a shortcut. It must be a last resort and in the behaviour support plan."},{"q":"Who prescribes a chemical restraint?","options":["The support worker","A medical practitioner or nurse practitioner","The family"],"answer":1,"why":"Only a medical practitioner or nurse practitioner, and it must be in the care plan."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Rule check</b></div>
+    <p class="act-instr">Choose the best answer.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302675/View" target="_blank" rel="noopener">Parameters guiding the use of restrictive practice</a></div>
+  <div class="finale" data-finale><div class="fin-side left"><div class="fin-mascot"><svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rusty the Rush Clock">
+  <g stroke="#6b4a33" stroke-linecap="round" fill="none" stroke-width="3" opacity=".55"><path d="M4 70h16M2 84h14M6 98h12"/></g>
+  <line x1="50" y1="128" x2="38" y2="152" stroke="#6b4a33" stroke-width="7" stroke-linecap="round"/>
+  <line x1="92" y1="128" x2="108" y2="148" stroke="#6b4a33" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="34" cy="154" rx="11" ry="5" fill="#3d2a1c"/><ellipse cx="112" cy="150" rx="11" ry="5" fill="#3d2a1c"/>
+  <path d="M30 30 a16 16 0 0 1 26 -8" stroke="#8a5a3a" stroke-width="5" fill="none"/>
+  <path d="M84 22 a16 16 0 0 1 26 8" stroke="#8a5a3a" stroke-width="5" fill="none"/>
+  <circle cx="34" cy="30" r="15" fill="#b5653a" stroke="#6b4a33" stroke-width="3"/>
+  <circle cx="106" cy="30" r="15" fill="#b5653a" stroke="#6b4a33" stroke-width="3"/>
+  <rect x="64" y="14" width="12" height="10" rx="3" fill="#6b4a33"/>
+  <circle cx="70" cy="82" r="52" fill="#c9893f" stroke="#6b4a33" stroke-width="5"/>
+  <circle cx="70" cy="82" r="41" fill="#fff8ec"/>
+  <g fill="#6b4a33"><circle cx="70" cy="46" r="2.5"/><circle cx="106" cy="82" r="2.5"/><circle cx="70" cy="118" r="2.5"/><circle cx="34" cy="82" r="2.5"/></g>
+  <path d="M52 64 l12 4 M88 64 l-12 4" stroke="#2b2420" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="58" cy="74" r="5" fill="#2b2420"/><circle cx="82" cy="74" r="5" fill="#2b2420"/>
+  <line x1="70" y1="84" x2="70" y2="58" stroke="#b5653a" stroke-width="4" stroke-linecap="round"/>
+  <line x1="70" y1="84" x2="90" y2="92" stroke="#b5653a" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="70" cy="84" r="4" fill="#6b4a33"/>
+  <path d="M56 104 q14 -9 28 0" stroke="#2b2420" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M112 54 q14 -6 20 4" stroke="#6b4a33" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M28 104 q-14 10 -20 2" stroke="#6b4a33" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg></div><div class="fin-bubble"><p>So I can't just lock the door and leave? ...Fine. Last resort. Got it.</p><button type="button" class="say" data-audio="audio/np10-s8-rusty.mp3" aria-label="Listen: Rusty the Rush Clock"><span class="ico">&#9654;</span> Listen</button></div><p class="fin-who">Rusty the Rush Clock</p></div><div class="fin-side right"><div class="fin-mascot"><svg viewBox="0 0 140 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daisy the Dignity Daisy">
+  <path d="M70 100 C68 125 72 145 70 166" stroke="#5f7a5a" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M70 132 C52 118 34 122 26 132 C40 140 58 140 70 132Z" fill="#7d9a6f" stroke="#4f6a4a" stroke-width="2"/>
+  <path d="M71 146 C88 132 106 134 114 144 C100 152 82 152 71 146Z" fill="#7d9a6f" stroke="#4f6a4a" stroke-width="2"/>
+  <g fill="#fffdf7" stroke="#d8c9b2" stroke-width="2">
+    <ellipse cx="70" cy="22" rx="13" ry="21"/><ellipse cx="70" cy="98" rx="13" ry="21" />
+    <ellipse cx="32" cy="60" rx="21" ry="13"/><ellipse cx="108" cy="60" rx="21" ry="13"/>
+    <ellipse cx="43" cy="33" rx="13" ry="21" transform="rotate(-45 43 33)"/><ellipse cx="97" cy="33" rx="13" ry="21" transform="rotate(45 97 33)"/>
+    <ellipse cx="43" cy="87" rx="13" ry="21" transform="rotate(45 43 87)"/><ellipse cx="97" cy="87" rx="13" ry="21" transform="rotate(-45 97 87)"/>
+  </g>
+  <circle cx="70" cy="60" r="27" fill="#f2b632" stroke="#c98a12" stroke-width="3"/>
+  <circle cx="60" cy="56" r="4" fill="#2b2420"/><circle cx="80" cy="56" r="4" fill="#2b2420"/>
+  <circle cx="61.5" cy="54.5" r="1.3" fill="#fff"/><circle cx="81.5" cy="54.5" r="1.3" fill="#fff"/>
+  <circle cx="54" cy="66" r="4" fill="#e8956b" opacity=".6"/><circle cx="86" cy="66" r="4" fill="#e8956b" opacity=".6"/>
+  <path d="M58 68 q12 11 24 0" stroke="#2b2420" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg></div><div class="fin-bubble"><p>Notice, keep them safe, report, write it down, keep it private. You can do this.</p><button type="button" class="say" data-audio="audio/np10-s8-daisy.mp3" aria-label="Listen: Daisy the Dignity Daisy"><span class="ico">&#9654;</span> Listen</button></div><p class="fin-who">Daisy the Dignity Daisy</p></div></div><p class="fin-after">Next lesson: your role at work, the team around you, and how to report and record.</p>
+  <aside class="tnotes" data-slide="s8" aria-label="Teacher notes"></aside>
+</section>
+  <footer class="foot">
+    <p>CHCAGE013 · Keeping people safe · Built from TAFE Queensland learning resources, 27 Oct 2026. References on this page are written NP10 S(slide) P(point), where NP10 is this page's slide number in Nearpod.</p>
+    <p>Picture credits: Pictures: Adrie Homan and Adobe Stock</p>
+    <p><a href="0-index.html">Lesson index and glossary</a> · <button type="button" class="tlink">Teacher</button></p>
+  </footer>
+</div>
+<a href="#index" class="home" title="Back to the index"><span aria-hidden="true">&#8679;</span> Home</a>
+<div class="tpill" hidden><span>Teacher view on</span><button type="button" class="tp-hide">Hide</button><button type="button" class="tp-out">Sign out</button></div>
+<div class="mascot rusty side-left" data-mascot="rusty" title="Rusty the Rush Clock" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rusty the Rush Clock">
+  <g stroke="#6b4a33" stroke-linecap="round" fill="none" stroke-width="3" opacity=".55"><path d="M4 70h16M2 84h14M6 98h12"/></g>
+  <line x1="50" y1="128" x2="38" y2="152" stroke="#6b4a33" stroke-width="7" stroke-linecap="round"/>
+  <line x1="92" y1="128" x2="108" y2="148" stroke="#6b4a33" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="34" cy="154" rx="11" ry="5" fill="#3d2a1c"/><ellipse cx="112" cy="150" rx="11" ry="5" fill="#3d2a1c"/>
+  <path d="M30 30 a16 16 0 0 1 26 -8" stroke="#8a5a3a" stroke-width="5" fill="none"/>
+  <path d="M84 22 a16 16 0 0 1 26 8" stroke="#8a5a3a" stroke-width="5" fill="none"/>
+  <circle cx="34" cy="30" r="15" fill="#b5653a" stroke="#6b4a33" stroke-width="3"/>
+  <circle cx="106" cy="30" r="15" fill="#b5653a" stroke="#6b4a33" stroke-width="3"/>
+  <rect x="64" y="14" width="12" height="10" rx="3" fill="#6b4a33"/>
+  <circle cx="70" cy="82" r="52" fill="#c9893f" stroke="#6b4a33" stroke-width="5"/>
+  <circle cx="70" cy="82" r="41" fill="#fff8ec"/>
+  <g fill="#6b4a33"><circle cx="70" cy="46" r="2.5"/><circle cx="106" cy="82" r="2.5"/><circle cx="70" cy="118" r="2.5"/><circle cx="34" cy="82" r="2.5"/></g>
+  <path d="M52 64 l12 4 M88 64 l-12 4" stroke="#2b2420" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="58" cy="74" r="5" fill="#2b2420"/><circle cx="82" cy="74" r="5" fill="#2b2420"/>
+  <line x1="70" y1="84" x2="70" y2="58" stroke="#b5653a" stroke-width="4" stroke-linecap="round"/>
+  <line x1="70" y1="84" x2="90" y2="92" stroke="#b5653a" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="70" cy="84" r="4" fill="#6b4a33"/>
+  <path d="M56 104 q14 -9 28 0" stroke="#2b2420" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M112 54 q14 -6 20 4" stroke="#6b4a33" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M28 104 q-14 10 -20 2" stroke="#6b4a33" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg></div><div class="mascot daisy side-right" data-mascot="daisy" title="Daisy the Dignity Daisy" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daisy the Dignity Daisy">
+  <path d="M70 100 C68 125 72 145 70 166" stroke="#5f7a5a" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M70 132 C52 118 34 122 26 132 C40 140 58 140 70 132Z" fill="#7d9a6f" stroke="#4f6a4a" stroke-width="2"/>
+  <path d="M71 146 C88 132 106 134 114 144 C100 152 82 152 71 146Z" fill="#7d9a6f" stroke="#4f6a4a" stroke-width="2"/>
+  <g fill="#fffdf7" stroke="#d8c9b2" stroke-width="2">
+    <ellipse cx="70" cy="22" rx="13" ry="21"/><ellipse cx="70" cy="98" rx="13" ry="21" />
+    <ellipse cx="32" cy="60" rx="21" ry="13"/><ellipse cx="108" cy="60" rx="21" ry="13"/>
+    <ellipse cx="43" cy="33" rx="13" ry="21" transform="rotate(-45 43 33)"/><ellipse cx="97" cy="33" rx="13" ry="21" transform="rotate(45 97 33)"/>
+    <ellipse cx="43" cy="87" rx="13" ry="21" transform="rotate(45 43 87)"/><ellipse cx="97" cy="87" rx="13" ry="21" transform="rotate(-45 97 87)"/>
+  </g>
+  <circle cx="70" cy="60" r="27" fill="#f2b632" stroke="#c98a12" stroke-width="3"/>
+  <circle cx="60" cy="56" r="4" fill="#2b2420"/><circle cx="80" cy="56" r="4" fill="#2b2420"/>
+  <circle cx="61.5" cy="54.5" r="1.3" fill="#fff"/><circle cx="81.5" cy="54.5" r="1.3" fill="#fff"/>
+  <circle cx="54" cy="66" r="4" fill="#e8956b" opacity=".6"/><circle cx="86" cy="66" r="4" fill="#e8956b" opacity=".6"/>
+  <path d="M58 68 q12 11 24 0" stroke="#2b2420" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg></div>
+</main>
+<div class="big" role="dialog" aria-modal="true" aria-label="Card in full screen">
+  <div class="bar"><span class="big-where"></span><button type="button" class="big-close">Close</button></div>
+  <div class="body"></div>
+  <div class="foot"><button type="button" class="big-back">Back</button><button type="button" class="next big-next">Next card</button></div>
+</div>
+<script>var TEACHER = {"salt":"Y3vXZnIiN5E35KGbAQ8TXA==","iv":"spSvkq5nz9Z3upLh","ct":"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"}; var ANNOUNCE = {"first":{"mascot":"rusty","voice":"William","pitch":1.1,"none":"Tick tock! Nobody got every activity right first time. Rushing wins again!","some":"Oh no! {who} got every activity right first time. Slowing down works. Who knew?"},"second":{"mascot":"daisy","voice":"Natasha","pitch":1.05,"none":"Keep going, everyone. Take your time and you will beat Rusty.","some":"Well done! {who} got all {n} right first time. Slow and kind wins, Rusty."}}; var MASCOT_LINES = {"rusty":{"lines":["A bruise? She probably bumped into something. Not my business.","I will just tie the lap belt on. It's quicker than walking with her.","Family matters are private. I will stay out of it.","I will call the police and the Ombudsman myself! ...Wait, what's the procedure?","Write it down? I will remember it."],"prefix":"rusty-l4-"},"daisy":{"lines":["If you see a sign of abuse, tell your supervisor straight away.","Write down exactly what you saw and heard. Facts, not opinions.","Abuse is often by someone the person trusts. Stay alert.","A restrictive practice is a last resort, never a shortcut.","Keep it private. Only talk to the people who need to know."],"prefix":"daisy-l4-"}};</script>
+<script>(function(){
+  var ANGLES = [-8, -5.5, -9, -4.5, -7, -6, -8.5, -4, -6.5];
+  var big = document.querySelector('.big'), bigBody = big.querySelector('.body'),
+      bigWhere = big.querySelector('.big-where'), active = null;
+
+  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ---------- */
+  (function(){
+    var pill = document.querySelector('.tpill'), tlink = document.querySelector('.tlink'), saved = null, on = '0';
+    var b64 = function(s){ var b = atob(s), a = new Uint8Array(b.length); for(var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; };
+    function decrypt(code){
+      if(!window.crypto || !crypto.subtle) return Promise.reject(new Error('nosubtle'));
+      var enc = new TextEncoder();
+      return crypto.subtle.importKey('raw', enc.encode(code), 'PBKDF2', false, ['deriveKey']).then(function(km){
+        return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(TEACHER.salt), iterations: 150000, hash: 'SHA-256' }, km, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      }).then(function(key){
+        return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(TEACHER.iv) }, key, b64(TEACHER.ct));
+      }).then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
+    }
+    function show(notes){
+      document.querySelectorAll('.tnotes').forEach(function(a){ a.innerHTML = notes[a.getAttribute('data-slide')] || ''; });
+      document.body.classList.add('teacher'); pill.hidden = false;
+      try{ localStorage.setItem('tv_on', '1'); }catch(e){}
+    }
+    function hide(){ document.body.classList.remove('teacher'); pill.hidden = true; try{ localStorage.setItem('tv_on', '0'); }catch(e){} }
+    function unlock(code, quiet){
+      return decrypt(code).then(function(notes){ saved = code; try{ localStorage.setItem('tv_code', code); }catch(e){} show(notes); }, function(err){
+        if(quiet) return;
+        alert(err.message === 'nosubtle' ? 'This browser cannot unlock the teacher view. Use Chrome or Edge.' : 'That code did not work.');
+      });
+    }
+    try{ saved = localStorage.getItem('tv_code'); on = localStorage.getItem('tv_on') || '0'; }catch(e){}
+    var q = new URLSearchParams(location.search);
+    if(q.get('t') === 'off'){ hide(); try{ localStorage.removeItem('tv_code'); }catch(e){} }
+    else if(q.has('t')) unlock(q.get('t'));
+    else if(saved && on === '1') unlock(saved, true);
+    if(tlink) tlink.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')){ hide(); return; }
+      if(saved){ unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); }); } else ask();
+      function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
+    });
+    pill.querySelector('.tp-hide').addEventListener('click', hide);
+    pill.querySelector('.tp-out').addEventListener('click', function(){ hide(); saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open')) hide(); });
+  })();
+
+    /* ---------- audio ---------- */
+  var player = new Audio(), current = null, queue = null;
+  function stopAudio(){ player.pause(); if(current){ current.classList.remove('playing'); current = null; } queue = null; }
+  function playBtn(btn, onEnd){
+    if(current === btn){ stopAudio(); return; }
+    stopAudio();
+    current = btn; btn.classList.add('playing');
+    player.src = btn.getAttribute('data-audio');
+    player.onended = function(){ btn.classList.remove('playing'); current = null; if(onEnd) onEnd(); };
+    player.onerror = function(){ btn.classList.remove('playing'); current = null; btn.title = 'Sound file not found yet'; };
+    player.play().catch(function(){});
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.say'); if(!b) return;
+    e.preventDefault(); e.stopPropagation();
+    var inBig = b.closest('.big');
+    if(inBig && active){ var realBtn = active.card().querySelector('.say'); if(realBtn) b = realBtn; }
+    playBtn(b);
+  });
+
+  /* ---------- mascots follow the scroll ---------- */
+  document.querySelectorAll('.mascot').forEach(function(g, gi){
+    var name = g.getAttribute('data-mascot'), bubble = g.querySelector('.gerry-bubble');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var lastSlide = null, timer = null, ml = MASCOT_LINES[name] || {}, lines = ml.lines || [], prefix = ml.prefix || (name + '-');
+    function place(){
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? window.scrollY / max : 0;
+      var top = 90 + (gi ? 1 - p : p) * (window.innerHeight - 300);
+      g.style.top = top + 'px';
+      var slides = document.querySelectorAll('section.slide'), cur = null;
+      for(var i = 0; i < slides.length; i++){ if(slides[i].getBoundingClientRect().top < window.innerHeight * 0.5) cur = slides[i]; }
+      if(cur !== lastSlide && lastSlide !== null && !reduce){ g.classList.remove('hop'); void g.offsetWidth; g.classList.add('hop'); }
+      lastSlide = cur;
+    }
+    window.addEventListener('scroll', function(){ if(!timer) timer = requestAnimationFrame(function(){ timer = null; place(); }); }, { passive: true });
+    window.addEventListener('resize', place);
+    place();
+    var n = 0;
+    g.addEventListener('click', function(){
+      if(!bubble.hidden){ bubble.hidden = true; return; }
+      var k = n++ % lines.length;
+      bubble.textContent = lines[k]; bubble.hidden = false;
+      stopAudio(); player.src = 'audio/' + prefix + (k + 1) + '.mp3'; player.onended = null; player.onerror = null; player.play().catch(function(){});
+      clearTimeout(bubble._t); bubble._t = setTimeout(function(){ bubble.hidden = true; }, 7000);
+    });
+  });
+
+  /* ---------- finale: big mascots walk in ---------- */
+  document.querySelectorAll('[data-finale]').forEach(function(f){
+    if(!('IntersectionObserver' in window)){ f.classList.add('in'); return; }
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ f.classList.add('in'); io.disconnect(); } }); }, { threshold: 0.35 });
+    io.observe(f);
+  });
+
+  /* ---------- videos ---------- */
+  document.querySelectorAll('.video').forEach(function(v){
+    var id = (v.getAttribute('data-youtube')||'').trim(), t = v.getAttribute('data-title')||'Video';
+    if(!id) return;
+    v.innerHTML = '<iframe title="'+t.replace(/"/g,'&quot;')+'" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>';
+    var w = document.createElement('p'); w.className = 'watch';
+    w.innerHTML = 'Video not playing? <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v='+encodeURIComponent(id)+'">Watch "'+t.replace(/</g,'&lt;')+'" on YouTube</a>';
+    v.parentNode.insertBefore(w, v.nextSibling);
+  });
+
+  /* ---------- click a part of a diagram to make it stand out ---------- */
+  document.querySelectorAll('.spot').forEach(function(sv){
+    var parts = sv.querySelectorAll('[data-spot]');
+    parts.forEach(function(g){
+      g.style.cursor = 'pointer';
+      g.addEventListener('click', function(e){
+        e.stopPropagation();
+        var on = g.classList.contains('lit');
+        parts.forEach(function(x){ x.classList.remove('lit'); });
+        sv.classList.toggle('spotting', !on);
+        if(!on) g.classList.add('lit');
+      });
+    });
+    sv.addEventListener('click', function(){ parts.forEach(function(x){ x.classList.remove('lit'); }); sv.classList.remove('spotting'); });
+  });
+
+  /* ---------- card stacks ---------- */
+  document.querySelectorAll('.stack').forEach(function(stack){
+    var cards = [].slice.call(stack.querySelectorAll('.card')), n = cards.length, i = 0, busy = false;
+    var deck = document.createElement('div'); deck.className = 'deck'; deck.tabIndex = 0;
+    deck.setAttribute('role','group');
+    deck.setAttribute('aria-label', (stack.getAttribute('aria-label')||'Cards') + '. Press the right arrow for the next card.');
+    var pile = document.createElement('div'); pile.className = 'pile'; pile.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
+    deck.appendChild(pile);
+    cards.forEach(function(c, k){
+      c.style.setProperty('--r', ANGLES[k % ANGLES.length] + 'deg');
+      if(k % 2) c.classList.add('shade');
+      if(c.textContent.replace(/\s+/g,' ').length > 520) c.classList.add('long');
+      var tag = document.createElement('span'); tag.className = 'count'; tag.textContent = 'Card ' + (k+1) + ' of ' + n;
+      c.insertBefore(tag, c.firstChild);
+      c.setAttribute('aria-hidden', 'true');
+      deck.appendChild(c);
+    });
+    if(stack.getAttribute('data-playall')){
+      var pa = document.createElement('div'); pa.className = 'playall';
+      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> Play all cards</button>';
+      stack.appendChild(pa);
+      pa.querySelector('button').addEventListener('click', function(ev){
+        ev.stopPropagation();
+        if(queue === stack){ stopAudio(); return; }
+        stopAudio(); queue = stack;
+        function step(){
+          if(queue !== stack) return;
+          var b = cards[i].querySelector('.say');
+          if(!b){ next(); return; }
+          playBtn(b, function(){ setTimeout(function(){ if(queue !== stack) return; if(i === n-1){ queue = null; return; } go(1); step(); }, 900); });
+        }
+        step();
+      }, true);
+    }
+    stack.appendChild(deck);
+
+    var controls = document.createElement('div'); controls.className = 'controls';
+    controls.innerHTML = '<button type="button" class="back">Back</button><span class="where" aria-live="polite"></span><button type="button" class="next">Next card</button><button type="button" class="full">Full screen</button>';
+    stack.appendChild(controls);
+    var hint = document.createElement('p'); hint.className = 'hint'; hint.textContent = 'Click the card to see the next card.';
+    stack.appendChild(hint);
+    var where = controls.querySelector('.where');
+
+    var heights = [];
+    function size(){
+      cards.forEach(function(c, k){ c.style.height = 'auto'; heights[k] = c.offsetHeight; c.style.height = ''; });
+      deck.style.height = heights[i] + 'px';
+    }
+    function show(){
+      cards.forEach(function(c, k){ c.classList.toggle('top', k === i); c.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      where.textContent = 'Card ' + (i+1) + ' of ' + n;
+      if(heights.length) deck.style.height = heights[i] + 'px';
+      if(active === api && big.classList.contains('open')) fill();
+    }
+    function go(step){
+      if(busy) return; busy = true;
+      var old = cards[i];
+      i = (i + step + n) % n;
+      var cls = step > 0 ? 'leave' : 'leave-back';
+      show();
+      old.classList.add(cls);
+      cards[i].classList.add('arrive');
+      setTimeout(function(){ old.classList.remove(cls); cards[i].classList.remove('arrive'); busy = false; }, 440);
+    }
+    function next(){ go(1); }
+    function fill(){
+      bigBody.innerHTML = cards[i].innerHTML;
+      bigWhere.textContent = 'Card ' + (i+1) + ' of ' + n;
+      bigBody.scrollTop = 0;
+    }
+    var api = { go: go, fill: fill, card: function(){ return cards[i]; } };
+
+    deck.addEventListener('click', function(e){ if(e.target.closest('a') || e.target.closest('.say')) return; go(1); });
+    deck.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); go(1); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
+    });
+    controls.querySelector('.next').addEventListener('click', function(){ go(1); });
+    controls.querySelector('.back').addEventListener('click', function(){ go(-1); });
+    controls.querySelector('.full').addEventListener('click', function(){
+      active = api; fill(); big.classList.add('open'); big.querySelector('.big-next').focus();
+    });
+
+    size(); show();
+    window.addEventListener('resize', size);
+    window.addEventListener('load', size);
+    stack.querySelectorAll('img').forEach(function(img){ img.addEventListener('load', size); });
+  });
+
+  function closeBig(){ big.classList.remove('open'); active = null; }
+  big.querySelector('.big-close').addEventListener('click', closeBig);
+  big.querySelector('.big-next').addEventListener('click', function(){ if(active) active.go(1); });
+  big.querySelector('.big-back').addEventListener('click', function(){ if(active) active.go(-1); });
+  document.addEventListener('keydown', function(e){
+    if(!big.classList.contains('open')) return;
+    if(e.key === 'Escape') closeBig();
+    if(e.key === 'ArrowRight' && active) active.go(1);
+    if(e.key === 'ArrowLeft' && active) active.go(-1);
+  });
+
+  /* ---------- activities ---------- */
+  function shuffle(a){ a = a.slice(); for(var i = a.length-1; i > 0; i--){ var j = Math.floor(Math.random()*(i+1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
+  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
+
+  var builders = {
+    /* chips into targets: used by match (one chip per target) and sort (many chips per bucket) */
+    match: function(root, a){ return buildChips(root, a.pairs.map(function(p){ return { text: p.a, target: p.b }; }), shuffle(a.pairs.map(function(p){ return p.b; })), a.labels || null, 1); },
+    sort: function(root, a){ return buildChips(root, a.items.map(function(it){ return { text: it.text, target: it.bucket }; }), a.buckets, null, 99); },
+    order: function(root, a){
+      var list = el('ol', 'order'); root.appendChild(list);
+      var start = a.start == null ? 1 : a.start;
+      function render(items){
+        list.innerHTML = '';
+        items.forEach(function(t, k){
+          var li = el('li'); li.draggable = true; li.setAttribute('data-text', t);
+          li.innerHTML = '<span class="o-n">' + (start + k) + '</span><span class="o-t">' + esc(t) + '</span><span class="o-btn"><button type="button" aria-label="Move up">&#9650;</button><button type="button" aria-label="Move down">&#9660;</button></span>';
+          list.appendChild(li);
+        });
+      }
+      function items(){ return [].map.call(list.children, function(li){ return li.getAttribute('data-text'); }); }
+      function renumber(){ [].forEach.call(list.children, function(li, k){ li.querySelector('.o-n').textContent = start + k; li.classList.remove('right','wrong'); }); }
+      render(shuffle(a.items));
+      list.addEventListener('click', function(e){
+        var b = e.target.closest('button'); if(!b) return;
+        var li = b.closest('li'); var up = b.getAttribute('aria-label') === 'Move up';
+        if(up && li.previousElementSibling) list.insertBefore(li, li.previousElementSibling);
+        if(!up && li.nextElementSibling) list.insertBefore(li.nextElementSibling, li);
+        renumber();
+      });
+      var drag = null;
+      list.addEventListener('dragstart', function(e){ drag = e.target.closest('li'); if(drag) drag.classList.add('dragging'); });
+      list.addEventListener('dragend', function(){ if(drag) drag.classList.remove('dragging'); drag = null; renumber(); });
+      list.addEventListener('dragover', function(e){ e.preventDefault(); var li = e.target.closest('li'); if(!li || li === drag) return; var r = li.getBoundingClientRect(); if(e.clientY < r.top + r.height/2) list.insertBefore(drag, li); else list.insertBefore(drag, li.nextSibling); });
+      return {
+        check: function(){ var ok = 0; [].forEach.call(list.children, function(li, k){ var good = li.getAttribute('data-text') === a.items[k]; li.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, a.items.length]; },
+        reset: function(){ render(shuffle(a.items)); }
+      };
+    },
+    quiz: function(root, a){
+      var qs = [];
+      a.questions.forEach(function(q, qi){
+        var box = el('div', 'quiz-q'); box.innerHTML = '<p><b>' + (qi+1) + '. ' + esc(q.q) + '</b></p>';
+        var sel = -1;
+        q.options.forEach(function(o, oi){
+          var b = el('button', 'opt', esc(o)); b.type = 'button';
+          b.addEventListener('click', function(){ if(box.classList.contains('done')) return; sel = oi; [].forEach.call(box.querySelectorAll('.opt'), function(x){ x.classList.remove('selected'); }); b.classList.add('selected'); });
+          box.appendChild(b);
+        });
+        if(q.why) box.appendChild(el('p', 'why', esc(q.why)));
+        root.appendChild(box);
+        qs.push({ box: box, get: function(){ return sel; }, set: function(v){ sel = v; }, q: q });
+      });
+      return {
+        check: function(){ var ok = 0; qs.forEach(function(x){ var opts = x.box.querySelectorAll('.opt'); x.box.classList.add('done'); opts.forEach(function(o, oi){ o.classList.remove('selected'); if(oi === x.q.answer) o.classList.add('right'); else if(oi === x.get()) o.classList.add('wrong'); }); if(x.get() === x.q.answer) ok++; }); return [ok, qs.length]; },
+        reset: function(){ qs.forEach(function(x){ x.set(-1); x.box.classList.remove('done'); x.box.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected','right','wrong'); }); }); }
+      };
+    },
+    table: function(root, a){
+      var t = el('table', 'fill-table'); root.appendChild(t);
+      t.innerHTML = '<thead><tr>' + a.columns.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead>';
+      var tb = el('tbody'); t.appendChild(tb);
+      a.rows.forEach(function(r){
+        var tr = el('tr'); tr.innerHTML = '<td><b>' + esc(r.label) + '</b></td>';
+        r.cells.forEach(function(c){
+          var td = el('td'); var s = el('select'); s.innerHTML = '<option value="">Choose...</option>' + shuffle(c.options).map(function(o){ return '<option>' + esc(o) + '</option>'; }).join('');
+          s.setAttribute('data-answer', c.answer); td.appendChild(s); tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      return {
+        check: function(){ var ok = 0, n = 0; t.querySelectorAll('select').forEach(function(s){ n++; var td = s.parentNode; td.classList.remove('right','wrong'); var good = s.value === s.getAttribute('data-answer'); td.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, n]; },
+        reset: function(){ t.querySelectorAll('select').forEach(function(s){ s.value = ''; s.parentNode.classList.remove('right','wrong'); }); }
+      };
+    }
+  };
+
+  function buildChips(root, items, targetNames, labels, cap){
+    var bank = el('div', 'bank'); root.appendChild(bank);
+    var tg = el('div', 'targets'); root.appendChild(tg);
+    var selected = null, targets = {};
+    targetNames.forEach(function(name){
+      var t = el('div', 'target'); t.setAttribute('data-name', name);
+      t.innerHTML = '<div class="t-label">' + esc(labels ? (labels[name] || name) : name) + '</div><div class="t-drop"></div>';
+      tg.appendChild(t); targets[name] = t;
+      t.addEventListener('click', function(){ if(selected) place(selected, t); });
+      t.addEventListener('dragover', function(e){ e.preventDefault(); t.classList.add('over'); });
+      t.addEventListener('dragleave', function(){ t.classList.remove('over'); });
+      t.addEventListener('drop', function(e){ e.preventDefault(); t.classList.remove('over'); if(selected) place(selected, t); });
+    });
+    function place(chip, t){
+      var drop = t.querySelector('.t-drop');
+      if(cap === 1 && drop.children.length){ bank.appendChild(drop.firstElementChild); }
+      drop.appendChild(chip); chip.classList.remove('selected','right','wrong'); selected = null;
+    }
+    function mk(it){
+      var c = el('div', 'chip', esc(it.text)); c.setAttribute('data-target', it.target); c.draggable = true; c.tabIndex = 0;
+      c.addEventListener('click', function(e){ e.stopPropagation(); if(c.parentNode !== bank){ bank.appendChild(c); c.classList.remove('right','wrong'); selected = null; return; } if(selected) selected.classList.remove('selected'); selected = c; c.classList.add('selected'); });
+      c.addEventListener('dragstart', function(){ selected = c; c.classList.add('selected'); });
+      c.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); c.click(); } });
+      return c;
+    }
+    function fillBank(){ bank.innerHTML = ''; shuffle(items).forEach(function(it){ bank.appendChild(mk(it)); }); }
+    fillBank();
+    return {
+      check: function(){ var ok = 0; items.length; root.querySelectorAll('.chip').forEach(function(c){ var t = c.closest('.target'); c.classList.remove('right','wrong'); if(!t){ c.classList.add('wrong'); return; } var good = t.getAttribute('data-name') === c.getAttribute('data-target'); c.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, items.length]; },
+      reset: function(){ root.querySelectorAll('.t-drop').forEach(function(d){ d.innerHTML = ''; }); fillBank(); selected = null; }
+    };
+  }
+
+  document.querySelectorAll('.activity').forEach(function(act){
+    var a; try{ a = JSON.parse(act.getAttribute('data-activity')); }catch(e){ return; }
+    var body = act.querySelector('.act-body'), res = act.querySelector('.act-result');
+    var b = builders[a.type]; if(!b) return;
+    var api = b(body, a);
+    var slide = act.closest('section.slide'), peek = act.querySelector('.act-peek'), tools = act.querySelector('.act-tools');
+    function blur(on){ if(slide) slide.classList.toggle('hide-notes', on); peek.textContent = on ? 'Show the notes' : 'Hide the notes to carry on'; act.classList.toggle('peeking', !on && act.classList.contains('started')); }
+    act.querySelector('.act-go').addEventListener('click', function(){
+      act.classList.add('started'); act.querySelector('.act-start').hidden = true; body.hidden = false; tools.hidden = false; blur(true);
+      act.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    peek.addEventListener('click', function(){ blur(!slide.classList.contains('hide-notes')); });
+    act.querySelector('.act-check').addEventListener('click', function(){
+      var r = api.check(); res.className = 'act-result ' + (r[0] === r[1] ? 'good' : 'bad');
+      res.textContent = r[0] === r[1] ? 'All correct. Well done!' : r[0] + ' of ' + r[1] + ' correct. Try the red ones again.';
+      if(r[0] === r[1]){ act.classList.remove('started'); blur(false); }
+    });
+    act.querySelector('.act-reset').addEventListener('click', function(){ api.reset(); res.textContent = ''; res.className = 'act-result'; });
+  });
+})();
+
+/* ---------- infographics: click for full screen (CHCAGE013) ---------- */
+(function(){
+  function open(node){
+    var box = document.createElement('div'); box.className = 'zoombox'; box.setAttribute('role','dialog'); box.setAttribute('aria-label','Picture full screen');
+    box.appendChild(node.cloneNode(true));
+    var c = document.createElement('button'); c.className = 'zclose'; c.type = 'button'; c.textContent = 'Close'; box.appendChild(c);
+    function shut(){ box.remove(); document.removeEventListener('keydown', key); }
+    function key(e){ if(e.key === 'Escape') shut(); }
+    box.addEventListener('click', shut); document.addEventListener('keydown', key);
+    document.body.appendChild(box);
+  }
+  document.querySelectorAll('figure.infopic img, figure.infopic .info-svg').forEach(function(el){
+    el.addEventListener('click', function(){ open(el); });
+    el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(el); } });
+  });
+})();
+</script>
+<script src="../shared/presenting.js"></script>
+</body>
+</html>

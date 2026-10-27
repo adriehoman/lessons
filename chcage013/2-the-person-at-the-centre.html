@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHCAGE013 Work effectively in aged care: The person at the centre</title>
+<meta name="description" content="CHCAGE013 Lesson 2: principles of aged care, person-centred care, empowerment, social role valorisation, care and support, rights and responsibilities, dignity of risk, attitudes, myths and psychosocial disability.">
+<style>:root{
+  --ink:#1b2530; --soft-ink:#44505c; --paper:#ffffff;
+  --deep:#12384a; --aqua:#8fe3e8; --action:#0b6f7c;
+  --card-a:#fbfbf9; --card-b:#ecece8; --edge:#d9d9d4;
+  --warn:#b45309; --warn-bg:#fff7ed; --ok:#15803d; --bad:#b91c1c;
+  --teach:#4c1d95; --teach-bg:#f5f3ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size:clamp(17px,1.5vw,30px); line-height:1.55}
+main{overflow-x:clip}
+.wrap{max-width:1500px; margin:0 auto; padding:0 clamp(20px,3vw,60px)}
+
+/* banner */
+.banner{position:relative; background:var(--deep); color:#fff; padding:clamp(60px,9vw,140px) 20px 40px; overflow:hidden}
+.banner-inner{position:relative; z-index:2; max-width:1500px; margin:0 auto}
+.banner .kicker{margin:0 0 6px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:.75em; color:var(--aqua)}
+.banner h1{margin:0; font-size:clamp(30px,5vw,76px); line-height:1.1; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.banner .sub{margin:12px 0 0; font-size:1.05em; max-width:28em; color:#f3e6d2}
+.banner svg.hero{position:absolute; right:-2vw; bottom:-4vw; width:min(46vw,620px); height:auto; opacity:.95; z-index:1}
+@media (max-width:800px){.banner svg.hero{opacity:.25}}
+
+/* index */
+#index{margin:30px 0 10px; padding:18px 26px 12px; background:#efe5d3; border-left:6px solid var(--action); border-radius:6px}
+#index h2{font-size:1.2em; margin:0 0 8px}
+#index ul{margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(19em,1fr)); column-gap:3em}
+#index li{margin:4px 0}
+#index a{text-decoration:none; color:var(--ink); display:flex; gap:10px; align-items:baseline}
+#index a:hover{color:var(--action); text-decoration:underline}
+.num{display:inline-flex; align-items:center; justify-content:center; min-width:1.7em; height:1.7em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; font-size:.8em; flex:none}
+.opening{font-size:1.05em; margin:26px 0 10px}
+
+/* slides */
+section.slide{padding:36px 0 18px; border-top:1px solid var(--edge); margin-top:30px; scroll-margin-top:10px}
+section.slide:first-of-type{border-top:0}
+h2.topic{font-size:1.4em; line-height:1.3; margin:0 0 10px; display:flex; gap:14px; align-items:center}
+h2.topic .num{font-size:.7em; min-width:2em; height:2em}
+h3{font-size:1.15em; line-height:1.3; margin:0 0 10px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px; padding-left:26px}
+li{margin:4px 0}
+a{color:var(--action); text-underline-offset:3px}
+a.star{font-weight:700; padding:0 4px; font-size:.8em; text-decoration:none; opacity:.55}
+a.star:hover{opacity:1}
+a.term{text-decoration:underline dotted; color:inherit}
+.intro{font-size:1.05em; color:var(--soft-ink)}
+a:focus-visible,button:focus-visible,.deck:focus-visible{outline:3px solid #f2a900; outline-offset:3px}
+
+ol.points{margin:12px 0 18px; padding-left:0; list-style:none; counter-reset:pt}
+ol.points li{position:relative; padding:10px 14px 10px 3.2em; margin:6px 0; background:#fffaf1; border-radius:8px; counter-increment:pt}
+ol.points li::before{content:counter(pt); position:absolute; left:.9em; top:.55em; width:1.7em; height:1.7em; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:700; font-size:.85em; display:flex; align-items:center; justify-content:center}
+.ref{display:none; float:right; margin-left:10px; font-size:.65em; color:var(--teach); background:var(--teach-bg); border:1px solid #ddd6fe; border-radius:4px; padding:0 6px}
+body.teacher .ref{display:inline-block}
+
+figure.visual{margin:18px 0 22px; text-align:center}
+figure.visual svg,figure.visual img{max-width:100%; height:auto; max-height:70vh}
+figure.visual figcaption{font-size:.8em; color:var(--soft-ink); margin-top:6px}
+figure.pic{margin:22px 0}
+figure.pic img{display:block; width:100%; height:auto; max-height:86vh; object-fit:contain; border-radius:4px}
+
+.watch-out{margin:14px 0 20px; padding:14px 18px 14px 56px; background:var(--warn-bg); border:2px solid #fdba74; border-radius:8px; position:relative}
+.watch-out::before{content:"!"; position:absolute; left:14px; top:12px; width:30px; height:30px; border-radius:50%; background:var(--warn); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.watch-out b{color:var(--warn); margin-right:6px}
+
+/* audio */
+.say{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:40px; display:inline-flex; gap:8px; align-items:center}
+.say.playing{background:var(--action); color:#fff}
+.say .ico{font-size:.8em}
+.audio-line{display:flex; gap:12px; align-items:center; margin:0 0 14px; flex-wrap:wrap}
+.audio-label{color:var(--soft-ink); font-size:.9em}
+.card-audio{margin-top:10px}
+.playall{margin:0 0 34px; text-align:center}
+
+/* card stack (from the Sway template) */
+.stack{margin:60px auto 40px; width:86%; max-width:1150px; --tilt:.4}
+.deck{position:relative; cursor:pointer; border-radius:3px; transition:height .3s ease}
+.pile i{position:absolute; inset:0; background:var(--card-b); border:1px solid var(--edge); box-shadow:0 1px 3px rgba(20,30,40,.10)}
+.pile i:nth-child(even){background:var(--card-a)}
+.pile i{transform:rotate(calc(var(--a) * var(--tilt,1))) translate(var(--x),var(--y))}
+.pile i:nth-child(1){--a:-15deg; --x:-4px; --y:6px}
+.pile i:nth-child(2){--a:6deg; --x:6px; --y:2px}
+.pile i:nth-child(3){--a:-12deg; --x:3px; --y:-5px}
+.pile i:nth-child(4){--a:3deg; --x:-5px; --y:4px}
+.pile i:nth-child(5){--a:-10deg; --x:5px; --y:5px}
+.pile i:nth-child(6){--a:-2deg; --x:-3px; --y:-3px}
+.pile i:nth-child(7){--a:-6deg; --x:2px; --y:3px}
+.pile{position:absolute; inset:0; filter:drop-shadow(0 14px 18px rgba(20,30,40,.16))}
+.card{position:absolute; left:0; top:0; width:100%; height:100%; background:var(--card-a); border:1px solid var(--edge);
+  padding:1.5em 1.8em 1.3em; font-size:clamp(16px,1.4vw,27px); line-height:1.5; opacity:0; pointer-events:none; z-index:1; min-height:7em;
+  transform:rotate(calc(var(--r,-6deg) * var(--tilt,1))); box-shadow:0 2px 6px rgba(20,30,40,.14)}
+.card.shade{background:var(--card-b)}
+.card.long{font-size:clamp(14.5px,1.25vw,24px); line-height:1.45}
+.card.top{opacity:1; pointer-events:auto; z-index:3}
+.card.arrive{animation:arrive .42s ease-out}
+.card.leave{opacity:1; z-index:4; animation:leave .42s ease-in forwards}
+.card.leave-back{opacity:1; z-index:4; animation:leaveBack .42s ease-in forwards}
+@keyframes arrive{from{transform:rotate(calc(var(--r) * var(--tilt,1) + 5deg)) scale(.96)} to{transform:rotate(calc(var(--r) * var(--tilt,1))) scale(1)}}
+@keyframes leave{to{transform:translate(58%,-10%) rotate(16deg); opacity:0}}
+@keyframes leaveBack{to{transform:translate(-58%,-10%) rotate(-18deg); opacity:0}}
+.card .count{float:right; margin:-6px -8px 6px 14px; font-size:.8em; font-weight:600; color:var(--soft-ink); background:#fff; border:1px solid var(--edge); border-radius:20px; padding:2px 12px}
+.card ul{margin-bottom:6px}
+.card-pic{float:right; width:clamp(90px,22%,220px); margin:0 0 10px 16px}
+.card-pic svg{width:100%; height:auto}
+.controls{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin-top:60px}
+.controls button{font:inherit; font-size:clamp(17px,1.2vw,24px); font-weight:600; cursor:pointer; padding:10px 20px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:48px}
+.controls button.next{background:var(--action); color:#fff}
+.controls button:hover{filter:brightness(.94)}
+.controls .where{min-width:7em; text-align:center; font-weight:700; font-size:clamp(18px,1.25vw,25px)}
+.hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:10px 0 0}
+
+/* full screen */
+.big{position:fixed; inset:0; z-index:50; background:#05090c; color:#fff; display:none}
+.big.open{display:flex; flex-direction:column}
+.big .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; font-weight:700}
+.big .body{flex:1; overflow:auto; padding:8px clamp(20px,7vw,90px) 24px; font-size:clamp(20px,2.9vw,34px); line-height:1.45}
+.big .body h3{font-size:1.1em; margin-bottom:.5em}
+.big .body .count{display:none}
+.big .body .card-pic{width:22%}
+.big .body .say{color:#fff; border-color:#fff; background:transparent}
+.big .foot{display:flex; gap:12px; justify-content:center; padding:12px 18px 20px}
+.big button{font:inherit; font-size:18px; font-weight:600; cursor:pointer; min-height:48px; padding:10px 22px; border-radius:6px; border:2px solid #fff; background:transparent; color:#fff}
+.big button.next{background:#fff; color:#05090c}
+
+/* activities */
+.activity{margin:22px 0 28px; padding:16px 20px 14px; border:2px solid #d8c9b2; border-radius:10px; background:#f1f5ec}
+.act-head{display:flex; gap:10px; align-items:center; margin-bottom:6px}
+.act-badge{background:var(--action); color:#fff; font-size:.7em; font-weight:700; padding:2px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:.04em}
+.act-instr{color:var(--soft-ink); font-size:.9em}
+.act-foot{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px}
+.act-foot button{font:inherit; font-size:.9em; font-weight:600; cursor:pointer; padding:8px 18px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:44px}
+.act-foot .act-check{background:var(--action); color:#fff}
+.act-result{font-weight:700}
+.act-result.good{color:var(--ok)} .act-result.bad{color:var(--bad)}
+.chip{display:inline-flex; align-items:center; font-size:.9em; padding:8px 14px; margin:5px; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; user-select:none; min-height:44px; line-height:1.3}
+.chip.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.chip.right{border-color:var(--ok); background:#ecfdf5}
+.chip.wrong{border-color:var(--bad); background:#fef2f2}
+.chip.placed{cursor:default}
+.bank{min-height:52px; padding:6px; border:2px dashed #b9a68a; border-radius:8px; margin-bottom:12px; background:#fff}
+.targets{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(16em,1fr))}
+.target{border:2px solid #b9a68a; border-radius:8px; background:#fff; padding:8px 10px; min-height:70px}
+.target .t-label{font-weight:700; margin-bottom:4px}
+.target .t-drop{min-height:44px; border:2px dashed #e8dcc6; border-radius:6px; padding:2px}
+.target.over .t-drop{border-color:var(--action); background:#f6efe2}
+.order{list-style:none; padding:0; margin:0; counter-reset:o}
+.order li{display:flex; gap:10px; align-items:center; background:#fff; border:2px solid #b9a68a; border-radius:8px; padding:8px 10px; margin:6px 0; cursor:grab}
+.order li .o-n{min-width:2em; height:2em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; font-size:.85em}
+.order li .o-t{flex:1}
+.order li .o-btn{display:flex; gap:4px}
+.order li .o-btn button{font:inherit; min-width:40px; min-height:40px; border-radius:6px; border:1px solid #b9a68a; background:#fff; cursor:pointer}
+.order li.right{border-color:var(--ok); background:#ecfdf5} .order li.wrong{border-color:var(--bad); background:#fef2f2}
+.order li.dragging{opacity:.5}
+.quiz-q{margin:10px 0 16px}
+.quiz-q .opt{display:block; width:100%; text-align:left; font:inherit; font-size:.95em; padding:10px 14px; margin:6px 0; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; min-height:44px}
+.quiz-q .opt.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.quiz-q .opt.right{border-color:var(--ok); background:#ecfdf5} .quiz-q .opt.wrong{border-color:var(--bad); background:#fef2f2}
+.quiz-q .why{font-size:.85em; color:var(--soft-ink); margin:4px 0 0 6px; display:none}
+.quiz-q.done .why{display:block}
+.fill-table{width:100%; border-collapse:collapse; font-size:.9em; background:#fff}
+.fill-table th,.fill-table td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+.fill-table th{background:#efe5d3}
+.fill-table select{font:inherit; font-size:.95em; min-height:40px; max-width:100%}
+.fill-table td.right{background:#ecfdf5} .fill-table td.wrong{background:#fef2f2}
+
+/* teacher view */
+.tnotes{display:none; margin:18px 0 6px; padding:12px 16px; background:var(--teach-bg); border:2px dashed #c4b5fd; border-radius:8px; font-size:.82em; color:#2e1065}
+body.teacher .tnotes{display:block}
+.tnotes .t-head{font-weight:800; color:var(--teach); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; font-size:.85em}
+.tnotes ul{margin:4px 0 8px}
+.tnotes .t-trap{background:#fff7ed; border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0}
+.tlink{font:inherit; font-size:1em; color:var(--soft-ink); background:none; border:0; text-decoration:underline; cursor:pointer; padding:0}
+.tpill[hidden]{display:none}
+.tpill{position:fixed; top:10px; right:10px; z-index:45; background:var(--teach); color:#fff; border-radius:30px; padding:6px 8px 6px 16px; display:flex; gap:8px; align-items:center; font-size:15px; font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.tpill button{font:inherit; font-size:14px; font-weight:700; border:0; border-radius:20px; padding:6px 12px; background:#fff; color:var(--teach); cursor:pointer; min-height:34px}
+.tpill button.tp-out{background:transparent; color:#fff; border:1px solid #fff}
+.card-pic.photo img{width:100%; height:auto; border-radius:8px; display:block}
+.grid4{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(11em,1fr)); margin:16px 0 22px}
+.grid4 figure{margin:0; background:#efe5d3; border-radius:12px; overflow:hidden}
+.grid4 img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+.grid4 figcaption{padding:10px 14px 12px; font-size:.9em}
+.grid4 figcaption b{display:block; color:var(--deep); font-size:1.05em}
+.side{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; margin:10px 0 18px}
+.side > div{flex:2 1 420px}
+.side figure{flex:0 1 380px; max-width:440px; margin:0}
+.side figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* Gerry */
+.mascot{position:fixed; left:clamp(6px,1.2vw,24px); top:120px; width:clamp(54px,6vw,110px); z-index:35; cursor:pointer; transition:top .6s cubic-bezier(.3,.9,.4,1.1); filter:drop-shadow(0 6px 10px rgba(0,0,0,.25)); user-select:none}
+.mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.mascot.hop svg{animation:hop .7s ease-out 1, bob 2.6s ease-in-out .7s infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes hop{0%{transform:translateY(0) scale(1,1)} 30%{transform:translateY(-40px) scale(.95,1.08) rotate(14deg)} 60%{transform:translateY(0) scale(1.08,.92)} 100%{transform:translateY(0) scale(1,1)}}
+.gerry-bubble{position:absolute; left:100%; top:0; margin-left:10px; width:max-content; max-width:16em; background:#fff; color:var(--ink); border:2px solid var(--deep); border-radius:14px; padding:8px 12px; font-size:clamp(14px,1vw,18px); line-height:1.35; box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.gerry-bubble::before{content:""; position:absolute; left:-12px; top:16px; border:6px solid transparent; border-right-color:var(--deep)}
+@media (max-width:900px){.mascot{display:none}}
+.mascot.drop{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.drop .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.drop .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+@media (prefers-reduced-motion:reduce){.mascot svg{animation:none}}
+
+.home{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(14px,2vw,32px); z-index:40; background:var(--action); color:#fff; font-weight:700; font-size:clamp(17px,1.2vw,24px); text-decoration:none; padding:12px 22px; border-radius:30px; box-shadow:0 4px 14px rgba(0,0,0,.25); min-height:48px; display:flex; align-items:center; gap:8px}
+.foot{margin:50px 0 90px; padding-top:16px; border-top:1px solid var(--edge); font-size:.75em; color:var(--soft-ink)}
+
+@media (max-width:560px){
+  body{font-size:17px}
+  .card{padding:20px 20px 18px; font-size:16px}
+  .card.long{font-size:14.5px}
+  .stack{width:auto; margin-left:14px; margin-right:14px; --tilt:.3}
+  .card-pic{width:30%}
+  h2.topic{font-size:1.25em}
+}
+@media (prefers-reduced-motion:reduce){
+  .card.arrive,.card.leave,.card.leave-back{animation-duration:.01s}
+  html{scroll-behavior:auto}
+}
+
+/* ordered strips (PPE on / off) */
+.strips{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr)); margin:16px 0 20px}
+.strip{background:#fffaf1; border-radius:12px; padding:14px 16px}
+.strip-title{font-weight:800; color:var(--deep); margin-bottom:8px}
+.strip-steps{list-style:none; margin:0; padding:0; counter-reset:st}
+.strip-steps li{counter-increment:st; display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px solid #e2e8f0}
+.strip-steps li:last-child{border-bottom:0}
+.strip-steps li::before{content:counter(st); display:inline-flex; align-items:center; justify-content:center; width:1.9em; height:1.9em; border-radius:50%; background:var(--c,#0b6f7c); color:#fff; font-weight:800; font-size:.85em; flex:none}
+table.plain{width:100%; border-collapse:collapse; font-size:.92em; margin:10px 0 18px; background:#fff}
+table.plain th,table.plain td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+table.plain th{background:#efe5d3}
+.tl-high{background:#fee2e2} .tl-med{background:#fef3c7} .tl-low{background:#dcfce7}
+
+/* activity start and blur */
+.act-start[hidden]{display:none}
+.act-start{display:flex; gap:14px; align-items:center; flex-wrap:wrap; padding:6px 0 2px; color:var(--soft-ink); font-size:.9em}
+.act-go{font:inherit; font-size:1em; font-weight:700; cursor:pointer; padding:10px 26px; border-radius:8px; border:0; background:var(--action); color:#fff; min-height:48px}
+.act-tools{margin:0 0 10px}
+.act-peek{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid #b9a68a; background:#fff; color:var(--action); min-height:40px}
+section.slide.hide-notes > :is(ol.points, .stack, figure.visual, .after, .intro, .watch-out, .vid, .audio-line, .side-points, p){filter:blur(7px); pointer-events:none; user-select:none; transition:filter .3s}
+section.slide.hide-notes .activity{filter:none}
+.vid{margin:20px 0 10px}
+.vid-title{margin:0 0 8px}
+.vid-by{color:var(--soft-ink); font-size:.85em}
+.video{margin:0 auto 6px; max-width:calc((100vh - 90px) * 16 / 9); aspect-ratio:16/9; background:#0e1a22; border-radius:6px; overflow:hidden; position:relative}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.watch{margin:0 0 20px; font-size:.8em; text-align:center}
+
+/* activity locked while the notes are showing */
+.activity.peeking .act-body, .activity.peeking .act-foot{pointer-events:none; opacity:.35; filter:grayscale(1)}
+.activity.peeking .act-tools::after{content:"Read the notes, then press the button to carry on."; margin-left:12px; color:var(--warn); font-weight:700; font-size:.9em}
+/* click to spotlight a part of a diagram */
+.spot [data-spot]{transition:opacity .3s, transform .3s; transform-box:fill-box; transform-origin:center}
+.spot.spotting [data-spot]:not(.lit){opacity:.28}
+.spot [data-spot].lit{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.14)}}
+.spot-hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:-8px 0 14px}
+/* points beside a picture */
+.side-points{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start}
+.side-points > ol.points{flex:2 1 420px; margin-top:0}
+.side-points > figure{flex:0 1 320px; max-width:360px; margin:0}
+.side-points > figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* student-visible Connect source line */
+.source{margin:16px 0 6px; padding:10px 14px 10px 44px; background:#f6efe2; border-left:4px solid var(--action); border-radius:8px; font-size:.92em; color:var(--soft-ink); position:relative; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center}
+.source::before{content:"\1F4D6"; position:absolute; left:12px; top:8px; font-size:1.2em}
+.source-label{font-weight:700; color:var(--ink)}
+.source a{text-decoration:none; font-weight:600; border:1px solid #d8c9b2; background:#fff; border-radius:999px; padding:2px 10px}
+.source a:hover{background:#efe5d3}
+
+/* Lesson 3: safety signs, RACE, two-up figures */
+.signs{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:12px 0 20px; align-items:start}
+.sign{background:#fff; border:2px solid var(--edge); border-radius:12px; padding:12px 10px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px}
+.sign svg{width:84px; height:84px}
+.sign span{font-weight:700; font-size:.9em; line-height:1.25}
+.signkey{display:flex; flex-wrap:wrap; gap:8px 20px; margin:6px 0 14px; font-size:.92em}
+.signkey i{display:inline-block; width:16px; height:16px; border-radius:50%; vertical-align:-3px; margin-right:6px}
+.race{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:14px 0 20px}
+.race div{border-left:8px solid var(--c); background:#fff; border-radius:10px; padding:12px 14px; box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.race b{display:block; font-size:2.2em; line-height:1; color:var(--c)}
+.race span{display:block; font-weight:700; font-size:1.1em; margin-top:4px}
+.race small{color:var(--soft-ink)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:14px 0}
+.grid2 figure{margin:0}
+.grid2 figcaption{font-size:.85em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > :is(.signs, .signkey, .race, .grid2){filter:blur(7px); pointer-events:none; user-select:none}
+
+/* side-by-side videos */
+.vid-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:16px 0 6px}
+.vid-row .vid{margin:0}
+.vid-row .video{max-width:none}
+section.slide.hide-notes > .vid-row{filter:blur(7px); pointer-events:none}
+
+/* finale: the grand exit */
+.finale{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; margin:24px 0 10px; padding:24px 10px 0; min-height:340px; overflow:hidden}
+.fin-side{display:flex; flex-direction:column; align-items:center; gap:10px; opacity:0; transition:transform .9s cubic-bezier(.2,.8,.3,1.1), opacity .6s}
+.fin-side.left{transform:translateX(-60vw)}
+.fin-side.right{transform:translateX(60vw)}
+.finale.in .fin-side{transform:none; opacity:1}
+.finale.in .fin-side.right{transition-delay:.25s}
+.fin-mascot{width:min(260px,38vw)}
+.fin-mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.fin-bubble{background:#fff; border:3px solid var(--deep); border-radius:18px; padding:14px 18px; font-size:1.08em; line-height:1.4; position:relative; max-width:34em; opacity:0; transform:scale(.7); transition:transform .5s cubic-bezier(.2,.8,.3,1.3), opacity .4s}
+.fin-bubble p{margin:0 0 8px}
+.fin-bubble::after{content:""; position:absolute; bottom:-14px; left:50%; margin-left:-8px; border:8px solid transparent; border-top-color:var(--deep)}
+.finale.in .fin-bubble{opacity:1; transform:none; transition-delay:1s}
+.finale.in .right .fin-bubble{transition-delay:1.5s}
+.fin-side .fin-bubble{order:-1}
+.fin-who{font-weight:800; color:var(--deep); margin:0}
+.fin-after{text-align:center; font-size:1.1em; color:var(--soft-ink); margin:10px 0 20px}
+@media (max-width:700px){.finale{grid-template-columns:1fr; min-height:0} .fin-side.left,.fin-side.right{transform:translateY(40px)} .finale.in .fin-side{transform:none}}
+@media (prefers-reduced-motion:reduce){.fin-side,.fin-bubble{transition:none; transform:none; opacity:1} .fin-mascot svg{animation:none}}
+.sign-pics{display:flex; gap:6px; align-items:center; justify-content:center; height:96px}
+.sign-pics img{max-height:96px; max-width:100%; object-fit:contain}
+.sign-pics img + img{max-height:60px}
+
+/* Lesson 4: risk matrix */
+table.matrix{border-collapse:collapse; margin:0 auto; font-size:.95em}
+table.matrix th, table.matrix td{border:2px solid #fff; padding:10px 12px; text-align:center}
+table.matrix thead th{background:#12384a; color:#fff; font-weight:700}
+table.matrix tbody th{background:#0b6f7c; color:#fff; text-align:left; font-weight:700}
+table.matrix .corner{background:#1b2530; font-size:.8em}
+table.matrix td.m-L{background:#bbf7d0; color:#14532d; font-weight:700}
+table.matrix td.m-M{background:#fde68a; color:#78350f; font-weight:700}
+table.matrix td.m-H{background:#fca5a5; color:#7f1d1d; font-weight:700}
+@media (max-width:700px){table.matrix{font-size:.75em} table.matrix th, table.matrix td{padding:6px 4px}}
+
+
+/* ===================== CHCAGE013 rustic theme (27 Oct 2026) ===================== */
+:root{
+  --ink:#2b2420; --soft-ink:#574a40; --paper:#f6f0e4;
+  --deep:#4a3222; --aqua:#ecd9bb; --action:#4f6a4a;
+  --card-a:#fffaf1; --card-b:#f3ead9; --edge:#d8c9b2;
+  --wood:#6b4a33; --sage-bg:#e9efe2; --clay:#a8542c;
+}
+body{background-color:var(--paper); background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .42 0 0 0 0 .32 0 0 0 0 .22 0 0 0 .06 0'/></filter><rect width='180' height='180' filter='url(%23n)'/></svg>")}
+h1,h2,h3,.banner h1{font-family:Georgia,"Times New Roman",serif}
+.banner{background-color:#3b2718; background-image:linear-gradient(90deg,rgba(38,22,12,.82) 0%,rgba(38,22,12,.58) 55%,rgba(38,22,12,.32) 100%),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='700' height='420'><filter id='b' x='0' y='0' width='100%' height='100%'><feTurbulence type='turbulence' baseFrequency='0.022 0.0035' numOctaves='4' seed='11' result='ridge'/><feTurbulence type='fractalNoise' baseFrequency='0.06 0.02' numOctaves='3' seed='4' result='warp'/><feDisplacementMap in='ridge' in2='warp' scale='38' xChannelSelector='R' yChannelSelector='G' result='d'/><feColorMatrix in='d' type='luminanceToAlpha' result='h'/><feDiffuseLighting in='h' lighting-color='%23b89874' surfaceScale='14' diffuseConstant='1.1' result='lit'><feDistantLight azimuth='200' elevation='34'/></feDiffuseLighting><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='2' result='g'/><feColorMatrix in='g' type='matrix' values='0 0 0 0 0.3 0 0 0 0 0.25 0 0 0 0 0.2 0 0 0 0.25 0' result='grain'/><feBlend in='grain' in2='lit' mode='multiply'/></filter><rect width='700' height='420' filter='url(%23b)'/></svg>");
+  background-size:auto,700px 420px; border-bottom:8px solid #7a5a3f; padding:clamp(40px,6vw,96px) 20px clamp(26px,3vw,44px)}
+.banner h1{text-shadow:0 2px 10px rgba(0,0,0,.75)}
+.banner .sub{color:#f3e6d2; text-shadow:0 1px 6px rgba(0,0,0,.7)}
+.banner .kicker{color:var(--aqua)}
+.lessonbar{display:flex; flex-wrap:wrap; gap:8px 10px; padding:12px clamp(20px,3vw,60px); background:#efe5d3; border-bottom:1px solid var(--edge); font-size:clamp(14px,.95vw,19px)}
+.lessonbar a{padding:6px 14px; border-radius:20px; background:var(--card-a); border:1px solid var(--edge); color:var(--wood); text-decoration:none; font-weight:600; white-space:nowrap}
+.lessonbar a:hover{border-color:var(--wood)}
+.lessonbar a.on{background:var(--action); border-color:var(--action); color:#fff}
+#index{background:#efe5d3; border-left-color:var(--wood)}
+h2.topic{color:var(--wood); border-bottom:2px dashed var(--edge); padding-bottom:8px}
+h2.topic .num{background:var(--wood)}
+ol.points li{background:var(--card-a); border:1px solid var(--edge); box-shadow:0 1px 0 #e6d9c4}
+ol.points li::before{border-color:var(--wood); color:var(--wood)}
+section.slide{border-top-color:var(--edge)}
+.activity{background:var(--sage-bg); border-color:#c6d3bb}
+a.term{text-decoration-color:var(--clay)}
+.tag{display:inline-block; font-family:"Segoe UI",Arial,sans-serif; font-size:.68em; font-weight:700; padding:1px 10px; border-radius:12px; margin:0 6px; vertical-align:middle; white-space:nowrap}
+.tag.old{background:#e5e1db; color:#4a4540; border:1px solid #b9b2a8}
+.tag.repl{background:#fdf0dc; color:#8a4b12; border:1px solid #e8b878}
+.tag.new{background:#e2efdc; color:#2f5a2a; border:1px solid #9cc290}
+.vid.local video{display:block; width:100%; max-width:1100px; max-height:72vh; margin:0 auto; border-radius:8px; background:#000}
+.mascot.side-right{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.side-right .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.side-right .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+.gerry-bubble{border-color:var(--wood)}
+.home{background:var(--wood)}
+.side-points figure img{border-radius:10px; border:1px solid var(--edge)}
+figure.visual img{border-radius:10px}
+.watch-out b{margin-right:0}
+.watch-out > b:first-child{margin-right:6px}
+body.presenting .mascot{z-index:45}
+@media (max-width:700px){
+  .lessonbar{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:thin; padding-bottom:10px}
+  .lessonbar a{flex:0 0 auto}
+}
+.fill-table select{width:100%}
+
+/* infographics: big, centred, click for full screen */
+figure.infopic{margin:22px auto 26px; text-align:center}
+figure.infopic img{display:block; margin:0 auto; width:100%; max-width:1300px; max-height:82vh; object-fit:contain; border-radius:12px; border:1px solid var(--edge); background:#fff; cursor:zoom-in}
+figure.infopic .info-svg{max-width:1300px; margin:0 auto; background:#fffdf8; border:1px solid var(--edge); border-radius:12px; padding:10px; cursor:zoom-in}
+figure.infopic figcaption{font-size:.75em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > figure.infopic{filter:blur(7px); pointer-events:none; user-select:none}
+.zoombox{position:fixed; inset:0; z-index:70; background:rgba(20,14,10,.92); display:flex; align-items:center; justify-content:center; cursor:zoom-out; padding:2vh 2vw}
+.zoombox img,.zoombox svg{max-width:96vw; max-height:94vh; width:auto; height:auto; background:#fff; border-radius:10px}
+.zoombox .info-svg{width:96vw; max-height:94vh; background:#fffdf8; border-radius:10px; padding:10px}
+.zoombox .info-svg svg{width:100%; max-height:90vh}
+.zoombox .zclose{position:fixed; top:14px; right:18px; font:inherit; font-weight:700; border:0; border-radius:20px; padding:8px 18px; background:#fff; color:var(--wood); cursor:pointer}
+/* external (sign-in) videos and handouts */
+.vid.ext{margin:18px 0}
+.ext-play{display:flex; align-items:center; gap:16px; padding:16px 20px; background:#2f2a24; color:#fff8ec; border-radius:12px; text-decoration:none; max-width:760px; box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.ext-play:hover,.ext-play:focus{background:#4a3b2d; outline:3px solid var(--action)}
+.ext-icon{flex:0 0 56px; height:56px; border-radius:50%; background:var(--action); display:grid; place-items:center; font-size:26px; padding-left:4px}
+.ext-play b{display:block; font-size:1.05em}
+.ext-play small{display:block; opacity:.85; margin-top:3px; font-size:.82em}
+.docs{background:#fbf7ef; border:1px solid #e3d6bf; border-left:6px solid var(--wood); border-radius:10px; padding:12px 20px; margin:16px 0}
+.docs-title{margin:0 0 6px}
+.docs ul{margin:0; padding-left:22px}
+.docs li{margin:6px 0}
+section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events:none}
+.t-demo .t-sub{margin:8px 0 2px; font-weight:700; color:#7a4a1e}
+.t-demo ul,.t-links ul{margin:2px 0 6px; padding-left:20px}
+.t-note{color:#666; font-size:.9em}
+</style>
+</head>
+<body data-np="6">
+<main>
+<header class="banner first" id="top">
+  <div class="banner-inner">
+    <p class="kicker">CHCAGE013 Work effectively in aged care · Lesson 2</p>
+    <h1>The person at the centre</h1>
+    <p class="sub">Person-centred care, rights, choice and respect, and the attitudes that get in the way.</p>
+  </div>
+  
+</header>
+<nav class="lessonbar" aria-label="Lessons in this unit"><a href="0-index.html">&#8962; Lessons</a><a href="1-aged-care-in-australia.html">1 Aged care in Australia</a><a href="2-the-person-at-the-centre.html" class="on" aria-current="page">2 The person at the centre</a><a href="3-laws-standards-and-duties.html">3 Laws and standards</a><a href="4-keeping-people-safe.html">4 Keeping people safe</a><a href="5-your-role-and-the-team.html">5 Your role and the team</a><a href="6-safe-work-and-self-care.html">6 Safe work and self-care</a><a href="7-marys-simulated-shift.html">7 Mary's simulated shift</a><a href="0-index.html#glossary">Glossary</a></nav>
+<div class="wrap">
+  <nav id="index" aria-label="Index"><h2>In this lesson</h2><ul><li><a href="#s1"><span class="num">1</span> Four principles of aged care</a></li><li><a href="#s2"><span class="num">2</span> The person-centred approach</a></li><li><a href="#s3"><span class="num">3</span> Empowerment and social role valorisation</a></li><li><a href="#s4"><span class="num">4</span> Care or support?</a></li><li><a href="#s5"><span class="num">5</span> Your rights in aged care</a></li><li><a href="#s6"><span class="num">6</span> Responsibilities of the older person</a></li><li><a href="#s7"><span class="num">7</span> Dignity of risk and quality of life</a></li><li><a href="#s8"><span class="num">8</span> Ageism, paternalism and stigma</a></li><li><a href="#s9"><span class="num">9</span> Myths and the truth</a></li><li><a href="#s10"><span class="num">10</span> Psychosocial disability</a></li><li><a href="#s11"><span class="num">11</span> Amelia and Rachel</a></li></ul></nav>
+  <p class="opening">Lesson 1 showed you the big picture of aged care. This lesson is about <b>one person at a time</b>. You will learn how to put the person at the centre of their care, how to respect their rights and choices, and which attitudes can hurt older people. Rusty thinks he knows best. Daisy asks first.</p>
+  
+<section class="slide" id="s1" data-ref="NP6 S1">
+  <h2 class="topic"><span class="num">1</span> Four principles of aged care</h2>
+  <p class="intro">A principle is a basic rule that guides what we do. Four principles guide all aged care and community care.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s1.mp3" aria-label="Listen: Four principles of aged care"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s1p1"><span class="ref" title="Reference">NP6 S1 P1</span><b>Quality services</b>: a provider must meet the standards to be approved (accredited). This means good management, enough staff, and always trying to do better (<b>continuous improvement</b>).</li><li id="s1p2"><span class="ref" title="Reference">NP6 S1 P2</span><b>Client-focused care</b>: the person is involved in every decision about their personal care and health care.</li><li id="s1p3"><span class="ref" title="Reference">NP6 S1 P3</span><b>Rights and control</b>: the person keeps their personal, civic (community) and consumer rights, and stays in control of their own life.</li><li id="s1p4"><span class="ref" title="Reference">NP6 S1 P4</span><b>A safe place</b>: the person feels safe, and their physical and mental wellbeing is supported.</li></ol><figure><img src="pics/p1-p2-principles-photo.jpg" alt="A support worker walking arm in arm with an older woman" style="max-width:340px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302660/View" target="_blank" rel="noopener">Principles of aged care</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302659/View" target="_blank" rel="noopener">Introduction: Principles and models of support in aged care</a></div>
+  
+  <aside class="tnotes" data-slide="s1" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s2" data-ref="NP6 S2">
+  <h2 class="topic"><span class="num">2</span> The person-centred approach <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ2%20A%7C9e879302-69c3-440a-ba52-fc940411aa5b%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">A <a class="term" href="0-index.html#g-person-centred-approach" title="See the glossary">person-centred approach</a> treats each person as an <b>individual</b>. You work <b>with</b> the person when decisions are made about their care.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s2.mp3" aria-label="Listen: The person-centred approach"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s2p1"><span class="ref" title="Reference">NP6 S2 P1</span><b>What it means</b>: each person is seen as an individual, not as a condition or a room number. You find out what is important to the person and their family, and you <b>work with them</b> to make decisions about their care.</li><li id="s2p2"><span class="ref" title="Reference">NP6 S2 P2</span><b>Their needs come first</b>: think about the person, not only their illness.</li><li id="s2p3"><span class="ref" title="Reference">NP6 S2 P3</span><b>Their story matters</b>: think about their life experience, age, gender, culture, language, beliefs and identity.</li><li id="s2p4"><span class="ref" title="Reference">NP6 S2 P4</span><b>Flexible support</b>: change the support to fit the person's wishes and their right to decide for themselves.</li><li id="s2p5"><span class="ref" title="Reference">NP6 S2 P5</span><b>Start with strengths</b>: look first at what the person <b>can</b> do, then help only where they need it. This is called a <b>strengths-based approach</b>. Family and friends are partners in the care.</li><li id="s2p6"><span class="ref" title="Reference">NP6 S2 P6</span><b>Positive effect</b>: the person feels they have <b>some control over their life</b> and can <b>make their own choices</b>. People feel safer and happier with their care.</li></ol>
+  <figure class="infopic"><div class="info-svg" tabindex="0" role="button" aria-label="Make the picture bigger"><svg viewBox="0 0 1200 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Person-centred care: the person in the middle, with their needs, story, choices, strengths, family and flexible support around them" style="width:100%;height:auto;max-height:80vh">
+  <text x="600" y="48" font-size="40" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Person-centred care: the person is in the middle</text>
+  <circle cx="600" cy="350" r="150" fill="#e9efe2" stroke="#5f7a5a" stroke-width="4"/>
+  <g transform="translate(600,345) scale(2.1)"><circle cx="0" cy="-30" r="24" fill="#f1d3b3" stroke="#6b4a33" stroke-width="3"/><path d="M-22 -40 q22 -26 44 0" fill="#ddd" stroke="#6b4a33" stroke-width="2"/><path d="M-40 40 q0 -46 40 -46 q40 0 40 46 Z" fill="#c9893f" stroke="#6b4a33" stroke-width="3"/><circle cx="-8" cy="-30" r="3" fill="#2b2420"/><circle cx="8" cy="-30" r="3" fill="#2b2420"/><path d="M-8 -18 q8 6 16 0" stroke="#2b2420" stroke-width="2.5" fill="none"/></g><text x="600" y="470" font-size="28" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">The person</text>
+  <g><ellipse cx="230" cy="170" rx="170" ry="62" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><text x="230" y="164" font-size="28" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Their needs</text><text x="230" y="200" font-size="22" text-anchor="middle" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">the person, not the illness</text></g>
+  <g><ellipse cx="970" cy="170" rx="170" ry="62" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><text x="970" y="164" font-size="28" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Their story</text><text x="970" y="200" font-size="22" text-anchor="middle" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">culture, beliefs, life</text></g>
+  <g><ellipse cx="190" cy="355" rx="170" ry="62" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><text x="190" y="349" font-size="28" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Their choices</text><text x="190" y="385" font-size="22" text-anchor="middle" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">decide WITH them</text></g>
+  <g><ellipse cx="1010" cy="355" rx="170" ry="62" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><text x="1010" y="349" font-size="28" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Their strengths</text><text x="1010" y="385" font-size="22" text-anchor="middle" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">what they CAN do first</text></g>
+  <g><ellipse cx="260" cy="545" rx="170" ry="62" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><text x="260" y="539" font-size="28" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Family and friends</text><text x="260" y="575" font-size="22" text-anchor="middle" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">partners in care</text></g>
+  <g><ellipse cx="940" cy="545" rx="170" ry="62" fill="#fffaf1" stroke="#d8c9b2" stroke-width="3"/><text x="940" y="539" font-size="28" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Flexible support</text><text x="940" y="575" font-size="22" text-anchor="middle" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">fits their wishes</text></g>
+  <g stroke="#d8c9b2" stroke-width="4"><line x1="350" y1="205" x2="485" y2="270"/><line x1="850" y1="205" x2="715" y2="270"/><line x1="360" y1="355" x2="450" y2="352"/><line x1="840" y1="355" x2="750" y2="352"/><line x1="380" y1="515" x2="490" y2="440"/><line x1="820" y1="515" x2="710" y2="440"/></g>
+</svg></div><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Person-Centered approach</p><div class="video" data-youtube="jUfmRcG7iKs" data-title="Person-Centered approach"></div></div>
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302661/View" target="_blank" rel="noopener">Client-focused approaches to care</a></div>
+  
+  <aside class="tnotes" data-slide="s2" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s3" data-ref="NP6 S3">
+  <h2 class="topic"><span class="num">3</span> Empowerment and social role valorisation <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ2%20A%7C9e879302-69c3-440a-ba52-fc940411aa5b%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Two more big words. They sound hard, but the ideas are simple.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s3.mp3" aria-label="Listen: Empowerment and social role valorisation"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s3p1"><span class="ref" title="Reference">NP6 S3 P1</span><b><a class="term" href="0-index.html#g-empowerment" title="See the glossary">Empowerment</a> means</b> the person has <b>choice and control</b> over the decisions in their life. What you provide is based on <b>their</b> needs.</li><li id="s3p2"><span class="ref" title="Reference">NP6 S3 P2</span><b>Positive effect of empowerment</b>: it builds <b>self-esteem</b> (feeling good about yourself) and <b><a class="term" href="0-index.html#g-self-determination" title="See the glossary">self-determination</a></b> (deciding for yourself).</li><li id="s3p3"><span class="ref" title="Reference">NP6 S3 P3</span><b><a class="term" href="0-index.html#g-social-role-valorisation" title="See the glossary">Social role valorisation</a> (SRV) means</b> improving the lives of people who are <b>disadvantaged</b> in some way, by helping them have <b>valued roles</b> in the community. &quot;Valorise&quot; means to give value.</li><li id="s3p4"><span class="ref" title="Reference">NP6 S3 P4</span><b>Positive effect of SRV</b>: the person sees the <b>value of what they can give</b> to society.</li><li id="s3p5"><span class="ref" title="Reference">NP6 S3 P5</span><b>Example</b>: Mrs Rossi was a baker. Every Friday she bakes scones for morning tea at the aged care home. She has a valued role, and she feels useful and proud.</li></ol>
+  <figure class="infopic"><img src="pics/p1-p13-empowerment-boxes.jpg" alt="Two boxes: empowerment means the person chooses; positive effect: the person feels better about themselves" tabindex="0"><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s3-1" data-activity='{"type":"table","title":"Meaning and positive effect","instructions":"For each concept choose the meaning and the positive effect. Then press Check.","columns":["Concept","Meaning","Positive effect"],"rows":[{"label":"Person-centred approach","cells":[{"options":["Working with the person as an individual","Choice and control over your own life","A valued role for a disadvantaged person"],"answer":"Working with the person as an individual"},{"options":["Feels in control and can make choices","Better self-esteem and self-determination","Sees the value of what they can give"],"answer":"Feels in control and can make choices"}]},{"label":"Empowerment","cells":[{"options":["Working with the person as an individual","Choice and control over your own life","A valued role for a disadvantaged person"],"answer":"Choice and control over your own life"},{"options":["Feels in control and can make choices","Better self-esteem and self-determination","Sees the value of what they can give"],"answer":"Better self-esteem and self-determination"}]},{"label":"Social role valorisation","cells":[{"options":["Working with the person as an individual","Choice and control over your own life","A valued role for a disadvantaged person"],"answer":"A valued role for a disadvantaged person"},{"options":["Feels in control and can make choices","Better self-esteem and self-determination","Sees the value of what they can give"],"answer":"Sees the value of what they can give"}]}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Meaning and positive effect</b></div>
+    <p class="act-instr">For each concept choose the meaning and the positive effect. Then press Check.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302661/View" target="_blank" rel="noopener">Client-focused approaches to care</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302659/View" target="_blank" rel="noopener">Introduction: Principles and models of support in aged care</a></div>
+  
+  <aside class="tnotes" data-slide="s3" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s4" data-ref="NP6 S4">
+  <h2 class="topic"><span class="num">4</span> Care or support? <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ2%20B%7Cbd03b4e0-322f-4320-add3-de0d4ce7c42d%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">These two words sound almost the same. In aged care they mean different things.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s4.mp3" aria-label="Listen: Care or support?"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s4p1"><span class="ref" title="Reference">NP6 S4 P1</span><b>Care</b> means you do things <b>for</b> the person that they <b>cannot do themselves</b>. Their basic needs are met and they are comfortable.</li><li id="s4p2"><span class="ref" title="Reference">NP6 S4 P2</span><b>Support</b> means you help the person to be <b>as independent as they can be</b>. You give <b>prompts</b> (small reminders) and <b>guidance</b>, and the person does the task.</li><li id="s4p3"><span class="ref" title="Reference">NP6 S4 P3</span>Support lets the person <b>keep and use the skills they still have</b>. If you do everything for a person, they can lose those skills.</li><li id="s4p4"><span class="ref" title="Reference">NP6 S4 P4</span><b>Example</b>: Care is you buttoning Mr Tran's shirt because his hands cannot do it. Support is you giving Mr Tran time and saying &quot;top button next&quot; while he does it himself.</li></ol>
+  <figure class="infopic"><div class="info-svg" tabindex="0" role="button" aria-label="Make the picture bigger"><svg viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Care or support: care is doing it for the person; support is helping them do it themselves" style="width:100%;height:auto;max-height:80vh">
+  <text x="600" y="50" font-size="40" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Care or support?</text>
+  <rect x="30" y="80" width="555" height="450" rx="22" fill="#fdf0dc" stroke="#d8c9b2" stroke-width="3"/><rect x="615" y="80" width="555" height="450" rx="22" fill="#e9efe2" stroke="#d8c9b2" stroke-width="3"/>
+  <text x="307" y="135" font-size="40" text-anchor="middle" font-weight="700" fill="#a8542c" font-family="Georgia, serif">CARE</text><text x="892" y="135" font-size="40" text-anchor="middle" font-weight="700" fill="#5f7a5a" font-family="Georgia, serif">SUPPORT</text>
+  <text x="307" y="182" font-size="30" text-anchor="middle" font-weight="700" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">"I do it FOR you"</text><text x="892" y="182" font-size="30" text-anchor="middle" font-weight="700" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">"I help you do it YOURSELF"</text>
+  <g transform="translate(180,300) scale(1.2)"><circle cx="0" cy="-30" r="24" fill="#f1d3b3" stroke="#6b4a33" stroke-width="3"/><path d="M-22 -40 q22 -26 44 0" fill="#ddd" stroke="#6b4a33" stroke-width="2"/><path d="M-40 40 q0 -46 40 -46 q40 0 40 46 Z" fill="#b9b2a8" stroke="#6b4a33" stroke-width="3"/><circle cx="-8" cy="-30" r="3" fill="#2b2420"/><circle cx="8" cy="-30" r="3" fill="#2b2420"/><path d="M-8 -18 q8 6 16 0" stroke="#2b2420" stroke-width="2.5" fill="none"/></g><g transform="translate(310,300) scale(1.2)"><circle cx="0" cy="-30" r="24" fill="#f1d3b3" stroke="#6b4a33" stroke-width="3"/><path d="M-22 -40 q22 -26 44 0" fill="#ddd" stroke="#6b4a33" stroke-width="2"/><path d="M-40 40 q0 -46 40 -46 q40 0 40 46 Z" fill="#a8542c" stroke="#6b4a33" stroke-width="3"/><circle cx="-8" cy="-30" r="3" fill="#2b2420"/><circle cx="8" cy="-30" r="3" fill="#2b2420"/><path d="M-8 -18 q8 6 16 0" stroke="#2b2420" stroke-width="2.5" fill="none"/></g><path d="M228 296 l50 0" stroke="#6b4a33" stroke-width="6" marker-end="url(#ar)"/>
+  <g transform="translate(770,300) scale(1.2)"><circle cx="0" cy="-30" r="24" fill="#f1d3b3" stroke="#6b4a33" stroke-width="3"/><path d="M-22 -40 q22 -26 44 0" fill="#ddd" stroke="#6b4a33" stroke-width="2"/><path d="M-40 40 q0 -46 40 -46 q40 0 40 46 Z" fill="#c9893f" stroke="#6b4a33" stroke-width="3"/><circle cx="-8" cy="-30" r="3" fill="#2b2420"/><circle cx="8" cy="-30" r="3" fill="#2b2420"/><path d="M-8 -18 q8 6 16 0" stroke="#2b2420" stroke-width="2.5" fill="none"/></g><g transform="translate(900,300) scale(1.2)"><circle cx="0" cy="-30" r="24" fill="#f1d3b3" stroke="#6b4a33" stroke-width="3"/><path d="M-22 -40 q22 -26 44 0" fill="#ddd" stroke="#6b4a33" stroke-width="2"/><path d="M-40 40 q0 -46 40 -46 q40 0 40 46 Z" fill="#5f7a5a" stroke="#6b4a33" stroke-width="3"/><circle cx="-8" cy="-30" r="3" fill="#2b2420"/><circle cx="8" cy="-30" r="3" fill="#2b2420"/><path d="M-8 -18 q8 6 16 0" stroke="#2b2420" stroke-width="2.5" fill="none"/></g><path d="M820 330 q40 -40 70 -10" stroke="#6b4a33" stroke-width="5" fill="none" stroke-dasharray="8 6"/>
+  <defs><marker id="ar" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#6b4a33"/></marker></defs>
+  <text x="307" y="400" font-size="26" text-anchor="middle" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">For tasks the person cannot do</text><text x="307" y="440" font-size="26" text-anchor="middle" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Basic needs met, comfortable</text><text x="307" y="490" font-size="24" text-anchor="middle" font-weight="700" fill="#a8542c" font-family="Segoe UI, Arial, sans-serif">Example: you do the buttons</text>
+  <text x="892" y="400" font-size="26" text-anchor="middle" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Prompts and guidance</text><text x="892" y="440" font-size="26" text-anchor="middle" font-weight="400" fill="#2b2420" font-family="Segoe UI, Arial, sans-serif">Keeps skills, more independent</text><text x="892" y="490" font-size="24" text-anchor="middle" font-weight="700" fill="#5f7a5a" font-family="Segoe UI, Arial, sans-serif">Example: "Top button next"</text>
+</svg></div><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s4-1" data-activity='{"type":"sort","title":"Care or support?","instructions":"Tap a story, then tap Care or Support.","buckets":["Care","Support"],"items":[{"text":"You shower Mrs Ng, who cannot stand or lift her arms after a stroke.","bucket":"Care"},{"text":"You put the toothpaste on the brush and Mr Hill brushes his own teeth.","bucket":"Support"},{"text":"You feed Mrs Park because she cannot hold a spoon.","bucket":"Care"},{"text":"You remind Bill to take his pills from the pill box, and he takes them himself.","bucket":"Support"},{"text":"You walk beside Mary while she uses her walker to get to the lounge.","bucket":"Support"},{"text":"You change the bed for a man who stays in bed all day.","bucket":"Care"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Care or support?</b></div>
+    <p class="act-instr">Tap a story, then tap Care or Support.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302662/View" target="_blank" rel="noopener">Concepts of care</a></div>
+  
+  <aside class="tnotes" data-slide="s4" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s5" data-ref="NP6 S5">
+  <h2 class="topic"><span class="num">5</span> Your rights in aged care <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ%2014%7C6d3af2f2-dcd0-4e1b-9e78-86a5deece84c%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">A <b><a class="term" href="0-index.html#g-rights-based-approach" title="See the glossary">rights-based approach</a></b> means every person keeps their rights, at any age. You give the person the information they need, so they can make an <b>informed choice</b>.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s5.mp3" aria-label="Listen: Your rights in aged care"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s5p1"><span class="ref" title="Reference">NP6 S5 P1</span><span class="tag old">Old: still used in your assessment</span> The <b>Charter of Aged Care Rights</b> has <b>14 rights</b>. Under the Charter, a person in aged care has the right to:</li><li id="s5p2"><span class="ref" title="Reference">NP6 S5 P2</span>safe and <b>high-quality care</b> and services</li><li id="s5p3"><span class="ref" title="Reference">NP6 S5 P3</span>be treated with <b>dignity and respect</b></li><li id="s5p4"><span class="ref" title="Reference">NP6 S5 P4</span>have their <b>identity, culture and diversity</b> valued and supported</li><li id="s5p5"><span class="ref" title="Reference">NP6 S5 P5</span>live <b>without abuse and neglect</b></li><li id="s5p6"><span class="ref" title="Reference">NP6 S5 P6</span>be <b>informed</b> about their care and services in a way they <b>understand</b></li><li id="s5p7"><span class="ref" title="Reference">NP6 S5 P7</span><b>access all information about themselves</b>, including their rights, care and services</li><li id="s5p8"><span class="ref" title="Reference">NP6 S5 P8</span>have <b>control</b> and make <b>choices</b> about their care and their personal and social life, even when the choice has some <b>risk</b></li><li id="s5p9"><span class="ref" title="Reference">NP6 S5 P9</span>have control over the <b>personal parts of daily life</b>, their <b>money</b> and their <b>belongings</b></li><li id="s5p10"><span class="ref" title="Reference">NP6 S5 P10</span>their <b>independence</b></li><li id="s5p11"><span class="ref" title="Reference">NP6 S5 P11</span>be <b>listened to and understood</b></li><li id="s5p12"><span class="ref" title="Reference">NP6 S5 P12</span>have a <b>person of their choice</b> (for example an aged care advocate) support them or speak for them</li><li id="s5p13"><span class="ref" title="Reference">NP6 S5 P13</span><b>complain</b> without being punished, and have the complaint dealt with <b>fairly and quickly</b></li><li id="s5p14"><span class="ref" title="Reference">NP6 S5 P14</span><b>privacy</b>, and protection of their <b>personal information</b></li><li id="s5p15"><span class="ref" title="Reference">NP6 S5 P15</span>use their rights <b>without it changing the way they are treated</b></li></ol>
+  <figure class="infopic"><div class="info-svg" tabindex="0" role="button" aria-label="Make the picture bigger"><svg viewBox="0 0 1200 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four rights: safe quality care, dignity and respect, choice and control, live without abuse" style="width:100%;height:auto;max-height:80vh">
+  <text x="600" y="50" font-size="38" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Four of your rights in aged care</text>
+  <g><circle cx="170" cy="190" r="78" fill="#fffaf1" stroke="#d8c9b2" stroke-width="4"/><g transform="translate(170,190)"><path d="M0 34 C-50 0 -44 -40 -16 -40 C-4 -40 0 -30 0 -26 C0 -30 4 -40 16 -40 C44 -40 50 0 0 34Z" fill="#a8542c"/><path d="M-16 -6 l10 12 l22 -24" stroke="#fff" stroke-width="7" fill="none"/></g><text x="170" y="312" font-size="30" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Safe, quality care</text></g>
+  <g><circle cx="450" cy="190" r="78" fill="#fffaf1" stroke="#d8c9b2" stroke-width="4"/><g transform="translate(450,190)"><g transform="translate(0,6) scale(1.1)"><circle cx="0" cy="-30" r="24" fill="#f1d3b3" stroke="#6b4a33" stroke-width="3"/><path d="M-22 -40 q22 -26 44 0" fill="#ddd" stroke="#6b4a33" stroke-width="2"/><path d="M-40 40 q0 -46 40 -46 q40 0 40 46 Z" fill="#c9893f" stroke="#6b4a33" stroke-width="3"/><circle cx="-8" cy="-30" r="3" fill="#2b2420"/><circle cx="8" cy="-30" r="3" fill="#2b2420"/><path d="M-8 -18 q8 6 16 0" stroke="#2b2420" stroke-width="2.5" fill="none"/></g></g><text x="450" y="312" font-size="30" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Dignity and respect</text></g>
+  <g><circle cx="750" cy="190" r="78" fill="#fffaf1" stroke="#d8c9b2" stroke-width="4"/><g transform="translate(750,190)"><path d="M-30 -40 v80 M-38 -40 v24 M-22 -40 v24" stroke="#6b4a33" stroke-width="6"/><path d="M26 -40 q14 20 0 40 v40" stroke="#6b4a33" stroke-width="6" fill="none"/></g><text x="750" y="312" font-size="30" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Choice and control</text></g>
+  <g><circle cx="1030" cy="190" r="78" fill="#fffaf1" stroke="#d8c9b2" stroke-width="4"/><g transform="translate(1030,190)"><rect x="-30" y="-6" width="60" height="44" rx="6" fill="#c9893f" stroke="#6b4a33" stroke-width="3"/><path d="M-18 -6 v-14 a18 18 0 0 1 36 0 v4" stroke="#6b4a33" stroke-width="6" fill="none"/><circle cx="0" cy="14" r="6" fill="#6b4a33"/></g><text x="1030" y="312" font-size="30" text-anchor="middle" font-weight="700" fill="#6b4a33" font-family="Georgia, serif">Live without abuse</text></g>
+</svg></div><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  <p>Read the rights in full: <a href="https://www.agedcarequality.gov.au/sites/default/files/media/charter-of-aged-care-rights-a5-booklet.pdf" target="_blank" rel="noopener">Charter of Aged Care Rights booklet</a> and <a href="https://www.health.gov.au/sites/default/files/2025-08/a-new-aged-care-act-for-the-rights-of-older-people.pdf" target="_blank" rel="noopener">A new aged care act for the rights of older people (fact sheet)</a>.</p>
+  <div class="after"><div class="watch-out" style="background:#e9efe2;border-color:#9cc290"><b style="color:#2f5a2a">Now the law: the Statement of Rights</b> <span class="tag new">New since 2025</span><br>Since <b>1 November 2025</b>, the <b>Statement of Rights</b> in the <b>Aged Care Act 2024</b> has replaced the Charter. It says older people have the right to: make their own decisions and get help to make them; a fair assessment and the care they need; safe, quality care free from abuse and neglect; privacy and their own records; information they understand, in their language; complain without fear; an advocate or a person of their choice; and stay connected with family, friends, community, pets and Country. Your assessment still asks for the Charter rights, so learn those too.</div></div>
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302661/View" target="_blank" rel="noopener">Client-focused approaches to care</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43450466/View" target="_blank" rel="noopener">Charter of Aged Care Rights</a></div>
+  
+  <aside class="tnotes" data-slide="s5" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s6" data-ref="NP6 S6">
+  <h2 class="topic"><span class="num">6</span> Responsibilities of the older person <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ%2014%7C6d3af2f2-dcd0-4e1b-9e78-86a5deece84c%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Rights come with <b>responsibilities</b>. A responsibility is something you are expected to do. The Charter lists four for the person receiving care.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s6.mp3" aria-label="Listen: Responsibilities of the older person"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s6p1"><span class="ref" title="Reference">NP6 S6 P1</span><b>Treat others with respect</b>, including other residents and staff.</li><li id="s6p2"><span class="ref" title="Reference">NP6 S6 P2</span><b>Respect the right of staff to work in a safe place.</b></li><li id="s6p3"><span class="ref" title="Reference">NP6 S6 P3</span><b>Help the provider by giving them the information</b> they need, for example about health changes.</li><li id="s6p4"><span class="ref" title="Reference">NP6 S6 P4</span><b>Pay the fees</b> that were agreed, <b>on time</b>.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s6-1" data-activity='{"type":"sort","title":"Right or responsibility?","instructions":"Is it a right of the older person or a responsibility of the older person?","buckets":["Right","Responsibility"],"items":[{"text":"Be treated with dignity and respect","bucket":"Right"},{"text":"Pay agreed fees on time","bucket":"Responsibility"},{"text":"Complain without being punished","bucket":"Right"},{"text":"Respect the right of staff to work in a safe place","bucket":"Responsibility"},{"text":"Have privacy and their information protected","bucket":"Right"},{"text":"Give the provider the information they need","bucket":"Responsibility"},{"text":"Live without abuse and neglect","bucket":"Right"},{"text":"Treat others with respect","bucket":"Responsibility"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Right or responsibility?</b></div>
+    <p class="act-instr">Is it a right of the older person or a responsibility of the older person?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43450466/View" target="_blank" rel="noopener">Charter of Aged Care Rights</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302661/View" target="_blank" rel="noopener">Client-focused approaches to care</a></div>
+  
+  <aside class="tnotes" data-slide="s6" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s7" data-ref="NP6 S7">
+  <h2 class="topic"><span class="num">7</span> Dignity of risk and quality of life <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ16%7Cc183c7ec-2779-47a4-bd38-8988823dcc8e%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Older people have the right to make their own choices, even when there is some risk. And only the person can say what a good life means to them.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s7.mp3" aria-label="Listen: Dignity of risk and quality of life"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s7p1"><span class="ref" title="Reference">NP6 S7 P1</span><b><a class="term" href="0-index.html#g-dignity-of-risk" title="See the glossary">Dignity of risk</a></b> means <b>letting a person make their own choice</b> about an activity that has <b>good results</b> but may also have <b>some risk</b>.</li><li id="s7p2"><span class="ref" title="Reference">NP6 S7 P2</span><b>Example</b>: Joan (79) wants to walk to the corner shop on her own. There is a small risk she could fall, but walking keeps her strong and happy. With good information, the choice is hers.</li><li id="s7p3"><span class="ref" title="Reference">NP6 S7 P3</span>A <b><a class="term" href="0-index.html#g-value-judgement" title="See the glossary">value judgement</a></b> is an opinion based on <b>your own beliefs</b>, not on facts. It does not think about what the other person believes or values.</li><li id="s7p4"><span class="ref" title="Reference">NP6 S7 P4</span><b>Quality of life</b> means something <b>different to every person</b>. For one person it is good health. For another it is family, money, faith or doing a hobby.</li><li id="s7p5"><span class="ref" title="Reference">NP6 S7 P5</span>So <b>do not judge</b> someone else's quality of life by your own ideas. Give them the information they need and let them make <b>their own choices</b>.</li></ol><figure><img src="pics/p1-p14-skydivers.jpg" alt="Skydivers in the sky" style="max-width:320px"></figure></div>
+  
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Dangers of value judgements</p><div class="video" data-youtube="N8lrmUr5QIE" data-title="Dangers of value judgements"></div></div>
+  
+  
+  
+  
+  <div class="activity" id="act-s7-1" data-activity='{"type":"quiz","title":"What would Daisy do?","instructions":"Choose the best answer.","questions":[{"q":"Mr Lopez (84) wants to keep gardening, even though he sometimes loses his balance. What should happen?","options":["Stop him. It is too risky.","Talk about the risks and ways to make it safer, then respect his choice.","Ask his son to decide."],"answer":1,"why":"Dignity of risk: he can choose an activity with some risk, after getting good information."},{"q":"Mrs Kim spends her pension on lottery tickets. A worker thinks this is a waste. What is this?","options":["A value judgement","Duty of care","Informed consent"],"answer":0,"why":"The worker is judging her choice by their own values. Quality of life is different for every person."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>What would Daisy do?</b></div>
+    <p class="act-instr">Choose the best answer.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302702/View" target="_blank" rel="noopener">Attitudes and stereotypes</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302661/View" target="_blank" rel="noopener">Client-focused approaches to care</a></div>
+  
+  <aside class="tnotes" data-slide="s7" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s8" data-ref="NP6 S8">
+  <h2 class="topic"><span class="num">8</span> Ageism, paternalism and stigma <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ19%7Cbf95f1b8-5819-4e36-b574-035a5c108713%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Some attitudes take away an older person's choice and confidence. Learn the three names and be able to give an example of each.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s8.mp3" aria-label="Listen: Ageism, paternalism and stigma"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s8p1"><span class="ref" title="Reference">NP6 S8 P1</span><b><a class="term" href="0-index.html#g-ageism" title="See the glossary">Ageism</a></b>: treating people badly because of <b>negative beliefs about being old</b>. It limits their choices and hurts their <b>self-esteem</b>. <i>Example</i>: an older person does not get a job because the boss thinks older people cannot learn new things.</li><li id="s8p2"><span class="ref" title="Reference">NP6 S8 P2</span><b><a class="term" href="0-index.html#g-paternalism" title="See the glossary">Paternalism</a></b>: people in charge <b>take away freedoms</b> from people who depend on them, saying it is &quot;for their own good&quot;. <i>Example</i>: staff stop a resident going on a bus trip because she might get tired.</li><li id="s8p3"><span class="ref" title="Reference">NP6 S8 P3</span><b><a class="term" href="0-index.html#g-stigma" title="See the glossary">Stigma</a></b>: seeing a person in a <b>negative way because of one thing about them</b>, like their age. They are seen as a label (&quot;old&quot;), not as a person. <i>Example</i>: people treat an older man with no respect because they think he is a burden on society.</li></ol>
+  
+  
+  
+  
+  
+  <div class="vid local"><p class="vid-title"><b>Watch:</b> Hidden Attitudes on Ageing</p><video controls preload="metadata" playsinline src="media/hidden-attitudes-on-ageing.mp4"></video></div>
+  
+  
+  
+  <div class="activity" id="act-s8-1" data-activity='{"type":"match","title":"Name the attitude","instructions":"Match each example to the attitude.","pairs":[{"a":"A shop worker talks loudly and slowly to every older customer, as if they cannot understand.","b":"Ageism"},{"a":"Staff will not let Mrs Brown cook her own toast \"for her own safety\".","b":"Paternalism"},{"a":"People only see Mr Ivanov as \"the old man in room 4\", not as a retired engineer and grandfather.","b":"Stigma"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Name the attitude</b></div>
+    <p class="act-instr">Match each example to the attitude.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302702/View" target="_blank" rel="noopener">Attitudes and stereotypes</a></div>
+  
+  <aside class="tnotes" data-slide="s8" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s9" data-ref="NP6 S9">
+  <h2 class="topic"><span class="num">9</span> Myths and the truth <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ20%7C32300c41-4e90-4aa6-bfa9-808677495302%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">A <b>myth</b> (or misconception) is a wrong idea that many people believe. Myths about ageing lead to ageism, paternalism and stigma.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s9.mp3" aria-label="Listen: Myths and the truth"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s9p1"><span class="ref" title="Reference">NP6 S9 P1</span><b>Myth</b>: Older people cannot learn new things. <b>Truth</b>: many older people learn new skills, for example after they retire.</li><li id="s9p2"><span class="ref" title="Reference">NP6 S9 P2</span><b>Myth</b>: Older people are stuck in their ways. <b>Truth</b>: many older people are open to change and make healthy new choices every day.</li><li id="s9p3"><span class="ref" title="Reference">NP6 S9 P3</span><b>Myth</b>: Older people are a burden on society. <b>Truth</b>: older people give a lot: money, time as volunteers, and life experience.</li><li id="s9p4"><span class="ref" title="Reference">NP6 S9 P4</span><b>Myth</b>: All old people are sick. <b>Truth</b>: most older people are healthy and active.</li><li id="s9p5"><span class="ref" title="Reference">NP6 S9 P5</span><b>Myth</b>: Older people should avoid exercise so they do not get hurt. <b>Truth</b>: exercise is good for the body and the mind, and it helps people stay independent.</li><li id="s9p6"><span class="ref" title="Reference">NP6 S9 P6</span><b>Myth</b>: All older people will get dementia. <b>Truth</b>: dementia is <b>not</b> a normal part of ageing. Most older people keep their thinking skills.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s9-1" data-activity='{"type":"quiz","title":"Myth buster","instructions":"Myth or truth?","questions":[{"q":"Dementia is a normal part of getting old.","options":["Myth","Truth"],"answer":0,"why":"Dementia is not a normal part of ageing. Most older people keep their thinking skills."},{"q":"Exercise helps older people stay independent.","options":["Myth","Truth"],"answer":1,"why":"Exercise is good for the body and mind, and helps people stay independent."},{"q":"Older people are a burden on society.","options":["Myth","Truth"],"answer":0,"why":"Older people give money, volunteer time and experience."},{"q":"Many older people learn new skills after they retire.","options":["Myth","Truth"],"answer":1,"why":"Older people can and do learn new things."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Myth buster</b></div>
+    <p class="act-instr">Myth or truth?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302702/View" target="_blank" rel="noopener">Attitudes and stereotypes</a></div>
+  
+  <aside class="tnotes" data-slide="s9" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s10" data-ref="NP6 S10">
+  <h2 class="topic"><span class="num">10</span> Psychosocial disability <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ25%20A%7C750201a5-83cf-4e1e-a797-8f05ce349fb3%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Psychosocial disability is common in older people. In Australia, more than 1 in 5 people aged 85 and over live with it.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s10.mp3" aria-label="Listen: Psychosocial disability"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s10p1"><span class="ref" title="Reference">NP6 S10 P1</span>A <b>mental health condition</b> is an illness of the mind, for example depression, anxiety or bipolar disorder.</li><li id="s10p2"><span class="ref" title="Reference">NP6 S10 P2</span>A <b><a class="term" href="0-index.html#g-psychosocial-disability" title="See the glossary">psychosocial disability</a></b> is the <b>disability</b> some people experience <b>because of</b> a mental health condition. They have <b>impairments</b> and <b>cannot take part</b> in everyday life as fully as they want to.</li><li id="s10p3"><span class="ref" title="Reference">NP6 S10 P3</span><b>Not everyone</b> with a mental health condition has a psychosocial disability.</li><li id="s10p4"><span class="ref" title="Reference">NP6 S10 P4</span>Psychosocial disability is <b><a class="term" href="0-index.html#g-episodic" title="See the glossary">episodic</a></b>: it <b>comes and goes</b>. During an episode, the person may need <b>different or extra support</b>.</li><li id="s10p5"><span class="ref" title="Reference">NP6 S10 P5</span>It comes from a mental health condition <b>meeting barriers in the social world</b> (for example stigma, noise, crowds, rules). The person feels they <b>cannot get past those barriers</b>.</li><li id="s10p6"><span class="ref" title="Reference">NP6 S10 P6</span><b>How it interacts with other disabilities</b>: it can make other disabilities <b>harder to manage</b>, it can <b>change the support</b> a person needs, it can make <b>barriers bigger</b> (for example getting to services), and together the effects <b>add up</b> and lower quality of life.</li></ol><figure><img src="pics/p2-p19-head.jpg" alt="Drawing: the side of a head with a wavy line" style="max-width:300px"></figure></div>
+  
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Psychosocial disability</p><div class="video" data-youtube="G_8Hj17-RP4" data-title="Psychosocial disability"></div></div>
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302694/View" target="_blank" rel="noopener">What is a psychosocial disability?</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302693/View" target="_blank" rel="noopener">Introduction: Understanding psychosocial disability</a></div>
+  
+  <aside class="tnotes" data-slide="s10" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s11" data-ref="NP6 S11">
+  <h2 class="topic"><span class="num">11</span> Amelia and Rachel <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCAGE013.one%7C385a267c-3f28-4311-937b-ddfea4913e49%2FQ25%20C%7Cfbb58d47-4bdf-4364-894e-f2a9ef5a1fea%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro"><b>Amelia</b> is 66. She lives with her sister <b>Rachel</b>, who is 60. Amelia has <b>bipolar disorder</b>. Some days she manages well. Most days she struggles with everyday tasks and cannot go out. Her doctor thinks she needs more support for her psychosocial disability.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np6-s11.mp3" aria-label="Listen: Amelia and Rachel"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s11p1"><span class="ref" title="Reference">NP6 S11 P1</span><b>Impacts on Amelia</b>: her <b>working memory</b> may be affected, so it is hard to <b>organise and do everyday tasks</b>.</li><li id="s11p2"><span class="ref" title="Reference">NP6 S11 P2</span><b>Impacts on Amelia</b>: it can be hard to <b>go shopping</b>, <b>see friends</b> and <b>keep appointments</b>.</li><li id="s11p3"><span class="ref" title="Reference">NP6 S11 P3</span><b>Impacts on Rachel</b>: she must <b>support Amelia</b> and carry the <b>responsibility for the household</b>.</li><li id="s11p4"><span class="ref" title="Reference">NP6 S11 P4</span><b>Impacts on Rachel</b>: this can mean <b>stress, tiredness</b> and <b>less time for her own life</b>, work and friends.</li></ol><figure><img src="pics/p2-p37-scared.jpg" alt="A person hiding their face in a jumper" style="max-width:280px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="watch-out"><b>Watch out</b> The question asks about <b>both</b> people. Write the impacts on <b>Amelia</b> and then the impacts on <b>Rachel</b>, in two separate parts.</div>
+  <div class="activity" id="act-s11-1" data-activity='{"type":"sort","title":"Who is affected, and how?","instructions":"Sort each impact: is it on Amelia or on Rachel?","buckets":["Amelia","Rachel"],"items":[{"text":"Finds it hard to organise everyday tasks","bucket":"Amelia"},{"text":"Does all the shopping and pays the bills","bucket":"Rachel"},{"text":"Misses her appointments","bucket":"Amelia"},{"text":"Has less time for her own friends and work","bucket":"Rachel"},{"text":"Stops seeing her friends","bucket":"Amelia"},{"text":"Feels tired and stressed from caring","bucket":"Rachel"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Who is affected, and how?</b></div>
+    <p class="act-instr">Sort each impact: is it on Amelia or on Rachel?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802536/viewContent/43302694/View" target="_blank" rel="noopener">What is a psychosocial disability?</a></div>
+  <div class="finale" data-finale><div class="fin-side left"><div class="fin-mascot"><svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rusty the Rush Clock">
+  <g stroke="#6b4a33" stroke-linecap="round" fill="none" stroke-width="3" opacity=".55"><path d="M4 70h16M2 84h14M6 98h12"/></g>
+  <line x1="50" y1="128" x2="38" y2="152" stroke="#6b4a33" stroke-width="7" stroke-linecap="round"/>
+  <line x1="92" y1="128" x2="108" y2="148" stroke="#6b4a33" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="34" cy="154" rx="11" ry="5" fill="#3d2a1c"/><ellipse cx="112" cy="150" rx="11" ry="5" fill="#3d2a1c"/>
+  <path d="M30 30 a16 16 0 0 1 26 -8" stroke="#8a5a3a" stroke-width="5" fill="none"/>
+  <path d="M84 22 a16 16 0 0 1 26 8" stroke="#8a5a3a" stroke-width="5" fill="none"/>
+  <circle cx="34" cy="30" r="15" fill="#b5653a" stroke="#6b4a33" stroke-width="3"/>
+  <circle cx="106" cy="30" r="15" fill="#b5653a" stroke="#6b4a33" stroke-width="3"/>
+  <rect x="64" y="14" width="12" height="10" rx="3" fill="#6b4a33"/>
+  <circle cx="70" cy="82" r="52" fill="#c9893f" stroke="#6b4a33" stroke-width="5"/>
+  <circle cx="70" cy="82" r="41" fill="#fff8ec"/>
+  <g fill="#6b4a33"><circle cx="70" cy="46" r="2.5"/><circle cx="106" cy="82" r="2.5"/><circle cx="70" cy="118" r="2.5"/><circle cx="34" cy="82" r="2.5"/></g>
+  <path d="M52 64 l12 4 M88 64 l-12 4" stroke="#2b2420" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="58" cy="74" r="5" fill="#2b2420"/><circle cx="82" cy="74" r="5" fill="#2b2420"/>
+  <line x1="70" y1="84" x2="70" y2="58" stroke="#b5653a" stroke-width="4" stroke-linecap="round"/>
+  <line x1="70" y1="84" x2="90" y2="92" stroke="#b5653a" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="70" cy="84" r="4" fill="#6b4a33"/>
+  <path d="M56 104 q14 -9 28 0" stroke="#2b2420" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M112 54 q14 -6 20 4" stroke="#6b4a33" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M28 104 q-14 10 -20 2" stroke="#6b4a33" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg></div><div class="fin-bubble"><p>Fine. Maybe asking first is not a waste of time. Maybe.</p><button type="button" class="say" data-audio="audio/np6-s11-rusty.mp3" aria-label="Listen: Rusty the Rush Clock"><span class="ico">&#9654;</span> Listen</button></div><p class="fin-who">Rusty the Rush Clock</p></div><div class="fin-side right"><div class="fin-mascot"><svg viewBox="0 0 140 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daisy the Dignity Daisy">
+  <path d="M70 100 C68 125 72 145 70 166" stroke="#5f7a5a" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M70 132 C52 118 34 122 26 132 C40 140 58 140 70 132Z" fill="#7d9a6f" stroke="#4f6a4a" stroke-width="2"/>
+  <path d="M71 146 C88 132 106 134 114 144 C100 152 82 152 71 146Z" fill="#7d9a6f" stroke="#4f6a4a" stroke-width="2"/>
+  <g fill="#fffdf7" stroke="#d8c9b2" stroke-width="2">
+    <ellipse cx="70" cy="22" rx="13" ry="21"/><ellipse cx="70" cy="98" rx="13" ry="21" />
+    <ellipse cx="32" cy="60" rx="21" ry="13"/><ellipse cx="108" cy="60" rx="21" ry="13"/>
+    <ellipse cx="43" cy="33" rx="13" ry="21" transform="rotate(-45 43 33)"/><ellipse cx="97" cy="33" rx="13" ry="21" transform="rotate(45 97 33)"/>
+    <ellipse cx="43" cy="87" rx="13" ry="21" transform="rotate(45 43 87)"/><ellipse cx="97" cy="87" rx="13" ry="21" transform="rotate(-45 97 87)"/>
+  </g>
+  <circle cx="70" cy="60" r="27" fill="#f2b632" stroke="#c98a12" stroke-width="3"/>
+  <circle cx="60" cy="56" r="4" fill="#2b2420"/><circle cx="80" cy="56" r="4" fill="#2b2420"/>
+  <circle cx="61.5" cy="54.5" r="1.3" fill="#fff"/><circle cx="81.5" cy="54.5" r="1.3" fill="#fff"/>
+  <circle cx="54" cy="66" r="4" fill="#e8956b" opacity=".6"/><circle cx="86" cy="66" r="4" fill="#e8956b" opacity=".6"/>
+  <path d="M58 68 q12 11 24 0" stroke="#2b2420" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg></div><div class="fin-bubble"><p>Every person is different. Ask, listen, and let them choose. Well done!</p><button type="button" class="say" data-audio="audio/np6-s11-daisy.mp3" aria-label="Listen: Daisy the Dignity Daisy"><span class="ico">&#9654;</span> Listen</button></div><p class="fin-who">Daisy the Dignity Daisy</p></div></div><p class="fin-after">Next lesson: the laws and standards that protect older people, and your duties at work.</p>
+  <aside class="tnotes" data-slide="s11" aria-label="Teacher notes"></aside>
+</section>
+  <footer class="foot">
+    <p>CHCAGE013 · The person at the centre · Built from TAFE Queensland learning resources, 27 Oct 2026. References on this page are written NP6 S(slide) P(point), where NP6 is this page's slide number in Nearpod.</p>
+    <p>Picture credits: Pictures: Adrie Homan and Adobe Stock</p>
+    <p><a href="0-index.html">Lesson index and glossary</a> · <button type="button" class="tlink">Teacher</button></p>
+  </footer>
+</div>
+<a href="#index" class="home" title="Back to the index"><span aria-hidden="true">&#8679;</span> Home</a>
+<div class="tpill" hidden><span>Teacher view on</span><button type="button" class="tp-hide">Hide</button><button type="button" class="tp-out">Sign out</button></div>
+<div class="mascot rusty side-left" data-mascot="rusty" title="Rusty the Rush Clock" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rusty the Rush Clock">
+  <g stroke="#6b4a33" stroke-linecap="round" fill="none" stroke-width="3" opacity=".55"><path d="M4 70h16M2 84h14M6 98h12"/></g>
+  <line x1="50" y1="128" x2="38" y2="152" stroke="#6b4a33" stroke-width="7" stroke-linecap="round"/>
+  <line x1="92" y1="128" x2="108" y2="148" stroke="#6b4a33" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="34" cy="154" rx="11" ry="5" fill="#3d2a1c"/><ellipse cx="112" cy="150" rx="11" ry="5" fill="#3d2a1c"/>
+  <path d="M30 30 a16 16 0 0 1 26 -8" stroke="#8a5a3a" stroke-width="5" fill="none"/>
+  <path d="M84 22 a16 16 0 0 1 26 8" stroke="#8a5a3a" stroke-width="5" fill="none"/>
+  <circle cx="34" cy="30" r="15" fill="#b5653a" stroke="#6b4a33" stroke-width="3"/>
+  <circle cx="106" cy="30" r="15" fill="#b5653a" stroke="#6b4a33" stroke-width="3"/>
+  <rect x="64" y="14" width="12" height="10" rx="3" fill="#6b4a33"/>
+  <circle cx="70" cy="82" r="52" fill="#c9893f" stroke="#6b4a33" stroke-width="5"/>
+  <circle cx="70" cy="82" r="41" fill="#fff8ec"/>
+  <g fill="#6b4a33"><circle cx="70" cy="46" r="2.5"/><circle cx="106" cy="82" r="2.5"/><circle cx="70" cy="118" r="2.5"/><circle cx="34" cy="82" r="2.5"/></g>
+  <path d="M52 64 l12 4 M88 64 l-12 4" stroke="#2b2420" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="58" cy="74" r="5" fill="#2b2420"/><circle cx="82" cy="74" r="5" fill="#2b2420"/>
+  <line x1="70" y1="84" x2="70" y2="58" stroke="#b5653a" stroke-width="4" stroke-linecap="round"/>
+  <line x1="70" y1="84" x2="90" y2="92" stroke="#b5653a" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="70" cy="84" r="4" fill="#6b4a33"/>
+  <path d="M56 104 q14 -9 28 0" stroke="#2b2420" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M112 54 q14 -6 20 4" stroke="#6b4a33" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M28 104 q-14 10 -20 2" stroke="#6b4a33" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg></div><div class="mascot daisy side-right" data-mascot="daisy" title="Daisy the Dignity Daisy" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daisy the Dignity Daisy">
+  <path d="M70 100 C68 125 72 145 70 166" stroke="#5f7a5a" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M70 132 C52 118 34 122 26 132 C40 140 58 140 70 132Z" fill="#7d9a6f" stroke="#4f6a4a" stroke-width="2"/>
+  <path d="M71 146 C88 132 106 134 114 144 C100 152 82 152 71 146Z" fill="#7d9a6f" stroke="#4f6a4a" stroke-width="2"/>
+  <g fill="#fffdf7" stroke="#d8c9b2" stroke-width="2">
+    <ellipse cx="70" cy="22" rx="13" ry="21"/><ellipse cx="70" cy="98" rx="13" ry="21" />
+    <ellipse cx="32" cy="60" rx="21" ry="13"/><ellipse cx="108" cy="60" rx="21" ry="13"/>
+    <ellipse cx="43" cy="33" rx="13" ry="21" transform="rotate(-45 43 33)"/><ellipse cx="97" cy="33" rx="13" ry="21" transform="rotate(45 97 33)"/>
+    <ellipse cx="43" cy="87" rx="13" ry="21" transform="rotate(45 43 87)"/><ellipse cx="97" cy="87" rx="13" ry="21" transform="rotate(-45 97 87)"/>
+  </g>
+  <circle cx="70" cy="60" r="27" fill="#f2b632" stroke="#c98a12" stroke-width="3"/>
+  <circle cx="60" cy="56" r="4" fill="#2b2420"/><circle cx="80" cy="56" r="4" fill="#2b2420"/>
+  <circle cx="61.5" cy="54.5" r="1.3" fill="#fff"/><circle cx="81.5" cy="54.5" r="1.3" fill="#fff"/>
+  <circle cx="54" cy="66" r="4" fill="#e8956b" opacity=".6"/><circle cx="86" cy="66" r="4" fill="#e8956b" opacity=".6"/>
+  <path d="M58 68 q12 11 24 0" stroke="#2b2420" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg></div>
+</main>
+<div class="big" role="dialog" aria-modal="true" aria-label="Card in full screen">
+  <div class="bar"><span class="big-where"></span><button type="button" class="big-close">Close</button></div>
+  <div class="body"></div>
+  <div class="foot"><button type="button" class="big-back">Back</button><button type="button" class="next big-next">Next card</button></div>
+</div>
+<script>var TEACHER = {"salt":"rnge+UdwlIqxRuijM23F0Q==","iv":"8ii3lDViZs+myvcY","ct":"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"}; var ANNOUNCE = {"first":{"mascot":"rusty","voice":"William","pitch":1.1,"none":"Tick tock! Nobody got every activity right first time. Rushing wins again!","some":"Oh no! {who} got every activity right first time. Slowing down works. Who knew?"},"second":{"mascot":"daisy","voice":"Natasha","pitch":1.05,"none":"Keep going, everyone. Take your time and you will beat Rusty.","some":"Well done! {who} got all {n} right first time. Slow and kind wins, Rusty."}}; var MASCOT_LINES = {"rusty":{"lines":["Ask her what she wants? I already know what's best for her.","It's faster if I dress her myself. Tick tock!","Old people can't learn new things. Everybody knows that.","Skydiving at 80? No way. Too risky. I said no.","Rights, schmights. I've got ten more showers to do."],"prefix":"rusty-l2-"},"daisy":{"lines":["It's her life. She decides. You support.","Let her button her own cardigan. It takes longer, but she keeps her skills.","Most older people are healthy and active. Don't believe the myths.","Dignity of risk means people can choose things that have some risk.","Quality of life means something different to every person. Ask them."],"prefix":"daisy-l2-"}};</script>
+<script>(function(){
+  var ANGLES = [-8, -5.5, -9, -4.5, -7, -6, -8.5, -4, -6.5];
+  var big = document.querySelector('.big'), bigBody = big.querySelector('.body'),
+      bigWhere = big.querySelector('.big-where'), active = null;
+
+  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ---------- */
+  (function(){
+    var pill = document.querySelector('.tpill'), tlink = document.querySelector('.tlink'), saved = null, on = '0';
+    var b64 = function(s){ var b = atob(s), a = new Uint8Array(b.length); for(var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; };
+    function decrypt(code){
+      if(!window.crypto || !crypto.subtle) return Promise.reject(new Error('nosubtle'));
+      var enc = new TextEncoder();
+      return crypto.subtle.importKey('raw', enc.encode(code), 'PBKDF2', false, ['deriveKey']).then(function(km){
+        return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(TEACHER.salt), iterations: 150000, hash: 'SHA-256' }, km, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      }).then(function(key){
+        return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(TEACHER.iv) }, key, b64(TEACHER.ct));
+      }).then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
+    }
+    function show(notes){
+      document.querySelectorAll('.tnotes').forEach(function(a){ a.innerHTML = notes[a.getAttribute('data-slide')] || ''; });
+      document.body.classList.add('teacher'); pill.hidden = false;
+      try{ localStorage.setItem('tv_on', '1'); }catch(e){}
+    }
+    function hide(){ document.body.classList.remove('teacher'); pill.hidden = true; try{ localStorage.setItem('tv_on', '0'); }catch(e){} }
+    function unlock(code, quiet){
+      return decrypt(code).then(function(notes){ saved = code; try{ localStorage.setItem('tv_code', code); }catch(e){} show(notes); }, function(err){
+        if(quiet) return;
+        alert(err.message === 'nosubtle' ? 'This browser cannot unlock the teacher view. Use Chrome or Edge.' : 'That code did not work.');
+      });
+    }
+    try{ saved = localStorage.getItem('tv_code'); on = localStorage.getItem('tv_on') || '0'; }catch(e){}
+    var q = new URLSearchParams(location.search);
+    if(q.get('t') === 'off'){ hide(); try{ localStorage.removeItem('tv_code'); }catch(e){} }
+    else if(q.has('t')) unlock(q.get('t'));
+    else if(saved && on === '1') unlock(saved, true);
+    if(tlink) tlink.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')){ hide(); return; }
+      if(saved){ unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); }); } else ask();
+      function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
+    });
+    pill.querySelector('.tp-hide').addEventListener('click', hide);
+    pill.querySelector('.tp-out').addEventListener('click', function(){ hide(); saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open')) hide(); });
+  })();
+
+    /* ---------- audio ---------- */
+  var player = new Audio(), current = null, queue = null;
+  function stopAudio(){ player.pause(); if(current){ current.classList.remove('playing'); current = null; } queue = null; }
+  function playBtn(btn, onEnd){
+    if(current === btn){ stopAudio(); return; }
+    stopAudio();
+    current = btn; btn.classList.add('playing');
+    player.src = btn.getAttribute('data-audio');
+    player.onended = function(){ btn.classList.remove('playing'); current = null; if(onEnd) onEnd(); };
+    player.onerror = function(){ btn.classList.remove('playing'); current = null; btn.title = 'Sound file not found yet'; };
+    player.play().catch(function(){});
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.say'); if(!b) return;
+    e.preventDefault(); e.stopPropagation();
+    var inBig = b.closest('.big');
+    if(inBig && active){ var realBtn = active.card().querySelector('.say'); if(realBtn) b = realBtn; }
+    playBtn(b);
+  });
+
+  /* ---------- mascots follow the scroll ---------- */
+  document.querySelectorAll('.mascot').forEach(function(g, gi){
+    var name = g.getAttribute('data-mascot'), bubble = g.querySelector('.gerry-bubble');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var lastSlide = null, timer = null, ml = MASCOT_LINES[name] || {}, lines = ml.lines || [], prefix = ml.prefix || (name + '-');
+    function place(){
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? window.scrollY / max : 0;
+      var top = 90 + (gi ? 1 - p : p) * (window.innerHeight - 300);
+      g.style.top = top + 'px';
+      var slides = document.querySelectorAll('section.slide'), cur = null;
+      for(var i = 0; i < slides.length; i++){ if(slides[i].getBoundingClientRect().top < window.innerHeight * 0.5) cur = slides[i]; }
+      if(cur !== lastSlide && lastSlide !== null && !reduce){ g.classList.remove('hop'); void g.offsetWidth; g.classList.add('hop'); }
+      lastSlide = cur;
+    }
+    window.addEventListener('scroll', function(){ if(!timer) timer = requestAnimationFrame(function(){ timer = null; place(); }); }, { passive: true });
+    window.addEventListener('resize', place);
+    place();
+    var n = 0;
+    g.addEventListener('click', function(){
+      if(!bubble.hidden){ bubble.hidden = true; return; }
+      var k = n++ % lines.length;
+      bubble.textContent = lines[k]; bubble.hidden = false;
+      stopAudio(); player.src = 'audio/' + prefix + (k + 1) + '.mp3'; player.onended = null; player.onerror = null; player.play().catch(function(){});
+      clearTimeout(bubble._t); bubble._t = setTimeout(function(){ bubble.hidden = true; }, 7000);
+    });
+  });
+
+  /* ---------- finale: big mascots walk in ---------- */
+  document.querySelectorAll('[data-finale]').forEach(function(f){
+    if(!('IntersectionObserver' in window)){ f.classList.add('in'); return; }
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ f.classList.add('in'); io.disconnect(); } }); }, { threshold: 0.35 });
+    io.observe(f);
+  });
+
+  /* ---------- videos ---------- */
+  document.querySelectorAll('.video').forEach(function(v){
+    var id = (v.getAttribute('data-youtube')||'').trim(), t = v.getAttribute('data-title')||'Video';
+    if(!id) return;
+    v.innerHTML = '<iframe title="'+t.replace(/"/g,'&quot;')+'" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>';
+    var w = document.createElement('p'); w.className = 'watch';
+    w.innerHTML = 'Video not playing? <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v='+encodeURIComponent(id)+'">Watch "'+t.replace(/</g,'&lt;')+'" on YouTube</a>';
+    v.parentNode.insertBefore(w, v.nextSibling);
+  });
+
+  /* ---------- click a part of a diagram to make it stand out ---------- */
+  document.querySelectorAll('.spot').forEach(function(sv){
+    var parts = sv.querySelectorAll('[data-spot]');
+    parts.forEach(function(g){
+      g.style.cursor = 'pointer';
+      g.addEventListener('click', function(e){
+        e.stopPropagation();
+        var on = g.classList.contains('lit');
+        parts.forEach(function(x){ x.classList.remove('lit'); });
+        sv.classList.toggle('spotting', !on);
+        if(!on) g.classList.add('lit');
+      });
+    });
+    sv.addEventListener('click', function(){ parts.forEach(function(x){ x.classList.remove('lit'); }); sv.classList.remove('spotting'); });
+  });
+
+  /* ---------- card stacks ---------- */
+  document.querySelectorAll('.stack').forEach(function(stack){
+    var cards = [].slice.call(stack.querySelectorAll('.card')), n = cards.length, i = 0, busy = false;
+    var deck = document.createElement('div'); deck.className = 'deck'; deck.tabIndex = 0;
+    deck.setAttribute('role','group');
+    deck.setAttribute('aria-label', (stack.getAttribute('aria-label')||'Cards') + '. Press the right arrow for the next card.');
+    var pile = document.createElement('div'); pile.className = 'pile'; pile.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
+    deck.appendChild(pile);
+    cards.forEach(function(c, k){
+      c.style.setProperty('--r', ANGLES[k % ANGLES.length] + 'deg');
+      if(k % 2) c.classList.add('shade');
+      if(c.textContent.replace(/\s+/g,' ').length > 520) c.classList.add('long');
+      var tag = document.createElement('span'); tag.className = 'count'; tag.textContent = 'Card ' + (k+1) + ' of ' + n;
+      c.insertBefore(tag, c.firstChild);
+      c.setAttribute('aria-hidden', 'true');
+      deck.appendChild(c);
+    });
+    if(stack.getAttribute('data-playall')){
+      var pa = document.createElement('div'); pa.className = 'playall';
+      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> Play all cards</button>';
+      stack.appendChild(pa);
+      pa.querySelector('button').addEventListener('click', function(ev){
+        ev.stopPropagation();
+        if(queue === stack){ stopAudio(); return; }
+        stopAudio(); queue = stack;
+        function step(){
+          if(queue !== stack) return;
+          var b = cards[i].querySelector('.say');
+          if(!b){ next(); return; }
+          playBtn(b, function(){ setTimeout(function(){ if(queue !== stack) return; if(i === n-1){ queue = null; return; } go(1); step(); }, 900); });
+        }
+        step();
+      }, true);
+    }
+    stack.appendChild(deck);
+
+    var controls = document.createElement('div'); controls.className = 'controls';
+    controls.innerHTML = '<button type="button" class="back">Back</button><span class="where" aria-live="polite"></span><button type="button" class="next">Next card</button><button type="button" class="full">Full screen</button>';
+    stack.appendChild(controls);
+    var hint = document.createElement('p'); hint.className = 'hint'; hint.textContent = 'Click the card to see the next card.';
+    stack.appendChild(hint);
+    var where = controls.querySelector('.where');
+
+    var heights = [];
+    function size(){
+      cards.forEach(function(c, k){ c.style.height = 'auto'; heights[k] = c.offsetHeight; c.style.height = ''; });
+      deck.style.height = heights[i] + 'px';
+    }
+    function show(){
+      cards.forEach(function(c, k){ c.classList.toggle('top', k === i); c.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      where.textContent = 'Card ' + (i+1) + ' of ' + n;
+      if(heights.length) deck.style.height = heights[i] + 'px';
+      if(active === api && big.classList.contains('open')) fill();
+    }
+    function go(step){
+      if(busy) return; busy = true;
+      var old = cards[i];
+      i = (i + step + n) % n;
+      var cls = step > 0 ? 'leave' : 'leave-back';
+      show();
+      old.classList.add(cls);
+      cards[i].classList.add('arrive');
+      setTimeout(function(){ old.classList.remove(cls); cards[i].classList.remove('arrive'); busy = false; }, 440);
+    }
+    function next(){ go(1); }
+    function fill(){
+      bigBody.innerHTML = cards[i].innerHTML;
+      bigWhere.textContent = 'Card ' + (i+1) + ' of ' + n;
+      bigBody.scrollTop = 0;
+    }
+    var api = { go: go, fill: fill, card: function(){ return cards[i]; } };
+
+    deck.addEventListener('click', function(e){ if(e.target.closest('a') || e.target.closest('.say')) return; go(1); });
+    deck.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); go(1); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
+    });
+    controls.querySelector('.next').addEventListener('click', function(){ go(1); });
+    controls.querySelector('.back').addEventListener('click', function(){ go(-1); });
+    controls.querySelector('.full').addEventListener('click', function(){
+      active = api; fill(); big.classList.add('open'); big.querySelector('.big-next').focus();
+    });
+
+    size(); show();
+    window.addEventListener('resize', size);
+    window.addEventListener('load', size);
+    stack.querySelectorAll('img').forEach(function(img){ img.addEventListener('load', size); });
+  });
+
+  function closeBig(){ big.classList.remove('open'); active = null; }
+  big.querySelector('.big-close').addEventListener('click', closeBig);
+  big.querySelector('.big-next').addEventListener('click', function(){ if(active) active.go(1); });
+  big.querySelector('.big-back').addEventListener('click', function(){ if(active) active.go(-1); });
+  document.addEventListener('keydown', function(e){
+    if(!big.classList.contains('open')) return;
+    if(e.key === 'Escape') closeBig();
+    if(e.key === 'ArrowRight' && active) active.go(1);
+    if(e.key === 'ArrowLeft' && active) active.go(-1);
+  });
+
+  /* ---------- activities ---------- */
+  function shuffle(a){ a = a.slice(); for(var i = a.length-1; i > 0; i--){ var j = Math.floor(Math.random()*(i+1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
+  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
+
+  var builders = {
+    /* chips into targets: used by match (one chip per target) and sort (many chips per bucket) */
+    match: function(root, a){ return buildChips(root, a.pairs.map(function(p){ return { text: p.a, target: p.b }; }), shuffle(a.pairs.map(function(p){ return p.b; })), a.labels || null, 1); },
+    sort: function(root, a){ return buildChips(root, a.items.map(function(it){ return { text: it.text, target: it.bucket }; }), a.buckets, null, 99); },
+    order: function(root, a){
+      var list = el('ol', 'order'); root.appendChild(list);
+      var start = a.start == null ? 1 : a.start;
+      function render(items){
+        list.innerHTML = '';
+        items.forEach(function(t, k){
+          var li = el('li'); li.draggable = true; li.setAttribute('data-text', t);
+          li.innerHTML = '<span class="o-n">' + (start + k) + '</span><span class="o-t">' + esc(t) + '</span><span class="o-btn"><button type="button" aria-label="Move up">&#9650;</button><button type="button" aria-label="Move down">&#9660;</button></span>';
+          list.appendChild(li);
+        });
+      }
+      function items(){ return [].map.call(list.children, function(li){ return li.getAttribute('data-text'); }); }
+      function renumber(){ [].forEach.call(list.children, function(li, k){ li.querySelector('.o-n').textContent = start + k; li.classList.remove('right','wrong'); }); }
+      render(shuffle(a.items));
+      list.addEventListener('click', function(e){
+        var b = e.target.closest('button'); if(!b) return;
+        var li = b.closest('li'); var up = b.getAttribute('aria-label') === 'Move up';
+        if(up && li.previousElementSibling) list.insertBefore(li, li.previousElementSibling);
+        if(!up && li.nextElementSibling) list.insertBefore(li.nextElementSibling, li);
+        renumber();
+      });
+      var drag = null;
+      list.addEventListener('dragstart', function(e){ drag = e.target.closest('li'); if(drag) drag.classList.add('dragging'); });
+      list.addEventListener('dragend', function(){ if(drag) drag.classList.remove('dragging'); drag = null; renumber(); });
+      list.addEventListener('dragover', function(e){ e.preventDefault(); var li = e.target.closest('li'); if(!li || li === drag) return; var r = li.getBoundingClientRect(); if(e.clientY < r.top + r.height/2) list.insertBefore(drag, li); else list.insertBefore(drag, li.nextSibling); });
+      return {
+        check: function(){ var ok = 0; [].forEach.call(list.children, function(li, k){ var good = li.getAttribute('data-text') === a.items[k]; li.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, a.items.length]; },
+        reset: function(){ render(shuffle(a.items)); }
+      };
+    },
+    quiz: function(root, a){
+      var qs = [];
+      a.questions.forEach(function(q, qi){
+        var box = el('div', 'quiz-q'); box.innerHTML = '<p><b>' + (qi+1) + '. ' + esc(q.q) + '</b></p>';
+        var sel = -1;
+        q.options.forEach(function(o, oi){
+          var b = el('button', 'opt', esc(o)); b.type = 'button';
+          b.addEventListener('click', function(){ if(box.classList.contains('done')) return; sel = oi; [].forEach.call(box.querySelectorAll('.opt'), function(x){ x.classList.remove('selected'); }); b.classList.add('selected'); });
+          box.appendChild(b);
+        });
+        if(q.why) box.appendChild(el('p', 'why', esc(q.why)));
+        root.appendChild(box);
+        qs.push({ box: box, get: function(){ return sel; }, set: function(v){ sel = v; }, q: q });
+      });
+      return {
+        check: function(){ var ok = 0; qs.forEach(function(x){ var opts = x.box.querySelectorAll('.opt'); x.box.classList.add('done'); opts.forEach(function(o, oi){ o.classList.remove('selected'); if(oi === x.q.answer) o.classList.add('right'); else if(oi === x.get()) o.classList.add('wrong'); }); if(x.get() === x.q.answer) ok++; }); return [ok, qs.length]; },
+        reset: function(){ qs.forEach(function(x){ x.set(-1); x.box.classList.remove('done'); x.box.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected','right','wrong'); }); }); }
+      };
+    },
+    table: function(root, a){
+      var t = el('table', 'fill-table'); root.appendChild(t);
+      t.innerHTML = '<thead><tr>' + a.columns.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead>';
+      var tb = el('tbody'); t.appendChild(tb);
+      a.rows.forEach(function(r){
+        var tr = el('tr'); tr.innerHTML = '<td><b>' + esc(r.label) + '</b></td>';
+        r.cells.forEach(function(c){
+          var td = el('td'); var s = el('select'); s.innerHTML = '<option value="">Choose...</option>' + shuffle(c.options).map(function(o){ return '<option>' + esc(o) + '</option>'; }).join('');
+          s.setAttribute('data-answer', c.answer); td.appendChild(s); tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      return {
+        check: function(){ var ok = 0, n = 0; t.querySelectorAll('select').forEach(function(s){ n++; var td = s.parentNode; td.classList.remove('right','wrong'); var good = s.value === s.getAttribute('data-answer'); td.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, n]; },
+        reset: function(){ t.querySelectorAll('select').forEach(function(s){ s.value = ''; s.parentNode.classList.remove('right','wrong'); }); }
+      };
+    }
+  };
+
+  function buildChips(root, items, targetNames, labels, cap){
+    var bank = el('div', 'bank'); root.appendChild(bank);
+    var tg = el('div', 'targets'); root.appendChild(tg);
+    var selected = null, targets = {};
+    targetNames.forEach(function(name){
+      var t = el('div', 'target'); t.setAttribute('data-name', name);
+      t.innerHTML = '<div class="t-label">' + esc(labels ? (labels[name] || name) : name) + '</div><div class="t-drop"></div>';
+      tg.appendChild(t); targets[name] = t;
+      t.addEventListener('click', function(){ if(selected) place(selected, t); });
+      t.addEventListener('dragover', function(e){ e.preventDefault(); t.classList.add('over'); });
+      t.addEventListener('dragleave', function(){ t.classList.remove('over'); });
+      t.addEventListener('drop', function(e){ e.preventDefault(); t.classList.remove('over'); if(selected) place(selected, t); });
+    });
+    function place(chip, t){
+      var drop = t.querySelector('.t-drop');
+      if(cap === 1 && drop.children.length){ bank.appendChild(drop.firstElementChild); }
+      drop.appendChild(chip); chip.classList.remove('selected','right','wrong'); selected = null;
+    }
+    function mk(it){
+      var c = el('div', 'chip', esc(it.text)); c.setAttribute('data-target', it.target); c.draggable = true; c.tabIndex = 0;
+      c.addEventListener('click', function(e){ e.stopPropagation(); if(c.parentNode !== bank){ bank.appendChild(c); c.classList.remove('right','wrong'); selected = null; return; } if(selected) selected.classList.remove('selected'); selected = c; c.classList.add('selected'); });
+      c.addEventListener('dragstart', function(){ selected = c; c.classList.add('selected'); });
+      c.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); c.click(); } });
+      return c;
+    }
+    function fillBank(){ bank.innerHTML = ''; shuffle(items).forEach(function(it){ bank.appendChild(mk(it)); }); }
+    fillBank();
+    return {
+      check: function(){ var ok = 0; items.length; root.querySelectorAll('.chip').forEach(function(c){ var t = c.closest('.target'); c.classList.remove('right','wrong'); if(!t){ c.classList.add('wrong'); return; } var good = t.getAttribute('data-name') === c.getAttribute('data-target'); c.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, items.length]; },
+      reset: function(){ root.querySelectorAll('.t-drop').forEach(function(d){ d.innerHTML = ''; }); fillBank(); selected = null; }
+    };
+  }
+
+  document.querySelectorAll('.activity').forEach(function(act){
+    var a; try{ a = JSON.parse(act.getAttribute('data-activity')); }catch(e){ return; }
+    var body = act.querySelector('.act-body'), res = act.querySelector('.act-result');
+    var b = builders[a.type]; if(!b) return;
+    var api = b(body, a);
+    var slide = act.closest('section.slide'), peek = act.querySelector('.act-peek'), tools = act.querySelector('.act-tools');
+    function blur(on){ if(slide) slide.classList.toggle('hide-notes', on); peek.textContent = on ? 'Show the notes' : 'Hide the notes to carry on'; act.classList.toggle('peeking', !on && act.classList.contains('started')); }
+    act.querySelector('.act-go').addEventListener('click', function(){
+      act.classList.add('started'); act.querySelector('.act-start').hidden = true; body.hidden = false; tools.hidden = false; blur(true);
+      act.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    peek.addEventListener('click', function(){ blur(!slide.classList.contains('hide-notes')); });
+    act.querySelector('.act-check').addEventListener('click', function(){
+      var r = api.check(); res.className = 'act-result ' + (r[0] === r[1] ? 'good' : 'bad');
+      res.textContent = r[0] === r[1] ? 'All correct. Well done!' : r[0] + ' of ' + r[1] + ' correct. Try the red ones again.';
+      if(r[0] === r[1]){ act.classList.remove('started'); blur(false); }
+    });
+    act.querySelector('.act-reset').addEventListener('click', function(){ api.reset(); res.textContent = ''; res.className = 'act-result'; });
+  });
+})();
+
+/* ---------- infographics: click for full screen (CHCAGE013) ---------- */
+(function(){
+  function open(node){
+    var box = document.createElement('div'); box.className = 'zoombox'; box.setAttribute('role','dialog'); box.setAttribute('aria-label','Picture full screen');
+    box.appendChild(node.cloneNode(true));
+    var c = document.createElement('button'); c.className = 'zclose'; c.type = 'button'; c.textContent = 'Close'; box.appendChild(c);
+    function shut(){ box.remove(); document.removeEventListener('keydown', key); }
+    function key(e){ if(e.key === 'Escape') shut(); }
+    box.addEventListener('click', shut); document.addEventListener('keydown', key);
+    document.body.appendChild(box);
+  }
+  document.querySelectorAll('figure.infopic img, figure.infopic .info-svg').forEach(function(el){
+    el.addEventListener('click', function(){ open(el); });
+    el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(el); } });
+  });
+})();
+</script>
+<script src="../shared/presenting.js"></script>
+</body>
+</html>
