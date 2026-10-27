@@ -80,6 +80,10 @@
     '.ppanel .sum div{display:flex; justify-content:space-between; gap:10px; padding:3px 0}',
     '.ppanel .sum b{font-size:1.1em}',
     '.ppanel .star b{color:#b45309}',
+    '.ppanel .sum{position:sticky; bottom:0}',
+    '.ppanel.compact li{padding:2px 6px; font-size:.9em}',
+    '.ppanel.compact li .c small{display:inline; margin-left:6px}',
+    '.ppanel.compact li .c{display:flex; align-items:baseline}',
     '.ppanel .pv-ann{font:inherit; font-size:.8em; font-weight:800; border:0; border-radius:20px; padding:5px 12px; background:#fff; color:#b45309; cursor:pointer; min-height:34px; white-space:nowrap}',
     '.ppanel h3 .ht{display:flex; flex-direction:column; gap:0; font-size:1em; font-weight:800}',
     '.ppanel h3 .here{font-size:.75em; font-weight:600}',
@@ -179,6 +183,7 @@
   panel.innerHTML = '<h3><span class="ht">Class progress <span class="here"></span></span></h3><ol></ol><div class="sum"></div>';
   document.body.appendChild(panel);
   var list = panel.querySelector('ol');
+  if(acts.length > 8) panel.classList.add('compact');
   acts.forEach(function(a, i){
     var li = el('li'); li.setAttribute('data-act', a.id);
     li.appendChild(el('span', 'n', String(i + 1)));
@@ -203,10 +208,12 @@
   function say(text, voiceName, pitch){
     return new Promise(function(done){
       if(!window.speechSynthesis){ setTimeout(done, 4000); return; }
+      var finished = false, finish = function(){ if(!finished){ finished = true; done(); } };
+      setTimeout(finish, 2500 + text.length * 90);   /* never wait forever, e.g. no voices on this computer */
       var u = new SpeechSynthesisUtterance(text), v = pickVoice(voiceName);
       if(v){ u.voice = v; u.lang = v.lang; } else u.lang = 'en-AU';
       u.rate = 0.95; u.pitch = pitch || 1;
-      u.onend = u.onerror = function(){ done(); };
+      u.onend = u.onerror = finish;
       speechSynthesis.speak(u);
     });
   }
