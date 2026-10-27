@@ -64,23 +64,25 @@
     '.ppill .pp-stop{background:transparent; color:#fff; border:1px solid #fff}',
     '.ppill .dot{width:10px; height:10px; border-radius:50%; background:#fef3c7; animation:pvblink 1.6s infinite}',
     '@keyframes pvblink{50%{opacity:.25}}',
-    '.ppanel{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(80px,7vw,110px); z-index:44; width:min(440px,calc(100vw - 32px)); max-height:calc(100vh - 200px); overflow:auto; background:#fff; color:#1b2530; border:3px solid #b45309; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.3); font-size:clamp(16px,1.15vw,22px); display:none}',
+    '.ppanel{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(80px,7vw,110px); z-index:44; width:min(440px,calc(100vw - 32px)); max-height:calc(100vh - 230px); overflow:auto; background:#fff; color:#1b2530; border:3px solid #b45309; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.3); font-size:clamp(15px,1.05vw,21px); display:none}',
     'body.presenting .ppanel.open{display:block}',
-    '.ppanel h3{margin:0; padding:12px 16px; background:#b45309; color:#fff; font-size:1.05em; display:flex; justify-content:space-between; align-items:center; gap:10px}',
+    '.ppanel h3{position:sticky; top:0; margin:0; padding:8px 10px 8px 14px; background:#b45309; color:#fff; font-size:1.05em; display:flex; justify-content:space-between; align-items:center; gap:10px}',
     '.ppanel h3 span{font-weight:600; font-size:.85em}',
     '.ppanel ol{list-style:none; margin:0; padding:6px 10px}',
-    '.ppanel li{display:flex; gap:10px; align-items:center; padding:8px 6px; border-bottom:1px solid #f1e6d6; cursor:pointer; border-radius:8px}',
+    '.ppanel li{display:flex; gap:10px; align-items:center; padding:4px 6px; border-bottom:1px solid #f1e6d6; cursor:pointer; border-radius:8px}',
     '.ppanel li:hover{background:#fffbeb}',
     '.ppanel li .n{flex:0 0 1.6em; height:1.6em; border-radius:50%; background:#fde68a; color:#78350f; display:grid; place-items:center; font-weight:800; font-size:.85em}',
     '.ppanel li .t{flex:1; line-height:1.25}',
     '.ppanel li .c{white-space:nowrap; font-weight:800; text-align:right; line-height:1.2}',
     '.ppanel li .c small{display:block; font-weight:600; color:#6b7280; font-size:.75em}',
     '.ppanel li.all .n{background:#059669; color:#fff}',
-    '.ppanel .sum{padding:10px 16px 14px; background:#fffbeb; border-top:2px solid #fde68a}',
+    '.ppanel .sum{padding:6px 14px 8px; background:#fffbeb; border-top:2px solid #fde68a}',
     '.ppanel .sum div{display:flex; justify-content:space-between; gap:10px; padding:3px 0}',
     '.ppanel .sum b{font-size:1.1em}',
     '.ppanel .star b{color:#b45309}',
-    '.ppanel .pv-ann{display:block; width:100%; margin-top:10px; font:inherit; font-weight:800; border:0; border-radius:24px; padding:10px 16px; background:#b45309; color:#fff; cursor:pointer; min-height:44px}',
+    '.ppanel .pv-ann{font:inherit; font-size:.8em; font-weight:800; border:0; border-radius:20px; padding:5px 12px; background:#fff; color:#b45309; cursor:pointer; min-height:34px; white-space:nowrap}',
+    '.ppanel h3 .ht{display:flex; flex-direction:column; gap:0; font-size:1em; font-weight:800}',
+    '.ppanel h3 .here{font-size:.75em; font-weight:600}',
     '.ppanel .pv-note{font-size:.75em; color:#6b7280; margin-top:6px}',
     '.pv-win{position:fixed; left:50%; top:50%; transform:translate(-50%,-50%); z-index:60; width:min(560px,calc(100vw - 32px)); background:#fffbeb; border:4px solid #f59e0b; border-radius:20px; padding:26px 24px 22px; text-align:center; box-shadow:0 20px 60px rgba(0,0,0,.35); font-size:clamp(18px,1.4vw,26px)}',
     '.pv-win .big{font-size:3em; line-height:1}',
@@ -174,7 +176,7 @@
   }
 
   var panel = el('div', 'ppanel'); panel.setAttribute('aria-label', 'Class progress');
-  panel.innerHTML = '<h3>Class progress <span class="here"></span></h3><ol></ol><div class="sum"></div>';
+  panel.innerHTML = '<h3><span class="ht">Class progress <span class="here"></span></span></h3><ol></ol><div class="sum"></div>';
   document.body.appendChild(panel);
   var list = panel.querySelector('ol');
   acts.forEach(function(a, i){
@@ -191,6 +193,7 @@
   /* ---------- mascots announce the result ---------- */
   var annBtn = el('button', 'pv-ann', '\uD83D\uDCE3 Announce'); annBtn.type = 'button';
   annBtn.addEventListener('click', function(){ announce(lastPerfect); });
+  panel.querySelector('h3').appendChild(annBtn);
   function pickVoice(want){
     var vs = (window.speechSynthesis && speechSynthesis.getVoices()) || [];
     return vs.filter(function(v){ return v.name.indexOf(want) > -1; })[0] ||
@@ -261,7 +264,7 @@
     var r1 = el('div', 'star'); r1.appendChild(el('span', null, '⭐ All ' + ACT_IDS.length + ' right first try')); r1.appendChild(el('b', null, String(perfect)));
     var r2 = el('div'); r2.appendChild(el('span', null, 'Still on track (no mistakes yet)')); r2.appendChild(el('b', null, String(onTrack)));
     sum.appendChild(r1); sum.appendChild(r2);
-    sum.appendChild(annBtn); sum.appendChild(el('div', 'pv-note', 'Peeking at the notes before the first Check counts as a miss.'));
+    sum.appendChild(el('div', 'pv-note', 'Peeking at the notes before the first Check counts as a miss.'));
     lastPerfect = perfect;
   }
 
