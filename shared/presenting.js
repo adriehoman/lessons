@@ -4,7 +4,7 @@
    - Students: their page quietly reports (no names) when they start an activity,
      when they get it all correct, and whether their first Check was all correct.
    - Data lives in Google Firebase Realtime Database (free plan). See SETUP below.
-   Built by Claude for A3 Homan, 27 Oct 2026. */
+   Built by Claude for A3 Homan, 27 Oct 2026. Prize round across lessons and unit-wide prize codes: 28 Oct 2026. */
 (function(){
   'use strict';
 
@@ -26,10 +26,13 @@
   function el(tag, cls, txt){ var e = document.createElement(tag); if(cls) e.className = cls; if(txt != null) e.textContent = txt; return e; }
   function titleOf(act){ var b = act.querySelector('.act-head b'); return b ? b.textContent.trim() : act.id; }
 
-  /* winner code: the same 3 digits on the student's screen and on the teacher's panel */
-  function winCode(dev, sid){ var h = 5381, t = dev + '|' + sid; for(var i = 0; i < t.length; i++) h = ((h * 33) ^ t.charCodeAt(i)) >>> 0; return String(100 + h % 900); }
+  var PATH = location.pathname.replace(/^\/lessons\//, '').replace(/\.html$/, '');
+  var LESSON = PATH.replace(/[.#$\[\]\/]/g, '_') || 'page';
+  var UNIT = (PATH.split('/').slice(-2, -1)[0] || LESSON).replace(/[.#$\[\]]/g, '_');   /* the unit folder, e.g. chcage013 */
 
-  var LESSON = (location.pathname.replace(/^\/lessons\//, '').replace(/\.html$/, '').replace(/[.#$\[\]\/]/g, '_')) || 'page';
+  /* prize code: 4 digits, the same on the student's screen and on the teacher's panel, and the SAME in every
+     lesson of the unit (made from the device and the unit), so results can be carried over between lessons. */
+  function winCode(dev){ var h = 5381, t = dev + '|' + UNIT; for(var i = 0; i < t.length; i++) h = ((h * 33) ^ t.charCodeAt(i)) >>> 0; return String(1000 + h % 9000); }
   var DEVICE = ls('pv_dev'); if(!DEVICE){ DEVICE = rid(12); ls('pv_dev', DEVICE); }
   var ACT_IDS = acts.map(function(a){ return a.id; });
 
@@ -99,6 +102,15 @@
     '.pv-code b{letter-spacing:.1em; color:#b45309}',
     '.ppanel .codes{font-size:.85em; color:#78350f; padding:0 0 4px}',
     '.ppanel .codes b{letter-spacing:.08em}',
+    '.ppanel .round{padding:8px 14px 8px; background:#fef3c7; border-bottom:2px solid #f59e0b}',
+    '.ppanel .round .rt{display:flex; justify-content:space-between; align-items:center; gap:8px; font-weight:800; color:#78350f}',
+    '.ppanel .round .rl{display:flex; flex-wrap:wrap; gap:6px; margin:6px 0}',
+    '.ppanel .round .rl span{display:inline-flex; align-items:center; gap:4px; background:#fff; border:1px solid #f59e0b; border-radius:14px; padding:1px 4px 1px 10px; font-size:.8em; font-weight:700; color:#78350f}',
+    '.ppanel .round .rl span.cur{background:#b45309; color:#fff; border-color:#b45309; padding-right:10px}',
+    '.ppanel .round .rl button{border:0; background:transparent; color:#b45309; cursor:pointer; font-size:1em; line-height:1; padding:2px 4px; min-height:24px}',
+    '.ppanel .round .rd{display:flex; justify-content:space-between; gap:10px; padding:2px 0}',
+    '.ppanel .round .rnew{font:inherit; font-size:.75em; font-weight:700; border:1px solid #b45309; border-radius:16px; padding:3px 10px; background:#fff; color:#b45309; cursor:pointer; min-height:30px; white-space:nowrap}',
+    'body.presenting.tv-pill .ppill{top:62px}',
     '.pv-win button{font:inherit; font-weight:700; border:0; border-radius:24px; padding:10px 24px; background:#b45309; color:#fff; cursor:pointer; min-height:44px}'
   ].join('\n');
   document.head.appendChild(css);
@@ -162,20 +174,20 @@
     if(!liveSid || iAmPresenting()) return;
     var all = ACT_IDS.every(function(id){ return mine.a[id] && mine.a[id].f === true; });
     if(!all) return;
-    var code = winCode(DEVICE, liveSid);
+    var code = winCode(DEVICE);
     /* the code stays in the corner, even after Close or a reload */
     if(!codeTag){
       codeTag = el('div', 'pv-code'); codeTag.setAttribute('role', 'status');
-      codeTag.appendChild(document.createTextNode('\u2B50 Winner code ')); codeTag.appendChild(el('b', null, code));
+      codeTag.appendChild(document.createTextNode('\u2B50 Prize code ')); codeTag.appendChild(el('b', null, code));
       document.body.appendChild(codeTag);
     }
     if(mine.won === liveSid) return;   /* pop-up only once */
     mine.won = liveSid; saveMine();
     var w = el('div', 'pv-win'); w.setAttribute('role', 'dialog'); w.setAttribute('aria-label', 'Well done');
     w.appendChild(el('div', 'big', '\u2B50'));
-    w.appendChild(el('p', null, 'You got all ' + ACT_IDS.length + ' activities right on the first try! Show your teacher this code:'));
+    w.appendChild(el('p', null, 'You got all ' + ACT_IDS.length + ' activities right on the first try! Your prize code is:'));
     w.appendChild(el('div', 'code', code));
-    w.appendChild(el('p', null, 'Your code stays in the bottom corner of the page.'));
+    w.appendChild(el('p', null, 'Your code stays in the bottom corner of the page. It is the same code in every lesson, so keep using this computer.'));
     var ok = el('button', null, 'Close'); ok.type = 'button'; ok.addEventListener('click', function(){ w.remove(); });
     w.appendChild(ok); document.body.appendChild(w); ok.focus();
   }
@@ -216,7 +228,10 @@
 
   /* ---------- mascots announce the result ---------- */
   var annBtn = el('button', 'pv-ann', '\uD83D\uDCE3 Announce'); annBtn.type = 'button';
-  annBtn.addEventListener('click', function(){ announce(lastPerfect, lastCodes); });
+  annBtn.addEventListener('click', function(){
+    if(lastRound.lessons > 1) announce(lastRound.n, lastRound.codes, lastRound.total, lastRound.n ? null : lastRound);
+    else announce(lastPerfect, lastCodes, ACT_IDS.length, lastPerfect ? null : lastRound);
+  });
   panel.querySelector('h3').appendChild(annBtn);
   function pickVoice(want){
     var vs = (window.speechSynthesis && speechSynthesis.getVoices()) || [];
@@ -242,16 +257,21 @@
     mascot.classList.remove('hop'); void mascot.offsetWidth; mascot.classList.add('hop');
     clearTimeout(b._t); b._t = setTimeout(function(){ b.hidden = true; }, 12000);
   }
-  function announce(n, codes){
-    codes = codes || [];
-    var shown = codes.length ? ' Winner code' + (codes.length > 1 ? 's: ' : ': ') + codes.join(', ') + '.' : '';
-    var spoken = codes.length ? ' Winner code' + (codes.length > 1 ? 's: ' : ': ') + codes.map(function(c){ return c.split('').join(' '); }).join(', and ') + '.' : '';
+  function announce(n, codes, total, bestInfo){
+    codes = codes || []; total = total || ACT_IDS.length;
+    var digits = function(c){ return c.split('').join(' '); };
+    var shown = codes.length ? ' Prize code' + (codes.length > 1 ? 's: ' : ': ') + codes.join(', ') + '.' : '';
+    var spoken = codes.length ? ' Prize code' + (codes.length > 1 ? 's: ' : ': ') + codes.map(digits).join(', and ') + '.' : '';
+    if(!codes.length && bestInfo && bestInfo.best && bestInfo.bestCodes.length && bestInfo.lessons > 1){
+      shown = ' Best so far: ' + bestInfo.best + ' of ' + bestInfo.total + '. Code' + (bestInfo.bestCodes.length > 1 ? 's: ' : ': ') + bestInfo.bestCodes.join(', ') + '.';
+      spoken = ' The best so far got ' + bestInfo.best + ' out of ' + bestInfo.total + '. Code' + (bestInfo.bestCodes.length > 1 ? 's: ' : ': ') + bestInfo.bestCodes.map(digits).join(', and ') + '.';
+    }
     var who = n === 1 ? '1 student' : n + ' students';
     /* Each unit can give its own mascots their own lines (window.ANNOUNCE, written by the unit's build from site.js).
        Without it, the original Gerry and Dottie lines are used, so older pages work as before. */
     var A = window.ANNOUNCE, ms = document.querySelectorAll('.mascot'), first, second, fLine, sLine, fV = 'William', fP = 1.15, sV = 'Natasha', sP = 1;
     if(A && A.first){
-      var fill = function(t){ return String(t || '').replace(/\{who\}/g, who).replace(/\{n\}/g, ACT_IDS.length); };
+      var fill = function(t){ return String(t || '').replace(/\{who\}/g, who).replace(/\{n\}/g, total); };
       first = document.querySelector('.mascot[data-mascot="' + A.first.mascot + '"]') || ms[0];
       second = A.second ? (document.querySelector('.mascot[data-mascot="' + A.second.mascot + '"]') || null) : null;
       fLine = fill(n === 0 ? A.first.none : A.first.some); fV = A.first.voice || fV; fP = A.first.pitch || fP;
@@ -261,7 +281,7 @@
       fLine = n === 0 ? 'Ha! Nobody got every activity right on the first try. Not yet!'
                       : 'Oh no! ' + who + ' got every activity right on the first try. They know all my tricks!';
       sLine = n === 0 ? 'Keep going, everyone. You can still beat Gerry!'
-                      : 'Well done! ' + who + ' got all ' + ACT_IDS.length + ' right first time. Gerry is in trouble now!';
+                      : 'Well done! ' + who + ' got all ' + total + ' right first time. Gerry is in trouble now!';
     }
     if(window.speechSynthesis) speechSynthesis.cancel();
     if(!second){ bubble(first, fLine + shown); say(fLine + spoken, fV, fP); return; }
@@ -298,16 +318,73 @@
     Object.keys(devs).forEach(function(d){
       var tried = 0, firstOk = 0;
       ACT_IDS.forEach(function(id){ var r = (data[id] || {})[d]; if(r && r.f !== null && r.f !== undefined){ tried++; if(r.f === true) firstOk++; } });
-      if(tried && firstOk === tried){ if(tried === ACT_IDS.length){ perfect++; codes.push(winCode(d, mySid)); } else onTrack++; }
+      if(tried && firstOk === tried){ if(tried === ACT_IDS.length){ perfect++; codes.push(winCode(d)); } else onTrack++; }
     });
     var sum = panel.querySelector('.sum'); sum.innerHTML = '';
-    var r1 = el('div', 'star'); r1.appendChild(el('span', null, '⭐ All ' + ACT_IDS.length + ' right first try')); r1.appendChild(el('b', null, String(perfect)));
+    var r1 = el('div', 'star'); r1.appendChild(el('span', null, '⭐ This lesson: all ' + ACT_IDS.length + ' right first try')); r1.appendChild(el('b', null, String(perfect)));
     var r2 = el('div'); r2.appendChild(el('span', null, 'Still on track (no mistakes yet)')); r2.appendChild(el('b', null, String(onTrack)));
     sum.appendChild(r1);
-    if(codes.length){ var cr = el('div', 'codes'); cr.appendChild(document.createTextNode('Winner codes: ')); cr.appendChild(el('b', null, codes.sort().join(' \u00B7 '))); sum.appendChild(cr); }
+    if(codes.length){ var cr = el('div', 'codes'); cr.appendChild(document.createTextNode('Prize codes: ')); cr.appendChild(el('b', null, codes.sort().join(' \u00B7 '))); sum.appendChild(cr); }
     sum.appendChild(r2);
     sum.appendChild(el('div', 'pv-note', 'Peeking at the notes before the first Check counts as a miss.'));
     lastPerfect = perfect; lastCodes = codes;
+    roundData[mySid] = data; renderRound();
+  }
+
+  /* ---------- prize round: carry the first-try results over to the next lessons of the unit ----------
+     Every lesson you present on THIS computer joins the current prize round of the unit. The panel adds up the
+     activities of all lessons in the round. Start a new round after you give out the prizes. A round older than
+     21 days starts again by itself. The round list lives in this browser only (no student data is stored here). */
+  var RKEY = 'pv_round_' + UNIT, roundData = {}, roundWatch = {}, roundBox = el('div', 'round');
+  var lastRound = { n: 0, codes: [], total: 0, best: 0, bestCodes: [], lessons: 1 };
+  function lessonName(){ var a = document.querySelector('.lessonbar a.on'), m = a && a.textContent.match(/^\s*(\d+)/); return m ? 'Lesson ' + m[1] : (document.querySelector('h1') || {}).textContent || LESSON; }
+  function readRound(){ try{ return JSON.parse(ls(RKEY)) || null; }catch(e){ return null; } }
+  function writeRound(r){ ls(RKEY, JSON.stringify(r)); }
+  function joinRound(sid, fresh){
+    var r = readRound(), now = Date.now();
+    if(fresh || !r || !r.lessons || now - (r.last || 0) > 21 * 864e5) r = { id: now.toString(36), started: now, lessons: [] };
+    r.lessons = r.lessons.filter(function(x){ return x.lesson !== LESSON; });
+    r.lessons.push({ lesson: LESSON, name: lessonName(), sid: sid, acts: ACT_IDS });
+    r.last = now; writeRound(r); syncRoundWatch();
+  }
+  function syncRoundWatch(){
+    var r = readRound(), want = {};
+    (r ? r.lessons : []).forEach(function(x){ if(x.sid !== mySid) want[x.sid] = true; });
+    Object.keys(roundWatch).forEach(function(sid){ if(!want[sid]){ roundWatch[sid](); delete roundWatch[sid]; delete roundData[sid]; } });
+    withBackend(function(b){ Object.keys(want).forEach(function(sid){ if(!roundWatch[sid]) roundWatch[sid] = b.watch('sessions/' + sid, function(v){ roundData[sid] = v || {}; renderRound(); }); }); });
+    renderRound();
+  }
+  function renderRound(){
+    var r = readRound(); roundBox.innerHTML = '';
+    if(!r || !mySid) return;
+    var total = 0, devs = {}, score = {};
+    r.lessons.forEach(function(x){
+      var data = roundData[x.sid] || {};
+      total += x.acts.length;
+      x.acts.forEach(function(id){ Object.keys(data[id] || {}).forEach(function(d){ var v = data[id][d]; devs[d] = true; if(!score[d]) score[d] = { ok: 0, tried: 0 }; if(v && v.f !== null && v.f !== undefined){ score[d].tried++; if(v.f === true) score[d].ok++; } }); });
+    });
+    var perfect = [], track = 0, best = 0;
+    Object.keys(score).forEach(function(d){ var s = score[d]; if(s.ok > best) best = s.ok; if(s.ok === total) perfect.push(winCode(d)); else if(s.tried && s.ok === s.tried) track++; });
+    var bestCodes = best ? Object.keys(score).filter(function(d){ return score[d].ok === best; }).map(winCode).sort() : [];
+    lastRound = { n: perfect.length, codes: perfect.sort(), total: total, best: best, bestCodes: bestCodes, lessons: r.lessons.length };
+    var head = el('div', 'rt'); head.appendChild(el('span', null, '\uD83C\uDF81 Prize round: ' + total + ' activities'));
+    var bNew = el('button', 'rnew', 'New prize round'); bNew.type = 'button';
+    bNew.title = 'Start again from this lesson, for example after you give out the prizes';
+    bNew.addEventListener('click', function(){ if(confirm('Start a new prize round from this lesson?\nThe earlier lessons will not count any more.')) joinRound(mySid, true); });
+    head.appendChild(bNew); roundBox.appendChild(head);
+    var chips = el('div', 'rl');
+    r.lessons.forEach(function(x){
+      var c = el('span', x.lesson === LESSON ? 'cur' : null, x.name + ' (' + x.acts.length + ')');
+      if(x.lesson !== LESSON){ var rm = el('button', null, '\u00D7'); rm.type = 'button'; rm.title = 'Leave ' + x.name + ' out of this round'; rm.setAttribute('aria-label', rm.title);
+        rm.addEventListener('click', function(){ var rr = readRound(); rr.lessons = rr.lessons.filter(function(y){ return y.lesson !== x.lesson; }); writeRound(rr); syncRoundWatch(); }); c.appendChild(rm); }
+      chips.appendChild(c);
+    });
+    roundBox.appendChild(chips);
+    if(r.lessons.length === 1) roundBox.appendChild(el('div', 'pv-note', 'Present the next lesson on this computer and its activities are added to this round.'));
+    var d1 = el('div', 'rd star'); d1.appendChild(el('span', null, '\u2B50 All ' + total + ' right first try')); d1.appendChild(el('b', null, String(perfect.length))); roundBox.appendChild(d1);
+    if(perfect.length){ var cr = el('div', 'codes'); cr.appendChild(document.createTextNode('Prize codes: ')); cr.appendChild(el('b', null, lastRound.codes.join(' \u00B7 '))); roundBox.appendChild(cr); }
+    else if(best){ var bc = el('div', 'codes'); bc.appendChild(document.createTextNode('Best so far, ' + best + ' of ' + total + ': ')); bc.appendChild(el('b', null, bestCodes.join(' \u00B7 '))); roundBox.appendChild(bc); }
+    var d2 = el('div', 'rd'); d2.appendChild(el('span', null, 'Still no mistakes in the round')); d2.appendChild(el('b', null, String(track))); roundBox.appendChild(d2);
   }
 
   function startPresenting(resume){
@@ -316,6 +393,8 @@
       document.body.classList.add('presenting'); if(bPresent) bPresent.textContent = 'Stop presenting';
       if(!resume) b.set('live/' + LESSON, { sid: mySid, at: b.now() });
       if(unwatch) unwatch();
+      if(!roundBox.parentNode) panel.insertBefore(roundBox, list);
+      joinRound(mySid, false);
       render({});
       unwatch = b.watch('sessions/' + mySid, render);
       if(ls('pv_panel') === '1'){ panel.classList.add('open'); bPanel.textContent = 'Hide panel'; }
@@ -325,6 +404,7 @@
   function stopPresenting(){
     document.body.classList.remove('presenting'); if(bPresent) bPresent.textContent = 'Presenting';
     if(unwatch){ unwatch(); unwatch = null; }
+    Object.keys(roundWatch).forEach(function(sid){ roundWatch[sid](); }); roundWatch = {}; roundBox.innerHTML = '';
     withBackend(function(b){ b.set('live/' + LESSON, null); });
     mySid = null; ls('pv_teach_' + LESSON, null);
   }
