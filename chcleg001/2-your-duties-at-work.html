@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHCLEG001 Work legally and ethically: Your duties at work</title>
+<meta name="description" content="CHCLEG001 Lesson 2: duty of care, dignity of risk, WHS responsibilities and consequences, workplace rights, professional development, complaints and reporting a co-worker.">
+<style>:root{
+  --ink:#1b2530; --soft-ink:#44505c; --paper:#ffffff;
+  --deep:#12384a; --aqua:#8fe3e8; --action:#0b6f7c;
+  --card-a:#fbfbf9; --card-b:#ecece8; --edge:#d9d9d4;
+  --warn:#b45309; --warn-bg:#fff7ed; --ok:#15803d; --bad:#b91c1c;
+  --teach:#4c1d95; --teach-bg:#f5f3ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size:clamp(17px,1.5vw,30px); line-height:1.55}
+main{overflow-x:clip}
+.wrap{max-width:1500px; margin:0 auto; padding:0 clamp(20px,3vw,60px)}
+
+/* banner */
+.banner{position:relative; background:var(--deep); color:#fff; padding:clamp(60px,9vw,140px) 20px 40px; overflow:hidden}
+.banner-inner{position:relative; z-index:2; max-width:1500px; margin:0 auto}
+.banner .kicker{margin:0 0 6px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:.75em; color:var(--aqua)}
+.banner h1{margin:0; font-size:clamp(30px,5vw,76px); line-height:1.1; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.banner .sub{margin:12px 0 0; font-size:1.05em; max-width:28em; color:#f3e6d2}
+.banner svg.hero{position:absolute; right:-2vw; bottom:-4vw; width:min(46vw,620px); height:auto; opacity:.95; z-index:1}
+@media (max-width:800px){.banner svg.hero{opacity:.25}}
+
+/* index */
+#index{margin:30px 0 10px; padding:18px 26px 12px; background:#efe5d3; border-left:6px solid var(--action); border-radius:6px}
+#index h2{font-size:1.2em; margin:0 0 8px}
+#index ul{margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(19em,1fr)); column-gap:3em}
+#index li{margin:4px 0}
+#index a{text-decoration:none; color:var(--ink); display:flex; gap:10px; align-items:baseline}
+#index a:hover{color:var(--action); text-decoration:underline}
+.num{display:inline-flex; align-items:center; justify-content:center; min-width:1.7em; height:1.7em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; font-size:.8em; flex:none}
+.opening{font-size:1.05em; margin:26px 0 10px}
+
+/* slides */
+section.slide{padding:36px 0 18px; border-top:1px solid var(--edge); margin-top:30px; scroll-margin-top:10px}
+section.slide:first-of-type{border-top:0}
+h2.topic{font-size:1.4em; line-height:1.3; margin:0 0 10px; display:flex; gap:14px; align-items:center}
+h2.topic .num{font-size:.7em; min-width:2em; height:2em}
+h3{font-size:1.15em; line-height:1.3; margin:0 0 10px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px; padding-left:26px}
+li{margin:4px 0}
+a{color:var(--action); text-underline-offset:3px}
+a.star{font-weight:700; padding:0 4px; font-size:.8em; text-decoration:none; opacity:.55}
+a.star:hover{opacity:1}
+a.term{text-decoration:underline dotted; color:inherit}
+.intro{font-size:1.05em; color:var(--soft-ink)}
+a:focus-visible,button:focus-visible,.deck:focus-visible{outline:3px solid #f2a900; outline-offset:3px}
+
+ol.points{margin:12px 0 18px; padding-left:0; list-style:none; counter-reset:pt}
+ol.points li{position:relative; padding:10px 14px 10px 3.2em; margin:6px 0; background:#fffaf1; border-radius:8px; counter-increment:pt}
+ol.points li::before{content:counter(pt); position:absolute; left:.9em; top:.55em; width:1.7em; height:1.7em; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:700; font-size:.85em; display:flex; align-items:center; justify-content:center}
+.ref{display:none; float:right; margin-left:10px; font-size:.65em; color:var(--teach); background:var(--teach-bg); border:1px solid #ddd6fe; border-radius:4px; padding:0 6px}
+body.teacher .ref{display:inline-block}
+
+figure.visual{margin:18px 0 22px; text-align:center}
+figure.visual svg,figure.visual img{max-width:100%; height:auto; max-height:70vh}
+figure.visual figcaption{font-size:.8em; color:var(--soft-ink); margin-top:6px}
+figure.pic{margin:22px 0}
+figure.pic img{display:block; width:100%; height:auto; max-height:86vh; object-fit:contain; border-radius:4px}
+
+.watch-out{margin:14px 0 20px; padding:14px 18px 14px 56px; background:var(--warn-bg); border:2px solid #fdba74; border-radius:8px; position:relative}
+.watch-out::before{content:"!"; position:absolute; left:14px; top:12px; width:30px; height:30px; border-radius:50%; background:var(--warn); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.watch-out b{color:var(--warn); margin-right:6px}
+
+/* audio */
+.say{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:40px; display:inline-flex; gap:8px; align-items:center}
+.say.playing{background:var(--action); color:#fff}
+.say .ico{font-size:.8em}
+.audio-line{display:flex; gap:12px; align-items:center; margin:0 0 14px; flex-wrap:wrap}
+.audio-label{color:var(--soft-ink); font-size:.9em}
+.card-audio{margin-top:10px}
+.playall{margin:0 0 34px; text-align:center}
+
+/* card stack (from the Sway template) */
+.stack{margin:60px auto 40px; width:86%; max-width:1150px; --tilt:.4}
+.deck{position:relative; cursor:pointer; border-radius:3px; transition:height .3s ease}
+.pile i{position:absolute; inset:0; background:var(--card-b); border:1px solid var(--edge); box-shadow:0 1px 3px rgba(20,30,40,.10)}
+.pile i:nth-child(even){background:var(--card-a)}
+.pile i{transform:rotate(calc(var(--a) * var(--tilt,1))) translate(var(--x),var(--y))}
+.pile i:nth-child(1){--a:-15deg; --x:-4px; --y:6px}
+.pile i:nth-child(2){--a:6deg; --x:6px; --y:2px}
+.pile i:nth-child(3){--a:-12deg; --x:3px; --y:-5px}
+.pile i:nth-child(4){--a:3deg; --x:-5px; --y:4px}
+.pile i:nth-child(5){--a:-10deg; --x:5px; --y:5px}
+.pile i:nth-child(6){--a:-2deg; --x:-3px; --y:-3px}
+.pile i:nth-child(7){--a:-6deg; --x:2px; --y:3px}
+.pile{position:absolute; inset:0; filter:drop-shadow(0 14px 18px rgba(20,30,40,.16))}
+.card{position:absolute; left:0; top:0; width:100%; height:100%; background:var(--card-a); border:1px solid var(--edge);
+  padding:1.5em 1.8em 1.3em; font-size:clamp(16px,1.4vw,27px); line-height:1.5; opacity:0; pointer-events:none; z-index:1; min-height:7em;
+  transform:rotate(calc(var(--r,-6deg) * var(--tilt,1))); box-shadow:0 2px 6px rgba(20,30,40,.14)}
+.card.shade{background:var(--card-b)}
+.card.long{font-size:clamp(14.5px,1.25vw,24px); line-height:1.45}
+.card.top{opacity:1; pointer-events:auto; z-index:3}
+.card.arrive{animation:arrive .42s ease-out}
+.card.leave{opacity:1; z-index:4; animation:leave .42s ease-in forwards}
+.card.leave-back{opacity:1; z-index:4; animation:leaveBack .42s ease-in forwards}
+@keyframes arrive{from{transform:rotate(calc(var(--r) * var(--tilt,1) + 5deg)) scale(.96)} to{transform:rotate(calc(var(--r) * var(--tilt,1))) scale(1)}}
+@keyframes leave{to{transform:translate(58%,-10%) rotate(16deg); opacity:0}}
+@keyframes leaveBack{to{transform:translate(-58%,-10%) rotate(-18deg); opacity:0}}
+.card .count{float:right; margin:-6px -8px 6px 14px; font-size:.8em; font-weight:600; color:var(--soft-ink); background:#fff; border:1px solid var(--edge); border-radius:20px; padding:2px 12px}
+.card ul{margin-bottom:6px}
+.card-pic{float:right; width:clamp(90px,22%,220px); margin:0 0 10px 16px}
+.card-pic svg{width:100%; height:auto}
+.controls{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin-top:60px}
+.controls button{font:inherit; font-size:clamp(17px,1.2vw,24px); font-weight:600; cursor:pointer; padding:10px 20px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:48px}
+.controls button.next{background:var(--action); color:#fff}
+.controls button:hover{filter:brightness(.94)}
+.controls .where{min-width:7em; text-align:center; font-weight:700; font-size:clamp(18px,1.25vw,25px)}
+.hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:10px 0 0}
+
+/* full screen */
+.big{position:fixed; inset:0; z-index:50; background:#05090c; color:#fff; display:none}
+.big.open{display:flex; flex-direction:column}
+.big .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; font-weight:700}
+.big .body{flex:1; overflow:auto; padding:8px clamp(20px,7vw,90px) 24px; font-size:clamp(20px,2.9vw,34px); line-height:1.45}
+.big .body h3{font-size:1.1em; margin-bottom:.5em}
+.big .body .count{display:none}
+.big .body .card-pic{width:22%}
+.big .body .say{color:#fff; border-color:#fff; background:transparent}
+.big .foot{display:flex; gap:12px; justify-content:center; padding:12px 18px 20px}
+.big button{font:inherit; font-size:18px; font-weight:600; cursor:pointer; min-height:48px; padding:10px 22px; border-radius:6px; border:2px solid #fff; background:transparent; color:#fff}
+.big button.next{background:#fff; color:#05090c}
+
+/* activities */
+.activity{margin:22px 0 28px; padding:16px 20px 14px; border:2px solid #d8c9b2; border-radius:10px; background:#f1f5ec}
+.act-head{display:flex; gap:10px; align-items:center; margin-bottom:6px}
+.act-badge{background:var(--action); color:#fff; font-size:.7em; font-weight:700; padding:2px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:.04em}
+.act-instr{color:var(--soft-ink); font-size:.9em}
+.act-foot{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px}
+.act-foot button{font:inherit; font-size:.9em; font-weight:600; cursor:pointer; padding:8px 18px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:44px}
+.act-foot .act-check{background:var(--action); color:#fff}
+.act-result{font-weight:700}
+.act-result.good{color:var(--ok)} .act-result.bad{color:var(--bad)}
+.chip{display:inline-flex; align-items:center; font-size:.9em; padding:8px 14px; margin:5px; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; user-select:none; min-height:44px; line-height:1.3}
+.chip.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.chip.right{border-color:var(--ok); background:#ecfdf5}
+.chip.wrong{border-color:var(--bad); background:#fef2f2}
+.chip.placed{cursor:default}
+.bank{min-height:52px; padding:6px; border:2px dashed #b9a68a; border-radius:8px; margin-bottom:12px; background:#fff}
+.targets{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(16em,1fr))}
+.target{border:2px solid #b9a68a; border-radius:8px; background:#fff; padding:8px 10px; min-height:70px}
+.target .t-label{font-weight:700; margin-bottom:4px}
+.target .t-drop{min-height:44px; border:2px dashed #e8dcc6; border-radius:6px; padding:2px}
+.target.over .t-drop{border-color:var(--action); background:#f6efe2}
+.order{list-style:none; padding:0; margin:0; counter-reset:o}
+.order li{display:flex; gap:10px; align-items:center; background:#fff; border:2px solid #b9a68a; border-radius:8px; padding:8px 10px; margin:6px 0; cursor:grab}
+.order li .o-n{min-width:2em; height:2em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; font-size:.85em}
+.order li .o-t{flex:1}
+.order li .o-btn{display:flex; gap:4px}
+.order li .o-btn button{font:inherit; min-width:40px; min-height:40px; border-radius:6px; border:1px solid #b9a68a; background:#fff; cursor:pointer}
+.order li.right{border-color:var(--ok); background:#ecfdf5} .order li.wrong{border-color:var(--bad); background:#fef2f2}
+.order li.dragging{opacity:.5}
+.quiz-q{margin:10px 0 16px}
+.quiz-q .opt{display:block; width:100%; text-align:left; font:inherit; font-size:.95em; padding:10px 14px; margin:6px 0; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; min-height:44px}
+.quiz-q .opt.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.quiz-q .opt.right{border-color:var(--ok); background:#ecfdf5} .quiz-q .opt.wrong{border-color:var(--bad); background:#fef2f2}
+.quiz-q .why{font-size:.85em; color:var(--soft-ink); margin:4px 0 0 6px; display:none}
+.quiz-q.done .why{display:block}
+.fill-table{width:100%; border-collapse:collapse; font-size:.9em; background:#fff}
+.fill-table th,.fill-table td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+.fill-table th{background:#efe5d3}
+.fill-table select{font:inherit; font-size:.95em; min-height:40px; max-width:100%}
+.fill-table td.right{background:#ecfdf5} .fill-table td.wrong{background:#fef2f2}
+
+/* teacher view */
+.tnotes{display:none; margin:18px 0 6px; padding:12px 16px; background:var(--teach-bg); border:2px dashed #c4b5fd; border-radius:8px; font-size:.82em; color:#2e1065}
+body.teacher .tnotes{display:block}
+.tnotes .t-head{font-weight:800; color:var(--teach); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; font-size:.85em}
+.tnotes ul{margin:4px 0 8px}
+.tnotes .t-trap{background:#fff7ed; border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0}
+.tlink{font:inherit; font-size:1em; color:var(--soft-ink); background:none; border:0; text-decoration:underline; cursor:pointer; padding:0}
+.tpill[hidden]{display:none}
+.tpill{position:fixed; top:10px; right:10px; z-index:45; background:var(--teach); color:#fff; border-radius:30px; padding:6px 8px 6px 16px; display:flex; gap:8px; align-items:center; font-size:15px; font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.tpill button{font:inherit; font-size:14px; font-weight:700; border:0; border-radius:20px; padding:6px 12px; background:#fff; color:var(--teach); cursor:pointer; min-height:34px}
+.tpill button.tp-out{background:transparent; color:#fff; border:1px solid #fff}
+.card-pic.photo img{width:100%; height:auto; border-radius:8px; display:block}
+.grid4{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(11em,1fr)); margin:16px 0 22px}
+.grid4 figure{margin:0; background:#efe5d3; border-radius:12px; overflow:hidden}
+.grid4 img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+.grid4 figcaption{padding:10px 14px 12px; font-size:.9em}
+.grid4 figcaption b{display:block; color:var(--deep); font-size:1.05em}
+.side{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; margin:10px 0 18px}
+.side > div{flex:2 1 420px}
+.side figure{flex:0 1 380px; max-width:440px; margin:0}
+.side figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* Gerry */
+.mascot{position:fixed; left:clamp(6px,1.2vw,24px); top:120px; width:clamp(54px,6vw,110px); z-index:35; cursor:pointer; transition:top .6s cubic-bezier(.3,.9,.4,1.1); filter:drop-shadow(0 6px 10px rgba(0,0,0,.25)); user-select:none}
+.mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.mascot.hop svg{animation:hop .7s ease-out 1, bob 2.6s ease-in-out .7s infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes hop{0%{transform:translateY(0) scale(1,1)} 30%{transform:translateY(-40px) scale(.95,1.08) rotate(14deg)} 60%{transform:translateY(0) scale(1.08,.92)} 100%{transform:translateY(0) scale(1,1)}}
+.gerry-bubble{position:absolute; left:100%; top:0; margin-left:10px; width:max-content; max-width:16em; background:#fff; color:var(--ink); border:2px solid var(--deep); border-radius:14px; padding:8px 12px; font-size:clamp(14px,1vw,18px); line-height:1.35; box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.gerry-bubble::before{content:""; position:absolute; left:-12px; top:16px; border:6px solid transparent; border-right-color:var(--deep)}
+@media (max-width:900px){.mascot{display:none}}
+.mascot.drop{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.drop .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.drop .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+@media (prefers-reduced-motion:reduce){.mascot svg{animation:none}}
+
+.home{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(14px,2vw,32px); z-index:40; background:var(--action); color:#fff; font-weight:700; font-size:clamp(17px,1.2vw,24px); text-decoration:none; padding:12px 22px; border-radius:30px; box-shadow:0 4px 14px rgba(0,0,0,.25); min-height:48px; display:flex; align-items:center; gap:8px}
+.foot{margin:50px 0 90px; padding-top:16px; border-top:1px solid var(--edge); font-size:.75em; color:var(--soft-ink)}
+
+@media (max-width:560px){
+  body{font-size:17px}
+  .card{padding:20px 20px 18px; font-size:16px}
+  .card.long{font-size:14.5px}
+  .stack{width:auto; margin-left:14px; margin-right:14px; --tilt:.3}
+  .card-pic{width:30%}
+  h2.topic{font-size:1.25em}
+}
+@media (prefers-reduced-motion:reduce){
+  .card.arrive,.card.leave,.card.leave-back{animation-duration:.01s}
+  html{scroll-behavior:auto}
+}
+
+/* ordered strips (PPE on / off) */
+.strips{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr)); margin:16px 0 20px}
+.strip{background:#fffaf1; border-radius:12px; padding:14px 16px}
+.strip-title{font-weight:800; color:var(--deep); margin-bottom:8px}
+.strip-steps{list-style:none; margin:0; padding:0; counter-reset:st}
+.strip-steps li{counter-increment:st; display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px solid #e2e8f0}
+.strip-steps li:last-child{border-bottom:0}
+.strip-steps li::before{content:counter(st); display:inline-flex; align-items:center; justify-content:center; width:1.9em; height:1.9em; border-radius:50%; background:var(--c,#0b6f7c); color:#fff; font-weight:800; font-size:.85em; flex:none}
+table.plain{width:100%; border-collapse:collapse; font-size:.92em; margin:10px 0 18px; background:#fff}
+table.plain th,table.plain td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+table.plain th{background:#efe5d3}
+.tl-high{background:#fee2e2} .tl-med{background:#fef3c7} .tl-low{background:#dcfce7}
+
+/* activity start and blur */
+.act-start[hidden]{display:none}
+.act-start{display:flex; gap:14px; align-items:center; flex-wrap:wrap; padding:6px 0 2px; color:var(--soft-ink); font-size:.9em}
+.act-go{font:inherit; font-size:1em; font-weight:700; cursor:pointer; padding:10px 26px; border-radius:8px; border:0; background:var(--action); color:#fff; min-height:48px}
+.act-tools{margin:0 0 10px}
+.act-peek{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid #b9a68a; background:#fff; color:var(--action); min-height:40px}
+section.slide.hide-notes > :is(ol.points, .stack, figure.visual, .after, .intro, .watch-out, .vid, .audio-line, .side-points, p){filter:blur(7px); pointer-events:none; user-select:none; transition:filter .3s}
+section.slide.hide-notes .activity{filter:none}
+.vid{margin:20px 0 10px}
+.vid-title{margin:0 0 8px}
+.vid-by{color:var(--soft-ink); font-size:.85em}
+.video{margin:0 auto 6px; max-width:calc((100vh - 90px) * 16 / 9); aspect-ratio:16/9; background:#0e1a22; border-radius:6px; overflow:hidden; position:relative}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.watch{margin:0 0 20px; font-size:.8em; text-align:center}
+
+/* activity locked while the notes are showing */
+.activity.peeking .act-body, .activity.peeking .act-foot{pointer-events:none; opacity:.35; filter:grayscale(1)}
+.activity.peeking .act-tools::after{content:"Read the notes, then press the button to carry on."; margin-left:12px; color:var(--warn); font-weight:700; font-size:.9em}
+/* click to spotlight a part of a diagram */
+.spot [data-spot]{transition:opacity .3s, transform .3s; transform-box:fill-box; transform-origin:center}
+.spot.spotting [data-spot]:not(.lit){opacity:.28}
+.spot [data-spot].lit{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.14)}}
+.spot-hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:-8px 0 14px}
+/* points beside a picture */
+.side-points{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start}
+.side-points > ol.points{flex:2 1 420px; margin-top:0}
+.side-points > figure{flex:0 1 320px; max-width:360px; margin:0}
+.side-points > figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* student-visible Connect source line */
+.source{margin:16px 0 6px; padding:10px 14px 10px 44px; background:#f6efe2; border-left:4px solid var(--action); border-radius:8px; font-size:.92em; color:var(--soft-ink); position:relative; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center}
+.source::before{content:"\1F4D6"; position:absolute; left:12px; top:8px; font-size:1.2em}
+.source-label{font-weight:700; color:var(--ink)}
+.source a{text-decoration:none; font-weight:600; border:1px solid #d8c9b2; background:#fff; border-radius:999px; padding:2px 10px}
+.source a:hover{background:#efe5d3}
+
+/* Lesson 3: safety signs, RACE, two-up figures */
+.signs{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:12px 0 20px; align-items:start}
+.sign{background:#fff; border:2px solid var(--edge); border-radius:12px; padding:12px 10px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px}
+.sign svg{width:84px; height:84px}
+.sign span{font-weight:700; font-size:.9em; line-height:1.25}
+.signkey{display:flex; flex-wrap:wrap; gap:8px 20px; margin:6px 0 14px; font-size:.92em}
+.signkey i{display:inline-block; width:16px; height:16px; border-radius:50%; vertical-align:-3px; margin-right:6px}
+.race{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:14px 0 20px}
+.race div{border-left:8px solid var(--c); background:#fff; border-radius:10px; padding:12px 14px; box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.race b{display:block; font-size:2.2em; line-height:1; color:var(--c)}
+.race span{display:block; font-weight:700; font-size:1.1em; margin-top:4px}
+.race small{color:var(--soft-ink)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:14px 0}
+.grid2 figure{margin:0}
+.grid2 figcaption{font-size:.85em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > :is(.signs, .signkey, .race, .grid2){filter:blur(7px); pointer-events:none; user-select:none}
+
+/* side-by-side videos */
+.vid-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:16px 0 6px}
+.vid-row .vid{margin:0}
+.vid-row .video{max-width:none}
+section.slide.hide-notes > .vid-row{filter:blur(7px); pointer-events:none}
+
+/* finale: the grand exit */
+.finale{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; margin:24px 0 10px; padding:24px 10px 0; min-height:340px; overflow:hidden}
+.fin-side{display:flex; flex-direction:column; align-items:center; gap:10px; opacity:0; transition:transform .9s cubic-bezier(.2,.8,.3,1.1), opacity .6s}
+.fin-side.left{transform:translateX(-60vw)}
+.fin-side.right{transform:translateX(60vw)}
+.finale.in .fin-side{transform:none; opacity:1}
+.finale.in .fin-side.right{transition-delay:.25s}
+.fin-mascot{width:min(260px,38vw)}
+.fin-mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.fin-bubble{background:#fff; border:3px solid var(--deep); border-radius:18px; padding:14px 18px; font-size:1.08em; line-height:1.4; position:relative; max-width:34em; opacity:0; transform:scale(.7); transition:transform .5s cubic-bezier(.2,.8,.3,1.3), opacity .4s}
+.fin-bubble p{margin:0 0 8px}
+.fin-bubble::after{content:""; position:absolute; bottom:-14px; left:50%; margin-left:-8px; border:8px solid transparent; border-top-color:var(--deep)}
+.finale.in .fin-bubble{opacity:1; transform:none; transition-delay:1s}
+.finale.in .right .fin-bubble{transition-delay:1.5s}
+.fin-side .fin-bubble{order:-1}
+.fin-who{font-weight:800; color:var(--deep); margin:0}
+.fin-after{text-align:center; font-size:1.1em; color:var(--soft-ink); margin:10px 0 20px}
+@media (max-width:700px){.finale{grid-template-columns:1fr; min-height:0} .fin-side.left,.fin-side.right{transform:translateY(40px)} .finale.in .fin-side{transform:none}}
+@media (prefers-reduced-motion:reduce){.fin-side,.fin-bubble{transition:none; transform:none; opacity:1} .fin-mascot svg{animation:none}}
+.sign-pics{display:flex; gap:6px; align-items:center; justify-content:center; height:96px}
+.sign-pics img{max-height:96px; max-width:100%; object-fit:contain}
+.sign-pics img + img{max-height:60px}
+
+/* Lesson 4: risk matrix */
+table.matrix{border-collapse:collapse; margin:0 auto; font-size:.95em}
+table.matrix th, table.matrix td{border:2px solid #fff; padding:10px 12px; text-align:center}
+table.matrix thead th{background:#12384a; color:#fff; font-weight:700}
+table.matrix tbody th{background:#0b6f7c; color:#fff; text-align:left; font-weight:700}
+table.matrix .corner{background:#1b2530; font-size:.8em}
+table.matrix td.m-L{background:#bbf7d0; color:#14532d; font-weight:700}
+table.matrix td.m-M{background:#fde68a; color:#78350f; font-weight:700}
+table.matrix td.m-H{background:#fca5a5; color:#7f1d1d; font-weight:700}
+@media (max-width:700px){table.matrix{font-size:.75em} table.matrix th, table.matrix td{padding:6px 4px}}
+
+
+/* ===================== CHCLEG001 courthouse theme (28 Oct 2026): navy, gold and parchment ===================== */
+:root{
+  --ink:#1d2433; --soft-ink:#4a5266; --paper:#f7f4ec;
+  --deep:#1f2a44; --aqua:#f2d68a; --action:#2f6f6a;
+  --card-a:#fffdf7; --card-b:#f1ece0; --edge:#d9d1bd;
+  --wood:#1f2a44; --sage-bg:#eaf1ef; --clay:#b8862b;
+}
+body{background-color:var(--paper)}
+h1,h2,h3,.banner h1{font-family:Georgia,"Times New Roman",serif}
+.banner{background-color:#1f2a44; background-image:linear-gradient(90deg,rgba(17,24,42,.92) 0%,rgba(17,24,42,.75) 60%,rgba(17,24,42,.55) 100%),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='160'><g fill='none' stroke='%23b8862b' stroke-opacity='.35' stroke-width='3'><path d='M10 150 V40 M30 150 V40 M50 150 V40 M70 150 V40 M90 150 V40 M110 150 V40'/><path d='M0 30 L60 4 L120 30 Z'/><path d='M0 154 H120'/></g></svg>");
+  background-size:auto,120px 160px; border-bottom:8px solid #b8862b; padding:clamp(40px,6vw,96px) 20px clamp(26px,3vw,44px)}
+.banner h1{color:#fff; text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.banner .sub{color:#eef0f6}
+.banner .kicker{color:var(--aqua)}
+.lessonbar{display:flex; flex-wrap:wrap; gap:8px 10px; padding:12px clamp(20px,3vw,60px); background:#ece6d6; border-bottom:1px solid var(--edge); font-size:clamp(14px,.95vw,19px)}
+.lessonbar a{padding:6px 14px; border-radius:20px; background:var(--card-a); border:1px solid var(--edge); color:var(--deep); text-decoration:none; font-weight:600; white-space:nowrap}
+.lessonbar a:hover{border-color:var(--deep)}
+.lessonbar a.on{background:var(--deep); border-color:var(--deep); color:#fff}
+#index{background:#ece6d6; border-left-color:#b8862b}
+h2.topic{color:var(--deep); border-bottom:2px solid #e2d3a8; padding-bottom:8px}
+h2.topic .num{background:#b8862b; color:#fff}
+ol.points li{background:var(--card-a); border:1px solid var(--edge); box-shadow:0 1px 0 #e8e0cc}
+ol.points li::before{border-color:#b8862b; color:var(--deep)}
+.activity{background:var(--sage-bg); border-color:#bcd3cd}
+a.term{text-decoration-color:#b8862b}
+.gerry-bubble{border-color:var(--deep)}
+.home{background:var(--deep)}
+.ext-play{background:#1f2a44}
+.ext-play:hover,.ext-play:focus{background:#2c3a5c}
+.docs{border-left-color:#b8862b}
+.zoombox .zclose{color:var(--deep)}
+.gpop{border-color:var(--deep)}
+.gpop .gp-term{color:var(--deep)}
+
+.tag{display:inline-block; font-family:"Segoe UI",Arial,sans-serif; font-size:.68em; font-weight:700; padding:1px 10px; border-radius:12px; margin:0 6px; vertical-align:middle; white-space:nowrap}
+.tag.old{background:#e5e1db; color:#4a4540; border:1px solid #b9b2a8}
+.tag.repl{background:#fdf0dc; color:#8a4b12; border:1px solid #e8b878}
+.tag.new{background:#e2efdc; color:#2f5a2a; border:1px solid #9cc290}
+.vid.local video{display:block; width:100%; max-width:1100px; max-height:72vh; margin:0 auto; border-radius:8px; background:#000}
+.mascot.side-right{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.side-right .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.side-right .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+.gerry-bubble{border-color:var(--wood)}
+.home{background:var(--wood)}
+.side-points figure img{border-radius:10px; border:1px solid var(--edge)}
+figure.visual img{border-radius:10px}
+.watch-out b{margin-right:0}
+.watch-out > b:first-child{margin-right:6px}
+body.presenting .mascot{z-index:45}
+@media (max-width:700px){
+  .lessonbar{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:thin; padding-bottom:10px}
+  .lessonbar a{flex:0 0 auto}
+}
+.fill-table select{width:100%}
+
+/* police light bar on the banner (CHCLEG001) */
+.banner.first{position:relative; overflow:hidden}
+.banner.first .banner-inner{position:relative; z-index:2}
+.hero-light{position:absolute; z-index:1; right:clamp(16px,7vw,160px); top:50%; transform:translateY(-50%); width:clamp(150px,20vw,340px); pointer-events:none}
+.hero-light svg{position:relative; display:block; width:100%; height:auto; filter:drop-shadow(0 6px 10px rgba(0,0,0,.5))}
+.hero-light .glow{position:absolute; top:58%; width:150%; aspect-ratio:1; border-radius:50%; transform:translate(-50%,-50%); opacity:.12; filter:blur(18px)}
+.hero-light .g-blue{left:28%; background:radial-gradient(circle,rgba(70,130,255,.85) 0%,rgba(40,90,255,.35) 30%,rgba(40,90,255,0) 62%); animation:polBlue 1.8s ease-in-out infinite}
+.hero-light .g-red{left:72%; background:radial-gradient(circle,rgba(255,70,70,.85) 0%,rgba(255,40,40,.35) 30%,rgba(255,40,40,0) 62%); animation:polRed 1.8s ease-in-out infinite}
+.hero-light .lb-blue{animation:lbBlue 1.8s ease-in-out infinite}
+.hero-light .lb-red{animation:lbRed 1.8s ease-in-out infinite}
+@keyframes polBlue{0%,8%,22%,30%{opacity:.95} 4%,26%{opacity:.45} 45%,100%{opacity:.08}}
+@keyframes polRed{0%,45%{opacity:.08} 50%,58%,72%,80%{opacity:.95} 54%,76%{opacity:.45} 95%,100%{opacity:.08}}
+@keyframes lbBlue{0%,30%{opacity:1} 45%,100%{opacity:.35}}
+@keyframes lbRed{0%,45%{opacity:.35} 50%,80%{opacity:1} 95%,100%{opacity:.35}}
+@media (max-width:700px){.hero-light{top:14px; right:10px; transform:none; width:110px; opacity:.85}}
+@media (prefers-reduced-motion:reduce){.hero-light .glow,.hero-light .lb{animation:none} .hero-light .g-blue,.hero-light .g-red{opacity:.35}}
+
+
+/* infographics: big, centred, click for full screen */
+figure.infopic{margin:22px auto 26px; text-align:center}
+figure.infopic img{display:block; margin:0 auto; width:100%; max-width:1300px; max-height:82vh; object-fit:contain; border-radius:12px; border:1px solid var(--edge); background:#fff; cursor:zoom-in}
+figure.infopic .info-svg{max-width:1300px; margin:0 auto; background:#fffdf8; border:1px solid var(--edge); border-radius:12px; padding:10px; cursor:zoom-in}
+figure.infopic figcaption{font-size:.75em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > figure.infopic{filter:blur(7px); pointer-events:none; user-select:none}
+.zoombox{position:fixed; inset:0; z-index:70; background:rgba(20,14,10,.92); display:flex; align-items:center; justify-content:center; cursor:zoom-out; padding:2vh 2vw}
+.zoombox img,.zoombox svg{max-width:96vw; max-height:94vh; width:auto; height:auto; background:#fff; border-radius:10px}
+.zoombox .info-svg{width:96vw; max-height:94vh; background:#fffdf8; border-radius:10px; padding:10px}
+.zoombox .info-svg svg{width:100%; max-height:90vh}
+.zoombox .zclose{position:fixed; top:14px; right:18px; font:inherit; font-weight:700; border:0; border-radius:20px; padding:8px 18px; background:#fff; color:var(--wood); cursor:pointer}
+/* external (sign-in) videos and handouts */
+.vid.ext{margin:18px 0}
+.ext-play{display:flex; align-items:center; gap:16px; padding:16px 20px; background:#2f2a24; color:#fff8ec; border-radius:12px; text-decoration:none; max-width:760px; box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.ext-play:hover,.ext-play:focus{background:#4a3b2d; outline:3px solid var(--action)}
+.ext-icon{flex:0 0 56px; height:56px; border-radius:50%; background:var(--action); display:grid; place-items:center; font-size:26px; padding-left:4px}
+.ext-play b{display:block; font-size:1.05em}
+.ext-play small{display:block; opacity:.85; margin-top:3px; font-size:.82em}
+.docs{background:#fbf7ef; border:1px solid #e3d6bf; border-left:6px solid var(--wood); border-radius:10px; padding:12px 20px; margin:16px 0}
+.docs-title{margin:0 0 6px}
+.docs ul{margin:0; padding-left:22px}
+.docs li{margin:6px 0}
+section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events:none}
+.t-demo .t-sub{margin:8px 0 2px; font-weight:700; color:#7a4a1e}
+.t-demo ul,.t-links ul{margin:2px 0 6px; padding-left:20px}
+.t-note{color:#666; font-size:.9em}
+.docs-btn{display:inline-block; margin:10px 0 4px; padding:10px 18px; background:var(--action); color:#fff; border-radius:999px; text-decoration:none; font-weight:700}
+.docs-btn:hover,.docs-btn:focus{background:var(--wood); outline:3px solid var(--action)}
+.docs-note{margin:4px 0 0; font-size:.85em; color:var(--soft-ink)}
+/* ---- 28 Oct 2026: glossary pop-up, teacher button in the lesson bar, Play all state ---- */
+a.term{cursor:help}
+.gpop{position:absolute; z-index:80; width:min(26em,calc(100vw - 16px)); background:#fffdf7; color:var(--ink); border:2px solid var(--wood,#6b4a33); border-radius:12px; padding:12px 40px 10px 16px; box-shadow:0 10px 28px rgba(0,0,0,.25); font-size:clamp(16px,1.1vw,22px); line-height:1.45}
+.gpop p{margin:0 0 6px}
+.gpop .gp-term{font-weight:800; color:var(--wood,#6b4a33)}
+.gpop .gp-more{font-size:.85em; margin:4px 0 0}
+.gpop .gp-more a{color:var(--action)}
+.gpop .gp-x{position:absolute; top:6px; right:6px; width:34px; height:34px; border:0; border-radius:50%; background:transparent; font-size:24px; line-height:1; cursor:pointer; color:var(--soft-ink)}
+.gpop .gp-x:hover{background:#f0e6d6}
+.lessonbar .tlink-top{margin-left:auto; padding:6px 12px; border-radius:20px; border:1px dashed var(--edge); background:transparent; color:var(--soft-ink); text-decoration:none; font-size:.85em; white-space:nowrap}
+.lessonbar .tlink-top:hover{border-color:var(--wood); color:var(--wood)}
+body.tv-pill .lessonbar .tlink-top{display:none}
+.say.playall-btn.playing{background:var(--action); color:#fff}
+.tpill .tp-label{margin-right:2px}
+@media print{ .gpop,.tlink-top{display:none} }
+
+/* CHCLEG001 late overrides (after the shared rules) */
+.ext-play{background:#1f2a44; color:#fff}
+.ext-play:hover,.ext-play:focus{background:#2c3a5c}
+.docs{background:#fbf8f0; border-color:#e2d8c2; border-left-color:#b8862b}
+.t-demo .t-sub{color:#1f2a44}
+.vid-row{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+</style>
+</head>
+<body data-np="5">
+<main>
+<header class="banner first" id="top">
+  <div class="banner-inner">
+    <p class="kicker">CHCLEG001 Work legally and ethically · Lesson 2</p>
+    <h1>Your duties at work</h1>
+    <p class="sub">Duty of care, dignity of risk, safety, your rights at work, learning, complaints and speaking up.</p>
+  </div>
+  <div class="hero-light" aria-hidden="true">
+  <span class="glow g-blue"></span><span class="glow g-red"></span>
+  <svg viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="lbBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a4258"/><stop offset="1" stop-color="#151a27"/></linearGradient>
+      <radialGradient id="lbBlue" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#d9e6ff"/><stop offset=".35" stop-color="#3d7bff"/><stop offset="1" stop-color="#0b2a8a"/></radialGradient>
+      <radialGradient id="lbRed" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#ffe0e0"/><stop offset=".35" stop-color="#ff3b3b"/><stop offset="1" stop-color="#7a0b0b"/></radialGradient>
+    </defs>
+    <rect x="14" y="58" width="292" height="30" rx="14" fill="url(#lbBody)" stroke="#5b6480" stroke-width="2"/>
+    <rect x="150" y="54" width="20" height="38" rx="4" fill="#2a3044" stroke="#5b6480" stroke-width="2"/>
+    <path class="lb lb-blue" d="M36 62 h108 v22 h-108 a11 11 0 0 1 0 -22z" fill="url(#lbBlue)"/>
+    <path class="lb lb-red" d="M176 62 h108 a11 11 0 0 1 0 22 h-108z" fill="url(#lbRed)"/>
+    <g stroke="#ffffff" stroke-opacity=".25" stroke-width="2"><path d="M54 62v22M84 62v22M114 62v22M206 62v22M236 62v22M266 62v22"/></g>
+    <rect x="40" y="88" width="10" height="14" fill="#151a27"/><rect x="270" y="88" width="10" height="14" fill="#151a27"/>
+  </svg>
+</div>
+</header>
+<nav class="lessonbar" aria-label="Lessons in this unit"><a href="0-index.html">&#8962; Lessons</a><a href="1-laws-rights-and-standards.html">1 Laws and rights</a><a href="2-your-duties-at-work.html" class="on" aria-current="page">2 Your duties</a><a href="3-privacy-consent-and-reporting.html">3 Privacy and reporting</a><a href="4-values-and-boundaries.html">4 Values and boundaries</a><a href="5-case-studies.html">5 Case studies</a><a href="6-practical-skills-day.html">6 Practical day</a><a href="0-index.html#glossary">Glossary</a><button type="button" class="tlink tlink-top" title="For the teacher">Teacher</button></nav>
+<div class="wrap">
+  <nav id="index" aria-label="Index"><h2>In this lesson</h2><ul><li><a href="#s1"><span class="num">1</span> Duty of care</a></li><li><a href="#s2"><span class="num">2</span> Dignity of risk</a></li><li><a href="#s3"><span class="num">3</span> Work health and safety: your responsibilities</a></li><li><a href="#s4"><span class="num">4</span> When safety is ignored: what can happen</a></li><li><a href="#s5"><span class="num">5</span> Your rights at work</a></li><li><a href="#s6"><span class="num">6</span> Keep learning: professional development</a></li><li><a href="#s7"><span class="num">7</span> When a person wants to complain</a></li><li><a href="#s8"><span class="num">8</span> Worried about a co-worker?</a></li></ul></nav>
+  <p class="opening">In Lesson 1 you met the laws and rules. Now we look at <b>your duties</b>: what the law and your employer expect from you every shift, and what <b>you</b> can expect from your employer.</p>
+  
+<section class="slide" id="s1" data-ref="NP5 S1">
+  <h2 class="topic"><span class="num">1</span> Duty of care <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCLEG001.one%7Cc8ff4e80-324a-46bd-bcc7-ad33f35eea4e%2FQ2%7Ca0b683c2-8a52-49ff-97c5-a29592a2d3c5%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro"><a class="term" href="0-index.html#g-duty-of-care" data-term="duty-of-care" title="What does this word mean?">Duty of care</a> is your legal and moral duty to keep the people you support, and others, <b>safe from harm</b>.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s1.mp3" aria-label="Listen: Duty of care"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s1p1"><span class="ref" title="Reference">NP5 S1 P1</span>Duty of care means you take <b>reasonable steps</b> to stop harm you can <b>see coming</b> (foreseeable harm). For example: you wipe up a wet floor before someone slips.</li><li id="s1p2"><span class="ref" title="Reference">NP5 S1 P2</span>Duty of care is about what you <b>do</b> and what you <b>do not do</b>. Walking past a hazard can be a breach.</li><li id="s1p3"><span class="ref" title="Reference">NP5 S1 P3</span>Ways you meet your duty of care: <b>turn up for work on time</b>.</li><li id="s1p4"><span class="ref" title="Reference">NP5 S1 P4</span><b>Find and report hazards</b>.</li><li id="s1p5"><span class="ref" title="Reference">NP5 S1 P5</span><b>Report and record</b> any problems with the person, the environment or the service.</li><li id="s1p6"><span class="ref" title="Reference">NP5 S1 P6</span>Keep the place <b>safe and healthy</b>.</li><li id="s1p7"><span class="ref" title="Reference">NP5 S1 P7</span><b>Follow the individual plan</b> (care plan, support plan or case plan).</li><li id="s1p8"><span class="ref" title="Reference">NP5 S1 P8</span>Follow the <b>reasonable directions</b> of your supervisor and health professionals.</li><li id="s1p9"><span class="ref" title="Reference">NP5 S1 P9</span>Work within <b>policies and procedures</b>.</li><li id="s1p10"><span class="ref" title="Reference">NP5 S1 P10</span>Go to <b>training</b> and keep your skills up to date.</li><li id="s1p11"><span class="ref" title="Reference">NP5 S1 P11</span>Work within your <b><a class="term" href="0-index.html#g-scope-of-practice" data-term="scope-of-practice" title="What does this word mean?">scope of practice</a></b>: only do what you are trained and allowed to do.</li></ol>
+  
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> What is duty of care? Duty of care vs dignity of risk <span class="vid-by">(Mental Wealth TV)</span></p><div class="video" data-youtube="Nf4Y7v-SLtc" data-title="What is duty of care? Duty of care vs dignity of risk"></div></div>
+  
+  <div class="vid ext"><a class="ext-play" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/embed.aspx?UniqueId=32b76955-fe7b-4205-8042-a5041d76338f" target="_blank" rel="noopener"><span class="ext-icon" aria-hidden="true">&#9654;</span><span><b>Watch: Duty of care (Adrie's video)</b><small>Opens in a new tab. Sign in with your TAFE account.</small></span></a></div>
+  
+  
+  <div class="activity" id="act-s1-1" data-activity='{"type":"sort","title":"Meeting your duty of care?","instructions":"Tap each action, then tap the right box.","buckets":["Meets duty of care","Does not"],"items":[{"text":"Ana reads the care plan before she starts.","bucket":"Meets duty of care"},{"text":"Tom reports a frayed hoist sling to his supervisor.","bucket":"Meets duty of care"},{"text":"Lee goes to the manual handling refresher.","bucket":"Meets duty of care"},{"text":"Sam sees a spill in the hallway and walks past.","bucket":"Does not"},{"text":"Kim gives a resident a tablet from her own handbag.","bucket":"Does not"},{"text":"Jo arrives 40 minutes late without calling.","bucket":"Does not"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Meeting your duty of care?</b></div>
+    <p class="act-instr">Tap each action, then tap the right box.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802543/viewContent/43304769/View" target="_blank" rel="noopener">Duty of care</a></div>
+  
+  <aside class="tnotes" data-slide="s1" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s2" data-ref="NP5 S2">
+  <h2 class="topic"><span class="num">2</span> Dignity of risk</h2>
+  <p class="intro"><a class="term" href="0-index.html#g-dignity-of-risk" data-term="dignity-of-risk" title="What does this word mean?">Dignity of risk</a> is a person's <b>right to take reasonable risks</b>, whatever their <b>age or ability</b>.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s2.mp3" aria-label="Listen: Dignity of risk"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s2p1"><span class="ref" title="Reference">NP5 S2 P1</span>Taking some risks is part of a full life: walking to the shops, cooking a meal, going on a holiday, having a beer with friends.</li><li id="s2p2"><span class="ref" title="Reference">NP5 S2 P2</span>Duty of care <b>does not</b> mean you make decisions for the person. It does <b>not</b> take away their human rights or their dignity of risk.</li><li id="s2p3"><span class="ref" title="Reference">NP5 S2 P3</span>Your job is to <b>help the person take the risk as safely as possible</b>: talk about the risks, follow the plan, and report what happens.</li><li id="s2p4"><span class="ref" title="Reference">NP5 S2 P4</span>Dignity of risk is <b>not</b> making the person do risky things. It is also <b>not</b> &quot;only after a risk assessment&quot;. It is their <b>right to choose</b>.</li><li id="s2p5"><span class="ref" title="Reference">NP5 S2 P5</span>If a choice could cause serious harm, <b>talk to your supervisor</b>. The team may do a risk assessment and update the plan together with the person.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s2-1" data-activity='{"type":"quiz","title":"Duty of care or dignity of risk?","instructions":"Choose the best answer.","questions":[{"q":"What is dignity of risk?","options":["Stopping people from taking any risk","A person&#39;s right to take reasonable risks, whatever their age or ability","Making people try risky activities"],"answer":1,"why":"It is the person&#39;s right to choose to take reasonable risks."},{"q":"Mrs Rossi (88) wants to walk to the corner shop by herself. What do you do?","options":["Tell her she is too old","Lock the front door","Talk with her about the risks, follow her plan, and let your supervisor know"],"answer":2,"why":"You respect her choice and help her do it as safely as possible."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Duty of care or dignity of risk?</b></div>
+    <p class="act-instr">Choose the best answer.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802543/viewContent/43304769/View" target="_blank" rel="noopener">Duty of care</a></div>
+  
+  <aside class="tnotes" data-slide="s2" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s3" data-ref="NP5 S3">
+  <h2 class="topic"><span class="num">3</span> Work health and safety: your responsibilities <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCLEG001.one%7Cc8ff4e80-324a-46bd-bcc7-ad33f35eea4e%2FQ6%20A%7Ce4ea6e73-3386-4b45-9df9-222b9d229988%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">The <b>Work Health and Safety Act 2011 (Qld)</b> gives duties to your employer <b>and to you</b>. Here are your responsibilities as a worker.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s3.mp3" aria-label="Listen: Work health and safety: your responsibilities"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s3p1"><span class="ref" title="Reference">NP5 S3 P1</span><b>Follow instructions</b>, policies and procedures for health and safety.</li><li id="s3p2"><span class="ref" title="Reference">NP5 S3 P2</span>Follow the <b>code of conduct</b> and standards, so people are <b>emotionally safe</b> too.</li><li id="s3p3"><span class="ref" title="Reference">NP5 S3 P3</span><b>Use the PPE and equipment</b> that is there for the task (gloves, hoists, slide sheets).</li><li id="s3p4"><span class="ref" title="Reference">NP5 S3 P4</span>Do <b>not put other people at risk</b>.</li><li id="s3p5"><span class="ref" title="Reference">NP5 S3 P5</span>Do <b>not hurt yourself on purpose</b> (wilfully).</li><li id="s3p6"><span class="ref" title="Reference">NP5 S3 P6</span>Use <b>safe manual handling</b>: never lift a person on your own.</li><li id="s3p7"><span class="ref" title="Reference">NP5 S3 P7</span><b>Find hazards and think about the risk</b> (how likely and how bad), then report them.</li><li id="s3p8"><span class="ref" title="Reference">NP5 S3 P8</span>Follow <b>infection control</b>: hand hygiene, cleaning, PPE.</li></ol>
+  
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Back safety <span class="vid-by">(Aidacare)</span></p><div class="video" data-youtube="IC7J4CaY1hA" data-title="Back safety"></div></div>
+  
+  
+  
+  <div class="watch-out"><b>Watch out</b> Give <b>three different</b> responsibilities. &quot;Wear gloves, wear a gown, wear a mask&quot; is one responsibility (use PPE), not three.</div>
+  <div class="activity" id="act-s3-1" data-activity='{"type":"quiz","title":"Your WHS responsibility?","instructions":"Is each one a WHS responsibility of the worker?","questions":[{"q":"Use the hoist that the care plan says to use.","options":["Yes","No"],"answer":0,"why":"You must use the equipment provided for the task."},{"q":"Lift a resident by yourself because the hoist is in another room.","options":["Yes","No"],"answer":1,"why":"This puts you and the resident at risk. Get the hoist and a co-worker."},{"q":"Report a broken handrail.","options":["Yes","No"],"answer":0,"why":"Finding and reporting hazards is your responsibility."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Your WHS responsibility?</b></div>
+    <p class="act-instr">Is each one a WHS responsibility of the worker?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802543/viewContent/43304756/View" target="_blank" rel="noopener">Work Health and Safety Act 2011 (Qld)</a></div>
+  
+  <aside class="tnotes" data-slide="s3" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s4" data-ref="NP5 S4">
+  <h2 class="topic"><span class="num">4</span> When safety is ignored: what can happen <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCLEG001.one%7Cc8ff4e80-324a-46bd-bcc7-ad33f35eea4e%2FQ6%20B%7C2da1acf9-6174-48b1-bf67-548a53e297a8%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">If you do not follow the safety rules, the results can be serious, for <b>people</b> and for <b>you</b>.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s4.mp3" aria-label="Listen: When safety is ignored: what can happen"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s4p1"><span class="ref" title="Reference">NP5 S4 P1</span><b>Injury</b>: to you, to the person you support, to a co-worker or to a visitor.</li><li id="s4p2"><span class="ref" title="Reference">NP5 S4 P2</span>An <b>official warning</b> from your employer.</li><li id="s4p3"><span class="ref" title="Reference">NP5 S4 P3</span><b>Losing your job</b>.</li><li id="s4p4"><span class="ref" title="Reference">NP5 S4 P4</span><b>Legal action</b>: a court case, a fine, or being found personally responsible.</li><li id="s4p5"><span class="ref" title="Reference">NP5 S4 P5</span>If you get hurt because you <b>broke the safety rules</b>, WorkCover and your employer <b>may not support you</b>.</li></ol>
+  <figure class="infopic"><img src="pics/l2-consequences.jpg" alt="Infographic: the high cost of ignoring safety, consequences of neglecting your duty of care" tabindex="0"><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  
+  
+  
+  
+  
+  
+  
+  <div class="watch-out"><b>Watch out</b> When a question asks for <b>two</b> consequences, write two different ones, for example &quot;the resident could be injured&quot; <b>and</b> &quot;I could lose my job&quot;.</div>
+  <div class="activity" id="act-s4-1" data-activity='{"type":"match","title":"Match the result","instructions":"Match each unsafe action to a possible result.","pairs":[{"a":"Lifting a resident without the hoist","b":"Back injury to the worker or a fall for the resident"},{"a":"Ignoring the safety procedures again and again","b":"Official warning, then losing your job"},{"a":"A visitor slips on a spill you did not clean up","b":"Legal action against the organisation or worker"},{"a":"Hurting yourself because you broke the rules","b":"WorkCover may not support you"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Match the result</b></div>
+    <p class="act-instr">Match each unsafe action to a possible result.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802543/viewContent/43304756/View" target="_blank" rel="noopener">Work Health and Safety Act 2011 (Qld)</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802543/viewContent/43304776/View" target="_blank" rel="noopener">Ethical and legal breaches</a></div>
+  
+  <aside class="tnotes" data-slide="s4" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s5" data-ref="NP5 S5">
+  <h2 class="topic"><span class="num">5</span> Your rights at work</h2>
+  <p class="intro">Your <b>minimum pay and conditions</b> come from <b>awards</b>, <b>registered agreements</b> and <b>laws</b> (such as the Fair Work Act and the National Employment Standards).</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s5.mp3" aria-label="Listen: Your rights at work"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s5p1"><span class="ref" title="Reference">NP5 S5 P1</span>Your <b><a class="term" href="0-index.html#g-industrial-award" data-term="industrial-award" title="What does this word mean?">industrial award</a></b> (for example the Social, Community, Home Care and Disability Services Award) sets your minimum pay and conditions.</li><li id="s5p2"><span class="ref" title="Reference">NP5 S5 P2</span>In Queensland, <b>casual community services workers can also build up long service leave</b>, through a <b>portable long service leave</b> scheme.</li><li id="s5p3"><span class="ref" title="Reference">NP5 S5 P3</span>You can take <b>compassionate leave</b> when someone in your <b>immediate family or household</b> (including a <b>step-parent</b>) has a life-threatening illness or injury, or dies.</li><li id="s5p4"><span class="ref" title="Reference">NP5 S5 P4</span>If your employer wants to <b>change your regular roster</b>, they must <b>talk with you first</b> (consult).</li><li id="s5p5"><span class="ref" title="Reference">NP5 S5 P5</span>If your employer says you <b>must</b> go to training, you are <b>paid</b> for that time.</li><li id="s5p6"><span class="ref" title="Reference">NP5 S5 P6</span><b>Workers' compensation</b> covers <b>all</b> workers who are hurt at work, also <b>casual</b> and part-time workers.</li><li id="s5p7"><span class="ref" title="Reference">NP5 S5 P7</span>You are <b>free to join a union</b>. Your employer cannot stop you or treat you badly because of it.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="watch-out"><b>Watch out</b> In the quiz, two statements are false: &quot;workers' compensation only for permanent staff&quot; and &quot;I can only join a union if my workplace allows it&quot;.</div>
+  <div class="activity" id="act-s5-1" data-activity='{"type":"quiz","title":"True or false?","instructions":"Is each statement true or false?","questions":[{"q":"Casual workers can never get workers&#39; compensation.","options":["True","False"],"answer":1,"why":"Workers&#39; compensation covers casual workers too."},{"q":"Your employer must talk with you before changing your regular roster.","options":["True","False"],"answer":0,"why":"Your employer must consult you first."},{"q":"You are paid for training your employer tells you to attend.","options":["True","False"],"answer":0,"why":"Compulsory training is paid work time."},{"q":"You can only join a union if your workplace says yes.","options":["True","False"],"answer":1,"why":"Joining a union is your right. Your employer cannot stop you."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>True or false?</b></div>
+    <p class="act-instr">Is each statement true or false?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802543/viewContent/43304740/View" target="_blank" rel="noopener">Legislation in the community services sector</a></div>
+  
+  <aside class="tnotes" data-slide="s5" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s6" data-ref="NP5 S6">
+  <h2 class="topic"><span class="num">6</span> Keep learning: professional development <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCLEG001.one%7Cc8ff4e80-324a-46bd-bcc7-ad33f35eea4e%2FQ7%7C4dce707f-2259-43bc-b63e-46ce77b3e50a%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro"><a class="term" href="0-index.html#g-continuing-professional-education" data-term="continuing-professional-education" title="What does this word mean?">Continuing professional education</a> (also called <b>professional development</b>) keeps your knowledge and skills <b>up to date</b>.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s6.mp3" aria-label="Listen: Keep learning: professional development"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s6p1"><span class="ref" title="Reference">NP5 S6 P1</span><b>Why it matters</b>: so you give <b>quality care</b> to the people you support.</li><li id="s6p2"><span class="ref" title="Reference">NP5 S6 P2</span>So you meet your <b>organisation's standards</b> and the <b>industry standards</b>.</li><li id="s6p3"><span class="ref" title="Reference">NP5 S6 P3</span>Because <b>laws, standards and best ways of working change</b>. For example, the new Aged Care Act started in 2025.</li><li id="s6p4"><span class="ref" title="Reference">NP5 S6 P4</span><b>Sharing what you learnt</b>: talk about it at a <b>staff meeting</b> or <b>handover</b>.</li><li id="s6p5"><span class="ref" title="Reference">NP5 S6 P5</span>Give a short <b>presentation</b> to your team.</li><li id="s6p6"><span class="ref" title="Reference">NP5 S6 P6</span>Bring back <b>brochures, posters or handouts</b> and put them in the staff room.</li><li id="s6p7"><span class="ref" title="Reference">NP5 S6 P7</span>Send a short <b>email summary</b> to your team and your supervisor.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s6-1" data-activity='{"type":"order","title":"Share your training","instructions":"Put Lin&#39;s steps in a sensible order.","items":["Lin goes to a falls prevention workshop","Lin asks her supervisor for 10 minutes at the staff meeting","Lin shows the team the new checklist at the meeting","Lin puts the poster up in the staff room"]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Share your training</b></div>
+    <p class="act-instr">Put Lin's steps in a sensible order.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802543/viewContent/43304802/View" target="_blank" rel="noopener">Feedback and continuous improvement</a></div>
+  
+  <aside class="tnotes" data-slide="s6" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s7" data-ref="NP5 S7">
+  <h2 class="topic"><span class="num">7</span> When a person wants to complain <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCLEG001.one%7Cc8ff4e80-324a-46bd-bcc7-ad33f35eea4e%2FQ5%7Ce1116161-fc45-4049-aea9-ba439ea124ad%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Every person who uses a service has the <b>right to complain</b>, and to complain <b>without fear</b>. A complaint helps the service get better.</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s7.mp3" aria-label="Listen: When a person wants to complain"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s7p1"><span class="ref" title="Reference">NP5 S7 P1</span><b>Listen</b> and <b>show empathy</b>: &quot;I am sorry this happened. Thank you for telling me.&quot;</li><li id="s7p2"><span class="ref" title="Reference">NP5 S7 P2</span>Give the person the <b>contact details of your supervisor or manager</b>.</li><li id="s7p3"><span class="ref" title="Reference">NP5 S7 P3</span>If they ask, <b>help them write the complaint</b>, or take their <b>spoken or written complaint</b> to your supervisor or manager.</li><li id="s7p4"><span class="ref" title="Reference">NP5 S7 P4</span>A complaint does <b>not</b> have to be in writing. The organisation gives every person <b>information (for example a brochure) on how to complain</b>.</li><li id="s7p5"><span class="ref" title="Reference">NP5 S7 P5</span>Every complaint is written in the <b>complaints register</b>, and the organisation answers it within its set timeframes. It is not &quot;whenever the manager likes&quot;.</li><li id="s7p6"><span class="ref" title="Reference">NP5 S7 P6</span>If it is not fixed inside the service, help the person get an <b><a class="term" href="0-index.html#g-advocate" data-term="advocate" title="What does this word mean?">advocate</a></b> (for example OPAN), or contact the <b>Aged Care Quality and Safety Commission</b> (the Complaints Commissioner) or the <b>NDIS Commission</b>.</li><li id="s7p7"><span class="ref" title="Reference">NP5 S7 P7</span>Keep complaints <b>private</b>. The person must never be punished or treated badly for complaining.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s7-1" data-activity='{"type":"order","title":"Mrs Brown wants to complain","instructions":"Put the steps in order.","items":["Listen to Mrs Brown and show empathy","Give her your supervisor&#39;s contact details","Help her write the complaint, because she asks you to","Take the complaint to your supervisor","If it is not fixed, help her contact an advocate"]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Mrs Brown wants to complain</b></div>
+    <p class="act-instr">Put the steps in order.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802543/viewContent/43304803/View" target="_blank" rel="noopener">Manage, provide and respond to feedback</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802543/viewContent/43304802/View" target="_blank" rel="noopener">Feedback and continuous improvement</a></div>
+  
+  <aside class="tnotes" data-slide="s7" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s8" data-ref="NP5 S8">
+  <h2 class="topic"><span class="num">8</span> Worried about a co-worker? <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCLEG001.one%7Cc8ff4e80-324a-46bd-bcc7-ad33f35eea4e%2FQ4%7Cb287e2b4-0f79-469c-9b85-bfa500ac0b99%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  <p class="intro">Sometimes you see a co-worker do something that is <b>against the law or not ethical</b>. What do you do?</p>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s8.mp3" aria-label="Listen: Worried about a co-worker?"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s8p1"><span class="ref" title="Reference">NP5 S8 P1</span>Report it to your <b>supervisor or manager</b>.</li><li id="s8p2"><span class="ref" title="Reference">NP5 S8 P2</span>If your supervisor is part of the problem, go to the <b>next manager</b> up.</li><li id="s8p3"><span class="ref" title="Reference">NP5 S8 P3</span>Report the <b>facts</b>: what you saw and heard, when and where. Do not add your opinion.</li><li id="s8p4"><span class="ref" title="Reference">NP5 S8 P4</span>Do <b>not</b> talk about it with other staff or the people you support. That is gossip, and it breaks privacy.</li><li id="s8p5"><span class="ref" title="Reference">NP5 S8 P5</span>The law protects <b><a class="term" href="0-index.html#g-whistleblower" data-term="whistleblower" title="What does this word mean?">whistleblower</a>s</b>: you cannot be punished for reporting in good faith. In aged care, you can also tell the <b>Aged Care Quality and Safety Commission</b>.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s8-1" data-activity='{"type":"quiz","title":"Who do you tell?","instructions":"Choose the best answer.","questions":[{"q":"You see a co-worker take $20 from a resident&#39;s purse. Who do you report it to?","options":["The other staff in the tea room","Your supervisor or manager","Nobody, it is not your business"],"answer":1,"why":"Report it to your supervisor or manager, with the facts."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Who do you tell?</b></div>
+    <p class="act-instr">Choose the best answer.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802543/viewContent/43304776/View" target="_blank" rel="noopener">Ethical and legal breaches</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802543/viewContent/43304779/View" target="_blank" rel="noopener">Mandatory and organisational reporting</a></div>
+  <div class="finale" data-finale><div class="fin-side left"><div class="fin-mascot"><svg viewBox="0 0 150 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Loose Lips Larry">
+  <g fill="#a8432b"><circle cx="108" cy="10" r="4"/><circle cx="121" cy="7" r="4"/><circle cx="134" cy="10" r="4"/></g>
+  <line x1="58" y1="128" x2="50" y2="158" stroke="#7a2e1d" stroke-width="7" stroke-linecap="round"/>
+  <line x1="92" y1="128" x2="104" y2="156" stroke="#7a2e1d" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="46" cy="160" rx="12" ry="5" fill="#4a1d12"/><ellipse cx="108" cy="158" rx="12" ry="5" fill="#4a1d12"/>
+  <path d="M26 22 h98 a18 18 0 0 1 18 18 v62 a18 18 0 0 1 -18 18 h-58 l-30 24 l8 -24 h-18 a18 18 0 0 1 -18 -18 v-62 a18 18 0 0 1 18 -18z" fill="#f08a6b" stroke="#a8432b" stroke-width="4"/>
+  <path d="M44 50 q12 -10 24 -2" stroke="#4a1d12" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M84 52 q12 -4 22 2" stroke="#4a1d12" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <ellipse cx="56" cy="62" rx="9" ry="6" fill="#fff"/><ellipse cx="95" cy="63" rx="9" ry="6" fill="#fff"/>
+  <circle cx="60" cy="63" r="4" fill="#2b1a14"/><circle cx="99" cy="64" r="4" fill="#2b1a14"/>
+  <path d="M46 60 h20 M85 61 h20" stroke="#a8432b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M42 82 q34 30 70 -2 q-35 12 -70 2z" fill="#7a2e1d" stroke="#4a1d12" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M50 86 h52" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <path d="M14 84 q-10 -6 -8 -18" stroke="#a8432b" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M138 70 q12 -4 10 -16" stroke="#a8432b" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg></div><div class="fin-bubble"><p>Fine. No more walking past spills. And I will stop the tea room gossip.</p><button type="button" class="say" data-audio="audio/np5-s8-larry.mp3" aria-label="Listen: Loose Lips Larry"><span class="ico">&#9654;</span> Listen</button></div><p class="fin-who">Loose Lips Larry</p></div><div class="fin-side right"><div class="fin-mascot"><svg viewBox="0 0 150 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Justine the Justice Scales">
+  <rect x="45" y="150" width="60" height="12" rx="5" fill="#8a6a1f" stroke="#5e470f" stroke-width="2"/>
+  <rect x="70" y="58" width="10" height="94" rx="4" fill="#c9a23b" stroke="#8a6a1f" stroke-width="2"/>
+  <rect x="14" y="62" width="122" height="8" rx="4" fill="#c9a23b" stroke="#8a6a1f" stroke-width="2"/>
+  <g stroke="#8a6a1f" stroke-width="2"><line x1="22" y1="70" x2="10" y2="108"/><line x1="22" y1="70" x2="34" y2="108"/><line x1="128" y1="70" x2="116" y2="108"/><line x1="128" y1="70" x2="140" y2="108"/></g>
+  <path d="M4 108 h36 a18 10 0 0 1 -36 0z" fill="#e8c55a" stroke="#8a6a1f" stroke-width="2.5"/>
+  <path d="M110 108 h36 a18 10 0 0 1 -36 0z" fill="#e8c55a" stroke="#8a6a1f" stroke-width="2.5"/>
+  <circle cx="75" cy="34" r="27" fill="#f2cf6a" stroke="#8a6a1f" stroke-width="3"/>
+  <circle cx="65" cy="31" r="4" fill="#1f2a44"/><circle cx="85" cy="31" r="4" fill="#1f2a44"/>
+  <circle cx="66.5" cy="29.5" r="1.3" fill="#fff"/><circle cx="86.5" cy="29.5" r="1.3" fill="#fff"/>
+  <circle cx="58" cy="41" r="4" fill="#e8956b" opacity=".55"/><circle cx="92" cy="41" r="4" fill="#e8956b" opacity=".55"/>
+  <path d="M64 43 q11 9 22 0" stroke="#1f2a44" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  <path d="M52 16 q23 -16 46 0" stroke="#8a6a1f" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg></div><div class="fin-bubble"><p>Great. Next lesson: privacy, consent, fairness and reporting.</p><button type="button" class="say" data-audio="audio/np5-s8-justine.mp3" aria-label="Listen: Justine the Justice Scales"><span class="ico">&#9654;</span> Listen</button></div><p class="fin-who">Justine the Justice Scales</p></div></div><p class="fin-after">Go back to Nearpod for <b>Check 2</b>.</p>
+  <aside class="tnotes" data-slide="s8" aria-label="Teacher notes"></aside>
+</section>
+  <footer class="foot">
+    <p>CHCLEG001 · Your duties at work · Built from TAFE Queensland learning resources, 28 Oct 2026. How to write a reference from this page: <b>NP5 S5 P1</b> means <b>Nearpod 5, Section 5, Point 1</b>. <b>C</b> means Card, for example NP5 S4 C2 is Nearpod 5, Section 4, Card 2. The section number is the number in the circle next to each heading.</p>
+    <p>Picture credits: Pictures: Adrie Homan and Adobe Stock</p>
+    <p><a href="0-index.html">Lesson index and glossary</a> · <button type="button" class="tlink">Teacher</button></p>
+  </footer>
+</div>
+<a href="#index" class="home" title="Back to the index"><span aria-hidden="true">&#8679;</span> Home</a>
+<div class="tpill" hidden><span class="tp-label">Teacher</span><button type="button" class="tp-hide">Hide notes</button><button type="button" class="tp-out">Sign out</button></div>
+<div class="mascot larry side-left" data-mascot="larry" title="Loose Lips Larry" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 150 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Loose Lips Larry">
+  <g fill="#a8432b"><circle cx="108" cy="10" r="4"/><circle cx="121" cy="7" r="4"/><circle cx="134" cy="10" r="4"/></g>
+  <line x1="58" y1="128" x2="50" y2="158" stroke="#7a2e1d" stroke-width="7" stroke-linecap="round"/>
+  <line x1="92" y1="128" x2="104" y2="156" stroke="#7a2e1d" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="46" cy="160" rx="12" ry="5" fill="#4a1d12"/><ellipse cx="108" cy="158" rx="12" ry="5" fill="#4a1d12"/>
+  <path d="M26 22 h98 a18 18 0 0 1 18 18 v62 a18 18 0 0 1 -18 18 h-58 l-30 24 l8 -24 h-18 a18 18 0 0 1 -18 -18 v-62 a18 18 0 0 1 18 -18z" fill="#f08a6b" stroke="#a8432b" stroke-width="4"/>
+  <path d="M44 50 q12 -10 24 -2" stroke="#4a1d12" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M84 52 q12 -4 22 2" stroke="#4a1d12" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <ellipse cx="56" cy="62" rx="9" ry="6" fill="#fff"/><ellipse cx="95" cy="63" rx="9" ry="6" fill="#fff"/>
+  <circle cx="60" cy="63" r="4" fill="#2b1a14"/><circle cx="99" cy="64" r="4" fill="#2b1a14"/>
+  <path d="M46 60 h20 M85 61 h20" stroke="#a8432b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M42 82 q34 30 70 -2 q-35 12 -70 2z" fill="#7a2e1d" stroke="#4a1d12" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M50 86 h52" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <path d="M14 84 q-10 -6 -8 -18" stroke="#a8432b" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M138 70 q12 -4 10 -16" stroke="#a8432b" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg></div><div class="mascot justine side-right" data-mascot="justine" title="Justine the Justice Scales" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 150 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Justine the Justice Scales">
+  <rect x="45" y="150" width="60" height="12" rx="5" fill="#8a6a1f" stroke="#5e470f" stroke-width="2"/>
+  <rect x="70" y="58" width="10" height="94" rx="4" fill="#c9a23b" stroke="#8a6a1f" stroke-width="2"/>
+  <rect x="14" y="62" width="122" height="8" rx="4" fill="#c9a23b" stroke="#8a6a1f" stroke-width="2"/>
+  <g stroke="#8a6a1f" stroke-width="2"><line x1="22" y1="70" x2="10" y2="108"/><line x1="22" y1="70" x2="34" y2="108"/><line x1="128" y1="70" x2="116" y2="108"/><line x1="128" y1="70" x2="140" y2="108"/></g>
+  <path d="M4 108 h36 a18 10 0 0 1 -36 0z" fill="#e8c55a" stroke="#8a6a1f" stroke-width="2.5"/>
+  <path d="M110 108 h36 a18 10 0 0 1 -36 0z" fill="#e8c55a" stroke="#8a6a1f" stroke-width="2.5"/>
+  <circle cx="75" cy="34" r="27" fill="#f2cf6a" stroke="#8a6a1f" stroke-width="3"/>
+  <circle cx="65" cy="31" r="4" fill="#1f2a44"/><circle cx="85" cy="31" r="4" fill="#1f2a44"/>
+  <circle cx="66.5" cy="29.5" r="1.3" fill="#fff"/><circle cx="86.5" cy="29.5" r="1.3" fill="#fff"/>
+  <circle cx="58" cy="41" r="4" fill="#e8956b" opacity=".55"/><circle cx="92" cy="41" r="4" fill="#e8956b" opacity=".55"/>
+  <path d="M64 43 q11 9 22 0" stroke="#1f2a44" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  <path d="M52 16 q23 -16 46 0" stroke="#8a6a1f" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg></div>
+</main>
+<div class="big" role="dialog" aria-modal="true" aria-label="Card in full screen">
+  <div class="bar"><span class="big-where"></span><button type="button" class="big-close">Close</button></div>
+  <div class="body"></div>
+  <div class="foot"><button type="button" class="big-back">Back</button><button type="button" class="next big-next">Next card</button></div>
+</div>
+<script>var GLOSS = {"industrial-award":["Industrial award","A legal document that sets the minimum pay and conditions for a type of job, for example the Social, Community, Home Care and Disability Services Award."],"duty-of-care":["Duty of care","Your legal and moral duty to keep the people you support, and others, safe from harm."],"dignity-of-risk":["Dignity of risk","A person's right to take reasonable risks and make their own choices, whatever their age or ability."],"continuing-professional-education":["Continuing professional education","Learning that keeps your knowledge and skills up to date so you can do your job better. Also called professional development."],"whistleblower":["Whistleblower","A person who reports something wrong or illegal at work. The law protects them from being punished for it."],"scope-of-practice":["Scope of practice","The tasks you are trained and allowed to do in your job. Tasks outside it belong to someone else."],"advocate":["Advocate","A person who supports someone to speak up for their rights, for example a worker from an advocacy service like OPAN."]}; var TEACHER = {"salt":"c70lSX9ALFvo7Ze0h+NroA==","iv":"ZfRmPlB+IBRY9oW2","ct":"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"}; var ANNOUNCE = {"first":{"mascot":"larry","voice":"William","pitch":1.1,"none":"Ha! Nobody got every activity right first time. Shortcuts win!","some":"What? {who} got every activity right first time. Maybe the rules do work."},"second":{"mascot":"justine","voice":"Natasha","pitch":1.05,"none":"Keep going, everyone. Weigh it up, check the rules, and you will beat Larry.","some":"Well done! {who} got all {n} right first time. Fair and careful wins, Larry."}}; var MASCOT_LINES = {"larry":{"lines":["Duty of care means I decide what is safe for them. Easy.","Wet floor? Someone else will mop it.","Training is a waste of time. I know it all already.","A complaint? Tell them to put it in writing and go away.","My mate broke the rules? I won't tell. We look after each other."],"prefix":"larry-l2-"},"justine":{"lines":["Duty of care means you keep people safe, and you still respect their choices.","See a hazard? Fix it if it is safe to, and report it.","Keep learning. The rules and the best ways of working keep changing.","Everyone can complain. Listen, help them, and take it to your supervisor.","If a co-worker does something wrong, tell your supervisor. You are protected when you speak up."],"prefix":"justine-l2-"}};</script>
+<script>(function(){
+  var ANGLES = [-8, -5.5, -9, -4.5, -7, -6, -8.5, -4, -6.5];
+  var big = document.querySelector('.big'), bigBody = big.querySelector('.body'),
+      bigWhere = big.querySelector('.big-where'), active = null;
+
+  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ----------
+     Once the teacher has typed the code on a computer, the purple teacher pill stays at the top right of every
+     lesson page on that computer (Show or Hide notes, Presenting, Sign out), so nothing needs the footer again.
+     Students never have the code, so they never see the pill. */
+  (function(){
+    var pill = document.querySelector('.tpill'), tlinks = document.querySelectorAll('.tlink'), saved = null, on = '0';
+    var hideBtn = pill.querySelector('.tp-hide');
+    var b64 = function(s){ var b = atob(s), a = new Uint8Array(b.length); for(var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; };
+    function decrypt(code){
+      if(!window.crypto || !crypto.subtle) return Promise.reject(new Error('nosubtle'));
+      var enc = new TextEncoder();
+      return crypto.subtle.importKey('raw', enc.encode(code), 'PBKDF2', false, ['deriveKey']).then(function(km){
+        return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(TEACHER.salt), iterations: 150000, hash: 'SHA-256' }, km, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      }).then(function(key){
+        return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(TEACHER.iv) }, key, b64(TEACHER.ct));
+      }).then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
+    }
+    function pillOn(v){ pill.hidden = !v; document.body.classList.toggle('tv-pill', !!v); }
+    function show(notes){
+      document.querySelectorAll('.tnotes').forEach(function(a){ a.innerHTML = notes[a.getAttribute('data-slide')] || ''; });
+      document.body.classList.add('teacher'); pillOn(true); hideBtn.textContent = 'Hide notes';
+      try{ localStorage.setItem('tv_on', '1'); }catch(e){}
+    }
+    function hide(){
+      document.body.classList.remove('teacher'); hideBtn.textContent = 'Show notes';
+      pillOn(!!saved);   /* the pill stays while this computer knows the code */
+      try{ localStorage.setItem('tv_on', '0'); }catch(e){}
+    }
+    function unlock(code, quiet){
+      return decrypt(code).then(function(notes){ saved = code; try{ localStorage.setItem('tv_code', code); }catch(e){} show(notes); }, function(err){
+        if(quiet) return;
+        alert(err.message === 'nosubtle' ? 'This browser cannot unlock the teacher view. Use Chrome or Edge.' : 'That code did not work.');
+      });
+    }
+    function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
+    try{ saved = localStorage.getItem('tv_code'); on = localStorage.getItem('tv_on') || '0'; }catch(e){}
+    var q = new URLSearchParams(location.search);
+    if(q.get('t') === 'off'){ saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} hide(); }
+    else if(q.has('t')) unlock(q.get('t'));
+    else if(saved && on === '1') unlock(saved, true);
+    else if(saved) hide();
+    tlinks.forEach(function(tl){ tl.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')){ hide(); return; }
+      if(saved){ unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); }); } else ask();
+    }); });
+    hideBtn.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')) hide();
+      else if(saved) unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); });
+    });
+    pill.querySelector('.tp-out').addEventListener('click', function(){ saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} hide(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open') && !document.querySelector('.gpop')) hide(); });
+  })();
+
+    /* ---------- audio ---------- */
+  var player = new Audio(), current = null, queue = null;
+  function stopAudio(keepQueue){
+    player.pause(); if(current){ current.classList.remove('playing'); current = null; }
+    if(!keepQueue && queue){ var q = queue; queue = null; if(q._stopped) q._stopped(); }
+  }
+  function playBtn(btn, onEnd, keepQueue){
+    if(current === btn){ stopAudio(); return; }
+    stopAudio(keepQueue);
+    current = btn; btn.classList.add('playing');
+    player.src = btn.getAttribute('data-audio');
+    player.onended = function(){ btn.classList.remove('playing'); current = null; if(onEnd) onEnd(); };
+    player.onerror = function(){ btn.classList.remove('playing'); current = null; btn.title = 'Sound file not found yet'; };
+    player.play().catch(function(){});
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.say'); if(!b) return;
+    e.preventDefault(); e.stopPropagation();
+    var inBig = b.closest('.big');
+    if(inBig && active){ var realBtn = active.card().querySelector('.say'); if(realBtn) b = realBtn; }
+    playBtn(b);
+  });
+
+  /* ---------- mascots follow the scroll ---------- */
+  document.querySelectorAll('.mascot').forEach(function(g, gi){
+    var name = g.getAttribute('data-mascot'), bubble = g.querySelector('.gerry-bubble');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var lastSlide = null, timer = null, ml = MASCOT_LINES[name] || {}, lines = ml.lines || [], prefix = ml.prefix || (name + '-');
+    function place(){
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? window.scrollY / max : 0;
+      var top = 90 + (gi ? 1 - p : p) * (window.innerHeight - 300);
+      g.style.top = top + 'px';
+      var slides = document.querySelectorAll('section.slide'), cur = null;
+      for(var i = 0; i < slides.length; i++){ if(slides[i].getBoundingClientRect().top < window.innerHeight * 0.5) cur = slides[i]; }
+      if(cur !== lastSlide && lastSlide !== null && !reduce){ g.classList.remove('hop'); void g.offsetWidth; g.classList.add('hop'); }
+      lastSlide = cur;
+    }
+    window.addEventListener('scroll', function(){ if(!timer) timer = requestAnimationFrame(function(){ timer = null; place(); }); }, { passive: true });
+    window.addEventListener('resize', place);
+    place();
+    var n = 0;
+    g.addEventListener('click', function(){
+      if(!bubble.hidden){ bubble.hidden = true; return; }
+      var k = n++ % lines.length;
+      bubble.textContent = lines[k]; bubble.hidden = false;
+      stopAudio(); player.src = 'audio/' + prefix + (k + 1) + '.mp3'; player.onended = null; player.onerror = null; player.play().catch(function(){});
+      clearTimeout(bubble._t); bubble._t = setTimeout(function(){ bubble.hidden = true; }, 7000);
+    });
+  });
+
+  /* ---------- finale: big mascots walk in ---------- */
+  document.querySelectorAll('[data-finale]').forEach(function(f){
+    if(!('IntersectionObserver' in window)){ f.classList.add('in'); return; }
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ f.classList.add('in'); io.disconnect(); } }); }, { threshold: 0.35 });
+    io.observe(f);
+  });
+
+  /* ---------- videos ---------- */
+  document.querySelectorAll('.video').forEach(function(v){
+    var id = (v.getAttribute('data-youtube')||'').trim(), t = v.getAttribute('data-title')||'Video';
+    if(!id) return;
+    v.innerHTML = '<iframe title="'+t.replace(/"/g,'&quot;')+'" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>';
+    var w = document.createElement('p'); w.className = 'watch';
+    w.innerHTML = 'Video not playing? <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v='+encodeURIComponent(id)+'">Watch "'+t.replace(/</g,'&lt;')+'" on YouTube</a>';
+    v.parentNode.insertBefore(w, v.nextSibling);
+  });
+
+  /* ---------- click a part of a diagram to make it stand out ---------- */
+  document.querySelectorAll('.spot').forEach(function(sv){
+    var parts = sv.querySelectorAll('[data-spot]');
+    parts.forEach(function(g){
+      g.style.cursor = 'pointer';
+      g.addEventListener('click', function(e){
+        e.stopPropagation();
+        var on = g.classList.contains('lit');
+        parts.forEach(function(x){ x.classList.remove('lit'); });
+        sv.classList.toggle('spotting', !on);
+        if(!on) g.classList.add('lit');
+      });
+    });
+    sv.addEventListener('click', function(){ parts.forEach(function(x){ x.classList.remove('lit'); }); sv.classList.remove('spotting'); });
+  });
+
+  /* ---------- card stacks ---------- */
+  document.querySelectorAll('.stack').forEach(function(stack){
+    var cards = [].slice.call(stack.querySelectorAll('.card')), n = cards.length, i = 0, busy = false;
+    var deck = document.createElement('div'); deck.className = 'deck'; deck.tabIndex = 0;
+    deck.setAttribute('role','group');
+    deck.setAttribute('aria-label', (stack.getAttribute('aria-label')||'Cards') + '. Press the right arrow for the next card.');
+    var pile = document.createElement('div'); pile.className = 'pile'; pile.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
+    deck.appendChild(pile);
+    cards.forEach(function(c, k){
+      c.style.setProperty('--r', ANGLES[k % ANGLES.length] + 'deg');
+      if(k % 2) c.classList.add('shade');
+      if(c.textContent.replace(/\s+/g,' ').length > 520) c.classList.add('long');
+      var tag = document.createElement('span'); tag.className = 'count'; tag.textContent = 'Card ' + (k+1) + ' of ' + n;
+      c.insertBefore(tag, c.firstChild);
+      c.setAttribute('aria-hidden', 'true');
+      deck.appendChild(c);
+    });
+    if(stack.getAttribute('data-playall')){
+      /* Play all: card 1 to the last card, one after the other. The deck turns to each card as it plays.
+         Before 28 Oct 2026 only card 1 played: starting each card's sound also cleared the queue. */
+      var pa = document.createElement('div'); pa.className = 'playall';
+      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> <span class="pa-t">Play all cards</span></button>';
+      stack.appendChild(pa);
+      var paBtn = pa.querySelector('button'), paT = pa.querySelector('.pa-t');
+      stack._stopped = function(){ paBtn.classList.remove('playing'); paT.textContent = 'Play all cards'; };
+      paBtn.addEventListener('click', function(ev){
+        ev.stopPropagation();
+        if(queue === stack){ stopAudio(); return; }
+        stopAudio(); queue = stack; paBtn.classList.add('playing'); paT.textContent = 'Stop';
+        if(i !== 0){ i = 0; show(); }
+        function finish(){ if(queue === stack){ queue = null; stack._stopped(); } }
+        function step(){
+          if(queue !== stack) return;
+          var b = cards[i].querySelector('.say');
+          var after = function(){ setTimeout(function(){
+            if(queue !== stack) return;
+            if(i === n - 1){ finish(); return; }
+            busy = false; go(1); setTimeout(step, 450);
+          }, b ? 900 : 0); };
+          if(!b){ after(); return; }
+          playBtn(b, after, true);
+        }
+        step();
+      }, true);
+    }
+    stack.appendChild(deck);
+
+    var controls = document.createElement('div'); controls.className = 'controls';
+    controls.innerHTML = '<button type="button" class="back">Back</button><span class="where" aria-live="polite"></span><button type="button" class="next">Next card</button><button type="button" class="full">Full screen</button>';
+    stack.appendChild(controls);
+    var hint = document.createElement('p'); hint.className = 'hint'; hint.textContent = 'Click the card to see the next card.';
+    stack.appendChild(hint);
+    var where = controls.querySelector('.where');
+
+    var heights = [];
+    function size(){
+      cards.forEach(function(c, k){ c.style.height = 'auto'; heights[k] = c.offsetHeight; c.style.height = ''; });
+      deck.style.height = heights[i] + 'px';
+    }
+    function show(){
+      cards.forEach(function(c, k){ c.classList.toggle('top', k === i); c.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      where.textContent = 'Card ' + (i+1) + ' of ' + n;
+      if(heights.length) deck.style.height = heights[i] + 'px';
+      if(active === api && big.classList.contains('open')) fill();
+    }
+    function go(step){
+      if(busy) return; busy = true;
+      var old = cards[i];
+      i = (i + step + n) % n;
+      var cls = step > 0 ? 'leave' : 'leave-back';
+      show();
+      old.classList.add(cls);
+      cards[i].classList.add('arrive');
+      setTimeout(function(){ old.classList.remove(cls); cards[i].classList.remove('arrive'); busy = false; }, 440);
+    }
+    function next(){ go(1); }
+    function fill(){
+      bigBody.innerHTML = cards[i].innerHTML;
+      bigWhere.textContent = 'Card ' + (i+1) + ' of ' + n;
+      bigBody.scrollTop = 0;
+    }
+    var api = { go: go, fill: fill, card: function(){ return cards[i]; } };
+
+    deck.addEventListener('click', function(e){ if(e.target.closest('a') || e.target.closest('.say')) return; go(1); });
+    deck.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); go(1); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
+    });
+    controls.querySelector('.next').addEventListener('click', function(){ go(1); });
+    controls.querySelector('.back').addEventListener('click', function(){ go(-1); });
+    controls.querySelector('.full').addEventListener('click', function(){
+      active = api; fill(); big.classList.add('open'); big.querySelector('.big-next').focus();
+    });
+
+    size(); show();
+    window.addEventListener('resize', size);
+    window.addEventListener('load', size);
+    stack.querySelectorAll('img').forEach(function(img){ img.addEventListener('load', size); });
+  });
+
+  function closeBig(){ big.classList.remove('open'); active = null; }
+  big.querySelector('.big-close').addEventListener('click', closeBig);
+  big.querySelector('.big-next').addEventListener('click', function(){ if(active) active.go(1); });
+  big.querySelector('.big-back').addEventListener('click', function(){ if(active) active.go(-1); });
+  document.addEventListener('keydown', function(e){
+    if(!big.classList.contains('open')) return;
+    if(e.key === 'Escape') closeBig();
+    if(e.key === 'ArrowRight' && active) active.go(1);
+    if(e.key === 'ArrowLeft' && active) active.go(-1);
+  });
+
+  /* ---------- activities ---------- */
+  function shuffle(a){ a = a.slice(); for(var i = a.length-1; i > 0; i--){ var j = Math.floor(Math.random()*(i+1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
+  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
+
+  var builders = {
+    /* chips into targets: used by match (one chip per target) and sort (many chips per bucket) */
+    match: function(root, a){ return buildChips(root, a.pairs.map(function(p){ return { text: p.a, target: p.b }; }), shuffle(a.pairs.map(function(p){ return p.b; })), a.labels || null, 1); },
+    sort: function(root, a){ return buildChips(root, a.items.map(function(it){ return { text: it.text, target: it.bucket }; }), a.buckets, null, 99); },
+    order: function(root, a){
+      var list = el('ol', 'order'); root.appendChild(list);
+      var start = a.start == null ? 1 : a.start;
+      function render(items){
+        list.innerHTML = '';
+        items.forEach(function(t, k){
+          var li = el('li'); li.draggable = true; li.setAttribute('data-text', t);
+          li.innerHTML = '<span class="o-n">' + (start + k) + '</span><span class="o-t">' + esc(t) + '</span><span class="o-btn"><button type="button" aria-label="Move up">&#9650;</button><button type="button" aria-label="Move down">&#9660;</button></span>';
+          list.appendChild(li);
+        });
+      }
+      function items(){ return [].map.call(list.children, function(li){ return li.getAttribute('data-text'); }); }
+      function renumber(){ [].forEach.call(list.children, function(li, k){ li.querySelector('.o-n').textContent = start + k; li.classList.remove('right','wrong'); }); }
+      render(shuffle(a.items));
+      list.addEventListener('click', function(e){
+        var b = e.target.closest('button'); if(!b) return;
+        var li = b.closest('li'); var up = b.getAttribute('aria-label') === 'Move up';
+        if(up && li.previousElementSibling) list.insertBefore(li, li.previousElementSibling);
+        if(!up && li.nextElementSibling) list.insertBefore(li.nextElementSibling, li);
+        renumber();
+      });
+      var drag = null;
+      list.addEventListener('dragstart', function(e){ drag = e.target.closest('li'); if(drag) drag.classList.add('dragging'); });
+      list.addEventListener('dragend', function(){ if(drag) drag.classList.remove('dragging'); drag = null; renumber(); });
+      list.addEventListener('dragover', function(e){ e.preventDefault(); var li = e.target.closest('li'); if(!li || li === drag) return; var r = li.getBoundingClientRect(); if(e.clientY < r.top + r.height/2) list.insertBefore(drag, li); else list.insertBefore(drag, li.nextSibling); });
+      return {
+        check: function(){ var ok = 0; [].forEach.call(list.children, function(li, k){ var good = li.getAttribute('data-text') === a.items[k]; li.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, a.items.length]; },
+        reset: function(){ render(shuffle(a.items)); }
+      };
+    },
+    quiz: function(root, a){
+      var qs = [];
+      a.questions.forEach(function(q, qi){
+        var box = el('div', 'quiz-q'); box.innerHTML = '<p><b>' + (qi+1) + '. ' + esc(q.q) + '</b></p>';
+        var sel = -1;
+        q.options.forEach(function(o, oi){
+          var b = el('button', 'opt', esc(o)); b.type = 'button';
+          b.addEventListener('click', function(){ if(box.classList.contains('done')) return; sel = oi; [].forEach.call(box.querySelectorAll('.opt'), function(x){ x.classList.remove('selected'); }); b.classList.add('selected'); });
+          box.appendChild(b);
+        });
+        if(q.why) box.appendChild(el('p', 'why', esc(q.why)));
+        root.appendChild(box);
+        qs.push({ box: box, get: function(){ return sel; }, set: function(v){ sel = v; }, q: q });
+      });
+      return {
+        check: function(){ var ok = 0; qs.forEach(function(x){ var opts = x.box.querySelectorAll('.opt'); x.box.classList.add('done'); opts.forEach(function(o, oi){ o.classList.remove('selected'); if(oi === x.q.answer) o.classList.add('right'); else if(oi === x.get()) o.classList.add('wrong'); }); if(x.get() === x.q.answer) ok++; }); return [ok, qs.length]; },
+        reset: function(){ qs.forEach(function(x){ x.set(-1); x.box.classList.remove('done'); x.box.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected','right','wrong'); }); }); }
+      };
+    },
+    table: function(root, a){
+      var t = el('table', 'fill-table'); root.appendChild(t);
+      t.innerHTML = '<thead><tr>' + a.columns.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead>';
+      var tb = el('tbody'); t.appendChild(tb);
+      a.rows.forEach(function(r){
+        var tr = el('tr'); tr.innerHTML = '<td><b>' + esc(r.label) + '</b></td>';
+        r.cells.forEach(function(c){
+          var td = el('td'); var s = el('select'); s.innerHTML = '<option value="">Choose...</option>' + shuffle(c.options).map(function(o){ return '<option>' + esc(o) + '</option>'; }).join('');
+          s.setAttribute('data-answer', c.answer); td.appendChild(s); tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      return {
+        check: function(){ var ok = 0, n = 0; t.querySelectorAll('select').forEach(function(s){ n++; var td = s.parentNode; td.classList.remove('right','wrong'); var good = s.value === s.getAttribute('data-answer'); td.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, n]; },
+        reset: function(){ t.querySelectorAll('select').forEach(function(s){ s.value = ''; s.parentNode.classList.remove('right','wrong'); }); }
+      };
+    }
+  };
+
+  function buildChips(root, items, targetNames, labels, cap){
+    var bank = el('div', 'bank'); root.appendChild(bank);
+    var tg = el('div', 'targets'); root.appendChild(tg);
+    var selected = null, targets = {};
+    targetNames.forEach(function(name){
+      var t = el('div', 'target'); t.setAttribute('data-name', name);
+      t.innerHTML = '<div class="t-label">' + esc(labels ? (labels[name] || name) : name) + '</div><div class="t-drop"></div>';
+      tg.appendChild(t); targets[name] = t;
+      t.addEventListener('click', function(){ if(selected) place(selected, t); });
+      t.addEventListener('dragover', function(e){ e.preventDefault(); t.classList.add('over'); });
+      t.addEventListener('dragleave', function(){ t.classList.remove('over'); });
+      t.addEventListener('drop', function(e){ e.preventDefault(); t.classList.remove('over'); if(selected) place(selected, t); });
+    });
+    function place(chip, t){
+      var drop = t.querySelector('.t-drop');
+      if(cap === 1 && drop.children.length){ bank.appendChild(drop.firstElementChild); }
+      drop.appendChild(chip); chip.classList.remove('selected','right','wrong'); selected = null;
+    }
+    function mk(it){
+      var c = el('div', 'chip', esc(it.text)); c.setAttribute('data-target', it.target); c.draggable = true; c.tabIndex = 0;
+      c.addEventListener('click', function(e){ e.stopPropagation(); if(c.parentNode !== bank){ bank.appendChild(c); c.classList.remove('right','wrong'); selected = null; return; } if(selected) selected.classList.remove('selected'); selected = c; c.classList.add('selected'); });
+      c.addEventListener('dragstart', function(){ selected = c; c.classList.add('selected'); });
+      c.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); c.click(); } });
+      return c;
+    }
+    function fillBank(){ bank.innerHTML = ''; shuffle(items).forEach(function(it){ bank.appendChild(mk(it)); }); }
+    fillBank();
+    return {
+      check: function(){ var ok = 0; items.length; root.querySelectorAll('.chip').forEach(function(c){ var t = c.closest('.target'); c.classList.remove('right','wrong'); if(!t){ c.classList.add('wrong'); return; } var good = t.getAttribute('data-name') === c.getAttribute('data-target'); c.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, items.length]; },
+      reset: function(){ root.querySelectorAll('.t-drop').forEach(function(d){ d.innerHTML = ''; }); fillBank(); selected = null; }
+    };
+  }
+
+  document.querySelectorAll('.activity').forEach(function(act){
+    var a; try{ a = JSON.parse(act.getAttribute('data-activity')); }catch(e){ return; }
+    var body = act.querySelector('.act-body'), res = act.querySelector('.act-result');
+    var b = builders[a.type]; if(!b) return;
+    var api = b(body, a);
+    var slide = act.closest('section.slide'), peek = act.querySelector('.act-peek'), tools = act.querySelector('.act-tools');
+    function blur(on){ if(slide) slide.classList.toggle('hide-notes', on); peek.textContent = on ? 'Show the notes' : 'Hide the notes to carry on'; act.classList.toggle('peeking', !on && act.classList.contains('started')); }
+    act.querySelector('.act-go').addEventListener('click', function(){
+      act.classList.add('started'); act.querySelector('.act-start').hidden = true; body.hidden = false; tools.hidden = false; blur(true);
+      act.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    peek.addEventListener('click', function(){ blur(!slide.classList.contains('hide-notes')); });
+    act.querySelector('.act-check').addEventListener('click', function(){
+      var r = api.check(); res.className = 'act-result ' + (r[0] === r[1] ? 'good' : 'bad');
+      res.textContent = r[0] === r[1] ? 'All correct. Well done!' : r[0] + ' of ' + r[1] + ' correct. Try the red ones again.';
+      if(r[0] === r[1]){ act.classList.remove('started'); blur(false); }
+    });
+    act.querySelector('.act-reset').addEventListener('click', function(){ api.reset(); res.textContent = ''; res.className = 'act-result'; });
+  });
+})();
+
+/* ---------- infographics: click for full screen (CHCAGE013) ---------- */
+(function(){
+  function open(node){
+    var box = document.createElement('div'); box.className = 'zoombox'; box.setAttribute('role','dialog'); box.setAttribute('aria-label','Picture full screen');
+    box.appendChild(node.cloneNode(true));
+    var c = document.createElement('button'); c.className = 'zclose'; c.type = 'button'; c.textContent = 'Close'; box.appendChild(c);
+    function shut(){ box.remove(); document.removeEventListener('keydown', key); }
+    function key(e){ if(e.key === 'Escape') shut(); }
+    box.addEventListener('click', shut); document.addEventListener('keydown', key);
+    document.body.appendChild(box);
+  }
+  document.querySelectorAll('figure.infopic img, figure.infopic .info-svg').forEach(function(el){
+    el.addEventListener('click', function(){ open(el); });
+    el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(el); } });
+  });
+})();
+
+/* ---------- glossary words: the meaning opens next to the word, so students keep their place ---------- */
+(function(){
+  if(typeof GLOSS === 'undefined') return;
+  var pop = null, from = null;
+  function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+  function close(){ if(pop){ pop.remove(); pop = null; if(from) from.setAttribute('aria-expanded', 'false'); } }
+  function open(a){
+    var g = GLOSS[a.getAttribute('data-term')]; if(!g) return false;
+    close(); from = a; a.setAttribute('aria-expanded', 'true');
+    pop = document.createElement('div'); pop.className = 'gpop'; pop.setAttribute('role', 'dialog'); pop.setAttribute('aria-label', 'Meaning of ' + g[0]);
+    pop.innerHTML = '<button type="button" class="gp-x" aria-label="Close">&times;</button><p class="gp-term">' + esc(g[0]) + '</p><p class="gp-def">' + esc(g[1]) + '</p>' +
+      '<p class="gp-more"><a href="' + a.getAttribute('href') + '" target="_blank" rel="noopener">Open the glossary in a new tab</a></p>';
+    document.body.appendChild(pop);
+    var r = a.getBoundingClientRect(), w = pop.offsetWidth, x = Math.min(Math.max(8, r.left + window.scrollX), window.scrollX + document.documentElement.clientWidth - w - 8);
+    pop.style.left = x + 'px'; pop.style.top = (r.bottom + window.scrollY + 8) + 'px';
+    pop.querySelector('.gp-x').addEventListener('click', close);
+    pop.querySelector('.gp-x').focus({ preventScroll: true });
+    return true;
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a.term[data-term]');
+    if(a){ if(open(a)) e.preventDefault(); return; }
+    if(pop && !e.target.closest('.gpop')) close();
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && pop){ var f = from; close(); if(f) f.focus(); } });
+  window.addEventListener('resize', close);
+})();
+</script>
+<script src="../shared/presenting.js"></script>
+</body>
+</html>
