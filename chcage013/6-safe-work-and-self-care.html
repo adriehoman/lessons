@@ -404,6 +404,24 @@ section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events
 .t-demo .t-sub{margin:8px 0 2px; font-weight:700; color:#7a4a1e}
 .t-demo ul,.t-links ul{margin:2px 0 6px; padding-left:20px}
 .t-note{color:#666; font-size:.9em}
+.docs-btn{display:inline-block; margin:10px 0 4px; padding:10px 18px; background:var(--action); color:#fff; border-radius:999px; text-decoration:none; font-weight:700}
+.docs-btn:hover,.docs-btn:focus{background:var(--wood); outline:3px solid var(--action)}
+.docs-note{margin:4px 0 0; font-size:.85em; color:var(--soft-ink)}
+/* ---- 28 Oct 2026: glossary pop-up, teacher button in the lesson bar, Play all state ---- */
+a.term{cursor:help}
+.gpop{position:absolute; z-index:80; width:min(26em,calc(100vw - 16px)); background:#fffdf7; color:var(--ink); border:2px solid var(--wood,#6b4a33); border-radius:12px; padding:12px 40px 10px 16px; box-shadow:0 10px 28px rgba(0,0,0,.25); font-size:clamp(16px,1.1vw,22px); line-height:1.45}
+.gpop p{margin:0 0 6px}
+.gpop .gp-term{font-weight:800; color:var(--wood,#6b4a33)}
+.gpop .gp-more{font-size:.85em; margin:4px 0 0}
+.gpop .gp-more a{color:var(--action)}
+.gpop .gp-x{position:absolute; top:6px; right:6px; width:34px; height:34px; border:0; border-radius:50%; background:transparent; font-size:24px; line-height:1; cursor:pointer; color:var(--soft-ink)}
+.gpop .gp-x:hover{background:#f0e6d6}
+.lessonbar .tlink-top{margin-left:auto; padding:6px 12px; border-radius:20px; border:1px dashed var(--edge); background:transparent; color:var(--soft-ink); text-decoration:none; font-size:.85em; white-space:nowrap}
+.lessonbar .tlink-top:hover{border-color:var(--wood); color:var(--wood)}
+body.tv-pill .lessonbar .tlink-top{display:none}
+.say.playall-btn.playing{background:var(--action); color:#fff}
+.tpill .tp-label{margin-right:2px}
+@media print{ .gpop,.tlink-top{display:none} }
 </style>
 </head>
 <body data-np="14">
@@ -416,7 +434,7 @@ section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events
   </div>
   
 </header>
-<nav class="lessonbar" aria-label="Lessons in this unit"><a href="0-index.html">&#8962; Lessons</a><a href="1-aged-care-in-australia.html">1 Aged care in Australia</a><a href="2-the-person-at-the-centre.html">2 The person at the centre</a><a href="3-laws-standards-and-duties.html">3 Laws and standards</a><a href="4-keeping-people-safe.html">4 Keeping people safe</a><a href="5-your-role-and-the-team.html">5 Your role and the team</a><a href="6-safe-work-and-self-care.html" class="on" aria-current="page">6 Safe work and self-care</a><a href="7-marys-simulated-shift.html">7 Mary's simulated shift</a><a href="0-index.html#glossary">Glossary</a></nav>
+<nav class="lessonbar" aria-label="Lessons in this unit"><a href="0-index.html">&#8962; Lessons</a><a href="1-aged-care-in-australia.html">1 Aged care in Australia</a><a href="2-the-person-at-the-centre.html">2 The person at the centre</a><a href="3-laws-standards-and-duties.html">3 Laws and standards</a><a href="4-keeping-people-safe.html">4 Keeping people safe</a><a href="5-your-role-and-the-team.html">5 Your role and the team</a><a href="6-safe-work-and-self-care.html" class="on" aria-current="page">6 Safe work and self-care</a><a href="7-marys-simulated-shift.html">7 Mary's simulated shift</a><a href="0-index.html#glossary">Glossary</a><button type="button" class="tlink tlink-top" title="For the teacher">Teacher</button></nav>
 <div class="wrap">
   <nav id="index" aria-label="Index"><h2>In this lesson</h2><ul><li><a href="#s1"><span class="num">1</span> Hazard or risk?</a></li><li><a href="#s2"><span class="num">2</span> Your role with risk</a></li><li><a href="#s3"><span class="num">3</span> Risks when you work in a home</a></li><li><a href="#s4"><span class="num">4</span> Risks when you go out: shopping and the community centre</a></li><li><a href="#s5"><span class="num">5</span> Medication risks at home</a></li><li><a href="#s6"><span class="num">6</span> Looking after yourself: stress</a></li></ul></nav>
   <p class="opening">Safe work protects <b>the people you care for</b> and <b>you</b>. In this lesson you will learn the difference between a <b>hazard</b> and a <b>risk</b>, find the risks in a home, outside the home and with medication, and learn how to <b>notice and manage your own stress</b>.</p>
@@ -426,7 +444,7 @@ section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events
   <p class="intro">Everybody at work must manage risk. First you need to know the difference between a <b>hazard</b> and a <b>risk</b>.</p>
   <div class="audio-line"><button type="button" class="say" data-audio="audio/np14-s1.mp3" aria-label="Listen: Hazard or risk?"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
   
-  <div class="side-points"><ol class="points"><li id="s1p1"><span class="ref" title="Reference">NP14 S1 P1</span>A <b><a class="term" href="0-index.html#g-hazard" title="See the glossary">hazard</a></b> is something that <b>could cause harm</b>. <i>Example</i>: a slippery floor.</li><li id="s1p2"><span class="ref" title="Reference">NP14 S1 P2</span>A <b><a class="term" href="0-index.html#g-risk" title="See the glossary">risk</a></b> is the <b>likelihood</b> (chance) that <b>harm will happen</b> because of a hazard. <i>Example</i>: how likely it is that someone slips and falls on that floor.</li><li id="s1p3"><span class="ref" title="Reference">NP14 S1 P3</span>The hazard is the <b>thing</b>. The risk is the <b>chance of harm</b> (and how bad the harm could be).</li></ol><figure><img src="pics/p2-p29-slippery.jpg" alt="Sign: slippery floor surface" style="max-width:280px"></figure></div>
+  <div class="side-points"><ol class="points"><li id="s1p1"><span class="ref" title="Reference">NP14 S1 P1</span>A <b><a class="term" href="0-index.html#g-hazard" data-term="hazard" title="What does this word mean?">hazard</a></b> is something that <b>could cause harm</b>. <i>Example</i>: a slippery floor.</li><li id="s1p2"><span class="ref" title="Reference">NP14 S1 P2</span>A <b><a class="term" href="0-index.html#g-risk" data-term="risk" title="What does this word mean?">risk</a></b> is the <b>likelihood</b> (chance) that <b>harm will happen</b> because of a hazard. <i>Example</i>: how likely it is that someone slips and falls on that floor.</li><li id="s1p3"><span class="ref" title="Reference">NP14 S1 P3</span>The hazard is the <b>thing</b>. The risk is the <b>chance of harm</b> (and how bad the harm could be).</li></ol><figure><img src="pics/p2-p29-slippery.jpg" alt="Sign: slippery floor surface" style="max-width:280px"></figure></div>
   
   
   
@@ -538,7 +556,7 @@ section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events
   <p class="intro">Aged care can be stressful, for example after a hard conversation about abuse. You need to <b>notice</b> your stress and <b>do something</b> about it.</p>
   <div class="audio-line"><button type="button" class="say" data-audio="audio/np14-s6.mp3" aria-label="Listen: Looking after yourself: stress"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
   
-  <div class="side-points"><ol class="points"><li id="s6p1"><span class="ref" title="Reference">NP14 S6 P1</span><b>Monitor your stress</b>: watch for the <b>signs</b>, and notice if they are <b>getting worse or better</b>.</li><li id="s6p2"><span class="ref" title="Reference">NP14 S6 P2</span><b>Signs in your body</b>: tiredness, headaches, trouble sleeping, skin problems, upset stomach (diarrhoea), a racing heart (palpitations).</li><li id="s6p3"><span class="ref" title="Reference">NP14 S6 P3</span><b>Signs in your mind and behaviour</b>: anxiety, irritability, feeling you <b>cannot cope</b>, trouble concentrating, feeling depressed, anger, <b>pulling away from people</b>, working less well, taking <b>more sick days</b>.</li><li id="s6p4"><span class="ref" title="Reference">NP14 S6 P4</span><b>Ways to manage stress</b>: relax, exercise, yoga or meditation, positive self-talk, enjoy a hobby, eat well and <b>rest</b>.</li><li id="s6p5"><span class="ref" title="Reference">NP14 S6 P5</span>At work: <b>debrief</b> after a hard event, ask a <b>mentor</b>, do <b>training</b>, and use the <a class="term" href="0-index.html#g-employee-assistance-program-eap" title="See the glossary">Employee Assistance Program (EAP)</a> for free counselling.</li><li id="s6p6"><span class="ref" title="Reference">NP14 S6 P6</span><b>Who to talk to at work</b>: your <b>supervisor</b>.</li></ol><figure><img src="pics/p2-p36-take-care.jpg" alt="Cartoon: a bear with a Take Care sign" style="max-width:260px"></figure></div>
+  <div class="side-points"><ol class="points"><li id="s6p1"><span class="ref" title="Reference">NP14 S6 P1</span><b>Monitor your stress</b>: watch for the <b>signs</b>, and notice if they are <b>getting worse or better</b>.</li><li id="s6p2"><span class="ref" title="Reference">NP14 S6 P2</span><b>Signs in your body</b>: tiredness, headaches, trouble sleeping, skin problems, upset stomach (diarrhoea), a racing heart (palpitations).</li><li id="s6p3"><span class="ref" title="Reference">NP14 S6 P3</span><b>Signs in your mind and behaviour</b>: anxiety, irritability, feeling you <b>cannot cope</b>, trouble concentrating, feeling depressed, anger, <b>pulling away from people</b>, working less well, taking <b>more sick days</b>.</li><li id="s6p4"><span class="ref" title="Reference">NP14 S6 P4</span><b>Ways to manage stress</b>: relax, exercise, yoga or meditation, positive self-talk, enjoy a hobby, eat well and <b>rest</b>.</li><li id="s6p5"><span class="ref" title="Reference">NP14 S6 P5</span>At work: <b>debrief</b> after a hard event, ask a <b>mentor</b>, do <b>training</b>, and use the <a class="term" href="0-index.html#g-employee-assistance-program-eap" data-term="employee-assistance-program-eap" title="What does this word mean?">Employee Assistance Program (EAP)</a> for free counselling.</li><li id="s6p6"><span class="ref" title="Reference">NP14 S6 P6</span><b>Who to talk to at work</b>: your <b>supervisor</b>.</li></ol><figure><img src="pics/p2-p36-take-care.jpg" alt="Cartoon: a bear with a Take Care sign" style="max-width:260px"></figure></div>
   
   
   
@@ -597,13 +615,13 @@ section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events
   <aside class="tnotes" data-slide="s6" aria-label="Teacher notes"></aside>
 </section>
   <footer class="foot">
-    <p>CHCAGE013 · Safe work and looking after yourself · Built from TAFE Queensland learning resources, 27 Oct 2026. References on this page are written NP14 S(slide) P(point), where NP14 is this page's slide number in Nearpod.</p>
+    <p>CHCAGE013 · Safe work and looking after yourself · Built from TAFE Queensland learning resources, 27 Oct 2026. How to write a reference from this page: <b>NP14 S5 P1</b> means <b>Nearpod 14, Section 5, Point 1</b>. <b>C</b> means Card, for example NP14 S4 C2 is Nearpod 14, Section 4, Card 2. The section number is the number in the circle next to each heading.</p>
     <p>Picture credits: Pictures: Adrie Homan and Adobe Stock</p>
     <p><a href="0-index.html">Lesson index and glossary</a> · <button type="button" class="tlink">Teacher</button></p>
   </footer>
 </div>
 <a href="#index" class="home" title="Back to the index"><span aria-hidden="true">&#8679;</span> Home</a>
-<div class="tpill" hidden><span>Teacher view on</span><button type="button" class="tp-hide">Hide</button><button type="button" class="tp-out">Sign out</button></div>
+<div class="tpill" hidden><span class="tp-label">Teacher</span><button type="button" class="tp-hide">Hide notes</button><button type="button" class="tp-out">Sign out</button></div>
 <div class="mascot rusty side-left" data-mascot="rusty" title="Rusty the Rush Clock" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rusty the Rush Clock">
   <g stroke="#6b4a33" stroke-linecap="round" fill="none" stroke-width="3" opacity=".55"><path d="M4 70h16M2 84h14M6 98h12"/></g>
   <line x1="50" y1="128" x2="38" y2="152" stroke="#6b4a33" stroke-width="7" stroke-linecap="round"/>
@@ -647,15 +665,19 @@ section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events
   <div class="body"></div>
   <div class="foot"><button type="button" class="big-back">Back</button><button type="button" class="next big-next">Next card</button></div>
 </div>
-<script>var TEACHER = {"salt":"rb4bLFGXz4aXFsM/of/FNQ==","iv":"ZYBkOnzr7jHCqzS9","ct":"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"}; var ANNOUNCE = {"first":{"mascot":"rusty","voice":"William","pitch":1.1,"none":"Tick tock! Nobody got every activity right first time. Rushing wins again!","some":"Oh no! {who} got every activity right first time. Slowing down works. Who knew?"},"second":{"mascot":"daisy","voice":"Natasha","pitch":1.05,"none":"Keep going, everyone. Take your time and you will beat Rusty.","some":"Well done! {who} got all {n} right first time. Slow and kind wins, Rusty."}}; var MASCOT_LINES = {"rusty":{"lines":["A wet floor? It will dry by itself. Probably.","Unlabelled tablets? They all look the same anyway.","Craft day! Hot glue gun for everyone, no need to check.","Stressed? Just keep going. Breaks are for slow people.","Headaches every day? That's just normal. Keep going!"],"prefix":"rusty-l6-"},"daisy":{"lines":["Spot the hazard, then think: how likely is harm? That's the risk.","Report every hazard to your supervisor. That is part of your job.","Medicines in a jar with no label? Tell your supervisor straight away.","Feeling stressed after a hard shift? Notice the signs and talk to your supervisor.","Signs of stress tell you something. Rest, move, and talk to someone."],"prefix":"daisy-l6-"}};</script>
+<script>var GLOSS = {"hazard":["Hazard","Something that could cause harm, for example a wet floor, a loose rug or a strong cleaning chemical."],"risk":["Risk","The chance (likelihood) that harm will happen because of a hazard, and how bad the harm could be."],"employee-assistance-program-eap":["Employee Assistance Program (EAP)","A free and private counselling service that many employers pay for, to help workers with stress or personal problems."]}; var TEACHER = {"salt":"zmeDBRrUmJMfKy9vs/G9Dg==","iv":"6k2cSfiefifWkZzQ","ct":"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"}; var ANNOUNCE = {"first":{"mascot":"rusty","voice":"William","pitch":1.1,"none":"Tick tock! Nobody got every activity right first time. Rushing wins again!","some":"Oh no! {who} got every activity right first time. Slowing down works. Who knew?"},"second":{"mascot":"daisy","voice":"Natasha","pitch":1.05,"none":"Keep going, everyone. Take your time and you will beat Rusty.","some":"Well done! {who} got all {n} right first time. Slow and kind wins, Rusty."}}; var MASCOT_LINES = {"rusty":{"lines":["A wet floor? It will dry by itself. Probably.","Unlabelled tablets? They all look the same anyway.","Craft day! Hot glue gun for everyone, no need to check.","Stressed? Just keep going. Breaks are for slow people.","Headaches every day? That's just normal. Keep going!"],"prefix":"rusty-l6-"},"daisy":{"lines":["Spot the hazard, then think: how likely is harm? That's the risk.","Report every hazard to your supervisor. That is part of your job.","Medicines in a jar with no label? Tell your supervisor straight away.","Feeling stressed after a hard shift? Notice the signs and talk to your supervisor.","Signs of stress tell you something. Rest, move, and talk to someone."],"prefix":"daisy-l6-"}};</script>
 <script>(function(){
   var ANGLES = [-8, -5.5, -9, -4.5, -7, -6, -8.5, -4, -6.5];
   var big = document.querySelector('.big'), bigBody = big.querySelector('.body'),
       bigWhere = big.querySelector('.big-where'), active = null;
 
-  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ---------- */
+  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ----------
+     Once the teacher has typed the code on a computer, the purple teacher pill stays at the top right of every
+     lesson page on that computer (Show or Hide notes, Presenting, Sign out), so nothing needs the footer again.
+     Students never have the code, so they never see the pill. */
   (function(){
-    var pill = document.querySelector('.tpill'), tlink = document.querySelector('.tlink'), saved = null, on = '0';
+    var pill = document.querySelector('.tpill'), tlinks = document.querySelectorAll('.tlink'), saved = null, on = '0';
+    var hideBtn = pill.querySelector('.tp-hide');
     var b64 = function(s){ var b = atob(s), a = new Uint8Array(b.length); for(var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; };
     function decrypt(code){
       if(!window.crypto || !crypto.subtle) return Promise.reject(new Error('nosubtle'));
@@ -666,39 +688,51 @@ section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events
         return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(TEACHER.iv) }, key, b64(TEACHER.ct));
       }).then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
     }
+    function pillOn(v){ pill.hidden = !v; document.body.classList.toggle('tv-pill', !!v); }
     function show(notes){
       document.querySelectorAll('.tnotes').forEach(function(a){ a.innerHTML = notes[a.getAttribute('data-slide')] || ''; });
-      document.body.classList.add('teacher'); pill.hidden = false;
+      document.body.classList.add('teacher'); pillOn(true); hideBtn.textContent = 'Hide notes';
       try{ localStorage.setItem('tv_on', '1'); }catch(e){}
     }
-    function hide(){ document.body.classList.remove('teacher'); pill.hidden = true; try{ localStorage.setItem('tv_on', '0'); }catch(e){} }
+    function hide(){
+      document.body.classList.remove('teacher'); hideBtn.textContent = 'Show notes';
+      pillOn(!!saved);   /* the pill stays while this computer knows the code */
+      try{ localStorage.setItem('tv_on', '0'); }catch(e){}
+    }
     function unlock(code, quiet){
       return decrypt(code).then(function(notes){ saved = code; try{ localStorage.setItem('tv_code', code); }catch(e){} show(notes); }, function(err){
         if(quiet) return;
         alert(err.message === 'nosubtle' ? 'This browser cannot unlock the teacher view. Use Chrome or Edge.' : 'That code did not work.');
       });
     }
+    function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
     try{ saved = localStorage.getItem('tv_code'); on = localStorage.getItem('tv_on') || '0'; }catch(e){}
     var q = new URLSearchParams(location.search);
-    if(q.get('t') === 'off'){ hide(); try{ localStorage.removeItem('tv_code'); }catch(e){} }
+    if(q.get('t') === 'off'){ saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} hide(); }
     else if(q.has('t')) unlock(q.get('t'));
     else if(saved && on === '1') unlock(saved, true);
-    if(tlink) tlink.addEventListener('click', function(){
+    else if(saved) hide();
+    tlinks.forEach(function(tl){ tl.addEventListener('click', function(){
       if(document.body.classList.contains('teacher')){ hide(); return; }
       if(saved){ unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); }); } else ask();
-      function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
+    }); });
+    hideBtn.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')) hide();
+      else if(saved) unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); });
     });
-    pill.querySelector('.tp-hide').addEventListener('click', hide);
-    pill.querySelector('.tp-out').addEventListener('click', function(){ hide(); saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} });
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open')) hide(); });
+    pill.querySelector('.tp-out').addEventListener('click', function(){ saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} hide(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open') && !document.querySelector('.gpop')) hide(); });
   })();
 
     /* ---------- audio ---------- */
   var player = new Audio(), current = null, queue = null;
-  function stopAudio(){ player.pause(); if(current){ current.classList.remove('playing'); current = null; } queue = null; }
-  function playBtn(btn, onEnd){
+  function stopAudio(keepQueue){
+    player.pause(); if(current){ current.classList.remove('playing'); current = null; }
+    if(!keepQueue && queue){ var q = queue; queue = null; if(q._stopped) q._stopped(); }
+  }
+  function playBtn(btn, onEnd, keepQueue){
     if(current === btn){ stopAudio(); return; }
-    stopAudio();
+    stopAudio(keepQueue);
     current = btn; btn.classList.add('playing');
     player.src = btn.getAttribute('data-audio');
     player.onended = function(){ btn.classList.remove('playing'); current = null; if(onEnd) onEnd(); };
@@ -792,18 +826,29 @@ section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events
       deck.appendChild(c);
     });
     if(stack.getAttribute('data-playall')){
+      /* Play all: card 1 to the last card, one after the other. The deck turns to each card as it plays.
+         Before 28 Oct 2026 only card 1 played: starting each card's sound also cleared the queue. */
       var pa = document.createElement('div'); pa.className = 'playall';
-      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> Play all cards</button>';
+      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> <span class="pa-t">Play all cards</span></button>';
       stack.appendChild(pa);
-      pa.querySelector('button').addEventListener('click', function(ev){
+      var paBtn = pa.querySelector('button'), paT = pa.querySelector('.pa-t');
+      stack._stopped = function(){ paBtn.classList.remove('playing'); paT.textContent = 'Play all cards'; };
+      paBtn.addEventListener('click', function(ev){
         ev.stopPropagation();
         if(queue === stack){ stopAudio(); return; }
-        stopAudio(); queue = stack;
+        stopAudio(); queue = stack; paBtn.classList.add('playing'); paT.textContent = 'Stop';
+        if(i !== 0){ i = 0; show(); }
+        function finish(){ if(queue === stack){ queue = null; stack._stopped(); } }
         function step(){
           if(queue !== stack) return;
           var b = cards[i].querySelector('.say');
-          if(!b){ next(); return; }
-          playBtn(b, function(){ setTimeout(function(){ if(queue !== stack) return; if(i === n-1){ queue = null; return; } go(1); step(); }, 900); });
+          var after = function(){ setTimeout(function(){
+            if(queue !== stack) return;
+            if(i === n - 1){ finish(); return; }
+            busy = false; go(1); setTimeout(step, 450);
+          }, b ? 900 : 0); };
+          if(!b){ after(); return; }
+          playBtn(b, after, true);
         }
         step();
       }, true);
@@ -1020,6 +1065,34 @@ section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events
     el.addEventListener('click', function(){ open(el); });
     el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(el); } });
   });
+})();
+
+/* ---------- glossary words: the meaning opens next to the word, so students keep their place ---------- */
+(function(){
+  if(typeof GLOSS === 'undefined') return;
+  var pop = null, from = null;
+  function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+  function close(){ if(pop){ pop.remove(); pop = null; if(from) from.setAttribute('aria-expanded', 'false'); } }
+  function open(a){
+    var g = GLOSS[a.getAttribute('data-term')]; if(!g) return false;
+    close(); from = a; a.setAttribute('aria-expanded', 'true');
+    pop = document.createElement('div'); pop.className = 'gpop'; pop.setAttribute('role', 'dialog'); pop.setAttribute('aria-label', 'Meaning of ' + g[0]);
+    pop.innerHTML = '<button type="button" class="gp-x" aria-label="Close">&times;</button><p class="gp-term">' + esc(g[0]) + '</p><p class="gp-def">' + esc(g[1]) + '</p>' +
+      '<p class="gp-more"><a href="' + a.getAttribute('href') + '" target="_blank" rel="noopener">Open the glossary in a new tab</a></p>';
+    document.body.appendChild(pop);
+    var r = a.getBoundingClientRect(), w = pop.offsetWidth, x = Math.min(Math.max(8, r.left + window.scrollX), window.scrollX + document.documentElement.clientWidth - w - 8);
+    pop.style.left = x + 'px'; pop.style.top = (r.bottom + window.scrollY + 8) + 'px';
+    pop.querySelector('.gp-x').addEventListener('click', close);
+    pop.querySelector('.gp-x').focus({ preventScroll: true });
+    return true;
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a.term[data-term]');
+    if(a){ if(open(a)) e.preventDefault(); return; }
+    if(pop && !e.target.closest('.gpop')) close();
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && pop){ var f = from; close(); if(f) f.focus(); } });
+  window.addEventListener('resize', close);
 })();
 </script>
 <script src="../shared/presenting.js"></script>
