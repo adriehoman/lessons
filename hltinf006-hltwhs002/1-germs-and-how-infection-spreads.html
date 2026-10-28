@@ -272,11 +272,84 @@ section.slide.hide-notes .activity{filter:none}
 .source-label{font-weight:700; color:var(--ink)}
 .source a{text-decoration:none; font-weight:600; border:1px solid #cfe3e6; background:#fff; border-radius:999px; padding:2px 10px}
 .source a:hover{background:#e3eef1}
+
+/* Lesson 3: safety signs, RACE, two-up figures */
+.signs{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:12px 0 20px; align-items:start}
+.sign{background:#fff; border:2px solid var(--edge); border-radius:12px; padding:12px 10px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px}
+.sign svg{width:84px; height:84px}
+.sign span{font-weight:700; font-size:.9em; line-height:1.25}
+.signkey{display:flex; flex-wrap:wrap; gap:8px 20px; margin:6px 0 14px; font-size:.92em}
+.signkey i{display:inline-block; width:16px; height:16px; border-radius:50%; vertical-align:-3px; margin-right:6px}
+.race{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:14px 0 20px}
+.race div{border-left:8px solid var(--c); background:#fff; border-radius:10px; padding:12px 14px; box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.race b{display:block; font-size:2.2em; line-height:1; color:var(--c)}
+.race span{display:block; font-weight:700; font-size:1.1em; margin-top:4px}
+.race small{color:var(--soft-ink)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:14px 0}
+.grid2 figure{margin:0}
+.grid2 figcaption{font-size:.85em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > :is(.signs, .signkey, .race, .grid2){filter:blur(7px); pointer-events:none; user-select:none}
+
+/* side-by-side videos */
+.vid-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:16px 0 6px}
+.vid-row .vid{margin:0}
+.vid-row .video{max-width:none}
+section.slide.hide-notes > .vid-row{filter:blur(7px); pointer-events:none}
+
+/* finale: the grand exit */
+.finale{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; margin:24px 0 10px; padding:24px 10px 0; min-height:340px; overflow:hidden}
+.fin-side{display:flex; flex-direction:column; align-items:center; gap:10px; opacity:0; transition:transform .9s cubic-bezier(.2,.8,.3,1.1), opacity .6s}
+.fin-side.left{transform:translateX(-60vw)}
+.fin-side.right{transform:translateX(60vw)}
+.finale.in .fin-side{transform:none; opacity:1}
+.finale.in .fin-side.right{transition-delay:.25s}
+.fin-mascot{width:min(260px,38vw)}
+.fin-mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.fin-bubble{background:#fff; border:3px solid var(--deep); border-radius:18px; padding:14px 18px; font-size:1.08em; line-height:1.4; position:relative; max-width:34em; opacity:0; transform:scale(.7); transition:transform .5s cubic-bezier(.2,.8,.3,1.3), opacity .4s}
+.fin-bubble p{margin:0 0 8px}
+.fin-bubble::after{content:""; position:absolute; bottom:-14px; left:50%; margin-left:-8px; border:8px solid transparent; border-top-color:var(--deep)}
+.finale.in .fin-bubble{opacity:1; transform:none; transition-delay:1s}
+.finale.in .right .fin-bubble{transition-delay:1.5s}
+.fin-side .fin-bubble{order:-1}
+.fin-who{font-weight:800; color:var(--deep); margin:0}
+.fin-after{text-align:center; font-size:1.1em; color:var(--soft-ink); margin:10px 0 20px}
+@media (max-width:700px){.finale{grid-template-columns:1fr; min-height:0} .fin-side.left,.fin-side.right{transform:translateY(40px)} .finale.in .fin-side{transform:none}}
+@media (prefers-reduced-motion:reduce){.fin-side,.fin-bubble{transition:none; transform:none; opacity:1} .fin-mascot svg{animation:none}}
+.sign-pics{display:flex; gap:6px; align-items:center; justify-content:center; height:96px}
+.sign-pics img{max-height:96px; max-width:100%; object-fit:contain}
+.sign-pics img + img{max-height:60px}
+
+/* Lesson 4: risk matrix */
+table.matrix{border-collapse:collapse; margin:0 auto; font-size:.95em}
+table.matrix th, table.matrix td{border:2px solid #fff; padding:10px 12px; text-align:center}
+table.matrix thead th{background:#12384a; color:#fff; font-weight:700}
+table.matrix tbody th{background:#0b6f7c; color:#fff; text-align:left; font-weight:700}
+table.matrix .corner{background:#1b2530; font-size:.8em}
+table.matrix td.m-L{background:#bbf7d0; color:#14532d; font-weight:700}
+table.matrix td.m-M{background:#fde68a; color:#78350f; font-weight:700}
+table.matrix td.m-H{background:#fca5a5; color:#7f1d1d; font-weight:700}
+@media (max-width:700px){table.matrix{font-size:.75em} table.matrix th, table.matrix td{padding:6px 4px}}
+/* ---- 28 Oct 2026: glossary pop-up, teacher button at the top, Play all state ---- */
+a.term{cursor:help}
+.gpop{position:absolute; z-index:80; width:min(26em,calc(100vw - 16px)); background:#fff; color:var(--ink); border:2px solid var(--action); border-radius:12px; padding:12px 40px 10px 16px; box-shadow:0 10px 28px rgba(0,0,0,.25); font-size:clamp(16px,1.1vw,22px); line-height:1.45}
+.gpop p{margin:0 0 6px}
+.gpop .gp-term{font-weight:800; color:var(--deep)}
+.gpop .gp-more{font-size:.85em; margin:4px 0 0}
+.gpop .gp-more a{color:var(--action)}
+.gpop .gp-x{position:absolute; top:6px; right:6px; width:34px; height:34px; border:0; border-radius:50%; background:transparent; font-size:24px; line-height:1; cursor:pointer; color:var(--soft-ink)}
+.gpop .gp-x:hover{background:#eef3f4}
+.tlink-banner{position:absolute; top:12px; right:12px; z-index:2; padding:6px 14px; border-radius:20px; border:1px dashed rgba(255,255,255,.6); background:rgba(0,0,0,.15); color:#fff; text-decoration:none; font-size:14px}
+.tlink-banner:hover{border-style:solid}
+body.tv-pill .tlink-top{display:none}
+.say.playall-btn.playing{background:var(--action); color:#fff}
+.tpill .tp-label{margin-right:2px}
+@media print{ .gpop,.tlink-top{display:none} }
 </style>
 </head>
 <body data-np="3">
 <main>
 <header class="banner first" id="top">
+  <button type="button" class="tlink tlink-top tlink-banner" title="For the teacher">Teacher</button>
   <div class="banner-inner">
     <p class="kicker">HLTINF006 / HLTWHS002 · Lesson 1</p>
     <h1>Germs and how infection spreads</h1>
@@ -300,6 +373,7 @@ section.slide.hide-notes .activity{filter:none}
   
   
   
+  
   <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305316/View" target="_blank" rel="noopener">National Safety and Quality Health Service (NSQHS) Standards</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305226/View" target="_blank" rel="noopener">Standards</a></div>
   <aside class="tnotes" data-slide="s1" aria-label="Teacher notes"></aside>
 </section>
@@ -313,7 +387,8 @@ section.slide.hide-notes .activity{filter:none}
 <rect x="310" y="10" width="280" height="240" rx="16" fill="#fff7ed" stroke="#fdba74" stroke-width="3"/><text x="450" y="48" font-weight="700" fill="#9a3412">Infection</text><rect x="360" y="120" width="180" height="40" rx="8" fill="#ffd9b3"/><circle cx="430" cy="140" r="9" fill="#4ade80"/><circle cx="470" cy="140" r="9" fill="#4ade80"/><path d="M405 95 l10 -14 l10 14 M485 95 l10 -14 l10 14" stroke="#ef4444" stroke-width="4" fill="none"/><text x="450" y="200" fill="#9a3412">Germs get inside.</text><text x="450" y="228" fill="#9a3412">The body fights back.</text>
 <rect x="610" y="10" width="280" height="240" rx="16" fill="#fef2f2" stroke="#fca5a5" stroke-width="3"/><text x="750" y="48" font-weight="700" fill="#991b1b">Disease</text><circle cx="750" cy="125" r="34" fill="#ffd9b3"/><circle cx="738" cy="118" r="4" fill="#1b2530"/><circle cx="762" cy="118" r="4" fill="#1b2530"/><path d="M736 142 q14 -10 28 0" stroke="#1b2530" stroke-width="3" fill="none"/><path d="M790 100 q10 -10 14 0" stroke="#ef4444" stroke-width="4" fill="none"/><text x="750" y="200" fill="#991b1b">Signs and symptoms.</text><text x="750" y="228" fill="#991b1b">The person is sick.</text>
 </g></svg></figure>
-  <ol class="points"><li id="s2p1"><span class="ref" title="Reference">NP3 S2 P1</span><b><a class="term" href="0-index.html#g-colonisation" title="See the glossary">Colonisation</a></b>: germs live on or in the body (for example on the skin) but they cause <b>no illness</b> and no signs of infection.</li><li id="s2p2"><span class="ref" title="Reference">NP3 S2 P2</span><b><a class="term" href="0-index.html#g-infection" title="See the glossary">Infection</a></b>: germs (pathogens) get <b>inside</b> the body and the <b>immune system fights back</b>. The person may feel sick, or may feel nothing at all. Everyone reacts differently.</li><li id="s2p3"><span class="ref" title="Reference">NP3 S2 P3</span><b><a class="term" href="0-index.html#g-disease" title="See the glossary">Disease</a></b>: an <b>illness</b> with clear <b>signs and symptoms</b>, for example a fever, weight loss or a sore throat. Some diseases come from infections. Some do not.</li></ol>
+  <ol class="points"><li id="s2p1"><span class="ref" title="Reference">NP3 S2 P1</span><b><a class="term" href="0-index.html#g-colonisation" data-term="colonisation" title="What does this word mean?">Colonisation</a></b>: germs live on or in the body (for example on the skin) but they cause <b>no illness</b> and no signs of infection.</li><li id="s2p2"><span class="ref" title="Reference">NP3 S2 P2</span><b><a class="term" href="0-index.html#g-infection" data-term="infection" title="What does this word mean?">Infection</a></b>: germs (pathogens) get <b>inside</b> the body and the <b>immune system fights back</b>. The person may feel sick, or may feel nothing at all. Everyone reacts differently.</li><li id="s2p3"><span class="ref" title="Reference">NP3 S2 P3</span><b><a class="term" href="0-index.html#g-disease" data-term="disease" title="What does this word mean?">Disease</a></b>: an <b>illness</b> with clear <b>signs and symptoms</b>, for example a fever, weight loss or a sore throat. Some diseases come from infections. Some do not.</li></ol>
+  
   
   
   
@@ -365,6 +440,7 @@ section.slide.hide-notes .activity{filter:none}
       <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s3-c4.mp3" aria-label="Listen: Parasites"><span class="ico">&#9654;</span> Listen</button></div>
     </article></div>
   
+  
   <div class="watch-out"><b>Watch out</b> In the assessment you need a short description of each germ <b>and one example</b> of an infection it causes. Give both.</div>
   <div class="activity" id="act-s3-1" data-activity='{"type":"quiz","title":"Which germ?","instructions":"Pick the best answer for each question, then press Check.","questions":[{"q":"Which germ needs a host cell to make copies of itself?","options":["Bacteria","Virus","Fungi","Parasite"],"answer":1,"why":"A virus cannot copy itself. It hijacks one of your cells to do it."},{"q":"Which germ can copy itself on its own and live on a bed rail for days?","options":["Virus","Parasite","Bacteria","Fungi"],"answer":2,"why":"Bacteria are single cells that reproduce by themselves and survive on surfaces."},{"q":"Thrush and tinea are caused by...","options":["Bacteria","A virus","Fungi","A parasite"],"answer":2,"why":"Both are fungal infections. Fungi like damp, dark places."},{"q":"A tapeworm is an example of a...","options":["Parasite","Virus","Fungus","Bacterium"],"answer":0,"why":"A parasite lives in or on a host and feeds from it."}]}'>
     <div class="act-head"><span class="act-badge">Try it</span> <b>Which germ?</b></div>
@@ -383,11 +459,12 @@ section.slide.hide-notes .activity{filter:none}
   <p class="intro">For Gerry to reach a new person, six things have to happen in a row. We call this the chain of infection. Break one link and he is stuck.</p>
   <div class="audio-line"><button type="button" class="say" data-audio="audio/np3-s4.mp3" aria-label="Listen: The chain of infection"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
   <figure class="visual"><svg viewBox="0 0 600 460" role="img" aria-label="The chain of infection: source, portal of exit, mode of transmission, portal of entry, susceptible host, and the factors that make a host susceptible. Break any link to stop the infection."><circle cx="300" cy="230" r="165" fill="none" stroke="#cbd5e1" stroke-width="18"/><g><circle cx="300" cy="65" r="58" fill="#12384a"/><text x="300" y="61" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Source of</text><text x="300" y="81" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">infection</text><text x="300" y="29" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#e0f2fe">1</text></g><g><circle cx="442.8941916244324" cy="147.5" r="58" fill="#0b6f7c"/><text x="442.8941916244324" y="143.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Portal of</text><text x="442.8941916244324" y="163.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">exit</text><text x="442.8941916244324" y="111.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#e0f2fe">2</text></g><g><circle cx="442.8941916244324" cy="312.5" r="58" fill="#0e9aa7"/><text x="442.8941916244324" y="308.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Mode of</text><text x="442.8941916244324" y="328.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">transmission</text><text x="442.8941916244324" y="276.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#e0f2fe">3</text></g><g><circle cx="300" cy="395" r="58" fill="#2563eb"/><text x="300" y="391" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Portal of</text><text x="300" y="411" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">entry</text><text x="300" y="359" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#e0f2fe">4</text></g><g><circle cx="157.10580837556762" cy="312.5" r="58" fill="#7c3aed"/><text x="157.10580837556762" y="308.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Susceptible</text><text x="157.10580837556762" y="328.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">host</text><text x="157.10580837556762" y="276.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#e0f2fe">5</text></g><g><circle cx="157.10580837556762" cy="147.5" r="58" fill="#9d174d"/><text x="157.10580837556762" y="143.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">Why they</text><text x="157.10580837556762" y="163.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#fff">are susceptible</text><text x="157.10580837556762" y="111.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#e0f2fe">6</text></g><text x="300" y="222" text-anchor="middle" font-family="Segoe UI, Arial" font-size="22" font-weight="800" fill="#12384a">Break one link</text><text x="300" y="250" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" fill="#44505c">and the infection stops</text></svg></figure>
-  <ol class="points"><li id="s4p1"><span class="ref" title="Reference">NP3 S4 P1</span><b><a class="term" href="0-index.html#g-source-of-infection" title="See the glossary">Source of infection</a></b>: the person or thing carrying the germ (the pathogen). Also called the reservoir.</li><li id="s4p2"><span class="ref" title="Reference">NP3 S4 P2</span><b><a class="term" href="0-index.html#g-portal-of-exit" title="See the glossary">Portal of exit</a></b>: the way the germ <b>leaves</b> the source. For example a cough, blood, faeces, urine, a weeping wound.</li><li id="s4p3"><span class="ref" title="Reference">NP3 S4 P3</span><b><a class="term" href="0-index.html#g-mode-of-transmission" title="See the glossary">Mode of transmission</a></b>: how the germ <b>travels</b> from one place to the next. How it &quot;hitches a ride&quot;.</li><li id="s4p4"><span class="ref" title="Reference">NP3 S4 P4</span><b><a class="term" href="0-index.html#g-portal-of-entry" title="See the glossary">Portal of entry</a></b>: the way the germ <b>gets into</b> the next person. For example the mouth, nose, eyes, a cut, a needle prick.</li><li id="s4p5"><span class="ref" title="Reference">NP3 S4 P5</span><b><a class="term" href="0-index.html#g-susceptible-host" title="See the glossary">Susceptible host</a></b>: a person who can <b>easily catch</b> the infection.</li><li id="s4p6"><span class="ref" title="Reference">NP3 S4 P6</span><b>Factors that make a person susceptible</b>: being <b>older or very young</b>, having a <b>chronic disease</b>, and <b>how much</b> they are exposed to the germ.</li><li id="s4p7"><span class="ref" title="Reference">NP3 S4 P7</span>Every part of infection control, from hand washing to PPE to cleaning, works by <b>breaking one of these links</b>.</li></ol>
+  <ol class="points"><li id="s4p1"><span class="ref" title="Reference">NP3 S4 P1</span><b><a class="term" href="0-index.html#g-source-of-infection" data-term="source-of-infection" title="What does this word mean?">Source of infection</a></b>: the person or thing carrying the germ (the pathogen). Also called the reservoir.</li><li id="s4p2"><span class="ref" title="Reference">NP3 S4 P2</span><b><a class="term" href="0-index.html#g-portal-of-exit" data-term="portal-of-exit" title="What does this word mean?">Portal of exit</a></b>: the way the germ <b>leaves</b> the source. For example a cough, blood, faeces, urine, a weeping wound.</li><li id="s4p3"><span class="ref" title="Reference">NP3 S4 P3</span><b><a class="term" href="0-index.html#g-mode-of-transmission" data-term="mode-of-transmission" title="What does this word mean?">Mode of transmission</a></b>: how the germ <b>travels</b> from one place to the next. How it &quot;hitches a ride&quot;.</li><li id="s4p4"><span class="ref" title="Reference">NP3 S4 P4</span><b><a class="term" href="0-index.html#g-portal-of-entry" data-term="portal-of-entry" title="What does this word mean?">Portal of entry</a></b>: the way the germ <b>gets into</b> the next person. For example the mouth, nose, eyes, a cut, a needle prick.</li><li id="s4p5"><span class="ref" title="Reference">NP3 S4 P5</span><b><a class="term" href="0-index.html#g-susceptible-host" data-term="susceptible-host" title="What does this word mean?">Susceptible host</a></b>: a person who can <b>easily catch</b> the infection.</li><li id="s4p6"><span class="ref" title="Reference">NP3 S4 P6</span><b>Factors that make a person susceptible</b>: being <b>older or very young</b>, having a <b>chronic disease</b>, and <b>how much</b> they are exposed to the germ.</li><li id="s4p7"><span class="ref" title="Reference">NP3 S4 P7</span>Every part of infection control, from hand washing to PPE to cleaning, works by <b>breaking one of these links</b>.</li></ol>
   
   <div class="after"><img src="pics/susceptible-host.webp" alt="" style="max-width:420px; width:100%; border-radius:12px; display:block; margin:0 auto 6px"> <i>A susceptible host: older, unwell, or exposed a lot.</i></div>
   
   <div class="vid"><p class="vid-title"><b>Watch:</b> What causes an infection? Breaking the chain of infection <span class="vid-by">(Lecturio Nursing)</span></p><div class="video" data-youtube="EXtTTG6YYAI" data-title="What causes an infection? Breaking the chain of infection"></div></div>
+  
   
   <div class="activity" id="act-s4-1" data-activity='{"type":"match","title":"Build the chain","instructions":"Match each description to the correct link in the chain. Tap a description, then tap the link.","pairs":[{"a":"Someone or something carrying the germ","b":"Source of infection"},{"a":"How the germ leaves the source","b":"Portal of exit"},{"a":"How the germ travels (hitches a ride)","b":"Mode of transmission"},{"a":"The way the germ gets into the body","b":"Portal of entry"},{"a":"A person who can easily catch the infection","b":"Susceptible host"},{"a":"Age, chronic disease, amount of exposure","b":"Factors that affect susceptibility"}]}'>
     <div class="act-head"><span class="act-badge">Try it</span> <b>Build the chain</b></div>
@@ -403,7 +480,7 @@ section.slide.hide-notes .activity{filter:none}
 
 <section class="slide" id="s5" data-ref="NP3 S5">
   <h2 class="topic"><span class="num">5</span> How germs travel: four modes of transmission <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2F1%20HLTINF001%20HLTWHS002.one%7Cf3c2a00c-7e1a-4bdd-85d9-09730b7ae7b8%2F6%7C3fbbeeb5-b1f5-4e65-93ff-92a3cc5c2e93%2F%29&wdorigin=NavigationUrl" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
-  <p class="intro">Link three of the chain, the mode of transmission, has four main types. You will use these four words in the next slide.</p>
+  <p class="intro">Link three of the chain, the mode of transmission, has four main types. You will use these four words in the next section.</p>
   <div class="audio-line"><button type="button" class="say" data-audio="audio/np3-s5.mp3" aria-label="Listen: How germs travel: four modes of transmission"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
   <figure class="visual"><div class="grid4">
         <figure><img src="pics/contact.jpg" alt="A finger pressing a lift button"><figcaption><b>Contact</b> Touching a person or a surface</figcaption></figure>
@@ -412,6 +489,7 @@ section.slide.hide-notes .activity{filter:none}
         <figure><img src="pics/vectorborne.jpg" alt="A mosquito between two people"><figcaption><b>Vector-borne</b> Carried by an insect or animal</figcaption></figure>
       </div></figure>
   <ol class="points"><li id="s5p1"><span class="ref" title="Reference">NP3 S5 P1</span><b>Contact</b>: the germ moves by <b>touch</b>. Direct contact is skin to skin. Indirect contact is through something in between, like a bed rail, a towel or your hands.</li><li id="s5p2"><span class="ref" title="Reference">NP3 S5 P2</span><b>Droplet</b>: <b>big drops</b> fly out when someone coughs, sneezes or talks. They land on people and surfaces <b>within about one metre</b>.</li><li id="s5p3"><span class="ref" title="Reference">NP3 S5 P3</span><b>Airborne</b>: <b>tiny particles</b> stay floating in the air and can travel <b>much further</b> than a metre. Measles and TB travel this way.</li><li id="s5p4"><span class="ref" title="Reference">NP3 S5 P4</span><b>Vector-borne</b>: the germ is <b>carried by an insect or animal</b>. A mosquito carrying malaria is the classic example.</li><li id="s5p5"><span class="ref" title="Reference">NP3 S5 P5</span>Many germs use <b>more than one</b> mode. A cold is spread by droplets <b>and</b> by contact with the hands that caught them.</li></ol>
+  
   
   
   
@@ -480,6 +558,7 @@ section.slide.hide-notes .activity{filter:none}
       <div class="card-audio"><button type="button" class="say" data-audio="audio/np3-s6-c8.mp3" aria-label="Listen: Soil (Legionella)"><span class="ico">&#9654;</span> Listen</button></div>
     </article></div>
   
+  
   <div class="watch-out"><b>Watch out</b> The <b>method</b> column must say <b>how</b> the germ travels: &quot;bitten&quot;, &quot;ingested&quot;, &quot;breathed in&quot;, &quot;through a needle prick&quot;. The word &quot;exposed&quot; on its own is not a method. (The example row in the assessment, Water: ingested, shows the style.)</div>
   <div class="activity" id="act-s6-1" data-activity='{"type":"table","title":"Fill the reservoir table","instructions":"For each reservoir choose a method and a mode. Then press Check.","columns":["Reservoir","Method of transmission","Mode"],"rows":[{"label":"People","cells":[{"options":["Incorrect PPE use lets germs reach cuts, mouth or nose","Bitten or scratched","Ingested with food","Mosquito bite"],"answer":"Incorrect PPE use lets germs reach cuts, mouth or nose"},{"options":["Droplet, contact","Vector-borne","Contact, airborne"],"answer":"Droplet, contact"}]},{"label":"Animals (bat lyssavirus)","cells":[{"options":["Bitten, scratched or bat saliva on broken skin","Breathing in dust","Ingested with food","Mosquito bite"],"answer":"Bitten, scratched or bat saliva on broken skin"},{"options":["Droplet, contact","Vector-borne","Contact, airborne"],"answer":"Droplet, contact"}]},{"label":"Insects","cells":[{"options":["Mosquito bite carries the parasite","Breathing in dust","Ingested with food","Needle prick"],"answer":"Mosquito bite carries the parasite"},{"options":["Droplet, contact","Vector-borne","Contact, airborne"],"answer":"Vector-borne"}]},{"label":"Soil (Legionella)","cells":[{"options":["Breathing in dust from potting mix","Bitten or scratched","Ingested with food","Needle prick"],"answer":"Breathing in dust from potting mix"},{"options":["Droplet, contact","Vector-borne","Contact, airborne"],"answer":"Contact, airborne"}]},{"label":"Food and water","cells":[{"options":["Eating or drinking contaminated food or water","Bitten or scratched","Breathing in dust","Needle prick"],"answer":"Eating or drinking contaminated food or water"},{"options":["Contact, droplet","Vector-borne","Contact, airborne"],"answer":"Contact, droplet"}]}]}'>
     <div class="act-head"><span class="act-badge">Try it</span> <b>Fill the reservoir table</b></div>
@@ -522,6 +601,7 @@ section.slide.hide-notes .activity{filter:none}
     </article></div>
   <div class="vid"><p class="vid-title"><b>Watch:</b> Medusa: manage risk <span class="vid-by">(Adrie Homan)</span></p><div class="video" data-youtube="pbj67dRV54w" data-title="Medusa: manage risk"></div></div>
   
+  
   <div class="activity" id="act-s7-1" data-activity='{"type":"sort","title":"Risk or control?","instructions":"Sort each statement into the right hazard. Tap a statement, then tap the hazard box.","buckets":["Not washing hands","Handling sharps wrongly","Uncovered cough or sneeze"],"items":[{"text":"Germs carried from one person to the next","bucket":"Not washing hands"},{"text":"Soap, water and hand rub easy to reach","bucket":"Not washing hands"},{"text":"Hepatitis B, hepatitis C or HIV from a needle prick","bucket":"Handling sharps wrongly"},{"text":"Use safety devices and a proper sharps container","bucket":"Handling sharps wrongly"},{"text":"Others catch the cold or flu from droplets","bucket":"Uncovered cough or sneeze"},{"text":"Stay home until symptoms have gone","bucket":"Uncovered cough or sneeze"}]}'>
     <div class="act-head"><span class="act-badge">Try it</span> <b>Risk or control?</b></div>
     <p class="act-instr">Sort each statement into the right hazard. Tap a statement, then tap the hazard box.</p>
@@ -544,6 +624,7 @@ section.slide.hide-notes .activity{filter:none}
   
   
   <div class="vid"><p class="vid-title"><b>Watch:</b> Pharmaceutical waste and sharps <span class="vid-by">(Adrie Homan)</span></p><div class="video" data-youtube="0jguhhhI3UI" data-title="Pharmaceutical waste and sharps"></div></div>
+  
   <div class="watch-out"><b>Watch out</b> For the needlestick question, say <b>how</b> the infection gets in: a penetrating injury gives a direct line into the <b>bloodstream</b>. Then give <b>four</b> controls.</div>
   
   <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802547/viewContent/43305242/View" target="_blank" rel="noopener">Penetrating injuries</a></div>
@@ -565,6 +646,7 @@ section.slide.hide-notes .activity{filter:none}
   <div class="after"><img src="pics/canva-respiratory-etiquette.jpg" alt="Respiratory and cough etiquette summary: use a tissue, do not reuse it, bin it, no handkerchiefs, sneeze into your elbow, wash hands after, help others, use a plastic bag if there is no bin" style="width:100%; max-width:900px; display:block; margin:0 auto; border-radius:10px"></div>
   
   
+  
   <div class="watch-out"><b>Watch out</b> This question is about <b>coughing and sneezing</b>. A list of general standard precautions (hand hygiene, PPE, linen) does <b>not</b> answer it.</div>
   <div class="activity" id="act-s9-1" data-activity='{"type":"quiz","title":"Does it answer the question?","instructions":"Your colleague is sneezing. Which answer actually tells them what to do?","questions":[{"q":"Which list answers \"four strategies to reduce the risk of cross infection from a sneezing colleague\"?","options":["Hand hygiene, hand care, use PPE, handle linen safely","Tissue and bin it, elbow if no tissue, turn away, clean hands after","Wear gloves, wear a gown, clean the room, report the hazard","Stay hydrated, rest, take paracetamol, see a doctor"],"answer":1,"why":"The question is about coughing and sneezing. The answer must be the respiratory etiquette steps."},{"q":"There is no tissue. Where should the sneeze go?","options":["Into your hand","Into your upper arm or elbow","Into the air, turned away","Into your sleeve cuff and then wipe it"],"answer":1,"why":"Elbow, not hand. Your hand touches everything next."}]}'>
     <div class="act-head"><span class="act-badge">Try it</span> <b>Does it answer the question?</b></div>
@@ -578,13 +660,13 @@ section.slide.hide-notes .activity{filter:none}
   <aside class="tnotes" data-slide="s9" aria-label="Teacher notes"></aside>
 </section>
   <footer class="foot">
-    <p>HLTINF006 / HLTWHS002 · Germs and how infection spreads · Built from TAFE Queensland learning resources, 23 Oct 2026. References on this page are written NP3 S(slide) P(point), where NP3 is this page's slide number in Nearpod.</p>
+    <p>HLTINF006 / HLTWHS002 · Germs and how infection spreads · Built from TAFE Queensland learning resources, 23 Oct 2026. How to write a reference from this page: <b>NP3 S5 P1</b> means <b>Nearpod 3, Section 5, Point 1</b>. <b>C</b> means Card, for example NP3 S4 C2 is Nearpod 3, Section 4, Card 2. The section number is the number in the circle next to each heading.</p>
     
     <p><a href="0-index.html">Lesson index and glossary</a> · <button type="button" class="tlink">Teacher</button></p>
   </footer>
 </div>
 <a href="#index" class="home" title="Back to the index"><span aria-hidden="true">&#8679;</span> Home</a>
-<div class="tpill" hidden><span>Teacher view on</span><button type="button" class="tp-hide">Hide</button><button type="button" class="tp-out">Sign out</button></div>
+<div class="tpill" hidden><span class="tp-label">Teacher</span><button type="button" class="tp-hide">Hide notes</button><button type="button" class="tp-out">Sign out</button></div>
 <div class="mascot gerry" data-mascot="gerry" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 140 150" role="img" aria-label="Gerry the Germ"><defs><radialGradient id="gg" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#bef264"/><stop offset=".55" stop-color="#4ade80"/><stop offset="1" stop-color="#15803d"/></radialGradient></defs>
 <line x1="114.0" y1="70.0" x2="132.0" y2="70.0" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/><circle cx="132.0" cy="70.0" r="6" fill="#f472b6"/><line x1="105.6" y1="95.9" x2="120.2" y2="106.4" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/><circle cx="120.2" cy="106.4" r="6" fill="#fb923c"/><line x1="83.6" y1="111.8" x2="89.2" y2="129.0" stroke="#facc15" stroke-width="7" stroke-linecap="round"/><circle cx="89.2" cy="129.0" r="6" fill="#facc15"/><line x1="56.4" y1="111.8" x2="50.8" y2="129.0" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/><circle cx="50.8" cy="129.0" r="6" fill="#38bdf8"/><line x1="34.4" y1="95.9" x2="19.8" y2="106.4" stroke="#a78bfa" stroke-width="7" stroke-linecap="round"/><circle cx="19.8" cy="106.4" r="6" fill="#a78bfa"/><line x1="26.0" y1="70.0" x2="8.0" y2="70.0" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/><circle cx="8.0" cy="70.0" r="6" fill="#f472b6"/><line x1="34.4" y1="44.1" x2="19.8" y2="33.6" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/><circle cx="19.8" cy="33.6" r="6" fill="#fb923c"/><line x1="56.4" y1="28.2" x2="50.8" y2="11.0" stroke="#facc15" stroke-width="7" stroke-linecap="round"/><circle cx="50.8" cy="11.0" r="6" fill="#facc15"/><line x1="83.6" y1="28.2" x2="89.2" y2="11.0" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/><circle cx="89.2" cy="11.0" r="6" fill="#38bdf8"/><line x1="105.6" y1="44.1" x2="120.2" y2="33.6" stroke="#a78bfa" stroke-width="7" stroke-linecap="round"/><circle cx="120.2" cy="33.6" r="6" fill="#a78bfa"/>
 <circle cx="70" cy="70" r="46" fill="url(#gg)"/>
@@ -603,15 +685,19 @@ section.slide.hide-notes .activity{filter:none}
   <div class="body"></div>
   <div class="foot"><button type="button" class="big-back">Back</button><button type="button" class="next big-next">Next card</button></div>
 </div>
-<script>var TEACHER = {"salt":"9Or4hPVq68RYsCJYsiF2Cg==","iv":"GDPCQM2Hort0yyDA","ct":"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"}; var MASCOT_LINES = {"gerry":["Hi, I'm Gerry. Please don't wash your hands. Love, Gerry.","A sneeze is my favourite taxi. No tissue, please!","Bed rails are my holiday home. I can stay for weeks.","Jewellery under gloves? Perfect. I hide under rings.","Recap that needle. Go on. I dare you.","You washed for 20 seconds? That's just rude.","Damp hands, dry gloves? Thank you, I'll move in.","Soap and water is my kryptonite. Shh.","I love a hand that touches a face. Any face."]};</script>
+<script>var GLOSS = {"colonisation":["Colonisation","Germs live on or in the body but cause no illness. Many people carry germs on their skin and never get sick from them."],"disease":["Disease","An illness with signs and symptoms that can be seen, measured or felt. Some diseases are caused by infections; some are not."],"infection":["Infection","Germs get inside the body and the immune system fights back. The person may or may not feel sick."],"mode-of-transmission":["Mode of transmission","How a germ travels from one place or person to the next. It \"hitches a ride\"."],"portal-of-entry":["Portal of entry","The way a germ gets into a person: mouth, nose, eyes, a cut, a needle prick."],"portal-of-exit":["Portal of exit","The way a germ leaves its source: a cough, blood, faeces, urine, wound fluid."],"source-of-infection":["Source of infection","The person or thing carrying the germ. Also called the reservoir."],"susceptible-host":["Susceptible host","A person who can easily catch an infection, for example an older person or someone with a long-term illness."]}; var TEACHER = {"salt":"ak40kksAgjZdPIdCD6cEnw==","iv":"kA4ISkXL1qdYHHrD","ct":"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"}; var MASCOT_LINES = {"gerry":{"lines":["Hi, I'm Gerry. Please don't wash your hands. Love, Gerry.","A sneeze is my favourite taxi. No tissue, please!","Bed rails are my holiday home. I can stay for weeks.","Jewellery under gloves? Perfect. I hide under rings.","Recap that needle. Go on. I dare you.","You washed for 20 seconds? That's just rude.","Damp hands, dry gloves? Thank you, I'll move in.","Soap and water is my kryptonite. Shh.","I love a hand that touches a face. Any face."],"prefix":"gerry-"}};</script>
 <script>(function(){
   var ANGLES = [-8, -5.5, -9, -4.5, -7, -6, -8.5, -4, -6.5];
   var big = document.querySelector('.big'), bigBody = big.querySelector('.body'),
       bigWhere = big.querySelector('.big-where'), active = null;
 
-  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ---------- */
+  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ----------
+     Once the teacher has typed the code on a computer, the purple teacher pill stays at the top right of every
+     lesson page on that computer (Show or Hide notes, Presenting, Sign out), so nothing needs the footer again.
+     Students never have the code, so they never see the pill. */
   (function(){
-    var pill = document.querySelector('.tpill'), tlink = document.querySelector('.tlink'), saved = null, on = '0';
+    var pill = document.querySelector('.tpill'), tlinks = document.querySelectorAll('.tlink'), saved = null, on = '0';
+    var hideBtn = pill.querySelector('.tp-hide');
     var b64 = function(s){ var b = atob(s), a = new Uint8Array(b.length); for(var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; };
     function decrypt(code){
       if(!window.crypto || !crypto.subtle) return Promise.reject(new Error('nosubtle'));
@@ -622,39 +708,51 @@ section.slide.hide-notes .activity{filter:none}
         return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(TEACHER.iv) }, key, b64(TEACHER.ct));
       }).then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
     }
+    function pillOn(v){ pill.hidden = !v; document.body.classList.toggle('tv-pill', !!v); }
     function show(notes){
       document.querySelectorAll('.tnotes').forEach(function(a){ a.innerHTML = notes[a.getAttribute('data-slide')] || ''; });
-      document.body.classList.add('teacher'); pill.hidden = false;
+      document.body.classList.add('teacher'); pillOn(true); hideBtn.textContent = 'Hide notes';
       try{ localStorage.setItem('tv_on', '1'); }catch(e){}
     }
-    function hide(){ document.body.classList.remove('teacher'); pill.hidden = true; try{ localStorage.setItem('tv_on', '0'); }catch(e){} }
+    function hide(){
+      document.body.classList.remove('teacher'); hideBtn.textContent = 'Show notes';
+      pillOn(!!saved);   /* the pill stays while this computer knows the code */
+      try{ localStorage.setItem('tv_on', '0'); }catch(e){}
+    }
     function unlock(code, quiet){
       return decrypt(code).then(function(notes){ saved = code; try{ localStorage.setItem('tv_code', code); }catch(e){} show(notes); }, function(err){
         if(quiet) return;
         alert(err.message === 'nosubtle' ? 'This browser cannot unlock the teacher view. Use Chrome or Edge.' : 'That code did not work.');
       });
     }
+    function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
     try{ saved = localStorage.getItem('tv_code'); on = localStorage.getItem('tv_on') || '0'; }catch(e){}
     var q = new URLSearchParams(location.search);
-    if(q.get('t') === 'off'){ hide(); try{ localStorage.removeItem('tv_code'); }catch(e){} }
+    if(q.get('t') === 'off'){ saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} hide(); }
     else if(q.has('t')) unlock(q.get('t'));
     else if(saved && on === '1') unlock(saved, true);
-    if(tlink) tlink.addEventListener('click', function(){
+    else if(saved) hide();
+    tlinks.forEach(function(tl){ tl.addEventListener('click', function(){
       if(document.body.classList.contains('teacher')){ hide(); return; }
       if(saved){ unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); }); } else ask();
-      function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
+    }); });
+    hideBtn.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')) hide();
+      else if(saved) unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); });
     });
-    pill.querySelector('.tp-hide').addEventListener('click', hide);
-    pill.querySelector('.tp-out').addEventListener('click', function(){ hide(); saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} });
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open')) hide(); });
+    pill.querySelector('.tp-out').addEventListener('click', function(){ saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} hide(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open') && !document.querySelector('.gpop')) hide(); });
   })();
 
     /* ---------- audio ---------- */
   var player = new Audio(), current = null, queue = null;
-  function stopAudio(){ player.pause(); if(current){ current.classList.remove('playing'); current = null; } queue = null; }
-  function playBtn(btn, onEnd){
+  function stopAudio(keepQueue){
+    player.pause(); if(current){ current.classList.remove('playing'); current = null; }
+    if(!keepQueue && queue){ var q = queue; queue = null; if(q._stopped) q._stopped(); }
+  }
+  function playBtn(btn, onEnd, keepQueue){
     if(current === btn){ stopAudio(); return; }
-    stopAudio();
+    stopAudio(keepQueue);
     current = btn; btn.classList.add('playing');
     player.src = btn.getAttribute('data-audio');
     player.onended = function(){ btn.classList.remove('playing'); current = null; if(onEnd) onEnd(); };
@@ -673,7 +771,7 @@ section.slide.hide-notes .activity{filter:none}
   document.querySelectorAll('.mascot').forEach(function(g, gi){
     var name = g.getAttribute('data-mascot'), bubble = g.querySelector('.gerry-bubble');
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var lastSlide = null, timer = null, lines = MASCOT_LINES[name] || [];
+    var lastSlide = null, timer = null, ml = MASCOT_LINES[name] || {}, lines = ml.lines || [], prefix = ml.prefix || (name + '-');
     function place(){
       var max = document.documentElement.scrollHeight - window.innerHeight;
       var p = max > 0 ? window.scrollY / max : 0;
@@ -692,9 +790,16 @@ section.slide.hide-notes .activity{filter:none}
       if(!bubble.hidden){ bubble.hidden = true; return; }
       var k = n++ % lines.length;
       bubble.textContent = lines[k]; bubble.hidden = false;
-      stopAudio(); player.src = 'audio/' + name + '-' + (k + 1) + '.mp3'; player.onended = null; player.onerror = null; player.play().catch(function(){});
+      stopAudio(); player.src = 'audio/' + prefix + (k + 1) + '.mp3'; player.onended = null; player.onerror = null; player.play().catch(function(){});
       clearTimeout(bubble._t); bubble._t = setTimeout(function(){ bubble.hidden = true; }, 7000);
     });
+  });
+
+  /* ---------- finale: big mascots walk in ---------- */
+  document.querySelectorAll('[data-finale]').forEach(function(f){
+    if(!('IntersectionObserver' in window)){ f.classList.add('in'); return; }
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ f.classList.add('in'); io.disconnect(); } }); }, { threshold: 0.35 });
+    io.observe(f);
   });
 
   /* ---------- videos ---------- */
@@ -741,18 +846,29 @@ section.slide.hide-notes .activity{filter:none}
       deck.appendChild(c);
     });
     if(stack.getAttribute('data-playall')){
+      /* Play all: card 1 to the last card, one after the other. The deck turns to each card as it plays.
+         Before 28 Oct 2026 only card 1 played: starting each card's sound also cleared the queue. */
       var pa = document.createElement('div'); pa.className = 'playall';
-      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> Play all cards</button>';
+      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> <span class="pa-t">Play all cards</span></button>';
       stack.appendChild(pa);
-      pa.querySelector('button').addEventListener('click', function(ev){
+      var paBtn = pa.querySelector('button'), paT = pa.querySelector('.pa-t');
+      stack._stopped = function(){ paBtn.classList.remove('playing'); paT.textContent = 'Play all cards'; };
+      paBtn.addEventListener('click', function(ev){
         ev.stopPropagation();
         if(queue === stack){ stopAudio(); return; }
-        stopAudio(); queue = stack;
+        stopAudio(); queue = stack; paBtn.classList.add('playing'); paT.textContent = 'Stop';
+        if(i !== 0){ i = 0; show(); }
+        function finish(){ if(queue === stack){ queue = null; stack._stopped(); } }
         function step(){
           if(queue !== stack) return;
           var b = cards[i].querySelector('.say');
-          if(!b){ next(); return; }
-          playBtn(b, function(){ setTimeout(function(){ if(queue !== stack) return; if(i === n-1){ queue = null; return; } go(1); step(); }, 900); });
+          var after = function(){ setTimeout(function(){
+            if(queue !== stack) return;
+            if(i === n - 1){ finish(); return; }
+            busy = false; go(1); setTimeout(step, 450);
+          }, b ? 900 : 0); };
+          if(!b){ after(); return; }
+          playBtn(b, after, true);
         }
         step();
       }, true);
@@ -952,6 +1068,51 @@ section.slide.hide-notes .activity{filter:none}
     });
     act.querySelector('.act-reset').addEventListener('click', function(){ api.reset(); res.textContent = ''; res.className = 'act-result'; });
   });
+})();
+
+/* ---------- infographics: click for full screen (CHCAGE013) ---------- */
+(function(){
+  function open(node){
+    var box = document.createElement('div'); box.className = 'zoombox'; box.setAttribute('role','dialog'); box.setAttribute('aria-label','Picture full screen');
+    box.appendChild(node.cloneNode(true));
+    var c = document.createElement('button'); c.className = 'zclose'; c.type = 'button'; c.textContent = 'Close'; box.appendChild(c);
+    function shut(){ box.remove(); document.removeEventListener('keydown', key); }
+    function key(e){ if(e.key === 'Escape') shut(); }
+    box.addEventListener('click', shut); document.addEventListener('keydown', key);
+    document.body.appendChild(box);
+  }
+  document.querySelectorAll('figure.infopic img, figure.infopic .info-svg').forEach(function(el){
+    el.addEventListener('click', function(){ open(el); });
+    el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(el); } });
+  });
+})();
+
+/* ---------- glossary words: the meaning opens next to the word, so students keep their place ---------- */
+(function(){
+  if(typeof GLOSS === 'undefined') return;
+  var pop = null, from = null;
+  function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+  function close(){ if(pop){ pop.remove(); pop = null; if(from) from.setAttribute('aria-expanded', 'false'); } }
+  function open(a){
+    var g = GLOSS[a.getAttribute('data-term')]; if(!g) return false;
+    close(); from = a; a.setAttribute('aria-expanded', 'true');
+    pop = document.createElement('div'); pop.className = 'gpop'; pop.setAttribute('role', 'dialog'); pop.setAttribute('aria-label', 'Meaning of ' + g[0]);
+    pop.innerHTML = '<button type="button" class="gp-x" aria-label="Close">&times;</button><p class="gp-term">' + esc(g[0]) + '</p><p class="gp-def">' + esc(g[1]) + '</p>' +
+      '<p class="gp-more"><a href="' + a.getAttribute('href') + '" target="_blank" rel="noopener">Open the glossary in a new tab</a></p>';
+    document.body.appendChild(pop);
+    var r = a.getBoundingClientRect(), w = pop.offsetWidth, x = Math.min(Math.max(8, r.left + window.scrollX), window.scrollX + document.documentElement.clientWidth - w - 8);
+    pop.style.left = x + 'px'; pop.style.top = (r.bottom + window.scrollY + 8) + 'px';
+    pop.querySelector('.gp-x').addEventListener('click', close);
+    pop.querySelector('.gp-x').focus({ preventScroll: true });
+    return true;
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a.term[data-term]');
+    if(a){ if(open(a)) e.preventDefault(); return; }
+    if(pop && !e.target.closest('.gpop')) close();
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && pop){ var f = from; close(); if(f) f.focus(); } });
+  window.addEventListener('resize', close);
 })();
 </script>
 <script src="../shared/presenting.js"></script>
