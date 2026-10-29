@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHCCOM005 CHCDIV001 Consumer-Directed Care Cluster: Practical skills day</title>
+<meta name="description" content="CHCCOM005 CHCDIV001 Lesson 6, practical skills day: rules, timer, AT2 Diversity conversation (form, topics, checklist, questions), AT3 group discussion (Zia, Allie, checklist, laws, questions, reflection), CHCCCS031/040 Observation Tasks 9 and 10A.">
+<style>:root{
+  --ink:#1b2530; --soft-ink:#44505c; --paper:#ffffff;
+  --deep:#12384a; --aqua:#8fe3e8; --action:#0b6f7c;
+  --card-a:#fbfbf9; --card-b:#ecece8; --edge:#d9d9d4;
+  --warn:#b45309; --warn-bg:#fff7ed; --ok:#15803d; --bad:#b91c1c;
+  --teach:#4c1d95; --teach-bg:#f5f3ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size:clamp(17px,1.5vw,30px); line-height:1.55}
+main{overflow-x:clip}
+.wrap{max-width:1500px; margin:0 auto; padding:0 clamp(20px,3vw,60px)}
+
+/* banner */
+.banner{position:relative; background:var(--deep); color:#fff; padding:clamp(60px,9vw,140px) 20px 40px; overflow:hidden}
+.banner-inner{position:relative; z-index:2; max-width:1500px; margin:0 auto}
+.banner .kicker{margin:0 0 6px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:.75em; color:var(--aqua)}
+.banner h1{margin:0; font-size:clamp(30px,5vw,76px); line-height:1.1; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.banner .sub{margin:12px 0 0; font-size:1.05em; max-width:28em; color:#f3e6d2}
+.banner svg.hero{position:absolute; right:-2vw; bottom:-4vw; width:min(46vw,620px); height:auto; opacity:.95; z-index:1}
+@media (max-width:800px){.banner svg.hero{opacity:.25}}
+
+/* index */
+#index{margin:30px 0 10px; padding:18px 26px 12px; background:#efe5d3; border-left:6px solid var(--action); border-radius:6px}
+#index h2{font-size:1.2em; margin:0 0 8px}
+#index ul{margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(19em,1fr)); column-gap:3em}
+#index li{margin:4px 0}
+#index a{text-decoration:none; color:var(--ink); display:flex; gap:10px; align-items:baseline}
+#index a:hover{color:var(--action); text-decoration:underline}
+.num{display:inline-flex; align-items:center; justify-content:center; min-width:1.7em; height:1.7em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; font-size:.8em; flex:none}
+.opening{font-size:1.05em; margin:26px 0 10px}
+
+/* slides */
+section.slide{padding:36px 0 18px; border-top:1px solid var(--edge); margin-top:30px; scroll-margin-top:10px}
+section.slide:first-of-type{border-top:0}
+h2.topic{font-size:1.4em; line-height:1.3; margin:0 0 10px; display:flex; gap:14px; align-items:center}
+h2.topic .num{font-size:.7em; min-width:2em; height:2em}
+h3{font-size:1.15em; line-height:1.3; margin:0 0 10px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px; padding-left:26px}
+li{margin:4px 0}
+a{color:var(--action); text-underline-offset:3px}
+a.star{font-weight:700; padding:0 4px; font-size:.8em; text-decoration:none; opacity:.55}
+a.star:hover{opacity:1}
+a.term{text-decoration:underline dotted; color:inherit}
+.intro{font-size:1.05em; color:var(--soft-ink)}
+a:focus-visible,button:focus-visible,.deck:focus-visible{outline:3px solid #f2a900; outline-offset:3px}
+
+ol.points{margin:12px 0 18px; padding-left:0; list-style:none; counter-reset:pt}
+ol.points li{position:relative; padding:10px 14px 10px 3.2em; margin:6px 0; background:#fffaf1; border-radius:8px; counter-increment:pt}
+ol.points li::before{content:counter(pt); position:absolute; left:.9em; top:.55em; width:1.7em; height:1.7em; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:700; font-size:.85em; display:flex; align-items:center; justify-content:center}
+.ref{display:none; float:right; margin-left:10px; font-size:.65em; color:var(--teach); background:var(--teach-bg); border:1px solid #ddd6fe; border-radius:4px; padding:0 6px}
+body.teacher .ref{display:inline-block}
+
+figure.visual{margin:18px 0 22px; text-align:center}
+figure.visual svg,figure.visual img{max-width:100%; height:auto; max-height:70vh}
+figure.visual figcaption{font-size:.8em; color:var(--soft-ink); margin-top:6px}
+figure.pic{margin:22px 0}
+figure.pic img{display:block; width:100%; height:auto; max-height:86vh; object-fit:contain; border-radius:4px}
+
+.watch-out{margin:14px 0 20px; padding:14px 18px 14px 56px; background:var(--warn-bg); border:2px solid #fdba74; border-radius:8px; position:relative}
+.watch-out::before{content:"!"; position:absolute; left:14px; top:12px; width:30px; height:30px; border-radius:50%; background:var(--warn); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.watch-out b{color:var(--warn); margin-right:6px}
+
+/* audio */
+.say{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:40px; display:inline-flex; gap:8px; align-items:center}
+.say.playing{background:var(--action); color:#fff}
+.say .ico{font-size:.8em}
+.audio-line{display:flex; gap:12px; align-items:center; margin:0 0 14px; flex-wrap:wrap}
+.audio-label{color:var(--soft-ink); font-size:.9em}
+.card-audio{margin-top:10px}
+.playall{margin:0 0 34px; text-align:center}
+
+/* card stack (from the Sway template) */
+.stack{margin:60px auto 40px; width:86%; max-width:1150px; --tilt:.4}
+.deck{position:relative; cursor:pointer; border-radius:3px; transition:height .3s ease}
+.pile i{position:absolute; inset:0; background:var(--card-b); border:1px solid var(--edge); box-shadow:0 1px 3px rgba(20,30,40,.10)}
+.pile i:nth-child(even){background:var(--card-a)}
+.pile i{transform:rotate(calc(var(--a) * var(--tilt,1))) translate(var(--x),var(--y))}
+.pile i:nth-child(1){--a:-15deg; --x:-4px; --y:6px}
+.pile i:nth-child(2){--a:6deg; --x:6px; --y:2px}
+.pile i:nth-child(3){--a:-12deg; --x:3px; --y:-5px}
+.pile i:nth-child(4){--a:3deg; --x:-5px; --y:4px}
+.pile i:nth-child(5){--a:-10deg; --x:5px; --y:5px}
+.pile i:nth-child(6){--a:-2deg; --x:-3px; --y:-3px}
+.pile i:nth-child(7){--a:-6deg; --x:2px; --y:3px}
+.pile{position:absolute; inset:0; filter:drop-shadow(0 14px 18px rgba(20,30,40,.16))}
+.card{position:absolute; left:0; top:0; width:100%; height:100%; background:var(--card-a); border:1px solid var(--edge);
+  padding:1.5em 1.8em 1.3em; font-size:clamp(16px,1.4vw,27px); line-height:1.5; opacity:0; pointer-events:none; z-index:1; min-height:7em;
+  transform:rotate(calc(var(--r,-6deg) * var(--tilt,1))); box-shadow:0 2px 6px rgba(20,30,40,.14)}
+.card.shade{background:var(--card-b)}
+.card.long{font-size:clamp(14.5px,1.25vw,24px); line-height:1.45}
+.card.top{opacity:1; pointer-events:auto; z-index:3}
+.card.arrive{animation:arrive .42s ease-out}
+.card.leave{opacity:1; z-index:4; animation:leave .42s ease-in forwards}
+.card.leave-back{opacity:1; z-index:4; animation:leaveBack .42s ease-in forwards}
+@keyframes arrive{from{transform:rotate(calc(var(--r) * var(--tilt,1) + 5deg)) scale(.96)} to{transform:rotate(calc(var(--r) * var(--tilt,1))) scale(1)}}
+@keyframes leave{to{transform:translate(58%,-10%) rotate(16deg); opacity:0}}
+@keyframes leaveBack{to{transform:translate(-58%,-10%) rotate(-18deg); opacity:0}}
+.card .count{float:right; margin:-6px -8px 6px 14px; font-size:.8em; font-weight:600; color:var(--soft-ink); background:#fff; border:1px solid var(--edge); border-radius:20px; padding:2px 12px}
+.card ul{margin-bottom:6px}
+.card-pic{float:right; width:clamp(90px,22%,220px); margin:0 0 10px 16px}
+.card-pic svg{width:100%; height:auto}
+.controls{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin-top:60px}
+.controls button{font:inherit; font-size:clamp(17px,1.2vw,24px); font-weight:600; cursor:pointer; padding:10px 20px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:48px}
+.controls button.next{background:var(--action); color:#fff}
+.controls button:hover{filter:brightness(.94)}
+.controls .where{min-width:7em; text-align:center; font-weight:700; font-size:clamp(18px,1.25vw,25px)}
+.hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:10px 0 0}
+
+/* full screen */
+.big{position:fixed; inset:0; z-index:50; background:#05090c; color:#fff; display:none}
+.big.open{display:flex; flex-direction:column}
+.big .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; font-weight:700}
+.big .body{flex:1; overflow:auto; padding:8px clamp(20px,7vw,90px) 24px; font-size:clamp(20px,2.9vw,34px); line-height:1.45}
+.big .body h3{font-size:1.1em; margin-bottom:.5em}
+.big .body .count{display:none}
+.big .body .card-pic{width:22%}
+.big .body .say{color:#fff; border-color:#fff; background:transparent}
+.big .foot{display:flex; gap:12px; justify-content:center; padding:12px 18px 20px}
+.big button{font:inherit; font-size:18px; font-weight:600; cursor:pointer; min-height:48px; padding:10px 22px; border-radius:6px; border:2px solid #fff; background:transparent; color:#fff}
+.big button.next{background:#fff; color:#05090c}
+
+/* activities */
+.activity{margin:22px 0 28px; padding:16px 20px 14px; border:2px solid #d8c9b2; border-radius:10px; background:#f1f5ec}
+.act-head{display:flex; gap:10px; align-items:center; margin-bottom:6px}
+.act-badge{background:var(--action); color:#fff; font-size:.7em; font-weight:700; padding:2px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:.04em}
+.act-instr{color:var(--soft-ink); font-size:.9em}
+.act-foot{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px}
+.act-foot button{font:inherit; font-size:.9em; font-weight:600; cursor:pointer; padding:8px 18px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:44px}
+.act-foot .act-check{background:var(--action); color:#fff}
+.act-result{font-weight:700}
+.act-result.good{color:var(--ok)} .act-result.bad{color:var(--bad)}
+.chip{display:inline-flex; align-items:center; font-size:.9em; padding:8px 14px; margin:5px; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; user-select:none; min-height:44px; line-height:1.3}
+.chip.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.chip.right{border-color:var(--ok); background:#ecfdf5}
+.chip.wrong{border-color:var(--bad); background:#fef2f2}
+.chip.placed{cursor:default}
+.bank{min-height:52px; padding:6px; border:2px dashed #b9a68a; border-radius:8px; margin-bottom:12px; background:#fff}
+.targets{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(16em,1fr))}
+.target{border:2px solid #b9a68a; border-radius:8px; background:#fff; padding:8px 10px; min-height:70px}
+.target .t-label{font-weight:700; margin-bottom:4px}
+.target .t-drop{min-height:44px; border:2px dashed #e8dcc6; border-radius:6px; padding:2px}
+.target.over .t-drop{border-color:var(--action); background:#f6efe2}
+.order{list-style:none; padding:0; margin:0; counter-reset:o}
+.order li{display:flex; gap:10px; align-items:center; background:#fff; border:2px solid #b9a68a; border-radius:8px; padding:8px 10px; margin:6px 0; cursor:grab}
+.order li .o-n{min-width:2em; height:2em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; font-size:.85em}
+.order li .o-t{flex:1}
+.order li .o-btn{display:flex; gap:4px}
+.order li .o-btn button{font:inherit; min-width:40px; min-height:40px; border-radius:6px; border:1px solid #b9a68a; background:#fff; cursor:pointer}
+.order li.right{border-color:var(--ok); background:#ecfdf5} .order li.wrong{border-color:var(--bad); background:#fef2f2}
+.order li.dragging{opacity:.5}
+.quiz-q{margin:10px 0 16px}
+.quiz-q .opt{display:block; width:100%; text-align:left; font:inherit; font-size:.95em; padding:10px 14px; margin:6px 0; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; min-height:44px}
+.quiz-q .opt.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.quiz-q .opt.right{border-color:var(--ok); background:#ecfdf5} .quiz-q .opt.wrong{border-color:var(--bad); background:#fef2f2}
+.quiz-q .why{font-size:.85em; color:var(--soft-ink); margin:4px 0 0 6px; display:none}
+.quiz-q.done .why{display:block}
+.fill-table{width:100%; border-collapse:collapse; font-size:.9em; background:#fff}
+.fill-table th,.fill-table td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+.fill-table th{background:#efe5d3}
+.fill-table select{font:inherit; font-size:.95em; min-height:40px; max-width:100%}
+.fill-table td.right{background:#ecfdf5} .fill-table td.wrong{background:#fef2f2}
+
+/* teacher view */
+.tnotes{display:none; margin:18px 0 6px; padding:12px 16px; background:var(--teach-bg); border:2px dashed #c4b5fd; border-radius:8px; font-size:.82em; color:#2e1065}
+body.teacher .tnotes{display:block}
+.tnotes .t-head{font-weight:800; color:var(--teach); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; font-size:.85em}
+.tnotes ul{margin:4px 0 8px}
+.tnotes .t-trap{background:#fff7ed; border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0}
+.tlink{font:inherit; font-size:1em; color:var(--soft-ink); background:none; border:0; text-decoration:underline; cursor:pointer; padding:0}
+.tpill[hidden]{display:none}
+.tpill{position:fixed; top:10px; right:10px; z-index:45; background:var(--teach); color:#fff; border-radius:30px; padding:6px 8px 6px 16px; display:flex; gap:8px; align-items:center; font-size:15px; font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.tpill button{font:inherit; font-size:14px; font-weight:700; border:0; border-radius:20px; padding:6px 12px; background:#fff; color:var(--teach); cursor:pointer; min-height:34px}
+.tpill button.tp-out{background:transparent; color:#fff; border:1px solid #fff}
+.card-pic.photo img{width:100%; height:auto; border-radius:8px; display:block}
+.grid4{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(11em,1fr)); margin:16px 0 22px}
+.grid4 figure{margin:0; background:#efe5d3; border-radius:12px; overflow:hidden}
+.grid4 img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+.grid4 figcaption{padding:10px 14px 12px; font-size:.9em}
+.grid4 figcaption b{display:block; color:var(--deep); font-size:1.05em}
+.side{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; margin:10px 0 18px}
+.side > div{flex:2 1 420px}
+.side figure{flex:0 1 380px; max-width:440px; margin:0}
+.side figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* Gerry */
+.mascot{position:fixed; left:clamp(6px,1.2vw,24px); top:120px; width:clamp(54px,6vw,110px); z-index:35; cursor:pointer; transition:top .6s cubic-bezier(.3,.9,.4,1.1); filter:drop-shadow(0 6px 10px rgba(0,0,0,.25)); user-select:none}
+.mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.mascot.hop svg{animation:hop .7s ease-out 1, bob 2.6s ease-in-out .7s infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes hop{0%{transform:translateY(0) scale(1,1)} 30%{transform:translateY(-40px) scale(.95,1.08) rotate(14deg)} 60%{transform:translateY(0) scale(1.08,.92)} 100%{transform:translateY(0) scale(1,1)}}
+.gerry-bubble{position:absolute; left:100%; top:0; margin-left:10px; width:max-content; max-width:16em; background:#fff; color:var(--ink); border:2px solid var(--deep); border-radius:14px; padding:8px 12px; font-size:clamp(14px,1vw,18px); line-height:1.35; box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.gerry-bubble::before{content:""; position:absolute; left:-12px; top:16px; border:6px solid transparent; border-right-color:var(--deep)}
+@media (max-width:900px){.mascot{display:none}}
+.mascot.drop{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.drop .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.drop .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+@media (prefers-reduced-motion:reduce){.mascot svg{animation:none}}
+
+.home{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(14px,2vw,32px); z-index:40; background:var(--action); color:#fff; font-weight:700; font-size:clamp(17px,1.2vw,24px); text-decoration:none; padding:12px 22px; border-radius:30px; box-shadow:0 4px 14px rgba(0,0,0,.25); min-height:48px; display:flex; align-items:center; gap:8px}
+.foot{margin:50px 0 90px; padding-top:16px; border-top:1px solid var(--edge); font-size:.75em; color:var(--soft-ink)}
+
+@media (max-width:560px){
+  body{font-size:17px}
+  .card{padding:20px 20px 18px; font-size:16px}
+  .card.long{font-size:14.5px}
+  .stack{width:auto; margin-left:14px; margin-right:14px; --tilt:.3}
+  .card-pic{width:30%}
+  h2.topic{font-size:1.25em}
+}
+@media (prefers-reduced-motion:reduce){
+  .card.arrive,.card.leave,.card.leave-back{animation-duration:.01s}
+  html{scroll-behavior:auto}
+}
+
+/* ordered strips (PPE on / off) */
+.strips{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr)); margin:16px 0 20px}
+.strip{background:#fffaf1; border-radius:12px; padding:14px 16px}
+.strip-title{font-weight:800; color:var(--deep); margin-bottom:8px}
+.strip-steps{list-style:none; margin:0; padding:0; counter-reset:st}
+.strip-steps li{counter-increment:st; display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px solid #e2e8f0}
+.strip-steps li:last-child{border-bottom:0}
+.strip-steps li::before{content:counter(st); display:inline-flex; align-items:center; justify-content:center; width:1.9em; height:1.9em; border-radius:50%; background:var(--c,#0b6f7c); color:#fff; font-weight:800; font-size:.85em; flex:none}
+table.plain{width:100%; border-collapse:collapse; font-size:.92em; margin:10px 0 18px; background:#fff}
+table.plain th,table.plain td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+table.plain th{background:#efe5d3}
+.tl-high{background:#fee2e2} .tl-med{background:#fef3c7} .tl-low{background:#dcfce7}
+
+/* activity start and blur */
+.act-start[hidden]{display:none}
+.act-start{display:flex; gap:14px; align-items:center; flex-wrap:wrap; padding:6px 0 2px; color:var(--soft-ink); font-size:.9em}
+.act-go{font:inherit; font-size:1em; font-weight:700; cursor:pointer; padding:10px 26px; border-radius:8px; border:0; background:var(--action); color:#fff; min-height:48px}
+.act-tools{margin:0 0 10px}
+.act-peek{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid #b9a68a; background:#fff; color:var(--action); min-height:40px}
+section.slide.hide-notes > :is(ol.points, .stack, figure.visual, .after, .intro, .watch-out, .vid, .audio-line, .side-points, p){filter:blur(7px); pointer-events:none; user-select:none; transition:filter .3s}
+section.slide.hide-notes .activity{filter:none}
+.vid{margin:20px 0 10px}
+.vid-title{margin:0 0 8px}
+.vid-by{color:var(--soft-ink); font-size:.85em}
+.video{margin:0 auto 6px; max-width:calc((100vh - 90px) * 16 / 9); aspect-ratio:16/9; background:#0e1a22; border-radius:6px; overflow:hidden; position:relative}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.watch{margin:0 0 20px; font-size:.8em; text-align:center}
+
+/* activity locked while the notes are showing */
+.activity.peeking .act-body, .activity.peeking .act-foot{pointer-events:none; opacity:.35; filter:grayscale(1)}
+.activity.peeking .act-tools::after{content:"Read the notes, then press the button to carry on."; margin-left:12px; color:var(--warn); font-weight:700; font-size:.9em}
+/* click to spotlight a part of a diagram */
+.spot [data-spot]{transition:opacity .3s, transform .3s; transform-box:fill-box; transform-origin:center}
+.spot.spotting [data-spot]:not(.lit){opacity:.28}
+.spot [data-spot].lit{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.14)}}
+.spot-hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:-8px 0 14px}
+/* points beside a picture */
+.side-points{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start}
+.side-points > ol.points{flex:2 1 420px; margin-top:0}
+.side-points > figure{flex:0 1 320px; max-width:360px; margin:0}
+.side-points > figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* student-visible Connect source line */
+.source{margin:16px 0 6px; padding:10px 14px 10px 44px; background:#f6efe2; border-left:4px solid var(--action); border-radius:8px; font-size:.92em; color:var(--soft-ink); position:relative; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center}
+.source::before{content:"\1F4D6"; position:absolute; left:12px; top:8px; font-size:1.2em}
+.source-label{font-weight:700; color:var(--ink)}
+.source a{text-decoration:none; font-weight:600; border:1px solid #d8c9b2; background:#fff; border-radius:999px; padding:2px 10px}
+.source a:hover{background:#efe5d3}
+
+/* Lesson 3: safety signs, RACE, two-up figures */
+.signs{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:12px 0 20px; align-items:start}
+.sign{background:#fff; border:2px solid var(--edge); border-radius:12px; padding:12px 10px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px}
+.sign svg{width:84px; height:84px}
+.sign span{font-weight:700; font-size:.9em; line-height:1.25}
+.signkey{display:flex; flex-wrap:wrap; gap:8px 20px; margin:6px 0 14px; font-size:.92em}
+.signkey i{display:inline-block; width:16px; height:16px; border-radius:50%; vertical-align:-3px; margin-right:6px}
+.race{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:14px 0 20px}
+.race div{border-left:8px solid var(--c); background:#fff; border-radius:10px; padding:12px 14px; box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.race b{display:block; font-size:2.2em; line-height:1; color:var(--c)}
+.race span{display:block; font-weight:700; font-size:1.1em; margin-top:4px}
+.race small{color:var(--soft-ink)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:14px 0}
+.grid2 figure{margin:0}
+.grid2 figcaption{font-size:.85em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > :is(.signs, .signkey, .race, .grid2){filter:blur(7px); pointer-events:none; user-select:none}
+
+/* side-by-side videos */
+.vid-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:16px 0 6px}
+.vid-row .vid{margin:0}
+.vid-row .video{max-width:none}
+section.slide.hide-notes > .vid-row{filter:blur(7px); pointer-events:none}
+
+/* finale: the grand exit */
+.finale{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; margin:24px 0 10px; padding:24px 10px 0; min-height:340px; overflow:hidden}
+.fin-side{display:flex; flex-direction:column; align-items:center; gap:10px; opacity:0; transition:transform .9s cubic-bezier(.2,.8,.3,1.1), opacity .6s}
+.fin-side.left{transform:translateX(-60vw)}
+.fin-side.right{transform:translateX(60vw)}
+.finale.in .fin-side{transform:none; opacity:1}
+.finale.in .fin-side.right{transition-delay:.25s}
+.fin-mascot{width:min(260px,38vw)}
+.fin-mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.fin-bubble{background:#fff; border:3px solid var(--deep); border-radius:18px; padding:14px 18px; font-size:1.08em; line-height:1.4; position:relative; max-width:34em; opacity:0; transform:scale(.7); transition:transform .5s cubic-bezier(.2,.8,.3,1.3), opacity .4s}
+.fin-bubble p{margin:0 0 8px}
+.fin-bubble::after{content:""; position:absolute; bottom:-14px; left:50%; margin-left:-8px; border:8px solid transparent; border-top-color:var(--deep)}
+.finale.in .fin-bubble{opacity:1; transform:none; transition-delay:1s}
+.finale.in .right .fin-bubble{transition-delay:1.5s}
+.fin-side .fin-bubble{order:-1}
+.fin-who{font-weight:800; color:var(--deep); margin:0}
+.fin-after{text-align:center; font-size:1.1em; color:var(--soft-ink); margin:10px 0 20px}
+@media (max-width:700px){.finale{grid-template-columns:1fr; min-height:0} .fin-side.left,.fin-side.right{transform:translateY(40px)} .finale.in .fin-side{transform:none}}
+@media (prefers-reduced-motion:reduce){.fin-side,.fin-bubble{transition:none; transform:none; opacity:1} .fin-mascot svg{animation:none}}
+.sign-pics{display:flex; gap:6px; align-items:center; justify-content:center; height:96px}
+.sign-pics img{max-height:96px; max-width:100%; object-fit:contain}
+.sign-pics img + img{max-height:60px}
+
+/* Lesson 4: risk matrix */
+table.matrix{border-collapse:collapse; margin:0 auto; font-size:.95em}
+table.matrix th, table.matrix td{border:2px solid #fff; padding:10px 12px; text-align:center}
+table.matrix thead th{background:#12384a; color:#fff; font-weight:700}
+table.matrix tbody th{background:#0b6f7c; color:#fff; text-align:left; font-weight:700}
+table.matrix .corner{background:#1b2530; font-size:.8em}
+table.matrix td.m-L{background:#bbf7d0; color:#14532d; font-weight:700}
+table.matrix td.m-M{background:#fde68a; color:#78350f; font-weight:700}
+table.matrix td.m-H{background:#fca5a5; color:#7f1d1d; font-weight:700}
+@media (max-width:700px){table.matrix{font-size:.75em} table.matrix th, table.matrix td{padding:6px 4px}}
+
+
+.tag{display:inline-block; font-family:"Segoe UI",Arial,sans-serif; font-size:.68em; font-weight:700; padding:1px 10px; border-radius:12px; margin:0 6px; vertical-align:middle; white-space:nowrap}
+.tag.old{background:#e5e1db; color:#4a4540; border:1px solid #b9b2a8}
+.tag.repl{background:#fdf0dc; color:#8a4b12; border:1px solid #e8b878}
+.tag.new{background:#e2efdc; color:#2f5a2a; border:1px solid #9cc290}
+.vid.local video{display:block; width:100%; max-width:1100px; max-height:72vh; margin:0 auto; border-radius:8px; background:#000}
+.mascot.side-right{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.side-right .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.side-right .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+.gerry-bubble{border-color:var(--wood)}
+.home{background:var(--wood)}
+.side-points figure img{border-radius:10px; border:1px solid var(--edge)}
+figure.visual img{border-radius:10px}
+.watch-out b{margin-right:0}
+.watch-out > b:first-child{margin-right:6px}
+body.presenting .mascot{z-index:45}
+@media (max-width:700px){
+  .lessonbar{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:thin; padding-bottom:10px}
+  .lessonbar a{flex:0 0 auto}
+}
+.fill-table select{width:100%}
+
+/* infographics: big, centred, click for full screen */
+figure.infopic{margin:22px auto 26px; text-align:center}
+figure.infopic img{display:block; margin:0 auto; width:100%; max-width:1300px; max-height:82vh; object-fit:contain; border-radius:12px; border:1px solid var(--edge); background:#fff; cursor:zoom-in}
+figure.infopic .info-svg{max-width:1300px; margin:0 auto; background:#fffdf8; border:1px solid var(--edge); border-radius:12px; padding:10px; cursor:zoom-in}
+figure.infopic figcaption{font-size:.75em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > figure.infopic{filter:blur(7px); pointer-events:none; user-select:none}
+.zoombox{position:fixed; inset:0; z-index:70; background:rgba(20,14,10,.92); display:flex; align-items:center; justify-content:center; cursor:zoom-out; padding:2vh 2vw}
+.zoombox img,.zoombox svg{max-width:96vw; max-height:94vh; width:auto; height:auto; background:#fff; border-radius:10px}
+.zoombox .info-svg{width:96vw; max-height:94vh; background:#fffdf8; border-radius:10px; padding:10px}
+.zoombox .info-svg svg{width:100%; max-height:90vh}
+.zoombox .zclose{position:fixed; top:14px; right:18px; font:inherit; font-weight:700; border:0; border-radius:20px; padding:8px 18px; background:#fff; color:var(--wood); cursor:pointer}
+/* external (sign-in) videos and handouts */
+.vid.ext{margin:18px 0}
+.ext-play{display:flex; align-items:center; gap:16px; padding:16px 20px; background:#2f2a24; color:#fff8ec; border-radius:12px; text-decoration:none; max-width:760px; box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.ext-play:hover,.ext-play:focus{background:#4a3b2d; outline:3px solid var(--action)}
+.ext-icon{flex:0 0 56px; height:56px; border-radius:50%; background:var(--action); display:grid; place-items:center; font-size:26px; padding-left:4px}
+.ext-play b{display:block; font-size:1.05em}
+.ext-play small{display:block; opacity:.85; margin-top:3px; font-size:.82em}
+.docs{background:#fbf7ef; border:1px solid #e3d6bf; border-left:6px solid var(--wood); border-radius:10px; padding:12px 20px; margin:16px 0}
+.docs-title{margin:0 0 6px}
+.docs ul{margin:0; padding-left:22px}
+.docs li{margin:6px 0}
+section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events:none}
+.t-demo .t-sub{margin:8px 0 2px; font-weight:700; color:#7a4a1e}
+.t-demo ul,.t-links ul{margin:2px 0 6px; padding-left:20px}
+.t-note{color:#666; font-size:.9em}
+.docs-btn{display:inline-block; margin:10px 0 4px; padding:10px 18px; background:var(--action); color:#fff; border-radius:999px; text-decoration:none; font-weight:700}
+.docs-btn:hover,.docs-btn:focus{background:var(--wood); outline:3px solid var(--action)}
+.docs-note{margin:4px 0 0; font-size:.85em; color:var(--soft-ink)}
+/* ---- 28 Oct 2026: glossary pop-up, teacher button in the lesson bar, Play all state ---- */
+a.term{cursor:help}
+.gpop{position:absolute; z-index:80; width:min(26em,calc(100vw - 16px)); background:#fffdf7; color:var(--ink); border:2px solid var(--wood,#6b4a33); border-radius:12px; padding:12px 40px 10px 16px; box-shadow:0 10px 28px rgba(0,0,0,.25); font-size:clamp(16px,1.1vw,22px); line-height:1.45}
+.gpop p{margin:0 0 6px}
+.gpop .gp-term{font-weight:800; color:var(--wood,#6b4a33)}
+.gpop .gp-more{font-size:.85em; margin:4px 0 0}
+.gpop .gp-more a{color:var(--action)}
+.gpop .gp-x{position:absolute; top:6px; right:6px; width:34px; height:34px; border:0; border-radius:50%; background:transparent; font-size:24px; line-height:1; cursor:pointer; color:var(--soft-ink)}
+.gpop .gp-x:hover{background:#f0e6d6}
+.lessonbar .tlink-top{margin-left:auto; padding:6px 12px; border-radius:20px; border:1px dashed var(--edge); background:transparent; color:var(--soft-ink); text-decoration:none; font-size:.85em; white-space:nowrap}
+.lessonbar .tlink-top:hover{border-color:var(--wood); color:var(--wood)}
+body.tv-pill .lessonbar .tlink-top{display:none}
+.say.playall-btn.playing{background:var(--action); color:#fff}
+.tpill .tp-label{margin-right:2px}
+@media print{ .gpop,.tlink-top{display:none} }
+
+/* ===================== CHCCOM005 CHCDIV001 neon theme (29 Oct 2026): neon red and green lights, a little shine, readable ===================== */
+:root{
+  --ink:#16201d; --soft-ink:#46524e; --paper:#f6f8f7;
+  --deep:#0b5a3c; --aqua:#7dffc0; --action:#d81e3c;
+  --card-a:#ffffff; --card-b:#eef3f1; --edge:#d8e2de;
+  --wood:#0b5a3c; --sage-bg:#ecf8f2; --clay:#d81e3c; --neonR:#ff2e4d; --neonG:#19e68c;
+}
+body{background-color:var(--paper)}
+h1,h2,h3,.banner h1{font-family:"Segoe UI","Trebuchet MS",Arial,sans-serif}
+.banner{background-color:#0d1312; background-image:
+  radial-gradient(ellipse 40% 60% at 12% 110%,rgba(255,46,77,.35),transparent 70%),
+  radial-gradient(ellipse 40% 60% at 70% -10%,rgba(25,230,140,.30),transparent 70%),
+  linear-gradient(115deg,#0d1312 0%,#111b19 55%,#0d1312 100%);
+  border-bottom:4px solid transparent; border-image:linear-gradient(90deg,var(--neonR),#ffd27a,var(--neonG)) 1;
+  box-shadow:0 2px 18px rgba(255,46,77,.35),0 6px 26px rgba(25,230,140,.25);
+  padding:clamp(40px,6vw,96px) 20px clamp(26px,3vw,44px)}
+.banner::before,.banner::after{content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
+  background-image:radial-gradient(2px 2px at 8% 30%,#fff,transparent 60%),radial-gradient(1.5px 1.5px at 22% 70%,#ffd7de,transparent 60%),radial-gradient(2px 2px at 41% 18%,#d6ffe9,transparent 60%),radial-gradient(1.5px 1.5px at 57% 82%,#fff,transparent 60%),radial-gradient(2px 2px at 66% 40%,#ffd7de,transparent 60%),radial-gradient(1.5px 1.5px at 33% 48%,#d6ffe9,transparent 60%),radial-gradient(2px 2px at 92% 76%,#fff,transparent 60%);
+  animation:twinkle 4s ease-in-out infinite}
+.banner::after{background-position:13px 9px; animation-delay:2s}
+@keyframes twinkle{0%,100%{opacity:.25} 50%{opacity:.9}}
+.banner h1{color:#fff; text-shadow:0 0 6px rgba(255,255,255,.35),0 0 18px rgba(255,46,77,.55),0 0 34px rgba(25,230,140,.35)}
+.banner .sub{color:#e7efec}
+.banner .kicker{color:var(--aqua); text-shadow:0 0 8px rgba(25,230,140,.6)}
+.banner.first{position:relative; overflow:hidden}
+.banner.first .banner-inner{position:relative; z-index:2}
+.hero-hellos{position:absolute; z-index:1; right:clamp(10px,4vw,90px); top:50%; transform:translateY(-50%); width:clamp(220px,30vw,520px); pointer-events:none}
+.hero-hellos svg{display:block; width:100%; height:auto}
+.hero-hellos .hb{animation:hbPop 6s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%}
+@keyframes hbPop{0%,100%{transform:scale(1); opacity:.9} 8%{transform:scale(1.08); opacity:1} 16%{transform:scale(1); opacity:.9}}
+@media (max-width:800px){.hero-hellos{opacity:.28; width:280px}}
+@media (prefers-reduced-motion:reduce){.hero-hellos .hb,.banner::before,.banner::after{animation:none}}
+.lessonbar{display:flex; flex-wrap:wrap; gap:8px 10px; padding:12px clamp(20px,3vw,60px); background:#121a18; border-bottom:1px solid #26332f; font-size:clamp(14px,.95vw,19px)}
+.lessonbar a{padding:6px 14px; border-radius:20px; background:transparent; border:1px solid #3c4c47; color:#e7efec; text-decoration:none; font-weight:600; white-space:nowrap}
+.lessonbar a:hover{border-color:var(--neonG); box-shadow:0 0 8px rgba(25,230,140,.5)}
+.lessonbar a.on{background:var(--neonG); border-color:var(--neonG); color:#06241a; box-shadow:0 0 10px rgba(25,230,140,.7)}
+.lessonbar .tlink{color:#e7efec}
+#index{background:#ffffff; border-left-color:var(--neonR); box-shadow:0 1px 0 var(--edge)}
+h2.topic{color:#10241d; border-bottom:3px solid transparent; border-image:linear-gradient(90deg,var(--neonR),var(--neonG)) 1; padding-bottom:8px}
+h2.topic .num{background:var(--action); color:#fff; box-shadow:0 0 0 2px #fff,0 0 12px rgba(255,46,77,.65)}
+#index .num{box-shadow:0 0 8px rgba(255,46,77,.5)}
+ol.points li{background:var(--card-a); border:1px solid var(--edge); box-shadow:0 1px 0 #e3ebe8}
+ol.points li::before{border-color:var(--action); color:var(--deep)}
+.activity{background:var(--sage-bg); border-color:#b7e3cd}
+a.term{text-decoration-color:var(--action)}
+.gerry-bubble{border-color:var(--deep)}
+.home{background:var(--deep); box-shadow:0 0 12px rgba(25,230,140,.45)}
+.ext-play{background:var(--deep); color:#fff}
+.ext-play:hover,.ext-play:focus{background:#0e7550}
+.docs{background:#fbfffd; border-color:#d3eadf; border-left-color:var(--action)}
+.zoombox .zclose{color:var(--deep)}
+.gpop{border-color:var(--deep)}
+.gpop .gp-term{color:var(--deep)}
+.t-demo .t-sub{color:var(--deep)}
+.vid-row{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+strong.motto{color:#d81e3c; font-weight:900; font-size:1.15em; text-shadow:0 0 10px rgba(255,46,77,.35)}
+.card-pic.photo img{max-height:clamp(180px,22vw,300px); width:auto; max-width:100%; margin:0 auto; display:block; object-fit:cover; border-radius:8px}
+
+/* opening video: big, nothing beside it */
+.vid.opener .video{max-width:calc((100vh - 60px) * 16 / 9); box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.vid.opener .vid-title{text-align:center; font-size:1.1em}
+
+/* greeting cards (Good Morning) */
+.greet-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr)); gap:18px; margin:18px 0}
+.greet{background:var(--card-a); border:1px solid var(--edge); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 2px 0 #ece1cf}
+.greet .g-pic{aspect-ratio:4/3; background:#e9dfcf}
+.greet .g-pic img{width:100%; height:100%; object-fit:cover; display:block}
+.greet .g-body{padding:12px 16px 14px}
+.greet .g-lang{margin:0; font-size:.8em; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--action)}
+.greet .g-words{margin:4px 0 2px; font-size:1.25em; font-weight:700; color:var(--deep); line-height:1.25}
+.greet .g-say{margin:0 0 10px; color:var(--soft-ink); font-size:.9em}
+.greet .g-who{font-size:.75em; color:var(--soft-ink); margin-left:6px}
+.greet.playing{outline:4px solid #19c37d}
+.greet-all{margin:6px 0 4px}
+
+/* Auslan sign grid */
+.sign-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr)); gap:18px; margin:18px 0}
+.sign{background:var(--card-a); border:2px solid var(--edge); border-radius:14px; overflow:hidden}
+.sign .s-head{display:flex; align-items:center; gap:12px; padding:10px 14px}
+.sign .s-num{flex:0 0 auto; width:2.2em; height:2.2em; border-radius:50%; background:var(--action); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:1.2em}
+.sign .s-word{font-size:1.35em; font-weight:800; color:var(--deep)}
+.sign video{display:block; width:100%; aspect-ratio:1512/1060; background:#2a3bcf; object-fit:cover}
+.sign:target{border-color:#19c37d; box-shadow:0 0 0 5px rgba(233,162,59,.35)}
+.sign-jump{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
+.sign-jump a{display:inline-flex; width:2.4em; height:2.4em; align-items:center; justify-content:center; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:800; text-decoration:none}
+.sign-jump a:hover{background:var(--action); color:#fff}
+
+/* give out the numbers (teacher tool on the page) */
+.giveout-btn{background:#0b5a3c; color:#fff; border:0; border-radius:24px; padding:10px 20px; font:inherit; font-weight:700; cursor:pointer}
+.giveout{position:fixed; inset:0; z-index:80; background:#0d1312; color:#fff; padding:clamp(14px,2vw,30px); overflow:auto}
+.giveout h3{margin:0 0 6px; color:#7dffc0}
+.giveout .go-help{margin:0 0 14px; color:#d9ece9; font-size:.85em}
+.giveout .go-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px}
+.giveout .go-cell{background:#0b5a3c; border-radius:12px; padding:10px 12px}
+.giveout .go-n{font-size:2.2em; font-weight:800; color:#7dffc0; line-height:1}
+.giveout .go-w{font-weight:700; font-size:1.05em}
+.giveout input{width:100%; margin-top:6px; font:inherit; font-size:.85em; padding:6px 8px; border-radius:6px; border:0}
+.giveout .go-bar{display:flex; gap:10px; margin:0 0 14px; flex-wrap:wrap}
+.giveout .go-bar button{font:inherit; border:0; border-radius:20px; padding:8px 16px; font-weight:700; cursor:pointer}
+.giveout .go-close{background:#7dffc0; color:#0d1312}
+.giveout .go-clear{background:var(--action); color:#fff}
+
+/* language flags grid (South Africa) */
+.flag-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; margin:14px 0}
+.flag-grid figure{margin:0; background:var(--card-a); border:1px solid var(--edge); border-radius:10px; overflow:hidden; text-align:center}
+.flag-grid img{width:100%; aspect-ratio:3/2; object-fit:cover; display:block}
+.flag-grid figcaption{padding:6px; font-weight:700; color:var(--deep)}
+
+/* timeline cards */
+.tl{overflow-x:auto; margin:16px 0}
+.tl table{border-collapse:separate; border-spacing:6px; min-width:760px; width:100%}
+.tl th{background:var(--deep); color:#fff; padding:8px 10px; border-radius:8px; font-size:.9em}
+.tl th.asp{background:var(--action)}
+.tl td{background:var(--card-a); border:1px solid var(--edge); border-radius:8px; padding:8px 10px; vertical-align:top; font-size:.85em}
+.tl td ul{margin:0; padding-left:1.1em}
+section.slide.hide-notes > :is(.tl, .greet-grid, .flag-grid, .sign-grid){filter:blur(7px); pointer-events:none}
+
+
+.greet-all-btn{background:var(--action); color:#fff; border:0; border-radius:24px; padding:10px 20px; font:inherit; font-weight:700; cursor:pointer}
+.greet-all-btn.playing{background:#0b5a3c}
+.giveout-btn{display:none}
+body.teacher .giveout-btn, body.presenting .giveout-btn{display:inline-block}
+.sign-tools{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px}
+
+.greet .g-pic{overflow:hidden; position:relative}
+.greet .g-pic img{position:absolute; inset:0; width:100% !important; height:100% !important; max-width:none !important; object-fit:cover}
+.greet .g-who{display:block; margin:6px 0 0}
+
+@media (max-width:700px){
+  .tl table{min-width:0; border-spacing:0}
+  .tl thead{display:none}
+  .tl tr{display:block; margin:0 0 14px}
+  .tl th.asp{display:block; border-radius:8px 8px 0 0; text-align:left}
+  .tl td{display:block; border-radius:0; margin:0}
+  .tl td::before{content:attr(data-col); display:block; font-weight:800; color:var(--deep); margin:0 0 4px}
+  .tl td:last-child{border-radius:0 0 8px 8px}
+}
+
+/* Discussion prompts and timers (Lessons 6 and 7) */
+.discuss{display:grid; gap:12px; margin:14px 0}
+.dq{background:var(--card,#fff); border:1px solid #d9e6e0; border-left:5px solid #19a865; border-radius:10px; padding:12px 16px}
+.dq-q{margin:0 0 6px; font-weight:600}
+.dq-n{display:inline-block; background:#e8344f; color:#fff; border-radius:999px; padding:1px 10px; font-size:.85em; margin-right:6px}
+.dq-t{margin:6px 0 2px; color:#4a5a55; font-size:.95em}
+.dq ul{margin:0; padding-left:22px}
+.timers{display:flex; flex-wrap:wrap; gap:14px; margin:14px 0}
+.timer{flex:1 1 240px; background:#0d1614; color:#fff; border-radius:14px; padding:14px 18px; text-align:center; box-shadow:0 0 0 2px #19e68c, 0 0 18px rgba(25,230,140,.35)}
+.timer.low{box-shadow:0 0 0 2px #ffb020, 0 0 18px rgba(255,176,32,.45)}
+.timer.done{box-shadow:0 0 0 2px #ff2e4d, 0 0 22px rgba(255,46,77,.6)}
+.tm-label{margin:0; font-weight:700}
+.tm-time{margin:4px 0 8px; font-size:3rem; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:2px}
+.tm-btns{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; align-items:center}
+.tm-btns button{background:#e8344f; color:#fff; border:0; border-radius:8px; padding:8px 16px; font-weight:700; cursor:pointer}
+.tm-btns .tm-reset{background:transparent; border:2px solid #19e68c; color:#19e68c}
+.tm-snd{font-size:.85em; color:#cfe}
+
+.tm-set{display:flex; flex-wrap:wrap; gap:10px 16px; justify-content:center; margin-bottom:4px}
+.tm-set label{font-size:.9em; color:#cfe}
+.tm-set input{background:#16231f; color:#fff; border:1px solid #19e68c; border-radius:6px; padding:5px 8px; font:inherit}
+.tm-set .tm-name{width:min(260px,60vw)} .tm-set .tm-min{width:80px}
+.tm-time{font-size:clamp(3rem,9vw,5.5rem)}
+.tm-presets{display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin-top:10px}
+.tm-presets button{background:transparent; color:#cfe; border:1px solid #3a5a50; border-radius:999px; padding:4px 10px; font-size:.82em; cursor:pointer}
+.tm-presets button:hover{border-color:#19e68c; color:#fff}
+.tm-mini{position:fixed; left:16px; bottom:16px; z-index:60; background:#0d1614; color:#fff; border-radius:999px; padding:8px 16px; text-decoration:none; box-shadow:0 0 0 2px #19e68c, 0 0 16px rgba(25,230,140,.4); font-variant-numeric:tabular-nums}
+.tm-mini.low{box-shadow:0 0 0 2px #ff2e4d, 0 0 16px rgba(255,46,77,.5)}
+.tm-mini[hidden]{display:none}
+.tm-link{margin:8px 0 0}
+.rule-box{border:3px solid #e8344f; background:#fff4f6; border-radius:12px; padding:12px 16px; margin:12px 0; font-size:1.1em}
+.docbox{border:1px solid #cfdcd6; background:#fff; border-radius:12px; padding:14px 18px; margin:12px 0; box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.docbox h3{margin-top:0}
+</style>
+</head>
+<body data-np="13">
+<main>
+<header class="banner first" id="top">
+  <div class="banner-inner">
+    <p class="kicker">CHCCOM005 CHCDIV001 Consumer-Directed Care Cluster · Lesson 6</p>
+    <h1>Practical skills day</h1>
+    <p class="sub">Morning: the Diversity conversation (AT2) and the group discussion about Zia and Allie (AT3). Afternoon: practical observations, the hoist transfer and falls recovery.</p>
+  </div>
+  <div class="hero-hellos" aria-hidden="true"><svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg">
+  <g class="hb" style="animation-delay:0s"><path d="M20 10 h150 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H60 l-16 14 l2 -14 H20 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="95" y="47" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">Good morning</text></g>
+  <g class="hb" style="animation-delay:0.7s"><path d="M210 0 h130 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H250 l-16 14 l2 -14 H210 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#19e68c" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #19e68c)"/><text x="275" y="37" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #19e68c)">Sawubona</text></g>
+  <g class="hb" style="animation-delay:1.4s"><path d="M370 20 h120 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H410 l-16 14 l2 -14 H370 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="430" y="57" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">Bonjour</text></g>
+  <g class="hb" style="animation-delay:2.1s"><path d="M60 105 h150 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H100 l-16 14 l2 -14 H60 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#19e68c" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #19e68c)"/><text x="135" y="142" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #19e68c)">Goeie môre</text></g>
+  <g class="hb" style="animation-delay:2.8s"><path d="M250 95 h120 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H290 l-16 14 l2 -14 H250 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="310" y="132" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="19" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">안녕하세요</text></g>
+  <g class="hb" style="animation-delay:3.5s"><path d="M395 120 h105 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H435 l-16 14 l2 -14 H395 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#19e68c" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #19e68c)"/><text x="447.5" y="157" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #19e68c)">早上好</text></g>
+  <g class="hb" style="animation-delay:4.2s"><path d="M10 200 h140 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H50 l-16 14 l2 -14 H10 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="80" y="237" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">Xin chào</text></g>
+  <g class="hb" style="animation-delay:4.9s"><path d="M185 195 h150 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H225 l-16 14 l2 -14 H185 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#19e68c" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #19e68c)"/><text x="260" y="232" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="21" fill="#fff" style="filter:drop-shadow(0 0 4px #19e68c)">Konnichiwa</text></g>
+  <g class="hb" style="animation-delay:5.4s"><path d="M365 215 h125 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H405 l-16 14 l2 -14 H365 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="427.5" y="252" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">Salaam</text></g>
+</svg></div>
+</header>
+<nav class="lessonbar" aria-label="Lessons in this unit"><a href="0-index.html">&#8962; Lessons</a><a href="1-people-culture-diversity.html">1 People and culture</a><a href="2-how-we-communicate.html">2 Communicating</a><a href="3-working-with-your-team.html">3 Your team</a><a href="4-legal-ethical-and-writing.html">4 Legal and writing</a><a href="5-case-studies-mary-and-jane.html">5 Mary and Jane</a><a href="6-practical-skills-day.html" class="on" aria-current="page">6 Practical day</a><a href="0-index.html#glossary">Glossary</a><button type="button" class="tlink tlink-top" title="For the teacher">Teacher</button></nav>
+<div class="wrap">
+  <nav id="index" aria-label="Index"><h2>In this lesson</h2><ul><li><a href="#s1"><span class="num">1</span> Today's plan and the rules</a></li><li><a href="#s2"><span class="num">2</span> AT2: the Diversity conversation, and the rules</a></li><li><a href="#s3"><span class="num">3</span> AT2: what your teacher watches for</a></li><li><a href="#s4"><span class="num">4</span> AT2: your teacher's six questions</a></li><li><a href="#s5"><span class="num">5</span> AT3: the group discussion, and the rules</a></li><li><a href="#s6"><span class="num">6</span> What your teacher watches for</a></li><li><a href="#s7"><span class="num">7</span> Laws and rules to talk about (AT2 and AT3)</a></li><li><a href="#s8"><span class="num">8</span> Scenario 1: Zia</a></li><li><a href="#s9"><span class="num">9</span> Scenario 3: Allie</a></li><li><a href="#s10"><span class="num">10</span> AT3: the questions your teacher asks</a></li><li><a href="#s11"><span class="num">11</span> AT3: your reflection</a></li><li><a href="#s12"><span class="num">12</span> Afternoon: Observation Task 9, hoist transfer</a></li><li><a href="#s13"><span class="num">13</span> Afternoon: Observation Task 10A, falls recovery with a hoist</a></li></ul></nav>
+  <p class="opening">Today is a <b>practical skills</b> day. In the <b>morning</b> you do two assessments: the <b>Diversity conversation (AT2)</b> and the <b>group discussion (AT3)</b>. In the <b>afternoon</b> your teacher observes your <b>hoist transfer</b> and <b>falls recovery</b> skills. Read the rules first.</p>
+  
+<section class="slide" id="s1" data-ref="NP13 S1">
+  <h2 class="topic"><span class="num">1</span> Today's plan and the rules <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%206%20Practical%20skills%20day%7Cb2878d3d-40d6-4873-a288-8e3ab9b8b3ee%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">Here is the plan for today. Your teacher uses the <b>timer</b> below for every activity.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np13-s1.mp3" aria-label="Listen: Today's plan and the rules"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s1p1"><span class="ref" title="Reference">NP13 S1 P1</span><b>Morning, part 1: Diversity conversation (AT2).</b> You work in <b>pairs</b>. All pairs talk <b>at the same time</b>. Then you complete the <b>Diversity Conversation form</b>, and your teacher asks you some questions.</li><li id="s1p2"><span class="ref" title="Reference">NP13 S1 P2</span><b>Morning, part 2: Group discussion (AT3).</b> You work in a <b>group</b>. Your group talks about <b>Zia</b> and <b>Allie</b>. Everyone writes their own notes, then answers your teacher's questions.</li><li id="s1p3"><span class="ref" title="Reference">NP13 S1 P3</span><b>Afternoon: practical observations.</b> You work in <b>pairs</b> with the hoist: <b>Observation Task 9</b> (hoist transfer) and <b>Observation Task 10A</b> (falls recovery with a hoist).</li><li id="s1p4"><span class="ref" title="Reference">NP13 S1 P4</span><b>Ask questions before you start.</b> If you do not understand a step, ask your teacher. That is part of the checklist.</li><li id="s1p5"><span class="ref" title="Reference">NP13 S1 P5</span>Respect every person. <b>Listen</b> when others speak. Keep what people share <b>private</b>: it stays in this room.</li><li id="s1p6"><span class="ref" title="Reference">NP13 S1 P6</span>Your teacher <b>walks around</b>, watches and listens. Just do your best and <b>help each other</b>.</li></ol>
+  <figure class="infopic"><img src="pics/diverse-colleagues.jpg" alt="Infographic: impacts of working with diverse colleagues, a path to positive growth" tabindex="0"><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="timers"><div class="timer" id="timer" data-min="20"><div class="tm-set"><label>What for? <input type="text" class="tm-name" value="AT2 conversation" placeholder="for example: AT2 conversation"></label><label>Minutes <input type="number" class="tm-min" min="1" max="240" value="20"></label></div><p class="tm-time" aria-live="off">20:00</p><div class="tm-btns"><button type="button" class="tm-go">Start</button><button type="button" class="tm-reset">Reset</button><label class="tm-snd"><input type="checkbox"> Gentle chime at the end</label></div><div class="tm-presets"><button type="button" data-l="AT2 conversation" data-m="20">AT2 conversation (20 min)</button><button type="button" data-l="AT2 Diversity Conversation form" data-m="20">AT2 Diversity Conversation form (20 min)</button><button type="button" data-l="AT2 questions" data-m="15">AT2 questions (15 min)</button><button type="button" data-l="AT3 Zia" data-m="15">AT3 Zia (15 min)</button><button type="button" data-l="AT3 Allie" data-m="15">AT3 Allie (15 min)</button><button type="button" data-l="AT3 questions" data-m="15">AT3 questions (15 min)</button><button type="button" data-l="Break" data-m="10">Break (10 min)</button></div></div></div><a class="tm-mini" href="#timer" hidden><span class="tm-mini-l"></span> <b class="tm-mini-t"></b></a>
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305095/View" target="_blank" rel="noopener">Carrying out workplace instructions</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305096/View" target="_blank" rel="noopener">Collaborating with colleagues</a></div>
+  
+  <aside class="tnotes" data-slide="s1" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s2" data-ref="NP13 S2">
+  <h2 class="topic"><span class="num">2</span> AT2: the Diversity conversation, and the rules <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%206%20Practical%20skills%20day%7Cb2878d3d-40d6-4873-a288-8e3ab9b8b3ee%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">You have a <b>conversation</b> with a person who is <b>not</b> your family or a close friend. In class, your teacher puts you with a classmate you <b>do not know well</b>. You learn about their <b>beliefs, practices, values and views</b>, and they learn about yours.</p>
+  <div class="rule-box"><b>The rules for AT2:</b> work in <b>pairs</b>, and all pairs talk <b>at the same time</b>. The conversation takes <b>15 to 20 minutes</b>. Then you have about <b>20 minutes</b> to complete the <b>Diversity Conversation form</b>. Then your teacher asks you <b>six questions</b> (about 15 to 20 minutes). <b>What your partner shares stays private.</b></div>
+  <div class="docbox"><h3>The Diversity Conversation form</h3><p>Have a conversation with a person who is not part of your immediate family or a close friend.</p><p>The aim: explore different <b>beliefs, practices, values and views</b> of the cultures in your community.</p><p>Conversation time: <b>15 to 20 minutes</b>.</p><p>Key topics may include:</p><ul><li>Religious beliefs</li><li>Beliefs about death and dying</li><li>Family roles and responsibilities</li><li>Disability</li><li>Ageing</li><li>Politics</li></ul><p class="doc-where"><b>Download the form</b> from <b>OneNote</b>: open the <b>Content Library</b>, then the <b>communication unit</b> (CHCCOM005 CHCDIV001). Use it to write your notes, and keep it for your teacher's questions.</p></div>
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np13-s2.mp3" aria-label="Listen: AT2: the Diversity conversation, and the rules"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s2p1"><span class="ref" title="Reference">NP13 S2 P1</span><b>A conversation, not an interrogation.</b> An interrogation is a list of questions, one after the other, like a police interview. A conversation goes <b>both ways</b>: you ask, you listen, you <b>share</b> something about yourself too.</li><li id="s2p2"><span class="ref" title="Reference">NP13 S2 P2</span><b>Interrogation:</b> &quot;What is your religion? Do you pray? How many children do you have? What do you think about politics?&quot;</li><li id="s2p3"><span class="ref" title="Reference">NP13 S2 P3</span><b>Conversation:</b> &quot;In my family, my grandmother lived with us when she got older. What happens in your family when people get older?&quot; Then <b>listen</b>, and ask about what they said: &quot;That is interesting. Can you tell me more about that?&quot;</li><li id="s2p4"><span class="ref" title="Reference">NP13 S2 P4</span>Use <b>open questions</b> (what, how, tell me about). Nod, smile, and keep <b>eye contact</b> if that is comfortable for your partner.</li><li id="s2p5"><span class="ref" title="Reference">NP13 S2 P5</span><b>Summarise</b> what you heard: &quot;So, in your culture, the oldest son looks after the parents. Have I got that right?&quot;</li><li id="s2p6"><span class="ref" title="Reference">NP13 S2 P6</span>Some topics are <b>sensitive</b> (death, politics, religion). Ask <b>gently</b>. Your partner can say &quot;I would rather not talk about that&quot;, and that is OK. Change the topic politely.</li><li id="s2p7"><span class="ref" title="Reference">NP13 S2 P7</span>Look for the things you have <b>in common</b>. You will be surprised.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <p class="tm-link"><a href="#timer">&#9201; Go to the timer</a></p>
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305143/View" target="_blank" rel="noopener">Communicate with people from diverse backgrounds</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305087/View" target="_blank" rel="noopener">Communicating respectfully for understanding</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305093/View" target="_blank" rel="noopener">Open ended questions, affirmations, reflections and summaries</a></div>
+  
+  <aside class="tnotes" data-slide="s2" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s3" data-ref="NP13 S3">
+  <h2 class="topic"><span class="num">3</span> AT2: what your teacher watches for <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%206%20Practical%20skills%20day%7Cb2878d3d-40d6-4873-a288-8e3ab9b8b3ee%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">Your teacher has a checklist for your conversation. These are the skills, in simple words. Click through the cards.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np13-s3.mp3" aria-label="Listen: AT2: what your teacher watches for"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  
+  
+  
+  
+  <div class="stack" aria-label="AT2: what your teacher watches for cards" ><article class="card" id="s3c1" data-ref="NP13 S3 C1">
+      <h3>Verbal communication</h3>
+      
+      <p>Show <b>respect</b> and <b>empathy</b>. Ask <b>open questions</b> to learn about their culture. Speak clearly at a good <b>speed</b>, with a calm <b>tone</b>. Be <b>open-minded and non-judgemental</b>. <b>Face the person</b>. Use <b>simple words</b>: no slang or jargon.</p>
+      
+      
+    </article><article class="card" id="s3c2" data-ref="NP13 S3 C2">
+      <h3>Non-verbal communication</h3>
+      
+      <p>Use <b>open body language</b> and a <b>smile</b> to build <b>rapport</b> and <b>trust</b>.</p>
+      
+      
+    </article><article class="card" id="s3c3" data-ref="NP13 S3 C3">
+      <h3>Respect their views</h3>
+      
+      <p>Respect the person's <b>beliefs, practices, values and views</b>, so they feel <b>culturally safe</b>.</p>
+      
+      
+    </article><article class="card" id="s3c4" data-ref="NP13 S3 C4">
+      <h3>Listen, clarify, confirm</h3>
+      
+      <p><b>Pay attention</b>, ask when you are not sure, <b>say back</b> what you heard, and respond.</p>
+      
+      
+    </article><article class="card" id="s3c5" data-ref="NP13 S3 C5">
+      <h3>Notice and fix problems early</h3>
+      
+      <p>Notice a <b>difficult</b> topic (for example a religious practice), a <b>language barrier</b> (you may need an interpreter), or a <b>misunderstanding</b> (for example about family roles). Fix it with good <b>communication techniques</b>: rephrase, use pictures, use an interpreter.</p>
+      
+      
+    </article><article class="card" id="s3c6" data-ref="NP13 S3 C6">
+      <h3>Legal and ethical</h3>
+      
+      <p>Show you understand <b>privacy and confidentiality</b>, <b>disclosure</b>, <b>discrimination</b>, <b>consent</b>, <b>professional boundaries</b>, <b>duty of care</b>, and <b>conflict of interest</b>.</p>
+      
+      
+    </article><article class="card" id="s3c7" data-ref="NP13 S3 C7">
+      <h3>Clarify first, share on time</h3>
+      
+      <p><b>Ask about the instructions</b> before you start, and share information <b>on time</b>.</p>
+      
+      
+    </article><article class="card" id="s3c8" data-ref="NP13 S3 C8">
+      <h3>Work words</h3>
+      
+      <p>Use <b>industry terminology</b> correctly.</p>
+      
+      
+    </article><article class="card" id="s3c9" data-ref="NP13 S3 C9">
+      <h3>Self-awareness</h3>
+      
+      <p><b>Manage your own feelings</b>, your face, your body language and your words, so you do not upset the other person. Work within <b>your own limits</b>.</p>
+      
+      
+    </article></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305092/View" target="_blank" rel="noopener">Active listening</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305091/View" target="_blank" rel="noopener">Non-verbal language</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305093/View" target="_blank" rel="noopener">Open ended questions, affirmations, reflections and summaries</a></div>
+  
+  <aside class="tnotes" data-slide="s3" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s4" data-ref="NP13 S4">
+  <h2 class="topic"><span class="num">4</span> AT2: your teacher's six questions <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%206%20Practical%20skills%20day%7Cb2878d3d-40d6-4873-a288-8e3ab9b8b3ee%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">After the conversation and the form, your teacher asks you <b>six questions</b>. They are about <b>your</b> conversation, so use <b>your own</b> examples. Here is what to include.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np13-s4.mp3" aria-label="Listen: AT2: your teacher's six questions"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="discuss"><div class="dq"><p class="dq-q"><span class="dq-n">Question 1</span> How did you <b>adapt your communication style</b> so it worked well?</p><p class="dq-t">Think about:</p><ul><li>Your <b>verbal</b> and <b>non-verbal</b> communication.</li><li>How you <b>sat or stood</b> (positioning).</li><li>Your <b>listening</b> skills, and how you <b>paraphrased</b> (said it back in your own words).</li></ul></div><div class="dq"><p class="dq-q"><span class="dq-n">Question 2</span> Did any topics or comments <b>challenge your own values</b>? How did you <b>accept</b> the differences?</p><p class="dq-t">Think about:</p><ul><li>Name the <b>diversity</b> you found: culture, background, religion, gender, age, language, family views, and so on.</li><li>Everyone has the <b>right to their own view</b>, even when it is different from yours.</li><li>Explain how you kept working <b>without judging</b>.</li></ul></div><div class="dq"><p class="dq-q"><span class="dq-n">Question 3</span> What <b>factors</b> changed your communication style and techniques?</p><p class="dq-t">Think about:</p><ul><li>Think about <b>your partner</b>: their age, language, culture, mood, or how much they wanted to share. What did you change because of that?</li></ul></div><div class="dq"><p class="dq-q"><span class="dq-n">Question 4</span> How did <b>your own culture, attitudes and beliefs</b> affect the conversation? What did you <b>have in common</b>?</p><p class="dq-t">Think about:</p><ul><li>Name any <b>biases</b> or views of your own that you noticed.</li><li>List the things you <b>had in common</b>.</li><li>How did it <b>feel</b> to find things in common (or not)?</li></ul></div><div class="dq"><p class="dq-q"><span class="dq-n">Question 5</span> What did you <b>learn</b> from talking with someone you did not know well? How can it improve your <b>self-awareness</b>?</p><p class="dq-t">Think about:</p><ul><li>What you learned about your partner (keep private details <b>confidential</b>).</li><li>What you learned in general: people can share interests you did not expect; you understand differences better; you learn about other cultures; you practise building <b>rapport</b>.</li></ul></div><div class="dq"><p class="dq-q"><span class="dq-n">Question 6</span> At work, <b>who</b> would you refer <b>breaches</b> or <b>unresolved conflict</b> to?</p><p class="dq-t">Think about:</p><ul><li>Your <b>supervisor</b> or <b>manager</b>.</li></ul></div></div>
+  <p class="tm-link"><a href="#timer">&#9201; Go to the timer</a></p>
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305124/View" target="_blank" rel="noopener">Self-reflection, self-awareness and social awareness</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305156/View" target="_blank" rel="noopener">Undertaking self-reflection</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305110/View" target="_blank" rel="noopener">Referring issues and seeking feedback</a></div>
+  
+  <aside class="tnotes" data-slide="s4" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s5" data-ref="NP13 S5">
+  <h2 class="topic"><span class="num">5</span> AT3: the group discussion, and the rules <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%206%20Practical%20skills%20day%7Cb2878d3d-40d6-4873-a288-8e3ab9b8b3ee%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">In the group discussion you talk about <b>two workplace stories</b>: <b>Scenario 1 (Zia)</b> and <b>Scenario 3 (Allie)</b>. Both stories fit <b>aged care and disability</b>.</p>
+  <div class="rule-box"><b>The rules for AT3:</b> your teacher puts you in a <b>group of 3, 4 or 5</b>, depending on the size of the class. All groups talk <b>at the same time</b>. You have about <b>15 minutes for each story</b>. <b>Everyone talks, everyone listens, and every person writes their own notes</b> on the <b>Student Task Sheet</b> (Appendix A). Then your teacher asks you <b>four questions</b>, and you write a short <b>reflection</b>.</div><div class="rule-box"><b>Important group rule: if one person in the group is not satisfactory, the whole group is not satisfactory.</b> So <b>work together</b>. Invite the quiet person to speak: &quot;What do you think?&quot; Help each other to use the legal and ethical words. <b>When one of us passes, we all pass.</b></div>
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np13-s5.mp3" aria-label="Listen: AT3: the group discussion, and the rules"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s5p1"><span class="ref" title="Reference">NP13 S5 P1</span>For <b>each</b> story, your group talks about <b>three questions</b>: What are the <b>differences</b> that could cause a misunderstanding? What <b>problems</b> could they cause at work? What <b>strategies</b> could fix them, and <b>who</b> could help?</li><li id="s5p2"><span class="ref" title="Reference">NP13 S5 P2</span>Write the <b>names of your group members</b> on your task sheet.</li><li id="s5p3"><span class="ref" title="Reference">NP13 S5 P3</span>Write your notes <b>in your own words</b>. Do not copy another person's notes.</li><li id="s5p4"><span class="ref" title="Reference">NP13 S5 P4</span>Disagree <b>politely</b>. Deal with a different view <b>calmly and quickly</b>: &quot;I see it differently. Can we look at what the person needs?&quot;</li><li id="s5p5"><span class="ref" title="Reference">NP13 S5 P5</span>Submit your Student Task Sheet in <b>Connect</b>.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <p class="tm-link"><a href="#timer">&#9201; Go to the timer</a></p>
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305096/View" target="_blank" rel="noopener">Collaborating with colleagues</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305126/View" target="_blank" rel="noopener">Build respectful workplace relationships</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305127/View" target="_blank" rel="noopener">Contribute to the development of workplace relationships</a></div>
+  
+  <aside class="tnotes" data-slide="s5" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s6" data-ref="NP13 S6">
+  <h2 class="topic"><span class="num">6</span> What your teacher watches for <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%206%20Practical%20skills%20day%7Cb2878d3d-40d6-4873-a288-8e3ab9b8b3ee%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">Your teacher has a checklist. These are the skills, in simple words. Click through the cards.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np13-s6.mp3" aria-label="Listen: What your teacher watches for"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  
+  
+  
+  
+  <div class="stack" aria-label="What your teacher watches for cards" ><article class="card" id="s6c1" data-ref="NP13 S6 C1">
+      <h3>Find the problems</h3>
+      
+      <p>Find the cultural differences, misunderstandings and problems in the story. Think about ageism, human rights, staff morale, and staff who do not understand other cultures.</p>
+      
+      
+    </article><article class="card" id="s6c2" data-ref="NP13 S6 C2">
+      <h3>Plan strategies</h3>
+      
+      <p>Suggest ways to lower the risk and to break down communication or cultural barriers: education, good communication, and the organisation's practices.</p>
+      
+      
+    </article><article class="card" id="s6c3" data-ref="NP13 S6 C3">
+      <h3>Choose how to communicate</h3>
+      
+      <p>Say which communication style and techniques fit the story best (for example, assertive, a private meeting, training, written information).</p>
+      
+      
+    </article><article class="card" id="s6c4" data-ref="NP13 S6 C4">
+      <h3>Good verbal and non-verbal communication</h3>
+      
+      <p>Open body language and a smile. A calm tone, clear words, a good speed. Show empathy, and manage your own feelings and beliefs.</p>
+      
+      
+    </article><article class="card" id="s6c5" data-ref="NP13 S6 C5">
+      <h3>Be culturally safe</h3>
+      
+      <p>Respect each person's beliefs, practices, values and views. Be open-minded and do not judge. Build trust.</p>
+      
+      
+    </article><article class="card" id="s6c6" data-ref="NP13 S6 C6">
+      <h3>Use work words correctly</h3>
+      
+      <p>Use industry terms correctly when you speak, and write your notes clearly and neatly.</p>
+      
+      
+    </article><article class="card" id="s6c7" data-ref="NP13 S6 C7">
+      <h3>Ask and clarify</h3>
+      
+      <p>Ask your teacher questions before you start. Ask for feedback. Deal with disagreements in your group calmly and quickly.</p>
+      
+      
+    </article><article class="card" id="s6c8" data-ref="NP13 S6 C8">
+      <h3>Know the law and ethics</h3>
+      
+      <p>Talk about privacy and confidentiality, discrimination, duty of care, work health and safety, the code of conduct, abuse and mandatory reporting, people's rights, and work role boundaries.</p>
+      
+      
+    </article><article class="card" id="s6c9" data-ref="NP13 S6 C9">
+      <h3>Listen and share information</h3>
+      
+      <p>Pay attention. Clarify, confirm and respond. Share information clearly and on time, keep it private, and avoid slang and jargon.</p>
+      
+      
+    </article><article class="card" id="s6c10" data-ref="NP13 S6 C10">
+      <h3>Value diversity</h3>
+      
+      <p>Show respect for diversity, use interpreters when there is a language barrier, and build good working relationships.</p>
+      
+      
+    </article></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305092/View" target="_blank" rel="noopener">Active listening</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305086/View" target="_blank" rel="noopener">Communicating effectively</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305158/View" target="_blank" rel="noopener">Culturally safe workplaces</a></div>
+  
+  <aside class="tnotes" data-slide="s6" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s7" data-ref="NP13 S7">
+  <h2 class="topic"><span class="num">7</span> Laws and rules to talk about (AT2 and AT3) <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%206%20Practical%20skills%20day%7Cb2878d3d-40d6-4873-a288-8e3ab9b8b3ee%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">Your teacher listens for these words in your discussion. You learned them in Lesson 4.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np13-s7.mp3" aria-label="Listen: Laws and rules to talk about (AT2 and AT3)"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s7p1"><span class="ref" title="Reference">NP13 S7 P1</span><b>Aged care</b>: the <b>Aged Care Act 2024</b>, the <b>Statement of Rights</b>, and the <b>Aged Care Quality Standards</b>.</li><li id="s7p2"><span class="ref" title="Reference">NP13 S7 P2</span><b>Disability</b>: the <b>NDIS</b>, the <b>NDIS Practice Standards</b>, and the <b>NDIS Code of Conduct</b>.</li><li id="s7p3"><span class="ref" title="Reference">NP13 S7 P3</span><b>Privacy, confidentiality and disclosure</b>: what you can share, with whom, and why.</li><li id="s7p4"><span class="ref" title="Reference">NP13 S7 P4</span><b>Discrimination</b>: not treating a person worse because of their gender, religion, culture or age, and speaking up when others do it.</li><li id="s7p5"><span class="ref" title="Reference">NP13 S7 P5</span><b>Duty of care</b>: for the person you support, for your team, and for yourself.</li><li id="s7p6"><span class="ref" title="Reference">NP13 S7 P6</span><b>Work health and safety (WHS)</b>: physical and psychological hazards, such as tiredness, stress and conflict.</li><li id="s7p7"><span class="ref" title="Reference">NP13 S7 P7</span><b>Code of conduct</b> and ethical decisions.</li><li id="s7p8"><span class="ref" title="Reference">NP13 S7 P8</span><b>Abuse, neglect and mandatory reporting</b>.</li><li id="s7p9"><span class="ref" title="Reference">NP13 S7 P9</span><b>Rights</b>, including <b>human rights</b> and the right to <b>choice and control</b>.</li><li id="s7p10"><span class="ref" title="Reference">NP13 S7 P10</span><b>Work role boundaries</b> and <b>scope of practice</b>.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305121/View" target="_blank" rel="noopener">Work ethically</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305122/View" target="_blank" rel="noopener">Meet your legal responsibilities</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305106/View" target="_blank" rel="noopener">Your responsibilities</a></div>
+  
+  <aside class="tnotes" data-slide="s7" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s8" data-ref="NP13 S8">
+  <h2 class="topic"><span class="num">8</span> Scenario 1: Zia <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%206%20Practical%20skills%20day%7Cb2878d3d-40d6-4873-a288-8e3ab9b8b3ee%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro"><b>The story (in simple words).</b> <b>Zia</b> is a <b>new support worker</b> at your organisation. She came to Australia from <b>Iran</b> in 1993, and she is <b>Muslim</b>. Her religion asks her to <b>wear a burka</b>, to <b>fast during Ramadan</b>, to <b>pray five times a day</b> at set times, and to follow <b>rules about food</b>.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np13-s8.mp3" aria-label="Listen: Scenario 1: Zia"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="discuss"><div class="dq"><p class="dq-q"><span class="dq-n">Talk 1</span> What <b>differences</b> could cause a <b>misunderstanding or conflict</b> at work?</p><p class="dq-t">Think about:</p><ul><li>How do people with dementia, or with low hearing or eyesight, understand you? What do they need to see?</li><li>How might a person feel during a long shift with <b>no food or drink</b> in the daytime?</li><li>What happens to the work when someone stops to <b>pray</b> at set times?</li><li>Some support work involves <b>food</b>. Which tasks could be hard for Zia?</li></ul></div><div class="dq"><p class="dq-q"><span class="dq-n">Talk 2</span> What <b>problems</b> could happen at work if these differences are <b>not handled well</b>?</p><p class="dq-t">Think about:</p><ul><li>How could the people Zia supports feel?</li><li>How could the other staff feel? Could anyone think it is unfair?</li><li>Could there be a <b>safety</b> risk (WHS) for Zia or the people she supports?</li><li>What could happen to <b>teamwork</b> and staff morale?</li></ul></div><div class="dq"><p class="dq-q"><span class="dq-n">Talk 3</span> What <b>strategies</b> could fix this <b>sensitively</b> and <b>include</b> everyone? <b>Who</b> could help?</p><p class="dq-t">Think about:</p><ul><li>What could the <b>team</b> learn about Zia's culture and religion? What could <b>Zia</b> learn about her role?</li><li>How could the <b>roster</b> and <b>shift times</b> help, for example during Ramadan?</li><li>How could the team <b>share the tasks</b> in a fair way?</li><li>Who should be involved: Zia, the <b>supervisor</b>, the <b>team</b>, the <b>people</b> she supports, HR?</li></ul></div></div>
+  <p class="tm-link"><a href="#timer">&#9201; Go to the timer</a></p>
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305120/View" target="_blank" rel="noopener">Social and cultural perspectives and biases</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305143/View" target="_blank" rel="noopener">Communicate with people from diverse backgrounds</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305148/View" target="_blank" rel="noopener">Resolve differences</a></div>
+  
+  <aside class="tnotes" data-slide="s8" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s9" data-ref="NP13 S9">
+  <h2 class="topic"><span class="num">9</span> Scenario 3: Allie <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%206%20Practical%20skills%20day%7Cb2878d3d-40d6-4873-a288-8e3ab9b8b3ee%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro"><b>The story (in simple words).</b> <b>Allie</b> is from Africa and works at your organisation. He supports <b>four women</b>. Because of his <b>cultural beliefs</b>, Allie <b>looks down on women</b>, and he finds it hard to give them his best care. One woman was a <b>competitive swimmer</b>. She swims several days a week with a <b>local ladies' swimming club</b>, and she loves it. <b>Today Allie is trying to stop her from going.</b></p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np13-s9.mp3" aria-label="Listen: Scenario 3: Allie"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="discuss"><div class="dq"><p class="dq-q"><span class="dq-n">Talk 1</span> What <b>differences</b> could cause a <b>misunderstanding or conflict</b> at work?</p><p class="dq-t">Think about:</p><ul><li>How does Allie see women? How does that fit with the care he gives?</li><li>Whose <b>goals and choices</b> come first in <b>consumer-directed care</b>?</li><li>Is the woman getting <b>all</b> her needs met, including her social and emotional needs?</li></ul></div><div class="dq"><p class="dq-q"><span class="dq-n">Talk 2</span> What <b>problems</b> could happen at work if this is <b>not handled well</b>?</p><p class="dq-t">Think about:</p><ul><li>How could the four women feel about the way Allie treats them?</li><li>What could happen between Allie and the other staff?</li><li>What happens to the swimmer's <b>health, goals and happiness</b> if she stops swimming?</li><li>Which <b>rights</b> and which <b>standards</b> could be broken?</li></ul></div><div class="dq"><p class="dq-q"><span class="dq-n">Talk 3</span> What <b>strategies</b> could fix this <b>sensitively</b> and <b>include</b> everyone? <b>Who</b> could help?</p><p class="dq-t">Think about:</p><ul><li>What does Allie need to <b>learn</b>: the Quality Standards or NDIS Practice Standards, consumer-directed care, his <b>job description</b>?</li><li>Why must Allie read and follow each woman's <b>care plan</b> and goals?</li><li>Could the <b>roster</b> be changed in a fair way?</li><li>Who should be involved: Allie, the <b>supervisor</b>, the women and their families, the team?</li></ul></div></div>
+  <p class="tm-link"><a href="#timer">&#9201; Go to the timer</a></p>
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305120/View" target="_blank" rel="noopener">Social and cultural perspectives and biases</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305148/View" target="_blank" rel="noopener">Resolve differences</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305106/View" target="_blank" rel="noopener">Your responsibilities</a></div>
+  
+  <aside class="tnotes" data-slide="s9" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s10" data-ref="NP13 S10">
+  <h2 class="topic"><span class="num">10</span> AT3: the questions your teacher asks <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%206%20Practical%20skills%20day%7Cb2878d3d-40d6-4873-a288-8e3ab9b8b3ee%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">After the discussion your teacher asks you <b>four questions</b> about <b>each</b> story. Answer about <b>Zia</b> and about <b>Allie</b>.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np13-s10.mp3" aria-label="Listen: AT3: the questions your teacher asks"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="discuss"><div class="dq"><p class="dq-q"><span class="dq-n">Question 1</span> Name <b>two</b> cultural, personal or individual <b>differences</b> that could cause a misunderstanding or conflict at work.</p><p class="dq-t">Think about:</p><ul><li>A <b>difference</b> is something about the person: their beliefs, practices, or views.</li></ul></div><div class="dq"><p class="dq-q"><span class="dq-n">Question 2</span> For <b>each</b> difference, explain what <b>problems</b> could happen at work if it is not handled well.</p><p class="dq-t">Think about:</p><ul><li>A <b>problem</b> is what could go wrong: for the person, the people they support, the team, or safety.</li></ul></div><div class="dq"><p class="dq-q"><span class="dq-n">Question 3</span> For <b>each</b> problem, describe <b>one strategy</b> to lower the risk of a misunderstanding or conflict.</p><p class="dq-t">Think about:</p><ul><li>A <b>strategy</b> is a plan to make it better: learning, rosters, sharing tasks, care plans.</li><li>Give <b>one strategy for each problem</b>. Count them.</li></ul></div><div class="dq"><p class="dq-q"><span class="dq-n">Question 4</span> Name <b>two communication strategies or techniques</b> you could use for the issues in each story.</p><p class="dq-t">Think about:</p><ul><li>A <b>communication</b> strategy is <b>how</b> you share the message: a staff meeting, training, a private talk, written information, a negotiation with the supervisor.</li></ul></div></div>
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s10-1" data-activity='{"type":"match","title":"What does each question ask for?","instructions":"Match each question to what it asks you to give.","pairs":[{"a":"Question 1: differences","b":"Something about the person: a belief, practice or view"},{"a":"Question 2: problems","b":"What could go wrong at work if it is not handled well"},{"a":"Question 3: strategies","b":"A plan to lower the risk: one for each problem"},{"a":"Question 4: communication","b":"How you share the message: a meeting, training, a private talk"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>What does each question ask for?</b></div>
+    <p class="act-instr">Match each question to what it asks you to give.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305148/View" target="_blank" rel="noopener">Resolve differences</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305149/View" target="_blank" rel="noopener">Address misunderstandings</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305155/View" target="_blank" rel="noopener">Origins of misunderstanding</a></div>
+  
+  <aside class="tnotes" data-slide="s10" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s11" data-ref="NP13 S11">
+  <h2 class="topic"><span class="num">11</span> AT3: your reflection <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%206%20Practical%20skills%20day%7Cb2878d3d-40d6-4873-a288-8e3ab9b8b3ee%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">At the end you write a short <b>reflection</b>: what you learned, and what you still need. Answer honestly. There is no wrong answer, but give <b>reasons</b>.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np13-s11.mp3" aria-label="Listen: AT3: your reflection"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s11p1"><span class="ref" title="Reference">NP13 S11 P1</span>Can you <b>recognise</b> cultural or individual differences at work?</li><li id="s11p2"><span class="ref" title="Reference">NP13 S11 P2</span>Can you explain how <b>your own values or culture</b> may affect other people?</li><li id="s11p3"><span class="ref" title="Reference">NP13 S11 P3</span>Do you know how to <b>respond</b> in the right way, using the correct <b>communication and reporting</b> steps?</li><li id="s11p4"><span class="ref" title="Reference">NP13 S11 P4</span><b>If yes</b>: explain <b>how this activity helped</b> your understanding, confidence or skills with older people or people with disability. Name something your group talked about.</li><li id="s11p5"><span class="ref" title="Reference">NP13 S11 P5</span><b>If no</b>: explain what <b>skills, knowledge or support</b> you still need, and <b>how</b> you could get it (for example, training, supervision, practice or feedback).</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305156/View" target="_blank" rel="noopener">Undertaking self-reflection</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305124/View" target="_blank" rel="noopener">Self-reflection, self-awareness and social awareness</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305118/View" target="_blank" rel="noopener">Skill and knowledge development</a></div>
+  
+  <aside class="tnotes" data-slide="s11" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s12" data-ref="NP13 S12">
+  <h2 class="topic"><span class="num">12</span> Afternoon: Observation Task 9, hoist transfer</h2>
+  
+  <p class="intro">This afternoon you work in <b>pairs</b> to move a person with a <b>non-weight-bearing hoist</b> (for example from the bed to a chair). This is part of your <b>CHCCCS031 CHCCCS040</b> practical assessment. Your teacher watches these steps.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np13-s12.mp3" aria-label="Listen: Afternoon: Observation Task 9, hoist transfer"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s12p1"><span class="ref" title="Reference">NP13 S12 P1</span><b>Before you start</b>: check the person's <b>individual plan</b> for special needs, and get the equipment ready.</li><li id="s12p2"><span class="ref" title="Reference">NP13 S12 P2</span><b>Hand hygiene</b>.</li><li id="s12p3"><span class="ref" title="Reference">NP13 S12 P3</span>Tell the person <b>who you are</b>, and ask for <b>consent</b> to help.</li><li id="s12p4"><span class="ref" title="Reference">NP13 S12 P4</span><b>Get the area ready</b>: remove hazards; check the <b>weight and height limits</b> of the hoist and the sling; check the hoist and sling are in good order (no frayed edges, battery charged); make a <b>clear path</b> with enough room; set the <b>bed height</b> and put the <b>bed brakes on</b>.</li><li id="s12p5"><span class="ref" title="Reference">NP13 S12 P5</span>Use <b>good body mechanics</b> the whole time.</li><li id="s12p6"><span class="ref" title="Reference">NP13 S12 P6</span><b>Put the sling on</b>: keep the person's <b>dignity</b>; use smooth, <b>coordinated log rolls</b> to place the sling; lie the person on their back, check the sling fits the body and the <b>leg straps</b> are right (manufacturer's instructions); ask the person to <b>fold their arms</b> across their chest; bring the hoist over and <b>attach the sling</b> safely.</li><li id="s12p7"><span class="ref" title="Reference">NP13 S12 P7</span><b>Do the transfer</b>: lift smoothly and together; keep <b>checking the sling</b> (it does not slip or pinch); move the hoist safely over the new place; lower smoothly; use the <b>hand grips</b> to position the person well.</li><li id="s12p8"><span class="ref" title="Reference">NP13 S12 P8</span><b>Take the sling off</b>: unhook the sling and move the hoist away; use <b>log rolls</b> to remove the sling; help the person get <b>comfortable</b>.</li><li id="s12p9"><span class="ref" title="Reference">NP13 S12 P9</span><b>Talk to the person</b> the whole time: reassure them and tell them what is happening.</li><li id="s12p10"><span class="ref" title="Reference">NP13 S12 P10</span>Put the hoist and sling <b>back in storage</b>.</li><li id="s12p11"><span class="ref" title="Reference">NP13 S12 P11</span><b>Hand hygiene</b>.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <p class="tm-link"><a href="#timer">&#9201; Go to the timer</a></p>
+  
+  
+  
+  
+  
+  
+  
+  <aside class="tnotes" data-slide="s12" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s13" data-ref="NP13 S13">
+  <h2 class="topic"><span class="num">13</span> Afternoon: Observation Task 10A, falls recovery with a hoist</h2>
+  
+  <p class="intro">A person has <b>fallen</b>. You work in <b>pairs</b> to move them from the <b>floor to a chair</b> with a <b>non-weight-bearing hoist</b>. Your teacher watches these steps.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np13-s13.mp3" aria-label="Listen: Afternoon: Observation Task 10A, falls recovery with a hoist"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s13p1"><span class="ref" title="Reference">NP13 S13 P1</span>Give <b>first aid</b> straight away if it is needed.</li><li id="s13p2"><span class="ref" title="Reference">NP13 S13 P2</span>Call the <b>supervisor or RN</b> to check the person for injuries. <b>Follow their directions.</b> Do not move the person until they say it is safe.</li><li id="s13p3"><span class="ref" title="Reference">NP13 S13 P3</span><b>Explain</b> the task to the person and ask for <b>consent</b>.</li><li id="s13p4"><span class="ref" title="Reference">NP13 S13 P4</span><b>Get the area ready</b>: remove hazards; check the <b>weight and height limits</b> of the hoist and sling; check they are in good order (no frayed edges, battery charged); make a <b>clear path</b> with enough room.</li><li id="s13p5"><span class="ref" title="Reference">NP13 S13 P5</span>Use <b>good body mechanics</b> the whole time (bend your knees, keep your back straight).</li><li id="s13p6"><span class="ref" title="Reference">NP13 S13 P6</span><b>Put the sling on</b>: keep the person's <b>dignity</b>; use <b>coordinated log rolls</b> to place the sling; check the sling fits and the <b>leg straps</b> are right; ask the person to <b>fold their arms</b>; bring the hoist over and <b>attach the sling</b> safely.</li><li id="s13p7"><span class="ref" title="Reference">NP13 S13 P7</span><b>Do the transfer</b>: lift smoothly and together; keep <b>checking the sling</b>; move the hoist safely over the <b>chair</b>; lower smoothly; use the <b>hand grips</b> to sit the person well in the chair.</li><li id="s13p8"><span class="ref" title="Reference">NP13 S13 P8</span><b>Take the sling off</b> safely and help the person get <b>comfortable</b>.</li><li id="s13p9"><span class="ref" title="Reference">NP13 S13 P9</span><b>Reassure</b> the person and tell them what is happening the whole time.</li><li id="s13p10"><span class="ref" title="Reference">NP13 S13 P10</span>Put the hoist and sling <b>back in storage</b>.</li><li id="s13p11"><span class="ref" title="Reference">NP13 S13 P11</span><b>Hand hygiene</b>. Then <b>report and document</b> the fall (incident report and progress note: see Lesson 4).</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <p class="tm-link"><a href="#timer">&#9201; Go to the timer</a></p>
+  
+  
+  
+  
+  
+  
+  
+  <aside class="tnotes" data-slide="s13" aria-label="Teacher notes"></aside>
+</section>
+  <footer class="foot">
+    <p>CHCCOM005 CHCDIV001 · Practical skills day · Built from TAFE Queensland learning resources, 29 Oct 2026. How to write a reference from this page: <b>NP13 S5 P1</b> means <b>Nearpod 13, Section 5, Point 1</b>. <b>C</b> means Card, for example NP13 S4 C2 is Nearpod 13, Section 4, Card 2. The section number is the number in the circle next to each heading.</p>
+    <p>Picture credits: Pictures: Adrie Homan, Adobe Stock, and the pictures from Adrie's Sways</p>
+    <p><a href="0-index.html">Lesson index and glossary</a> · <button type="button" class="tlink">Teacher</button></p>
+  </footer>
+</div>
+<a href="#index" class="home" title="Back to the index"><span aria-hidden="true">&#8679;</span> Home</a>
+<div class="tpill" hidden><span class="tp-label">Teacher</span><button type="button" class="tp-hide">Hide notes</button><button type="button" class="tp-out">Sign out</button></div>
+<div class="mascot jack side-left" data-mascot="jack" title="Jargon Jack" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 154 172" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jargon Jack">
+  <style>.jb{fill:#ffe27a;animation:jbDim 7s infinite}.jface{animation:jFace 7s infinite}@keyframes jbDim{0%,62%,70%,78%,100%{opacity:1}66%,74%{opacity:.18}86%,94%{opacity:.35}}@keyframes jFace{0%,62%,100%{filter:none}66%,74%{filter:brightness(.7)}}@media (prefers-reduced-motion:reduce){.jb,.jface{animation:none}}</style>
+  <g font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#ff2e4d"><text x="2" y="12">ASAP</text><text x="112" y="12">ADL?</text><text x="126" y="152">QI</text></g>
+  <line x1="58" y1="132" x2="48" y2="160" stroke="#3a1d22" stroke-width="7" stroke-linecap="round"/>
+  <line x1="94" y1="132" x2="104" y2="159" stroke="#3a1d22" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="44" cy="162" rx="12" ry="5" fill="#1d1012"/><ellipse cx="108" cy="161" rx="12" ry="5" fill="#1d1012"/>
+  <g class="jface">
+    <path d="M24 22 h106 a16 16 0 0 1 16 16 v68 a16 16 0 0 1 -16 16 h-58 l-28 22 l6 -22 h-26 a16 16 0 0 1 -16 -16 v-68 a16 16 0 0 1 16 -16z" fill="#e8344f" stroke="#7a1022" stroke-width="4"/>
+    <path d="M34 34 q20 -10 32 6 q10 12 -4 18 q-16 6 -6 -14 q8 -16 30 -8 q18 6 10 20 q-8 12 14 6 q14 -4 12 -18" fill="none" stroke="#ffb3be" stroke-width="2.5" stroke-linecap="round" opacity=".6"/>
+    <circle cx="56" cy="66" r="12" fill="#fff" stroke="#7a1022" stroke-width="2"/><circle cx="98" cy="66" r="12" fill="#fff" stroke="#7a1022" stroke-width="2"/>
+    <path d="M50 60 l12 10 M62 60 l-12 10" stroke="#1d1012" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="100" cy="68" r="5" fill="#1d1012"/>
+    <path d="M43 48 q12 -8 24 0" stroke="#1d1012" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M86 52 q12 -10 26 -2" stroke="#1d1012" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <ellipse cx="78" cy="98" rx="20" ry="11" fill="#5c0c1a"/><path d="M64 96 h28" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <circle class="jb" style="animation-delay:0s" cx="24" cy="22" r="4.2"/><circle class="jb" style="animation-delay:0.35s" cx="52" cy="22" r="4.2"/><circle class="jb" style="animation-delay:0.7s" cx="80" cy="22" r="4.2"/><circle class="jb" style="animation-delay:1.0499999999999998s" cx="108" cy="22" r="4.2"/><circle class="jb" style="animation-delay:1.4s" cx="134" cy="30" r="4.2"/><circle class="jb" style="animation-delay:0s" cx="144" cy="56" r="4.2"/><circle class="jb" style="animation-delay:0.35s" cx="144" cy="84" r="4.2"/><circle class="jb" style="animation-delay:0.7s" cx="134" cy="112" r="4.2"/><circle class="jb" style="animation-delay:1.0499999999999998s" cx="108" cy="122" r="4.2"/><circle class="jb" style="animation-delay:1.4s" cx="80" cy="122" r="4.2"/><circle class="jb" style="animation-delay:0s" cx="24" cy="122" r="4.2"/><circle class="jb" style="animation-delay:0.35s" cx="10" cy="96" r="4.2"/><circle class="jb" style="animation-delay:0.7s" cx="8" cy="68" r="4.2"/><circle class="jb" style="animation-delay:1.0499999999999998s" cx="12" cy="40" r="4.2"/>
+</svg></div><div class="mascot maya side-right" data-mascot="maya" title="Mosaic Maya" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 150 172" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mosaic Maya, a small earth globe">
+  <defs>
+    <radialGradient id="mOcean" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#5fd4ff"/><stop offset=".6" stop-color="#1477c9"/><stop offset="1" stop-color="#0b3f7a"/></radialGradient>
+    <linearGradient id="mShine" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="mClip"><circle cx="75" cy="76" r="56"/></clipPath>
+  </defs>
+  <style>.mglow{animation:mGlow 3s ease-in-out infinite}.mshine{animation:mShine 4.5s ease-in-out infinite}.mspark{animation:mSpark 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}@keyframes mGlow{0%,100%{opacity:.35}50%{opacity:.85}}@keyframes mShine{0%,30%{transform:translateX(-150px)}70%,100%{transform:translateX(150px)}}@keyframes mSpark{0%,100%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1)}}@media (prefers-reduced-motion:reduce){.mglow,.mshine,.mspark{animation:none}}</style>
+  <circle class="mglow" cx="75" cy="76" r="66" fill="#19e68c" opacity=".5" filter="blur(6px)"/>
+  <line x1="58" y1="128" x2="50" y2="160" stroke="#0b5a3c" stroke-width="7" stroke-linecap="round"/>
+  <line x1="92" y1="128" x2="100" y2="160" stroke="#0b5a3c" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="46" cy="162" rx="12" ry="5" fill="#06301f"/><ellipse cx="104" cy="162" rx="12" ry="5" fill="#06301f"/>
+  <path d="M22 86 q-14 -2 -14 -18" stroke="#0b5a3c" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M128 86 q14 -2 14 -18" stroke="#0b5a3c" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <g clip-path="url(#mClip)">
+    <circle cx="75" cy="76" r="56" fill="url(#mOcean)"/>
+    <g fill="#2fcf6f" stroke="#1a8a47" stroke-width="1.5">
+      <path d="M30 40 q14 -14 30 -6 q8 6 2 14 q-10 4 -8 14 q-6 10 -16 4 q-8 -8 -14 -6 q-4 -10 6 -20z"/>
+      <path d="M52 76 q10 -4 14 6 q4 12 -2 22 q-6 10 -12 2 q-4 -14 0 -30z"/>
+      <path d="M84 32 q16 -6 30 4 q10 10 2 16 q-12 2 -16 10 q-8 6 -14 -2 q-2 -8 -10 -10 q-4 -12 8 -18z"/>
+      <path d="M92 74 q14 -6 22 4 q6 10 -4 18 q-12 6 -18 -2 q-4 -10 0 -20z"/>
+      <path d="M104 104 q12 -2 14 8 q-4 8 -14 4z"/>
+    </g>
+    <rect class="mshine" x="20" y="10" width="40" height="140" fill="url(#mShine)" transform="rotate(20 75 76)"/>
+  </g>
+  <circle cx="75" cy="76" r="56" fill="none" stroke="#0b5a3c" stroke-width="3.5"/>
+  <ellipse cx="54" cy="46" rx="14" ry="8" fill="#fff" opacity=".45" transform="rotate(-25 54 46)"/>
+  <g fill="#ffffff" stroke="#0b3f7a" stroke-width="1.2">
+    <ellipse cx="63" cy="78" rx="8" ry="9"/><ellipse cx="87" cy="78" rx="8" ry="9"/>
+  </g>
+  <circle cx="65" cy="80" r="4.4" fill="#062b1d"/><circle cx="89" cy="80" r="4.4" fill="#062b1d"/>
+  <circle cx="66.4" cy="78.6" r="1.5" fill="#fff"/><circle cx="90.4" cy="78.6" r="1.5" fill="#fff"/>
+  <circle cx="54" cy="92" r="4.5" fill="#ff8aa0" opacity=".65"/><circle cx="96" cy="92" r="4.5" fill="#ff8aa0" opacity=".65"/>
+  <path d="M64 96 q11 9 22 0" stroke="#062b1d" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  <path class="mspark" d="M128 18 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3z" fill="#fff59a"/>
+  <path class="mspark" style="animation-delay:1.2s" d="M18 22 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2z" fill="#b8ffd9"/>
+</svg></div>
+</main>
+<div class="big" role="dialog" aria-modal="true" aria-label="Card in full screen">
+  <div class="bar"><span class="big-where"></span><button type="button" class="big-close">Close</button></div>
+  <div class="body"></div>
+  <div class="foot"><button type="button" class="big-back">Back</button><button type="button" class="next big-next">Next card</button></div>
+</div>
+<script>var GLOSS = {}; var TEACHER = {"salt":"Dk2BS4qj2bVD2G99Dlj4Hg==","iv":"qv4M1g5CvF4pTwKw","ct":"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"}; var ANNOUNCE = {"first":{"mascot":"jack","voice":"William","pitch":1.1,"none":"Ha! Nobody got every activity right first time. Told you, just guess!","some":"What? {who} got every activity right first time. Maybe listening does work."},"second":{"mascot":"maya","voice":"Natasha","pitch":1.05,"none":"Keep going, everyone. Slow down, read carefully, and you will beat Jack next time.","some":"Well done! {who} got all {n} right first time. Listening and respect win, Jack."}}; var MASCOT_LINES = {"jack":{"lines":["Conversation? I will just fire 20 questions at them. Done in 5 minutes.","Group discussion? I will do all the talking. The others can listen.","She prays at work? That is not fair on the rest of us. End of story.","If my group does not pass, that is their problem, not mine.","Hoist? I will skip the checks. It worked yesterday."],"prefix":"jack-l6-"},"maya":{"lines":["Hi, I'm Maya. A conversation goes both ways. I share too.","I listen, then I say back what I heard: so you mean...?","Different is not wrong. Let us find a fair way for everyone.","We help each other. When one of us passes, we all pass.","Before every transfer: check the plan, the hoist, the sling, and ask for consent."],"prefix":"maya-l6-"}};</script>
+<script>(function(){
+  var ANGLES = [-8, -5.5, -9, -4.5, -7, -6, -8.5, -4, -6.5];
+  var big = document.querySelector('.big'), bigBody = big.querySelector('.body'),
+      bigWhere = big.querySelector('.big-where'), active = null;
+
+  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ----------
+     Once the teacher has typed the code on a computer, the purple teacher pill stays at the top right of every
+     lesson page on that computer (Show or Hide notes, Presenting, Sign out), so nothing needs the footer again.
+     Students never have the code, so they never see the pill. */
+  (function(){
+    var pill = document.querySelector('.tpill'), tlinks = document.querySelectorAll('.tlink'), saved = null, on = '0';
+    var hideBtn = pill.querySelector('.tp-hide');
+    var b64 = function(s){ var b = atob(s), a = new Uint8Array(b.length); for(var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; };
+    function decrypt(code){
+      if(!window.crypto || !crypto.subtle) return Promise.reject(new Error('nosubtle'));
+      var enc = new TextEncoder();
+      return crypto.subtle.importKey('raw', enc.encode(code), 'PBKDF2', false, ['deriveKey']).then(function(km){
+        return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(TEACHER.salt), iterations: 150000, hash: 'SHA-256' }, km, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      }).then(function(key){
+        return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(TEACHER.iv) }, key, b64(TEACHER.ct));
+      }).then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
+    }
+    function pillOn(v){ pill.hidden = !v; document.body.classList.toggle('tv-pill', !!v); }
+    function show(notes){
+      document.querySelectorAll('.tnotes').forEach(function(a){ a.innerHTML = notes[a.getAttribute('data-slide')] || ''; });
+      document.body.classList.add('teacher'); pillOn(true); hideBtn.textContent = 'Hide notes';
+      try{ localStorage.setItem('tv_on', '1'); }catch(e){}
+    }
+    function hide(){
+      document.body.classList.remove('teacher'); hideBtn.textContent = 'Show notes';
+      pillOn(!!saved);   /* the pill stays while this computer knows the code */
+      try{ localStorage.setItem('tv_on', '0'); }catch(e){}
+    }
+    function unlock(code, quiet){
+      return decrypt(code).then(function(notes){ saved = code; try{ localStorage.setItem('tv_code', code); }catch(e){} show(notes); }, function(err){
+        if(quiet) return;
+        alert(err.message === 'nosubtle' ? 'This browser cannot unlock the teacher view. Use Chrome or Edge.' : 'That code did not work.');
+      });
+    }
+    function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
+    try{ saved = localStorage.getItem('tv_code'); on = localStorage.getItem('tv_on') || '0'; }catch(e){}
+    var q = new URLSearchParams(location.search);
+    if(q.get('t') === 'off'){ saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} hide(); }
+    else if(q.has('t')) unlock(q.get('t'));
+    else if(saved && on === '1') unlock(saved, true);
+    else if(saved) hide();
+    tlinks.forEach(function(tl){ tl.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')){ hide(); return; }
+      if(saved){ unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); }); } else ask();
+    }); });
+    hideBtn.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')) hide();
+      else if(saved) unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); });
+    });
+    pill.querySelector('.tp-out').addEventListener('click', function(){ saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} hide(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open') && !document.querySelector('.gpop')) hide(); });
+  })();
+
+    /* ---------- audio ---------- */
+  var player = new Audio(), current = null, queue = null;
+  function stopAudio(keepQueue){
+    player.pause(); if(current){ current.classList.remove('playing'); current = null; }
+    if(!keepQueue && queue){ var q = queue; queue = null; if(q._stopped) q._stopped(); }
+  }
+  function playBtn(btn, onEnd, keepQueue){
+    if(current === btn){ stopAudio(); return; }
+    stopAudio(keepQueue);
+    current = btn; btn.classList.add('playing');
+    player.src = btn.getAttribute('data-audio');
+    player.onended = function(){ btn.classList.remove('playing'); current = null; if(onEnd) onEnd(); };
+    player.onerror = function(){ btn.classList.remove('playing'); current = null; btn.title = 'Sound file not found yet'; if(onEnd) onEnd(); };
+    player.play().catch(function(){});
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.say'); if(!b) return;
+    e.preventDefault(); e.stopPropagation();
+    var inBig = b.closest('.big');
+    if(inBig && active){ var realBtn = active.card().querySelector('.say'); if(realBtn) b = realBtn; }
+    playBtn(b);
+  });
+
+  /* ---------- Good Morning: Play all greetings, one after the other (CHCCOM005) ---------- */
+  document.querySelectorAll('.greet-wrap').forEach(function(wrap){
+    var btn = wrap.querySelector('.greet-all-btn'), t = btn.querySelector('.pa-t');
+    var cards = [].slice.call(wrap.querySelectorAll('.greet'));
+    function clear(){ cards.forEach(function(c){ c.classList.remove('playing'); }); }
+    wrap._stopped = function(){ btn.classList.remove('playing'); t.textContent = 'Play all greetings'; clear(); };
+    btn.addEventListener('click', function(ev){
+      ev.preventDefault(); ev.stopPropagation();
+      if(queue === wrap){ stopAudio(); return; }
+      stopAudio(); queue = wrap; btn.classList.add('playing'); t.textContent = 'Stop';
+      var list = cards.filter(function(c){ return c.querySelector('.say'); }), k = 0;
+      function step(){
+        if(queue !== wrap) return;
+        if(k >= list.length){ queue = null; wrap._stopped(); return; }
+        var c = list[k++]; clear(); c.classList.add('playing');
+        try{ c.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }catch(e){}
+        playBtn(c.querySelector('.say'), function(){ setTimeout(step, 800); }, true);
+      }
+      step();
+    });
+  });
+
+  /* ---------- mascots follow the scroll ---------- */
+  document.querySelectorAll('.mascot').forEach(function(g, gi){
+    var name = g.getAttribute('data-mascot'), bubble = g.querySelector('.gerry-bubble');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var lastSlide = null, timer = null, ml = MASCOT_LINES[name] || {}, lines = ml.lines || [], prefix = ml.prefix || (name + '-');
+    function place(){
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? window.scrollY / max : 0;
+      var top = 90 + (gi ? 1 - p : p) * (window.innerHeight - 300);
+      g.style.top = top + 'px';
+      var slides = document.querySelectorAll('section.slide'), cur = null;
+      for(var i = 0; i < slides.length; i++){ if(slides[i].getBoundingClientRect().top < window.innerHeight * 0.5) cur = slides[i]; }
+      if(cur !== lastSlide && lastSlide !== null && !reduce){ g.classList.remove('hop'); void g.offsetWidth; g.classList.add('hop'); }
+      lastSlide = cur;
+    }
+    window.addEventListener('scroll', function(){ if(!timer) timer = requestAnimationFrame(function(){ timer = null; place(); }); }, { passive: true });
+    window.addEventListener('resize', place);
+    place();
+    var n = 0;
+    g.addEventListener('click', function(){
+      if(!bubble.hidden){ bubble.hidden = true; return; }
+      var k = n++ % lines.length;
+      bubble.textContent = lines[k]; bubble.hidden = false;
+      stopAudio(); player.src = 'audio/' + prefix + (k + 1) + '.mp3'; player.onended = null; player.onerror = null; player.play().catch(function(){});
+      clearTimeout(bubble._t); bubble._t = setTimeout(function(){ bubble.hidden = true; }, 7000);
+    });
+  });
+
+  /* ---------- finale: big mascots walk in ---------- */
+  document.querySelectorAll('[data-finale]').forEach(function(f){
+    if(!('IntersectionObserver' in window)){ f.classList.add('in'); return; }
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ f.classList.add('in'); io.disconnect(); } }); }, { threshold: 0.35 });
+    io.observe(f);
+  });
+
+  /* ---------- videos ---------- */
+  document.querySelectorAll('.video').forEach(function(v){
+    var id = (v.getAttribute('data-youtube')||'').trim(), t = v.getAttribute('data-title')||'Video';
+    if(!id) return;
+    v.innerHTML = '<iframe title="'+t.replace(/"/g,'&quot;')+'" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>';
+    var w = document.createElement('p'); w.className = 'watch';
+    w.innerHTML = 'Video not playing? <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v='+encodeURIComponent(id)+'">Watch "'+t.replace(/</g,'&lt;')+'" on YouTube</a>';
+    v.parentNode.insertBefore(w, v.nextSibling);
+  });
+
+  /* ---------- click a part of a diagram to make it stand out ---------- */
+  document.querySelectorAll('.spot').forEach(function(sv){
+    var parts = sv.querySelectorAll('[data-spot]');
+    parts.forEach(function(g){
+      g.style.cursor = 'pointer';
+      g.addEventListener('click', function(e){
+        e.stopPropagation();
+        var on = g.classList.contains('lit');
+        parts.forEach(function(x){ x.classList.remove('lit'); });
+        sv.classList.toggle('spotting', !on);
+        if(!on) g.classList.add('lit');
+      });
+    });
+    sv.addEventListener('click', function(){ parts.forEach(function(x){ x.classList.remove('lit'); }); sv.classList.remove('spotting'); });
+  });
+
+  /* ---------- card stacks ---------- */
+  document.querySelectorAll('.stack').forEach(function(stack){
+    var cards = [].slice.call(stack.querySelectorAll('.card')), n = cards.length, i = 0, busy = false;
+    var deck = document.createElement('div'); deck.className = 'deck'; deck.tabIndex = 0;
+    deck.setAttribute('role','group');
+    deck.setAttribute('aria-label', (stack.getAttribute('aria-label')||'Cards') + '. Press the right arrow for the next card.');
+    var pile = document.createElement('div'); pile.className = 'pile'; pile.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
+    deck.appendChild(pile);
+    cards.forEach(function(c, k){
+      c.style.setProperty('--r', ANGLES[k % ANGLES.length] + 'deg');
+      if(k % 2) c.classList.add('shade');
+      if(c.textContent.replace(/\s+/g,' ').length > 520) c.classList.add('long');
+      var tag = document.createElement('span'); tag.className = 'count'; tag.textContent = 'Card ' + (k+1) + ' of ' + n;
+      c.insertBefore(tag, c.firstChild);
+      c.setAttribute('aria-hidden', 'true');
+      deck.appendChild(c);
+    });
+    if(stack.getAttribute('data-playall')){
+      /* Play all: card 1 to the last card, one after the other. The deck turns to each card as it plays.
+         Before 28 Oct 2026 only card 1 played: starting each card's sound also cleared the queue. */
+      var pa = document.createElement('div'); pa.className = 'playall';
+      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> <span class="pa-t">Play all cards</span></button>';
+      stack.appendChild(pa);
+      var paBtn = pa.querySelector('button'), paT = pa.querySelector('.pa-t');
+      stack._stopped = function(){ paBtn.classList.remove('playing'); paT.textContent = 'Play all cards'; };
+      paBtn.addEventListener('click', function(ev){
+        ev.stopPropagation();
+        if(queue === stack){ stopAudio(); return; }
+        stopAudio(); queue = stack; paBtn.classList.add('playing'); paT.textContent = 'Stop';
+        if(i !== 0){ i = 0; show(); }
+        function finish(){ if(queue === stack){ queue = null; stack._stopped(); } }
+        function step(){
+          if(queue !== stack) return;
+          var b = cards[i].querySelector('.say');
+          var after = function(){ setTimeout(function(){
+            if(queue !== stack) return;
+            if(i === n - 1){ finish(); return; }
+            busy = false; go(1); setTimeout(step, 450);
+          }, b ? 900 : 0); };
+          if(!b){ after(); return; }
+          playBtn(b, after, true);
+        }
+        step();
+      }, true);
+    }
+    stack.appendChild(deck);
+
+    var controls = document.createElement('div'); controls.className = 'controls';
+    controls.innerHTML = '<button type="button" class="back">Back</button><span class="where" aria-live="polite"></span><button type="button" class="next">Next card</button><button type="button" class="full">Full screen</button>';
+    stack.appendChild(controls);
+    var hint = document.createElement('p'); hint.className = 'hint'; hint.textContent = 'Click the card to see the next card.';
+    stack.appendChild(hint);
+    var where = controls.querySelector('.where');
+
+    var heights = [];
+    function size(){
+      cards.forEach(function(c, k){ c.style.height = 'auto'; heights[k] = c.offsetHeight; c.style.height = ''; });
+      deck.style.height = heights[i] + 'px';
+    }
+    function show(){
+      cards.forEach(function(c, k){ c.classList.toggle('top', k === i); c.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      where.textContent = 'Card ' + (i+1) + ' of ' + n;
+      if(heights.length) deck.style.height = heights[i] + 'px';
+      if(active === api && big.classList.contains('open')) fill();
+    }
+    function go(step){
+      if(busy) return; busy = true;
+      var old = cards[i];
+      i = (i + step + n) % n;
+      var cls = step > 0 ? 'leave' : 'leave-back';
+      show();
+      old.classList.add(cls);
+      cards[i].classList.add('arrive');
+      setTimeout(function(){ old.classList.remove(cls); cards[i].classList.remove('arrive'); busy = false; }, 440);
+    }
+    function next(){ go(1); }
+    function fill(){
+      bigBody.innerHTML = cards[i].innerHTML;
+      bigWhere.textContent = 'Card ' + (i+1) + ' of ' + n;
+      bigBody.scrollTop = 0;
+    }
+    var api = { go: go, fill: fill, card: function(){ return cards[i]; } };
+
+    deck.addEventListener('click', function(e){ if(e.target.closest('a') || e.target.closest('.say')) return; go(1); });
+    deck.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); go(1); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
+    });
+    controls.querySelector('.next').addEventListener('click', function(){ go(1); });
+    controls.querySelector('.back').addEventListener('click', function(){ go(-1); });
+    controls.querySelector('.full').addEventListener('click', function(){
+      active = api; fill(); big.classList.add('open'); big.querySelector('.big-next').focus();
+    });
+
+    size(); show();
+    window.addEventListener('resize', size);
+    window.addEventListener('load', size);
+    stack.querySelectorAll('img').forEach(function(img){ img.addEventListener('load', size); });
+  });
+
+  function closeBig(){ big.classList.remove('open'); active = null; }
+  big.querySelector('.big-close').addEventListener('click', closeBig);
+  big.querySelector('.big-next').addEventListener('click', function(){ if(active) active.go(1); });
+  big.querySelector('.big-back').addEventListener('click', function(){ if(active) active.go(-1); });
+  document.addEventListener('keydown', function(e){
+    if(!big.classList.contains('open')) return;
+    if(e.key === 'Escape') closeBig();
+    if(e.key === 'ArrowRight' && active) active.go(1);
+    if(e.key === 'ArrowLeft' && active) active.go(-1);
+  });
+
+  /* ---------- activities ---------- */
+  function shuffle(a){ a = a.slice(); for(var i = a.length-1; i > 0; i--){ var j = Math.floor(Math.random()*(i+1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
+  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
+
+  var builders = {
+    /* chips into targets: used by match (one chip per target) and sort (many chips per bucket) */
+    match: function(root, a){ return buildChips(root, a.pairs.map(function(p){ return { text: p.a, target: p.b }; }), shuffle(a.pairs.map(function(p){ return p.b; })), a.labels || null, 1); },
+    sort: function(root, a){ return buildChips(root, a.items.map(function(it){ return { text: it.text, target: it.bucket }; }), a.buckets, null, 99); },
+    order: function(root, a){
+      var list = el('ol', 'order'); root.appendChild(list);
+      var start = a.start == null ? 1 : a.start;
+      function render(items){
+        list.innerHTML = '';
+        items.forEach(function(t, k){
+          var li = el('li'); li.draggable = true; li.setAttribute('data-text', t);
+          li.innerHTML = '<span class="o-n">' + (start + k) + '</span><span class="o-t">' + esc(t) + '</span><span class="o-btn"><button type="button" aria-label="Move up">&#9650;</button><button type="button" aria-label="Move down">&#9660;</button></span>';
+          list.appendChild(li);
+        });
+      }
+      function items(){ return [].map.call(list.children, function(li){ return li.getAttribute('data-text'); }); }
+      function renumber(){ [].forEach.call(list.children, function(li, k){ li.querySelector('.o-n').textContent = start + k; li.classList.remove('right','wrong'); }); }
+      render(shuffle(a.items));
+      list.addEventListener('click', function(e){
+        var b = e.target.closest('button'); if(!b) return;
+        var li = b.closest('li'); var up = b.getAttribute('aria-label') === 'Move up';
+        if(up && li.previousElementSibling) list.insertBefore(li, li.previousElementSibling);
+        if(!up && li.nextElementSibling) list.insertBefore(li.nextElementSibling, li);
+        renumber();
+      });
+      var drag = null;
+      list.addEventListener('dragstart', function(e){ drag = e.target.closest('li'); if(drag) drag.classList.add('dragging'); });
+      list.addEventListener('dragend', function(){ if(drag) drag.classList.remove('dragging'); drag = null; renumber(); });
+      list.addEventListener('dragover', function(e){ e.preventDefault(); var li = e.target.closest('li'); if(!li || li === drag) return; var r = li.getBoundingClientRect(); if(e.clientY < r.top + r.height/2) list.insertBefore(drag, li); else list.insertBefore(drag, li.nextSibling); });
+      return {
+        check: function(){ var ok = 0; [].forEach.call(list.children, function(li, k){ var good = li.getAttribute('data-text') === a.items[k]; li.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, a.items.length]; },
+        reset: function(){ render(shuffle(a.items)); }
+      };
+    },
+    quiz: function(root, a){
+      var qs = [];
+      a.questions.forEach(function(q, qi){
+        var box = el('div', 'quiz-q'); box.innerHTML = '<p><b>' + (qi+1) + '. ' + esc(q.q) + '</b></p>';
+        var sel = -1;
+        q.options.forEach(function(o, oi){
+          var b = el('button', 'opt', esc(o)); b.type = 'button';
+          b.addEventListener('click', function(){ if(box.classList.contains('done')) return; sel = oi; [].forEach.call(box.querySelectorAll('.opt'), function(x){ x.classList.remove('selected'); }); b.classList.add('selected'); });
+          box.appendChild(b);
+        });
+        if(q.why) box.appendChild(el('p', 'why', esc(q.why)));
+        root.appendChild(box);
+        qs.push({ box: box, get: function(){ return sel; }, set: function(v){ sel = v; }, q: q });
+      });
+      return {
+        check: function(){ var ok = 0; qs.forEach(function(x){ var opts = x.box.querySelectorAll('.opt'); x.box.classList.add('done'); opts.forEach(function(o, oi){ o.classList.remove('selected'); if(oi === x.q.answer) o.classList.add('right'); else if(oi === x.get()) o.classList.add('wrong'); }); if(x.get() === x.q.answer) ok++; }); return [ok, qs.length]; },
+        reset: function(){ qs.forEach(function(x){ x.set(-1); x.box.classList.remove('done'); x.box.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected','right','wrong'); }); }); }
+      };
+    },
+    table: function(root, a){
+      var t = el('table', 'fill-table'); root.appendChild(t);
+      t.innerHTML = '<thead><tr>' + a.columns.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead>';
+      var tb = el('tbody'); t.appendChild(tb);
+      a.rows.forEach(function(r){
+        var tr = el('tr'); tr.innerHTML = '<td><b>' + esc(r.label) + '</b></td>';
+        r.cells.forEach(function(c){
+          var td = el('td'); var s = el('select'); s.innerHTML = '<option value="">Choose...</option>' + shuffle(c.options).map(function(o){ return '<option>' + esc(o) + '</option>'; }).join('');
+          s.setAttribute('data-answer', c.answer); td.appendChild(s); tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      return {
+        check: function(){ var ok = 0, n = 0; t.querySelectorAll('select').forEach(function(s){ n++; var td = s.parentNode; td.classList.remove('right','wrong'); var good = s.value === s.getAttribute('data-answer'); td.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, n]; },
+        reset: function(){ t.querySelectorAll('select').forEach(function(s){ s.value = ''; s.parentNode.classList.remove('right','wrong'); }); }
+      };
+    }
+  };
+
+  function buildChips(root, items, targetNames, labels, cap){
+    var bank = el('div', 'bank'); root.appendChild(bank);
+    var tg = el('div', 'targets'); root.appendChild(tg);
+    var selected = null, targets = {};
+    targetNames.forEach(function(name){
+      var t = el('div', 'target'); t.setAttribute('data-name', name);
+      t.innerHTML = '<div class="t-label">' + esc(labels ? (labels[name] || name) : name) + '</div><div class="t-drop"></div>';
+      tg.appendChild(t); targets[name] = t;
+      t.addEventListener('click', function(){ if(selected) place(selected, t); });
+      t.addEventListener('dragover', function(e){ e.preventDefault(); t.classList.add('over'); });
+      t.addEventListener('dragleave', function(){ t.classList.remove('over'); });
+      t.addEventListener('drop', function(e){ e.preventDefault(); t.classList.remove('over'); if(selected) place(selected, t); });
+    });
+    function place(chip, t){
+      var drop = t.querySelector('.t-drop');
+      if(cap === 1 && drop.children.length){ bank.appendChild(drop.firstElementChild); }
+      drop.appendChild(chip); chip.classList.remove('selected','right','wrong'); selected = null;
+    }
+    function mk(it){
+      var c = el('div', 'chip', esc(it.text)); c.setAttribute('data-target', it.target); c.draggable = true; c.tabIndex = 0;
+      c.addEventListener('click', function(e){ e.stopPropagation(); if(c.parentNode !== bank){ bank.appendChild(c); c.classList.remove('right','wrong'); selected = null; return; } if(selected) selected.classList.remove('selected'); selected = c; c.classList.add('selected'); });
+      c.addEventListener('dragstart', function(){ selected = c; c.classList.add('selected'); });
+      c.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); c.click(); } });
+      return c;
+    }
+    function fillBank(){ bank.innerHTML = ''; shuffle(items).forEach(function(it){ bank.appendChild(mk(it)); }); }
+    fillBank();
+    return {
+      check: function(){ var ok = 0; items.length; root.querySelectorAll('.chip').forEach(function(c){ var t = c.closest('.target'); c.classList.remove('right','wrong'); if(!t){ c.classList.add('wrong'); return; } var good = t.getAttribute('data-name') === c.getAttribute('data-target'); c.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, items.length]; },
+      reset: function(){ root.querySelectorAll('.t-drop').forEach(function(d){ d.innerHTML = ''; }); fillBank(); selected = null; }
+    };
+  }
+
+  document.querySelectorAll('.activity').forEach(function(act){
+    var a; try{ a = JSON.parse(act.getAttribute('data-activity')); }catch(e){ return; }
+    var body = act.querySelector('.act-body'), res = act.querySelector('.act-result');
+    var b = builders[a.type]; if(!b) return;
+    var api = b(body, a);
+    var slide = act.closest('section.slide'), peek = act.querySelector('.act-peek'), tools = act.querySelector('.act-tools');
+    function blur(on){ if(slide) slide.classList.toggle('hide-notes', on); peek.textContent = on ? 'Show the notes' : 'Hide the notes to carry on'; act.classList.toggle('peeking', !on && act.classList.contains('started')); }
+    act.querySelector('.act-go').addEventListener('click', function(){
+      act.classList.add('started'); act.querySelector('.act-start').hidden = true; body.hidden = false; tools.hidden = false; blur(true);
+      act.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    peek.addEventListener('click', function(){ blur(!slide.classList.contains('hide-notes')); });
+    act.querySelector('.act-check').addEventListener('click', function(){
+      var r = api.check(); res.className = 'act-result ' + (r[0] === r[1] ? 'good' : 'bad');
+      res.textContent = r[0] === r[1] ? 'All correct. Well done!' : r[0] + ' of ' + r[1] + ' correct. Try the red ones again.';
+      if(r[0] === r[1]){ act.classList.remove('started'); blur(false); }
+    });
+    act.querySelector('.act-reset').addEventListener('click', function(){ api.reset(); res.textContent = ''; res.className = 'act-result'; });
+  });
+})();
+
+/* ---------- infographics: click for full screen (CHCAGE013) ---------- */
+(function(){
+  function open(node){
+    var box = document.createElement('div'); box.className = 'zoombox'; box.setAttribute('role','dialog'); box.setAttribute('aria-label','Picture full screen');
+    box.appendChild(node.cloneNode(true));
+    var c = document.createElement('button'); c.className = 'zclose'; c.type = 'button'; c.textContent = 'Close'; box.appendChild(c);
+    function shut(){ box.remove(); document.removeEventListener('keydown', key); }
+    function key(e){ if(e.key === 'Escape') shut(); }
+    box.addEventListener('click', shut); document.addEventListener('keydown', key);
+    document.body.appendChild(box);
+  }
+  document.querySelectorAll('figure.infopic img, figure.infopic .info-svg').forEach(function(el){
+    el.addEventListener('click', function(){ open(el); });
+    el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(el); } });
+  });
+})();
+
+/* ---------- glossary words: the meaning opens next to the word, so students keep their place ---------- */
+(function(){
+  if(typeof GLOSS === 'undefined') return;
+  var pop = null, from = null;
+  function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+  function close(){ if(pop){ pop.remove(); pop = null; if(from) from.setAttribute('aria-expanded', 'false'); } }
+  function open(a){
+    var g = GLOSS[a.getAttribute('data-term')]; if(!g) return false;
+    close(); from = a; a.setAttribute('aria-expanded', 'true');
+    pop = document.createElement('div'); pop.className = 'gpop'; pop.setAttribute('role', 'dialog'); pop.setAttribute('aria-label', 'Meaning of ' + g[0]);
+    pop.innerHTML = '<button type="button" class="gp-x" aria-label="Close">&times;</button><p class="gp-term">' + esc(g[0]) + '</p><p class="gp-def">' + esc(g[1]) + '</p>' +
+      '<p class="gp-more"><a href="' + a.getAttribute('href') + '" target="_blank" rel="noopener">Open the glossary in a new tab</a></p>';
+    document.body.appendChild(pop);
+    var r = a.getBoundingClientRect(), w = pop.offsetWidth, x = Math.min(Math.max(8, r.left + window.scrollX), window.scrollX + document.documentElement.clientWidth - w - 8);
+    pop.style.left = x + 'px'; pop.style.top = (r.bottom + window.scrollY + 8) + 'px';
+    pop.querySelector('.gp-x').addEventListener('click', close);
+    pop.querySelector('.gp-x').focus({ preventScroll: true });
+    return true;
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a.term[data-term]');
+    if(a){ if(open(a)) e.preventDefault(); return; }
+    if(pop && !e.target.closest('.gpop')) close();
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && pop){ var f = from; close(); if(f) f.focus(); } });
+  window.addEventListener('resize', close);
+})();
+
+/* ---------- Give out the numbers: a big board for the teacher to write a name or seat next to each Auslan number (CHCCOM005) ---------- */
+(function(){
+  document.querySelectorAll('.giveout-btn').forEach(function(b){
+    var words; try{ words = JSON.parse(b.getAttribute('data-words')); }catch(e){ return; }
+    var key = 'giveout-' + location.pathname;
+    function load(){ try{ return JSON.parse(localStorage.getItem(key) || '{}'); }catch(e){ return {}; } }
+    function save(o){ try{ localStorage.setItem(key, JSON.stringify(o)); }catch(e){} }
+    b.addEventListener('click', function(){
+      var data = load();
+      var box = document.createElement('div'); box.className = 'giveout'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Give out the numbers');
+      box.innerHTML = '<div class="go-bar"><button type="button" class="go-close">Close</button><button type="button" class="go-clear">Clear all names</button></div>' +
+        '<h3>Your Auslan number</h3><p class="go-help">Type a name or a seat next to each number. It stays on this computer only.</p><div class="go-grid">' +
+        words.map(function(w){ var v = (data[w[0]] || '').replace(/"/g, '&quot;'); return '<div class="go-cell"><div class="go-n">' + w[0] + '</div><div class="go-w">' + String(w[1]).replace(/</g, '&lt;') + '</div><input type="text" data-n="' + w[0] + '" value="' + v + '" placeholder="Name or seat" aria-label="Name or seat for number ' + w[0] + '"></div>'; }).join('') + '</div>';
+      document.body.appendChild(box);
+      box.addEventListener('input', function(e){ var i = e.target.closest('input'); if(!i) return; var o = load(); o[i.getAttribute('data-n')] = i.value; save(o); });
+      function shut(){ box.remove(); document.removeEventListener('keydown', key2); }
+      function key2(e){ if(e.key === 'Escape') shut(); }
+      document.addEventListener('keydown', key2);
+      box.querySelector('.go-close').addEventListener('click', shut);
+      box.querySelector('.go-clear').addEventListener('click', function(){ save({}); box.querySelectorAll('input').forEach(function(i){ i.value = ''; }); });
+      var first = box.querySelector('input'); if(first) first.focus();
+    });
+  });
+  // One flexible timer (practical day). Type the minutes. Sound only if the teacher ticks the chime box.
+  document.querySelectorAll('.timer').forEach(function(box){
+    var minIn = box.querySelector('.tm-min'), nameIn = box.querySelector('.tm-name');
+    var total = (+minIn.value || 15) * 60, left = total, iv = null;
+    var out = box.querySelector('.tm-time'), go = box.querySelector('.tm-go'), snd = box.querySelector('.tm-snd input');
+    var mini = document.querySelector('.tm-mini'), seen = true;
+    function fmt(){ var m = Math.floor(left / 60), s = left % 60; return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s; }
+    function show(){ out.textContent = fmt(); box.classList.toggle('low', left <= 60 && left > 0); box.classList.toggle('done', left === 0);
+      if(mini){ mini.hidden = !(iv || left === 0) || seen; mini.querySelector('.tm-mini-l').textContent = nameIn.value || 'Timer'; mini.querySelector('.tm-mini-t').textContent = fmt(); mini.classList.toggle('low', left <= 60); } }
+    function setFromInput(){ var m = Math.max(1, Math.min(240, Math.round(+minIn.value) || 15)); total = m * 60; if(!iv){ left = total; show(); } }
+    minIn.addEventListener('input', setFromInput);
+    function chime(){ try{ var C = window.AudioContext || window.webkitAudioContext; var c = new C(); [0, 0.45].forEach(function(t, k){ var o = c.createOscillator(), g = c.createGain(); o.type = 'sine'; o.frequency.value = k ? 660 : 880; g.gain.setValueAtTime(0.0001, c.currentTime + t); g.gain.exponentialRampToValueAtTime(0.18, c.currentTime + t + 0.05); g.gain.exponentialRampToValueAtTime(0.0001, c.currentTime + t + 1.2); o.connect(g); g.connect(c.destination); o.start(c.currentTime + t); o.stop(c.currentTime + t + 1.3); }); }catch(e){} }
+    function stop(){ if(iv) clearInterval(iv); iv = null; go.textContent = 'Start'; }
+    go.addEventListener('click', function(){
+      if(iv){ stop(); show(); return; }
+      if(left === 0) left = total;
+      go.textContent = 'Pause';
+      iv = setInterval(function(){ left--; if(left <= 0){ left = 0; stop(); if(snd.checked) chime(); } show(); }, 1000);
+      show();
+    });
+    box.querySelector('.tm-reset').addEventListener('click', function(){ stop(); setFromInput(); left = total; show(); });
+    box.querySelectorAll('.tm-presets button').forEach(function(b){ b.addEventListener('click', function(){ stop(); nameIn.value = b.getAttribute('data-l'); minIn.value = b.getAttribute('data-m'); setFromInput(); left = total; show(); }); });
+    if('IntersectionObserver' in window){ new IntersectionObserver(function(es){ seen = es[0].isIntersecting; show(); }).observe(box); }
+  });
+})();
+</script>
+<script src="../shared/presenting.js"></script>
+</body>
+</html>

@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHCCOM005 CHCDIV001 Consumer-Directed Care Cluster: How we communicate</title>
+<meta name="description" content="CHCCOM005 CHCDIV001 Lesson 2: the communication process, modes of communication, non-verbal communication, effective communication, conversation techniques, active listening, factors and culture, respect, barriers, communication breakdown.">
+<style>:root{
+  --ink:#1b2530; --soft-ink:#44505c; --paper:#ffffff;
+  --deep:#12384a; --aqua:#8fe3e8; --action:#0b6f7c;
+  --card-a:#fbfbf9; --card-b:#ecece8; --edge:#d9d9d4;
+  --warn:#b45309; --warn-bg:#fff7ed; --ok:#15803d; --bad:#b91c1c;
+  --teach:#4c1d95; --teach-bg:#f5f3ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size:clamp(17px,1.5vw,30px); line-height:1.55}
+main{overflow-x:clip}
+.wrap{max-width:1500px; margin:0 auto; padding:0 clamp(20px,3vw,60px)}
+
+/* banner */
+.banner{position:relative; background:var(--deep); color:#fff; padding:clamp(60px,9vw,140px) 20px 40px; overflow:hidden}
+.banner-inner{position:relative; z-index:2; max-width:1500px; margin:0 auto}
+.banner .kicker{margin:0 0 6px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:.75em; color:var(--aqua)}
+.banner h1{margin:0; font-size:clamp(30px,5vw,76px); line-height:1.1; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.banner .sub{margin:12px 0 0; font-size:1.05em; max-width:28em; color:#f3e6d2}
+.banner svg.hero{position:absolute; right:-2vw; bottom:-4vw; width:min(46vw,620px); height:auto; opacity:.95; z-index:1}
+@media (max-width:800px){.banner svg.hero{opacity:.25}}
+
+/* index */
+#index{margin:30px 0 10px; padding:18px 26px 12px; background:#efe5d3; border-left:6px solid var(--action); border-radius:6px}
+#index h2{font-size:1.2em; margin:0 0 8px}
+#index ul{margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(19em,1fr)); column-gap:3em}
+#index li{margin:4px 0}
+#index a{text-decoration:none; color:var(--ink); display:flex; gap:10px; align-items:baseline}
+#index a:hover{color:var(--action); text-decoration:underline}
+.num{display:inline-flex; align-items:center; justify-content:center; min-width:1.7em; height:1.7em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; font-size:.8em; flex:none}
+.opening{font-size:1.05em; margin:26px 0 10px}
+
+/* slides */
+section.slide{padding:36px 0 18px; border-top:1px solid var(--edge); margin-top:30px; scroll-margin-top:10px}
+section.slide:first-of-type{border-top:0}
+h2.topic{font-size:1.4em; line-height:1.3; margin:0 0 10px; display:flex; gap:14px; align-items:center}
+h2.topic .num{font-size:.7em; min-width:2em; height:2em}
+h3{font-size:1.15em; line-height:1.3; margin:0 0 10px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px; padding-left:26px}
+li{margin:4px 0}
+a{color:var(--action); text-underline-offset:3px}
+a.star{font-weight:700; padding:0 4px; font-size:.8em; text-decoration:none; opacity:.55}
+a.star:hover{opacity:1}
+a.term{text-decoration:underline dotted; color:inherit}
+.intro{font-size:1.05em; color:var(--soft-ink)}
+a:focus-visible,button:focus-visible,.deck:focus-visible{outline:3px solid #f2a900; outline-offset:3px}
+
+ol.points{margin:12px 0 18px; padding-left:0; list-style:none; counter-reset:pt}
+ol.points li{position:relative; padding:10px 14px 10px 3.2em; margin:6px 0; background:#fffaf1; border-radius:8px; counter-increment:pt}
+ol.points li::before{content:counter(pt); position:absolute; left:.9em; top:.55em; width:1.7em; height:1.7em; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:700; font-size:.85em; display:flex; align-items:center; justify-content:center}
+.ref{display:none; float:right; margin-left:10px; font-size:.65em; color:var(--teach); background:var(--teach-bg); border:1px solid #ddd6fe; border-radius:4px; padding:0 6px}
+body.teacher .ref{display:inline-block}
+
+figure.visual{margin:18px 0 22px; text-align:center}
+figure.visual svg,figure.visual img{max-width:100%; height:auto; max-height:70vh}
+figure.visual figcaption{font-size:.8em; color:var(--soft-ink); margin-top:6px}
+figure.pic{margin:22px 0}
+figure.pic img{display:block; width:100%; height:auto; max-height:86vh; object-fit:contain; border-radius:4px}
+
+.watch-out{margin:14px 0 20px; padding:14px 18px 14px 56px; background:var(--warn-bg); border:2px solid #fdba74; border-radius:8px; position:relative}
+.watch-out::before{content:"!"; position:absolute; left:14px; top:12px; width:30px; height:30px; border-radius:50%; background:var(--warn); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.watch-out b{color:var(--warn); margin-right:6px}
+
+/* audio */
+.say{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:40px; display:inline-flex; gap:8px; align-items:center}
+.say.playing{background:var(--action); color:#fff}
+.say .ico{font-size:.8em}
+.audio-line{display:flex; gap:12px; align-items:center; margin:0 0 14px; flex-wrap:wrap}
+.audio-label{color:var(--soft-ink); font-size:.9em}
+.card-audio{margin-top:10px}
+.playall{margin:0 0 34px; text-align:center}
+
+/* card stack (from the Sway template) */
+.stack{margin:60px auto 40px; width:86%; max-width:1150px; --tilt:.4}
+.deck{position:relative; cursor:pointer; border-radius:3px; transition:height .3s ease}
+.pile i{position:absolute; inset:0; background:var(--card-b); border:1px solid var(--edge); box-shadow:0 1px 3px rgba(20,30,40,.10)}
+.pile i:nth-child(even){background:var(--card-a)}
+.pile i{transform:rotate(calc(var(--a) * var(--tilt,1))) translate(var(--x),var(--y))}
+.pile i:nth-child(1){--a:-15deg; --x:-4px; --y:6px}
+.pile i:nth-child(2){--a:6deg; --x:6px; --y:2px}
+.pile i:nth-child(3){--a:-12deg; --x:3px; --y:-5px}
+.pile i:nth-child(4){--a:3deg; --x:-5px; --y:4px}
+.pile i:nth-child(5){--a:-10deg; --x:5px; --y:5px}
+.pile i:nth-child(6){--a:-2deg; --x:-3px; --y:-3px}
+.pile i:nth-child(7){--a:-6deg; --x:2px; --y:3px}
+.pile{position:absolute; inset:0; filter:drop-shadow(0 14px 18px rgba(20,30,40,.16))}
+.card{position:absolute; left:0; top:0; width:100%; height:100%; background:var(--card-a); border:1px solid var(--edge);
+  padding:1.5em 1.8em 1.3em; font-size:clamp(16px,1.4vw,27px); line-height:1.5; opacity:0; pointer-events:none; z-index:1; min-height:7em;
+  transform:rotate(calc(var(--r,-6deg) * var(--tilt,1))); box-shadow:0 2px 6px rgba(20,30,40,.14)}
+.card.shade{background:var(--card-b)}
+.card.long{font-size:clamp(14.5px,1.25vw,24px); line-height:1.45}
+.card.top{opacity:1; pointer-events:auto; z-index:3}
+.card.arrive{animation:arrive .42s ease-out}
+.card.leave{opacity:1; z-index:4; animation:leave .42s ease-in forwards}
+.card.leave-back{opacity:1; z-index:4; animation:leaveBack .42s ease-in forwards}
+@keyframes arrive{from{transform:rotate(calc(var(--r) * var(--tilt,1) + 5deg)) scale(.96)} to{transform:rotate(calc(var(--r) * var(--tilt,1))) scale(1)}}
+@keyframes leave{to{transform:translate(58%,-10%) rotate(16deg); opacity:0}}
+@keyframes leaveBack{to{transform:translate(-58%,-10%) rotate(-18deg); opacity:0}}
+.card .count{float:right; margin:-6px -8px 6px 14px; font-size:.8em; font-weight:600; color:var(--soft-ink); background:#fff; border:1px solid var(--edge); border-radius:20px; padding:2px 12px}
+.card ul{margin-bottom:6px}
+.card-pic{float:right; width:clamp(90px,22%,220px); margin:0 0 10px 16px}
+.card-pic svg{width:100%; height:auto}
+.controls{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin-top:60px}
+.controls button{font:inherit; font-size:clamp(17px,1.2vw,24px); font-weight:600; cursor:pointer; padding:10px 20px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:48px}
+.controls button.next{background:var(--action); color:#fff}
+.controls button:hover{filter:brightness(.94)}
+.controls .where{min-width:7em; text-align:center; font-weight:700; font-size:clamp(18px,1.25vw,25px)}
+.hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:10px 0 0}
+
+/* full screen */
+.big{position:fixed; inset:0; z-index:50; background:#05090c; color:#fff; display:none}
+.big.open{display:flex; flex-direction:column}
+.big .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; font-weight:700}
+.big .body{flex:1; overflow:auto; padding:8px clamp(20px,7vw,90px) 24px; font-size:clamp(20px,2.9vw,34px); line-height:1.45}
+.big .body h3{font-size:1.1em; margin-bottom:.5em}
+.big .body .count{display:none}
+.big .body .card-pic{width:22%}
+.big .body .say{color:#fff; border-color:#fff; background:transparent}
+.big .foot{display:flex; gap:12px; justify-content:center; padding:12px 18px 20px}
+.big button{font:inherit; font-size:18px; font-weight:600; cursor:pointer; min-height:48px; padding:10px 22px; border-radius:6px; border:2px solid #fff; background:transparent; color:#fff}
+.big button.next{background:#fff; color:#05090c}
+
+/* activities */
+.activity{margin:22px 0 28px; padding:16px 20px 14px; border:2px solid #d8c9b2; border-radius:10px; background:#f1f5ec}
+.act-head{display:flex; gap:10px; align-items:center; margin-bottom:6px}
+.act-badge{background:var(--action); color:#fff; font-size:.7em; font-weight:700; padding:2px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:.04em}
+.act-instr{color:var(--soft-ink); font-size:.9em}
+.act-foot{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px}
+.act-foot button{font:inherit; font-size:.9em; font-weight:600; cursor:pointer; padding:8px 18px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:44px}
+.act-foot .act-check{background:var(--action); color:#fff}
+.act-result{font-weight:700}
+.act-result.good{color:var(--ok)} .act-result.bad{color:var(--bad)}
+.chip{display:inline-flex; align-items:center; font-size:.9em; padding:8px 14px; margin:5px; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; user-select:none; min-height:44px; line-height:1.3}
+.chip.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.chip.right{border-color:var(--ok); background:#ecfdf5}
+.chip.wrong{border-color:var(--bad); background:#fef2f2}
+.chip.placed{cursor:default}
+.bank{min-height:52px; padding:6px; border:2px dashed #b9a68a; border-radius:8px; margin-bottom:12px; background:#fff}
+.targets{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(16em,1fr))}
+.target{border:2px solid #b9a68a; border-radius:8px; background:#fff; padding:8px 10px; min-height:70px}
+.target .t-label{font-weight:700; margin-bottom:4px}
+.target .t-drop{min-height:44px; border:2px dashed #e8dcc6; border-radius:6px; padding:2px}
+.target.over .t-drop{border-color:var(--action); background:#f6efe2}
+.order{list-style:none; padding:0; margin:0; counter-reset:o}
+.order li{display:flex; gap:10px; align-items:center; background:#fff; border:2px solid #b9a68a; border-radius:8px; padding:8px 10px; margin:6px 0; cursor:grab}
+.order li .o-n{min-width:2em; height:2em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; font-size:.85em}
+.order li .o-t{flex:1}
+.order li .o-btn{display:flex; gap:4px}
+.order li .o-btn button{font:inherit; min-width:40px; min-height:40px; border-radius:6px; border:1px solid #b9a68a; background:#fff; cursor:pointer}
+.order li.right{border-color:var(--ok); background:#ecfdf5} .order li.wrong{border-color:var(--bad); background:#fef2f2}
+.order li.dragging{opacity:.5}
+.quiz-q{margin:10px 0 16px}
+.quiz-q .opt{display:block; width:100%; text-align:left; font:inherit; font-size:.95em; padding:10px 14px; margin:6px 0; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; min-height:44px}
+.quiz-q .opt.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.quiz-q .opt.right{border-color:var(--ok); background:#ecfdf5} .quiz-q .opt.wrong{border-color:var(--bad); background:#fef2f2}
+.quiz-q .why{font-size:.85em; color:var(--soft-ink); margin:4px 0 0 6px; display:none}
+.quiz-q.done .why{display:block}
+.fill-table{width:100%; border-collapse:collapse; font-size:.9em; background:#fff}
+.fill-table th,.fill-table td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+.fill-table th{background:#efe5d3}
+.fill-table select{font:inherit; font-size:.95em; min-height:40px; max-width:100%}
+.fill-table td.right{background:#ecfdf5} .fill-table td.wrong{background:#fef2f2}
+
+/* teacher view */
+.tnotes{display:none; margin:18px 0 6px; padding:12px 16px; background:var(--teach-bg); border:2px dashed #c4b5fd; border-radius:8px; font-size:.82em; color:#2e1065}
+body.teacher .tnotes{display:block}
+.tnotes .t-head{font-weight:800; color:var(--teach); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; font-size:.85em}
+.tnotes ul{margin:4px 0 8px}
+.tnotes .t-trap{background:#fff7ed; border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0}
+.tlink{font:inherit; font-size:1em; color:var(--soft-ink); background:none; border:0; text-decoration:underline; cursor:pointer; padding:0}
+.tpill[hidden]{display:none}
+.tpill{position:fixed; top:10px; right:10px; z-index:45; background:var(--teach); color:#fff; border-radius:30px; padding:6px 8px 6px 16px; display:flex; gap:8px; align-items:center; font-size:15px; font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.tpill button{font:inherit; font-size:14px; font-weight:700; border:0; border-radius:20px; padding:6px 12px; background:#fff; color:var(--teach); cursor:pointer; min-height:34px}
+.tpill button.tp-out{background:transparent; color:#fff; border:1px solid #fff}
+.card-pic.photo img{width:100%; height:auto; border-radius:8px; display:block}
+.grid4{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(11em,1fr)); margin:16px 0 22px}
+.grid4 figure{margin:0; background:#efe5d3; border-radius:12px; overflow:hidden}
+.grid4 img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+.grid4 figcaption{padding:10px 14px 12px; font-size:.9em}
+.grid4 figcaption b{display:block; color:var(--deep); font-size:1.05em}
+.side{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; margin:10px 0 18px}
+.side > div{flex:2 1 420px}
+.side figure{flex:0 1 380px; max-width:440px; margin:0}
+.side figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* Gerry */
+.mascot{position:fixed; left:clamp(6px,1.2vw,24px); top:120px; width:clamp(54px,6vw,110px); z-index:35; cursor:pointer; transition:top .6s cubic-bezier(.3,.9,.4,1.1); filter:drop-shadow(0 6px 10px rgba(0,0,0,.25)); user-select:none}
+.mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.mascot.hop svg{animation:hop .7s ease-out 1, bob 2.6s ease-in-out .7s infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes hop{0%{transform:translateY(0) scale(1,1)} 30%{transform:translateY(-40px) scale(.95,1.08) rotate(14deg)} 60%{transform:translateY(0) scale(1.08,.92)} 100%{transform:translateY(0) scale(1,1)}}
+.gerry-bubble{position:absolute; left:100%; top:0; margin-left:10px; width:max-content; max-width:16em; background:#fff; color:var(--ink); border:2px solid var(--deep); border-radius:14px; padding:8px 12px; font-size:clamp(14px,1vw,18px); line-height:1.35; box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.gerry-bubble::before{content:""; position:absolute; left:-12px; top:16px; border:6px solid transparent; border-right-color:var(--deep)}
+@media (max-width:900px){.mascot{display:none}}
+.mascot.drop{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.drop .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.drop .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+@media (prefers-reduced-motion:reduce){.mascot svg{animation:none}}
+
+.home{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(14px,2vw,32px); z-index:40; background:var(--action); color:#fff; font-weight:700; font-size:clamp(17px,1.2vw,24px); text-decoration:none; padding:12px 22px; border-radius:30px; box-shadow:0 4px 14px rgba(0,0,0,.25); min-height:48px; display:flex; align-items:center; gap:8px}
+.foot{margin:50px 0 90px; padding-top:16px; border-top:1px solid var(--edge); font-size:.75em; color:var(--soft-ink)}
+
+@media (max-width:560px){
+  body{font-size:17px}
+  .card{padding:20px 20px 18px; font-size:16px}
+  .card.long{font-size:14.5px}
+  .stack{width:auto; margin-left:14px; margin-right:14px; --tilt:.3}
+  .card-pic{width:30%}
+  h2.topic{font-size:1.25em}
+}
+@media (prefers-reduced-motion:reduce){
+  .card.arrive,.card.leave,.card.leave-back{animation-duration:.01s}
+  html{scroll-behavior:auto}
+}
+
+/* ordered strips (PPE on / off) */
+.strips{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr)); margin:16px 0 20px}
+.strip{background:#fffaf1; border-radius:12px; padding:14px 16px}
+.strip-title{font-weight:800; color:var(--deep); margin-bottom:8px}
+.strip-steps{list-style:none; margin:0; padding:0; counter-reset:st}
+.strip-steps li{counter-increment:st; display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px solid #e2e8f0}
+.strip-steps li:last-child{border-bottom:0}
+.strip-steps li::before{content:counter(st); display:inline-flex; align-items:center; justify-content:center; width:1.9em; height:1.9em; border-radius:50%; background:var(--c,#0b6f7c); color:#fff; font-weight:800; font-size:.85em; flex:none}
+table.plain{width:100%; border-collapse:collapse; font-size:.92em; margin:10px 0 18px; background:#fff}
+table.plain th,table.plain td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+table.plain th{background:#efe5d3}
+.tl-high{background:#fee2e2} .tl-med{background:#fef3c7} .tl-low{background:#dcfce7}
+
+/* activity start and blur */
+.act-start[hidden]{display:none}
+.act-start{display:flex; gap:14px; align-items:center; flex-wrap:wrap; padding:6px 0 2px; color:var(--soft-ink); font-size:.9em}
+.act-go{font:inherit; font-size:1em; font-weight:700; cursor:pointer; padding:10px 26px; border-radius:8px; border:0; background:var(--action); color:#fff; min-height:48px}
+.act-tools{margin:0 0 10px}
+.act-peek{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid #b9a68a; background:#fff; color:var(--action); min-height:40px}
+section.slide.hide-notes > :is(ol.points, .stack, figure.visual, .after, .intro, .watch-out, .vid, .audio-line, .side-points, p){filter:blur(7px); pointer-events:none; user-select:none; transition:filter .3s}
+section.slide.hide-notes .activity{filter:none}
+.vid{margin:20px 0 10px}
+.vid-title{margin:0 0 8px}
+.vid-by{color:var(--soft-ink); font-size:.85em}
+.video{margin:0 auto 6px; max-width:calc((100vh - 90px) * 16 / 9); aspect-ratio:16/9; background:#0e1a22; border-radius:6px; overflow:hidden; position:relative}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.watch{margin:0 0 20px; font-size:.8em; text-align:center}
+
+/* activity locked while the notes are showing */
+.activity.peeking .act-body, .activity.peeking .act-foot{pointer-events:none; opacity:.35; filter:grayscale(1)}
+.activity.peeking .act-tools::after{content:"Read the notes, then press the button to carry on."; margin-left:12px; color:var(--warn); font-weight:700; font-size:.9em}
+/* click to spotlight a part of a diagram */
+.spot [data-spot]{transition:opacity .3s, transform .3s; transform-box:fill-box; transform-origin:center}
+.spot.spotting [data-spot]:not(.lit){opacity:.28}
+.spot [data-spot].lit{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.14)}}
+.spot-hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:-8px 0 14px}
+/* points beside a picture */
+.side-points{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start}
+.side-points > ol.points{flex:2 1 420px; margin-top:0}
+.side-points > figure{flex:0 1 320px; max-width:360px; margin:0}
+.side-points > figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* student-visible Connect source line */
+.source{margin:16px 0 6px; padding:10px 14px 10px 44px; background:#f6efe2; border-left:4px solid var(--action); border-radius:8px; font-size:.92em; color:var(--soft-ink); position:relative; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center}
+.source::before{content:"\1F4D6"; position:absolute; left:12px; top:8px; font-size:1.2em}
+.source-label{font-weight:700; color:var(--ink)}
+.source a{text-decoration:none; font-weight:600; border:1px solid #d8c9b2; background:#fff; border-radius:999px; padding:2px 10px}
+.source a:hover{background:#efe5d3}
+
+/* Lesson 3: safety signs, RACE, two-up figures */
+.signs{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:12px 0 20px; align-items:start}
+.sign{background:#fff; border:2px solid var(--edge); border-radius:12px; padding:12px 10px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px}
+.sign svg{width:84px; height:84px}
+.sign span{font-weight:700; font-size:.9em; line-height:1.25}
+.signkey{display:flex; flex-wrap:wrap; gap:8px 20px; margin:6px 0 14px; font-size:.92em}
+.signkey i{display:inline-block; width:16px; height:16px; border-radius:50%; vertical-align:-3px; margin-right:6px}
+.race{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:14px 0 20px}
+.race div{border-left:8px solid var(--c); background:#fff; border-radius:10px; padding:12px 14px; box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.race b{display:block; font-size:2.2em; line-height:1; color:var(--c)}
+.race span{display:block; font-weight:700; font-size:1.1em; margin-top:4px}
+.race small{color:var(--soft-ink)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:14px 0}
+.grid2 figure{margin:0}
+.grid2 figcaption{font-size:.85em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > :is(.signs, .signkey, .race, .grid2){filter:blur(7px); pointer-events:none; user-select:none}
+
+/* side-by-side videos */
+.vid-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:16px 0 6px}
+.vid-row .vid{margin:0}
+.vid-row .video{max-width:none}
+section.slide.hide-notes > .vid-row{filter:blur(7px); pointer-events:none}
+
+/* finale: the grand exit */
+.finale{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; margin:24px 0 10px; padding:24px 10px 0; min-height:340px; overflow:hidden}
+.fin-side{display:flex; flex-direction:column; align-items:center; gap:10px; opacity:0; transition:transform .9s cubic-bezier(.2,.8,.3,1.1), opacity .6s}
+.fin-side.left{transform:translateX(-60vw)}
+.fin-side.right{transform:translateX(60vw)}
+.finale.in .fin-side{transform:none; opacity:1}
+.finale.in .fin-side.right{transition-delay:.25s}
+.fin-mascot{width:min(260px,38vw)}
+.fin-mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.fin-bubble{background:#fff; border:3px solid var(--deep); border-radius:18px; padding:14px 18px; font-size:1.08em; line-height:1.4; position:relative; max-width:34em; opacity:0; transform:scale(.7); transition:transform .5s cubic-bezier(.2,.8,.3,1.3), opacity .4s}
+.fin-bubble p{margin:0 0 8px}
+.fin-bubble::after{content:""; position:absolute; bottom:-14px; left:50%; margin-left:-8px; border:8px solid transparent; border-top-color:var(--deep)}
+.finale.in .fin-bubble{opacity:1; transform:none; transition-delay:1s}
+.finale.in .right .fin-bubble{transition-delay:1.5s}
+.fin-side .fin-bubble{order:-1}
+.fin-who{font-weight:800; color:var(--deep); margin:0}
+.fin-after{text-align:center; font-size:1.1em; color:var(--soft-ink); margin:10px 0 20px}
+@media (max-width:700px){.finale{grid-template-columns:1fr; min-height:0} .fin-side.left,.fin-side.right{transform:translateY(40px)} .finale.in .fin-side{transform:none}}
+@media (prefers-reduced-motion:reduce){.fin-side,.fin-bubble{transition:none; transform:none; opacity:1} .fin-mascot svg{animation:none}}
+.sign-pics{display:flex; gap:6px; align-items:center; justify-content:center; height:96px}
+.sign-pics img{max-height:96px; max-width:100%; object-fit:contain}
+.sign-pics img + img{max-height:60px}
+
+/* Lesson 4: risk matrix */
+table.matrix{border-collapse:collapse; margin:0 auto; font-size:.95em}
+table.matrix th, table.matrix td{border:2px solid #fff; padding:10px 12px; text-align:center}
+table.matrix thead th{background:#12384a; color:#fff; font-weight:700}
+table.matrix tbody th{background:#0b6f7c; color:#fff; text-align:left; font-weight:700}
+table.matrix .corner{background:#1b2530; font-size:.8em}
+table.matrix td.m-L{background:#bbf7d0; color:#14532d; font-weight:700}
+table.matrix td.m-M{background:#fde68a; color:#78350f; font-weight:700}
+table.matrix td.m-H{background:#fca5a5; color:#7f1d1d; font-weight:700}
+@media (max-width:700px){table.matrix{font-size:.75em} table.matrix th, table.matrix td{padding:6px 4px}}
+
+
+.tag{display:inline-block; font-family:"Segoe UI",Arial,sans-serif; font-size:.68em; font-weight:700; padding:1px 10px; border-radius:12px; margin:0 6px; vertical-align:middle; white-space:nowrap}
+.tag.old{background:#e5e1db; color:#4a4540; border:1px solid #b9b2a8}
+.tag.repl{background:#fdf0dc; color:#8a4b12; border:1px solid #e8b878}
+.tag.new{background:#e2efdc; color:#2f5a2a; border:1px solid #9cc290}
+.vid.local video{display:block; width:100%; max-width:1100px; max-height:72vh; margin:0 auto; border-radius:8px; background:#000}
+.mascot.side-right{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.side-right .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.side-right .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+.gerry-bubble{border-color:var(--wood)}
+.home{background:var(--wood)}
+.side-points figure img{border-radius:10px; border:1px solid var(--edge)}
+figure.visual img{border-radius:10px}
+.watch-out b{margin-right:0}
+.watch-out > b:first-child{margin-right:6px}
+body.presenting .mascot{z-index:45}
+@media (max-width:700px){
+  .lessonbar{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:thin; padding-bottom:10px}
+  .lessonbar a{flex:0 0 auto}
+}
+.fill-table select{width:100%}
+
+/* infographics: big, centred, click for full screen */
+figure.infopic{margin:22px auto 26px; text-align:center}
+figure.infopic img{display:block; margin:0 auto; width:100%; max-width:1300px; max-height:82vh; object-fit:contain; border-radius:12px; border:1px solid var(--edge); background:#fff; cursor:zoom-in}
+figure.infopic .info-svg{max-width:1300px; margin:0 auto; background:#fffdf8; border:1px solid var(--edge); border-radius:12px; padding:10px; cursor:zoom-in}
+figure.infopic figcaption{font-size:.75em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > figure.infopic{filter:blur(7px); pointer-events:none; user-select:none}
+.zoombox{position:fixed; inset:0; z-index:70; background:rgba(20,14,10,.92); display:flex; align-items:center; justify-content:center; cursor:zoom-out; padding:2vh 2vw}
+.zoombox img,.zoombox svg{max-width:96vw; max-height:94vh; width:auto; height:auto; background:#fff; border-radius:10px}
+.zoombox .info-svg{width:96vw; max-height:94vh; background:#fffdf8; border-radius:10px; padding:10px}
+.zoombox .info-svg svg{width:100%; max-height:90vh}
+.zoombox .zclose{position:fixed; top:14px; right:18px; font:inherit; font-weight:700; border:0; border-radius:20px; padding:8px 18px; background:#fff; color:var(--wood); cursor:pointer}
+/* external (sign-in) videos and handouts */
+.vid.ext{margin:18px 0}
+.ext-play{display:flex; align-items:center; gap:16px; padding:16px 20px; background:#2f2a24; color:#fff8ec; border-radius:12px; text-decoration:none; max-width:760px; box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.ext-play:hover,.ext-play:focus{background:#4a3b2d; outline:3px solid var(--action)}
+.ext-icon{flex:0 0 56px; height:56px; border-radius:50%; background:var(--action); display:grid; place-items:center; font-size:26px; padding-left:4px}
+.ext-play b{display:block; font-size:1.05em}
+.ext-play small{display:block; opacity:.85; margin-top:3px; font-size:.82em}
+.docs{background:#fbf7ef; border:1px solid #e3d6bf; border-left:6px solid var(--wood); border-radius:10px; padding:12px 20px; margin:16px 0}
+.docs-title{margin:0 0 6px}
+.docs ul{margin:0; padding-left:22px}
+.docs li{margin:6px 0}
+section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events:none}
+.t-demo .t-sub{margin:8px 0 2px; font-weight:700; color:#7a4a1e}
+.t-demo ul,.t-links ul{margin:2px 0 6px; padding-left:20px}
+.t-note{color:#666; font-size:.9em}
+.docs-btn{display:inline-block; margin:10px 0 4px; padding:10px 18px; background:var(--action); color:#fff; border-radius:999px; text-decoration:none; font-weight:700}
+.docs-btn:hover,.docs-btn:focus{background:var(--wood); outline:3px solid var(--action)}
+.docs-note{margin:4px 0 0; font-size:.85em; color:var(--soft-ink)}
+/* ---- 28 Oct 2026: glossary pop-up, teacher button in the lesson bar, Play all state ---- */
+a.term{cursor:help}
+.gpop{position:absolute; z-index:80; width:min(26em,calc(100vw - 16px)); background:#fffdf7; color:var(--ink); border:2px solid var(--wood,#6b4a33); border-radius:12px; padding:12px 40px 10px 16px; box-shadow:0 10px 28px rgba(0,0,0,.25); font-size:clamp(16px,1.1vw,22px); line-height:1.45}
+.gpop p{margin:0 0 6px}
+.gpop .gp-term{font-weight:800; color:var(--wood,#6b4a33)}
+.gpop .gp-more{font-size:.85em; margin:4px 0 0}
+.gpop .gp-more a{color:var(--action)}
+.gpop .gp-x{position:absolute; top:6px; right:6px; width:34px; height:34px; border:0; border-radius:50%; background:transparent; font-size:24px; line-height:1; cursor:pointer; color:var(--soft-ink)}
+.gpop .gp-x:hover{background:#f0e6d6}
+.lessonbar .tlink-top{margin-left:auto; padding:6px 12px; border-radius:20px; border:1px dashed var(--edge); background:transparent; color:var(--soft-ink); text-decoration:none; font-size:.85em; white-space:nowrap}
+.lessonbar .tlink-top:hover{border-color:var(--wood); color:var(--wood)}
+body.tv-pill .lessonbar .tlink-top{display:none}
+.say.playall-btn.playing{background:var(--action); color:#fff}
+.tpill .tp-label{margin-right:2px}
+@media print{ .gpop,.tlink-top{display:none} }
+
+/* ===================== CHCCOM005 CHCDIV001 neon theme (29 Oct 2026): neon red and green lights, a little shine, readable ===================== */
+:root{
+  --ink:#16201d; --soft-ink:#46524e; --paper:#f6f8f7;
+  --deep:#0b5a3c; --aqua:#7dffc0; --action:#d81e3c;
+  --card-a:#ffffff; --card-b:#eef3f1; --edge:#d8e2de;
+  --wood:#0b5a3c; --sage-bg:#ecf8f2; --clay:#d81e3c; --neonR:#ff2e4d; --neonG:#19e68c;
+}
+body{background-color:var(--paper)}
+h1,h2,h3,.banner h1{font-family:"Segoe UI","Trebuchet MS",Arial,sans-serif}
+.banner{background-color:#0d1312; background-image:
+  radial-gradient(ellipse 40% 60% at 12% 110%,rgba(255,46,77,.35),transparent 70%),
+  radial-gradient(ellipse 40% 60% at 70% -10%,rgba(25,230,140,.30),transparent 70%),
+  linear-gradient(115deg,#0d1312 0%,#111b19 55%,#0d1312 100%);
+  border-bottom:4px solid transparent; border-image:linear-gradient(90deg,var(--neonR),#ffd27a,var(--neonG)) 1;
+  box-shadow:0 2px 18px rgba(255,46,77,.35),0 6px 26px rgba(25,230,140,.25);
+  padding:clamp(40px,6vw,96px) 20px clamp(26px,3vw,44px)}
+.banner::before,.banner::after{content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
+  background-image:radial-gradient(2px 2px at 8% 30%,#fff,transparent 60%),radial-gradient(1.5px 1.5px at 22% 70%,#ffd7de,transparent 60%),radial-gradient(2px 2px at 41% 18%,#d6ffe9,transparent 60%),radial-gradient(1.5px 1.5px at 57% 82%,#fff,transparent 60%),radial-gradient(2px 2px at 66% 40%,#ffd7de,transparent 60%),radial-gradient(1.5px 1.5px at 33% 48%,#d6ffe9,transparent 60%),radial-gradient(2px 2px at 92% 76%,#fff,transparent 60%);
+  animation:twinkle 4s ease-in-out infinite}
+.banner::after{background-position:13px 9px; animation-delay:2s}
+@keyframes twinkle{0%,100%{opacity:.25} 50%{opacity:.9}}
+.banner h1{color:#fff; text-shadow:0 0 6px rgba(255,255,255,.35),0 0 18px rgba(255,46,77,.55),0 0 34px rgba(25,230,140,.35)}
+.banner .sub{color:#e7efec}
+.banner .kicker{color:var(--aqua); text-shadow:0 0 8px rgba(25,230,140,.6)}
+.banner.first{position:relative; overflow:hidden}
+.banner.first .banner-inner{position:relative; z-index:2}
+.hero-hellos{position:absolute; z-index:1; right:clamp(10px,4vw,90px); top:50%; transform:translateY(-50%); width:clamp(220px,30vw,520px); pointer-events:none}
+.hero-hellos svg{display:block; width:100%; height:auto}
+.hero-hellos .hb{animation:hbPop 6s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%}
+@keyframes hbPop{0%,100%{transform:scale(1); opacity:.9} 8%{transform:scale(1.08); opacity:1} 16%{transform:scale(1); opacity:.9}}
+@media (max-width:800px){.hero-hellos{opacity:.28; width:280px}}
+@media (prefers-reduced-motion:reduce){.hero-hellos .hb,.banner::before,.banner::after{animation:none}}
+.lessonbar{display:flex; flex-wrap:wrap; gap:8px 10px; padding:12px clamp(20px,3vw,60px); background:#121a18; border-bottom:1px solid #26332f; font-size:clamp(14px,.95vw,19px)}
+.lessonbar a{padding:6px 14px; border-radius:20px; background:transparent; border:1px solid #3c4c47; color:#e7efec; text-decoration:none; font-weight:600; white-space:nowrap}
+.lessonbar a:hover{border-color:var(--neonG); box-shadow:0 0 8px rgba(25,230,140,.5)}
+.lessonbar a.on{background:var(--neonG); border-color:var(--neonG); color:#06241a; box-shadow:0 0 10px rgba(25,230,140,.7)}
+.lessonbar .tlink{color:#e7efec}
+#index{background:#ffffff; border-left-color:var(--neonR); box-shadow:0 1px 0 var(--edge)}
+h2.topic{color:#10241d; border-bottom:3px solid transparent; border-image:linear-gradient(90deg,var(--neonR),var(--neonG)) 1; padding-bottom:8px}
+h2.topic .num{background:var(--action); color:#fff; box-shadow:0 0 0 2px #fff,0 0 12px rgba(255,46,77,.65)}
+#index .num{box-shadow:0 0 8px rgba(255,46,77,.5)}
+ol.points li{background:var(--card-a); border:1px solid var(--edge); box-shadow:0 1px 0 #e3ebe8}
+ol.points li::before{border-color:var(--action); color:var(--deep)}
+.activity{background:var(--sage-bg); border-color:#b7e3cd}
+a.term{text-decoration-color:var(--action)}
+.gerry-bubble{border-color:var(--deep)}
+.home{background:var(--deep); box-shadow:0 0 12px rgba(25,230,140,.45)}
+.ext-play{background:var(--deep); color:#fff}
+.ext-play:hover,.ext-play:focus{background:#0e7550}
+.docs{background:#fbfffd; border-color:#d3eadf; border-left-color:var(--action)}
+.zoombox .zclose{color:var(--deep)}
+.gpop{border-color:var(--deep)}
+.gpop .gp-term{color:var(--deep)}
+.t-demo .t-sub{color:var(--deep)}
+.vid-row{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+strong.motto{color:#d81e3c; font-weight:900; font-size:1.15em; text-shadow:0 0 10px rgba(255,46,77,.35)}
+.card-pic.photo img{max-height:clamp(180px,22vw,300px); width:auto; max-width:100%; margin:0 auto; display:block; object-fit:cover; border-radius:8px}
+
+/* opening video: big, nothing beside it */
+.vid.opener .video{max-width:calc((100vh - 60px) * 16 / 9); box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.vid.opener .vid-title{text-align:center; font-size:1.1em}
+
+/* greeting cards (Good Morning) */
+.greet-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr)); gap:18px; margin:18px 0}
+.greet{background:var(--card-a); border:1px solid var(--edge); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 2px 0 #ece1cf}
+.greet .g-pic{aspect-ratio:4/3; background:#e9dfcf}
+.greet .g-pic img{width:100%; height:100%; object-fit:cover; display:block}
+.greet .g-body{padding:12px 16px 14px}
+.greet .g-lang{margin:0; font-size:.8em; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--action)}
+.greet .g-words{margin:4px 0 2px; font-size:1.25em; font-weight:700; color:var(--deep); line-height:1.25}
+.greet .g-say{margin:0 0 10px; color:var(--soft-ink); font-size:.9em}
+.greet .g-who{font-size:.75em; color:var(--soft-ink); margin-left:6px}
+.greet.playing{outline:4px solid #19c37d}
+.greet-all{margin:6px 0 4px}
+
+/* Auslan sign grid */
+.sign-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr)); gap:18px; margin:18px 0}
+.sign{background:var(--card-a); border:2px solid var(--edge); border-radius:14px; overflow:hidden}
+.sign .s-head{display:flex; align-items:center; gap:12px; padding:10px 14px}
+.sign .s-num{flex:0 0 auto; width:2.2em; height:2.2em; border-radius:50%; background:var(--action); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:1.2em}
+.sign .s-word{font-size:1.35em; font-weight:800; color:var(--deep)}
+.sign video{display:block; width:100%; aspect-ratio:1512/1060; background:#2a3bcf; object-fit:cover}
+.sign:target{border-color:#19c37d; box-shadow:0 0 0 5px rgba(233,162,59,.35)}
+.sign-jump{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
+.sign-jump a{display:inline-flex; width:2.4em; height:2.4em; align-items:center; justify-content:center; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:800; text-decoration:none}
+.sign-jump a:hover{background:var(--action); color:#fff}
+
+/* give out the numbers (teacher tool on the page) */
+.giveout-btn{background:#0b5a3c; color:#fff; border:0; border-radius:24px; padding:10px 20px; font:inherit; font-weight:700; cursor:pointer}
+.giveout{position:fixed; inset:0; z-index:80; background:#0d1312; color:#fff; padding:clamp(14px,2vw,30px); overflow:auto}
+.giveout h3{margin:0 0 6px; color:#7dffc0}
+.giveout .go-help{margin:0 0 14px; color:#d9ece9; font-size:.85em}
+.giveout .go-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px}
+.giveout .go-cell{background:#0b5a3c; border-radius:12px; padding:10px 12px}
+.giveout .go-n{font-size:2.2em; font-weight:800; color:#7dffc0; line-height:1}
+.giveout .go-w{font-weight:700; font-size:1.05em}
+.giveout input{width:100%; margin-top:6px; font:inherit; font-size:.85em; padding:6px 8px; border-radius:6px; border:0}
+.giveout .go-bar{display:flex; gap:10px; margin:0 0 14px; flex-wrap:wrap}
+.giveout .go-bar button{font:inherit; border:0; border-radius:20px; padding:8px 16px; font-weight:700; cursor:pointer}
+.giveout .go-close{background:#7dffc0; color:#0d1312}
+.giveout .go-clear{background:var(--action); color:#fff}
+
+/* language flags grid (South Africa) */
+.flag-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; margin:14px 0}
+.flag-grid figure{margin:0; background:var(--card-a); border:1px solid var(--edge); border-radius:10px; overflow:hidden; text-align:center}
+.flag-grid img{width:100%; aspect-ratio:3/2; object-fit:cover; display:block}
+.flag-grid figcaption{padding:6px; font-weight:700; color:var(--deep)}
+
+/* timeline cards */
+.tl{overflow-x:auto; margin:16px 0}
+.tl table{border-collapse:separate; border-spacing:6px; min-width:760px; width:100%}
+.tl th{background:var(--deep); color:#fff; padding:8px 10px; border-radius:8px; font-size:.9em}
+.tl th.asp{background:var(--action)}
+.tl td{background:var(--card-a); border:1px solid var(--edge); border-radius:8px; padding:8px 10px; vertical-align:top; font-size:.85em}
+.tl td ul{margin:0; padding-left:1.1em}
+section.slide.hide-notes > :is(.tl, .greet-grid, .flag-grid, .sign-grid){filter:blur(7px); pointer-events:none}
+
+
+.greet-all-btn{background:var(--action); color:#fff; border:0; border-radius:24px; padding:10px 20px; font:inherit; font-weight:700; cursor:pointer}
+.greet-all-btn.playing{background:#0b5a3c}
+.giveout-btn{display:none}
+body.teacher .giveout-btn, body.presenting .giveout-btn{display:inline-block}
+.sign-tools{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px}
+
+.greet .g-pic{overflow:hidden; position:relative}
+.greet .g-pic img{position:absolute; inset:0; width:100% !important; height:100% !important; max-width:none !important; object-fit:cover}
+.greet .g-who{display:block; margin:6px 0 0}
+
+@media (max-width:700px){
+  .tl table{min-width:0; border-spacing:0}
+  .tl thead{display:none}
+  .tl tr{display:block; margin:0 0 14px}
+  .tl th.asp{display:block; border-radius:8px 8px 0 0; text-align:left}
+  .tl td{display:block; border-radius:0; margin:0}
+  .tl td::before{content:attr(data-col); display:block; font-weight:800; color:var(--deep); margin:0 0 4px}
+  .tl td:last-child{border-radius:0 0 8px 8px}
+}
+
+/* Discussion prompts and timers (Lessons 6 and 7) */
+.discuss{display:grid; gap:12px; margin:14px 0}
+.dq{background:var(--card,#fff); border:1px solid #d9e6e0; border-left:5px solid #19a865; border-radius:10px; padding:12px 16px}
+.dq-q{margin:0 0 6px; font-weight:600}
+.dq-n{display:inline-block; background:#e8344f; color:#fff; border-radius:999px; padding:1px 10px; font-size:.85em; margin-right:6px}
+.dq-t{margin:6px 0 2px; color:#4a5a55; font-size:.95em}
+.dq ul{margin:0; padding-left:22px}
+.timers{display:flex; flex-wrap:wrap; gap:14px; margin:14px 0}
+.timer{flex:1 1 240px; background:#0d1614; color:#fff; border-radius:14px; padding:14px 18px; text-align:center; box-shadow:0 0 0 2px #19e68c, 0 0 18px rgba(25,230,140,.35)}
+.timer.low{box-shadow:0 0 0 2px #ffb020, 0 0 18px rgba(255,176,32,.45)}
+.timer.done{box-shadow:0 0 0 2px #ff2e4d, 0 0 22px rgba(255,46,77,.6)}
+.tm-label{margin:0; font-weight:700}
+.tm-time{margin:4px 0 8px; font-size:3rem; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:2px}
+.tm-btns{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; align-items:center}
+.tm-btns button{background:#e8344f; color:#fff; border:0; border-radius:8px; padding:8px 16px; font-weight:700; cursor:pointer}
+.tm-btns .tm-reset{background:transparent; border:2px solid #19e68c; color:#19e68c}
+.tm-snd{font-size:.85em; color:#cfe}
+
+.tm-set{display:flex; flex-wrap:wrap; gap:10px 16px; justify-content:center; margin-bottom:4px}
+.tm-set label{font-size:.9em; color:#cfe}
+.tm-set input{background:#16231f; color:#fff; border:1px solid #19e68c; border-radius:6px; padding:5px 8px; font:inherit}
+.tm-set .tm-name{width:min(260px,60vw)} .tm-set .tm-min{width:80px}
+.tm-time{font-size:clamp(3rem,9vw,5.5rem)}
+.tm-presets{display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin-top:10px}
+.tm-presets button{background:transparent; color:#cfe; border:1px solid #3a5a50; border-radius:999px; padding:4px 10px; font-size:.82em; cursor:pointer}
+.tm-presets button:hover{border-color:#19e68c; color:#fff}
+.tm-mini{position:fixed; left:16px; bottom:16px; z-index:60; background:#0d1614; color:#fff; border-radius:999px; padding:8px 16px; text-decoration:none; box-shadow:0 0 0 2px #19e68c, 0 0 16px rgba(25,230,140,.4); font-variant-numeric:tabular-nums}
+.tm-mini.low{box-shadow:0 0 0 2px #ff2e4d, 0 0 16px rgba(255,46,77,.5)}
+.tm-mini[hidden]{display:none}
+.tm-link{margin:8px 0 0}
+.rule-box{border:3px solid #e8344f; background:#fff4f6; border-radius:12px; padding:12px 16px; margin:12px 0; font-size:1.1em}
+.docbox{border:1px solid #cfdcd6; background:#fff; border-radius:12px; padding:14px 18px; margin:12px 0; box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.docbox h3{margin-top:0}
+</style>
+</head>
+<body data-np="5">
+<main>
+<header class="banner first" id="top">
+  <div class="banner-inner">
+    <p class="kicker">CHCCOM005 CHCDIV001 Consumer-Directed Care Cluster · Lesson 2</p>
+    <h1>How we communicate</h1>
+    <p class="sub">How a message travels, the four ways we communicate, body language, listening, respect, and what gets in the way.</p>
+  </div>
+  <div class="hero-hellos" aria-hidden="true"><svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg">
+  <g class="hb" style="animation-delay:0s"><path d="M20 10 h150 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H60 l-16 14 l2 -14 H20 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="95" y="47" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">Good morning</text></g>
+  <g class="hb" style="animation-delay:0.7s"><path d="M210 0 h130 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H250 l-16 14 l2 -14 H210 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#19e68c" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #19e68c)"/><text x="275" y="37" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #19e68c)">Sawubona</text></g>
+  <g class="hb" style="animation-delay:1.4s"><path d="M370 20 h120 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H410 l-16 14 l2 -14 H370 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="430" y="57" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">Bonjour</text></g>
+  <g class="hb" style="animation-delay:2.1s"><path d="M60 105 h150 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H100 l-16 14 l2 -14 H60 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#19e68c" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #19e68c)"/><text x="135" y="142" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #19e68c)">Goeie môre</text></g>
+  <g class="hb" style="animation-delay:2.8s"><path d="M250 95 h120 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H290 l-16 14 l2 -14 H250 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="310" y="132" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="19" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">안녕하세요</text></g>
+  <g class="hb" style="animation-delay:3.5s"><path d="M395 120 h105 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H435 l-16 14 l2 -14 H395 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#19e68c" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #19e68c)"/><text x="447.5" y="157" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #19e68c)">早上好</text></g>
+  <g class="hb" style="animation-delay:4.2s"><path d="M10 200 h140 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H50 l-16 14 l2 -14 H10 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="80" y="237" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">Xin chào</text></g>
+  <g class="hb" style="animation-delay:4.9s"><path d="M185 195 h150 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H225 l-16 14 l2 -14 H185 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#19e68c" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #19e68c)"/><text x="260" y="232" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="21" fill="#fff" style="filter:drop-shadow(0 0 4px #19e68c)">Konnichiwa</text></g>
+  <g class="hb" style="animation-delay:5.4s"><path d="M365 215 h125 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H405 l-16 14 l2 -14 H365 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="427.5" y="252" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">Salaam</text></g>
+</svg></div>
+</header>
+<nav class="lessonbar" aria-label="Lessons in this unit"><a href="0-index.html">&#8962; Lessons</a><a href="1-people-culture-diversity.html">1 People and culture</a><a href="2-how-we-communicate.html" class="on" aria-current="page">2 Communicating</a><a href="3-working-with-your-team.html">3 Your team</a><a href="4-legal-ethical-and-writing.html">4 Legal and writing</a><a href="5-case-studies-mary-and-jane.html">5 Mary and Jane</a><a href="6-practical-skills-day.html">6 Practical day</a><a href="0-index.html#glossary">Glossary</a><button type="button" class="tlink tlink-top" title="For the teacher">Teacher</button></nav>
+<div class="wrap">
+  <nav id="index" aria-label="Index"><h2>In this lesson</h2><ul><li><a href="#s1"><span class="num">1</span> How a message travels</a></li><li><a href="#s2"><span class="num">2</span> Four ways we communicate</a></li><li><a href="#s3"><span class="num">3</span> Body language: talking without words</a></li><li><a href="#s4"><span class="num">4</span> Effective communication</a></li><li><a href="#s5"><span class="num">5</span> Conversation techniques</a></li><li><a href="#s6"><span class="num">6</span> Active listening</a></li><li><a href="#s7"><span class="num">7</span> Seven things that change how people communicate</a></li><li><a href="#s8"><span class="num">8</span> How culture shapes communication</a></li><li><a href="#s9"><span class="num">9</span> Showing respect when you communicate</a></li><li><a href="#s10"><span class="num">10</span> Barriers, and how to get past them</a></li><li><a href="#s11"><span class="num">11</span> When communication breaks down</a></li></ul></nav>
+  <p class="opening">Every shift is full of communication: with the people you support, their families and your team. In this lesson you learn <b>how a message travels</b>, the <b>four ways</b> we communicate, and the skills that make people feel <b>heard and respected</b>.</p>
+  
+<section class="slide" id="s1" data-ref="NP5 S1">
+  <h2 class="topic"><span class="num">1</span> How a message travels <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%206%20Practical%20skills%20day%7Cb2878d3d-40d6-4873-a288-8e3ab9b8b3ee%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">All communication is a <b>two-way</b> process. A message goes from one person to another, and back again.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s1.mp3" aria-label="Listen: How a message travels"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s1p1"><span class="ref" title="Reference">NP5 S1 P1</span><b>Sender</b>: the person who gives the message.</li><li id="s1p2"><span class="ref" title="Reference">NP5 S1 P2</span><b>Message</b>: the information you want to share. It can be spoken, written, or shown with your body.</li><li id="s1p3"><span class="ref" title="Reference">NP5 S1 P3</span><b>Receiver</b>: the person who gets the message.</li><li id="s1p4"><span class="ref" title="Reference">NP5 S1 P4</span><b>Feedback</b>: the receiver shows or tells the sender that they understood. Without feedback, you do not know if the message arrived the way you meant it.</li><li id="s1p5"><span class="ref" title="Reference">NP5 S1 P5</span>Everything we do sends a message, even when we say nothing.</li></ol><figure><img src="pics/comm-process-1.jpg" alt="Sender, message, receiver and feedback" style="max-width:360px"></figure></div>
+  <figure class="infopic"><img src="pics/comm-concepts.jpg" alt="Diagram: the sender encodes the message, the receiver decodes it, and feedback goes back" tabindex="0"><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305088/View" target="_blank" rel="noopener">The communication process</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305087/View" target="_blank" rel="noopener">Communicating respectfully for understanding</a></div>
+  
+  <aside class="tnotes" data-slide="s1" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s2" data-ref="NP5 S2">
+  <h2 class="topic"><span class="num">2</span> Four ways we communicate <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%202%20How%20we%20communicate%7Ce936d461-28e9-4c98-85eb-7a26b6a66ec5%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">There are four <b>modes</b> (ways) of communication. Your assessment matches each mode to its examples. The examples below use the same words as your assessment.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s2.mp3" aria-label="Listen: Four ways we communicate"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s2p1"><span class="ref" title="Reference">NP5 S2 P1</span><b>Non-verbal communication</b>: Body language, gestures, and how we dress and act. <i>(Talking without words.)</i></li><li id="s2p2"><span class="ref" title="Reference">NP5 S2 P2</span><b>Written communication</b>: Letters, emails, books and magazines. <i>(Also progress notes, incident forms and procedure manuals at work.)</i></li><li id="s2p3"><span class="ref" title="Reference">NP5 S2 P3</span><b>Verbal communication</b>: Face-to-face, telephone, radio and television. <i>(Talking and listening with words.)</i></li><li id="s2p4"><span class="ref" title="Reference">NP5 S2 P4</span><b>Visualisation</b>: Graphs, charts, maps and logos. <i>(Pictures that show information.)</i></li><li id="s2p5"><span class="ref" title="Reference">NP5 S2 P5</span>Verbal communication is more than the words. It is also <b>how</b> we say them (tone and pitch), the <b>speed and volume</b>, and <b>what the listener sees</b> while we talk.</li></ol><figure><img src="pics/comm-process-2.jpg" alt="Two people sharing ideas" style="max-width:380px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s2-1" data-activity='{"type":"match","title":"Match the mode of communication","instructions":"Match each mode to its examples.","pairs":[{"a":"Non-verbal Communication","b":"Body language, gestures, and how we dress and act"},{"a":"Written Communication","b":"Letters, emails, books and magazines"},{"a":"Verbal Communication","b":"Face-to-face, telephone, radio and television"},{"a":"Visualisation","b":"Graphs, charts, maps and logos"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Match the mode of communication</b></div>
+    <p class="act-instr">Match each mode to its examples.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305089/View" target="_blank" rel="noopener">Effective communication</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305090/View" target="_blank" rel="noopener">Communication styles</a></div>
+  
+  <aside class="tnotes" data-slide="s2" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s3" data-ref="NP5 S3">
+  <h2 class="topic"><span class="num">3</span> Body language: talking without words <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%202%20How%20we%20communicate%7Ce936d461-28e9-4c98-85eb-7a26b6a66ec5%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">Often the most important part of a message is <b>non-verbal</b>: we see it before we hear it.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s3.mp3" aria-label="Listen: Body language: talking without words"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s3p1"><span class="ref" title="Reference">NP5 S3 P1</span>The four non-verbal methods in your assessment: <b>Facial expressions</b>, <b>Posture</b>, <b>Gestures</b>, <b>Tone of voice</b>.</li><li id="s3p2"><span class="ref" title="Reference">NP5 S3 P2</span><b>Facial expressions</b>: a smile, a frown, raised eyebrows. Your face shows your feelings.</li><li id="s3p3"><span class="ref" title="Reference">NP5 S3 P3</span><b>Posture</b>: how you sit or stand. Open and relaxed, or closed with crossed arms.</li><li id="s3p4"><span class="ref" title="Reference">NP5 S3 P4</span><b>Gestures</b>: hand and arm movements, a nod, a wave, a thumbs up. Some gestures mean different things in different cultures.</li><li id="s3p5"><span class="ref" title="Reference">NP5 S3 P5</span><b>Tone of voice</b>: warm or cold, calm or angry. <i>How</i> you say it can change the meaning of the words.</li><li id="s3p6"><span class="ref" title="Reference">NP5 S3 P6</span>Other non-verbal signals: eye contact, touch, personal space, and how you dress.</li><li id="s3p7"><span class="ref" title="Reference">NP5 S3 P7</span><b>Not</b> non-verbal: Colour of your eyes, Using slang, Using industry terminology, Phrasing of sentences. Slang, terminology and phrasing are about <b>words</b>.</li></ol><figure><img src="pics/types-2.jpg" alt="Nine facial expressions of one man" style="max-width:340px"></figure></div>
+  <figure class="infopic"><img src="pics/types-1.jpg" alt="What makes up what we hear: body language 55%, tone of voice 38%, words 7%" tabindex="0"><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  
+  
+  
+  
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Body language, the power is in the palm of your hands <span class="vid-by">(Allan Pease, TEDx Macquarie University)</span></p><div class="video" data-youtube="ZZZ7k8cMA-4" data-title="Body language, the power is in the palm of your hands"></div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s3-1" data-activity='{"type":"sort","title":"Non-verbal or not?","instructions":"These are the options from your assessment. Tap each one, then tap where it belongs.","buckets":["Non-verbal","Not non-verbal"],"items":[{"text":"Facial expressions","bucket":"Non-verbal"},{"text":"Posture","bucket":"Non-verbal"},{"text":"Gestures","bucket":"Non-verbal"},{"text":"Tone of voice","bucket":"Non-verbal"},{"text":"Colour of your eyes","bucket":"Not non-verbal"},{"text":"Using slang","bucket":"Not non-verbal"},{"text":"Using industry terminology","bucket":"Not non-verbal"},{"text":"Phrasing of sentences","bucket":"Not non-verbal"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Non-verbal or not?</b></div>
+    <p class="act-instr">These are the options from your assessment. Tap each one, then tap where it belongs.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305091/View" target="_blank" rel="noopener">Non-verbal language</a></div>
+  
+  <aside class="tnotes" data-slide="s3" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s4" data-ref="NP5 S4">
+  <h2 class="topic"><span class="num">4</span> Effective communication <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%202%20How%20we%20communicate%7Ce936d461-28e9-4c98-85eb-7a26b6a66ec5%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro"><b>Effective</b> communication means the person <b>gets the message you meant</b>, and you get theirs.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s4.mp3" aria-label="Listen: Effective communication"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s4p1"><span class="ref" title="Reference">NP5 S4 P1</span>The four things in your assessment that are useful for effective communication: <b>Pronouncing words and using terminology correctly</b>, <b>Open body language</b>, <b>Active listening</b>, <b>Confirming understanding</b>.</li><li id="s4p2"><span class="ref" title="Reference">NP5 S4 P2</span><b>Not</b> useful: Passive communication, Asking closed questions, Limited interaction with audience, Not showing emotions.</li><li id="s4p3"><span class="ref" title="Reference">NP5 S4 P3</span>More good habits: ask <b>open questions</b>; <b>pay attention</b>; avoid <b>slang and jargon</b>; be <b>open-minded and non-judgemental</b>; learn some <b>common words</b> in the person's language; talk in a <b>quiet, private place</b>; do not give <b>too much information</b> at once.</li><li id="s4p4"><span class="ref" title="Reference">NP5 S4 P4</span>Why do <b>correct grammar, speed and pronunciation</b> matter, especially with people from other cultures? So that the person <b>receives the message you meant</b>, and there is <b>less risk of misunderstanding</b>.</li><li id="s4p5"><span class="ref" title="Reference">NP5 S4 P5</span>In the practical skills day your teacher listens for: respect and inclusion, open questions, correct grammar, speed and pronunciation (a calm, moderate voice), trust (open-minded, no judging), facing the person with eye contact, and being clear (simple words, no slang).</li></ol><figure><img src="pics/culture-comm.jpg" alt="Cartoon of surgeons: and that is why we lift on three" style="max-width:340px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s4-1" data-activity='{"type":"sort","title":"Useful for effective communication?","instructions":"These are the options from your assessment. Tap each one, then tap Useful or Not useful.","buckets":["Useful","Not useful"],"items":[{"text":"Pronouncing words and using terminology correctly","bucket":"Useful"},{"text":"Open body language","bucket":"Useful"},{"text":"Active listening","bucket":"Useful"},{"text":"Confirming understanding","bucket":"Useful"},{"text":"Passive communication","bucket":"Not useful"},{"text":"Asking closed questions","bucket":"Not useful"},{"text":"Limited interaction with audience","bucket":"Not useful"},{"text":"Not showing emotions","bucket":"Not useful"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Useful for effective communication?</b></div>
+    <p class="act-instr">These are the options from your assessment. Tap each one, then tap Useful or Not useful.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305089/View" target="_blank" rel="noopener">Effective communication</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305094/View" target="_blank" rel="noopener">Communicating service information</a></div>
+  
+  <aside class="tnotes" data-slide="s4" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s5" data-ref="NP5 S5">
+  <h2 class="topic"><span class="num">5</span> Conversation techniques <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%202%20How%20we%20communicate%7Ce936d461-28e9-4c98-85eb-7a26b6a66ec5%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">Nine techniques, with the same examples and meanings as your assessment. Some help a conversation. Some damage it.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s5.mp3" aria-label="Listen: Conversation techniques"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s5p1"><span class="ref" title="Reference">NP5 S5 P1</span><b>Closed Question</b>: Did you enjoy lunch? <i>(The answer is yes or no.)</i></li><li id="s5p2"><span class="ref" title="Reference">NP5 S5 P2</span><b>Open Question</b>: What would you like to do today? <i>(The person can give a long answer. Open questions often start with what, how, tell me.)</i></li><li id="s5p3"><span class="ref" title="Reference">NP5 S5 P3</span><b>Affirmation</b>: This is a beautiful painting. You are a talented artist. <i>(Saying something positive and true about the person.)</i></li><li id="s5p4"><span class="ref" title="Reference">NP5 S5 P4</span><b>Reflective Listening</b>: Seeking to understand the speaker focussing on the essential parts of what has been communicated. <i>(You repeat back the main point in your own words. Example: &quot;You are worried you cannot live the way you want.&quot;)</i></li><li id="s5p5"><span class="ref" title="Reference">NP5 S5 P5</span><b>Summarise</b>: Give a brief statement of the main points. <i>(Usually near the end of a talk.)</i></li><li id="s5p6"><span class="ref" title="Reference">NP5 S5 P6</span><b>Motivational Interviewing</b>: Use various techniques to create a conversation around change without suggesting to the person that they should change.</li><li id="s5p7"><span class="ref" title="Reference">NP5 S5 P7</span><b>Coercive approach</b>: Forcing another person to do something they do not want to do. <i>(Never acceptable.)</i></li><li id="s5p8"><span class="ref" title="Reference">NP5 S5 P8</span><b>Collaboration</b>: Working together to complete tasks or achieve a goal.</li><li id="s5p9"><span class="ref" title="Reference">NP5 S5 P9</span><b>Confrontation</b>: Betty, I need to talk to you NOW. <i>(Aggressive. It makes people defensive.)</i></li><li id="s5p10"><span class="ref" title="Reference">NP5 S5 P10</span>Small encouragers keep a person talking: a nod, a smile, &quot;Uh-huh&quot;, &quot;I hear what you are saying&quot;, &quot;Tell me more&quot;.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s5-1" data-activity='{"type":"match","title":"Match the communication technique","instructions":"Match each technique to its example or definition.","pairs":[{"a":"Closed Question","b":"Did you enjoy lunch?"},{"a":"Open Question","b":"What would you like to do today?"},{"a":"Affirmation","b":"This is a beautiful painting. You are a talented artist."},{"a":"Reflective Listening","b":"Seeking to understand the speaker focussing on the essential parts of what has been communicated."},{"a":"Summarise","b":"Give a brief statement of the main points."},{"a":"Motivational Interviewing","b":"Use various techniques to create a conversation around change without suggesting to the person that they should change."},{"a":"Coercive approach","b":"Forcing another person to do something they do not want to do."},{"a":"Collaboration","b":"Working together to complete tasks or achieve a goal."},{"a":"Confrontation","b":"Betty, I need to talk to you NOW."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Match the communication technique</b></div>
+    <p class="act-instr">Match each technique to its example or definition.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305093/View" target="_blank" rel="noopener">Open ended questions, affirmations, reflections and summaries</a></div>
+  
+  <aside class="tnotes" data-slide="s5" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s6" data-ref="NP5 S6">
+  <h2 class="topic"><span class="num">6</span> Active listening <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%206%20Practical%20skills%20day%7Cb2878d3d-40d6-4873-a288-8e3ab9b8b3ee%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro"><b>Active listening</b> means you <b>focus fully</b> on the person so you understand them. Then you can say back, in your own words, what they told you. It does <b>not</b> mean you have to agree.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s6.mp3" aria-label="Listen: Active listening"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s6p1"><span class="ref" title="Reference">NP5 S6 P1</span>Stay <b>alert</b>, and give the person your <b>full attention</b>. Put your phone away.</li><li id="s6p2"><span class="ref" title="Reference">NP5 S6 P2</span>Focus on the person's <b>ideas and feelings</b>, not on what you will say next.</li><li id="s6p3"><span class="ref" title="Reference">NP5 S6 P3</span><b>Do not interrupt.</b></li><li id="s6p4"><span class="ref" title="Reference">NP5 S6 P4</span>Watch the person's <b>body language</b> too.</li><li id="s6p5"><span class="ref" title="Reference">NP5 S6 P5</span><b>Ask</b> when you are not sure: &quot;Do you mean...?&quot;</li><li id="s6p6"><span class="ref" title="Reference">NP5 S6 P6</span><b>Paraphrase</b>: say back the main point in your own words, and check: &quot;Have I got that right?&quot;</li></ol><figure><img src="pics/listening-1.png" alt="Cartoon of a boy listening with his hand behind his ear" style="max-width:300px"></figure></div>
+  <figure class="infopic"><img src="pics/listening-2.jpg" alt="Infographic: degrees of active listening: repeating, paraphrasing, reflecting" tabindex="0"><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  
+  
+  
+  
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> 5 ways to listen better <span class="vid-by">(Julian Treasure, TED)</span></p><div class="video" data-youtube="cSohjlYQI2A" data-title="5 ways to listen better"></div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305092/View" target="_blank" rel="noopener">Active listening</a></div>
+  
+  <aside class="tnotes" data-slide="s6" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s7" data-ref="NP5 S7">
+  <h2 class="topic"><span class="num">7</span> Seven things that change how people communicate <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%202%20How%20we%20communicate%7Ce936d461-28e9-4c98-85eb-7a26b6a66ec5%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">Your assessment gives you seven factors. For each one, give <b>one example</b> of how it can change communication.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s7.mp3" aria-label="Listen: Seven things that change how people communicate"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s7p1"><span class="ref" title="Reference">NP5 S7 P1</span><b>Language</b>: the person may hear your words but not understand them. Slang and jargon can confuse. A strong accent can be hard to understand. Misunderstandings happen easily.</li><li id="s7p2"><span class="ref" title="Reference">NP5 S7 P2</span><b>Culture</b>: a person's background and past experiences shape how they talk and act. Some gestures or body language can be rude. People may react to <b>how</b> you speak, not what you say. There may be rules about who in the family must be included.</li><li id="s7p3"><span class="ref" title="Reference">NP5 S7 P3</span><b>Religion</b>: people may judge others by their religious dress or symbols. Beliefs can lead to different opinions. Some religions have rules to follow when you talk or touch.</li><li id="s7p4"><span class="ref" title="Reference">NP5 S7 P4</span><b>Emotional state</b>: anger, fear or worry change how a person talks and listens. They may not tell you how they really feel. An upset person finds it hard to concentrate or take in information. You need to read their emotions.</li><li id="s7p5"><span class="ref" title="Reference">NP5 S7 P5</span><b>Disability</b>: a hearing or vision loss; trouble speaking clearly; trouble taking in information and answering. The person may need a communication aid. Sit at the same eye level.</li><li id="s7p6"><span class="ref" title="Reference">NP5 S7 P6</span><b>Health</b>: a person who is sick or in pain may not want to talk, or may not answer as usual. They may feel less confident, or need someone to speak for them.</li><li id="s7p7"><span class="ref" title="Reference">NP5 S7 P7</span><b>Age</b>: communication can change as we get older. A person may speak more slowly. Hearing and eyesight get weaker. More health problems can affect communication. Change your style to suit the person's age.</li></ol>
+  <figure class="infopic"><img src="pics/factors-comm.jpg" alt="Infographic: factors that influence communication" tabindex="0"><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305100/View" target="_blank" rel="noopener">Identifying difficult situations</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305145/View" target="_blank" rel="noopener">Address language barriers</a></div>
+  
+  <aside class="tnotes" data-slide="s7" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s8" data-ref="NP5 S8">
+  <h2 class="topic"><span class="num">8</span> How culture shapes communication <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%202%20How%20we%20communicate%7Ce936d461-28e9-4c98-85eb-7a26b6a66ec5%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">A person's <b>culture</b> can change the whole communication process. Your assessment asks for <b>four</b> examples. Choose different ones, not four about language.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s8.mp3" aria-label="Listen: How culture shapes communication"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s8p1"><span class="ref" title="Reference">NP5 S8 P1</span><b>The language used</b>: the words and expressions people use, and what they mean.</li><li id="s8p2"><span class="ref" title="Reference">NP5 S8 P2</span><b>Needing an interpreter</b>: when you do not share a language, a professional interpreter helps you understand each other.</li><li id="s8p3"><span class="ref" title="Reference">NP5 S8 P3</span><b>Who must be there</b>: in some cultures, important talks must include the family, an elder or a community member.</li><li id="s8p4"><span class="ref" title="Reference">NP5 S8 P4</span><b>Gender roles</b>: who speaks, who decides, and whether a man or a woman should give care.</li><li id="s8p5"><span class="ref" title="Reference">NP5 S8 P5</span><b>Cultural views on gender roles</b>: what men and women are expected to do in the family and community.</li><li id="s8p6"><span class="ref" title="Reference">NP5 S8 P6</span><b>Body language</b>: eye contact, touch, gestures and personal space can be polite in one culture and rude in another.</li><li id="s8p7"><span class="ref" title="Reference">NP5 S8 P7</span><b>Avoiding shame</b>: in some cultures it is very important not to embarrass a person in front of others, so you talk privately and gently.</li><li id="s8p8"><span class="ref" title="Reference">NP5 S8 P8</span><b>Religious or cultural practices</b>: prayer times, holy days, fasting or ceremonies can change when and how you talk.</li></ol><figure><img src="pics/cdc3-header.jpg" alt="Two faces with a speech bubble full of pictures from many cultures" style="max-width:380px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305101/View" target="_blank" rel="noopener">Addressing cultural barriers</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305144/View" target="_blank" rel="noopener">Communicate constructively</a></div>
+  
+  <aside class="tnotes" data-slide="s8" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s9" data-ref="NP5 S9">
+  <h2 class="topic"><span class="num">9</span> Showing respect when you communicate <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%202%20How%20we%20communicate%7Ce936d461-28e9-4c98-85eb-7a26b6a66ec5%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">Respect is not only kind words. Respect is <b>how you behave</b> when you talk with the person, their family and your colleagues. Give <b>three</b> examples in your assessment.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s9.mp3" aria-label="Listen: Showing respect when you communicate"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s9p1"><span class="ref" title="Reference">NP5 S9 P1</span>Face the person and <b>look at them</b> (if this is polite in their culture).</li><li id="s9p2"><span class="ref" title="Reference">NP5 S9 P2</span><b>Listen</b> with full attention, and <b>do not interrupt</b>.</li><li id="s9p3"><span class="ref" title="Reference">NP5 S9 P3</span>Use the person's <b>preferred name</b>.</li><li id="s9p4"><span class="ref" title="Reference">NP5 S9 P4</span>Keep your body language <b>open</b>, and use friendly <b>gestures</b>.</li><li id="s9p5"><span class="ref" title="Reference">NP5 S9 P5</span>Be at the <b>same level</b>: sit down if the person is sitting.</li><li id="s9p6"><span class="ref" title="Reference">NP5 S9 P6</span>Do <b>not give your own opinions</b> on their choices.</li><li id="s9p7"><span class="ref" title="Reference">NP5 S9 P7</span>Speak <b>clearly and calmly</b>.</li><li id="s9p8"><span class="ref" title="Reference">NP5 S9 P8</span><b>Paraphrase</b> to show you understood.</li><li id="s9p9"><span class="ref" title="Reference">NP5 S9 P9</span><b>Smile</b>, and give the person <b>the time they need</b>.</li></ol>
+  <figure class="infopic"><img src="pics/respect.jpg" alt="Infographic: ways to show respect" tabindex="0"><figcaption>Click the picture to see it full screen.</figcaption></figure>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305087/View" target="_blank" rel="noopener">Communicating respectfully for understanding</a></div>
+  
+  <aside class="tnotes" data-slide="s9" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s10" data-ref="NP5 S10">
+  <h2 class="topic"><span class="num">10</span> Barriers, and how to get past them <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%202%20How%20we%20communicate%7Ce936d461-28e9-4c98-85eb-7a26b6a66ec5%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">A <b>barrier</b> is anything that stops the message getting through. For your assessment, name <b>four barriers</b> and give <b>two strategies</b> for each one.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s10.mp3" aria-label="Listen: Barriers, and how to get past them"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s10p1"><span class="ref" title="Reference">NP5 S10 P1</span><b>Jargon</b> (work words people do not know) → use simple words; explain any work word you must use.</li><li id="s10p2"><span class="ref" title="Reference">NP5 S10 P2</span><b>Not paying attention</b> → stop what you are doing; listen and watch the person.</li><li id="s10p3"><span class="ref" title="Reference">NP5 S10 P3</span><b>Different values and views</b> → be open-minded; do not judge.</li><li id="s10p4"><span class="ref" title="Reference">NP5 S10 P4</span><b>Hearing or vision loss</b> (sensory impairment) → check aids are in and working; face the person, speak clearly, use pictures or writing.</li><li id="s10p5"><span class="ref" title="Reference">NP5 S10 P5</span><b>Not speaking the same language</b> → book an interpreter; learn a few common words in the person's language; use pictures and gestures.</li><li id="s10p6"><span class="ref" title="Reference">NP5 S10 P6</span><b>Stereotypes and assumptions</b> → treat each person as an individual; ask, do not assume.</li><li id="s10p7"><span class="ref" title="Reference">NP5 S10 P7</span><b>Cultural differences</b> → learn about the person's culture; ask what is respectful for them.</li><li id="s10p8"><span class="ref" title="Reference">NP5 S10 P8</span><b>Distractions and no privacy</b> → go to a quiet, private place; turn off the TV.</li><li id="s10p9"><span class="ref" title="Reference">NP5 S10 P9</span><b>No feedback</b> → ask questions to check understanding; give helpful feedback.</li><li id="s10p10"><span class="ref" title="Reference">NP5 S10 P10</span><b>Too much information</b> → give one step at a time; keep it short and simple.</li><li id="s10p11"><span class="ref" title="Reference">NP5 S10 P11</span>Difficult situations, language barriers and misunderstandings: spot them <b>early</b> and fix them with a strategy, for example an interpreter or a picture board.</li></ol><figure><img src="pics/barriers.png" alt="Cartoon: managers say, what if we communicated with the employees" style="max-width:520px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s10-1" data-activity='{"type":"match","title":"Barrier and strategy","instructions":"Match each barrier to a strategy that helps.","pairs":[{"a":"Jargon","b":"Use simple words and explain work words"},{"a":"A noisy, busy room","b":"Go to a quiet, private place"},{"a":"No shared language","b":"Book an interpreter"},{"a":"Hearing loss","b":"Face the person and check the hearing aid works"},{"a":"Too much information at once","b":"Give one step at a time"},{"a":"A stereotype in your head","b":"Ask the person; do not assume"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Barrier and strategy</b></div>
+    <p class="act-instr">Match each barrier to a strategy that helps.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305100/View" target="_blank" rel="noopener">Identifying difficult situations</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305145/View" target="_blank" rel="noopener">Address language barriers</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305147/View" target="_blank" rel="noopener">Working with interpreters</a></div>
+  
+  <aside class="tnotes" data-slide="s10" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s11" data-ref="NP5 S11">
+  <h2 class="topic"><span class="num">11</span> When communication breaks down <a class="star" href="https://tafeqld-my.sharepoint.com/personal/adrie_homan_tafeqld_edu_au/_layouts/15/Doc.aspx?sourcedoc={fd15d84e-2c1e-4fda-8652-62db493487aa}&action=edit&wd=target%28_Content%20Library%2FAssessment%20Links%2FCHCCOM005%20CHCDIV001.one%7C08c17a5b-62cf-4ed6-b2a5-e5a3df51e991%2FLesson%202%20How%20we%20communicate%7Ce936d461-28e9-4c98-85eb-7a26b6a66ec5%2F%29&wdorigin=703" target="_blank" rel="noopener" title="Open the Class Notebook page">**</a></h2>
+  
+  <p class="intro">Sometimes a conversation goes wrong: someone is upset, confused or angry. What you do next matters.</p>
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np5-s11.mp3" aria-label="Listen: When communication breaks down"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s11p1"><span class="ref" title="Reference">NP5 S11 P1</span>The four good ways to respond, as in your assessment: <b>Remain professional</b>, <b>Active listening</b>, <b>Be respectful</b>, <b>Address the situation immediately</b>.</li><li id="s11p2"><span class="ref" title="Reference">NP5 S11 P2</span><b>Not</b> good ways: Tell the person they are wrong, Ignore the person until the situation is resolved, Using a closed-ended question, Walk away.</li><li id="s11p3"><span class="ref" title="Reference">NP5 S11 P3</span>Stay calm. Keep your voice low and slow. Listen to what the person needs.</li><li id="s11p4"><span class="ref" title="Reference">NP5 S11 P4</span>Fix it <b>now</b>. Problems that are left alone usually get bigger.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s11-1" data-activity='{"type":"sort","title":"Good response or not?","instructions":"These are the options from your assessment. Tap each one, then tap Good or Not good.","buckets":["Good response","Not good"],"items":[{"text":"Remain professional","bucket":"Good response"},{"text":"Active listening","bucket":"Good response"},{"text":"Be respectful","bucket":"Good response"},{"text":"Address the situation immediately","bucket":"Good response"},{"text":"Tell the person they are wrong","bucket":"Not good"},{"text":"Ignore the person until the situation is resolved","bucket":"Not good"},{"text":"Using a closed-ended question","bucket":"Not good"},{"text":"Walk away","bucket":"Not good"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Good response or not?</b></div>
+    <p class="act-instr">These are the options from your assessment. Tap each one, then tap Good or Not good.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305102/View" target="_blank" rel="noopener">Avoiding and defusing conflict</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802546/viewContent/43305103/View" target="_blank" rel="noopener">Resolving conflict</a></div>
+  
+  <aside class="tnotes" data-slide="s11" aria-label="Teacher notes"></aside>
+</section>
+  <footer class="foot">
+    <p>CHCCOM005 CHCDIV001 · How we communicate · Built from TAFE Queensland learning resources, 29 Oct 2026. How to write a reference from this page: <b>NP5 S5 P1</b> means <b>Nearpod 5, Section 5, Point 1</b>. <b>C</b> means Card, for example NP5 S4 C2 is Nearpod 5, Section 4, Card 2. The section number is the number in the circle next to each heading.</p>
+    <p>Picture credits: Pictures: Adrie Homan, Adobe Stock, and the pictures from Adrie's Sways</p>
+    <p><a href="0-index.html">Lesson index and glossary</a> · <button type="button" class="tlink">Teacher</button></p>
+  </footer>
+</div>
+<a href="#index" class="home" title="Back to the index"><span aria-hidden="true">&#8679;</span> Home</a>
+<div class="tpill" hidden><span class="tp-label">Teacher</span><button type="button" class="tp-hide">Hide notes</button><button type="button" class="tp-out">Sign out</button></div>
+<div class="mascot jack side-left" data-mascot="jack" title="Jargon Jack" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 154 172" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jargon Jack">
+  <style>.jb{fill:#ffe27a;animation:jbDim 7s infinite}.jface{animation:jFace 7s infinite}@keyframes jbDim{0%,62%,70%,78%,100%{opacity:1}66%,74%{opacity:.18}86%,94%{opacity:.35}}@keyframes jFace{0%,62%,100%{filter:none}66%,74%{filter:brightness(.7)}}@media (prefers-reduced-motion:reduce){.jb,.jface{animation:none}}</style>
+  <g font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#ff2e4d"><text x="2" y="12">ASAP</text><text x="112" y="12">ADL?</text><text x="126" y="152">QI</text></g>
+  <line x1="58" y1="132" x2="48" y2="160" stroke="#3a1d22" stroke-width="7" stroke-linecap="round"/>
+  <line x1="94" y1="132" x2="104" y2="159" stroke="#3a1d22" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="44" cy="162" rx="12" ry="5" fill="#1d1012"/><ellipse cx="108" cy="161" rx="12" ry="5" fill="#1d1012"/>
+  <g class="jface">
+    <path d="M24 22 h106 a16 16 0 0 1 16 16 v68 a16 16 0 0 1 -16 16 h-58 l-28 22 l6 -22 h-26 a16 16 0 0 1 -16 -16 v-68 a16 16 0 0 1 16 -16z" fill="#e8344f" stroke="#7a1022" stroke-width="4"/>
+    <path d="M34 34 q20 -10 32 6 q10 12 -4 18 q-16 6 -6 -14 q8 -16 30 -8 q18 6 10 20 q-8 12 14 6 q14 -4 12 -18" fill="none" stroke="#ffb3be" stroke-width="2.5" stroke-linecap="round" opacity=".6"/>
+    <circle cx="56" cy="66" r="12" fill="#fff" stroke="#7a1022" stroke-width="2"/><circle cx="98" cy="66" r="12" fill="#fff" stroke="#7a1022" stroke-width="2"/>
+    <path d="M50 60 l12 10 M62 60 l-12 10" stroke="#1d1012" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="100" cy="68" r="5" fill="#1d1012"/>
+    <path d="M43 48 q12 -8 24 0" stroke="#1d1012" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M86 52 q12 -10 26 -2" stroke="#1d1012" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <ellipse cx="78" cy="98" rx="20" ry="11" fill="#5c0c1a"/><path d="M64 96 h28" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <circle class="jb" style="animation-delay:0s" cx="24" cy="22" r="4.2"/><circle class="jb" style="animation-delay:0.35s" cx="52" cy="22" r="4.2"/><circle class="jb" style="animation-delay:0.7s" cx="80" cy="22" r="4.2"/><circle class="jb" style="animation-delay:1.0499999999999998s" cx="108" cy="22" r="4.2"/><circle class="jb" style="animation-delay:1.4s" cx="134" cy="30" r="4.2"/><circle class="jb" style="animation-delay:0s" cx="144" cy="56" r="4.2"/><circle class="jb" style="animation-delay:0.35s" cx="144" cy="84" r="4.2"/><circle class="jb" style="animation-delay:0.7s" cx="134" cy="112" r="4.2"/><circle class="jb" style="animation-delay:1.0499999999999998s" cx="108" cy="122" r="4.2"/><circle class="jb" style="animation-delay:1.4s" cx="80" cy="122" r="4.2"/><circle class="jb" style="animation-delay:0s" cx="24" cy="122" r="4.2"/><circle class="jb" style="animation-delay:0.35s" cx="10" cy="96" r="4.2"/><circle class="jb" style="animation-delay:0.7s" cx="8" cy="68" r="4.2"/><circle class="jb" style="animation-delay:1.0499999999999998s" cx="12" cy="40" r="4.2"/>
+</svg></div><div class="mascot maya side-right" data-mascot="maya" title="Mosaic Maya" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 150 172" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mosaic Maya, a small earth globe">
+  <defs>
+    <radialGradient id="mOcean" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#5fd4ff"/><stop offset=".6" stop-color="#1477c9"/><stop offset="1" stop-color="#0b3f7a"/></radialGradient>
+    <linearGradient id="mShine" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="mClip"><circle cx="75" cy="76" r="56"/></clipPath>
+  </defs>
+  <style>.mglow{animation:mGlow 3s ease-in-out infinite}.mshine{animation:mShine 4.5s ease-in-out infinite}.mspark{animation:mSpark 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}@keyframes mGlow{0%,100%{opacity:.35}50%{opacity:.85}}@keyframes mShine{0%,30%{transform:translateX(-150px)}70%,100%{transform:translateX(150px)}}@keyframes mSpark{0%,100%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1)}}@media (prefers-reduced-motion:reduce){.mglow,.mshine,.mspark{animation:none}}</style>
+  <circle class="mglow" cx="75" cy="76" r="66" fill="#19e68c" opacity=".5" filter="blur(6px)"/>
+  <line x1="58" y1="128" x2="50" y2="160" stroke="#0b5a3c" stroke-width="7" stroke-linecap="round"/>
+  <line x1="92" y1="128" x2="100" y2="160" stroke="#0b5a3c" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="46" cy="162" rx="12" ry="5" fill="#06301f"/><ellipse cx="104" cy="162" rx="12" ry="5" fill="#06301f"/>
+  <path d="M22 86 q-14 -2 -14 -18" stroke="#0b5a3c" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M128 86 q14 -2 14 -18" stroke="#0b5a3c" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <g clip-path="url(#mClip)">
+    <circle cx="75" cy="76" r="56" fill="url(#mOcean)"/>
+    <g fill="#2fcf6f" stroke="#1a8a47" stroke-width="1.5">
+      <path d="M30 40 q14 -14 30 -6 q8 6 2 14 q-10 4 -8 14 q-6 10 -16 4 q-8 -8 -14 -6 q-4 -10 6 -20z"/>
+      <path d="M52 76 q10 -4 14 6 q4 12 -2 22 q-6 10 -12 2 q-4 -14 0 -30z"/>
+      <path d="M84 32 q16 -6 30 4 q10 10 2 16 q-12 2 -16 10 q-8 6 -14 -2 q-2 -8 -10 -10 q-4 -12 8 -18z"/>
+      <path d="M92 74 q14 -6 22 4 q6 10 -4 18 q-12 6 -18 -2 q-4 -10 0 -20z"/>
+      <path d="M104 104 q12 -2 14 8 q-4 8 -14 4z"/>
+    </g>
+    <rect class="mshine" x="20" y="10" width="40" height="140" fill="url(#mShine)" transform="rotate(20 75 76)"/>
+  </g>
+  <circle cx="75" cy="76" r="56" fill="none" stroke="#0b5a3c" stroke-width="3.5"/>
+  <ellipse cx="54" cy="46" rx="14" ry="8" fill="#fff" opacity=".45" transform="rotate(-25 54 46)"/>
+  <g fill="#ffffff" stroke="#0b3f7a" stroke-width="1.2">
+    <ellipse cx="63" cy="78" rx="8" ry="9"/><ellipse cx="87" cy="78" rx="8" ry="9"/>
+  </g>
+  <circle cx="65" cy="80" r="4.4" fill="#062b1d"/><circle cx="89" cy="80" r="4.4" fill="#062b1d"/>
+  <circle cx="66.4" cy="78.6" r="1.5" fill="#fff"/><circle cx="90.4" cy="78.6" r="1.5" fill="#fff"/>
+  <circle cx="54" cy="92" r="4.5" fill="#ff8aa0" opacity=".65"/><circle cx="96" cy="92" r="4.5" fill="#ff8aa0" opacity=".65"/>
+  <path d="M64 96 q11 9 22 0" stroke="#062b1d" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  <path class="mspark" d="M128 18 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3z" fill="#fff59a"/>
+  <path class="mspark" style="animation-delay:1.2s" d="M18 22 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2z" fill="#b8ffd9"/>
+</svg></div>
+</main>
+<div class="big" role="dialog" aria-modal="true" aria-label="Card in full screen">
+  <div class="bar"><span class="big-where"></span><button type="button" class="big-close">Close</button></div>
+  <div class="body"></div>
+  <div class="foot"><button type="button" class="big-back">Back</button><button type="button" class="next big-next">Next card</button></div>
+</div>
+<script>var GLOSS = {}; var TEACHER = {"salt":"zfOE49CNTGSY3ejJXmc6JQ==","iv":"bOlJRi+h4Jf1aET8","ct":"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"}; var ANNOUNCE = {"first":{"mascot":"jack","voice":"William","pitch":1.1,"none":"Ha! Nobody got every activity right first time. Told you, just guess!","some":"What? {who} got every activity right first time. Maybe listening does work."},"second":{"mascot":"maya","voice":"Natasha","pitch":1.05,"none":"Keep going, everyone. Slow down, read carefully, and you will beat Jack next time.","some":"Well done! {who} got all {n} right first time. Listening and respect win, Jack."}}; var MASCOT_LINES = {"jack":{"lines":["Hi, I'm Jargon Jack. Did you do the ADLs and the BGLs? ASAP!","I do not need to listen. I already know what you mean.","If they do not understand, I just say it louder.","Body language? I just cross my arms and look at my phone.","If someone gets upset, I walk away. Problem solved."],"prefix":"jack-l2-"},"maya":{"lines":["Hi, I'm Maya. Simple words, a kind face, and then I check that you understood.","Listening is not waiting for my turn to talk.","Louder is not clearer, Jack. Slower and simpler is clearer.","My face and my body talk too. I keep them open and calm.","When things go wrong, I stay professional, I listen, and I deal with it now."],"prefix":"maya-l2-"}};</script>
+<script>(function(){
+  var ANGLES = [-8, -5.5, -9, -4.5, -7, -6, -8.5, -4, -6.5];
+  var big = document.querySelector('.big'), bigBody = big.querySelector('.body'),
+      bigWhere = big.querySelector('.big-where'), active = null;
+
+  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ----------
+     Once the teacher has typed the code on a computer, the purple teacher pill stays at the top right of every
+     lesson page on that computer (Show or Hide notes, Presenting, Sign out), so nothing needs the footer again.
+     Students never have the code, so they never see the pill. */
+  (function(){
+    var pill = document.querySelector('.tpill'), tlinks = document.querySelectorAll('.tlink'), saved = null, on = '0';
+    var hideBtn = pill.querySelector('.tp-hide');
+    var b64 = function(s){ var b = atob(s), a = new Uint8Array(b.length); for(var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; };
+    function decrypt(code){
+      if(!window.crypto || !crypto.subtle) return Promise.reject(new Error('nosubtle'));
+      var enc = new TextEncoder();
+      return crypto.subtle.importKey('raw', enc.encode(code), 'PBKDF2', false, ['deriveKey']).then(function(km){
+        return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(TEACHER.salt), iterations: 150000, hash: 'SHA-256' }, km, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      }).then(function(key){
+        return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(TEACHER.iv) }, key, b64(TEACHER.ct));
+      }).then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
+    }
+    function pillOn(v){ pill.hidden = !v; document.body.classList.toggle('tv-pill', !!v); }
+    function show(notes){
+      document.querySelectorAll('.tnotes').forEach(function(a){ a.innerHTML = notes[a.getAttribute('data-slide')] || ''; });
+      document.body.classList.add('teacher'); pillOn(true); hideBtn.textContent = 'Hide notes';
+      try{ localStorage.setItem('tv_on', '1'); }catch(e){}
+    }
+    function hide(){
+      document.body.classList.remove('teacher'); hideBtn.textContent = 'Show notes';
+      pillOn(!!saved);   /* the pill stays while this computer knows the code */
+      try{ localStorage.setItem('tv_on', '0'); }catch(e){}
+    }
+    function unlock(code, quiet){
+      return decrypt(code).then(function(notes){ saved = code; try{ localStorage.setItem('tv_code', code); }catch(e){} show(notes); }, function(err){
+        if(quiet) return;
+        alert(err.message === 'nosubtle' ? 'This browser cannot unlock the teacher view. Use Chrome or Edge.' : 'That code did not work.');
+      });
+    }
+    function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
+    try{ saved = localStorage.getItem('tv_code'); on = localStorage.getItem('tv_on') || '0'; }catch(e){}
+    var q = new URLSearchParams(location.search);
+    if(q.get('t') === 'off'){ saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} hide(); }
+    else if(q.has('t')) unlock(q.get('t'));
+    else if(saved && on === '1') unlock(saved, true);
+    else if(saved) hide();
+    tlinks.forEach(function(tl){ tl.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')){ hide(); return; }
+      if(saved){ unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); }); } else ask();
+    }); });
+    hideBtn.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')) hide();
+      else if(saved) unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); });
+    });
+    pill.querySelector('.tp-out').addEventListener('click', function(){ saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} hide(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open') && !document.querySelector('.gpop')) hide(); });
+  })();
+
+    /* ---------- audio ---------- */
+  var player = new Audio(), current = null, queue = null;
+  function stopAudio(keepQueue){
+    player.pause(); if(current){ current.classList.remove('playing'); current = null; }
+    if(!keepQueue && queue){ var q = queue; queue = null; if(q._stopped) q._stopped(); }
+  }
+  function playBtn(btn, onEnd, keepQueue){
+    if(current === btn){ stopAudio(); return; }
+    stopAudio(keepQueue);
+    current = btn; btn.classList.add('playing');
+    player.src = btn.getAttribute('data-audio');
+    player.onended = function(){ btn.classList.remove('playing'); current = null; if(onEnd) onEnd(); };
+    player.onerror = function(){ btn.classList.remove('playing'); current = null; btn.title = 'Sound file not found yet'; if(onEnd) onEnd(); };
+    player.play().catch(function(){});
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.say'); if(!b) return;
+    e.preventDefault(); e.stopPropagation();
+    var inBig = b.closest('.big');
+    if(inBig && active){ var realBtn = active.card().querySelector('.say'); if(realBtn) b = realBtn; }
+    playBtn(b);
+  });
+
+  /* ---------- Good Morning: Play all greetings, one after the other (CHCCOM005) ---------- */
+  document.querySelectorAll('.greet-wrap').forEach(function(wrap){
+    var btn = wrap.querySelector('.greet-all-btn'), t = btn.querySelector('.pa-t');
+    var cards = [].slice.call(wrap.querySelectorAll('.greet'));
+    function clear(){ cards.forEach(function(c){ c.classList.remove('playing'); }); }
+    wrap._stopped = function(){ btn.classList.remove('playing'); t.textContent = 'Play all greetings'; clear(); };
+    btn.addEventListener('click', function(ev){
+      ev.preventDefault(); ev.stopPropagation();
+      if(queue === wrap){ stopAudio(); return; }
+      stopAudio(); queue = wrap; btn.classList.add('playing'); t.textContent = 'Stop';
+      var list = cards.filter(function(c){ return c.querySelector('.say'); }), k = 0;
+      function step(){
+        if(queue !== wrap) return;
+        if(k >= list.length){ queue = null; wrap._stopped(); return; }
+        var c = list[k++]; clear(); c.classList.add('playing');
+        try{ c.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }catch(e){}
+        playBtn(c.querySelector('.say'), function(){ setTimeout(step, 800); }, true);
+      }
+      step();
+    });
+  });
+
+  /* ---------- mascots follow the scroll ---------- */
+  document.querySelectorAll('.mascot').forEach(function(g, gi){
+    var name = g.getAttribute('data-mascot'), bubble = g.querySelector('.gerry-bubble');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var lastSlide = null, timer = null, ml = MASCOT_LINES[name] || {}, lines = ml.lines || [], prefix = ml.prefix || (name + '-');
+    function place(){
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? window.scrollY / max : 0;
+      var top = 90 + (gi ? 1 - p : p) * (window.innerHeight - 300);
+      g.style.top = top + 'px';
+      var slides = document.querySelectorAll('section.slide'), cur = null;
+      for(var i = 0; i < slides.length; i++){ if(slides[i].getBoundingClientRect().top < window.innerHeight * 0.5) cur = slides[i]; }
+      if(cur !== lastSlide && lastSlide !== null && !reduce){ g.classList.remove('hop'); void g.offsetWidth; g.classList.add('hop'); }
+      lastSlide = cur;
+    }
+    window.addEventListener('scroll', function(){ if(!timer) timer = requestAnimationFrame(function(){ timer = null; place(); }); }, { passive: true });
+    window.addEventListener('resize', place);
+    place();
+    var n = 0;
+    g.addEventListener('click', function(){
+      if(!bubble.hidden){ bubble.hidden = true; return; }
+      var k = n++ % lines.length;
+      bubble.textContent = lines[k]; bubble.hidden = false;
+      stopAudio(); player.src = 'audio/' + prefix + (k + 1) + '.mp3'; player.onended = null; player.onerror = null; player.play().catch(function(){});
+      clearTimeout(bubble._t); bubble._t = setTimeout(function(){ bubble.hidden = true; }, 7000);
+    });
+  });
+
+  /* ---------- finale: big mascots walk in ---------- */
+  document.querySelectorAll('[data-finale]').forEach(function(f){
+    if(!('IntersectionObserver' in window)){ f.classList.add('in'); return; }
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ f.classList.add('in'); io.disconnect(); } }); }, { threshold: 0.35 });
+    io.observe(f);
+  });
+
+  /* ---------- videos ---------- */
+  document.querySelectorAll('.video').forEach(function(v){
+    var id = (v.getAttribute('data-youtube')||'').trim(), t = v.getAttribute('data-title')||'Video';
+    if(!id) return;
+    v.innerHTML = '<iframe title="'+t.replace(/"/g,'&quot;')+'" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>';
+    var w = document.createElement('p'); w.className = 'watch';
+    w.innerHTML = 'Video not playing? <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v='+encodeURIComponent(id)+'">Watch "'+t.replace(/</g,'&lt;')+'" on YouTube</a>';
+    v.parentNode.insertBefore(w, v.nextSibling);
+  });
+
+  /* ---------- click a part of a diagram to make it stand out ---------- */
+  document.querySelectorAll('.spot').forEach(function(sv){
+    var parts = sv.querySelectorAll('[data-spot]');
+    parts.forEach(function(g){
+      g.style.cursor = 'pointer';
+      g.addEventListener('click', function(e){
+        e.stopPropagation();
+        var on = g.classList.contains('lit');
+        parts.forEach(function(x){ x.classList.remove('lit'); });
+        sv.classList.toggle('spotting', !on);
+        if(!on) g.classList.add('lit');
+      });
+    });
+    sv.addEventListener('click', function(){ parts.forEach(function(x){ x.classList.remove('lit'); }); sv.classList.remove('spotting'); });
+  });
+
+  /* ---------- card stacks ---------- */
+  document.querySelectorAll('.stack').forEach(function(stack){
+    var cards = [].slice.call(stack.querySelectorAll('.card')), n = cards.length, i = 0, busy = false;
+    var deck = document.createElement('div'); deck.className = 'deck'; deck.tabIndex = 0;
+    deck.setAttribute('role','group');
+    deck.setAttribute('aria-label', (stack.getAttribute('aria-label')||'Cards') + '. Press the right arrow for the next card.');
+    var pile = document.createElement('div'); pile.className = 'pile'; pile.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
+    deck.appendChild(pile);
+    cards.forEach(function(c, k){
+      c.style.setProperty('--r', ANGLES[k % ANGLES.length] + 'deg');
+      if(k % 2) c.classList.add('shade');
+      if(c.textContent.replace(/\s+/g,' ').length > 520) c.classList.add('long');
+      var tag = document.createElement('span'); tag.className = 'count'; tag.textContent = 'Card ' + (k+1) + ' of ' + n;
+      c.insertBefore(tag, c.firstChild);
+      c.setAttribute('aria-hidden', 'true');
+      deck.appendChild(c);
+    });
+    if(stack.getAttribute('data-playall')){
+      /* Play all: card 1 to the last card, one after the other. The deck turns to each card as it plays.
+         Before 28 Oct 2026 only card 1 played: starting each card's sound also cleared the queue. */
+      var pa = document.createElement('div'); pa.className = 'playall';
+      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> <span class="pa-t">Play all cards</span></button>';
+      stack.appendChild(pa);
+      var paBtn = pa.querySelector('button'), paT = pa.querySelector('.pa-t');
+      stack._stopped = function(){ paBtn.classList.remove('playing'); paT.textContent = 'Play all cards'; };
+      paBtn.addEventListener('click', function(ev){
+        ev.stopPropagation();
+        if(queue === stack){ stopAudio(); return; }
+        stopAudio(); queue = stack; paBtn.classList.add('playing'); paT.textContent = 'Stop';
+        if(i !== 0){ i = 0; show(); }
+        function finish(){ if(queue === stack){ queue = null; stack._stopped(); } }
+        function step(){
+          if(queue !== stack) return;
+          var b = cards[i].querySelector('.say');
+          var after = function(){ setTimeout(function(){
+            if(queue !== stack) return;
+            if(i === n - 1){ finish(); return; }
+            busy = false; go(1); setTimeout(step, 450);
+          }, b ? 900 : 0); };
+          if(!b){ after(); return; }
+          playBtn(b, after, true);
+        }
+        step();
+      }, true);
+    }
+    stack.appendChild(deck);
+
+    var controls = document.createElement('div'); controls.className = 'controls';
+    controls.innerHTML = '<button type="button" class="back">Back</button><span class="where" aria-live="polite"></span><button type="button" class="next">Next card</button><button type="button" class="full">Full screen</button>';
+    stack.appendChild(controls);
+    var hint = document.createElement('p'); hint.className = 'hint'; hint.textContent = 'Click the card to see the next card.';
+    stack.appendChild(hint);
+    var where = controls.querySelector('.where');
+
+    var heights = [];
+    function size(){
+      cards.forEach(function(c, k){ c.style.height = 'auto'; heights[k] = c.offsetHeight; c.style.height = ''; });
+      deck.style.height = heights[i] + 'px';
+    }
+    function show(){
+      cards.forEach(function(c, k){ c.classList.toggle('top', k === i); c.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      where.textContent = 'Card ' + (i+1) + ' of ' + n;
+      if(heights.length) deck.style.height = heights[i] + 'px';
+      if(active === api && big.classList.contains('open')) fill();
+    }
+    function go(step){
+      if(busy) return; busy = true;
+      var old = cards[i];
+      i = (i + step + n) % n;
+      var cls = step > 0 ? 'leave' : 'leave-back';
+      show();
+      old.classList.add(cls);
+      cards[i].classList.add('arrive');
+      setTimeout(function(){ old.classList.remove(cls); cards[i].classList.remove('arrive'); busy = false; }, 440);
+    }
+    function next(){ go(1); }
+    function fill(){
+      bigBody.innerHTML = cards[i].innerHTML;
+      bigWhere.textContent = 'Card ' + (i+1) + ' of ' + n;
+      bigBody.scrollTop = 0;
+    }
+    var api = { go: go, fill: fill, card: function(){ return cards[i]; } };
+
+    deck.addEventListener('click', function(e){ if(e.target.closest('a') || e.target.closest('.say')) return; go(1); });
+    deck.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); go(1); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
+    });
+    controls.querySelector('.next').addEventListener('click', function(){ go(1); });
+    controls.querySelector('.back').addEventListener('click', function(){ go(-1); });
+    controls.querySelector('.full').addEventListener('click', function(){
+      active = api; fill(); big.classList.add('open'); big.querySelector('.big-next').focus();
+    });
+
+    size(); show();
+    window.addEventListener('resize', size);
+    window.addEventListener('load', size);
+    stack.querySelectorAll('img').forEach(function(img){ img.addEventListener('load', size); });
+  });
+
+  function closeBig(){ big.classList.remove('open'); active = null; }
+  big.querySelector('.big-close').addEventListener('click', closeBig);
+  big.querySelector('.big-next').addEventListener('click', function(){ if(active) active.go(1); });
+  big.querySelector('.big-back').addEventListener('click', function(){ if(active) active.go(-1); });
+  document.addEventListener('keydown', function(e){
+    if(!big.classList.contains('open')) return;
+    if(e.key === 'Escape') closeBig();
+    if(e.key === 'ArrowRight' && active) active.go(1);
+    if(e.key === 'ArrowLeft' && active) active.go(-1);
+  });
+
+  /* ---------- activities ---------- */
+  function shuffle(a){ a = a.slice(); for(var i = a.length-1; i > 0; i--){ var j = Math.floor(Math.random()*(i+1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
+  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
+
+  var builders = {
+    /* chips into targets: used by match (one chip per target) and sort (many chips per bucket) */
+    match: function(root, a){ return buildChips(root, a.pairs.map(function(p){ return { text: p.a, target: p.b }; }), shuffle(a.pairs.map(function(p){ return p.b; })), a.labels || null, 1); },
+    sort: function(root, a){ return buildChips(root, a.items.map(function(it){ return { text: it.text, target: it.bucket }; }), a.buckets, null, 99); },
+    order: function(root, a){
+      var list = el('ol', 'order'); root.appendChild(list);
+      var start = a.start == null ? 1 : a.start;
+      function render(items){
+        list.innerHTML = '';
+        items.forEach(function(t, k){
+          var li = el('li'); li.draggable = true; li.setAttribute('data-text', t);
+          li.innerHTML = '<span class="o-n">' + (start + k) + '</span><span class="o-t">' + esc(t) + '</span><span class="o-btn"><button type="button" aria-label="Move up">&#9650;</button><button type="button" aria-label="Move down">&#9660;</button></span>';
+          list.appendChild(li);
+        });
+      }
+      function items(){ return [].map.call(list.children, function(li){ return li.getAttribute('data-text'); }); }
+      function renumber(){ [].forEach.call(list.children, function(li, k){ li.querySelector('.o-n').textContent = start + k; li.classList.remove('right','wrong'); }); }
+      render(shuffle(a.items));
+      list.addEventListener('click', function(e){
+        var b = e.target.closest('button'); if(!b) return;
+        var li = b.closest('li'); var up = b.getAttribute('aria-label') === 'Move up';
+        if(up && li.previousElementSibling) list.insertBefore(li, li.previousElementSibling);
+        if(!up && li.nextElementSibling) list.insertBefore(li.nextElementSibling, li);
+        renumber();
+      });
+      var drag = null;
+      list.addEventListener('dragstart', function(e){ drag = e.target.closest('li'); if(drag) drag.classList.add('dragging'); });
+      list.addEventListener('dragend', function(){ if(drag) drag.classList.remove('dragging'); drag = null; renumber(); });
+      list.addEventListener('dragover', function(e){ e.preventDefault(); var li = e.target.closest('li'); if(!li || li === drag) return; var r = li.getBoundingClientRect(); if(e.clientY < r.top + r.height/2) list.insertBefore(drag, li); else list.insertBefore(drag, li.nextSibling); });
+      return {
+        check: function(){ var ok = 0; [].forEach.call(list.children, function(li, k){ var good = li.getAttribute('data-text') === a.items[k]; li.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, a.items.length]; },
+        reset: function(){ render(shuffle(a.items)); }
+      };
+    },
+    quiz: function(root, a){
+      var qs = [];
+      a.questions.forEach(function(q, qi){
+        var box = el('div', 'quiz-q'); box.innerHTML = '<p><b>' + (qi+1) + '. ' + esc(q.q) + '</b></p>';
+        var sel = -1;
+        q.options.forEach(function(o, oi){
+          var b = el('button', 'opt', esc(o)); b.type = 'button';
+          b.addEventListener('click', function(){ if(box.classList.contains('done')) return; sel = oi; [].forEach.call(box.querySelectorAll('.opt'), function(x){ x.classList.remove('selected'); }); b.classList.add('selected'); });
+          box.appendChild(b);
+        });
+        if(q.why) box.appendChild(el('p', 'why', esc(q.why)));
+        root.appendChild(box);
+        qs.push({ box: box, get: function(){ return sel; }, set: function(v){ sel = v; }, q: q });
+      });
+      return {
+        check: function(){ var ok = 0; qs.forEach(function(x){ var opts = x.box.querySelectorAll('.opt'); x.box.classList.add('done'); opts.forEach(function(o, oi){ o.classList.remove('selected'); if(oi === x.q.answer) o.classList.add('right'); else if(oi === x.get()) o.classList.add('wrong'); }); if(x.get() === x.q.answer) ok++; }); return [ok, qs.length]; },
+        reset: function(){ qs.forEach(function(x){ x.set(-1); x.box.classList.remove('done'); x.box.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected','right','wrong'); }); }); }
+      };
+    },
+    table: function(root, a){
+      var t = el('table', 'fill-table'); root.appendChild(t);
+      t.innerHTML = '<thead><tr>' + a.columns.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead>';
+      var tb = el('tbody'); t.appendChild(tb);
+      a.rows.forEach(function(r){
+        var tr = el('tr'); tr.innerHTML = '<td><b>' + esc(r.label) + '</b></td>';
+        r.cells.forEach(function(c){
+          var td = el('td'); var s = el('select'); s.innerHTML = '<option value="">Choose...</option>' + shuffle(c.options).map(function(o){ return '<option>' + esc(o) + '</option>'; }).join('');
+          s.setAttribute('data-answer', c.answer); td.appendChild(s); tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      return {
+        check: function(){ var ok = 0, n = 0; t.querySelectorAll('select').forEach(function(s){ n++; var td = s.parentNode; td.classList.remove('right','wrong'); var good = s.value === s.getAttribute('data-answer'); td.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, n]; },
+        reset: function(){ t.querySelectorAll('select').forEach(function(s){ s.value = ''; s.parentNode.classList.remove('right','wrong'); }); }
+      };
+    }
+  };
+
+  function buildChips(root, items, targetNames, labels, cap){
+    var bank = el('div', 'bank'); root.appendChild(bank);
+    var tg = el('div', 'targets'); root.appendChild(tg);
+    var selected = null, targets = {};
+    targetNames.forEach(function(name){
+      var t = el('div', 'target'); t.setAttribute('data-name', name);
+      t.innerHTML = '<div class="t-label">' + esc(labels ? (labels[name] || name) : name) + '</div><div class="t-drop"></div>';
+      tg.appendChild(t); targets[name] = t;
+      t.addEventListener('click', function(){ if(selected) place(selected, t); });
+      t.addEventListener('dragover', function(e){ e.preventDefault(); t.classList.add('over'); });
+      t.addEventListener('dragleave', function(){ t.classList.remove('over'); });
+      t.addEventListener('drop', function(e){ e.preventDefault(); t.classList.remove('over'); if(selected) place(selected, t); });
+    });
+    function place(chip, t){
+      var drop = t.querySelector('.t-drop');
+      if(cap === 1 && drop.children.length){ bank.appendChild(drop.firstElementChild); }
+      drop.appendChild(chip); chip.classList.remove('selected','right','wrong'); selected = null;
+    }
+    function mk(it){
+      var c = el('div', 'chip', esc(it.text)); c.setAttribute('data-target', it.target); c.draggable = true; c.tabIndex = 0;
+      c.addEventListener('click', function(e){ e.stopPropagation(); if(c.parentNode !== bank){ bank.appendChild(c); c.classList.remove('right','wrong'); selected = null; return; } if(selected) selected.classList.remove('selected'); selected = c; c.classList.add('selected'); });
+      c.addEventListener('dragstart', function(){ selected = c; c.classList.add('selected'); });
+      c.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); c.click(); } });
+      return c;
+    }
+    function fillBank(){ bank.innerHTML = ''; shuffle(items).forEach(function(it){ bank.appendChild(mk(it)); }); }
+    fillBank();
+    return {
+      check: function(){ var ok = 0; items.length; root.querySelectorAll('.chip').forEach(function(c){ var t = c.closest('.target'); c.classList.remove('right','wrong'); if(!t){ c.classList.add('wrong'); return; } var good = t.getAttribute('data-name') === c.getAttribute('data-target'); c.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, items.length]; },
+      reset: function(){ root.querySelectorAll('.t-drop').forEach(function(d){ d.innerHTML = ''; }); fillBank(); selected = null; }
+    };
+  }
+
+  document.querySelectorAll('.activity').forEach(function(act){
+    var a; try{ a = JSON.parse(act.getAttribute('data-activity')); }catch(e){ return; }
+    var body = act.querySelector('.act-body'), res = act.querySelector('.act-result');
+    var b = builders[a.type]; if(!b) return;
+    var api = b(body, a);
+    var slide = act.closest('section.slide'), peek = act.querySelector('.act-peek'), tools = act.querySelector('.act-tools');
+    function blur(on){ if(slide) slide.classList.toggle('hide-notes', on); peek.textContent = on ? 'Show the notes' : 'Hide the notes to carry on'; act.classList.toggle('peeking', !on && act.classList.contains('started')); }
+    act.querySelector('.act-go').addEventListener('click', function(){
+      act.classList.add('started'); act.querySelector('.act-start').hidden = true; body.hidden = false; tools.hidden = false; blur(true);
+      act.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    peek.addEventListener('click', function(){ blur(!slide.classList.contains('hide-notes')); });
+    act.querySelector('.act-check').addEventListener('click', function(){
+      var r = api.check(); res.className = 'act-result ' + (r[0] === r[1] ? 'good' : 'bad');
+      res.textContent = r[0] === r[1] ? 'All correct. Well done!' : r[0] + ' of ' + r[1] + ' correct. Try the red ones again.';
+      if(r[0] === r[1]){ act.classList.remove('started'); blur(false); }
+    });
+    act.querySelector('.act-reset').addEventListener('click', function(){ api.reset(); res.textContent = ''; res.className = 'act-result'; });
+  });
+})();
+
+/* ---------- infographics: click for full screen (CHCAGE013) ---------- */
+(function(){
+  function open(node){
+    var box = document.createElement('div'); box.className = 'zoombox'; box.setAttribute('role','dialog'); box.setAttribute('aria-label','Picture full screen');
+    box.appendChild(node.cloneNode(true));
+    var c = document.createElement('button'); c.className = 'zclose'; c.type = 'button'; c.textContent = 'Close'; box.appendChild(c);
+    function shut(){ box.remove(); document.removeEventListener('keydown', key); }
+    function key(e){ if(e.key === 'Escape') shut(); }
+    box.addEventListener('click', shut); document.addEventListener('keydown', key);
+    document.body.appendChild(box);
+  }
+  document.querySelectorAll('figure.infopic img, figure.infopic .info-svg').forEach(function(el){
+    el.addEventListener('click', function(){ open(el); });
+    el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(el); } });
+  });
+})();
+
+/* ---------- glossary words: the meaning opens next to the word, so students keep their place ---------- */
+(function(){
+  if(typeof GLOSS === 'undefined') return;
+  var pop = null, from = null;
+  function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+  function close(){ if(pop){ pop.remove(); pop = null; if(from) from.setAttribute('aria-expanded', 'false'); } }
+  function open(a){
+    var g = GLOSS[a.getAttribute('data-term')]; if(!g) return false;
+    close(); from = a; a.setAttribute('aria-expanded', 'true');
+    pop = document.createElement('div'); pop.className = 'gpop'; pop.setAttribute('role', 'dialog'); pop.setAttribute('aria-label', 'Meaning of ' + g[0]);
+    pop.innerHTML = '<button type="button" class="gp-x" aria-label="Close">&times;</button><p class="gp-term">' + esc(g[0]) + '</p><p class="gp-def">' + esc(g[1]) + '</p>' +
+      '<p class="gp-more"><a href="' + a.getAttribute('href') + '" target="_blank" rel="noopener">Open the glossary in a new tab</a></p>';
+    document.body.appendChild(pop);
+    var r = a.getBoundingClientRect(), w = pop.offsetWidth, x = Math.min(Math.max(8, r.left + window.scrollX), window.scrollX + document.documentElement.clientWidth - w - 8);
+    pop.style.left = x + 'px'; pop.style.top = (r.bottom + window.scrollY + 8) + 'px';
+    pop.querySelector('.gp-x').addEventListener('click', close);
+    pop.querySelector('.gp-x').focus({ preventScroll: true });
+    return true;
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a.term[data-term]');
+    if(a){ if(open(a)) e.preventDefault(); return; }
+    if(pop && !e.target.closest('.gpop')) close();
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && pop){ var f = from; close(); if(f) f.focus(); } });
+  window.addEventListener('resize', close);
+})();
+
+/* ---------- Give out the numbers: a big board for the teacher to write a name or seat next to each Auslan number (CHCCOM005) ---------- */
+(function(){
+  document.querySelectorAll('.giveout-btn').forEach(function(b){
+    var words; try{ words = JSON.parse(b.getAttribute('data-words')); }catch(e){ return; }
+    var key = 'giveout-' + location.pathname;
+    function load(){ try{ return JSON.parse(localStorage.getItem(key) || '{}'); }catch(e){ return {}; } }
+    function save(o){ try{ localStorage.setItem(key, JSON.stringify(o)); }catch(e){} }
+    b.addEventListener('click', function(){
+      var data = load();
+      var box = document.createElement('div'); box.className = 'giveout'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Give out the numbers');
+      box.innerHTML = '<div class="go-bar"><button type="button" class="go-close">Close</button><button type="button" class="go-clear">Clear all names</button></div>' +
+        '<h3>Your Auslan number</h3><p class="go-help">Type a name or a seat next to each number. It stays on this computer only.</p><div class="go-grid">' +
+        words.map(function(w){ var v = (data[w[0]] || '').replace(/"/g, '&quot;'); return '<div class="go-cell"><div class="go-n">' + w[0] + '</div><div class="go-w">' + String(w[1]).replace(/</g, '&lt;') + '</div><input type="text" data-n="' + w[0] + '" value="' + v + '" placeholder="Name or seat" aria-label="Name or seat for number ' + w[0] + '"></div>'; }).join('') + '</div>';
+      document.body.appendChild(box);
+      box.addEventListener('input', function(e){ var i = e.target.closest('input'); if(!i) return; var o = load(); o[i.getAttribute('data-n')] = i.value; save(o); });
+      function shut(){ box.remove(); document.removeEventListener('keydown', key2); }
+      function key2(e){ if(e.key === 'Escape') shut(); }
+      document.addEventListener('keydown', key2);
+      box.querySelector('.go-close').addEventListener('click', shut);
+      box.querySelector('.go-clear').addEventListener('click', function(){ save({}); box.querySelectorAll('input').forEach(function(i){ i.value = ''; }); });
+      var first = box.querySelector('input'); if(first) first.focus();
+    });
+  });
+  // One flexible timer (practical day). Type the minutes. Sound only if the teacher ticks the chime box.
+  document.querySelectorAll('.timer').forEach(function(box){
+    var minIn = box.querySelector('.tm-min'), nameIn = box.querySelector('.tm-name');
+    var total = (+minIn.value || 15) * 60, left = total, iv = null;
+    var out = box.querySelector('.tm-time'), go = box.querySelector('.tm-go'), snd = box.querySelector('.tm-snd input');
+    var mini = document.querySelector('.tm-mini'), seen = true;
+    function fmt(){ var m = Math.floor(left / 60), s = left % 60; return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s; }
+    function show(){ out.textContent = fmt(); box.classList.toggle('low', left <= 60 && left > 0); box.classList.toggle('done', left === 0);
+      if(mini){ mini.hidden = !(iv || left === 0) || seen; mini.querySelector('.tm-mini-l').textContent = nameIn.value || 'Timer'; mini.querySelector('.tm-mini-t').textContent = fmt(); mini.classList.toggle('low', left <= 60); } }
+    function setFromInput(){ var m = Math.max(1, Math.min(240, Math.round(+minIn.value) || 15)); total = m * 60; if(!iv){ left = total; show(); } }
+    minIn.addEventListener('input', setFromInput);
+    function chime(){ try{ var C = window.AudioContext || window.webkitAudioContext; var c = new C(); [0, 0.45].forEach(function(t, k){ var o = c.createOscillator(), g = c.createGain(); o.type = 'sine'; o.frequency.value = k ? 660 : 880; g.gain.setValueAtTime(0.0001, c.currentTime + t); g.gain.exponentialRampToValueAtTime(0.18, c.currentTime + t + 0.05); g.gain.exponentialRampToValueAtTime(0.0001, c.currentTime + t + 1.2); o.connect(g); g.connect(c.destination); o.start(c.currentTime + t); o.stop(c.currentTime + t + 1.3); }); }catch(e){} }
+    function stop(){ if(iv) clearInterval(iv); iv = null; go.textContent = 'Start'; }
+    go.addEventListener('click', function(){
+      if(iv){ stop(); show(); return; }
+      if(left === 0) left = total;
+      go.textContent = 'Pause';
+      iv = setInterval(function(){ left--; if(left <= 0){ left = 0; stop(); if(snd.checked) chime(); } show(); }, 1000);
+      show();
+    });
+    box.querySelector('.tm-reset').addEventListener('click', function(){ stop(); setFromInput(); left = total; show(); });
+    box.querySelectorAll('.tm-presets button').forEach(function(b){ b.addEventListener('click', function(){ stop(); nameIn.value = b.getAttribute('data-l'); minIn.value = b.getAttribute('data-m'); setFromInput(); left = total; show(); }); });
+    if('IntersectionObserver' in window){ new IntersectionObserver(function(es){ seen = es[0].isIntersecting; show(); }).observe(box); }
+  });
+})();
+</script>
+<script src="../shared/presenting.js"></script>
+</body>
+</html>

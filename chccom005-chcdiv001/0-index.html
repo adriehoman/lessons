@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHCCOM005 CHCDIV001 Consumer-Directed Care Cluster: lessons and glossary</title>
+<style>:root{
+  --ink:#1b2530; --soft-ink:#44505c; --paper:#ffffff;
+  --deep:#12384a; --aqua:#8fe3e8; --action:#0b6f7c;
+  --card-a:#fbfbf9; --card-b:#ecece8; --edge:#d9d9d4;
+  --warn:#b45309; --warn-bg:#fff7ed; --ok:#15803d; --bad:#b91c1c;
+  --teach:#4c1d95; --teach-bg:#f5f3ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size:clamp(17px,1.5vw,30px); line-height:1.55}
+main{overflow-x:clip}
+.wrap{max-width:1500px; margin:0 auto; padding:0 clamp(20px,3vw,60px)}
+
+/* banner */
+.banner{position:relative; background:var(--deep); color:#fff; padding:clamp(60px,9vw,140px) 20px 40px; overflow:hidden}
+.banner-inner{position:relative; z-index:2; max-width:1500px; margin:0 auto}
+.banner .kicker{margin:0 0 6px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:.75em; color:var(--aqua)}
+.banner h1{margin:0; font-size:clamp(30px,5vw,76px); line-height:1.1; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.banner .sub{margin:12px 0 0; font-size:1.05em; max-width:28em; color:#f3e6d2}
+.banner svg.hero{position:absolute; right:-2vw; bottom:-4vw; width:min(46vw,620px); height:auto; opacity:.95; z-index:1}
+@media (max-width:800px){.banner svg.hero{opacity:.25}}
+
+/* index */
+#index{margin:30px 0 10px; padding:18px 26px 12px; background:#efe5d3; border-left:6px solid var(--action); border-radius:6px}
+#index h2{font-size:1.2em; margin:0 0 8px}
+#index ul{margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(19em,1fr)); column-gap:3em}
+#index li{margin:4px 0}
+#index a{text-decoration:none; color:var(--ink); display:flex; gap:10px; align-items:baseline}
+#index a:hover{color:var(--action); text-decoration:underline}
+.num{display:inline-flex; align-items:center; justify-content:center; min-width:1.7em; height:1.7em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; font-size:.8em; flex:none}
+.opening{font-size:1.05em; margin:26px 0 10px}
+
+/* slides */
+section.slide{padding:36px 0 18px; border-top:1px solid var(--edge); margin-top:30px; scroll-margin-top:10px}
+section.slide:first-of-type{border-top:0}
+h2.topic{font-size:1.4em; line-height:1.3; margin:0 0 10px; display:flex; gap:14px; align-items:center}
+h2.topic .num{font-size:.7em; min-width:2em; height:2em}
+h3{font-size:1.15em; line-height:1.3; margin:0 0 10px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px; padding-left:26px}
+li{margin:4px 0}
+a{color:var(--action); text-underline-offset:3px}
+a.star{font-weight:700; padding:0 4px; font-size:.8em; text-decoration:none; opacity:.55}
+a.star:hover{opacity:1}
+a.term{text-decoration:underline dotted; color:inherit}
+.intro{font-size:1.05em; color:var(--soft-ink)}
+a:focus-visible,button:focus-visible,.deck:focus-visible{outline:3px solid #f2a900; outline-offset:3px}
+
+ol.points{margin:12px 0 18px; padding-left:0; list-style:none; counter-reset:pt}
+ol.points li{position:relative; padding:10px 14px 10px 3.2em; margin:6px 0; background:#fffaf1; border-radius:8px; counter-increment:pt}
+ol.points li::before{content:counter(pt); position:absolute; left:.9em; top:.55em; width:1.7em; height:1.7em; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:700; font-size:.85em; display:flex; align-items:center; justify-content:center}
+.ref{display:none; float:right; margin-left:10px; font-size:.65em; color:var(--teach); background:var(--teach-bg); border:1px solid #ddd6fe; border-radius:4px; padding:0 6px}
+body.teacher .ref{display:inline-block}
+
+figure.visual{margin:18px 0 22px; text-align:center}
+figure.visual svg,figure.visual img{max-width:100%; height:auto; max-height:70vh}
+figure.visual figcaption{font-size:.8em; color:var(--soft-ink); margin-top:6px}
+figure.pic{margin:22px 0}
+figure.pic img{display:block; width:100%; height:auto; max-height:86vh; object-fit:contain; border-radius:4px}
+
+.watch-out{margin:14px 0 20px; padding:14px 18px 14px 56px; background:var(--warn-bg); border:2px solid #fdba74; border-radius:8px; position:relative}
+.watch-out::before{content:"!"; position:absolute; left:14px; top:12px; width:30px; height:30px; border-radius:50%; background:var(--warn); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.watch-out b{color:var(--warn); margin-right:6px}
+
+/* audio */
+.say{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:40px; display:inline-flex; gap:8px; align-items:center}
+.say.playing{background:var(--action); color:#fff}
+.say .ico{font-size:.8em}
+.audio-line{display:flex; gap:12px; align-items:center; margin:0 0 14px; flex-wrap:wrap}
+.audio-label{color:var(--soft-ink); font-size:.9em}
+.card-audio{margin-top:10px}
+.playall{margin:0 0 34px; text-align:center}
+
+/* card stack (from the Sway template) */
+.stack{margin:60px auto 40px; width:86%; max-width:1150px; --tilt:.4}
+.deck{position:relative; cursor:pointer; border-radius:3px; transition:height .3s ease}
+.pile i{position:absolute; inset:0; background:var(--card-b); border:1px solid var(--edge); box-shadow:0 1px 3px rgba(20,30,40,.10)}
+.pile i:nth-child(even){background:var(--card-a)}
+.pile i{transform:rotate(calc(var(--a) * var(--tilt,1))) translate(var(--x),var(--y))}
+.pile i:nth-child(1){--a:-15deg; --x:-4px; --y:6px}
+.pile i:nth-child(2){--a:6deg; --x:6px; --y:2px}
+.pile i:nth-child(3){--a:-12deg; --x:3px; --y:-5px}
+.pile i:nth-child(4){--a:3deg; --x:-5px; --y:4px}
+.pile i:nth-child(5){--a:-10deg; --x:5px; --y:5px}
+.pile i:nth-child(6){--a:-2deg; --x:-3px; --y:-3px}
+.pile i:nth-child(7){--a:-6deg; --x:2px; --y:3px}
+.pile{position:absolute; inset:0; filter:drop-shadow(0 14px 18px rgba(20,30,40,.16))}
+.card{position:absolute; left:0; top:0; width:100%; height:100%; background:var(--card-a); border:1px solid var(--edge);
+  padding:1.5em 1.8em 1.3em; font-size:clamp(16px,1.4vw,27px); line-height:1.5; opacity:0; pointer-events:none; z-index:1; min-height:7em;
+  transform:rotate(calc(var(--r,-6deg) * var(--tilt,1))); box-shadow:0 2px 6px rgba(20,30,40,.14)}
+.card.shade{background:var(--card-b)}
+.card.long{font-size:clamp(14.5px,1.25vw,24px); line-height:1.45}
+.card.top{opacity:1; pointer-events:auto; z-index:3}
+.card.arrive{animation:arrive .42s ease-out}
+.card.leave{opacity:1; z-index:4; animation:leave .42s ease-in forwards}
+.card.leave-back{opacity:1; z-index:4; animation:leaveBack .42s ease-in forwards}
+@keyframes arrive{from{transform:rotate(calc(var(--r) * var(--tilt,1) + 5deg)) scale(.96)} to{transform:rotate(calc(var(--r) * var(--tilt,1))) scale(1)}}
+@keyframes leave{to{transform:translate(58%,-10%) rotate(16deg); opacity:0}}
+@keyframes leaveBack{to{transform:translate(-58%,-10%) rotate(-18deg); opacity:0}}
+.card .count{float:right; margin:-6px -8px 6px 14px; font-size:.8em; font-weight:600; color:var(--soft-ink); background:#fff; border:1px solid var(--edge); border-radius:20px; padding:2px 12px}
+.card ul{margin-bottom:6px}
+.card-pic{float:right; width:clamp(90px,22%,220px); margin:0 0 10px 16px}
+.card-pic svg{width:100%; height:auto}
+.controls{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin-top:60px}
+.controls button{font:inherit; font-size:clamp(17px,1.2vw,24px); font-weight:600; cursor:pointer; padding:10px 20px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:48px}
+.controls button.next{background:var(--action); color:#fff}
+.controls button:hover{filter:brightness(.94)}
+.controls .where{min-width:7em; text-align:center; font-weight:700; font-size:clamp(18px,1.25vw,25px)}
+.hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:10px 0 0}
+
+/* full screen */
+.big{position:fixed; inset:0; z-index:50; background:#05090c; color:#fff; display:none}
+.big.open{display:flex; flex-direction:column}
+.big .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; font-weight:700}
+.big .body{flex:1; overflow:auto; padding:8px clamp(20px,7vw,90px) 24px; font-size:clamp(20px,2.9vw,34px); line-height:1.45}
+.big .body h3{font-size:1.1em; margin-bottom:.5em}
+.big .body .count{display:none}
+.big .body .card-pic{width:22%}
+.big .body .say{color:#fff; border-color:#fff; background:transparent}
+.big .foot{display:flex; gap:12px; justify-content:center; padding:12px 18px 20px}
+.big button{font:inherit; font-size:18px; font-weight:600; cursor:pointer; min-height:48px; padding:10px 22px; border-radius:6px; border:2px solid #fff; background:transparent; color:#fff}
+.big button.next{background:#fff; color:#05090c}
+
+/* activities */
+.activity{margin:22px 0 28px; padding:16px 20px 14px; border:2px solid #d8c9b2; border-radius:10px; background:#f1f5ec}
+.act-head{display:flex; gap:10px; align-items:center; margin-bottom:6px}
+.act-badge{background:var(--action); color:#fff; font-size:.7em; font-weight:700; padding:2px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:.04em}
+.act-instr{color:var(--soft-ink); font-size:.9em}
+.act-foot{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px}
+.act-foot button{font:inherit; font-size:.9em; font-weight:600; cursor:pointer; padding:8px 18px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:44px}
+.act-foot .act-check{background:var(--action); color:#fff}
+.act-result{font-weight:700}
+.act-result.good{color:var(--ok)} .act-result.bad{color:var(--bad)}
+.chip{display:inline-flex; align-items:center; font-size:.9em; padding:8px 14px; margin:5px; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; user-select:none; min-height:44px; line-height:1.3}
+.chip.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.chip.right{border-color:var(--ok); background:#ecfdf5}
+.chip.wrong{border-color:var(--bad); background:#fef2f2}
+.chip.placed{cursor:default}
+.bank{min-height:52px; padding:6px; border:2px dashed #b9a68a; border-radius:8px; margin-bottom:12px; background:#fff}
+.targets{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(16em,1fr))}
+.target{border:2px solid #b9a68a; border-radius:8px; background:#fff; padding:8px 10px; min-height:70px}
+.target .t-label{font-weight:700; margin-bottom:4px}
+.target .t-drop{min-height:44px; border:2px dashed #e8dcc6; border-radius:6px; padding:2px}
+.target.over .t-drop{border-color:var(--action); background:#f6efe2}
+.order{list-style:none; padding:0; margin:0; counter-reset:o}
+.order li{display:flex; gap:10px; align-items:center; background:#fff; border:2px solid #b9a68a; border-radius:8px; padding:8px 10px; margin:6px 0; cursor:grab}
+.order li .o-n{min-width:2em; height:2em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; font-size:.85em}
+.order li .o-t{flex:1}
+.order li .o-btn{display:flex; gap:4px}
+.order li .o-btn button{font:inherit; min-width:40px; min-height:40px; border-radius:6px; border:1px solid #b9a68a; background:#fff; cursor:pointer}
+.order li.right{border-color:var(--ok); background:#ecfdf5} .order li.wrong{border-color:var(--bad); background:#fef2f2}
+.order li.dragging{opacity:.5}
+.quiz-q{margin:10px 0 16px}
+.quiz-q .opt{display:block; width:100%; text-align:left; font:inherit; font-size:.95em; padding:10px 14px; margin:6px 0; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; min-height:44px}
+.quiz-q .opt.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.quiz-q .opt.right{border-color:var(--ok); background:#ecfdf5} .quiz-q .opt.wrong{border-color:var(--bad); background:#fef2f2}
+.quiz-q .why{font-size:.85em; color:var(--soft-ink); margin:4px 0 0 6px; display:none}
+.quiz-q.done .why{display:block}
+.fill-table{width:100%; border-collapse:collapse; font-size:.9em; background:#fff}
+.fill-table th,.fill-table td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+.fill-table th{background:#efe5d3}
+.fill-table select{font:inherit; font-size:.95em; min-height:40px; max-width:100%}
+.fill-table td.right{background:#ecfdf5} .fill-table td.wrong{background:#fef2f2}
+
+/* teacher view */
+.tnotes{display:none; margin:18px 0 6px; padding:12px 16px; background:var(--teach-bg); border:2px dashed #c4b5fd; border-radius:8px; font-size:.82em; color:#2e1065}
+body.teacher .tnotes{display:block}
+.tnotes .t-head{font-weight:800; color:var(--teach); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; font-size:.85em}
+.tnotes ul{margin:4px 0 8px}
+.tnotes .t-trap{background:#fff7ed; border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0}
+.tlink{font:inherit; font-size:1em; color:var(--soft-ink); background:none; border:0; text-decoration:underline; cursor:pointer; padding:0}
+.tpill[hidden]{display:none}
+.tpill{position:fixed; top:10px; right:10px; z-index:45; background:var(--teach); color:#fff; border-radius:30px; padding:6px 8px 6px 16px; display:flex; gap:8px; align-items:center; font-size:15px; font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.tpill button{font:inherit; font-size:14px; font-weight:700; border:0; border-radius:20px; padding:6px 12px; background:#fff; color:var(--teach); cursor:pointer; min-height:34px}
+.tpill button.tp-out{background:transparent; color:#fff; border:1px solid #fff}
+.card-pic.photo img{width:100%; height:auto; border-radius:8px; display:block}
+.grid4{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(11em,1fr)); margin:16px 0 22px}
+.grid4 figure{margin:0; background:#efe5d3; border-radius:12px; overflow:hidden}
+.grid4 img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+.grid4 figcaption{padding:10px 14px 12px; font-size:.9em}
+.grid4 figcaption b{display:block; color:var(--deep); font-size:1.05em}
+.side{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; margin:10px 0 18px}
+.side > div{flex:2 1 420px}
+.side figure{flex:0 1 380px; max-width:440px; margin:0}
+.side figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* Gerry */
+.mascot{position:fixed; left:clamp(6px,1.2vw,24px); top:120px; width:clamp(54px,6vw,110px); z-index:35; cursor:pointer; transition:top .6s cubic-bezier(.3,.9,.4,1.1); filter:drop-shadow(0 6px 10px rgba(0,0,0,.25)); user-select:none}
+.mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.mascot.hop svg{animation:hop .7s ease-out 1, bob 2.6s ease-in-out .7s infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes hop{0%{transform:translateY(0) scale(1,1)} 30%{transform:translateY(-40px) scale(.95,1.08) rotate(14deg)} 60%{transform:translateY(0) scale(1.08,.92)} 100%{transform:translateY(0) scale(1,1)}}
+.gerry-bubble{position:absolute; left:100%; top:0; margin-left:10px; width:max-content; max-width:16em; background:#fff; color:var(--ink); border:2px solid var(--deep); border-radius:14px; padding:8px 12px; font-size:clamp(14px,1vw,18px); line-height:1.35; box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.gerry-bubble::before{content:""; position:absolute; left:-12px; top:16px; border:6px solid transparent; border-right-color:var(--deep)}
+@media (max-width:900px){.mascot{display:none}}
+.mascot.drop{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.drop .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.drop .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+@media (prefers-reduced-motion:reduce){.mascot svg{animation:none}}
+
+.home{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(14px,2vw,32px); z-index:40; background:var(--action); color:#fff; font-weight:700; font-size:clamp(17px,1.2vw,24px); text-decoration:none; padding:12px 22px; border-radius:30px; box-shadow:0 4px 14px rgba(0,0,0,.25); min-height:48px; display:flex; align-items:center; gap:8px}
+.foot{margin:50px 0 90px; padding-top:16px; border-top:1px solid var(--edge); font-size:.75em; color:var(--soft-ink)}
+
+@media (max-width:560px){
+  body{font-size:17px}
+  .card{padding:20px 20px 18px; font-size:16px}
+  .card.long{font-size:14.5px}
+  .stack{width:auto; margin-left:14px; margin-right:14px; --tilt:.3}
+  .card-pic{width:30%}
+  h2.topic{font-size:1.25em}
+}
+@media (prefers-reduced-motion:reduce){
+  .card.arrive,.card.leave,.card.leave-back{animation-duration:.01s}
+  html{scroll-behavior:auto}
+}
+
+/* ordered strips (PPE on / off) */
+.strips{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr)); margin:16px 0 20px}
+.strip{background:#fffaf1; border-radius:12px; padding:14px 16px}
+.strip-title{font-weight:800; color:var(--deep); margin-bottom:8px}
+.strip-steps{list-style:none; margin:0; padding:0; counter-reset:st}
+.strip-steps li{counter-increment:st; display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px solid #e2e8f0}
+.strip-steps li:last-child{border-bottom:0}
+.strip-steps li::before{content:counter(st); display:inline-flex; align-items:center; justify-content:center; width:1.9em; height:1.9em; border-radius:50%; background:var(--c,#0b6f7c); color:#fff; font-weight:800; font-size:.85em; flex:none}
+table.plain{width:100%; border-collapse:collapse; font-size:.92em; margin:10px 0 18px; background:#fff}
+table.plain th,table.plain td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+table.plain th{background:#efe5d3}
+.tl-high{background:#fee2e2} .tl-med{background:#fef3c7} .tl-low{background:#dcfce7}
+
+/* activity start and blur */
+.act-start[hidden]{display:none}
+.act-start{display:flex; gap:14px; align-items:center; flex-wrap:wrap; padding:6px 0 2px; color:var(--soft-ink); font-size:.9em}
+.act-go{font:inherit; font-size:1em; font-weight:700; cursor:pointer; padding:10px 26px; border-radius:8px; border:0; background:var(--action); color:#fff; min-height:48px}
+.act-tools{margin:0 0 10px}
+.act-peek{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid #b9a68a; background:#fff; color:var(--action); min-height:40px}
+section.slide.hide-notes > :is(ol.points, .stack, figure.visual, .after, .intro, .watch-out, .vid, .audio-line, .side-points, p){filter:blur(7px); pointer-events:none; user-select:none; transition:filter .3s}
+section.slide.hide-notes .activity{filter:none}
+.vid{margin:20px 0 10px}
+.vid-title{margin:0 0 8px}
+.vid-by{color:var(--soft-ink); font-size:.85em}
+.video{margin:0 auto 6px; max-width:calc((100vh - 90px) * 16 / 9); aspect-ratio:16/9; background:#0e1a22; border-radius:6px; overflow:hidden; position:relative}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.watch{margin:0 0 20px; font-size:.8em; text-align:center}
+
+/* activity locked while the notes are showing */
+.activity.peeking .act-body, .activity.peeking .act-foot{pointer-events:none; opacity:.35; filter:grayscale(1)}
+.activity.peeking .act-tools::after{content:"Read the notes, then press the button to carry on."; margin-left:12px; color:var(--warn); font-weight:700; font-size:.9em}
+/* click to spotlight a part of a diagram */
+.spot [data-spot]{transition:opacity .3s, transform .3s; transform-box:fill-box; transform-origin:center}
+.spot.spotting [data-spot]:not(.lit){opacity:.28}
+.spot [data-spot].lit{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.14)}}
+.spot-hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:-8px 0 14px}
+/* points beside a picture */
+.side-points{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start}
+.side-points > ol.points{flex:2 1 420px; margin-top:0}
+.side-points > figure{flex:0 1 320px; max-width:360px; margin:0}
+.side-points > figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* student-visible Connect source line */
+.source{margin:16px 0 6px; padding:10px 14px 10px 44px; background:#f6efe2; border-left:4px solid var(--action); border-radius:8px; font-size:.92em; color:var(--soft-ink); position:relative; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center}
+.source::before{content:"\1F4D6"; position:absolute; left:12px; top:8px; font-size:1.2em}
+.source-label{font-weight:700; color:var(--ink)}
+.source a{text-decoration:none; font-weight:600; border:1px solid #d8c9b2; background:#fff; border-radius:999px; padding:2px 10px}
+.source a:hover{background:#efe5d3}
+
+/* Lesson 3: safety signs, RACE, two-up figures */
+.signs{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:12px 0 20px; align-items:start}
+.sign{background:#fff; border:2px solid var(--edge); border-radius:12px; padding:12px 10px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px}
+.sign svg{width:84px; height:84px}
+.sign span{font-weight:700; font-size:.9em; line-height:1.25}
+.signkey{display:flex; flex-wrap:wrap; gap:8px 20px; margin:6px 0 14px; font-size:.92em}
+.signkey i{display:inline-block; width:16px; height:16px; border-radius:50%; vertical-align:-3px; margin-right:6px}
+.race{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:14px 0 20px}
+.race div{border-left:8px solid var(--c); background:#fff; border-radius:10px; padding:12px 14px; box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.race b{display:block; font-size:2.2em; line-height:1; color:var(--c)}
+.race span{display:block; font-weight:700; font-size:1.1em; margin-top:4px}
+.race small{color:var(--soft-ink)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:14px 0}
+.grid2 figure{margin:0}
+.grid2 figcaption{font-size:.85em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > :is(.signs, .signkey, .race, .grid2){filter:blur(7px); pointer-events:none; user-select:none}
+
+/* side-by-side videos */
+.vid-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:16px 0 6px}
+.vid-row .vid{margin:0}
+.vid-row .video{max-width:none}
+section.slide.hide-notes > .vid-row{filter:blur(7px); pointer-events:none}
+
+/* finale: the grand exit */
+.finale{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; margin:24px 0 10px; padding:24px 10px 0; min-height:340px; overflow:hidden}
+.fin-side{display:flex; flex-direction:column; align-items:center; gap:10px; opacity:0; transition:transform .9s cubic-bezier(.2,.8,.3,1.1), opacity .6s}
+.fin-side.left{transform:translateX(-60vw)}
+.fin-side.right{transform:translateX(60vw)}
+.finale.in .fin-side{transform:none; opacity:1}
+.finale.in .fin-side.right{transition-delay:.25s}
+.fin-mascot{width:min(260px,38vw)}
+.fin-mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.fin-bubble{background:#fff; border:3px solid var(--deep); border-radius:18px; padding:14px 18px; font-size:1.08em; line-height:1.4; position:relative; max-width:34em; opacity:0; transform:scale(.7); transition:transform .5s cubic-bezier(.2,.8,.3,1.3), opacity .4s}
+.fin-bubble p{margin:0 0 8px}
+.fin-bubble::after{content:""; position:absolute; bottom:-14px; left:50%; margin-left:-8px; border:8px solid transparent; border-top-color:var(--deep)}
+.finale.in .fin-bubble{opacity:1; transform:none; transition-delay:1s}
+.finale.in .right .fin-bubble{transition-delay:1.5s}
+.fin-side .fin-bubble{order:-1}
+.fin-who{font-weight:800; color:var(--deep); margin:0}
+.fin-after{text-align:center; font-size:1.1em; color:var(--soft-ink); margin:10px 0 20px}
+@media (max-width:700px){.finale{grid-template-columns:1fr; min-height:0} .fin-side.left,.fin-side.right{transform:translateY(40px)} .finale.in .fin-side{transform:none}}
+@media (prefers-reduced-motion:reduce){.fin-side,.fin-bubble{transition:none; transform:none; opacity:1} .fin-mascot svg{animation:none}}
+.sign-pics{display:flex; gap:6px; align-items:center; justify-content:center; height:96px}
+.sign-pics img{max-height:96px; max-width:100%; object-fit:contain}
+.sign-pics img + img{max-height:60px}
+
+/* Lesson 4: risk matrix */
+table.matrix{border-collapse:collapse; margin:0 auto; font-size:.95em}
+table.matrix th, table.matrix td{border:2px solid #fff; padding:10px 12px; text-align:center}
+table.matrix thead th{background:#12384a; color:#fff; font-weight:700}
+table.matrix tbody th{background:#0b6f7c; color:#fff; text-align:left; font-weight:700}
+table.matrix .corner{background:#1b2530; font-size:.8em}
+table.matrix td.m-L{background:#bbf7d0; color:#14532d; font-weight:700}
+table.matrix td.m-M{background:#fde68a; color:#78350f; font-weight:700}
+table.matrix td.m-H{background:#fca5a5; color:#7f1d1d; font-weight:700}
+@media (max-width:700px){table.matrix{font-size:.75em} table.matrix th, table.matrix td{padding:6px 4px}}
+
+
+.tag{display:inline-block; font-family:"Segoe UI",Arial,sans-serif; font-size:.68em; font-weight:700; padding:1px 10px; border-radius:12px; margin:0 6px; vertical-align:middle; white-space:nowrap}
+.tag.old{background:#e5e1db; color:#4a4540; border:1px solid #b9b2a8}
+.tag.repl{background:#fdf0dc; color:#8a4b12; border:1px solid #e8b878}
+.tag.new{background:#e2efdc; color:#2f5a2a; border:1px solid #9cc290}
+.vid.local video{display:block; width:100%; max-width:1100px; max-height:72vh; margin:0 auto; border-radius:8px; background:#000}
+.mascot.side-right{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.side-right .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.side-right .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+.gerry-bubble{border-color:var(--wood)}
+.home{background:var(--wood)}
+.side-points figure img{border-radius:10px; border:1px solid var(--edge)}
+figure.visual img{border-radius:10px}
+.watch-out b{margin-right:0}
+.watch-out > b:first-child{margin-right:6px}
+body.presenting .mascot{z-index:45}
+@media (max-width:700px){
+  .lessonbar{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:thin; padding-bottom:10px}
+  .lessonbar a{flex:0 0 auto}
+}
+.fill-table select{width:100%}
+
+/* infographics: big, centred, click for full screen */
+figure.infopic{margin:22px auto 26px; text-align:center}
+figure.infopic img{display:block; margin:0 auto; width:100%; max-width:1300px; max-height:82vh; object-fit:contain; border-radius:12px; border:1px solid var(--edge); background:#fff; cursor:zoom-in}
+figure.infopic .info-svg{max-width:1300px; margin:0 auto; background:#fffdf8; border:1px solid var(--edge); border-radius:12px; padding:10px; cursor:zoom-in}
+figure.infopic figcaption{font-size:.75em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > figure.infopic{filter:blur(7px); pointer-events:none; user-select:none}
+.zoombox{position:fixed; inset:0; z-index:70; background:rgba(20,14,10,.92); display:flex; align-items:center; justify-content:center; cursor:zoom-out; padding:2vh 2vw}
+.zoombox img,.zoombox svg{max-width:96vw; max-height:94vh; width:auto; height:auto; background:#fff; border-radius:10px}
+.zoombox .info-svg{width:96vw; max-height:94vh; background:#fffdf8; border-radius:10px; padding:10px}
+.zoombox .info-svg svg{width:100%; max-height:90vh}
+.zoombox .zclose{position:fixed; top:14px; right:18px; font:inherit; font-weight:700; border:0; border-radius:20px; padding:8px 18px; background:#fff; color:var(--wood); cursor:pointer}
+/* external (sign-in) videos and handouts */
+.vid.ext{margin:18px 0}
+.ext-play{display:flex; align-items:center; gap:16px; padding:16px 20px; background:#2f2a24; color:#fff8ec; border-radius:12px; text-decoration:none; max-width:760px; box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.ext-play:hover,.ext-play:focus{background:#4a3b2d; outline:3px solid var(--action)}
+.ext-icon{flex:0 0 56px; height:56px; border-radius:50%; background:var(--action); display:grid; place-items:center; font-size:26px; padding-left:4px}
+.ext-play b{display:block; font-size:1.05em}
+.ext-play small{display:block; opacity:.85; margin-top:3px; font-size:.82em}
+.docs{background:#fbf7ef; border:1px solid #e3d6bf; border-left:6px solid var(--wood); border-radius:10px; padding:12px 20px; margin:16px 0}
+.docs-title{margin:0 0 6px}
+.docs ul{margin:0; padding-left:22px}
+.docs li{margin:6px 0}
+section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events:none}
+.t-demo .t-sub{margin:8px 0 2px; font-weight:700; color:#7a4a1e}
+.t-demo ul,.t-links ul{margin:2px 0 6px; padding-left:20px}
+.t-note{color:#666; font-size:.9em}
+.docs-btn{display:inline-block; margin:10px 0 4px; padding:10px 18px; background:var(--action); color:#fff; border-radius:999px; text-decoration:none; font-weight:700}
+.docs-btn:hover,.docs-btn:focus{background:var(--wood); outline:3px solid var(--action)}
+.docs-note{margin:4px 0 0; font-size:.85em; color:var(--soft-ink)}
+/* ---- 28 Oct 2026: glossary pop-up, teacher button in the lesson bar, Play all state ---- */
+a.term{cursor:help}
+.gpop{position:absolute; z-index:80; width:min(26em,calc(100vw - 16px)); background:#fffdf7; color:var(--ink); border:2px solid var(--wood,#6b4a33); border-radius:12px; padding:12px 40px 10px 16px; box-shadow:0 10px 28px rgba(0,0,0,.25); font-size:clamp(16px,1.1vw,22px); line-height:1.45}
+.gpop p{margin:0 0 6px}
+.gpop .gp-term{font-weight:800; color:var(--wood,#6b4a33)}
+.gpop .gp-more{font-size:.85em; margin:4px 0 0}
+.gpop .gp-more a{color:var(--action)}
+.gpop .gp-x{position:absolute; top:6px; right:6px; width:34px; height:34px; border:0; border-radius:50%; background:transparent; font-size:24px; line-height:1; cursor:pointer; color:var(--soft-ink)}
+.gpop .gp-x:hover{background:#f0e6d6}
+.lessonbar .tlink-top{margin-left:auto; padding:6px 12px; border-radius:20px; border:1px dashed var(--edge); background:transparent; color:var(--soft-ink); text-decoration:none; font-size:.85em; white-space:nowrap}
+.lessonbar .tlink-top:hover{border-color:var(--wood); color:var(--wood)}
+body.tv-pill .lessonbar .tlink-top{display:none}
+.say.playall-btn.playing{background:var(--action); color:#fff}
+.tpill .tp-label{margin-right:2px}
+@media print{ .gpop,.tlink-top{display:none} }
+
+/* ===================== CHCCOM005 CHCDIV001 neon theme (29 Oct 2026): neon red and green lights, a little shine, readable ===================== */
+:root{
+  --ink:#16201d; --soft-ink:#46524e; --paper:#f6f8f7;
+  --deep:#0b5a3c; --aqua:#7dffc0; --action:#d81e3c;
+  --card-a:#ffffff; --card-b:#eef3f1; --edge:#d8e2de;
+  --wood:#0b5a3c; --sage-bg:#ecf8f2; --clay:#d81e3c; --neonR:#ff2e4d; --neonG:#19e68c;
+}
+body{background-color:var(--paper)}
+h1,h2,h3,.banner h1{font-family:"Segoe UI","Trebuchet MS",Arial,sans-serif}
+.banner{background-color:#0d1312; background-image:
+  radial-gradient(ellipse 40% 60% at 12% 110%,rgba(255,46,77,.35),transparent 70%),
+  radial-gradient(ellipse 40% 60% at 70% -10%,rgba(25,230,140,.30),transparent 70%),
+  linear-gradient(115deg,#0d1312 0%,#111b19 55%,#0d1312 100%);
+  border-bottom:4px solid transparent; border-image:linear-gradient(90deg,var(--neonR),#ffd27a,var(--neonG)) 1;
+  box-shadow:0 2px 18px rgba(255,46,77,.35),0 6px 26px rgba(25,230,140,.25);
+  padding:clamp(40px,6vw,96px) 20px clamp(26px,3vw,44px)}
+.banner::before,.banner::after{content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
+  background-image:radial-gradient(2px 2px at 8% 30%,#fff,transparent 60%),radial-gradient(1.5px 1.5px at 22% 70%,#ffd7de,transparent 60%),radial-gradient(2px 2px at 41% 18%,#d6ffe9,transparent 60%),radial-gradient(1.5px 1.5px at 57% 82%,#fff,transparent 60%),radial-gradient(2px 2px at 66% 40%,#ffd7de,transparent 60%),radial-gradient(1.5px 1.5px at 33% 48%,#d6ffe9,transparent 60%),radial-gradient(2px 2px at 92% 76%,#fff,transparent 60%);
+  animation:twinkle 4s ease-in-out infinite}
+.banner::after{background-position:13px 9px; animation-delay:2s}
+@keyframes twinkle{0%,100%{opacity:.25} 50%{opacity:.9}}
+.banner h1{color:#fff; text-shadow:0 0 6px rgba(255,255,255,.35),0 0 18px rgba(255,46,77,.55),0 0 34px rgba(25,230,140,.35)}
+.banner .sub{color:#e7efec}
+.banner .kicker{color:var(--aqua); text-shadow:0 0 8px rgba(25,230,140,.6)}
+.banner.first{position:relative; overflow:hidden}
+.banner.first .banner-inner{position:relative; z-index:2}
+.hero-hellos{position:absolute; z-index:1; right:clamp(10px,4vw,90px); top:50%; transform:translateY(-50%); width:clamp(220px,30vw,520px); pointer-events:none}
+.hero-hellos svg{display:block; width:100%; height:auto}
+.hero-hellos .hb{animation:hbPop 6s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%}
+@keyframes hbPop{0%,100%{transform:scale(1); opacity:.9} 8%{transform:scale(1.08); opacity:1} 16%{transform:scale(1); opacity:.9}}
+@media (max-width:800px){.hero-hellos{opacity:.28; width:280px}}
+@media (prefers-reduced-motion:reduce){.hero-hellos .hb,.banner::before,.banner::after{animation:none}}
+.lessonbar{display:flex; flex-wrap:wrap; gap:8px 10px; padding:12px clamp(20px,3vw,60px); background:#121a18; border-bottom:1px solid #26332f; font-size:clamp(14px,.95vw,19px)}
+.lessonbar a{padding:6px 14px; border-radius:20px; background:transparent; border:1px solid #3c4c47; color:#e7efec; text-decoration:none; font-weight:600; white-space:nowrap}
+.lessonbar a:hover{border-color:var(--neonG); box-shadow:0 0 8px rgba(25,230,140,.5)}
+.lessonbar a.on{background:var(--neonG); border-color:var(--neonG); color:#06241a; box-shadow:0 0 10px rgba(25,230,140,.7)}
+.lessonbar .tlink{color:#e7efec}
+#index{background:#ffffff; border-left-color:var(--neonR); box-shadow:0 1px 0 var(--edge)}
+h2.topic{color:#10241d; border-bottom:3px solid transparent; border-image:linear-gradient(90deg,var(--neonR),var(--neonG)) 1; padding-bottom:8px}
+h2.topic .num{background:var(--action); color:#fff; box-shadow:0 0 0 2px #fff,0 0 12px rgba(255,46,77,.65)}
+#index .num{box-shadow:0 0 8px rgba(255,46,77,.5)}
+ol.points li{background:var(--card-a); border:1px solid var(--edge); box-shadow:0 1px 0 #e3ebe8}
+ol.points li::before{border-color:var(--action); color:var(--deep)}
+.activity{background:var(--sage-bg); border-color:#b7e3cd}
+a.term{text-decoration-color:var(--action)}
+.gerry-bubble{border-color:var(--deep)}
+.home{background:var(--deep); box-shadow:0 0 12px rgba(25,230,140,.45)}
+.ext-play{background:var(--deep); color:#fff}
+.ext-play:hover,.ext-play:focus{background:#0e7550}
+.docs{background:#fbfffd; border-color:#d3eadf; border-left-color:var(--action)}
+.zoombox .zclose{color:var(--deep)}
+.gpop{border-color:var(--deep)}
+.gpop .gp-term{color:var(--deep)}
+.t-demo .t-sub{color:var(--deep)}
+.vid-row{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+strong.motto{color:#d81e3c; font-weight:900; font-size:1.15em; text-shadow:0 0 10px rgba(255,46,77,.35)}
+.card-pic.photo img{max-height:clamp(180px,22vw,300px); width:auto; max-width:100%; margin:0 auto; display:block; object-fit:cover; border-radius:8px}
+
+/* opening video: big, nothing beside it */
+.vid.opener .video{max-width:calc((100vh - 60px) * 16 / 9); box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.vid.opener .vid-title{text-align:center; font-size:1.1em}
+
+/* greeting cards (Good Morning) */
+.greet-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr)); gap:18px; margin:18px 0}
+.greet{background:var(--card-a); border:1px solid var(--edge); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 2px 0 #ece1cf}
+.greet .g-pic{aspect-ratio:4/3; background:#e9dfcf}
+.greet .g-pic img{width:100%; height:100%; object-fit:cover; display:block}
+.greet .g-body{padding:12px 16px 14px}
+.greet .g-lang{margin:0; font-size:.8em; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--action)}
+.greet .g-words{margin:4px 0 2px; font-size:1.25em; font-weight:700; color:var(--deep); line-height:1.25}
+.greet .g-say{margin:0 0 10px; color:var(--soft-ink); font-size:.9em}
+.greet .g-who{font-size:.75em; color:var(--soft-ink); margin-left:6px}
+.greet.playing{outline:4px solid #19c37d}
+.greet-all{margin:6px 0 4px}
+
+/* Auslan sign grid */
+.sign-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr)); gap:18px; margin:18px 0}
+.sign{background:var(--card-a); border:2px solid var(--edge); border-radius:14px; overflow:hidden}
+.sign .s-head{display:flex; align-items:center; gap:12px; padding:10px 14px}
+.sign .s-num{flex:0 0 auto; width:2.2em; height:2.2em; border-radius:50%; background:var(--action); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:1.2em}
+.sign .s-word{font-size:1.35em; font-weight:800; color:var(--deep)}
+.sign video{display:block; width:100%; aspect-ratio:1512/1060; background:#2a3bcf; object-fit:cover}
+.sign:target{border-color:#19c37d; box-shadow:0 0 0 5px rgba(233,162,59,.35)}
+.sign-jump{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
+.sign-jump a{display:inline-flex; width:2.4em; height:2.4em; align-items:center; justify-content:center; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:800; text-decoration:none}
+.sign-jump a:hover{background:var(--action); color:#fff}
+
+/* give out the numbers (teacher tool on the page) */
+.giveout-btn{background:#0b5a3c; color:#fff; border:0; border-radius:24px; padding:10px 20px; font:inherit; font-weight:700; cursor:pointer}
+.giveout{position:fixed; inset:0; z-index:80; background:#0d1312; color:#fff; padding:clamp(14px,2vw,30px); overflow:auto}
+.giveout h3{margin:0 0 6px; color:#7dffc0}
+.giveout .go-help{margin:0 0 14px; color:#d9ece9; font-size:.85em}
+.giveout .go-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px}
+.giveout .go-cell{background:#0b5a3c; border-radius:12px; padding:10px 12px}
+.giveout .go-n{font-size:2.2em; font-weight:800; color:#7dffc0; line-height:1}
+.giveout .go-w{font-weight:700; font-size:1.05em}
+.giveout input{width:100%; margin-top:6px; font:inherit; font-size:.85em; padding:6px 8px; border-radius:6px; border:0}
+.giveout .go-bar{display:flex; gap:10px; margin:0 0 14px; flex-wrap:wrap}
+.giveout .go-bar button{font:inherit; border:0; border-radius:20px; padding:8px 16px; font-weight:700; cursor:pointer}
+.giveout .go-close{background:#7dffc0; color:#0d1312}
+.giveout .go-clear{background:var(--action); color:#fff}
+
+/* language flags grid (South Africa) */
+.flag-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; margin:14px 0}
+.flag-grid figure{margin:0; background:var(--card-a); border:1px solid var(--edge); border-radius:10px; overflow:hidden; text-align:center}
+.flag-grid img{width:100%; aspect-ratio:3/2; object-fit:cover; display:block}
+.flag-grid figcaption{padding:6px; font-weight:700; color:var(--deep)}
+
+/* timeline cards */
+.tl{overflow-x:auto; margin:16px 0}
+.tl table{border-collapse:separate; border-spacing:6px; min-width:760px; width:100%}
+.tl th{background:var(--deep); color:#fff; padding:8px 10px; border-radius:8px; font-size:.9em}
+.tl th.asp{background:var(--action)}
+.tl td{background:var(--card-a); border:1px solid var(--edge); border-radius:8px; padding:8px 10px; vertical-align:top; font-size:.85em}
+.tl td ul{margin:0; padding-left:1.1em}
+section.slide.hide-notes > :is(.tl, .greet-grid, .flag-grid, .sign-grid){filter:blur(7px); pointer-events:none}
+
+
+.greet-all-btn{background:var(--action); color:#fff; border:0; border-radius:24px; padding:10px 20px; font:inherit; font-weight:700; cursor:pointer}
+.greet-all-btn.playing{background:#0b5a3c}
+.giveout-btn{display:none}
+body.teacher .giveout-btn, body.presenting .giveout-btn{display:inline-block}
+.sign-tools{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px}
+
+.greet .g-pic{overflow:hidden; position:relative}
+.greet .g-pic img{position:absolute; inset:0; width:100% !important; height:100% !important; max-width:none !important; object-fit:cover}
+.greet .g-who{display:block; margin:6px 0 0}
+
+@media (max-width:700px){
+  .tl table{min-width:0; border-spacing:0}
+  .tl thead{display:none}
+  .tl tr{display:block; margin:0 0 14px}
+  .tl th.asp{display:block; border-radius:8px 8px 0 0; text-align:left}
+  .tl td{display:block; border-radius:0; margin:0}
+  .tl td::before{content:attr(data-col); display:block; font-weight:800; color:var(--deep); margin:0 0 4px}
+  .tl td:last-child{border-radius:0 0 8px 8px}
+}
+
+/* Discussion prompts and timers (Lessons 6 and 7) */
+.discuss{display:grid; gap:12px; margin:14px 0}
+.dq{background:var(--card,#fff); border:1px solid #d9e6e0; border-left:5px solid #19a865; border-radius:10px; padding:12px 16px}
+.dq-q{margin:0 0 6px; font-weight:600}
+.dq-n{display:inline-block; background:#e8344f; color:#fff; border-radius:999px; padding:1px 10px; font-size:.85em; margin-right:6px}
+.dq-t{margin:6px 0 2px; color:#4a5a55; font-size:.95em}
+.dq ul{margin:0; padding-left:22px}
+.timers{display:flex; flex-wrap:wrap; gap:14px; margin:14px 0}
+.timer{flex:1 1 240px; background:#0d1614; color:#fff; border-radius:14px; padding:14px 18px; text-align:center; box-shadow:0 0 0 2px #19e68c, 0 0 18px rgba(25,230,140,.35)}
+.timer.low{box-shadow:0 0 0 2px #ffb020, 0 0 18px rgba(255,176,32,.45)}
+.timer.done{box-shadow:0 0 0 2px #ff2e4d, 0 0 22px rgba(255,46,77,.6)}
+.tm-label{margin:0; font-weight:700}
+.tm-time{margin:4px 0 8px; font-size:3rem; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:2px}
+.tm-btns{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; align-items:center}
+.tm-btns button{background:#e8344f; color:#fff; border:0; border-radius:8px; padding:8px 16px; font-weight:700; cursor:pointer}
+.tm-btns .tm-reset{background:transparent; border:2px solid #19e68c; color:#19e68c}
+.tm-snd{font-size:.85em; color:#cfe}
+
+.tm-set{display:flex; flex-wrap:wrap; gap:10px 16px; justify-content:center; margin-bottom:4px}
+.tm-set label{font-size:.9em; color:#cfe}
+.tm-set input{background:#16231f; color:#fff; border:1px solid #19e68c; border-radius:6px; padding:5px 8px; font:inherit}
+.tm-set .tm-name{width:min(260px,60vw)} .tm-set .tm-min{width:80px}
+.tm-time{font-size:clamp(3rem,9vw,5.5rem)}
+.tm-presets{display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin-top:10px}
+.tm-presets button{background:transparent; color:#cfe; border:1px solid #3a5a50; border-radius:999px; padding:4px 10px; font-size:.82em; cursor:pointer}
+.tm-presets button:hover{border-color:#19e68c; color:#fff}
+.tm-mini{position:fixed; left:16px; bottom:16px; z-index:60; background:#0d1614; color:#fff; border-radius:999px; padding:8px 16px; text-decoration:none; box-shadow:0 0 0 2px #19e68c, 0 0 16px rgba(25,230,140,.4); font-variant-numeric:tabular-nums}
+.tm-mini.low{box-shadow:0 0 0 2px #ff2e4d, 0 0 16px rgba(255,46,77,.5)}
+.tm-mini[hidden]{display:none}
+.tm-link{margin:8px 0 0}
+.rule-box{border:3px solid #e8344f; background:#fff4f6; border-radius:12px; padding:12px 16px; margin:12px 0; font-size:1.1em}
+.docbox{border:1px solid #cfdcd6; background:#fff; border-radius:12px; padding:14px 18px; margin:12px 0; box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.docbox h3{margin-top:0}
+
+.lessons{list-style:none; padding:0; margin:20px 0; display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr))}
+.lessons li{border:1px solid var(--edge); border-radius:10px; padding:16px 18px; background:var(--card-a); box-shadow:0 1px 0 #e6d9c4}
+.lessons li.soon{opacity:.55}
+.lessons a{font-weight:700; text-decoration:none; font-size:1.05em; color:var(--wood)}
+.lessons .np{display:block; font-size:.8em; color:var(--soft-ink); margin-top:4px}
+.lessons{align-items:start}
+.lessons details{margin-top:8px}
+.lessons summary{cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; font-size:.85em; font-weight:600; color:var(--action); padding:4px 10px 4px 6px; border-radius:16px; border:1px solid var(--edge); background:#fff}
+.lessons summary::-webkit-details-marker{display:none}
+.lessons summary .arr{display:inline-block; transition:transform .15s; font-size:.8em}
+.lessons details[open] summary .arr{transform:rotate(90deg)}
+.lessons details ol{list-style:none; margin:8px 0 0; padding:0}
+.lessons details li{border:0; padding:3px 0; background:none; box-shadow:none; border-radius:0; font-size:.9em}
+.lessons details li a{font-weight:600; font-size:1em; color:var(--ink)}
+.lessons details li a:hover{color:var(--wood)}
+.lessons details .num{display:inline-grid; place-items:center; min-width:1.6em; height:1.6em; margin-right:6px; border-radius:50%; background:var(--wood); color:#fff; font-size:.8em}
+.refhow{background:var(--card-a); border:1px solid var(--edge); border-radius:10px; padding:10px 16px}
+@media (prefers-reduced-motion: reduce){ .lessons summary .arr{transition:none} }
+@media print{ .lessons details > ol{display:block} }
+dl.gloss{margin:10px 0 40px}
+dl.gloss dt{font-weight:700; margin-top:14px; scroll-margin-top:20px; color:var(--wood)}
+dl.gloss dd{margin:2px 0 0 0; color:var(--soft-ink)}
+dl.gloss dt:target{background:#fdf0dc}
+</style></head>
+<body>
+<main>
+<header class="banner first"><div class="banner-inner"><p class="kicker">CHCCOM005 CHCDIV001</p><h1>Consumer-Directed Care Cluster</h1><p class="sub">Your lessons and the glossary for this unit.</p></div><div class="hero-hellos" aria-hidden="true"><svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg">
+  <g class="hb" style="animation-delay:0s"><path d="M20 10 h150 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H60 l-16 14 l2 -14 H20 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="95" y="47" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">Good morning</text></g>
+  <g class="hb" style="animation-delay:0.7s"><path d="M210 0 h130 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H250 l-16 14 l2 -14 H210 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#19e68c" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #19e68c)"/><text x="275" y="37" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #19e68c)">Sawubona</text></g>
+  <g class="hb" style="animation-delay:1.4s"><path d="M370 20 h120 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H410 l-16 14 l2 -14 H370 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="430" y="57" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">Bonjour</text></g>
+  <g class="hb" style="animation-delay:2.1s"><path d="M60 105 h150 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H100 l-16 14 l2 -14 H60 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#19e68c" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #19e68c)"/><text x="135" y="142" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #19e68c)">Goeie môre</text></g>
+  <g class="hb" style="animation-delay:2.8s"><path d="M250 95 h120 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H290 l-16 14 l2 -14 H250 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="310" y="132" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="19" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">안녕하세요</text></g>
+  <g class="hb" style="animation-delay:3.5s"><path d="M395 120 h105 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H435 l-16 14 l2 -14 H395 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#19e68c" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #19e68c)"/><text x="447.5" y="157" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #19e68c)">早上好</text></g>
+  <g class="hb" style="animation-delay:4.2s"><path d="M10 200 h140 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H50 l-16 14 l2 -14 H10 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="80" y="237" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">Xin chào</text></g>
+  <g class="hb" style="animation-delay:4.9s"><path d="M185 195 h150 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H225 l-16 14 l2 -14 H185 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#19e68c" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #19e68c)"/><text x="260" y="232" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="21" fill="#fff" style="filter:drop-shadow(0 0 4px #19e68c)">Konnichiwa</text></g>
+  <g class="hb" style="animation-delay:5.4s"><path d="M365 215 h125 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 H405 l-16 14 l2 -14 H365 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="rgba(10,16,15,.72)" stroke="#ff2e4d" stroke-width="3.5" style="filter:drop-shadow(0 0 6px #ff2e4d)"/><text x="427.5" y="252" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#fff" style="filter:drop-shadow(0 0 4px #ff2e4d)">Salaam</text></g>
+</svg></div></header>
+<nav class="lessonbar" aria-label="Lessons in this unit"><a href="#index" class="on" aria-current="page">&#8962; Lessons</a><a href="1-people-culture-diversity.html">1 People and culture</a><a href="2-how-we-communicate.html">2 Communicating</a><a href="3-working-with-your-team.html">3 Your team</a><a href="4-legal-ethical-and-writing.html">4 Legal and writing</a><a href="5-case-studies-mary-and-jane.html">5 Mary and Jane</a><a href="6-practical-skills-day.html">6 Practical day</a><a href="#glossary">Glossary</a></nav>
+<div class="wrap">
+  <h2 class="topic" id="index"><span class="num">&#9733;</span> Lessons</h2>
+  <p>Open the lesson your teacher tells you. Each lesson opens in this window. Use the bar at the top of every page to move between lessons.</p>
+  <ul class="lessons">
+  <li class=""><a href="1-people-culture-diversity.html">Lesson 1: People, culture and diversity</a><span class="np">Nearpod 3</span><details><summary><span class="arr" aria-hidden="true">&#9654;</span> In this lesson (10 sections)</summary><ol><li><a href="1-people-culture-diversity.html#s1"><span class="num">1</span>Watch and listen: no words needed</a></li><li><a href="1-people-culture-diversity.html#s2"><span class="num">2</span>Good morning! How are you?</a></li><li><a href="1-people-culture-diversity.html#s3"><span class="num">3</span>What is diversity? What is culture?</a></li><li><a href="1-people-culture-diversity.html#s4"><span class="num">4</span>Key areas of diversity</a></li><li><a href="1-people-culture-diversity.html#s5"><span class="num">5</span>Accommodating diversity: the need, and what we do</a></li><li><a href="1-people-culture-diversity.html#s6"><span class="num">6</span>Working with people who are different from you</a></li><li><a href="1-people-culture-diversity.html#s7"><span class="num">7</span>How Australia has changed</a></li><li><a href="1-people-culture-diversity.html#s8"><span class="num">8</span>Human needs and human rights</a></li><li><a href="1-people-culture-diversity.html#s9"><span class="num">9</span>Every person is unique</a></li><li><a href="1-people-culture-diversity.html#s10"><span class="num">10</span>Self-awareness and reflection</a></li></ol></details></li><li class=""><a href="2-how-we-communicate.html">Lesson 2: How we communicate</a><span class="np">Nearpod 5</span><details><summary><span class="arr" aria-hidden="true">&#9654;</span> In this lesson (11 sections)</summary><ol><li><a href="2-how-we-communicate.html#s1"><span class="num">1</span>How a message travels</a></li><li><a href="2-how-we-communicate.html#s2"><span class="num">2</span>Four ways we communicate</a></li><li><a href="2-how-we-communicate.html#s3"><span class="num">3</span>Body language: talking without words</a></li><li><a href="2-how-we-communicate.html#s4"><span class="num">4</span>Effective communication</a></li><li><a href="2-how-we-communicate.html#s5"><span class="num">5</span>Conversation techniques</a></li><li><a href="2-how-we-communicate.html#s6"><span class="num">6</span>Active listening</a></li><li><a href="2-how-we-communicate.html#s7"><span class="num">7</span>Seven things that change how people communicate</a></li><li><a href="2-how-we-communicate.html#s8"><span class="num">8</span>How culture shapes communication</a></li><li><a href="2-how-we-communicate.html#s9"><span class="num">9</span>Showing respect when you communicate</a></li><li><a href="2-how-we-communicate.html#s10"><span class="num">10</span>Barriers, and how to get past them</a></li><li><a href="2-how-we-communicate.html#s11"><span class="num">11</span>When communication breaks down</a></li></ol></details></li><li class=""><a href="3-working-with-your-team.html">Lesson 3: Working with your team</a><span class="np">Nearpod 7</span><details><summary><span class="arr" aria-hidden="true">&#9654;</span> In this lesson (9 sections)</summary><ol><li><a href="3-working-with-your-team.html#s1"><span class="num">1</span>Know your role: the documents that tell you</a></li><li><a href="3-working-with-your-team.html#s2"><span class="num">2</span>Working together with colleagues</a></li><li><a href="3-working-with-your-team.html#s3"><span class="num">3</span>Passive, aggressive, assertive</a></li><li><a href="3-working-with-your-team.html#s4"><span class="num">4</span>Maree and Louise: speaking up the right way</a></li><li><a href="3-working-with-your-team.html#s5"><span class="num">5</span>Solving conflict step by step</a></li><li><a href="3-working-with-your-team.html#s6"><span class="num">6</span>Performance appraisals</a></li><li><a href="3-working-with-your-team.html#s7"><span class="num">7</span>Continuous improvement: getting better every day</a></li><li><a href="3-working-with-your-team.html#s8"><span class="num">8</span>Inclusion and cultural safety at work</a></li><li><a href="3-working-with-your-team.html#s9"><span class="num">9</span>Digital media at work, and the social media policy</a></li></ol></details></li><li class=""><a href="4-legal-ethical-and-writing.html">Lesson 4: Legal, ethical, and writing it down</a><span class="np">Nearpod 9</span><details><summary><span class="arr" aria-hidden="true">&#9654;</span> In this lesson (8 sections)</summary><ol><li><a href="4-legal-ethical-and-writing.html#s1"><span class="num">1</span>Legal and ethical: what is the difference?</a></li><li><a href="4-legal-ethical-and-writing.html#s2"><span class="num">2</span>Eleven key words</a></li><li><a href="4-legal-ethical-and-writing.html#s3"><span class="num">3</span>A legal problem or an ethical problem?</a></li><li><a href="4-legal-ethical-and-writing.html#s4"><span class="num">4</span>Professional boundaries: the first meeting</a></li><li><a href="4-legal-ethical-and-writing.html#s5"><span class="num">5</span>Where people find services: My Aged Care and the NDIS</a></li><li><a href="4-legal-ethical-and-writing.html#s6"><span class="num">6</span>Writing at work: the rules</a></li><li><a href="4-legal-ethical-and-writing.html#s7"><span class="num">7</span>The incident report, field by field</a></li><li><a href="4-legal-ethical-and-writing.html#s8"><span class="num">8</span>The progress note</a></li></ol></details></li><li class=""><a href="5-case-studies-mary-and-jane.html">Lesson 5: Case studies: Mary and Jane</a><span class="np">Nearpod 11</span><details><summary><span class="arr" aria-hidden="true">&#9654;</span> In this lesson (9 sections)</summary><ol><li><a href="5-case-studies-mary-and-jane.html#s1"><span class="num">1</span>Mary's story</a></li><li><a href="5-case-studies-mary-and-jane.html#s2"><span class="num">2</span>Mary: the key issues</a></li><li><a href="5-case-studies-mary-and-jane.html#s3"><span class="num">3</span>Supporting Mary: six needs</a></li><li><a href="5-case-studies-mary-and-jane.html#s4"><span class="num">4</span>Jane and Mei Lin's story</a></li><li><a href="5-case-studies-mary-and-jane.html#s5"><span class="num">5</span>Jane: self-awareness, and a lack of it</a></li><li><a href="5-case-studies-mary-and-jane.html#s6"><span class="num">6</span>How could Mei Lin and her family feel?</a></li><li><a href="5-case-studies-mary-and-jane.html#s7"><span class="num">7</span>Help with communication: what can you ask for?</a></li><li><a href="5-case-studies-mary-and-jane.html#s8"><span class="num">8</span>A better experience for both Mei Lin and Jane</a></li><li><a href="5-case-studies-mary-and-jane.html#s9"><span class="num">9</span>We are stronger together</a></li></ol></details></li><li class=""><a href="6-practical-skills-day.html">Lesson 6: Practical skills day</a><span class="np">Nearpod 13</span><details><summary><span class="arr" aria-hidden="true">&#9654;</span> In this lesson (13 sections)</summary><ol><li><a href="6-practical-skills-day.html#s1"><span class="num">1</span>Today's plan and the rules</a></li><li><a href="6-practical-skills-day.html#s2"><span class="num">2</span>AT2: the Diversity conversation, and the rules</a></li><li><a href="6-practical-skills-day.html#s3"><span class="num">3</span>AT2: what your teacher watches for</a></li><li><a href="6-practical-skills-day.html#s4"><span class="num">4</span>AT2: your teacher's six questions</a></li><li><a href="6-practical-skills-day.html#s5"><span class="num">5</span>AT3: the group discussion, and the rules</a></li><li><a href="6-practical-skills-day.html#s6"><span class="num">6</span>What your teacher watches for</a></li><li><a href="6-practical-skills-day.html#s7"><span class="num">7</span>Laws and rules to talk about (AT2 and AT3)</a></li><li><a href="6-practical-skills-day.html#s8"><span class="num">8</span>Scenario 1: Zia</a></li><li><a href="6-practical-skills-day.html#s9"><span class="num">9</span>Scenario 3: Allie</a></li><li><a href="6-practical-skills-day.html#s10"><span class="num">10</span>AT3: the questions your teacher asks</a></li><li><a href="6-practical-skills-day.html#s11"><span class="num">11</span>AT3: your reflection</a></li><li><a href="6-practical-skills-day.html#s12"><span class="num">12</span>Afternoon: Observation Task 9, hoist transfer</a></li><li><a href="6-practical-skills-day.html#s13"><span class="num">13</span>Afternoon: Observation Task 10A, falls recovery with a hoist</a></li></ol></details></li>
+  </ul>
+  <p class="refhow"><b>How to write a reference:</b> <b>NP4 S5 P1</b> means <b>Nearpod 4, Section 5, Point 1</b>. <b>C</b> means Card: NP4 S4 C2 is Nearpod 4, Section 4, Card 2. The Nearpod number is under each lesson above. The section number is the number in the circle next to each heading on the lesson page.</p>
+  <h2 class="topic" id="glossary"><span class="num">A</span> Glossary: the words in plain English</h2>
+  <p>These are words you will see in the lessons and in your assessment. The lessons link to this list.</p>
+  <dl class="gloss">
+  <dt id="g-accommodate">Accommodate</dt><dd>To change the way you do something so that it suits a person's needs. For example, give a quiet room for prayer.</dd><dt id="g-augmentative-communication-device">Augmentative communication device</dt><dd>A tool that helps a person who cannot speak (or speak clearly) to communicate, for example a tablet that speaks words or a picture board.</dd><dt id="g-auslan">Auslan</dt><dd>Australian Sign Language. The language of the Deaf community in Australia. It uses hands, face and body.</dd><dt id="g-bias">Bias</dt><dd>A feeling or idea that makes you favour one person or group over another, often without noticing. Everyone has some bias.</dd><dt id="g-cultural-safety">Cultural safety</dt><dd>A place where people feel safe to be who they are, and their culture is respected. The person, not the worker, decides if they feel culturally safe.</dd><dt id="g-culture">Culture</dt><dd>The way of life of a group of people: their beliefs, values, customs, language, food, clothes, art and behaviour. Culture is learnt, shared, and it changes over time.</dd><dt id="g-diversity">Diversity</dt><dd>Every person is different. Diversity means seeing and respecting these differences, for example age, culture, religion, language, gender, ability and sexual orientation.</dd><dt id="g-entitlement">Entitlement</dt><dd>Something a person has a right to have or do.</dd><dt id="g-ethnicity">Ethnicity</dt><dd>The group a person belongs to because of shared ancestry, history, language or traditions, for example Vietnamese, Samoan or Aboriginal.</dd><dt id="g-first-nations">First Nations</dt><dd>The first peoples of a land. In Australia: Aboriginal and Torres Strait Islander peoples.</dd><dt id="g-gender">Gender</dt><dd>How a person sees themselves: as a man, a woman, both, or neither. Gender can be different from the sex a person was given at birth.</dd><dt id="g-generation-alpha">Generation Alpha</dt><dd>Children born from about 2010 onwards. They have grown up with phones, tablets and the internet.</dd><dt id="g-human-needs">Human needs</dt><dd>The things a person must have to live and be well, for example food, water, shelter, clothing, sleep, safety and belonging.</dd><dt id="g-human-rights">Human rights</dt><dd>The basic rights and freedoms every person has because they are human, for example dignity, safety, privacy and fair treatment.</dd><dt id="g-immigration">Immigration</dt><dd>People moving to live in a new country. Australia has a long history of immigration from many countries.</dd><dt id="g-inclusion">Inclusion</dt><dd>Making sure every person is welcome, can take part and has a voice, whatever their background.</dd><dt id="g-non-binary">Non-binary</dt><dd>A person who does not see themselves as only a man or only a woman. Many non-binary people use the pronouns they and them.</dd><dt id="g-non-verbal-communication">Non-verbal communication</dt><dd>Communication without words: face, eye contact, gestures, body position, touch, use of space and tone of voice.</dd><dt id="g-race">Race</dt><dd>A way people group others by physical features, such as skin colour. Treating someone unfairly because of race is against the law in Australia.</dd><dt id="g-rapport">Rapport</dt><dd>A feeling of trust and understanding between two people.</dd><dt id="g-reflection">Reflection</dt><dd>Looking back at what you did and asking: what went well, what could I do better next time?</dd><dt id="g-self-awareness">Self-awareness</dt><dd>Knowing your own thoughts, feelings, values, strengths and weaknesses, and how they show in your words and actions.</dd><dt id="g-sexual-orientation">Sexual orientation</dt><dd>Who a person is attracted to, for example a man, a woman, or more than one gender. Examples: heterosexual (straight), gay, lesbian, bisexual.</dd><dt id="g-social-awareness">Social awareness</dt><dd>Noticing how other people feel and what they need, and respecting their point of view.</dd><dt id="g-sorry-business">Sorry Business</dt><dd>The time of mourning (grief) after a death in an Aboriginal or Torres Strait Islander community. It can include ceremonies and travel to family and Country.</dd><dt id="g-stereotype">Stereotype</dt><dd>A fixed idea that all people in a group are the same, for example "all older people are slow". Stereotypes are often wrong and hurtful.</dd><dt id="g-universal-declaration-of-human-rights">Universal Declaration of Human Rights</dt><dd>A document written by the United Nations in 1948. It lists the rights and freedoms that belong to every person in the world.</dd>
+  </dl>
+  <footer class="foot"><p>CHCCOM005 CHCDIV001 Consumer-Directed Care Cluster · Built from TAFE Queensland learning resources, 29 Oct 2026.</p></footer>
+</div>
+<a href="#index" class="home"><span aria-hidden="true">&#8679;</span> Home</a>
+</main>
+</body></html>
