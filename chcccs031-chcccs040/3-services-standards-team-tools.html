@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHCCCS031 CHCCCS040 Individual Support and Wellbeing Cluster: Services, standards, the team and the tools</title>
+<meta name="description" content="CHCCCS031 CHCCCS040 Lesson 3: service delivery models (Support at Home), the strengthened Aged Care Quality Standards, funding, external agencies and networks, team roles and communication (Cecilia and Ruth), assistive technology categories and choosing technology, knowing what equipment to use.">
+<style>:root{
+  --ink:#1b2530; --soft-ink:#44505c; --paper:#ffffff;
+  --deep:#12384a; --aqua:#8fe3e8; --action:#0b6f7c;
+  --card-a:#fbfbf9; --card-b:#ecece8; --edge:#d9d9d4;
+  --warn:#b45309; --warn-bg:#fff7ed; --ok:#15803d; --bad:#b91c1c;
+  --teach:#4c1d95; --teach-bg:#f5f3ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size:clamp(17px,1.5vw,30px); line-height:1.55}
+main{overflow-x:clip}
+.wrap{max-width:1500px; margin:0 auto; padding:0 clamp(20px,3vw,60px)}
+
+/* banner */
+.banner{position:relative; background:var(--deep); color:#fff; padding:clamp(60px,9vw,140px) 20px 40px; overflow:hidden}
+.banner-inner{position:relative; z-index:2; max-width:1500px; margin:0 auto}
+.banner .kicker{margin:0 0 6px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:.75em; color:var(--aqua)}
+.banner h1{margin:0; font-size:clamp(30px,5vw,76px); line-height:1.1; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.banner .sub{margin:12px 0 0; font-size:1.05em; max-width:28em; color:#f3e6d2}
+.banner svg.hero{position:absolute; right:-2vw; bottom:-4vw; width:min(46vw,620px); height:auto; opacity:.95; z-index:1}
+@media (max-width:800px){.banner svg.hero{opacity:.25}}
+
+/* index */
+#index{margin:30px 0 10px; padding:18px 26px 12px; background:#efe5d3; border-left:6px solid var(--action); border-radius:6px}
+#index h2{font-size:1.2em; margin:0 0 8px}
+#index ul{margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(19em,1fr)); column-gap:3em}
+#index li{margin:4px 0}
+#index a{text-decoration:none; color:var(--ink); display:flex; gap:10px; align-items:baseline}
+#index a:hover{color:var(--action); text-decoration:underline}
+.num{display:inline-flex; align-items:center; justify-content:center; min-width:1.7em; height:1.7em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; font-size:.8em; flex:none}
+.opening{font-size:1.05em; margin:26px 0 10px}
+
+/* slides */
+section.slide{padding:36px 0 18px; border-top:1px solid var(--edge); margin-top:30px; scroll-margin-top:10px}
+section.slide:first-of-type{border-top:0}
+h2.topic{font-size:1.4em; line-height:1.3; margin:0 0 10px; display:flex; gap:14px; align-items:center}
+h2.topic .num{font-size:.7em; min-width:2em; height:2em}
+h3{font-size:1.15em; line-height:1.3; margin:0 0 10px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px; padding-left:26px}
+li{margin:4px 0}
+a{color:var(--action); text-underline-offset:3px}
+a.star{font-weight:700; padding:0 4px; font-size:.8em; text-decoration:none; opacity:.55}
+a.star:hover{opacity:1}
+a.term{text-decoration:underline dotted; color:inherit}
+.intro{font-size:1.05em; color:var(--soft-ink)}
+a:focus-visible,button:focus-visible,.deck:focus-visible{outline:3px solid #f2a900; outline-offset:3px}
+
+ol.points{margin:12px 0 18px; padding-left:0; list-style:none; counter-reset:pt}
+ol.points li{position:relative; padding:10px 14px 10px 3.2em; margin:6px 0; background:#fffaf1; border-radius:8px; counter-increment:pt}
+ol.points li::before{content:counter(pt); position:absolute; left:.9em; top:.55em; width:1.7em; height:1.7em; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:700; font-size:.85em; display:flex; align-items:center; justify-content:center}
+.ref{display:none; float:right; margin-left:10px; font-size:.65em; color:var(--teach); background:var(--teach-bg); border:1px solid #ddd6fe; border-radius:4px; padding:0 6px}
+body.teacher .ref{display:inline-block}
+
+figure.visual{margin:18px 0 22px; text-align:center}
+figure.visual svg,figure.visual img{max-width:100%; height:auto; max-height:70vh}
+figure.visual figcaption{font-size:.8em; color:var(--soft-ink); margin-top:6px}
+figure.pic{margin:22px 0}
+figure.pic img{display:block; width:100%; height:auto; max-height:86vh; object-fit:contain; border-radius:4px}
+
+.watch-out{margin:14px 0 20px; padding:14px 18px 14px 56px; background:var(--warn-bg); border:2px solid #fdba74; border-radius:8px; position:relative}
+.watch-out::before{content:"!"; position:absolute; left:14px; top:12px; width:30px; height:30px; border-radius:50%; background:var(--warn); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.watch-out b{color:var(--warn); margin-right:6px}
+
+/* audio */
+.say{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:40px; display:inline-flex; gap:8px; align-items:center}
+.say.playing{background:var(--action); color:#fff}
+.say .ico{font-size:.8em}
+.audio-line{display:flex; gap:12px; align-items:center; margin:0 0 14px; flex-wrap:wrap}
+.audio-label{color:var(--soft-ink); font-size:.9em}
+.card-audio{margin-top:10px}
+.playall{margin:0 0 34px; text-align:center}
+
+/* card stack (from the Sway template) */
+.stack{margin:60px auto 40px; width:86%; max-width:1150px; --tilt:.4}
+.deck{position:relative; cursor:pointer; border-radius:3px; transition:height .3s ease}
+.pile i{position:absolute; inset:0; background:var(--card-b); border:1px solid var(--edge); box-shadow:0 1px 3px rgba(20,30,40,.10)}
+.pile i:nth-child(even){background:var(--card-a)}
+.pile i{transform:rotate(calc(var(--a) * var(--tilt,1))) translate(var(--x),var(--y))}
+.pile i:nth-child(1){--a:-15deg; --x:-4px; --y:6px}
+.pile i:nth-child(2){--a:6deg; --x:6px; --y:2px}
+.pile i:nth-child(3){--a:-12deg; --x:3px; --y:-5px}
+.pile i:nth-child(4){--a:3deg; --x:-5px; --y:4px}
+.pile i:nth-child(5){--a:-10deg; --x:5px; --y:5px}
+.pile i:nth-child(6){--a:-2deg; --x:-3px; --y:-3px}
+.pile i:nth-child(7){--a:-6deg; --x:2px; --y:3px}
+.pile{position:absolute; inset:0; filter:drop-shadow(0 14px 18px rgba(20,30,40,.16))}
+.card{position:absolute; left:0; top:0; width:100%; height:100%; background:var(--card-a); border:1px solid var(--edge);
+  padding:1.5em 1.8em 1.3em; font-size:clamp(16px,1.4vw,27px); line-height:1.5; opacity:0; pointer-events:none; z-index:1; min-height:7em;
+  transform:rotate(calc(var(--r,-6deg) * var(--tilt,1))); box-shadow:0 2px 6px rgba(20,30,40,.14)}
+.card.shade{background:var(--card-b)}
+.card.long{font-size:clamp(14.5px,1.25vw,24px); line-height:1.45}
+.card.top{opacity:1; pointer-events:auto; z-index:3}
+.card.arrive{animation:arrive .42s ease-out}
+.card.leave{opacity:1; z-index:4; animation:leave .42s ease-in forwards}
+.card.leave-back{opacity:1; z-index:4; animation:leaveBack .42s ease-in forwards}
+@keyframes arrive{from{transform:rotate(calc(var(--r) * var(--tilt,1) + 5deg)) scale(.96)} to{transform:rotate(calc(var(--r) * var(--tilt,1))) scale(1)}}
+@keyframes leave{to{transform:translate(58%,-10%) rotate(16deg); opacity:0}}
+@keyframes leaveBack{to{transform:translate(-58%,-10%) rotate(-18deg); opacity:0}}
+.card .count{float:right; margin:-6px -8px 6px 14px; font-size:.8em; font-weight:600; color:var(--soft-ink); background:#fff; border:1px solid var(--edge); border-radius:20px; padding:2px 12px}
+.card ul{margin-bottom:6px}
+.card-pic{float:right; width:clamp(90px,22%,220px); margin:0 0 10px 16px}
+.card-pic svg{width:100%; height:auto}
+.controls{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin-top:60px}
+.controls button{font:inherit; font-size:clamp(17px,1.2vw,24px); font-weight:600; cursor:pointer; padding:10px 20px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:48px}
+.controls button.next{background:var(--action); color:#fff}
+.controls button:hover{filter:brightness(.94)}
+.controls .where{min-width:7em; text-align:center; font-weight:700; font-size:clamp(18px,1.25vw,25px)}
+.hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:10px 0 0}
+
+/* full screen */
+.big{position:fixed; inset:0; z-index:50; background:#05090c; color:#fff; display:none}
+.big.open{display:flex; flex-direction:column}
+.big .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; font-weight:700}
+.big .body{flex:1; overflow:auto; padding:8px clamp(20px,7vw,90px) 24px; font-size:clamp(20px,2.9vw,34px); line-height:1.45}
+.big .body h3{font-size:1.1em; margin-bottom:.5em}
+.big .body .count{display:none}
+.big .body .card-pic{width:22%}
+.big .body .say{color:#fff; border-color:#fff; background:transparent}
+.big .foot{display:flex; gap:12px; justify-content:center; padding:12px 18px 20px}
+.big button{font:inherit; font-size:18px; font-weight:600; cursor:pointer; min-height:48px; padding:10px 22px; border-radius:6px; border:2px solid #fff; background:transparent; color:#fff}
+.big button.next{background:#fff; color:#05090c}
+
+/* activities */
+.activity{margin:22px 0 28px; padding:16px 20px 14px; border:2px solid #d8c9b2; border-radius:10px; background:#f1f5ec}
+.act-head{display:flex; gap:10px; align-items:center; margin-bottom:6px}
+.act-badge{background:var(--action); color:#fff; font-size:.7em; font-weight:700; padding:2px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:.04em}
+.act-instr{color:var(--soft-ink); font-size:.9em}
+.act-foot{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px}
+.act-foot button{font:inherit; font-size:.9em; font-weight:600; cursor:pointer; padding:8px 18px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:44px}
+.act-foot .act-check{background:var(--action); color:#fff}
+.act-result{font-weight:700}
+.act-result.good{color:var(--ok)} .act-result.bad{color:var(--bad)}
+.chip{display:inline-flex; align-items:center; font-size:.9em; padding:8px 14px; margin:5px; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; user-select:none; min-height:44px; line-height:1.3}
+.chip.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.chip.right{border-color:var(--ok); background:#ecfdf5}
+.chip.wrong{border-color:var(--bad); background:#fef2f2}
+.chip.placed{cursor:default}
+.bank{min-height:52px; padding:6px; border:2px dashed #b9a68a; border-radius:8px; margin-bottom:12px; background:#fff}
+.targets{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(16em,1fr))}
+.target{border:2px solid #b9a68a; border-radius:8px; background:#fff; padding:8px 10px; min-height:70px}
+.target .t-label{font-weight:700; margin-bottom:4px}
+.target .t-drop{min-height:44px; border:2px dashed #e8dcc6; border-radius:6px; padding:2px}
+.target.over .t-drop{border-color:var(--action); background:#f6efe2}
+.order{list-style:none; padding:0; margin:0; counter-reset:o}
+.order li{display:flex; gap:10px; align-items:center; background:#fff; border:2px solid #b9a68a; border-radius:8px; padding:8px 10px; margin:6px 0; cursor:grab}
+.order li .o-n{min-width:2em; height:2em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; font-size:.85em}
+.order li .o-t{flex:1}
+.order li .o-btn{display:flex; gap:4px}
+.order li .o-btn button{font:inherit; min-width:40px; min-height:40px; border-radius:6px; border:1px solid #b9a68a; background:#fff; cursor:pointer}
+.order li.right{border-color:var(--ok); background:#ecfdf5} .order li.wrong{border-color:var(--bad); background:#fef2f2}
+.order li.dragging{opacity:.5}
+.quiz-q{margin:10px 0 16px}
+.quiz-q .opt{display:block; width:100%; text-align:left; font:inherit; font-size:.95em; padding:10px 14px; margin:6px 0; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; min-height:44px}
+.quiz-q .opt.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.quiz-q .opt.right{border-color:var(--ok); background:#ecfdf5} .quiz-q .opt.wrong{border-color:var(--bad); background:#fef2f2}
+.quiz-q .why{font-size:.85em; color:var(--soft-ink); margin:4px 0 0 6px; display:none}
+.quiz-q.done .why{display:block}
+.fill-table{width:100%; border-collapse:collapse; font-size:.9em; background:#fff}
+.fill-table th,.fill-table td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+.fill-table th{background:#efe5d3}
+.fill-table select{font:inherit; font-size:.95em; min-height:40px; max-width:100%}
+.fill-table td.right{background:#ecfdf5} .fill-table td.wrong{background:#fef2f2}
+
+/* teacher view */
+.tnotes{display:none; margin:18px 0 6px; padding:12px 16px; background:var(--teach-bg); border:2px dashed #c4b5fd; border-radius:8px; font-size:.82em; color:#2e1065}
+body.teacher .tnotes{display:block}
+.tnotes .t-head{font-weight:800; color:var(--teach); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; font-size:.85em}
+.tnotes ul{margin:4px 0 8px}
+.tnotes .t-trap{background:#fff7ed; border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0}
+.tlink{font:inherit; font-size:1em; color:var(--soft-ink); background:none; border:0; text-decoration:underline; cursor:pointer; padding:0}
+.tpill[hidden]{display:none}
+.tpill{position:fixed; top:10px; right:10px; z-index:45; background:var(--teach); color:#fff; border-radius:30px; padding:6px 8px 6px 16px; display:flex; gap:8px; align-items:center; font-size:15px; font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.tpill button{font:inherit; font-size:14px; font-weight:700; border:0; border-radius:20px; padding:6px 12px; background:#fff; color:var(--teach); cursor:pointer; min-height:34px}
+.tpill button.tp-out{background:transparent; color:#fff; border:1px solid #fff}
+.card-pic.photo img{width:100%; height:auto; border-radius:8px; display:block}
+.grid4{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(11em,1fr)); margin:16px 0 22px}
+.grid4 figure{margin:0; background:#efe5d3; border-radius:12px; overflow:hidden}
+.grid4 img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+.grid4 figcaption{padding:10px 14px 12px; font-size:.9em}
+.grid4 figcaption b{display:block; color:var(--deep); font-size:1.05em}
+.side{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; margin:10px 0 18px}
+.side > div{flex:2 1 420px}
+.side figure{flex:0 1 380px; max-width:440px; margin:0}
+.side figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* Gerry */
+.mascot{position:fixed; left:clamp(6px,1.2vw,24px); top:120px; width:clamp(54px,6vw,110px); z-index:35; cursor:pointer; transition:top .6s cubic-bezier(.3,.9,.4,1.1); filter:drop-shadow(0 6px 10px rgba(0,0,0,.25)); user-select:none}
+.mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.mascot.hop svg{animation:hop .7s ease-out 1, bob 2.6s ease-in-out .7s infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes hop{0%{transform:translateY(0) scale(1,1)} 30%{transform:translateY(-40px) scale(.95,1.08) rotate(14deg)} 60%{transform:translateY(0) scale(1.08,.92)} 100%{transform:translateY(0) scale(1,1)}}
+.gerry-bubble{position:absolute; left:100%; top:0; margin-left:10px; width:max-content; max-width:16em; background:#fff; color:var(--ink); border:2px solid var(--deep); border-radius:14px; padding:8px 12px; font-size:clamp(14px,1vw,18px); line-height:1.35; box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.gerry-bubble::before{content:""; position:absolute; left:-12px; top:16px; border:6px solid transparent; border-right-color:var(--deep)}
+@media (max-width:900px){.mascot{display:none}}
+.mascot.drop{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.drop .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.drop .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+@media (prefers-reduced-motion:reduce){.mascot svg{animation:none}}
+
+.home{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(14px,2vw,32px); z-index:40; background:var(--action); color:#fff; font-weight:700; font-size:clamp(17px,1.2vw,24px); text-decoration:none; padding:12px 22px; border-radius:30px; box-shadow:0 4px 14px rgba(0,0,0,.25); min-height:48px; display:flex; align-items:center; gap:8px}
+.foot{margin:50px 0 90px; padding-top:16px; border-top:1px solid var(--edge); font-size:.75em; color:var(--soft-ink)}
+
+@media (max-width:560px){
+  body{font-size:17px}
+  .card{padding:20px 20px 18px; font-size:16px}
+  .card.long{font-size:14.5px}
+  .stack{width:auto; margin-left:14px; margin-right:14px; --tilt:.3}
+  .card-pic{width:30%}
+  h2.topic{font-size:1.25em}
+}
+@media (prefers-reduced-motion:reduce){
+  .card.arrive,.card.leave,.card.leave-back{animation-duration:.01s}
+  html{scroll-behavior:auto}
+}
+
+/* ordered strips (PPE on / off) */
+.strips{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr)); margin:16px 0 20px}
+.strip{background:#fffaf1; border-radius:12px; padding:14px 16px}
+.strip-title{font-weight:800; color:var(--deep); margin-bottom:8px}
+.strip-steps{list-style:none; margin:0; padding:0; counter-reset:st}
+.strip-steps li{counter-increment:st; display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px solid #e2e8f0}
+.strip-steps li:last-child{border-bottom:0}
+.strip-steps li::before{content:counter(st); display:inline-flex; align-items:center; justify-content:center; width:1.9em; height:1.9em; border-radius:50%; background:var(--c,#0b6f7c); color:#fff; font-weight:800; font-size:.85em; flex:none}
+table.plain{width:100%; border-collapse:collapse; font-size:.92em; margin:10px 0 18px; background:#fff}
+table.plain th,table.plain td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+table.plain th{background:#efe5d3}
+.tl-high{background:#fee2e2} .tl-med{background:#fef3c7} .tl-low{background:#dcfce7}
+
+/* activity start and blur */
+.act-start[hidden]{display:none}
+.act-start{display:flex; gap:14px; align-items:center; flex-wrap:wrap; padding:6px 0 2px; color:var(--soft-ink); font-size:.9em}
+.act-go{font:inherit; font-size:1em; font-weight:700; cursor:pointer; padding:10px 26px; border-radius:8px; border:0; background:var(--action); color:#fff; min-height:48px}
+.act-tools{margin:0 0 10px}
+.act-peek{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid #b9a68a; background:#fff; color:var(--action); min-height:40px}
+section.slide.hide-notes > :is(ol.points, .stack, figure.visual, .after, .intro, .watch-out, .vid, .audio-line, .side-points, p){filter:blur(7px); pointer-events:none; user-select:none; transition:filter .3s}
+section.slide.hide-notes .activity{filter:none}
+.vid{margin:20px 0 10px}
+.vid-title{margin:0 0 8px}
+.vid-by{color:var(--soft-ink); font-size:.85em}
+.video{margin:0 auto 6px; max-width:calc((100vh - 90px) * 16 / 9); aspect-ratio:16/9; background:#0e1a22; border-radius:6px; overflow:hidden; position:relative}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.watch{margin:0 0 20px; font-size:.8em; text-align:center}
+
+/* activity locked while the notes are showing */
+.activity.peeking .act-body, .activity.peeking .act-foot{pointer-events:none; opacity:.35; filter:grayscale(1)}
+.activity.peeking .act-tools::after{content:"Read the notes, then press the button to carry on."; margin-left:12px; color:var(--warn); font-weight:700; font-size:.9em}
+/* click to spotlight a part of a diagram */
+.spot [data-spot]{transition:opacity .3s, transform .3s; transform-box:fill-box; transform-origin:center}
+.spot.spotting [data-spot]:not(.lit){opacity:.28}
+.spot [data-spot].lit{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.14)}}
+.spot-hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:-8px 0 14px}
+/* points beside a picture */
+.side-points{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start}
+.side-points > ol.points{flex:2 1 420px; margin-top:0}
+.side-points > figure{flex:0 1 320px; max-width:360px; margin:0}
+.side-points > figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* student-visible Connect source line */
+.source{margin:16px 0 6px; padding:10px 14px 10px 44px; background:#f6efe2; border-left:4px solid var(--action); border-radius:8px; font-size:.92em; color:var(--soft-ink); position:relative; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center}
+.source::before{content:"\1F4D6"; position:absolute; left:12px; top:8px; font-size:1.2em}
+.source-label{font-weight:700; color:var(--ink)}
+.source a{text-decoration:none; font-weight:600; border:1px solid #d8c9b2; background:#fff; border-radius:999px; padding:2px 10px}
+.source a:hover{background:#efe5d3}
+
+/* Lesson 3: safety signs, RACE, two-up figures */
+.signs{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:12px 0 20px; align-items:start}
+.sign{background:#fff; border:2px solid var(--edge); border-radius:12px; padding:12px 10px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px}
+.sign svg{width:84px; height:84px}
+.sign span{font-weight:700; font-size:.9em; line-height:1.25}
+.signkey{display:flex; flex-wrap:wrap; gap:8px 20px; margin:6px 0 14px; font-size:.92em}
+.signkey i{display:inline-block; width:16px; height:16px; border-radius:50%; vertical-align:-3px; margin-right:6px}
+.race{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:14px 0 20px}
+.race div{border-left:8px solid var(--c); background:#fff; border-radius:10px; padding:12px 14px; box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.race b{display:block; font-size:2.2em; line-height:1; color:var(--c)}
+.race span{display:block; font-weight:700; font-size:1.1em; margin-top:4px}
+.race small{color:var(--soft-ink)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:14px 0}
+.grid2 figure{margin:0}
+.grid2 figcaption{font-size:.85em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > :is(.signs, .signkey, .race, .grid2){filter:blur(7px); pointer-events:none; user-select:none}
+
+/* side-by-side videos */
+.vid-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:16px 0 6px}
+.vid-row .vid{margin:0}
+.vid-row .video{max-width:none}
+section.slide.hide-notes > .vid-row{filter:blur(7px); pointer-events:none}
+
+/* finale: the grand exit */
+.finale{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; margin:24px 0 10px; padding:24px 10px 0; min-height:340px; overflow:hidden}
+.fin-side{display:flex; flex-direction:column; align-items:center; gap:10px; opacity:0; transition:transform .9s cubic-bezier(.2,.8,.3,1.1), opacity .6s}
+.fin-side.left{transform:translateX(-60vw)}
+.fin-side.right{transform:translateX(60vw)}
+.finale.in .fin-side{transform:none; opacity:1}
+.finale.in .fin-side.right{transition-delay:.25s}
+.fin-mascot{width:min(260px,38vw)}
+.fin-mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.fin-bubble{background:#fff; border:3px solid var(--deep); border-radius:18px; padding:14px 18px; font-size:1.08em; line-height:1.4; position:relative; max-width:34em; opacity:0; transform:scale(.7); transition:transform .5s cubic-bezier(.2,.8,.3,1.3), opacity .4s}
+.fin-bubble p{margin:0 0 8px}
+.fin-bubble::after{content:""; position:absolute; bottom:-14px; left:50%; margin-left:-8px; border:8px solid transparent; border-top-color:var(--deep)}
+.finale.in .fin-bubble{opacity:1; transform:none; transition-delay:1s}
+.finale.in .right .fin-bubble{transition-delay:1.5s}
+.fin-side .fin-bubble{order:-1}
+.fin-who{font-weight:800; color:var(--deep); margin:0}
+.fin-after{text-align:center; font-size:1.1em; color:var(--soft-ink); margin:10px 0 20px}
+@media (max-width:700px){.finale{grid-template-columns:1fr; min-height:0} .fin-side.left,.fin-side.right{transform:translateY(40px)} .finale.in .fin-side{transform:none}}
+@media (prefers-reduced-motion:reduce){.fin-side,.fin-bubble{transition:none; transform:none; opacity:1} .fin-mascot svg{animation:none}}
+.sign-pics{display:flex; gap:6px; align-items:center; justify-content:center; height:96px}
+.sign-pics img{max-height:96px; max-width:100%; object-fit:contain}
+.sign-pics img + img{max-height:60px}
+
+/* Lesson 4: risk matrix */
+table.matrix{border-collapse:collapse; margin:0 auto; font-size:.95em}
+table.matrix th, table.matrix td{border:2px solid #fff; padding:10px 12px; text-align:center}
+table.matrix thead th{background:#12384a; color:#fff; font-weight:700}
+table.matrix tbody th{background:#0b6f7c; color:#fff; text-align:left; font-weight:700}
+table.matrix .corner{background:#1b2530; font-size:.8em}
+table.matrix td.m-L{background:#bbf7d0; color:#14532d; font-weight:700}
+table.matrix td.m-M{background:#fde68a; color:#78350f; font-weight:700}
+table.matrix td.m-H{background:#fca5a5; color:#7f1d1d; font-weight:700}
+@media (max-width:700px){table.matrix{font-size:.75em} table.matrix th, table.matrix td{padding:6px 4px}}
+
+
+.tag{display:inline-block; font-family:"Segoe UI",Arial,sans-serif; font-size:.68em; font-weight:700; padding:1px 10px; border-radius:12px; margin:0 6px; vertical-align:middle; white-space:nowrap}
+.tag.old{background:#e5e1db; color:#4a4540; border:1px solid #b9b2a8}
+.tag.repl{background:#fdf0dc; color:#8a4b12; border:1px solid #e8b878}
+.tag.new{background:#e2efdc; color:#2f5a2a; border:1px solid #9cc290}
+.vid.local video{display:block; width:100%; max-width:1100px; max-height:72vh; margin:0 auto; border-radius:8px; background:#000}
+.mascot.side-right{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.side-right .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.side-right .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+.gerry-bubble{border-color:var(--wood)}
+.home{background:var(--wood)}
+.side-points figure img{border-radius:10px; border:1px solid var(--edge)}
+figure.visual img{border-radius:10px}
+.watch-out b{margin-right:0}
+.watch-out > b:first-child{margin-right:6px}
+body.presenting .mascot{z-index:45}
+@media (max-width:700px){
+  .lessonbar{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:thin; padding-bottom:10px}
+  .lessonbar a{flex:0 0 auto}
+}
+.fill-table select{width:100%}
+
+/* infographics: big, centred, click for full screen */
+figure.infopic{margin:22px auto 26px; text-align:center}
+figure.infopic img{display:block; margin:0 auto; width:100%; max-width:1300px; max-height:82vh; object-fit:contain; border-radius:12px; border:1px solid var(--edge); background:#fff; cursor:zoom-in}
+figure.infopic .info-svg{max-width:1300px; margin:0 auto; background:#fffdf8; border:1px solid var(--edge); border-radius:12px; padding:10px; cursor:zoom-in}
+figure.infopic figcaption{font-size:.75em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > figure.infopic{filter:blur(7px); pointer-events:none; user-select:none}
+.zoombox{position:fixed; inset:0; z-index:70; background:rgba(20,14,10,.92); display:flex; align-items:center; justify-content:center; cursor:zoom-out; padding:2vh 2vw}
+.zoombox img,.zoombox svg{max-width:96vw; max-height:94vh; width:auto; height:auto; background:#fff; border-radius:10px}
+.zoombox .info-svg{width:96vw; max-height:94vh; background:#fffdf8; border-radius:10px; padding:10px}
+.zoombox .info-svg svg{width:100%; max-height:90vh}
+.zoombox .zclose{position:fixed; top:14px; right:18px; font:inherit; font-weight:700; border:0; border-radius:20px; padding:8px 18px; background:#fff; color:var(--wood); cursor:pointer}
+/* external (sign-in) videos and handouts */
+.vid.ext{margin:18px 0}
+.ext-play{display:flex; align-items:center; gap:16px; padding:16px 20px; background:#2f2a24; color:#fff8ec; border-radius:12px; text-decoration:none; max-width:760px; box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.ext-play:hover,.ext-play:focus{background:#4a3b2d; outline:3px solid var(--action)}
+.ext-icon{flex:0 0 56px; height:56px; border-radius:50%; background:var(--action); display:grid; place-items:center; font-size:26px; padding-left:4px}
+.ext-play b{display:block; font-size:1.05em}
+.ext-play small{display:block; opacity:.85; margin-top:3px; font-size:.82em}
+.docs{background:#fbf7ef; border:1px solid #e3d6bf; border-left:6px solid var(--wood); border-radius:10px; padding:12px 20px; margin:16px 0}
+.docs-title{margin:0 0 6px}
+.docs ul{margin:0; padding-left:22px}
+.docs li{margin:6px 0}
+section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events:none}
+.t-demo .t-sub{margin:8px 0 2px; font-weight:700; color:#7a4a1e}
+.t-demo ul,.t-links ul{margin:2px 0 6px; padding-left:20px}
+.t-note{color:#666; font-size:.9em}
+.docs-btn{display:inline-block; margin:10px 0 4px; padding:10px 18px; background:var(--action); color:#fff; border-radius:999px; text-decoration:none; font-weight:700}
+.docs-btn:hover,.docs-btn:focus{background:var(--wood); outline:3px solid var(--action)}
+.docs-note{margin:4px 0 0; font-size:.85em; color:var(--soft-ink)}
+/* ---- 28 Oct 2026: glossary pop-up, teacher button in the lesson bar, Play all state ---- */
+a.term{cursor:help}
+.gpop{position:absolute; z-index:80; width:min(26em,calc(100vw - 16px)); background:#fffdf7; color:var(--ink); border:2px solid var(--wood,#6b4a33); border-radius:12px; padding:12px 40px 10px 16px; box-shadow:0 10px 28px rgba(0,0,0,.25); font-size:clamp(16px,1.1vw,22px); line-height:1.45}
+.gpop p{margin:0 0 6px}
+.gpop .gp-term{font-weight:800; color:var(--wood,#6b4a33)}
+.gpop .gp-more{font-size:.85em; margin:4px 0 0}
+.gpop .gp-more a{color:var(--action)}
+.gpop .gp-x{position:absolute; top:6px; right:6px; width:34px; height:34px; border:0; border-radius:50%; background:transparent; font-size:24px; line-height:1; cursor:pointer; color:var(--soft-ink)}
+.gpop .gp-x:hover{background:#f0e6d6}
+.lessonbar .tlink-top{margin-left:auto; padding:6px 12px; border-radius:20px; border:1px dashed var(--edge); background:transparent; color:var(--soft-ink); text-decoration:none; font-size:.85em; white-space:nowrap}
+.lessonbar .tlink-top:hover{border-color:var(--wood); color:var(--wood)}
+body.tv-pill .lessonbar .tlink-top{display:none}
+.say.playall-btn.playing{background:var(--action); color:#fff}
+.tpill .tp-label{margin-right:2px}
+@media print{ .gpop,.tlink-top{display:none} }
+
+/* ===================== CHCCOM005 CHCDIV001 neon theme (29 Oct 2026): neon red and green lights, a little shine, readable ===================== */
+:root{
+  --ink:#16201d; --soft-ink:#46524e; --paper:#f6f8f7;
+  --deep:#0b5a3c; --aqua:#7dffc0; --action:#d81e3c;
+  --card-a:#ffffff; --card-b:#eef3f1; --edge:#d8e2de;
+  --wood:#0b5a3c; --sage-bg:#ecf8f2; --clay:#d81e3c; --neonR:#ff2e4d; --neonG:#19e68c;
+}
+body{background-color:var(--paper)}
+h1,h2,h3,.banner h1{font-family:"Segoe UI","Trebuchet MS",Arial,sans-serif}
+.banner{background-color:#0d1312; background-image:
+  radial-gradient(ellipse 40% 60% at 12% 110%,rgba(255,46,77,.35),transparent 70%),
+  radial-gradient(ellipse 40% 60% at 70% -10%,rgba(25,230,140,.30),transparent 70%),
+  linear-gradient(115deg,#0d1312 0%,#111b19 55%,#0d1312 100%);
+  border-bottom:4px solid transparent; border-image:linear-gradient(90deg,var(--neonR),#ffd27a,var(--neonG)) 1;
+  box-shadow:0 2px 18px rgba(255,46,77,.35),0 6px 26px rgba(25,230,140,.25);
+  padding:clamp(40px,6vw,96px) 20px clamp(26px,3vw,44px)}
+.banner::before,.banner::after{content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
+  background-image:radial-gradient(2px 2px at 8% 30%,#fff,transparent 60%),radial-gradient(1.5px 1.5px at 22% 70%,#ffd7de,transparent 60%),radial-gradient(2px 2px at 41% 18%,#d6ffe9,transparent 60%),radial-gradient(1.5px 1.5px at 57% 82%,#fff,transparent 60%),radial-gradient(2px 2px at 66% 40%,#ffd7de,transparent 60%),radial-gradient(1.5px 1.5px at 33% 48%,#d6ffe9,transparent 60%),radial-gradient(2px 2px at 92% 76%,#fff,transparent 60%);
+  animation:twinkle 4s ease-in-out infinite}
+.banner::after{background-position:13px 9px; animation-delay:2s}
+@keyframes twinkle{0%,100%{opacity:.25} 50%{opacity:.9}}
+.banner h1{color:#fff; text-shadow:0 0 6px rgba(255,255,255,.35),0 0 18px rgba(255,46,77,.55),0 0 34px rgba(25,230,140,.35)}
+.banner .sub{color:#e7efec}
+.banner .kicker{color:var(--aqua); text-shadow:0 0 8px rgba(25,230,140,.6)}
+.banner.first{position:relative; overflow:hidden}
+.banner.first .banner-inner{position:relative; z-index:2}
+.hero-hellos{position:absolute; z-index:1; right:clamp(10px,4vw,90px); top:50%; transform:translateY(-50%); width:clamp(220px,30vw,520px); pointer-events:none}
+.hero-hellos svg{display:block; width:100%; height:auto}
+.hero-hellos .hb{animation:hbPop 6s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%}
+@keyframes hbPop{0%,100%{transform:scale(1); opacity:.9} 8%{transform:scale(1.08); opacity:1} 16%{transform:scale(1); opacity:.9}}
+@media (max-width:800px){.hero-hellos{opacity:.28; width:280px}}
+@media (prefers-reduced-motion:reduce){.hero-hellos .hb,.banner::before,.banner::after{animation:none}}
+.lessonbar{display:flex; flex-wrap:wrap; gap:8px 10px; padding:12px clamp(20px,3vw,60px); background:#121a18; border-bottom:1px solid #26332f; font-size:clamp(14px,.95vw,19px)}
+.lessonbar a{padding:6px 14px; border-radius:20px; background:transparent; border:1px solid #3c4c47; color:#e7efec; text-decoration:none; font-weight:600; white-space:nowrap}
+.lessonbar a:hover{border-color:var(--neonG); box-shadow:0 0 8px rgba(25,230,140,.5)}
+.lessonbar a.on{background:var(--neonG); border-color:var(--neonG); color:#06241a; box-shadow:0 0 10px rgba(25,230,140,.7)}
+.lessonbar .tlink{color:#e7efec}
+#index{background:#ffffff; border-left-color:var(--neonR); box-shadow:0 1px 0 var(--edge)}
+h2.topic{color:#10241d; border-bottom:3px solid transparent; border-image:linear-gradient(90deg,var(--neonR),var(--neonG)) 1; padding-bottom:8px}
+h2.topic .num{background:var(--action); color:#fff; box-shadow:0 0 0 2px #fff,0 0 12px rgba(255,46,77,.65)}
+#index .num{box-shadow:0 0 8px rgba(255,46,77,.5)}
+ol.points li{background:var(--card-a); border:1px solid var(--edge); box-shadow:0 1px 0 #e3ebe8}
+ol.points li::before{border-color:var(--action); color:var(--deep)}
+.activity{background:var(--sage-bg); border-color:#b7e3cd}
+a.term{text-decoration-color:var(--action)}
+.gerry-bubble{border-color:var(--deep)}
+.home{background:var(--deep); box-shadow:0 0 12px rgba(25,230,140,.45)}
+.ext-play{background:var(--deep); color:#fff}
+.ext-play:hover,.ext-play:focus{background:#0e7550}
+.docs{background:#fbfffd; border-color:#d3eadf; border-left-color:var(--action)}
+.zoombox .zclose{color:var(--deep)}
+.gpop{border-color:var(--deep)}
+.gpop .gp-term{color:var(--deep)}
+.t-demo .t-sub{color:var(--deep)}
+.vid-row{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+strong.motto{color:#d81e3c; font-weight:900; font-size:1.15em; text-shadow:0 0 10px rgba(255,46,77,.35)}
+.card-pic.photo img{max-height:clamp(180px,22vw,300px); width:auto; max-width:100%; margin:0 auto; display:block; object-fit:cover; border-radius:8px}
+
+/* opening video: big, nothing beside it */
+.vid.opener .video{max-width:calc((100vh - 60px) * 16 / 9); box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.vid.opener .vid-title{text-align:center; font-size:1.1em}
+
+/* greeting cards (Good Morning) */
+.greet-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr)); gap:18px; margin:18px 0}
+.greet{background:var(--card-a); border:1px solid var(--edge); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 2px 0 #ece1cf}
+.greet .g-pic{aspect-ratio:4/3; background:#e9dfcf}
+.greet .g-pic img{width:100%; height:100%; object-fit:cover; display:block}
+.greet .g-body{padding:12px 16px 14px}
+.greet .g-lang{margin:0; font-size:.8em; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--action)}
+.greet .g-words{margin:4px 0 2px; font-size:1.25em; font-weight:700; color:var(--deep); line-height:1.25}
+.greet .g-say{margin:0 0 10px; color:var(--soft-ink); font-size:.9em}
+.greet .g-who{font-size:.75em; color:var(--soft-ink); margin-left:6px}
+.greet.playing{outline:4px solid #19c37d}
+.greet-all{margin:6px 0 4px}
+
+/* Auslan sign grid */
+.sign-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr)); gap:18px; margin:18px 0}
+.sign{background:var(--card-a); border:2px solid var(--edge); border-radius:14px; overflow:hidden}
+.sign .s-head{display:flex; align-items:center; gap:12px; padding:10px 14px}
+.sign .s-num{flex:0 0 auto; width:2.2em; height:2.2em; border-radius:50%; background:var(--action); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:1.2em}
+.sign .s-word{font-size:1.35em; font-weight:800; color:var(--deep)}
+.sign video{display:block; width:100%; aspect-ratio:1512/1060; background:#2a3bcf; object-fit:cover}
+.sign:target{border-color:#19c37d; box-shadow:0 0 0 5px rgba(233,162,59,.35)}
+.sign-jump{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
+.sign-jump a{display:inline-flex; width:2.4em; height:2.4em; align-items:center; justify-content:center; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:800; text-decoration:none}
+.sign-jump a:hover{background:var(--action); color:#fff}
+
+/* give out the numbers (teacher tool on the page) */
+.giveout-btn{background:#0b5a3c; color:#fff; border:0; border-radius:24px; padding:10px 20px; font:inherit; font-weight:700; cursor:pointer}
+.giveout{position:fixed; inset:0; z-index:80; background:#0d1312; color:#fff; padding:clamp(14px,2vw,30px); overflow:auto}
+.giveout h3{margin:0 0 6px; color:#7dffc0}
+.giveout .go-help{margin:0 0 14px; color:#d9ece9; font-size:.85em}
+.giveout .go-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px}
+.giveout .go-cell{background:#0b5a3c; border-radius:12px; padding:10px 12px}
+.giveout .go-n{font-size:2.2em; font-weight:800; color:#7dffc0; line-height:1}
+.giveout .go-w{font-weight:700; font-size:1.05em}
+.giveout input{width:100%; margin-top:6px; font:inherit; font-size:.85em; padding:6px 8px; border-radius:6px; border:0}
+.giveout .go-bar{display:flex; gap:10px; margin:0 0 14px; flex-wrap:wrap}
+.giveout .go-bar button{font:inherit; border:0; border-radius:20px; padding:8px 16px; font-weight:700; cursor:pointer}
+.giveout .go-close{background:#7dffc0; color:#0d1312}
+.giveout .go-clear{background:var(--action); color:#fff}
+
+/* language flags grid (South Africa) */
+.flag-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; margin:14px 0}
+.flag-grid figure{margin:0; background:var(--card-a); border:1px solid var(--edge); border-radius:10px; overflow:hidden; text-align:center}
+.flag-grid img{width:100%; aspect-ratio:3/2; object-fit:cover; display:block}
+.flag-grid figcaption{padding:6px; font-weight:700; color:var(--deep)}
+
+/* timeline cards */
+.tl{overflow-x:auto; margin:16px 0}
+.tl table{border-collapse:separate; border-spacing:6px; min-width:760px; width:100%}
+.tl th{background:var(--deep); color:#fff; padding:8px 10px; border-radius:8px; font-size:.9em}
+.tl th.asp{background:var(--action)}
+.tl td{background:var(--card-a); border:1px solid var(--edge); border-radius:8px; padding:8px 10px; vertical-align:top; font-size:.85em}
+.tl td ul{margin:0; padding-left:1.1em}
+section.slide.hide-notes > :is(.tl, .greet-grid, .flag-grid, .sign-grid){filter:blur(7px); pointer-events:none}
+
+
+.greet-all-btn{background:var(--action); color:#fff; border:0; border-radius:24px; padding:10px 20px; font:inherit; font-weight:700; cursor:pointer}
+.greet-all-btn.playing{background:#0b5a3c}
+.giveout-btn{display:none}
+body.teacher .giveout-btn, body.presenting .giveout-btn{display:inline-block}
+.sign-tools{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px}
+
+.greet .g-pic{overflow:hidden; position:relative}
+.greet .g-pic img{position:absolute; inset:0; width:100% !important; height:100% !important; max-width:none !important; object-fit:cover}
+.greet .g-who{display:block; margin:6px 0 0}
+
+@media (max-width:700px){
+  .tl table{min-width:0; border-spacing:0}
+  .tl thead{display:none}
+  .tl tr{display:block; margin:0 0 14px}
+  .tl th.asp{display:block; border-radius:8px 8px 0 0; text-align:left}
+  .tl td{display:block; border-radius:0; margin:0}
+  .tl td::before{content:attr(data-col); display:block; font-weight:800; color:var(--deep); margin:0 0 4px}
+  .tl td:last-child{border-radius:0 0 8px 8px}
+}
+
+/* Discussion prompts and timers (Lessons 6 and 7) */
+.discuss{display:grid; gap:12px; margin:14px 0}
+.dq{background:var(--card,#fff); border:1px solid #d9e6e0; border-left:5px solid #19a865; border-radius:10px; padding:12px 16px}
+.dq-q{margin:0 0 6px; font-weight:600}
+.dq-n{display:inline-block; background:#e8344f; color:#fff; border-radius:999px; padding:1px 10px; font-size:.85em; margin-right:6px}
+.dq-t{margin:6px 0 2px; color:#4a5a55; font-size:.95em}
+.dq ul{margin:0; padding-left:22px}
+.timers{display:flex; flex-wrap:wrap; gap:14px; margin:14px 0}
+.timer{flex:1 1 240px; background:#0d1614; color:#fff; border-radius:14px; padding:14px 18px; text-align:center; box-shadow:0 0 0 2px #19e68c, 0 0 18px rgba(25,230,140,.35)}
+.timer.low{box-shadow:0 0 0 2px #ffb020, 0 0 18px rgba(255,176,32,.45)}
+.timer.done{box-shadow:0 0 0 2px #ff2e4d, 0 0 22px rgba(255,46,77,.6)}
+.tm-label{margin:0; font-weight:700}
+.tm-time{margin:4px 0 8px; font-size:3rem; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:2px}
+.tm-btns{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; align-items:center}
+.tm-btns button{background:#e8344f; color:#fff; border:0; border-radius:8px; padding:8px 16px; font-weight:700; cursor:pointer}
+.tm-btns .tm-reset{background:transparent; border:2px solid #19e68c; color:#19e68c}
+.tm-snd{font-size:.85em; color:#cfe}
+
+.tm-set{display:flex; flex-wrap:wrap; gap:10px 16px; justify-content:center; margin-bottom:4px}
+.tm-set label{font-size:.9em; color:#cfe}
+.tm-set input{background:#16231f; color:#fff; border:1px solid #19e68c; border-radius:6px; padding:5px 8px; font:inherit}
+.tm-set .tm-name{width:min(260px,60vw)} .tm-set .tm-min{width:80px}
+.tm-time{font-size:clamp(3rem,9vw,5.5rem)}
+.tm-presets{display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin-top:10px}
+.tm-presets button{background:transparent; color:#cfe; border:1px solid #3a5a50; border-radius:999px; padding:4px 10px; font-size:.82em; cursor:pointer}
+.tm-presets button:hover{border-color:#19e68c; color:#fff}
+.tm-mini{position:fixed; left:16px; bottom:16px; z-index:60; background:#0d1614; color:#fff; border-radius:999px; padding:8px 16px; text-decoration:none; box-shadow:0 0 0 2px #19e68c, 0 0 16px rgba(25,230,140,.4); font-variant-numeric:tabular-nums}
+.tm-mini.low{box-shadow:0 0 0 2px #ff2e4d, 0 0 16px rgba(255,46,77,.5)}
+.tm-mini[hidden]{display:none}
+.tm-link{margin:8px 0 0}
+.rule-box{border:3px solid #e8344f; background:#fff4f6; border-radius:12px; padding:12px 16px; margin:12px 0; font-size:1.1em}
+.docbox{border:1px solid #cfdcd6; background:#fff; border-radius:12px; padding:14px 18px; margin:12px 0; box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.docbox h3{margin-top:0}
+
+/* ===================== CHCCCS031 CHCCCS040 water theme (30 Oct 2026): watery, washy, shiny tiles, readable ===================== */
+:root{
+  --ink:#10232c; --soft-ink:#3f5560; --paper:#f3fafc;
+  --deep:#0b4f66; --aqua:#9ff0f7; --action:#0a7f9c;
+  --card-a:#ffffff; --card-b:#e8f6fa; --edge:#cfe6ee;
+  --wood:#0b4f66; --sage-bg:#eaf8fb; --clay:#e86a2f; --neonR:#2bb8d6; --neonG:#7fe0f0;
+}
+body{background-color:var(--paper);
+  background-image:radial-gradient(ellipse 60% 40% at 0% 0%,rgba(143,227,232,.18),transparent 70%),radial-gradient(ellipse 50% 40% at 100% 30%,rgba(43,184,214,.10),transparent 70%)}
+.banner{background-color:#0b4f66; background-image:
+  linear-gradient(180deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,0) 40%),
+  radial-gradient(ellipse 50% 70% at 15% 120%,rgba(143,227,232,.45),transparent 70%),
+  linear-gradient(120deg,#0b4f66 0%,#0e6f8c 55%,#1592ad 100%);
+  border-bottom:6px solid transparent; border-image:linear-gradient(90deg,#9ff0f7,#ffffff,#2bb8d6) 1;
+  box-shadow:0 6px 26px rgba(11,79,102,.35)}
+.banner::before,.banner::after{background-image:radial-gradient(3px 3px at 10% 30%,rgba(255,255,255,.8),transparent 60%),radial-gradient(2px 2px at 30% 70%,rgba(255,255,255,.7),transparent 60%),radial-gradient(3px 3px at 52% 22%,rgba(255,255,255,.8),transparent 60%),radial-gradient(2px 2px at 62% 80%,rgba(255,255,255,.6),transparent 60%)}
+.banner h1{color:#fff; text-shadow:0 2px 0 rgba(0,0,0,.15),0 0 22px rgba(159,240,247,.55)}
+.banner .kicker{color:#c9f7fb; text-shadow:none}
+.banner .sub{color:#e6f7fb}
+.hero-water{position:absolute; z-index:1; right:clamp(0px,2vw,60px); bottom:0; width:clamp(240px,34vw,560px); pointer-events:none}
+.hero-water svg{display:block; width:100%; height:auto}
+.hero-water .bub{animation:bubUp 7s ease-in infinite}
+@keyframes bubUp{0%{transform:translateY(0); opacity:0} 10%{opacity:1} 100%{transform:translateY(-230px); opacity:0}}
+@media (max-width:800px){.hero-water{opacity:.35; width:300px}}
+@media (prefers-reduced-motion:reduce){.hero-water .bub{animation:none}}
+.lessonbar{background:linear-gradient(180deg,#e9f8fc,#d4eef6); border-bottom:1px solid #b9dde8}
+.lessonbar a{background:linear-gradient(180deg,#ffffff,#eaf7fb); border:1px solid #b9dde8; color:var(--deep); box-shadow:inset 0 1px 0 #fff}
+.lessonbar a:hover{border-color:var(--action); box-shadow:0 0 8px rgba(43,184,214,.45)}
+.lessonbar a.on{background:linear-gradient(180deg,#2bb8d6,#0a7f9c); border-color:#0a7f9c; color:#fff; box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 2px 8px rgba(10,127,156,.4)}
+.lessonbar .tlink{color:var(--deep)}
+#index{background:linear-gradient(180deg,#ffffff,#f1fafd); border-left:6px solid var(--action); box-shadow:0 2px 12px rgba(11,79,102,.08); border-radius:12px}
+/* wet, shiny tile headings */
+h2.topic{position:relative; color:#fff; background:linear-gradient(180deg,#2bb8d6 0%,#0a7f9c 60%,#0b6f88 100%); border:0; border-image:none;
+  border-radius:14px; padding:12px 18px; box-shadow:inset 0 2px 0 rgba(255,255,255,.45),inset 0 -3px 0 rgba(0,0,0,.12),0 6px 16px rgba(10,127,156,.25); overflow:hidden}
+h2.topic::after{content:""; position:absolute; left:10px; right:40%; top:5px; height:38%; border-radius:12px; background:linear-gradient(180deg,rgba(255,255,255,.45),rgba(255,255,255,0)); pointer-events:none}
+h2.topic .num{background:#fff; color:var(--deep); box-shadow:0 0 0 3px rgba(255,255,255,.35)}
+h2.topic a.star{color:#fff; opacity:.8}
+#index .num{box-shadow:none}
+ol.points li{background:linear-gradient(180deg,#ffffff,#f6fcfe); border:1px solid var(--edge); box-shadow:0 1px 0 #dcedf3}
+ol.points li::before{border-color:var(--action); color:var(--deep)}
+.card,.docbox,.dq{box-shadow:0 2px 12px rgba(11,79,102,.08)}
+.activity{background:linear-gradient(180deg,#f3fcff,#e6f6fb); border-color:#b9e3ee; border-radius:14px}
+a.term{text-decoration-color:var(--action)}
+.gerry-bubble{border-color:var(--deep)}
+.home{background:linear-gradient(180deg,#2bb8d6,#0a7f9c); box-shadow:0 4px 14px rgba(10,127,156,.4)}
+.ext-play{background:var(--deep); color:#fff}
+.ext-play:hover,.ext-play:focus{background:#0a7f9c}
+.timer{background:#0b2f3c; box-shadow:0 0 0 2px #7fe0f0,0 0 18px rgba(127,224,240,.35)}
+.tm-btns button{background:#0a7f9c}
+.tm-btns .tm-reset{border-color:#7fe0f0; color:#7fe0f0}
+.tm-set input{background:#0e3a49; border-color:#7fe0f0}
+.tm-mini{background:#0b2f3c; box-shadow:0 0 0 2px #7fe0f0}
+.rule-box{border-color:#d93a3a; background:#fff5f5}
+.dq{border-left-color:#2bb8d6}
+.dq-n{background:#0a7f9c}
+strong.motto{color:#0a7f9c; text-shadow:none}
+
+/* case study people (Lesson 1) */
+.people{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr)); gap:18px; margin:16px 0}
+.person{background:#fff; border:1px solid var(--edge); border-radius:16px; overflow:hidden; box-shadow:0 4px 18px rgba(11,79,102,.10)}
+.person img{display:block; width:100%; aspect-ratio:16/9; object-fit:cover}
+.person .pp{padding:12px 18px 16px}
+.person .tag{display:inline-block; background:#e6f6fb; color:var(--deep); border-radius:20px; padding:2px 12px; font-size:.8em; font-weight:700; margin-bottom:6px}
+.person h3{margin:4px 0 8px}
+.person ul{margin:0; padding-left:1.2em}
+
+/* real photo behind a button (pressure injuries) */
+.reveal{margin:10px 0}
+.reveal-btn{font:inherit; font-weight:700; cursor:pointer; border:2px solid #b45309; background:#fff7ed; color:#7c2d12; border-radius:24px; padding:8px 16px}
+.reveal-box{margin-top:10px}
+.reveal-box img{max-width:100%; max-height:60vh; border-radius:10px; display:block}
+.reveal-warn{font-size:.85em; color:#7c2d12; margin:0 0 6px}
+.link-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr)); gap:12px; margin:10px 0 30px}
+.link-grid .ext-play{display:flex; gap:12px; align-items:center; padding:12px 16px; border-radius:12px; text-decoration:none}
+.link-grid small{display:block; opacity:.85; font-weight:400}
+.source{background:linear-gradient(180deg,#f2fbfe,#e4f5fa); border-left-color:var(--action)}
+.source a{border-color:#b9dde8}
+.source a:hover{background:#e6f6fb}
+/* card photos bigger (picture cards) */
+.card .card-pic.photo{width:clamp(140px,40%,420px)}
+.card .card-pic.photo img{max-height:none; width:100%; height:auto; object-fit:cover}
+.big .body .card-pic.photo{width:45%}
+@media (max-width:700px){.card .card-pic.photo{float:none; width:100%; margin:6px 0 10px}}
+/* one person only: picture beside the story */
+.people:has(.person:only-child){grid-template-columns:1fr}
+.person:only-child{display:grid; grid-template-columns:minmax(220px,38%) 1fr}
+.person:only-child img{aspect-ratio:auto; height:100%; min-height:100%}
+@media (max-width:760px){.person:only-child{display:block} .person:only-child img{aspect-ratio:16/9; height:auto}}
+
+/* KAMA policy buttons (link to kama-policies.html) */
+.policy-links{margin:14px 0;padding:12px 14px;border:2px dashed #0a7f9c;border-radius:14px;background:#f0fbfe}
+.policy-links .pl-title{margin:0 0 8px}
+.pl-btn{display:inline-block;margin:4px 8px 4px 0;padding:8px 14px;border-radius:22px;background:#0a7f9c;color:#fff;font-weight:700;text-decoration:none}
+.pl-btn:hover{background:#0b4f66}
+</style>
+</head>
+<body data-np="7">
+<main>
+<header class="banner first" id="top">
+  <div class="banner-inner">
+    <p class="kicker">CHCCCS031 CHCCCS040 Individual Support and Wellbeing Cluster · Lesson 3</p>
+    <h1>Services, standards, the team and the tools</h1>
+    <p class="sub">Support at Home, the Quality Standards, funding, agencies and networks, working in a team, and assistive technology.</p>
+  </div>
+  <div class="hero-water" aria-hidden="true"><svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg"><rect x="220" y="10" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M226 20 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="270" y="10" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M276 20 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="320" y="10" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M326 20 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="370" y="10" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M376 20 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="420" y="10" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M426 20 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="470" y="10" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M476 20 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="220" y="60" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M226 70 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="270" y="60" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M276 70 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="320" y="60" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M326 70 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="370" y="60" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M376 70 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="420" y="60" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M426 70 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="470" y="60" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M476 70 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="220" y="110" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M226 120 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="270" y="110" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M276 120 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="320" y="110" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M326 120 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="370" y="110" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M376 120 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="420" y="110" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M426 120 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="470" y="110" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M476 120 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="220" y="160" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M226 170 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="270" y="160" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M276 170 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="320" y="160" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M326 170 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="370" y="160" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M376 170 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="420" y="160" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M426 170 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="470" y="160" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M476 170 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="220" y="210" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M226 220 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="270" y="210" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M276 220 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="320" y="210" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M326 220 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="370" y="210" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M376 220 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="420" y="210" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M426 220 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="470" y="210" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M476 220 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M0 250 q40 -16 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 v60 h-560z" fill="rgba(143,227,232,.35)"/>
+  <path d="M0 268 q40 -14 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 v40 h-560z" fill="rgba(255,255,255,.18)"/>
+  <g class="bub" style="animation-delay:0s"><circle cx="60" cy="230" r="14" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.75)" stroke-width="2"/><path d="M53 227.2 q2.8000000000000003 -7 8.4 -7.700000000000001" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g><g class="bub" style="animation-delay:1.2s"><circle cx="120" cy="250" r="9" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.75)" stroke-width="2"/><path d="M115.5 248.2 q1.8 -4.5 5.3999999999999995 -4.95" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g><g class="bub" style="animation-delay:2.4s"><circle cx="170" cy="240" r="18" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.75)" stroke-width="2"/><path d="M161 236.4 q3.6 -9 10.799999999999999 -9.9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g><g class="bub" style="animation-delay:0.6s"><circle cx="250" cy="260" r="11" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.75)" stroke-width="2"/><path d="M244.5 257.8 q2.2 -5.5 6.6 -6.050000000000001" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g><g class="bub" style="animation-delay:1.8s"><circle cx="330" cy="250" r="15" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.75)" stroke-width="2"/><path d="M322.5 247 q3 -7.5 9 -8.25" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g><g class="bub" style="animation-delay:3s"><circle cx="420" cy="255" r="10" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.75)" stroke-width="2"/><path d="M415 253 q2 -5 6 -5.5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g><g class="bub" style="animation-delay:0.9s"><circle cx="470" cy="245" r="13" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.75)" stroke-width="2"/><path d="M463.5 242.4 q2.6 -6.5 7.8 -7.15" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g></svg></div>
+</header>
+<nav class="lessonbar" aria-label="Lessons in this unit"><a href="0-index.html">&#8962; Lessons</a><a href="1-needs-health-and-wellbeing.html">1 Needs and wellbeing</a><a href="2-seeing-the-whole-person.html">2 The whole person</a><a href="3-services-standards-team-tools.html" class="on" aria-current="page">3 Services and tools</a><a href="4-moving-people-safely.html">4 Moving people</a><a href="5-personal-care-with-juan.html">5 Personal care</a><a href="6-helping-with-medication.html">6 Medication</a><a href="7-safe-fair-and-lawful.html">7 Safe and lawful</a><a href="8-practical-skills-day.html">8 Practical day</a><a href="0-index.html#glossary">Glossary</a><button type="button" class="tlink tlink-top" title="For the teacher">Teacher</button></nav>
+<div class="wrap">
+  <nav id="index" aria-label="Index"><h2>In this lesson</h2><ul><li><a href="#s1"><span class="num">1</span> Service delivery models: how support reaches the person</a></li><li><a href="#s2"><span class="num">2</span> The standards every aged care service must meet</a></li><li><a href="#s3"><span class="num">3</span> Who pays? Funding for Solomon</a></li><li><a href="#s4"><span class="num">4</span> Agencies and networks in your region</a></li><li><a href="#s5"><span class="num">5</span> Cecilia and Ruth: who is in the team?</a></li><li><a href="#s6"><span class="num">6</span> How a good team communicates</a></li><li><a href="#s7"><span class="num">7</span> Assistive technology: the categories</a></li><li><a href="#s8"><span class="num">8</span> Choosing technology for Solomon</a></li><li><a href="#s9"><span class="num">9</span> How do you know what equipment to use, and how?</a></li></ul></nav>
+  <p class="opening">Solomon does not live in a bubble. Around him there is a <b>service</b> that supports him, <b>standards</b> that service must meet, <b>money</b> that pays for it, <b>agencies and networks</b> in the community, a <b>team</b> of people, and <b>tools</b> that help him stay independent. In this lesson you learn how they all fit together, so you can answer the questions about the sector, the team and assistive technology.</p>
+  
+<section class="slide" id="s1" data-ref="NP7 S1">
+  <h2 class="topic"><span class="num">1</span> Service delivery models: how support reaches the person</h2>
+  
+  <p class="intro">A <a class="term" href="0-index.html#g-service-delivery-model" data-term="service-delivery-model" title="What does this word mean?">Service delivery model</a> is the <b>way a program delivers support</b> to a person. Aged care is for people <b>65 and older</b> (50 and older for Aboriginal and Torres Strait Islander people). The disability sector (the <a class="term" href="0-index.html#g-ndis" data-term="ndis" title="What does this word mean?">NDIS</a>) is for people <b>under 65</b>.</p>
+  
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np7-s1.mp3" aria-label="Listen: Service delivery models: how support reaches the person"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s1p1"><span class="ref" title="Reference">NP7 S1 P1</span><b>Support at Home</b> (since 1 November 2025): help for older people to <b>stay living in their own home</b>. It replaced Home Care Packages and Short-Term Restorative Care.</li><li id="s1p2"><span class="ref" title="Reference">NP7 S1 P2</span>What Support at Home can give: <b>personal care</b> (showering, dressing), <b>domestic help</b> (cleaning, laundry, meals, shopping), <b>nursing and allied health</b>, <b>transport</b>, <b>social support</b>, <b>respite</b> for carers, and equipment and small home changes.</li><li id="s1p3"><span class="ref" title="Reference">NP7 S1 P3</span>Short-term pathways in Support at Home: <b>Restorative Care</b> (get strength and skills back after illness), <b>End-of-Life</b> care at home, and <b>Assistive Technology and Home Modifications (AT-HM)</b>.</li><li id="s1p4"><span class="ref" title="Reference">NP7 S1 P4</span>Other aged care programs: the <b>Commonwealth Home Support Programme (CHSP)</b> for a little help at home, and <b>residential aged care</b> for people who can no longer live at home.</li><li id="s1p5"><span class="ref" title="Reference">NP7 S1 P5</span><b>For Solomon</b>: he lives in his <b>own home</b> and wants to stay there. So the best model is <b>Support at Home</b>. It can give him personal support, domestic help, transport and social support <b>in his own home</b>, and he can also choose <b>respite</b> and <b>activity</b> services.</li><li id="s1p6"><span class="ref" title="Reference">NP7 S1 P6</span>In your answer: name <b>ONE</b> model (Support at Home), then explain the <b>types of support</b> it offers.</li></ol><figure><img src="pics/carer-wheelchair.jpg" alt="A support worker kneeling to talk with an older man in a wheelchair at home" style="max-width:360px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Support at Home program: overview for older people <span class="vid-by">(Australian Department of Health, Disability and Ageing)</span></p><div class="video" data-youtube="JICJxvrQ8bM" data-title="Support at Home program: overview for older people"></div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s1-1" data-activity='{"type":"quiz","title":"Pick ONE model for Solomon","instructions":"Choose the best answer.","questions":[{"q":"Solomon is 83, lives in his own home and wants to stay there. Which service delivery model suits him best?","options":["The NDIS","Support at Home","Both the NDIS and Support at Home","A hospital"],"answer":1,"why":"He is over 65 and wants to stay at home, so it is aged care: Support at Home. Name only ONE model."},{"q":"Which of these is NOT something Support at Home offers?","options":["Help with showering and dressing","Cleaning and meals","Transport and social outings","Paying for his overseas holiday"],"answer":3,"why":"Support at Home pays for care and support services, not holidays."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Pick ONE model for Solomon</b></div>
+    <p class="act-instr">Choose the best answer.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307123/View" target="_blank" rel="noopener">The aged care and disability sectors</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307124/View" target="_blank" rel="noopener">Funding models – aged care</a></div>
+  
+  <aside class="tnotes" data-slide="s1" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s2" data-ref="NP7 S2">
+  <h2 class="topic"><span class="num">2</span> The standards every aged care service must meet</h2>
+  
+  <p class="intro">Services must meet <b>industry standards</b>. In aged care these are the <b>Strengthened Aged Care Quality Standards</b> (you can write &quot;Aged Care Quality Standards&quot;). There are <b>seven</b> standards. Learn the headings <b>exactly</b>.</p>
+  
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np7-s2.mp3" aria-label="Listen: The standards every aged care service must meet"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <ol class="points"><li id="s2p1"><span class="ref" title="Reference">NP7 S2 P1</span><b>Standard 1</b>: The Person</li><li id="s2p2"><span class="ref" title="Reference">NP7 S2 P2</span><b>Standard 2</b>: The Organisation</li><li id="s2p3"><span class="ref" title="Reference">NP7 S2 P3</span><b>Standard 3</b>: Care and Services</li><li id="s2p4"><span class="ref" title="Reference">NP7 S2 P4</span><b>Standard 4</b>: The Environment</li><li id="s2p5"><span class="ref" title="Reference">NP7 S2 P5</span><b>Standard 5</b>: Clinical Care</li><li id="s2p6"><span class="ref" title="Reference">NP7 S2 P6</span><b>Standard 6</b>: Food and Nutrition</li><li id="s2p7"><span class="ref" title="Reference">NP7 S2 P7</span><b>Standard 7</b>: The Residential Community</li><li id="s2p8"><span class="ref" title="Reference">NP7 S2 P8</span>The disability sector has different standards: the <b>NDIS Practice Standards and Quality Indicators</b>, with <b>modules</b>, not standards. You do NOT need these for Solomon.</li></ol>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Introduction to the strengthened Aged Care Quality Standards <span class="vid-by">(Aged Care Quality and Safety Commission)</span></p><div class="video" data-youtube="U4vVIDC-7mo" data-title="Introduction to the strengthened Aged Care Quality Standards"></div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s2-1" data-activity='{"type":"order","title":"Put the seven standards in order","instructions":"Put the headings in order from Standard 1 to Standard 7.","items":["The Person","The Organisation","Care and Services","The Environment","Clinical Care","Food and Nutrition","The Residential Community"]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Put the seven standards in order</b></div>
+    <p class="act-instr">Put the headings in order from Standard 1 to Standard 7.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307140/View" target="_blank" rel="noopener">Aged care sector: Legal and ethical considerations, and organisational standards</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307123/View" target="_blank" rel="noopener">The aged care and disability sectors</a></div>
+  
+  <aside class="tnotes" data-slide="s2" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s3" data-ref="NP7 S3">
+  <h2 class="topic"><span class="num">3</span> Who pays? Funding for Solomon</h2>
+  
+  <p class="intro">Support costs money. A <b>funding source</b> is where the money comes from. Your assessment asks for <b>one</b> funding source that Solomon could apply for.</p>
+  
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np7-s3.mp3" aria-label="Listen: Who pays? Funding for Solomon"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s3p1"><span class="ref" title="Reference">NP7 S3 P1</span><b>For Solomon: the Support at Home Program.</b> The Australian Government funds it. Solomon pays a contribution based on his income and assets, and he is wealthy, so he may pay more.</li><li id="s3p2"><span class="ref" title="Reference">NP7 S3 P2</span>How to get it: call or go online to <b>My Aged Care</b>. An assessor visits and checks his needs. If he is approved, he gets a budget and chooses an approved provider.</li><li id="s3p3"><span class="ref" title="Reference">NP7 S3 P3</span>Other funding you may hear about: <b>AN-ACC</b> pays residential aged care homes; <b>Medicare</b> pays part of doctor and health visits; <b>Centrelink</b> pays pensions; <b>the Department of Veterans' Affairs (DVA)</b> helps veterans; some people are <b>self-funded</b> and pay for everything themselves.</li><li id="s3p4"><span class="ref" title="Reference">NP7 S3 P4</span>The disability sector is funded by the <b>NDIS</b> (for people under 65). Not for Solomon.</li></ol><figure><img src="pics/plan-documents.jpg" alt="A stack of paper files with coloured tabs" style="max-width:340px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s3-1" data-activity='{"type":"quiz","title":"ONE funding source","instructions":"Choose the best answer.","questions":[{"q":"Which funding source could Solomon apply for?","options":["The NDIS","The Support at Home Program","A school scholarship","The NDIS and Medicare and Centrelink"],"answer":1,"why":"Solomon is in aged care, so the funding source is the Support at Home Program. Name ONE."},{"q":"Where does Solomon start, to get Support at Home?","options":["My Aged Care","The NDIS","His bank","The hospital pharmacy"],"answer":0,"why":"My Aged Care is the front door: it arranges the assessment."}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>ONE funding source</b></div>
+    <p class="act-instr">Choose the best answer.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307124/View" target="_blank" rel="noopener">Funding models – aged care</a></div>
+  
+  <aside class="tnotes" data-slide="s3" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s4" data-ref="NP7 S4">
+  <h2 class="topic"><span class="num">4</span> Agencies and networks in your region</h2>
+  
+  <p class="intro">Your service cannot do everything. An <b>external agency</b> is another organisation that gives a different kind of help. A <a class="term" href="0-index.html#g-network" data-term="network" title="What does this word mean?">Network</a> is a group of services, workers and people who <b>share information, resources and ideas</b>.</p>
+  
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np7-s4.mp3" aria-label="Listen: Agencies and networks in your region"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s4p1"><span class="ref" title="Reference">NP7 S4 P1</span>Why networks matter: they help services <b>work together</b>, <b>share information</b> and <b>resources</b>, do <b>projects</b> together, and make support <b>easier for the person</b>.</li><li id="s4p2"><span class="ref" title="Reference">NP7 S4 P2</span>Aged care networks and agencies: <b>My Aged Care</b>, the <b>Aged Care Quality and Safety Commission</b>, <b>COTA</b> (Council on the Ageing), the <b>Older Persons Advocacy Network (OPAN)</b> and <b>ADA Australia</b> (advocacy in Queensland), the <b>Elder Abuse Prevention Unit</b>, <b>Dementia Australia</b>, <b>GPs and allied health</b>, <b>Queensland Health</b>.</li><li id="s4p3"><span class="ref" title="Reference">NP7 S4 P3</span>For Solomon, for example: the <b>Stroke Foundation</b> (StrokeLine, information and support after a stroke); a <b>community transport</b> service so he can get to appointments and the synagogue; the local <b>Jewish community</b> and synagogue for faith and friends; <b>COTA Queensland</b> for social groups and information.</li><li id="s4p4"><span class="ref" title="Reference">NP7 S4 P4</span>In your answer: <b>one agency</b> and <b>one network</b>, near where <b>you</b> live (Springfield, Ipswich or your suburb), and <b>how each one helps Solomon</b>.</li><li id="s4p5"><span class="ref" title="Reference">NP7 S4 P5</span>Tip: the agency must be a <b>different type</b> of service to the one you work for (a home care provider).</li></ol><figure><img src="pics/network.jpg" alt="Small blocks with people icons joined by lines, like a network" style="max-width:360px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s4-1" data-activity='{"type":"sort","title":"Agency or network?","instructions":"Is it mainly a service that helps the person (agency), or a group that shares information and connects people (network)?","buckets":["Agency (gives a service)","Network (connects and shares)"],"items":[{"text":"A community transport service that drives Solomon to appointments","bucket":"Agency (gives a service)"},{"text":"The Stroke Foundation&#39;s StrokeLine giving him advice","bucket":"Agency (gives a service)"},{"text":"COTA Queensland, linking older people, groups and information","bucket":"Network (connects and shares)"},{"text":"A meeting where local aged care services share ideas and resources","bucket":"Network (connects and shares)"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Agency or network?</b></div>
+    <p class="act-instr">Is it mainly a service that helps the person (agency), or a group that shares information and connects people (network)?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307126/View" target="_blank" rel="noopener">Networks</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307107/View" target="_blank" rel="noopener">Support resources</a></div>
+  
+  <aside class="tnotes" data-slide="s4" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s5" data-ref="NP7 S5">
+  <h2 class="topic"><span class="num">5</span> Cecilia and Ruth: who is in the team?</h2>
+  
+  <p class="intro">This case study is in <b>Section 2</b> of your assessment, for <b>everyone</b>. Cecilia is 34 and has Down syndrome and a moderate intellectual disability. She lives with her Great Aunt <b>Ruth</b>, who is 93. Ruth now needs <b>dialysis</b> three long days a week, and she feels she cannot support Cecilia the way she wants to. The team meets to plan.</p>
+  
+  <div class="people"><article class="person"><img src="pics/family-group.jpg" alt="A happy family group outside"><div class="pp"><span class="tag">Section 2 case study</span><h3>Cecilia, 34, and Ruth, 93</h3><ul><li>Cecilia has had support from disability services for 15 years. Support workers visit <b>6 hours a day, 2 days a week</b>.</li><li>Ruth has chronic kidney disease. Dialysis means up to <b>5 hours a day, 3 times a week</b>, plus travel, and she will be very tired.</li><li>The team: <b>Cecilia, Ruth, their GPs and allied health professionals, the supervisors</b> of the disability service, and <b>you, the support worker</b>.</li></ul></div></article></div>
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np7-s5.mp3" aria-label="Listen: Cecilia and Ruth: who is in the team?"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  <figure class="visual"><svg viewBox="0 0 560 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cecilia and Ruth in the middle, with the GP and allied health, the supervisor and the support worker around them" style="max-width:620px;width:100%">
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <path d="M280 165 L110 60 M280 165 L450 60 M280 165 L280 290" stroke="#2bb8d6" stroke-width="5" stroke-dasharray="2 9" stroke-linecap="round"/>
+    <circle cx="280" cy="165" r="78" fill="#e86a2f"/><text x="280" y="155" font-size="22" font-weight="800" fill="#fff">Cecilia</text><text x="280" y="183" font-size="22" font-weight="800" fill="#fff">and Ruth</text><text x="280" y="207" font-size="13" fill="#fff">they decide</text>
+    <rect x="10" y="20" width="200" height="74" rx="16" fill="#0a7f9c"/><text x="110" y="52" font-size="18" font-weight="800" fill="#fff">GP and allied health</text><text x="110" y="76" font-size="14" fill="#fff">medical advice, treatment</text>
+    <rect x="350" y="20" width="200" height="74" rx="16" fill="#0b4f66"/><text x="450" y="52" font-size="18" font-weight="800" fill="#fff">Supervisor</text><text x="450" y="76" font-size="14" fill="#fff">coordinates, guides staff</text>
+    <rect x="180" y="256" width="200" height="70" rx="16" fill="#2bb8d6"/><text x="280" y="286" font-size="18" font-weight="800" fill="#fff">Support worker (you)</text><text x="280" y="310" font-size="14" fill="#fff">follows the plan, reports</text>
+  </g></svg><figcaption>Cecilia and Ruth are at the centre. Everyone else supports them.</figcaption></figure>
+  
+  
+  
+  
+  
+  <div class="stack" aria-label="Cecilia and Ruth: who is in the team? cards" data-playall="1"><article class="card" id="s5c1" data-ref="NP7 S5 C1">
+      <h3>Cecilia</h3>
+      
+      <p><b>Role:</b> the focus person, at the centre of the planning.</p>
+      <ul><li>Share her wants, needs, likes and limits (as well as she can at the time).</li><li>Be as independent as she can.</li><li>Try not to hurt others with her actions.</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s5-c1.mp3" aria-label="Listen: Cecilia"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s5c2" data-ref="NP7 S5 C2">
+      <h3>Ruth</h3>
+      
+      <p><b>Role:</b> a focus person in her own right, AND Cecilia's full-time support person.</p>
+      <ul><li>Be honest about what she can and cannot do to support Cecilia.</li><li>Have time to look after her own health.</li><li>Be a responsible guardian for Cecilia.</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s5-c2.mp3" aria-label="Listen: Ruth"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s5c3" data-ref="NP7 S5 C3">
+      <h3>GP and allied health professionals</h3>
+      
+      <p><b>Role:</b> give medical advice and treatment options to Cecilia and Ruth, for a good quality of life for both.</p>
+      <ul><li>See the whole picture for Ruth, with empathy.</li><li>Link them to other services that can help both of them.</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s5-c3.mp3" aria-label="Listen: GP and allied health professionals"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s5c4" data-ref="NP7 S5 C4">
+      <h3>Support worker (you)</h3>
+      
+      <p><b>Role:</b> part-time support for Cecilia, and so also for Ruth.</p>
+      <ul><li>Give support that helps Cecilia reach the goals in her individual plan.</li><li>Report any changes or anything unusual to the supervisor.</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s5-c4.mp3" aria-label="Listen: Support worker (you)"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s5c5" data-ref="NP7 S5 C5">
+      <h3>Supervisor</h3>
+      
+      <p><b>Role:</b> coordinates between outside agencies, the person and the family; guides and supports the paid workers; helps the family find their way through the sector.</p>
+      <ul><li>Keep the focus on the person.</li><li>Make sure Cecilia is supported in a way that respects her rights, her needs and her choices.</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s5-c5.mp3" aria-label="Listen: Supervisor"><span class="ico">&#9654;</span> Listen</button></div>
+    </article></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s5-1" data-activity='{"type":"match","title":"Who has this responsibility?","instructions":"Match each team member to a responsibility.","pairs":[{"a":"Cecilia","b":"Share her wants, needs and limits, and be as independent as she can"},{"a":"Ruth","b":"Be honest about what she can do, and look after her own health"},{"a":"GP and allied health","b":"Give medical advice and link them to more services"},{"a":"Support worker","b":"Follow the plan towards her goals, and report changes to the supervisor"},{"a":"Supervisor","b":"Coordinate everyone and make sure her rights and choices are respected"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Who has this responsibility?</b></div>
+    <p class="act-instr">Match each team member to a responsibility.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307151/View" target="_blank" rel="noopener">Roles and responsibilities in individualised support planning</a></div>
+  
+  <aside class="tnotes" data-slide="s5" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s6" data-ref="NP7 S6">
+  <h2 class="topic"><span class="num">6</span> How a good team communicates</h2>
+  
+  <p class="intro">A team only works if information gets to the <b>right person</b>, at the <b>right time</b>, in the <b>right way</b>, and <b>everyone has a say</b>.</p>
+  
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np7-s6.mp3" aria-label="Listen: How a good team communicates"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s6p1"><span class="ref" title="Reference">NP7 S6 P1</span>Be <b>respectful</b> to every team member.</li><li id="s6p2"><span class="ref" title="Reference">NP7 S6 P2</span>Share information <b>on time</b> (timely), for example at <b>handover</b> and in <b>team meetings</b>. Some can be <b>verbal</b>, but <b>key information must be recorded</b> in the <b>progress notes</b> or the person's file.</li><li id="s6p3"><span class="ref" title="Reference">NP7 S6 P3</span>Make sure <b>every member</b> knows about <b>any change</b>.</li><li id="s6p4"><span class="ref" title="Reference">NP7 S6 P4</span><b>Cecilia and Ruth are the key people.</b> <b>Include</b> them in every <b>decision</b>. They have the final say.</li><li id="s6p5"><span class="ref" title="Reference">NP7 S6 P5</span>Ways to communicate: <b>phone</b>, <b>email</b>, a <b>communication book</b>, <b>Cecilia's file</b>.</li><li id="s6p6"><span class="ref" title="Reference">NP7 S6 P6</span><b>Example (put this in your answer):</b> the doctor changes Cecilia's medication. Ruth has signed a <b>consent form</b> so the doctor and the service can share information. The doctor <b>emails</b> the service and the pharmacy. The <b>supervisor writes it in Cecilia's file</b>. The <b>support worker reads the file</b> and looks for the new chart and blister pack. The pharmacy delivers the new chart and pack to Ruth. The support worker <b>talks with Ruth</b> about side effects to watch for, then <b>signs the chart</b> after helping Cecilia take the new tablet at lunch.</li></ol><figure><img src="pics/worker-talking.jpg" alt="A support worker with a folder talking with an older man on a couch" style="max-width:340px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Staff handovers in aged and disability care</p><div class="video" data-youtube="2SMH8z8xZz4" data-title="Staff handovers in aged and disability care"></div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s6-1" data-activity='{"type":"order","title":"Follow the message","instructions":"Put the steps of the medication change in order.","items":["Ruth signs a consent form so the doctor and the service can share information.","The doctor changes the medication and emails the service and the pharmacy.","The supervisor writes the change in Cecilia&#39;s file.","The support worker reads the file and looks for the new chart and blister pack.","The support worker talks with Ruth about side effects to watch for.","The support worker signs the chart after helping Cecilia take the new tablet."]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Follow the message</b></div>
+    <p class="act-instr">Put the steps of the medication change in order.</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307151/View" target="_blank" rel="noopener">Roles and responsibilities in individualised support planning</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307200/View" target="_blank" rel="noopener">Verbal reports</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307199/View" target="_blank" rel="noopener">Documenting and reporting</a></div>
+  
+  <aside class="tnotes" data-slide="s6" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s7" data-ref="NP7 S7">
+  <h2 class="topic"><span class="num">7</span> Assistive technology: the categories</h2>
+  
+  <p class="intro"><a class="term" href="0-index.html#g-assistive-technology" data-term="assistive-technology" title="What does this word mean?">Assistive technology</a> is any <b>tool, equipment or change</b> that helps a person do something they could not do, or could not do safely, on their own. Your assessment lists the <b>categories</b> below (exact names). Give <b>one different example</b> for each.</p>
+  
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np7-s7.mp3" aria-label="Listen: Assistive technology: the categories"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  
+  
+  
+  
+  
+  <div class="stack" aria-label="Assistive technology: the categories cards" data-playall="1"><article class="card" id="s7c1" data-ref="NP7 S7 C1">
+      <h3>Carer support</h3>
+      <div class="card-pic photo"><img src="pics/carer-wheelchair.jpg" alt=""></div>
+      <p>Helps the worker or carer move and support the person safely.</p>
+      <ul><li>Weight bearing lifter (hoist)</li><li>Slide sheets</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s7-c1.mp3" aria-label="Listen: Carer support"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s7c2" data-ref="NP7 S7 C2">
+      <h3>Cognition and memory loss</h3>
+      
+      <p>Helps a person remember and stay safe.</p>
+      <ul><li>Alert buttons</li><li>Pill dispensers and reminders</li><li>Night and day clocks</li><li>Lights that turn on by themselves</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s7-c2.mp3" aria-label="Listen: Cognition and memory loss"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s7c3" data-ref="NP7 S7 C3">
+      <h3>Continence and hygiene</h3>
+      <div class="card-pic photo"><img src="pics/at-commode.jpg" alt=""></div>
+      <p>Helps with toileting and staying clean and dry.</p>
+      <ul><li>Continence pads, aids and sheets</li><li>Commodes</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s7-c3.mp3" aria-label="Listen: Continence and hygiene"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s7c4" data-ref="NP7 S7 C4">
+      <h3>Daily living activities</h3>
+      
+      <p>Helps with everyday jobs around the home.</p>
+      <ul><li>Long handled claw (pick-up stick)</li><li>Non-slip mat to open jars</li><li>Long handled shoehorn</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s7-c4.mp3" aria-label="Listen: Daily living activities"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s7c5" data-ref="NP7 S7 C5">
+      <h3>Eating and drinking</h3>
+      <div class="card-pic photo"><img src="pics/at-cutlery.jpg" alt=""></div>
+      <p>Helps a person eat and drink by themselves.</p>
+      <ul><li>One way straws</li><li>Curved or built-up cutlery</li><li>Non-slip mats</li><li>Lip plates</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s7-c5.mp3" aria-label="Listen: Eating and drinking"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s7c6" data-ref="NP7 S7 C6">
+      <h3>Education and employment</h3>
+      <div class="card-pic photo"><img src="pics/at-keyboard.jpg" alt=""></div>
+      <p>Helps a person learn and work.</p>
+      <ul><li>Literacy software</li><li>Magnification software</li><li>Text-to-voice software</li><li>Speaking to type (dictation)</li><li>Big, colourful keyboards</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s7-c6.mp3" aria-label="Listen: Education and employment"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s7c7" data-ref="NP7 S7 C7">
+      <h3>Home and other environment</h3>
+      <div class="card-pic photo"><img src="pics/at-stairlift.jpg" alt=""></div>
+      <p>Changes to the home and places the person goes.</p>
+      <ul><li>Ramps</li><li>Roll-in showers</li><li>Automatic or wider doors</li><li>Stair lifts</li><li>Voice controlled systems</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s7-c7.mp3" aria-label="Listen: Home and other environment"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s7c8" data-ref="NP7 S7 C8">
+      <h3>Mobility and transfers</h3>
+      <div class="card-pic photo"><img src="pics/at-walker.jpg" alt=""></div>
+      <p>Helps a person move around and get from one place to another.</p>
+      <ul><li>Rollators and walkers</li><li>Walking sticks</li><li>Mobility scooters</li><li>Grab rails in the bathroom</li><li>Raised toilet seats</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s7-c8.mp3" aria-label="Listen: Mobility and transfers"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s7c9" data-ref="NP7 S7 C9">
+      <h3>Pressure area management</h3>
+      <div class="card-pic photo"><img src="pics/at-bed-trapeze.jpg" alt=""></div>
+      <p>Helps protect the skin from pressure injuries.</p>
+      <ul><li>Monkey bar (trapeze) over the bed</li><li>Rope bed ladder</li><li>Heel troughs and splints</li><li>Pressure relieving mattresses</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s7-c9.mp3" aria-label="Listen: Pressure area management"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s7c10" data-ref="NP7 S7 C10">
+      <h3>Recreation and leisure</h3>
+      <div class="card-pic photo"><img src="pics/at-garden.jpg" alt=""></div>
+      <p>Helps a person enjoy hobbies and fun.</p>
+      <ul><li>Card holders and large print cards</li><li>Large dice</li><li>Raised garden beds and adapted gardening tools</li><li>Beach wheelchairs and mats</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s7-c10.mp3" aria-label="Listen: Recreation and leisure"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s7c11" data-ref="NP7 S7 C11">
+      <h3>Self-care</h3>
+      <div class="card-pic photo"><img src="pics/at-shower-chair.jpg" alt=""></div>
+      <p>Helps a person wash and care for themselves.</p>
+      <ul><li>Long handled sponges</li><li>No-touch soap dispensers and taps</li><li>Shower chairs</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s7-c11.mp3" aria-label="Listen: Self-care"><span class="ico">&#9654;</span> Listen</button></div>
+    </article><article class="card" id="s7c12" data-ref="NP7 S7 C12">
+      <h3>Vision and hearing loss</h3>
+      <div class="card-pic photo"><img src="pics/at-hearing-aid.jpg" alt=""></div>
+      <p>Helps a person see and hear.</p>
+      <ul><li>Hearing aids</li><li>Magnifiers</li><li>Text-to-voice apps</li><li>Braille displays and screen readers</li><li>Phones with big buttons</li></ul>
+      
+      <div class="card-audio"><button type="button" class="say" data-audio="audio/np7-s7-c12.mp3" aria-label="Listen: Vision and hearing loss"><span class="ico">&#9654;</span> Listen</button></div>
+    </article></div>
+  
+  
+  
+  
+  <div class="vid"><p class="vid-title"><b>Watch:</b> Assistive Technology with Spinal Life Australia <span class="vid-by">(Spinal Life Australia)</span></p><div class="video" data-youtube="_I9e9PnjcJY" data-title="Assistive Technology with Spinal Life Australia"></div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s7-1" data-activity='{"type":"match","title":"Which category?","instructions":"Match each example to its category (the exact names from your assessment).","pairs":[{"a":"Weight bearing lifter","b":"Carer support"},{"a":"Pill dispenser with a reminder","b":"Cognition and memory loss"},{"a":"Commode","b":"Continence and hygiene"},{"a":"Long handled claw","b":"Daily living activities"},{"a":"Lip plate","b":"Eating and drinking"},{"a":"Text-to-voice software","b":"Education and employment"},{"a":"Ramp","b":"Home and other environment"},{"a":"Rollator","b":"Mobility and transfers"},{"a":"Pressure relieving mattress","b":"Pressure area management"},{"a":"Large print playing cards","b":"Recreation and leisure"},{"a":"Long handled sponge","b":"Self-care"},{"a":"Magnifier","b":"Vision and hearing loss"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Which category?</b></div>
+    <p class="act-instr">Match each example to its category (the exact names from your assessment).</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307193/View" target="_blank" rel="noopener">Assistive technologies</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307192/View" target="_blank" rel="noopener">Assistive technologies: Introduction</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307195/View" target="_blank" rel="noopener">Personal care assistive technologies</a></div>
+  
+  <aside class="tnotes" data-slide="s7" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s8" data-ref="NP7 S8">
+  <h2 class="topic"><span class="num">8</span> Choosing technology for Solomon</h2>
+  
+  <p class="intro">Your assessment asks for <b>two</b> pieces of technology from your list: one that helps Solomon be <b>independent</b>, and one that helps him <b>join in the community</b>. For each: <b>name it</b>, then <b>explain how it helps Solomon</b>.</p>
+  
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np7-s8.mp3" aria-label="Listen: Choosing technology for Solomon"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s8p1"><span class="ref" title="Reference">NP7 S8 P1</span>Remember Solomon: a stroke, weakness on his <b>left side</b>, an <b>electric wheelchair</b>, help to transfer, soft foods, slightly slurred speech. He is clever, loves his farm and his faith.</li><li id="s8p2"><span class="ref" title="Reference">NP7 S8 P2</span><b>Ideas for independence</b>: built-up or curved <b>cutlery</b> and a <b>lip plate</b> so he can feed himself with one hand; a <b>long handled sponge</b> and <b>shower chair</b> so he can wash more himself; <b>grab rails</b> for safer transfers; a <b>communication app</b> if his speech is hard to understand.</li><li id="s8p3"><span class="ref" title="Reference">NP7 S8 P3</span><b>Ideas for joining in</b>: a <b>wheelchair accessible vehicle</b> with a ramp, or <b>community transport</b>, so he can get to the synagogue, the farm markets and his friends; a <b>tablet or phone</b> for video calls with his children overseas; <b>raised garden beds</b> so he can keep growing produce.</li><li id="s8p4"><span class="ref" title="Reference">NP7 S8 P4</span>Explain the <b>benefit</b>: what will Solomon be able to do, and why does it matter <b>to him</b>? Example: &quot;A wheelchair accessible taxi lets Solomon go to the synagogue on Shabbat, so he keeps his faith community and his friends.&quot;</li></ol><figure><img src="pics/at-vehicle-ramp.jpg" alt="A woman in a power wheelchair going up a ramp into a van" style="max-width:380px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="vid-row"><div class="vid"><p class="vid-title"><b>Watch:</b> Assistive technology in action: Meet Jared <span class="vid-by">(PACER Center)</span></p><div class="video" data-youtube="Bhj5vs9P5cw" data-title="Assistive technology in action: Meet Jared"></div></div><div class="vid"><p class="vid-title"><b>Watch:</b> Assistive technology for recreational activities <span class="vid-by">(DNEM)</span></p><div class="video" data-youtube="VkbyUJNkgzU" data-title="Assistive technology for recreational activities"></div></div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s8-1" data-activity='{"type":"sort","title":"Independence or joining in?","instructions":"Does each idea mainly help Solomon do things for himself, or join in with the community?","buckets":["Independence","Joining in the community"],"items":[{"text":"Curved cutlery and a lip plate so he can feed himself","bucket":"Independence"},{"text":"A long handled sponge so he can wash himself","bucket":"Independence"},{"text":"Grab rails beside the toilet","bucket":"Independence"},{"text":"A wheelchair accessible taxi to the synagogue","bucket":"Joining in the community"},{"text":"A tablet for video calls with his children and friends","bucket":"Joining in the community"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Independence or joining in?</b></div>
+    <p class="act-instr">Does each idea mainly help Solomon do things for himself, or join in with the community?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307176/View" target="_blank" rel="noopener">Supporting the use of assistive technologies</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307194/View" target="_blank" rel="noopener">Recreational and social assistive technologies</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307196/View" target="_blank" rel="noopener">Communication assistive technologies</a></div>
+  
+  <aside class="tnotes" data-slide="s8" aria-label="Teacher notes"></aside>
+</section>
+
+<section class="slide" id="s9" data-ref="NP7 S9">
+  <h2 class="topic"><span class="num">9</span> How do you know what equipment to use, and how?</h2>
+  
+  <p class="intro">On a shift you use lots of equipment: a hoist, a shower chair, a urine bottle, cutlery. How do you know <b>which</b> one, <b>how</b> to use it, and <b>how much help</b> the person needs? Your assessment asks this about Juan (you meet him in Lesson 5).</p>
+  
+  
+  
+  <div class="audio-line"><button type="button" class="say" data-audio="audio/np7-s9.mp3" aria-label="Listen: How do you know what equipment to use, and how?"><span class="ico">&#9654;</span> Listen</button> <span class="audio-label">Listen to the explanation</span></div>
+  
+  <div class="side-points"><ol class="points"><li id="s9p1"><span class="ref" title="Reference">NP7 S9 P1</span><b>Read the individual plan</b> (care plan) and make sure you understand it. It says what equipment the person uses and how much help they need.</li><li id="s9p2"><span class="ref" title="Reference">NP7 S9 P2</span><b>Ask your supervisor</b> if anything is not clear.</li><li id="s9p3"><span class="ref" title="Reference">NP7 S9 P3</span>Follow your organisation's <b>policies and procedures</b>: they set how support must be given.</li><li id="s9p4"><span class="ref" title="Reference">NP7 S9 P4</span>Go to <b>in-service training</b> about equipment and manual handling.</li><li id="s9p5"><span class="ref" title="Reference">NP7 S9 P5</span>Complete your <b>yearly manual handling competencies</b>.</li><li id="s9p6"><span class="ref" title="Reference">NP7 S9 P6</span>Never swap in different equipment or guess. If the equipment looks broken or unsafe, do not use it: tag it and report it.</li></ol><figure><img src="pics/at-boy-wheelchair.jpg" alt="A smiling boy in a supportive wheelchair with arm supports" style="max-width:340px"></figure></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="activity" id="act-s9-1" data-activity='{"type":"sort","title":"Safe or not?","instructions":"Is each one a safe way to know what equipment to use?","buckets":["Safe","Not safe"],"items":[{"text":"Read Juan&#39;s individual plan","bucket":"Safe"},{"text":"Ask the supervisor when unsure","bucket":"Safe"},{"text":"Do the yearly manual handling competency","bucket":"Safe"},{"text":"Use whatever hoist is closest","bucket":"Not safe"},{"text":"Copy what the last worker did without checking","bucket":"Not safe"}]}'>
+    <div class="act-head"><span class="act-badge">Try it</span> <b>Safe or not?</b></div>
+    <p class="act-instr">Is each one a safe way to know what equipment to use?</p>
+    <div class="act-start"><button type="button" class="act-go">Start</button><span>The notes above will blur while you try. You can peek any time.</span></div>
+    <div class="act-tools" hidden><button type="button" class="act-peek">Show the notes</button></div>
+    <div class="act-body" hidden></div>
+    <div class="act-foot"><button type="button" class="act-check">Check</button><button type="button" class="act-reset">Reset</button><span class="act-result" aria-live="polite"></span></div>
+  </div>
+  <div class="source"><span class="source-label">Read more in Connect:</span> <a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307152/View" target="_blank" rel="noopener">Reading, understanding and following the individualised plan</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307153/View" target="_blank" rel="noopener">Organising equipment, processes and aids</a><a href="https://connect.tafeqld.edu.au/d2l/le/content/802548/viewContent/43307206/View" target="_blank" rel="noopener">Equipment, aids, and appliances</a></div>
+  <div class="finale" data-finale><div class="fin-side left"><div class="fin-mascot"><svg viewBox="0 0 160 172" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hurry-Up Harry, a rubber duck in a rush">
+  <style>.hsw{animation:hSw 1.2s ease-in-out infinite;transform-origin:118px 40px}.hdrop{animation:hDrop 1.4s ease-in infinite}.hl{animation:hLines .5s steps(2) infinite}@keyframes hSw{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}@keyframes hDrop{0%{transform:translateY(0);opacity:1}100%{transform:translateY(18px);opacity:0}}@keyframes hLines{0%{opacity:.9}50%{opacity:.3}}@media (prefers-reduced-motion:reduce){.hsw,.hdrop,.hl{animation:none}}</style>
+  <defs><radialGradient id="hb" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fff6a8"/><stop offset=".55" stop-color="#ffd52e"/><stop offset="1" stop-color="#e8a400"/></radialGradient>
+  <linearGradient id="hw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fe7f5"/><stop offset="1" stop-color="#2aa6c4"/></linearGradient></defs>
+  <ellipse cx="80" cy="156" rx="70" ry="12" fill="url(#hw)" opacity=".85"/>
+  <path d="M14 156 q10 -8 20 0 q10 8 20 0 q10 -8 20 0 q10 8 20 0 q10 -8 20 0 q10 8 20 0" fill="none" stroke="#fff" stroke-width="3" opacity=".8"/>
+  <g class="hl" stroke="#2aa6c4" stroke-width="4" stroke-linecap="round"><line x1="4" y1="96" x2="22" y2="96"/><line x1="0" y1="112" x2="20" y2="112"/><line x1="6" y1="128" x2="24" y2="128"/></g>
+  <path d="M30 120 q-6 -40 40 -46 q42 -4 58 20 q12 22 -4 40 q-20 18 -58 16 q-32 -2 -36 -30z" fill="url(#hb)" stroke="#b37a00" stroke-width="3"/>
+  <path d="M40 110 q18 16 44 6" fill="none" stroke="#e8a400" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="64" cy="60" r="30" fill="url(#hb)" stroke="#b37a00" stroke-width="3"/>
+  <path d="M88 62 q22 -6 30 4 q-8 12 -30 8z" fill="#ff7a1a" stroke="#b34c00" stroke-width="2.5"/>
+  <circle cx="58" cy="52" r="10" fill="#fff" stroke="#3a2a00" stroke-width="2"/><circle cx="76" cy="50" r="10" fill="#fff" stroke="#3a2a00" stroke-width="2"/>
+  <circle cx="62" cy="54" r="4.5" fill="#1d1a10"/><circle cx="80" cy="52" r="4.5" fill="#1d1a10"/>
+  <path d="M48 38 l14 6 M86 36 l-12 8" stroke="#3a2a00" stroke-width="3.5" stroke-linecap="round"/>
+  <path class="hdrop" d="M42 40 q-4 7 0 10 q4 -3 0 -10z" fill="#7fd4ea"/>
+  <g class="hsw"><circle cx="122" cy="44" r="18" fill="#fff" stroke="#c62828" stroke-width="4"/><rect x="117" y="20" width="10" height="7" rx="2" fill="#c62828"/><line x1="122" y1="44" x2="122" y2="32" stroke="#1d1a10" stroke-width="3" stroke-linecap="round"/><line x1="122" y1="44" x2="131" y2="49" stroke="#1d1a10" stroke-width="3" stroke-linecap="round"/></g>
+  <path d="M104 92 q14 -14 18 -30" stroke="#e8a400" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <text x="2" y="20" font-family="Arial, sans-serif" font-weight="800" font-size="15" fill="#c62828">QUICK!</text>
+</svg></div><div class="fin-bubble"><p>Support at Home, NDIS, whatever. I will just grab any walker and go.</p><button type="button" class="say" data-audio="audio/np7-s9-harry.mp3" aria-label="Listen: Hurry-Up Harry"><span class="ico">&#9654;</span> Listen</button></div><p class="fin-who">Hurry-Up Harry</p></div><div class="fin-side right"><div class="fin-mascot"><svg viewBox="0 0 150 172" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sudsy the Soap Bubble">
+  <style>.ssh{animation:sShine 4s ease-in-out infinite}.sfoam circle{animation:sFoam 3s ease-in-out infinite}.sfoam circle:nth-child(2n){animation-delay:1.5s}@keyframes sShine{0%,100%{opacity:.85}50%{opacity:.45}}@keyframes sFoam{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}@media (prefers-reduced-motion:reduce){.ssh,.sfoam circle{animation:none}}</style>
+  <defs><radialGradient id="sb" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#ffffff" stop-opacity=".95"/><stop offset=".35" stop-color="#d9f6ff" stop-opacity=".85"/><stop offset=".75" stop-color="#9ee3f7" stop-opacity=".8"/><stop offset="1" stop-color="#5cc6e6" stop-opacity=".9"/></radialGradient>
+  <linearGradient id="srb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9ad5"/><stop offset=".35" stop-color="#ffe27a"/><stop offset=".65" stop-color="#8ef0c0"/><stop offset="1" stop-color="#8fb8ff"/></linearGradient></defs>
+  <ellipse cx="75" cy="164" rx="38" ry="6" fill="#2aa6c4" opacity=".25"/>
+  <circle cx="75" cy="96" r="58" fill="url(#sb)" stroke="url(#srb)" stroke-width="4"/>
+  <path class="ssh" d="M38 74 q10 -26 38 -32" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <circle class="ssh" cx="44" cy="96" r="5" fill="#fff"/>
+  <g class="sfoam" fill="#ffffff" stroke="#bfe9f5" stroke-width="2"><circle cx="50" cy="40" r="11"/><circle cx="66" cy="32" r="13"/><circle cx="84" cy="31" r="12"/><circle cx="100" cy="38" r="11"/><circle cx="75" cy="22" r="8"/></g>
+  <ellipse cx="60" cy="96" rx="6" ry="8" fill="#12384a"/><ellipse cx="92" cy="96" rx="6" ry="8" fill="#12384a"/>
+  <circle cx="62" cy="93" r="2" fill="#fff"/><circle cx="94" cy="93" r="2" fill="#fff"/>
+  <path d="M60 116 q16 14 32 0" fill="none" stroke="#12384a" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="48" cy="112" rx="8" ry="5" fill="#ffb3cf" opacity=".7"/><ellipse cx="104" cy="112" rx="8" ry="5" fill="#ffb3cf" opacity=".7"/>
+  <circle cx="128" cy="40" r="7" fill="url(#sb)" stroke="#9ee3f7" stroke-width="2"/><circle cx="20" cy="56" r="5" fill="url(#sb)" stroke="#9ee3f7" stroke-width="2"/>
+</svg></div><div class="fin-bubble"><p>One model for Solomon, Harry: Support at Home. And I check his plan before I touch any equipment.</p><button type="button" class="say" data-audio="audio/np7-s9-sudsy.mp3" aria-label="Listen: Sudsy the Soap Bubble"><span class="ico">&#9654;</span> Listen</button></div><p class="fin-who">Sudsy the Soap Bubble</p></div></div><p class="fin-after">Next: Lesson 4, Moving people safely.</p>
+  <aside class="tnotes" data-slide="s9" aria-label="Teacher notes"></aside>
+</section>
+  <section class="useful" id="links"><h2 class="topic"><span class="num">&#128279;</span> Useful links</h2><p>These open in a new tab.</p><div class="link-grid"><a class="ext-play" href="https://www.myagedcare.gov.au/aged-care-programs" target="_blank" rel="noopener"><span class="ext-icon" aria-hidden="true">&#8599;</span><span><b>My Aged Care: aged care programs</b><small>Connect link</small></span></a><a class="ext-play" href="https://www.myagedcare.gov.au/support-at-home" target="_blank" rel="noopener"><span class="ext-icon" aria-hidden="true">&#8599;</span><span><b>My Aged Care: Support at Home</b><small>How the program works</small></span></a><a class="ext-play" href="https://www.agedcarequality.gov.au/providers/quality-standards" target="_blank" rel="noopener"><span class="ext-icon" aria-hidden="true">&#8599;</span><span><b>Strengthened Aged Care Quality Standards</b><small>Aged Care Quality and Safety Commission</small></span></a><a class="ext-play" href="https://www.ndiscommission.gov.au/rules-and-standards/ndis-practice-standards" target="_blank" rel="noopener"><span class="ext-icon" aria-hidden="true">&#8599;</span><span><b>NDIS Practice Standards and Quality Indicators</b><small>For the disability sector</small></span></a><a class="ext-play" href="https://www.myagedcare.gov.au/find-a-provider" target="_blank" rel="noopener"><span class="ext-icon" aria-hidden="true">&#8599;</span><span><b>My Aged Care: find a provider near you</b><small>Search with your suburb</small></span></a><a class="ext-play" href="https://strokefoundation.org.au/" target="_blank" rel="noopener"><span class="ext-icon" aria-hidden="true">&#8599;</span><span><b>Stroke Foundation</b><small>StrokeLine and support after a stroke</small></span></a><a class="ext-play" href="https://cotaqld.org.au/" target="_blank" rel="noopener"><span class="ext-icon" aria-hidden="true">&#8599;</span><span><b>COTA Queensland (Council on the Ageing)</b><small>A network for older Queenslanders</small></span></a><a class="ext-play" href="https://adaaustralia.com.au/" target="_blank" rel="noopener"><span class="ext-icon" aria-hidden="true">&#8599;</span><span><b>ADA Australia</b><small>Free advocacy for older people in Queensland</small></span></a><a class="ext-play" href="https://www.youtube.com/watch?v=_vhRgaKCDRA" target="_blank" rel="noopener"><span class="ext-icon" aria-hidden="true">&#8599;</span><span><b>Video: An introduction to AN-ACC for residential aged care</b><small>Watch more: how residential aged care is funded</small></span></a><a class="ext-play" href="https://www.youtube.com/watch?v=iyQlTEACATk" target="_blank" rel="noopener"><span class="ext-icon" aria-hidden="true">&#8599;</span><span><b>Video: Assistive technology devices in action</b><small>Watch more (Connect)</small></span></a><a class="ext-play" href="https://www.youtube.com/watch?v=pRUS0WkzYtk" target="_blank" rel="noopener"><span class="ext-icon" aria-hidden="true">&#8599;</span><span><b>Video: Support at Home short-term pathways</b><small>Watch more: Restorative Care, End-of-Life, AT-HM</small></span></a></div></section>
+  <footer class="foot">
+    <p>CHCCCS031 CHCCCS040 · Services, standards, the team and the tools · Built from TAFE Queensland learning resources, 30 Oct 2026. How to write a reference from this page: <b>NP7 S5 P1</b> means <b>Nearpod 7, Section 5, Point 1</b>. <b>C</b> means Card, for example NP7 S4 C2 is Nearpod 7, Section 4, Card 2. The section number is the number in the circle next to each heading.</p>
+    <p>Picture credits: Pictures: Adobe Stock (TAFE Queensland licence) from the Connect learning content</p>
+    <p><a href="0-index.html">Lesson index and glossary</a> · <button type="button" class="tlink">Teacher</button></p>
+  </footer>
+</div>
+<a href="#index" class="home" title="Back to the index"><span aria-hidden="true">&#8679;</span> Home</a>
+<div class="tpill" hidden><span class="tp-label">Teacher</span><button type="button" class="tp-hide">Hide notes</button><button type="button" class="tp-out">Sign out</button></div>
+<div class="mascot harry side-left" data-mascot="harry" title="Hurry-Up Harry" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 160 172" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hurry-Up Harry, a rubber duck in a rush">
+  <style>.hsw{animation:hSw 1.2s ease-in-out infinite;transform-origin:118px 40px}.hdrop{animation:hDrop 1.4s ease-in infinite}.hl{animation:hLines .5s steps(2) infinite}@keyframes hSw{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}@keyframes hDrop{0%{transform:translateY(0);opacity:1}100%{transform:translateY(18px);opacity:0}}@keyframes hLines{0%{opacity:.9}50%{opacity:.3}}@media (prefers-reduced-motion:reduce){.hsw,.hdrop,.hl{animation:none}}</style>
+  <defs><radialGradient id="hb" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fff6a8"/><stop offset=".55" stop-color="#ffd52e"/><stop offset="1" stop-color="#e8a400"/></radialGradient>
+  <linearGradient id="hw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fe7f5"/><stop offset="1" stop-color="#2aa6c4"/></linearGradient></defs>
+  <ellipse cx="80" cy="156" rx="70" ry="12" fill="url(#hw)" opacity=".85"/>
+  <path d="M14 156 q10 -8 20 0 q10 8 20 0 q10 -8 20 0 q10 8 20 0 q10 -8 20 0 q10 8 20 0" fill="none" stroke="#fff" stroke-width="3" opacity=".8"/>
+  <g class="hl" stroke="#2aa6c4" stroke-width="4" stroke-linecap="round"><line x1="4" y1="96" x2="22" y2="96"/><line x1="0" y1="112" x2="20" y2="112"/><line x1="6" y1="128" x2="24" y2="128"/></g>
+  <path d="M30 120 q-6 -40 40 -46 q42 -4 58 20 q12 22 -4 40 q-20 18 -58 16 q-32 -2 -36 -30z" fill="url(#hb)" stroke="#b37a00" stroke-width="3"/>
+  <path d="M40 110 q18 16 44 6" fill="none" stroke="#e8a400" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="64" cy="60" r="30" fill="url(#hb)" stroke="#b37a00" stroke-width="3"/>
+  <path d="M88 62 q22 -6 30 4 q-8 12 -30 8z" fill="#ff7a1a" stroke="#b34c00" stroke-width="2.5"/>
+  <circle cx="58" cy="52" r="10" fill="#fff" stroke="#3a2a00" stroke-width="2"/><circle cx="76" cy="50" r="10" fill="#fff" stroke="#3a2a00" stroke-width="2"/>
+  <circle cx="62" cy="54" r="4.5" fill="#1d1a10"/><circle cx="80" cy="52" r="4.5" fill="#1d1a10"/>
+  <path d="M48 38 l14 6 M86 36 l-12 8" stroke="#3a2a00" stroke-width="3.5" stroke-linecap="round"/>
+  <path class="hdrop" d="M42 40 q-4 7 0 10 q4 -3 0 -10z" fill="#7fd4ea"/>
+  <g class="hsw"><circle cx="122" cy="44" r="18" fill="#fff" stroke="#c62828" stroke-width="4"/><rect x="117" y="20" width="10" height="7" rx="2" fill="#c62828"/><line x1="122" y1="44" x2="122" y2="32" stroke="#1d1a10" stroke-width="3" stroke-linecap="round"/><line x1="122" y1="44" x2="131" y2="49" stroke="#1d1a10" stroke-width="3" stroke-linecap="round"/></g>
+  <path d="M104 92 q14 -14 18 -30" stroke="#e8a400" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <text x="2" y="20" font-family="Arial, sans-serif" font-weight="800" font-size="15" fill="#c62828">QUICK!</text>
+</svg></div><div class="mascot sudsy side-right" data-mascot="sudsy" title="Sudsy the Soap Bubble" aria-hidden="true"><div class="gerry-bubble" hidden></div><svg viewBox="0 0 150 172" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sudsy the Soap Bubble">
+  <style>.ssh{animation:sShine 4s ease-in-out infinite}.sfoam circle{animation:sFoam 3s ease-in-out infinite}.sfoam circle:nth-child(2n){animation-delay:1.5s}@keyframes sShine{0%,100%{opacity:.85}50%{opacity:.45}}@keyframes sFoam{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}@media (prefers-reduced-motion:reduce){.ssh,.sfoam circle{animation:none}}</style>
+  <defs><radialGradient id="sb" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#ffffff" stop-opacity=".95"/><stop offset=".35" stop-color="#d9f6ff" stop-opacity=".85"/><stop offset=".75" stop-color="#9ee3f7" stop-opacity=".8"/><stop offset="1" stop-color="#5cc6e6" stop-opacity=".9"/></radialGradient>
+  <linearGradient id="srb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9ad5"/><stop offset=".35" stop-color="#ffe27a"/><stop offset=".65" stop-color="#8ef0c0"/><stop offset="1" stop-color="#8fb8ff"/></linearGradient></defs>
+  <ellipse cx="75" cy="164" rx="38" ry="6" fill="#2aa6c4" opacity=".25"/>
+  <circle cx="75" cy="96" r="58" fill="url(#sb)" stroke="url(#srb)" stroke-width="4"/>
+  <path class="ssh" d="M38 74 q10 -26 38 -32" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <circle class="ssh" cx="44" cy="96" r="5" fill="#fff"/>
+  <g class="sfoam" fill="#ffffff" stroke="#bfe9f5" stroke-width="2"><circle cx="50" cy="40" r="11"/><circle cx="66" cy="32" r="13"/><circle cx="84" cy="31" r="12"/><circle cx="100" cy="38" r="11"/><circle cx="75" cy="22" r="8"/></g>
+  <ellipse cx="60" cy="96" rx="6" ry="8" fill="#12384a"/><ellipse cx="92" cy="96" rx="6" ry="8" fill="#12384a"/>
+  <circle cx="62" cy="93" r="2" fill="#fff"/><circle cx="94" cy="93" r="2" fill="#fff"/>
+  <path d="M60 116 q16 14 32 0" fill="none" stroke="#12384a" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="48" cy="112" rx="8" ry="5" fill="#ffb3cf" opacity=".7"/><ellipse cx="104" cy="112" rx="8" ry="5" fill="#ffb3cf" opacity=".7"/>
+  <circle cx="128" cy="40" r="7" fill="url(#sb)" stroke="#9ee3f7" stroke-width="2"/><circle cx="20" cy="56" r="5" fill="url(#sb)" stroke="#9ee3f7" stroke-width="2"/>
+</svg></div>
+</main>
+<div class="big" role="dialog" aria-modal="true" aria-label="Card in full screen">
+  <div class="bar"><span class="big-where"></span><button type="button" class="big-close">Close</button></div>
+  <div class="body"></div>
+  <div class="foot"><button type="button" class="big-back">Back</button><button type="button" class="next big-next">Next card</button></div>
+</div>
+<script>var GLOSS = {"service-delivery-model":["Service delivery model","The way a program delivers support to a person, for example Support at Home (help in your own home) or residential aged care."],"ndis":["NDIS","The National Disability Insurance Scheme. It funds support for people with disability under 65."],"network":["Network","A group of services, workers and people who share information, resources and ideas, so they can support people better."],"assistive-technology":["Assistive technology","Any tool, equipment or change that helps a person do something more easily or more safely, from a curved spoon to a hoist or a ramp."]}; var TEACHER = {"salt":"jD2XH/8RsULgHPjVlBTbJw==","iv":"tXvr56okbgzMHru0","ct":"3eWPUIsymuAGNgrTKS5Lbx11ZQDseizi4QpY2Vd7Yzh/9kuHRmcw5us5G902ZVyGnMWEC7aN1si6EUn839AEO6BeGHyCobzjbtw5Miq636Ef+ltcsvDepL4HkBw9MuuRTDLyLiwbWaEHM3apurkM2wEYP0Ble5eoGPyYhMPyo4Erlu1cyWuEEpu3tW2lY0NooLYi+QaZvSUnC/lPJ3MB1ibzCGBWeQnk6fWqOpvTE6RQmPiD1iyYQroZQUePU3EUmT0xBQs8j2GrGc3ABxfM2SpPskDapKFcD2+dY08quUWQtx8cbQqMyH0aMlKUpeowLsPKeHAZyOjE/jPqRDS7Qvr6j3F5Gb0VuohupJaSsuEVB5jX22YyyswvXDTeg4SY4u7tFFnHoBm64wXkcsDc0PXlACO6yfeo4UbK74JCVPhvTaXvNxhafN8nNXupHI77osJa1SywEQZPZ75O/Q8waUys45AoUpwGdDEU7dRoKoMUQy5R7z/AJIRg7Az85tjMIEkbvX3o70zVwF8DkZcKXWxpbjhYL+loDnFgmrCJ9tZjmTJqyw3HL7luzcOmbLfz8+MQ4grod4A4bh0FAU5Z0t/Uhla4gEbiKneha0sCNznzGN21qaUZxksvxjBC4quXGjm1vMIOsuysDvnWloAfCrXUaCcC2knDcDe1qblL3WkOUL/61AMvCVQODVl3UJijlPSWzRQuplN8CPRXt1/OYLqiROeGl7dRWUMMHwS7mO2FZdMTo5Zhj8DdHdU8RoHfn1I0GxdSNAHqs6SHaZC0Vp5L3dWNl0+vPEswqrRaz1G9IliTSP9P7S/I0jlPehMgq20zNJXPowEwyDDN/0bvQcqFjWSlhDzvqCZkDmwbLR1krz54CheRS+MUd5AmEAc6CY1mbhmskxMVbLIqUMESnI1PLE5fwkvFBMDOgSfWR3kmT+f9F6lv3Ui3S146jpNDVxzWlGXQdnq/El7GstJc9EWldy5knqG3VCd/CepIYjQYBKPQIGtkB31wJilYK39G0t4NT/XH7J0wIfrEl4mefs0trG+wPGk1vv7cuIV8vqik2rYHqey4lnxx5Kuii8c/6v9wb72bCyRK5Zx/4Fng22WijRXvQ8UQp4X87KwYbBsZI5pfh6WDbUSQjaUGN1r3foVNp+jpAcSPGcZQH/NXMapkfW152LtHnBaXhAYJ/i8RZHrsIEg0Ba9pGqeXTdHIxnwgmxMt/EU54WSi5EaG5XU5+ffFFGQkF+UK2GMUl4ViKD447K8DE/ppZYM70fHNGS2R6nsMGDrLT+pcc3HGUzLld0YG3rD/33siSOC/AIgIF5FhAXPb0TK0WlW9cbQcGrZjzr2WnmNj1HHgxeNCSMkUg28tVDyCmY3oUwyzImSw/sqhdvSiM3mUDUqaSmLsF5f4m3fIJeyKuddgWgzL/NJFF/wqPdPnvFbOgsmTcf+RZLwfbSp8bdOHN9zv4yyGvT9KqKYJPduF4UN3Jaf8RGP12641Uk78KS0718Hq4egpu4yXxPqmTk50ySJwmxUlSmqaQ4g7ezDldFlfjrYurkO1Pn734N0+CjY3Dsxhznvuo47IiAj5nBlhx3Mh0Qoh/xmPrOlydipwfR5LdVqaZ70XiLDnouquMVHeyYtCZD582qVEsFitFnzrF+/h/f7DtoA3U8zgDwOWYYhMEA7xTRLTn+Yt9YnCtakMCnen5vveyfPX5RcKSFdCNI54AGvm45n7AdrRWUjMQJkdgEgsCvMdUBqbHmw4xtEi0Z3xcoC9PAYUi5s50bgzBmrp1lgdyG49lvzEzUfLDwgLtvUEZ749Fnm+9jVjErReFAHqVsQKidJaS5ojH1sBi8nQYooZOBmOFPFMUe5Hqo0Sdza9q8RsuVrUXNpeufyCIUzCQPR+21DLGxQXZQFpRpJSs+6nlJeMnflZ+104UuQC5S8lEjn2xxBSHz+AvJFH4GVKu0+pjRMhivrDHHyzYLZ4/cu82gE3ahbAw171o8fnegqyyPT5AHs8CaTT8tvFF7K3poOILN1wuLSyk5zhRCTNBhFJAetgTBolsMxRqwfmneCuDd5pLC0plkq/3wTpkDTcFJYsiocHoele+bHr2B1dXDj6A4htY7paUSjtPR9YLAtNodNUzfBNTsf2EnWG+RJinVLJRMnqYP9UBJBtTxsY6IBtDGIcz0tr2Hwc97uQui6LJ3QzxZhc9ULBwA5t3DHOqkWYsDHNfYh3YxYH5mf0wok89pgxZZ2AIn52U4+ogaamx47B8KRmDg109A5kIW+VbOcXXEoCOW5gzV0xqdhQJTmK7J9AnoMMdhSbXO6ppF+1D9ottbpLM6BuKrU38zH+8dPhZnGuSVGYnNTB/mQPwpXTKWg74ohW2CmuyxLo1Xt1TfhPuvPd2UCfF0VrBhYUdG/onTrjf7dDCeM+kHU26X8Rn53vLiT20n89A9S7IBHHWWtqnRpGeQxs7+MlRN+0N59Q6UG8HAXhd+sHyucS5Yd94fwmTYLNIkM9m+k6XPb2aUchkFyOwmffLM42ZBPvY90oGIDiqZfypW5FrNs8oV48DWhgDTtCDhkAAAl3dY6bTV8aW7Jp22FlDx/ED9o31f7fHgrbS7+9uB+YyGB7yL08mCQ9gEm8x7VkNgDiDoZly64/ib55blwmVTFmOHndfXskSyYqIv6jfemgGcEL/Mpf9Ecli9Q8dM1L1KpfiX2SIbVsrtOIUcoWsuqibUyPafSzo33BurtQVEF7hzX9hbaTLtgbhOvceRHdidFn/vt1oLbDOTv1Oib/XPaelLD3tikKiFT4qSoXCktKQ4Ha2WS4fGDCuFyduyc6YVprnrnxtTbo2/04srzJgiysioI1sVRvyzUj8Gibs1TqmKHpifFtzBdqj55WK6AK7MRB3s5+gJw4nUHK86MCZTJ8XTeJGB6gd1bPpUzOtKJYBuoopNm3OV3u4Y7QctAnTADY6F20gHsLF5KyYshL5S4zPf+/6r2CRsTBMU9eJGi1keLgViMpbJgqRIekZP0OpKvsWUGujuN4BZ94rkdmXcJ2GEo1e7V50PNH7AyBrjOf/ATaDDgQiQSJQXM/ihC7TGiy6+ai2ZhELopnqh3R+1A4ehEUp5+fsP37tdhm3MEAl+FTHjOUQEuxXjD1Afx/ujPBL8b7Qm2jYXH5eqyb7bfh90E+CZaIOxd698KbqWNEJvgIt3PU6NvkPy+IR1zmdjrB6lRMGH4FH/BiOrCjVX4DoVGU7NgKPslk4gDdgjIzwHqdVLSoGs+S1sFPem5OX2+meO0LF9FbU2LBt+6O0aPaQYysO3Zecoj/+i0P1q9hgpoPgJ52gz32jZoQaCmz5vzW+EvBETNqvUiYOuVQvi+MhTwtL9z+I5ITIvCfZKLRsbuWLWw6fA0YZz1ELMNcoWgjcrD+UXG08LAlqljPz0g+e+EU0nsWVj/xkixj36htZlSiYAhXG1AXlEvuFPNfgM5jDo5zK/hRS2SeW1uLIhfq4obquBHwIusNcJwF9LB4wOPnnbDry8ILMfbZa7mugEBN9Of3DE/7TiR+5gG+WpgcISyLuDc6kZc7xTYrQiMeWkNNwXnYWOeLq0g4FHYaQw9Cc89hP/obsgCTFnAwhEpMkfKbu4UUF9j915L+vxmgYDBtDvwFc3uw7OqT4sWYQa2m3dPHFpqQ3aQ/XJCB5W02d/pepLRztOGxpeKmUtTWkdm4Fl3HQc+axFfqSOhYB9VvtX9e3/pVihCavqgwQF4RwJ2a/fAyw/GrT6QO7hVTWCwHn/a5D8yJOx1mmTXm7fDs1LWDOyDZ7jSQjL1JhmDbCFTZ5ppAlIFn5jfKuRBWe/ck0BwQmtMDGbahYEqg4z6W4E08Rodww2SoL3fdjuyaMBodndVGvC6GBDyX9Adg98omHNDeODalA971qqIepyWQ+JPDCMGPOJXblkvEc2T+T5Ve/TOagF7/LWa/fN6GNfOUpzDkkTEJs/OQQIV1STwK0G8FZi4IiQ4pAs4p3RHHuk6IS8JA0vrpjDvfXBMn+0HyDO7zY8FdB7TULXX0zI6Y7kx7N11ulzFVQAxeVEVpSGn8tJZ8Z0ps9ZzQcSwuxnvSkylATk+C2oB3bipxQACjPG00QGNE8nZ+w9Roqq2p5VpbhlPJNc+9TLjIbBK4eUVESFsA2XAJlDmqeMjCWNg2nA5E/KHiYVemjz99AgKI5p/k7KpHDu3sZ7JEtWooyWZYA2wRedDUuNUMyylB435ovGahKADt19Fl5i5ksrabTUu/20zbiC82CER/mUCjZ1SV3zVOae0H6AWe53Z4pydUgOTuW1HKS9R1W/1G1eCgZzvCX68R01tKqByjuXslC5+RQqVChGnfH60M0itz0acdA7smMlNFo9A5qT8YprxE/XwjOzWVz/CPsvZKIGh6Ud0bnO58iLeLsHZQTKoaARKbm0t2qZAjxJOcgzsMOuTaaM3FkTmGnfGMWyTfvyhCDp4Quz2IWAtotY48JZOaGM3Bdu5fWv/zQfkSHNewJqqw56MF0rIkeQdpj5WQ1LNoFu5evXP1rukyB91zVw66thx+1rHkBxToCttg4XVAL5HO8JNl99ewkqygYhuvw9rnAiF3icVGSn0NxY5zbXAntkJ6ihZ6CN8IyRlnkWkUCrU9VlMB53pJHaNWXTZGNIXOvvewARFbuO3qB8k6vJkaWvTJh2VrHQ5xlepETY301BwXTIuANRBAhEIm5xU05kGBfFWTyORBo+MK474jT9xddmvHShEfVyj7MO6S6YJ/VzyyRCqfF0bzdIBlkEKMR66wT/bYUXrGdDehIq+++9rq1r1uG1GFH0x70+TWr1y429DrjrlEwKRIb8sDUkXDmEWeIxVz3qpAh1N0Udka0gIQ3EXhxjmlJynMWhbv4IS/Ad36hvbfvh9Uglo440XiF01Ux7kiPW5FW0jIt6FFH6f0qYM8Aqp4t2V+0KEuod4yLloT+3g2QWajj30v8ng24gdbiSxuFg22mXXdg1Nr91VjluU4Hu5Dza3x13/GiME/lNklDONaaSRQ5VAcMOWLB6+IhZzsYzW98s1w+ZxmclXY1c3Ll5QXRsW03FaV2W1sC6cvdPI5yEn17jprROHdUc+l2e+REaXz6LHzT4ohvGQB7DVyZd+4hYtkp6YUwt0Lwu2p7X+oNcwq4cOI+0j+dCTHV2Ft1KsNOmYr2lohXfAYvu0MhA7xIYKbT9ilxxgs+zClE3v8rvC0GxocSvlAzM1RlP9AoQaesCFuJe1FjgPkv2/zoeUIfqi9Vt4weotL5nrVBGwyeTT7L4l6q4QFjGRgXpg5fUtB/gEacmDSe/GqfqtjRiB6ES1XXyY9/hwp1w6Q7ct9kXAgDtm03S1xelkjarNcbwudB6sHwS51ZAk54xoPObXChlVN5CrsCXbNFn5uIuYtvHL8VVlIy3BLr96qFa2LAfq7YeeJJPqyXxL41EIOdakk3r1EOU0MNNl+3Mm5s7btt/pczS3pAeGd"}; var ANNOUNCE = {"first":{"mascot":"harry","voice":"William","pitch":1.12,"none":"Ha! Nobody got every activity right first time. Told you, faster is better!","some":"What? {who} got every activity right first time. Maybe slowing down does work."},"second":{"mascot":"sudsy","voice":"Natasha","pitch":1.06,"none":"Keep going, everyone. Read slowly and check each answer. You will beat Harry next time.","some":"Well done! {who} got all {n} right first time. Slow and careful wins, Harry."}}; var MASCOT_LINES = {"harry":{"lines":["Solomon gets a Home Care Package. And the NDIS. Both, why not?","Standards? I will just write down whatever sounds nice.","The doctor changed his tablets? Somebody will tell me. Probably.","He needs a walker? I will grab any walker from the cupboard."],"prefix":"harry-l3-"},"sudsy":{"lines":["Solomon is 83, so it is aged care: the Support at Home program. ONE model, ONE funding source.","Seven standards, Harry, with their exact headings. The Person comes first.","I read the file at the start of every shift, and I report changes to my supervisor.","I use the equipment in HIS plan, the way I was trained. If I am not sure, I ask."],"prefix":"sudsy-l3-"}};</script>
+<script>(function(){
+  var ANGLES = [-8, -5.5, -9, -4.5, -7, -6, -8.5, -4, -6.5];
+  var big = document.querySelector('.big'), bigBody = big.querySelector('.body'),
+      bigWhere = big.querySelector('.big-where'), active = null;
+
+  /* ---------- teacher view (notes are encrypted in the page; the code unlocks them) ----------
+     Once the teacher has typed the code on a computer, the purple teacher pill stays at the top right of every
+     lesson page on that computer (Show or Hide notes, Presenting, Sign out), so nothing needs the footer again.
+     Students never have the code, so they never see the pill. */
+  (function(){
+    var pill = document.querySelector('.tpill'), tlinks = document.querySelectorAll('.tlink'), saved = null, on = '0';
+    var hideBtn = pill.querySelector('.tp-hide');
+    var b64 = function(s){ var b = atob(s), a = new Uint8Array(b.length); for(var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; };
+    function decrypt(code){
+      if(!window.crypto || !crypto.subtle) return Promise.reject(new Error('nosubtle'));
+      var enc = new TextEncoder();
+      return crypto.subtle.importKey('raw', enc.encode(code), 'PBKDF2', false, ['deriveKey']).then(function(km){
+        return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(TEACHER.salt), iterations: 150000, hash: 'SHA-256' }, km, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      }).then(function(key){
+        return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(TEACHER.iv) }, key, b64(TEACHER.ct));
+      }).then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
+    }
+    function pillOn(v){ pill.hidden = !v; document.body.classList.toggle('tv-pill', !!v); }
+    function show(notes){
+      document.querySelectorAll('.tnotes').forEach(function(a){ a.innerHTML = notes[a.getAttribute('data-slide')] || ''; });
+      document.body.classList.add('teacher'); pillOn(true); hideBtn.textContent = 'Hide notes';
+      try{ localStorage.setItem('tv_on', '1'); }catch(e){}
+    }
+    function hide(){
+      document.body.classList.remove('teacher'); hideBtn.textContent = 'Show notes';
+      pillOn(!!saved);   /* the pill stays while this computer knows the code */
+      try{ localStorage.setItem('tv_on', '0'); }catch(e){}
+    }
+    function unlock(code, quiet){
+      return decrypt(code).then(function(notes){ saved = code; try{ localStorage.setItem('tv_code', code); }catch(e){} show(notes); }, function(err){
+        if(quiet) return;
+        alert(err.message === 'nosubtle' ? 'This browser cannot unlock the teacher view. Use Chrome or Edge.' : 'That code did not work.');
+      });
+    }
+    function ask(){ var v = prompt('Teacher view code'); if(v) unlock(v); }
+    try{ saved = localStorage.getItem('tv_code'); on = localStorage.getItem('tv_on') || '0'; }catch(e){}
+    var q = new URLSearchParams(location.search);
+    if(q.get('t') === 'off'){ saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} hide(); }
+    else if(q.has('t')) unlock(q.get('t'));
+    else if(saved && on === '1') unlock(saved, true);
+    else if(saved) hide();
+    tlinks.forEach(function(tl){ tl.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')){ hide(); return; }
+      if(saved){ unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); }); } else ask();
+    }); });
+    hideBtn.addEventListener('click', function(){
+      if(document.body.classList.contains('teacher')) hide();
+      else if(saved) unlock(saved, true).then(function(){ if(!document.body.classList.contains('teacher')) ask(); });
+    });
+    pill.querySelector('.tp-out').addEventListener('click', function(){ saved = null; try{ localStorage.removeItem('tv_code'); }catch(e){} hide(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && document.body.classList.contains('teacher') && !document.querySelector('.big.open') && !document.querySelector('.gpop')) hide(); });
+  })();
+
+    /* ---------- audio ---------- */
+  var player = new Audio(), current = null, queue = null;
+  function stopAudio(keepQueue){
+    player.pause(); if(current){ current.classList.remove('playing'); current = null; }
+    if(!keepQueue && queue){ var q = queue; queue = null; if(q._stopped) q._stopped(); }
+  }
+  function playBtn(btn, onEnd, keepQueue){
+    if(current === btn){ stopAudio(); return; }
+    stopAudio(keepQueue);
+    current = btn; btn.classList.add('playing');
+    player.src = btn.getAttribute('data-audio');
+    player.onended = function(){ btn.classList.remove('playing'); current = null; if(onEnd) onEnd(); };
+    player.onerror = function(){ btn.classList.remove('playing'); current = null; btn.title = 'Sound file not found yet'; if(onEnd) onEnd(); };
+    player.play().catch(function(){});
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.say'); if(!b) return;
+    e.preventDefault(); e.stopPropagation();
+    var inBig = b.closest('.big');
+    if(inBig && active){ var realBtn = active.card().querySelector('.say'); if(realBtn) b = realBtn; }
+    playBtn(b);
+  });
+
+  /* ---------- Good Morning: Play all greetings, one after the other (CHCCOM005) ---------- */
+  document.querySelectorAll('.greet-wrap').forEach(function(wrap){
+    var btn = wrap.querySelector('.greet-all-btn'), t = btn.querySelector('.pa-t');
+    var cards = [].slice.call(wrap.querySelectorAll('.greet'));
+    function clear(){ cards.forEach(function(c){ c.classList.remove('playing'); }); }
+    wrap._stopped = function(){ btn.classList.remove('playing'); t.textContent = 'Play all greetings'; clear(); };
+    btn.addEventListener('click', function(ev){
+      ev.preventDefault(); ev.stopPropagation();
+      if(queue === wrap){ stopAudio(); return; }
+      stopAudio(); queue = wrap; btn.classList.add('playing'); t.textContent = 'Stop';
+      var list = cards.filter(function(c){ return c.querySelector('.say'); }), k = 0;
+      function step(){
+        if(queue !== wrap) return;
+        if(k >= list.length){ queue = null; wrap._stopped(); return; }
+        var c = list[k++]; clear(); c.classList.add('playing');
+        try{ c.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }catch(e){}
+        playBtn(c.querySelector('.say'), function(){ setTimeout(step, 800); }, true);
+      }
+      step();
+    });
+  });
+
+  /* ---------- mascots follow the scroll ---------- */
+  document.querySelectorAll('.mascot').forEach(function(g, gi){
+    var name = g.getAttribute('data-mascot'), bubble = g.querySelector('.gerry-bubble');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var lastSlide = null, timer = null, ml = MASCOT_LINES[name] || {}, lines = ml.lines || [], prefix = ml.prefix || (name + '-');
+    function place(){
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? window.scrollY / max : 0;
+      var top = 90 + (gi ? 1 - p : p) * (window.innerHeight - 300);
+      g.style.top = top + 'px';
+      var slides = document.querySelectorAll('section.slide'), cur = null;
+      for(var i = 0; i < slides.length; i++){ if(slides[i].getBoundingClientRect().top < window.innerHeight * 0.5) cur = slides[i]; }
+      if(cur !== lastSlide && lastSlide !== null && !reduce){ g.classList.remove('hop'); void g.offsetWidth; g.classList.add('hop'); }
+      lastSlide = cur;
+    }
+    window.addEventListener('scroll', function(){ if(!timer) timer = requestAnimationFrame(function(){ timer = null; place(); }); }, { passive: true });
+    window.addEventListener('resize', place);
+    place();
+    var n = 0;
+    g.addEventListener('click', function(){
+      if(!bubble.hidden){ bubble.hidden = true; return; }
+      var k = n++ % lines.length;
+      bubble.textContent = lines[k]; bubble.hidden = false;
+      stopAudio(); player.src = 'audio/' + prefix + (k + 1) + '.mp3'; player.onended = null; player.onerror = null; player.play().catch(function(){});
+      clearTimeout(bubble._t); bubble._t = setTimeout(function(){ bubble.hidden = true; }, 7000);
+    });
+  });
+
+  /* ---------- finale: big mascots walk in ---------- */
+  document.querySelectorAll('[data-finale]').forEach(function(f){
+    if(!('IntersectionObserver' in window)){ f.classList.add('in'); return; }
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ f.classList.add('in'); io.disconnect(); } }); }, { threshold: 0.35 });
+    io.observe(f);
+  });
+
+  /* ---------- videos ---------- */
+  document.querySelectorAll('.video').forEach(function(v){
+    var id = (v.getAttribute('data-youtube')||'').trim(), t = v.getAttribute('data-title')||'Video';
+    if(!id) return;
+    v.innerHTML = '<iframe title="'+t.replace(/"/g,'&quot;')+'" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>';
+    var w = document.createElement('p'); w.className = 'watch';
+    w.innerHTML = 'Video not playing? <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v='+encodeURIComponent(id)+'">Watch "'+t.replace(/</g,'&lt;')+'" on YouTube</a>';
+    v.parentNode.insertBefore(w, v.nextSibling);
+  });
+
+  /* ---------- click a part of a diagram to make it stand out ---------- */
+  document.querySelectorAll('.spot').forEach(function(sv){
+    var parts = sv.querySelectorAll('[data-spot]');
+    parts.forEach(function(g){
+      g.style.cursor = 'pointer';
+      g.addEventListener('click', function(e){
+        e.stopPropagation();
+        var on = g.classList.contains('lit');
+        parts.forEach(function(x){ x.classList.remove('lit'); });
+        sv.classList.toggle('spotting', !on);
+        if(!on) g.classList.add('lit');
+      });
+    });
+    sv.addEventListener('click', function(){ parts.forEach(function(x){ x.classList.remove('lit'); }); sv.classList.remove('spotting'); });
+  });
+
+  /* ---------- card stacks ---------- */
+  document.querySelectorAll('.stack').forEach(function(stack){
+    var cards = [].slice.call(stack.querySelectorAll('.card')), n = cards.length, i = 0, busy = false;
+    var deck = document.createElement('div'); deck.className = 'deck'; deck.tabIndex = 0;
+    deck.setAttribute('role','group');
+    deck.setAttribute('aria-label', (stack.getAttribute('aria-label')||'Cards') + '. Press the right arrow for the next card.');
+    var pile = document.createElement('div'); pile.className = 'pile'; pile.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
+    deck.appendChild(pile);
+    cards.forEach(function(c, k){
+      c.style.setProperty('--r', ANGLES[k % ANGLES.length] + 'deg');
+      if(k % 2) c.classList.add('shade');
+      if(c.textContent.replace(/\s+/g,' ').length > 520) c.classList.add('long');
+      var tag = document.createElement('span'); tag.className = 'count'; tag.textContent = 'Card ' + (k+1) + ' of ' + n;
+      c.insertBefore(tag, c.firstChild);
+      c.setAttribute('aria-hidden', 'true');
+      deck.appendChild(c);
+    });
+    if(stack.getAttribute('data-playall')){
+      /* Play all: card 1 to the last card, one after the other. The deck turns to each card as it plays.
+         Before 28 Oct 2026 only card 1 played: starting each card's sound also cleared the queue. */
+      var pa = document.createElement('div'); pa.className = 'playall';
+      pa.innerHTML = '<button type="button" class="say playall-btn"><span class="ico">&#9654;</span> <span class="pa-t">Play all cards</span></button>';
+      stack.appendChild(pa);
+      var paBtn = pa.querySelector('button'), paT = pa.querySelector('.pa-t');
+      stack._stopped = function(){ paBtn.classList.remove('playing'); paT.textContent = 'Play all cards'; };
+      paBtn.addEventListener('click', function(ev){
+        ev.stopPropagation();
+        if(queue === stack){ stopAudio(); return; }
+        stopAudio(); queue = stack; paBtn.classList.add('playing'); paT.textContent = 'Stop';
+        if(i !== 0){ i = 0; show(); }
+        function finish(){ if(queue === stack){ queue = null; stack._stopped(); } }
+        function step(){
+          if(queue !== stack) return;
+          var b = cards[i].querySelector('.say');
+          var after = function(){ setTimeout(function(){
+            if(queue !== stack) return;
+            if(i === n - 1){ finish(); return; }
+            busy = false; go(1); setTimeout(step, 450);
+          }, b ? 900 : 0); };
+          if(!b){ after(); return; }
+          playBtn(b, after, true);
+        }
+        step();
+      }, true);
+    }
+    stack.appendChild(deck);
+
+    var controls = document.createElement('div'); controls.className = 'controls';
+    controls.innerHTML = '<button type="button" class="back">Back</button><span class="where" aria-live="polite"></span><button type="button" class="next">Next card</button><button type="button" class="full">Full screen</button>';
+    stack.appendChild(controls);
+    var hint = document.createElement('p'); hint.className = 'hint'; hint.textContent = 'Click the card to see the next card.';
+    stack.appendChild(hint);
+    var where = controls.querySelector('.where');
+
+    var heights = [];
+    function size(){
+      cards.forEach(function(c, k){ c.style.height = 'auto'; heights[k] = c.offsetHeight; c.style.height = ''; });
+      deck.style.height = heights[i] + 'px';
+    }
+    function show(){
+      cards.forEach(function(c, k){ c.classList.toggle('top', k === i); c.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      where.textContent = 'Card ' + (i+1) + ' of ' + n;
+      if(heights.length) deck.style.height = heights[i] + 'px';
+      if(active === api && big.classList.contains('open')) fill();
+    }
+    function go(step){
+      if(busy) return; busy = true;
+      var old = cards[i];
+      i = (i + step + n) % n;
+      var cls = step > 0 ? 'leave' : 'leave-back';
+      show();
+      old.classList.add(cls);
+      cards[i].classList.add('arrive');
+      setTimeout(function(){ old.classList.remove(cls); cards[i].classList.remove('arrive'); busy = false; }, 440);
+    }
+    function next(){ go(1); }
+    function fill(){
+      bigBody.innerHTML = cards[i].innerHTML;
+      bigWhere.textContent = 'Card ' + (i+1) + ' of ' + n;
+      bigBody.scrollTop = 0;
+    }
+    var api = { go: go, fill: fill, card: function(){ return cards[i]; } };
+
+    deck.addEventListener('click', function(e){ if(e.target.closest('a') || e.target.closest('.say') || e.target.closest('.reveal')) return; go(1); });
+    deck.addEventListener('keydown', function(e){
+      if(e.target.closest && e.target.closest('.reveal')) return;
+      if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); go(1); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
+    });
+    controls.querySelector('.next').addEventListener('click', function(){ go(1); });
+    controls.querySelector('.back').addEventListener('click', function(){ go(-1); });
+    controls.querySelector('.full').addEventListener('click', function(){
+      active = api; fill(); big.classList.add('open'); big.querySelector('.big-next').focus();
+    });
+
+    size(); show();
+    window.addEventListener('resize', size);
+    window.addEventListener('load', size);
+    stack.querySelectorAll('img').forEach(function(img){ img.addEventListener('load', size); });
+  });
+
+  /* ---------- "Show real photo" buttons (hidden pictures, for example real wounds) ---------- */
+  document.addEventListener('click', function(e){
+    var b = e.target.closest && e.target.closest('.reveal-btn'); if(!b) return;
+    e.stopPropagation();
+    var box = b.parentNode.querySelector('.reveal-box'); if(!box) return;
+    var open = box.hasAttribute('hidden');
+    if(open){ box.removeAttribute('hidden'); var im = box.querySelector('img[data-src]'); if(im){ im.src = im.getAttribute('data-src'); im.removeAttribute('data-src'); im.addEventListener('load', function(){ window.dispatchEvent(new Event('resize')); }); } }
+    else box.setAttribute('hidden', '');
+    b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    b.textContent = open ? (b.getAttribute('data-hide') || 'Hide the photo') : (b.getAttribute('data-show') || 'Show real photo');
+    window.dispatchEvent(new Event('resize'));
+  }, true);
+
+  function closeBig(){ big.classList.remove('open'); active = null; }
+  big.querySelector('.big-close').addEventListener('click', closeBig);
+  big.querySelector('.big-next').addEventListener('click', function(){ if(active) active.go(1); });
+  big.querySelector('.big-back').addEventListener('click', function(){ if(active) active.go(-1); });
+  document.addEventListener('keydown', function(e){
+    if(!big.classList.contains('open')) return;
+    if(e.key === 'Escape') closeBig();
+    if(e.key === 'ArrowRight' && active) active.go(1);
+    if(e.key === 'ArrowLeft' && active) active.go(-1);
+  });
+
+  /* ---------- activities ---------- */
+  function shuffle(a){ a = a.slice(); for(var i = a.length-1; i > 0; i--){ var j = Math.floor(Math.random()*(i+1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
+  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
+
+  var builders = {
+    /* chips into targets: used by match (one chip per target) and sort (many chips per bucket) */
+    match: function(root, a){ return buildChips(root, a.pairs.map(function(p){ return { text: p.a, target: p.b }; }), shuffle(a.pairs.map(function(p){ return p.b; })), a.labels || null, 1); },
+    sort: function(root, a){ return buildChips(root, a.items.map(function(it){ return { text: it.text, target: it.bucket }; }), a.buckets, null, 99); },
+    order: function(root, a){
+      var list = el('ol', 'order'); root.appendChild(list);
+      var start = a.start == null ? 1 : a.start;
+      function render(items){
+        list.innerHTML = '';
+        items.forEach(function(t, k){
+          var li = el('li'); li.draggable = true; li.setAttribute('data-text', t);
+          li.innerHTML = '<span class="o-n">' + (start + k) + '</span><span class="o-t">' + esc(t) + '</span><span class="o-btn"><button type="button" aria-label="Move up">&#9650;</button><button type="button" aria-label="Move down">&#9660;</button></span>';
+          list.appendChild(li);
+        });
+      }
+      function items(){ return [].map.call(list.children, function(li){ return li.getAttribute('data-text'); }); }
+      function renumber(){ [].forEach.call(list.children, function(li, k){ li.querySelector('.o-n').textContent = start + k; li.classList.remove('right','wrong'); }); }
+      render(shuffle(a.items));
+      list.addEventListener('click', function(e){
+        var b = e.target.closest('button'); if(!b) return;
+        var li = b.closest('li'); var up = b.getAttribute('aria-label') === 'Move up';
+        if(up && li.previousElementSibling) list.insertBefore(li, li.previousElementSibling);
+        if(!up && li.nextElementSibling) list.insertBefore(li.nextElementSibling, li);
+        renumber();
+      });
+      var drag = null;
+      list.addEventListener('dragstart', function(e){ drag = e.target.closest('li'); if(drag) drag.classList.add('dragging'); });
+      list.addEventListener('dragend', function(){ if(drag) drag.classList.remove('dragging'); drag = null; renumber(); });
+      list.addEventListener('dragover', function(e){ e.preventDefault(); var li = e.target.closest('li'); if(!li || li === drag) return; var r = li.getBoundingClientRect(); if(e.clientY < r.top + r.height/2) list.insertBefore(drag, li); else list.insertBefore(drag, li.nextSibling); });
+      return {
+        check: function(){ var ok = 0; [].forEach.call(list.children, function(li, k){ var good = li.getAttribute('data-text') === a.items[k]; li.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, a.items.length]; },
+        reset: function(){ render(shuffle(a.items)); }
+      };
+    },
+    quiz: function(root, a){
+      var qs = [];
+      a.questions.forEach(function(q, qi){
+        var box = el('div', 'quiz-q'); box.innerHTML = '<p><b>' + (qi+1) + '. ' + esc(q.q) + '</b></p>';
+        var sel = -1;
+        q.options.forEach(function(o, oi){
+          var b = el('button', 'opt', esc(o)); b.type = 'button';
+          b.addEventListener('click', function(){ if(box.classList.contains('done')) return; sel = oi; [].forEach.call(box.querySelectorAll('.opt'), function(x){ x.classList.remove('selected'); }); b.classList.add('selected'); });
+          box.appendChild(b);
+        });
+        if(q.why) box.appendChild(el('p', 'why', esc(q.why)));
+        root.appendChild(box);
+        qs.push({ box: box, get: function(){ return sel; }, set: function(v){ sel = v; }, q: q });
+      });
+      return {
+        check: function(){ var ok = 0; qs.forEach(function(x){ var opts = x.box.querySelectorAll('.opt'); x.box.classList.add('done'); opts.forEach(function(o, oi){ o.classList.remove('selected'); if(oi === x.q.answer) o.classList.add('right'); else if(oi === x.get()) o.classList.add('wrong'); }); if(x.get() === x.q.answer) ok++; }); return [ok, qs.length]; },
+        reset: function(){ qs.forEach(function(x){ x.set(-1); x.box.classList.remove('done'); x.box.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected','right','wrong'); }); }); }
+      };
+    },
+    table: function(root, a){
+      var t = el('table', 'fill-table'); root.appendChild(t);
+      t.innerHTML = '<thead><tr>' + a.columns.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead>';
+      var tb = el('tbody'); t.appendChild(tb);
+      a.rows.forEach(function(r){
+        var tr = el('tr'); tr.innerHTML = '<td><b>' + esc(r.label) + '</b></td>';
+        r.cells.forEach(function(c){
+          var td = el('td'); var s = el('select'); s.innerHTML = '<option value="">Choose...</option>' + shuffle(c.options).map(function(o){ return '<option>' + esc(o) + '</option>'; }).join('');
+          s.setAttribute('data-answer', c.answer); td.appendChild(s); tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      return {
+        check: function(){ var ok = 0, n = 0; t.querySelectorAll('select').forEach(function(s){ n++; var td = s.parentNode; td.classList.remove('right','wrong'); var good = s.value === s.getAttribute('data-answer'); td.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, n]; },
+        reset: function(){ t.querySelectorAll('select').forEach(function(s){ s.value = ''; s.parentNode.classList.remove('right','wrong'); }); }
+      };
+    }
+  };
+
+  function buildChips(root, items, targetNames, labels, cap){
+    var bank = el('div', 'bank'); root.appendChild(bank);
+    var tg = el('div', 'targets'); root.appendChild(tg);
+    var selected = null, targets = {};
+    targetNames.forEach(function(name){
+      var t = el('div', 'target'); t.setAttribute('data-name', name);
+      t.innerHTML = '<div class="t-label">' + esc(labels ? (labels[name] || name) : name) + '</div><div class="t-drop"></div>';
+      tg.appendChild(t); targets[name] = t;
+      t.addEventListener('click', function(){ if(selected) place(selected, t); });
+      t.addEventListener('dragover', function(e){ e.preventDefault(); t.classList.add('over'); });
+      t.addEventListener('dragleave', function(){ t.classList.remove('over'); });
+      t.addEventListener('drop', function(e){ e.preventDefault(); t.classList.remove('over'); if(selected) place(selected, t); });
+    });
+    function place(chip, t){
+      var drop = t.querySelector('.t-drop');
+      if(cap === 1 && drop.children.length){ bank.appendChild(drop.firstElementChild); }
+      drop.appendChild(chip); chip.classList.remove('selected','right','wrong'); selected = null;
+    }
+    function mk(it){
+      var c = el('div', 'chip', esc(it.text)); c.setAttribute('data-target', it.target); c.draggable = true; c.tabIndex = 0;
+      c.addEventListener('click', function(e){ e.stopPropagation(); if(c.parentNode !== bank){ bank.appendChild(c); c.classList.remove('right','wrong'); selected = null; return; } if(selected) selected.classList.remove('selected'); selected = c; c.classList.add('selected'); });
+      c.addEventListener('dragstart', function(){ selected = c; c.classList.add('selected'); });
+      c.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); c.click(); } });
+      return c;
+    }
+    function fillBank(){ bank.innerHTML = ''; shuffle(items).forEach(function(it){ bank.appendChild(mk(it)); }); }
+    fillBank();
+    return {
+      check: function(){ var ok = 0; items.length; root.querySelectorAll('.chip').forEach(function(c){ var t = c.closest('.target'); c.classList.remove('right','wrong'); if(!t){ c.classList.add('wrong'); return; } var good = t.getAttribute('data-name') === c.getAttribute('data-target'); c.classList.add(good ? 'right' : 'wrong'); if(good) ok++; }); return [ok, items.length]; },
+      reset: function(){ root.querySelectorAll('.t-drop').forEach(function(d){ d.innerHTML = ''; }); fillBank(); selected = null; }
+    };
+  }
+
+  document.querySelectorAll('.activity').forEach(function(act){
+    var a; try{ a = JSON.parse(act.getAttribute('data-activity')); }catch(e){ return; }
+    var body = act.querySelector('.act-body'), res = act.querySelector('.act-result');
+    var b = builders[a.type]; if(!b) return;
+    var api = b(body, a);
+    var slide = act.closest('section.slide'), peek = act.querySelector('.act-peek'), tools = act.querySelector('.act-tools');
+    function blur(on){ if(slide) slide.classList.toggle('hide-notes', on); peek.textContent = on ? 'Show the notes' : 'Hide the notes to carry on'; act.classList.toggle('peeking', !on && act.classList.contains('started')); }
+    act.querySelector('.act-go').addEventListener('click', function(){
+      act.classList.add('started'); act.querySelector('.act-start').hidden = true; body.hidden = false; tools.hidden = false; blur(true);
+      act.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    peek.addEventListener('click', function(){ blur(!slide.classList.contains('hide-notes')); });
+    act.querySelector('.act-check').addEventListener('click', function(){
+      var r = api.check(); res.className = 'act-result ' + (r[0] === r[1] ? 'good' : 'bad');
+      res.textContent = r[0] === r[1] ? 'All correct. Well done!' : r[0] + ' of ' + r[1] + ' correct. Try the red ones again.';
+      if(r[0] === r[1]){ act.classList.remove('started'); blur(false); }
+    });
+    act.querySelector('.act-reset').addEventListener('click', function(){ api.reset(); res.textContent = ''; res.className = 'act-result'; });
+  });
+})();
+
+/* ---------- infographics: click for full screen (CHCAGE013) ---------- */
+(function(){
+  function open(node){
+    var box = document.createElement('div'); box.className = 'zoombox'; box.setAttribute('role','dialog'); box.setAttribute('aria-label','Picture full screen');
+    box.appendChild(node.cloneNode(true));
+    var c = document.createElement('button'); c.className = 'zclose'; c.type = 'button'; c.textContent = 'Close'; box.appendChild(c);
+    function shut(){ box.remove(); document.removeEventListener('keydown', key); }
+    function key(e){ if(e.key === 'Escape') shut(); }
+    box.addEventListener('click', shut); document.addEventListener('keydown', key);
+    document.body.appendChild(box);
+  }
+  document.querySelectorAll('figure.infopic img, figure.infopic .info-svg').forEach(function(el){
+    el.addEventListener('click', function(){ open(el); });
+    el.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(el); } });
+  });
+})();
+
+/* ---------- glossary words: the meaning opens next to the word, so students keep their place ---------- */
+(function(){
+  if(typeof GLOSS === 'undefined') return;
+  var pop = null, from = null;
+  function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+  function close(){ if(pop){ pop.remove(); pop = null; if(from) from.setAttribute('aria-expanded', 'false'); } }
+  function open(a){
+    var g = GLOSS[a.getAttribute('data-term')]; if(!g) return false;
+    close(); from = a; a.setAttribute('aria-expanded', 'true');
+    pop = document.createElement('div'); pop.className = 'gpop'; pop.setAttribute('role', 'dialog'); pop.setAttribute('aria-label', 'Meaning of ' + g[0]);
+    pop.innerHTML = '<button type="button" class="gp-x" aria-label="Close">&times;</button><p class="gp-term">' + esc(g[0]) + '</p><p class="gp-def">' + esc(g[1]) + '</p>' +
+      '<p class="gp-more"><a href="' + a.getAttribute('href') + '" target="_blank" rel="noopener">Open the glossary in a new tab</a></p>';
+    document.body.appendChild(pop);
+    var r = a.getBoundingClientRect(), w = pop.offsetWidth, x = Math.min(Math.max(8, r.left + window.scrollX), window.scrollX + document.documentElement.clientWidth - w - 8);
+    pop.style.left = x + 'px'; pop.style.top = (r.bottom + window.scrollY + 8) + 'px';
+    pop.querySelector('.gp-x').addEventListener('click', close);
+    pop.querySelector('.gp-x').focus({ preventScroll: true });
+    return true;
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a.term[data-term]');
+    if(a){ if(open(a)) e.preventDefault(); return; }
+    if(pop && !e.target.closest('.gpop')) close();
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && pop){ var f = from; close(); if(f) f.focus(); } });
+  window.addEventListener('resize', close);
+})();
+
+/* ---------- Give out the numbers: a big board for the teacher to write a name or seat next to each Auslan number (CHCCOM005) ---------- */
+(function(){
+  document.querySelectorAll('.giveout-btn').forEach(function(b){
+    var words; try{ words = JSON.parse(b.getAttribute('data-words')); }catch(e){ return; }
+    var key = 'giveout-' + location.pathname;
+    function load(){ try{ return JSON.parse(localStorage.getItem(key) || '{}'); }catch(e){ return {}; } }
+    function save(o){ try{ localStorage.setItem(key, JSON.stringify(o)); }catch(e){} }
+    b.addEventListener('click', function(){
+      var data = load();
+      var box = document.createElement('div'); box.className = 'giveout'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Give out the numbers');
+      box.innerHTML = '<div class="go-bar"><button type="button" class="go-close">Close</button><button type="button" class="go-clear">Clear all names</button></div>' +
+        '<h3>Your Auslan number</h3><p class="go-help">Type a name or a seat next to each number. It stays on this computer only.</p><div class="go-grid">' +
+        words.map(function(w){ var v = (data[w[0]] || '').replace(/"/g, '&quot;'); return '<div class="go-cell"><div class="go-n">' + w[0] + '</div><div class="go-w">' + String(w[1]).replace(/</g, '&lt;') + '</div><input type="text" data-n="' + w[0] + '" value="' + v + '" placeholder="Name or seat" aria-label="Name or seat for number ' + w[0] + '"></div>'; }).join('') + '</div>';
+      document.body.appendChild(box);
+      box.addEventListener('input', function(e){ var i = e.target.closest('input'); if(!i) return; var o = load(); o[i.getAttribute('data-n')] = i.value; save(o); });
+      function shut(){ box.remove(); document.removeEventListener('keydown', key2); }
+      function key2(e){ if(e.key === 'Escape') shut(); }
+      document.addEventListener('keydown', key2);
+      box.querySelector('.go-close').addEventListener('click', shut);
+      box.querySelector('.go-clear').addEventListener('click', function(){ save({}); box.querySelectorAll('input').forEach(function(i){ i.value = ''; }); });
+      var first = box.querySelector('input'); if(first) first.focus();
+    });
+  });
+  // One flexible timer (practical day). Type the minutes. Sound only if the teacher ticks the chime box.
+  document.querySelectorAll('.timer').forEach(function(box){
+    var minIn = box.querySelector('.tm-min'), nameIn = box.querySelector('.tm-name');
+    var total = (+minIn.value || 15) * 60, left = total, iv = null;
+    var out = box.querySelector('.tm-time'), go = box.querySelector('.tm-go'), snd = box.querySelector('.tm-snd input');
+    var mini = document.querySelector('.tm-mini'), seen = true;
+    function fmt(){ var m = Math.floor(left / 60), s = left % 60; return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s; }
+    function show(){ out.textContent = fmt(); box.classList.toggle('low', left <= 60 && left > 0); box.classList.toggle('done', left === 0);
+      if(mini){ mini.hidden = !(iv || left === 0) || seen; mini.querySelector('.tm-mini-l').textContent = nameIn.value || 'Timer'; mini.querySelector('.tm-mini-t').textContent = fmt(); mini.classList.toggle('low', left <= 60); } }
+    function setFromInput(){ var m = Math.max(1, Math.min(240, Math.round(+minIn.value) || 15)); total = m * 60; if(!iv){ left = total; show(); } }
+    minIn.addEventListener('input', setFromInput);
+    function chime(){ try{ var C = window.AudioContext || window.webkitAudioContext; var c = new C(); [0, 0.45].forEach(function(t, k){ var o = c.createOscillator(), g = c.createGain(); o.type = 'sine'; o.frequency.value = k ? 660 : 880; g.gain.setValueAtTime(0.0001, c.currentTime + t); g.gain.exponentialRampToValueAtTime(0.18, c.currentTime + t + 0.05); g.gain.exponentialRampToValueAtTime(0.0001, c.currentTime + t + 1.2); o.connect(g); g.connect(c.destination); o.start(c.currentTime + t); o.stop(c.currentTime + t + 1.3); }); }catch(e){} }
+    function stop(){ if(iv) clearInterval(iv); iv = null; go.textContent = 'Start'; }
+    go.addEventListener('click', function(){
+      if(iv){ stop(); show(); return; }
+      if(left === 0) left = total;
+      go.textContent = 'Pause';
+      iv = setInterval(function(){ left--; if(left <= 0){ left = 0; stop(); if(snd.checked) chime(); } show(); }, 1000);
+      show();
+    });
+    box.querySelector('.tm-reset').addEventListener('click', function(){ stop(); setFromInput(); left = total; show(); });
+    box.querySelectorAll('.tm-presets button').forEach(function(b){ b.addEventListener('click', function(){ stop(); nameIn.value = b.getAttribute('data-l'); minIn.value = b.getAttribute('data-m'); setFromInput(); left = total; show(); }); });
+    if('IntersectionObserver' in window){ new IntersectionObserver(function(es){ seen = es[0].isIntersecting; show(); }).observe(box); }
+  });
+})();
+</script>
+<script src="../shared/presenting.js"></script>
+</body>
+</html>

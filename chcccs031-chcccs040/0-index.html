@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHCCCS031 CHCCCS040 Individual Support and Wellbeing Cluster: lessons and glossary</title>
+<style>:root{
+  --ink:#1b2530; --soft-ink:#44505c; --paper:#ffffff;
+  --deep:#12384a; --aqua:#8fe3e8; --action:#0b6f7c;
+  --card-a:#fbfbf9; --card-b:#ecece8; --edge:#d9d9d4;
+  --warn:#b45309; --warn-bg:#fff7ed; --ok:#15803d; --bad:#b91c1c;
+  --teach:#4c1d95; --teach-bg:#f5f3ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size:clamp(17px,1.5vw,30px); line-height:1.55}
+main{overflow-x:clip}
+.wrap{max-width:1500px; margin:0 auto; padding:0 clamp(20px,3vw,60px)}
+
+/* banner */
+.banner{position:relative; background:var(--deep); color:#fff; padding:clamp(60px,9vw,140px) 20px 40px; overflow:hidden}
+.banner-inner{position:relative; z-index:2; max-width:1500px; margin:0 auto}
+.banner .kicker{margin:0 0 6px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:.75em; color:var(--aqua)}
+.banner h1{margin:0; font-size:clamp(30px,5vw,76px); line-height:1.1; color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.banner .sub{margin:12px 0 0; font-size:1.05em; max-width:28em; color:#f3e6d2}
+.banner svg.hero{position:absolute; right:-2vw; bottom:-4vw; width:min(46vw,620px); height:auto; opacity:.95; z-index:1}
+@media (max-width:800px){.banner svg.hero{opacity:.25}}
+
+/* index */
+#index{margin:30px 0 10px; padding:18px 26px 12px; background:#efe5d3; border-left:6px solid var(--action); border-radius:6px}
+#index h2{font-size:1.2em; margin:0 0 8px}
+#index ul{margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(19em,1fr)); column-gap:3em}
+#index li{margin:4px 0}
+#index a{text-decoration:none; color:var(--ink); display:flex; gap:10px; align-items:baseline}
+#index a:hover{color:var(--action); text-decoration:underline}
+.num{display:inline-flex; align-items:center; justify-content:center; min-width:1.7em; height:1.7em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; font-size:.8em; flex:none}
+.opening{font-size:1.05em; margin:26px 0 10px}
+
+/* slides */
+section.slide{padding:36px 0 18px; border-top:1px solid var(--edge); margin-top:30px; scroll-margin-top:10px}
+section.slide:first-of-type{border-top:0}
+h2.topic{font-size:1.4em; line-height:1.3; margin:0 0 10px; display:flex; gap:14px; align-items:center}
+h2.topic .num{font-size:.7em; min-width:2em; height:2em}
+h3{font-size:1.15em; line-height:1.3; margin:0 0 10px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px; padding-left:26px}
+li{margin:4px 0}
+a{color:var(--action); text-underline-offset:3px}
+a.star{font-weight:700; padding:0 4px; font-size:.8em; text-decoration:none; opacity:.55}
+a.star:hover{opacity:1}
+a.term{text-decoration:underline dotted; color:inherit}
+.intro{font-size:1.05em; color:var(--soft-ink)}
+a:focus-visible,button:focus-visible,.deck:focus-visible{outline:3px solid #f2a900; outline-offset:3px}
+
+ol.points{margin:12px 0 18px; padding-left:0; list-style:none; counter-reset:pt}
+ol.points li{position:relative; padding:10px 14px 10px 3.2em; margin:6px 0; background:#fffaf1; border-radius:8px; counter-increment:pt}
+ol.points li::before{content:counter(pt); position:absolute; left:.9em; top:.55em; width:1.7em; height:1.7em; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:700; font-size:.85em; display:flex; align-items:center; justify-content:center}
+.ref{display:none; float:right; margin-left:10px; font-size:.65em; color:var(--teach); background:var(--teach-bg); border:1px solid #ddd6fe; border-radius:4px; padding:0 6px}
+body.teacher .ref{display:inline-block}
+
+figure.visual{margin:18px 0 22px; text-align:center}
+figure.visual svg,figure.visual img{max-width:100%; height:auto; max-height:70vh}
+figure.visual figcaption{font-size:.8em; color:var(--soft-ink); margin-top:6px}
+figure.pic{margin:22px 0}
+figure.pic img{display:block; width:100%; height:auto; max-height:86vh; object-fit:contain; border-radius:4px}
+
+.watch-out{margin:14px 0 20px; padding:14px 18px 14px 56px; background:var(--warn-bg); border:2px solid #fdba74; border-radius:8px; position:relative}
+.watch-out::before{content:"!"; position:absolute; left:14px; top:12px; width:30px; height:30px; border-radius:50%; background:var(--warn); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.watch-out b{color:var(--warn); margin-right:6px}
+
+/* audio */
+.say{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:40px; display:inline-flex; gap:8px; align-items:center}
+.say.playing{background:var(--action); color:#fff}
+.say .ico{font-size:.8em}
+.audio-line{display:flex; gap:12px; align-items:center; margin:0 0 14px; flex-wrap:wrap}
+.audio-label{color:var(--soft-ink); font-size:.9em}
+.card-audio{margin-top:10px}
+.playall{margin:0 0 34px; text-align:center}
+
+/* card stack (from the Sway template) */
+.stack{margin:60px auto 40px; width:86%; max-width:1150px; --tilt:.4}
+.deck{position:relative; cursor:pointer; border-radius:3px; transition:height .3s ease}
+.pile i{position:absolute; inset:0; background:var(--card-b); border:1px solid var(--edge); box-shadow:0 1px 3px rgba(20,30,40,.10)}
+.pile i:nth-child(even){background:var(--card-a)}
+.pile i{transform:rotate(calc(var(--a) * var(--tilt,1))) translate(var(--x),var(--y))}
+.pile i:nth-child(1){--a:-15deg; --x:-4px; --y:6px}
+.pile i:nth-child(2){--a:6deg; --x:6px; --y:2px}
+.pile i:nth-child(3){--a:-12deg; --x:3px; --y:-5px}
+.pile i:nth-child(4){--a:3deg; --x:-5px; --y:4px}
+.pile i:nth-child(5){--a:-10deg; --x:5px; --y:5px}
+.pile i:nth-child(6){--a:-2deg; --x:-3px; --y:-3px}
+.pile i:nth-child(7){--a:-6deg; --x:2px; --y:3px}
+.pile{position:absolute; inset:0; filter:drop-shadow(0 14px 18px rgba(20,30,40,.16))}
+.card{position:absolute; left:0; top:0; width:100%; height:100%; background:var(--card-a); border:1px solid var(--edge);
+  padding:1.5em 1.8em 1.3em; font-size:clamp(16px,1.4vw,27px); line-height:1.5; opacity:0; pointer-events:none; z-index:1; min-height:7em;
+  transform:rotate(calc(var(--r,-6deg) * var(--tilt,1))); box-shadow:0 2px 6px rgba(20,30,40,.14)}
+.card.shade{background:var(--card-b)}
+.card.long{font-size:clamp(14.5px,1.25vw,24px); line-height:1.45}
+.card.top{opacity:1; pointer-events:auto; z-index:3}
+.card.arrive{animation:arrive .42s ease-out}
+.card.leave{opacity:1; z-index:4; animation:leave .42s ease-in forwards}
+.card.leave-back{opacity:1; z-index:4; animation:leaveBack .42s ease-in forwards}
+@keyframes arrive{from{transform:rotate(calc(var(--r) * var(--tilt,1) + 5deg)) scale(.96)} to{transform:rotate(calc(var(--r) * var(--tilt,1))) scale(1)}}
+@keyframes leave{to{transform:translate(58%,-10%) rotate(16deg); opacity:0}}
+@keyframes leaveBack{to{transform:translate(-58%,-10%) rotate(-18deg); opacity:0}}
+.card .count{float:right; margin:-6px -8px 6px 14px; font-size:.8em; font-weight:600; color:var(--soft-ink); background:#fff; border:1px solid var(--edge); border-radius:20px; padding:2px 12px}
+.card ul{margin-bottom:6px}
+.card-pic{float:right; width:clamp(90px,22%,220px); margin:0 0 10px 16px}
+.card-pic svg{width:100%; height:auto}
+.controls{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin-top:60px}
+.controls button{font:inherit; font-size:clamp(17px,1.2vw,24px); font-weight:600; cursor:pointer; padding:10px 20px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:48px}
+.controls button.next{background:var(--action); color:#fff}
+.controls button:hover{filter:brightness(.94)}
+.controls .where{min-width:7em; text-align:center; font-weight:700; font-size:clamp(18px,1.25vw,25px)}
+.hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:10px 0 0}
+
+/* full screen */
+.big{position:fixed; inset:0; z-index:50; background:#05090c; color:#fff; display:none}
+.big.open{display:flex; flex-direction:column}
+.big .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; font-weight:700}
+.big .body{flex:1; overflow:auto; padding:8px clamp(20px,7vw,90px) 24px; font-size:clamp(20px,2.9vw,34px); line-height:1.45}
+.big .body h3{font-size:1.1em; margin-bottom:.5em}
+.big .body .count{display:none}
+.big .body .card-pic{width:22%}
+.big .body .say{color:#fff; border-color:#fff; background:transparent}
+.big .foot{display:flex; gap:12px; justify-content:center; padding:12px 18px 20px}
+.big button{font:inherit; font-size:18px; font-weight:600; cursor:pointer; min-height:48px; padding:10px 22px; border-radius:6px; border:2px solid #fff; background:transparent; color:#fff}
+.big button.next{background:#fff; color:#05090c}
+
+/* activities */
+.activity{margin:22px 0 28px; padding:16px 20px 14px; border:2px solid #d8c9b2; border-radius:10px; background:#f1f5ec}
+.act-head{display:flex; gap:10px; align-items:center; margin-bottom:6px}
+.act-badge{background:var(--action); color:#fff; font-size:.7em; font-weight:700; padding:2px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:.04em}
+.act-instr{color:var(--soft-ink); font-size:.9em}
+.act-foot{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px}
+.act-foot button{font:inherit; font-size:.9em; font-weight:600; cursor:pointer; padding:8px 18px; border-radius:6px; border:2px solid var(--action); background:#fff; color:var(--action); min-height:44px}
+.act-foot .act-check{background:var(--action); color:#fff}
+.act-result{font-weight:700}
+.act-result.good{color:var(--ok)} .act-result.bad{color:var(--bad)}
+.chip{display:inline-flex; align-items:center; font-size:.9em; padding:8px 14px; margin:5px; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; user-select:none; min-height:44px; line-height:1.3}
+.chip.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.chip.right{border-color:var(--ok); background:#ecfdf5}
+.chip.wrong{border-color:var(--bad); background:#fef2f2}
+.chip.placed{cursor:default}
+.bank{min-height:52px; padding:6px; border:2px dashed #b9a68a; border-radius:8px; margin-bottom:12px; background:#fff}
+.targets{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(16em,1fr))}
+.target{border:2px solid #b9a68a; border-radius:8px; background:#fff; padding:8px 10px; min-height:70px}
+.target .t-label{font-weight:700; margin-bottom:4px}
+.target .t-drop{min-height:44px; border:2px dashed #e8dcc6; border-radius:6px; padding:2px}
+.target.over .t-drop{border-color:var(--action); background:#f6efe2}
+.order{list-style:none; padding:0; margin:0; counter-reset:o}
+.order li{display:flex; gap:10px; align-items:center; background:#fff; border:2px solid #b9a68a; border-radius:8px; padding:8px 10px; margin:6px 0; cursor:grab}
+.order li .o-n{min-width:2em; height:2em; border-radius:50%; background:var(--action); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none; font-size:.85em}
+.order li .o-t{flex:1}
+.order li .o-btn{display:flex; gap:4px}
+.order li .o-btn button{font:inherit; min-width:40px; min-height:40px; border-radius:6px; border:1px solid #b9a68a; background:#fff; cursor:pointer}
+.order li.right{border-color:var(--ok); background:#ecfdf5} .order li.wrong{border-color:var(--bad); background:#fef2f2}
+.order li.dragging{opacity:.5}
+.quiz-q{margin:10px 0 16px}
+.quiz-q .opt{display:block; width:100%; text-align:left; font:inherit; font-size:.95em; padding:10px 14px; margin:6px 0; border-radius:8px; border:2px solid #b9a68a; background:#fff; cursor:pointer; min-height:44px}
+.quiz-q .opt.selected{border-color:#f2a900; box-shadow:0 0 0 3px #fde68a}
+.quiz-q .opt.right{border-color:var(--ok); background:#ecfdf5} .quiz-q .opt.wrong{border-color:var(--bad); background:#fef2f2}
+.quiz-q .why{font-size:.85em; color:var(--soft-ink); margin:4px 0 0 6px; display:none}
+.quiz-q.done .why{display:block}
+.fill-table{width:100%; border-collapse:collapse; font-size:.9em; background:#fff}
+.fill-table th,.fill-table td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+.fill-table th{background:#efe5d3}
+.fill-table select{font:inherit; font-size:.95em; min-height:40px; max-width:100%}
+.fill-table td.right{background:#ecfdf5} .fill-table td.wrong{background:#fef2f2}
+
+/* teacher view */
+.tnotes{display:none; margin:18px 0 6px; padding:12px 16px; background:var(--teach-bg); border:2px dashed #c4b5fd; border-radius:8px; font-size:.82em; color:#2e1065}
+body.teacher .tnotes{display:block}
+.tnotes .t-head{font-weight:800; color:var(--teach); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; font-size:.85em}
+.tnotes ul{margin:4px 0 8px}
+.tnotes .t-trap{background:#fff7ed; border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0}
+.tlink{font:inherit; font-size:1em; color:var(--soft-ink); background:none; border:0; text-decoration:underline; cursor:pointer; padding:0}
+.tpill[hidden]{display:none}
+.tpill{position:fixed; top:10px; right:10px; z-index:45; background:var(--teach); color:#fff; border-radius:30px; padding:6px 8px 6px 16px; display:flex; gap:8px; align-items:center; font-size:15px; font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.tpill button{font:inherit; font-size:14px; font-weight:700; border:0; border-radius:20px; padding:6px 12px; background:#fff; color:var(--teach); cursor:pointer; min-height:34px}
+.tpill button.tp-out{background:transparent; color:#fff; border:1px solid #fff}
+.card-pic.photo img{width:100%; height:auto; border-radius:8px; display:block}
+.grid4{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(11em,1fr)); margin:16px 0 22px}
+.grid4 figure{margin:0; background:#efe5d3; border-radius:12px; overflow:hidden}
+.grid4 img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+.grid4 figcaption{padding:10px 14px 12px; font-size:.9em}
+.grid4 figcaption b{display:block; color:var(--deep); font-size:1.05em}
+.side{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; margin:10px 0 18px}
+.side > div{flex:2 1 420px}
+.side figure{flex:0 1 380px; max-width:440px; margin:0}
+.side figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* Gerry */
+.mascot{position:fixed; left:clamp(6px,1.2vw,24px); top:120px; width:clamp(54px,6vw,110px); z-index:35; cursor:pointer; transition:top .6s cubic-bezier(.3,.9,.4,1.1); filter:drop-shadow(0 6px 10px rgba(0,0,0,.25)); user-select:none}
+.mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.mascot.hop svg{animation:hop .7s ease-out 1, bob 2.6s ease-in-out .7s infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes hop{0%{transform:translateY(0) scale(1,1)} 30%{transform:translateY(-40px) scale(.95,1.08) rotate(14deg)} 60%{transform:translateY(0) scale(1.08,.92)} 100%{transform:translateY(0) scale(1,1)}}
+.gerry-bubble{position:absolute; left:100%; top:0; margin-left:10px; width:max-content; max-width:16em; background:#fff; color:var(--ink); border:2px solid var(--deep); border-radius:14px; padding:8px 12px; font-size:clamp(14px,1vw,18px); line-height:1.35; box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.gerry-bubble::before{content:""; position:absolute; left:-12px; top:16px; border:6px solid transparent; border-right-color:var(--deep)}
+@media (max-width:900px){.mascot{display:none}}
+.mascot.drop{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.drop .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.drop .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+@media (prefers-reduced-motion:reduce){.mascot svg{animation:none}}
+
+.home{position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(14px,2vw,32px); z-index:40; background:var(--action); color:#fff; font-weight:700; font-size:clamp(17px,1.2vw,24px); text-decoration:none; padding:12px 22px; border-radius:30px; box-shadow:0 4px 14px rgba(0,0,0,.25); min-height:48px; display:flex; align-items:center; gap:8px}
+.foot{margin:50px 0 90px; padding-top:16px; border-top:1px solid var(--edge); font-size:.75em; color:var(--soft-ink)}
+
+@media (max-width:560px){
+  body{font-size:17px}
+  .card{padding:20px 20px 18px; font-size:16px}
+  .card.long{font-size:14.5px}
+  .stack{width:auto; margin-left:14px; margin-right:14px; --tilt:.3}
+  .card-pic{width:30%}
+  h2.topic{font-size:1.25em}
+}
+@media (prefers-reduced-motion:reduce){
+  .card.arrive,.card.leave,.card.leave-back{animation-duration:.01s}
+  html{scroll-behavior:auto}
+}
+
+/* ordered strips (PPE on / off) */
+.strips{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr)); margin:16px 0 20px}
+.strip{background:#fffaf1; border-radius:12px; padding:14px 16px}
+.strip-title{font-weight:800; color:var(--deep); margin-bottom:8px}
+.strip-steps{list-style:none; margin:0; padding:0; counter-reset:st}
+.strip-steps li{counter-increment:st; display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px solid #e2e8f0}
+.strip-steps li:last-child{border-bottom:0}
+.strip-steps li::before{content:counter(st); display:inline-flex; align-items:center; justify-content:center; width:1.9em; height:1.9em; border-radius:50%; background:var(--c,#0b6f7c); color:#fff; font-weight:800; font-size:.85em; flex:none}
+table.plain{width:100%; border-collapse:collapse; font-size:.92em; margin:10px 0 18px; background:#fff}
+table.plain th,table.plain td{border:1px solid #d8c9b2; padding:8px 10px; text-align:left; vertical-align:top}
+table.plain th{background:#efe5d3}
+.tl-high{background:#fee2e2} .tl-med{background:#fef3c7} .tl-low{background:#dcfce7}
+
+/* activity start and blur */
+.act-start[hidden]{display:none}
+.act-start{display:flex; gap:14px; align-items:center; flex-wrap:wrap; padding:6px 0 2px; color:var(--soft-ink); font-size:.9em}
+.act-go{font:inherit; font-size:1em; font-weight:700; cursor:pointer; padding:10px 26px; border-radius:8px; border:0; background:var(--action); color:#fff; min-height:48px}
+.act-tools{margin:0 0 10px}
+.act-peek{font:inherit; font-size:.85em; font-weight:600; cursor:pointer; padding:6px 14px; border-radius:20px; border:2px solid #b9a68a; background:#fff; color:var(--action); min-height:40px}
+section.slide.hide-notes > :is(ol.points, .stack, figure.visual, .after, .intro, .watch-out, .vid, .audio-line, .side-points, p){filter:blur(7px); pointer-events:none; user-select:none; transition:filter .3s}
+section.slide.hide-notes .activity{filter:none}
+.vid{margin:20px 0 10px}
+.vid-title{margin:0 0 8px}
+.vid-by{color:var(--soft-ink); font-size:.85em}
+.video{margin:0 auto 6px; max-width:calc((100vh - 90px) * 16 / 9); aspect-ratio:16/9; background:#0e1a22; border-radius:6px; overflow:hidden; position:relative}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.watch{margin:0 0 20px; font-size:.8em; text-align:center}
+
+/* activity locked while the notes are showing */
+.activity.peeking .act-body, .activity.peeking .act-foot{pointer-events:none; opacity:.35; filter:grayscale(1)}
+.activity.peeking .act-tools::after{content:"Read the notes, then press the button to carry on."; margin-left:12px; color:var(--warn); font-weight:700; font-size:.9em}
+/* click to spotlight a part of a diagram */
+.spot [data-spot]{transition:opacity .3s, transform .3s; transform-box:fill-box; transform-origin:center}
+.spot.spotting [data-spot]:not(.lit){opacity:.28}
+.spot [data-spot].lit{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.14)}}
+.spot-hint{text-align:center; color:var(--soft-ink); font-size:.8em; margin:-8px 0 14px}
+/* points beside a picture */
+.side-points{display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start}
+.side-points > ol.points{flex:2 1 420px; margin-top:0}
+.side-points > figure{flex:0 1 320px; max-width:360px; margin:0}
+.side-points > figure img{width:100%; height:auto; border-radius:10px; display:block}
+
+/* student-visible Connect source line */
+.source{margin:16px 0 6px; padding:10px 14px 10px 44px; background:#f6efe2; border-left:4px solid var(--action); border-radius:8px; font-size:.92em; color:var(--soft-ink); position:relative; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center}
+.source::before{content:"\1F4D6"; position:absolute; left:12px; top:8px; font-size:1.2em}
+.source-label{font-weight:700; color:var(--ink)}
+.source a{text-decoration:none; font-weight:600; border:1px solid #d8c9b2; background:#fff; border-radius:999px; padding:2px 10px}
+.source a:hover{background:#efe5d3}
+
+/* Lesson 3: safety signs, RACE, two-up figures */
+.signs{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:12px 0 20px; align-items:start}
+.sign{background:#fff; border:2px solid var(--edge); border-radius:12px; padding:12px 10px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px}
+.sign svg{width:84px; height:84px}
+.sign span{font-weight:700; font-size:.9em; line-height:1.25}
+.signkey{display:flex; flex-wrap:wrap; gap:8px 20px; margin:6px 0 14px; font-size:.92em}
+.signkey i{display:inline-block; width:16px; height:16px; border-radius:50%; vertical-align:-3px; margin-right:6px}
+.race{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:14px 0 20px}
+.race div{border-left:8px solid var(--c); background:#fff; border-radius:10px; padding:12px 14px; box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.race b{display:block; font-size:2.2em; line-height:1; color:var(--c)}
+.race span{display:block; font-weight:700; font-size:1.1em; margin-top:4px}
+.race small{color:var(--soft-ink)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:14px 0}
+.grid2 figure{margin:0}
+.grid2 figcaption{font-size:.85em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > :is(.signs, .signkey, .race, .grid2){filter:blur(7px); pointer-events:none; user-select:none}
+
+/* side-by-side videos */
+.vid-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:16px 0 6px}
+.vid-row .vid{margin:0}
+.vid-row .video{max-width:none}
+section.slide.hide-notes > .vid-row{filter:blur(7px); pointer-events:none}
+
+/* finale: the grand exit */
+.finale{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; margin:24px 0 10px; padding:24px 10px 0; min-height:340px; overflow:hidden}
+.fin-side{display:flex; flex-direction:column; align-items:center; gap:10px; opacity:0; transition:transform .9s cubic-bezier(.2,.8,.3,1.1), opacity .6s}
+.fin-side.left{transform:translateX(-60vw)}
+.fin-side.right{transform:translateX(60vw)}
+.finale.in .fin-side{transform:none; opacity:1}
+.finale.in .fin-side.right{transition-delay:.25s}
+.fin-mascot{width:min(260px,38vw)}
+.fin-mascot svg{width:100%; height:auto; animation:bob 2.6s ease-in-out infinite; transform-origin:50% 60%}
+.fin-bubble{background:#fff; border:3px solid var(--deep); border-radius:18px; padding:14px 18px; font-size:1.08em; line-height:1.4; position:relative; max-width:34em; opacity:0; transform:scale(.7); transition:transform .5s cubic-bezier(.2,.8,.3,1.3), opacity .4s}
+.fin-bubble p{margin:0 0 8px}
+.fin-bubble::after{content:""; position:absolute; bottom:-14px; left:50%; margin-left:-8px; border:8px solid transparent; border-top-color:var(--deep)}
+.finale.in .fin-bubble{opacity:1; transform:none; transition-delay:1s}
+.finale.in .right .fin-bubble{transition-delay:1.5s}
+.fin-side .fin-bubble{order:-1}
+.fin-who{font-weight:800; color:var(--deep); margin:0}
+.fin-after{text-align:center; font-size:1.1em; color:var(--soft-ink); margin:10px 0 20px}
+@media (max-width:700px){.finale{grid-template-columns:1fr; min-height:0} .fin-side.left,.fin-side.right{transform:translateY(40px)} .finale.in .fin-side{transform:none}}
+@media (prefers-reduced-motion:reduce){.fin-side,.fin-bubble{transition:none; transform:none; opacity:1} .fin-mascot svg{animation:none}}
+.sign-pics{display:flex; gap:6px; align-items:center; justify-content:center; height:96px}
+.sign-pics img{max-height:96px; max-width:100%; object-fit:contain}
+.sign-pics img + img{max-height:60px}
+
+/* Lesson 4: risk matrix */
+table.matrix{border-collapse:collapse; margin:0 auto; font-size:.95em}
+table.matrix th, table.matrix td{border:2px solid #fff; padding:10px 12px; text-align:center}
+table.matrix thead th{background:#12384a; color:#fff; font-weight:700}
+table.matrix tbody th{background:#0b6f7c; color:#fff; text-align:left; font-weight:700}
+table.matrix .corner{background:#1b2530; font-size:.8em}
+table.matrix td.m-L{background:#bbf7d0; color:#14532d; font-weight:700}
+table.matrix td.m-M{background:#fde68a; color:#78350f; font-weight:700}
+table.matrix td.m-H{background:#fca5a5; color:#7f1d1d; font-weight:700}
+@media (max-width:700px){table.matrix{font-size:.75em} table.matrix th, table.matrix td{padding:6px 4px}}
+
+
+.tag{display:inline-block; font-family:"Segoe UI",Arial,sans-serif; font-size:.68em; font-weight:700; padding:1px 10px; border-radius:12px; margin:0 6px; vertical-align:middle; white-space:nowrap}
+.tag.old{background:#e5e1db; color:#4a4540; border:1px solid #b9b2a8}
+.tag.repl{background:#fdf0dc; color:#8a4b12; border:1px solid #e8b878}
+.tag.new{background:#e2efdc; color:#2f5a2a; border:1px solid #9cc290}
+.vid.local video{display:block; width:100%; max-width:1100px; max-height:72vh; margin:0 auto; border-radius:8px; background:#000}
+.mascot.side-right{left:auto; right:clamp(6px,1.2vw,24px)}
+.mascot.side-right .gerry-bubble{left:auto; right:100%; margin-left:0; margin-right:10px}
+.mascot.side-right .gerry-bubble::before{left:auto; right:-12px; border-right-color:transparent; border-left-color:var(--deep)}
+.gerry-bubble{border-color:var(--wood)}
+.home{background:var(--wood)}
+.side-points figure img{border-radius:10px; border:1px solid var(--edge)}
+figure.visual img{border-radius:10px}
+.watch-out b{margin-right:0}
+.watch-out > b:first-child{margin-right:6px}
+body.presenting .mascot{z-index:45}
+@media (max-width:700px){
+  .lessonbar{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:thin; padding-bottom:10px}
+  .lessonbar a{flex:0 0 auto}
+}
+.fill-table select{width:100%}
+
+/* infographics: big, centred, click for full screen */
+figure.infopic{margin:22px auto 26px; text-align:center}
+figure.infopic img{display:block; margin:0 auto; width:100%; max-width:1300px; max-height:82vh; object-fit:contain; border-radius:12px; border:1px solid var(--edge); background:#fff; cursor:zoom-in}
+figure.infopic .info-svg{max-width:1300px; margin:0 auto; background:#fffdf8; border:1px solid var(--edge); border-radius:12px; padding:10px; cursor:zoom-in}
+figure.infopic figcaption{font-size:.75em; color:var(--soft-ink); margin-top:6px}
+section.slide.hide-notes > figure.infopic{filter:blur(7px); pointer-events:none; user-select:none}
+.zoombox{position:fixed; inset:0; z-index:70; background:rgba(20,14,10,.92); display:flex; align-items:center; justify-content:center; cursor:zoom-out; padding:2vh 2vw}
+.zoombox img,.zoombox svg{max-width:96vw; max-height:94vh; width:auto; height:auto; background:#fff; border-radius:10px}
+.zoombox .info-svg{width:96vw; max-height:94vh; background:#fffdf8; border-radius:10px; padding:10px}
+.zoombox .info-svg svg{width:100%; max-height:90vh}
+.zoombox .zclose{position:fixed; top:14px; right:18px; font:inherit; font-weight:700; border:0; border-radius:20px; padding:8px 18px; background:#fff; color:var(--wood); cursor:pointer}
+/* external (sign-in) videos and handouts */
+.vid.ext{margin:18px 0}
+.ext-play{display:flex; align-items:center; gap:16px; padding:16px 20px; background:#2f2a24; color:#fff8ec; border-radius:12px; text-decoration:none; max-width:760px; box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.ext-play:hover,.ext-play:focus{background:#4a3b2d; outline:3px solid var(--action)}
+.ext-icon{flex:0 0 56px; height:56px; border-radius:50%; background:var(--action); display:grid; place-items:center; font-size:26px; padding-left:4px}
+.ext-play b{display:block; font-size:1.05em}
+.ext-play small{display:block; opacity:.85; margin-top:3px; font-size:.82em}
+.docs{background:#fbf7ef; border:1px solid #e3d6bf; border-left:6px solid var(--wood); border-radius:10px; padding:12px 20px; margin:16px 0}
+.docs-title{margin:0 0 6px}
+.docs ul{margin:0; padding-left:22px}
+.docs li{margin:6px 0}
+section.slide.hide-notes > :is(.vid.ext, .docs){filter:blur(7px); pointer-events:none}
+.t-demo .t-sub{margin:8px 0 2px; font-weight:700; color:#7a4a1e}
+.t-demo ul,.t-links ul{margin:2px 0 6px; padding-left:20px}
+.t-note{color:#666; font-size:.9em}
+.docs-btn{display:inline-block; margin:10px 0 4px; padding:10px 18px; background:var(--action); color:#fff; border-radius:999px; text-decoration:none; font-weight:700}
+.docs-btn:hover,.docs-btn:focus{background:var(--wood); outline:3px solid var(--action)}
+.docs-note{margin:4px 0 0; font-size:.85em; color:var(--soft-ink)}
+/* ---- 28 Oct 2026: glossary pop-up, teacher button in the lesson bar, Play all state ---- */
+a.term{cursor:help}
+.gpop{position:absolute; z-index:80; width:min(26em,calc(100vw - 16px)); background:#fffdf7; color:var(--ink); border:2px solid var(--wood,#6b4a33); border-radius:12px; padding:12px 40px 10px 16px; box-shadow:0 10px 28px rgba(0,0,0,.25); font-size:clamp(16px,1.1vw,22px); line-height:1.45}
+.gpop p{margin:0 0 6px}
+.gpop .gp-term{font-weight:800; color:var(--wood,#6b4a33)}
+.gpop .gp-more{font-size:.85em; margin:4px 0 0}
+.gpop .gp-more a{color:var(--action)}
+.gpop .gp-x{position:absolute; top:6px; right:6px; width:34px; height:34px; border:0; border-radius:50%; background:transparent; font-size:24px; line-height:1; cursor:pointer; color:var(--soft-ink)}
+.gpop .gp-x:hover{background:#f0e6d6}
+.lessonbar .tlink-top{margin-left:auto; padding:6px 12px; border-radius:20px; border:1px dashed var(--edge); background:transparent; color:var(--soft-ink); text-decoration:none; font-size:.85em; white-space:nowrap}
+.lessonbar .tlink-top:hover{border-color:var(--wood); color:var(--wood)}
+body.tv-pill .lessonbar .tlink-top{display:none}
+.say.playall-btn.playing{background:var(--action); color:#fff}
+.tpill .tp-label{margin-right:2px}
+@media print{ .gpop,.tlink-top{display:none} }
+
+/* ===================== CHCCOM005 CHCDIV001 neon theme (29 Oct 2026): neon red and green lights, a little shine, readable ===================== */
+:root{
+  --ink:#16201d; --soft-ink:#46524e; --paper:#f6f8f7;
+  --deep:#0b5a3c; --aqua:#7dffc0; --action:#d81e3c;
+  --card-a:#ffffff; --card-b:#eef3f1; --edge:#d8e2de;
+  --wood:#0b5a3c; --sage-bg:#ecf8f2; --clay:#d81e3c; --neonR:#ff2e4d; --neonG:#19e68c;
+}
+body{background-color:var(--paper)}
+h1,h2,h3,.banner h1{font-family:"Segoe UI","Trebuchet MS",Arial,sans-serif}
+.banner{background-color:#0d1312; background-image:
+  radial-gradient(ellipse 40% 60% at 12% 110%,rgba(255,46,77,.35),transparent 70%),
+  radial-gradient(ellipse 40% 60% at 70% -10%,rgba(25,230,140,.30),transparent 70%),
+  linear-gradient(115deg,#0d1312 0%,#111b19 55%,#0d1312 100%);
+  border-bottom:4px solid transparent; border-image:linear-gradient(90deg,var(--neonR),#ffd27a,var(--neonG)) 1;
+  box-shadow:0 2px 18px rgba(255,46,77,.35),0 6px 26px rgba(25,230,140,.25);
+  padding:clamp(40px,6vw,96px) 20px clamp(26px,3vw,44px)}
+.banner::before,.banner::after{content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
+  background-image:radial-gradient(2px 2px at 8% 30%,#fff,transparent 60%),radial-gradient(1.5px 1.5px at 22% 70%,#ffd7de,transparent 60%),radial-gradient(2px 2px at 41% 18%,#d6ffe9,transparent 60%),radial-gradient(1.5px 1.5px at 57% 82%,#fff,transparent 60%),radial-gradient(2px 2px at 66% 40%,#ffd7de,transparent 60%),radial-gradient(1.5px 1.5px at 33% 48%,#d6ffe9,transparent 60%),radial-gradient(2px 2px at 92% 76%,#fff,transparent 60%);
+  animation:twinkle 4s ease-in-out infinite}
+.banner::after{background-position:13px 9px; animation-delay:2s}
+@keyframes twinkle{0%,100%{opacity:.25} 50%{opacity:.9}}
+.banner h1{color:#fff; text-shadow:0 0 6px rgba(255,255,255,.35),0 0 18px rgba(255,46,77,.55),0 0 34px rgba(25,230,140,.35)}
+.banner .sub{color:#e7efec}
+.banner .kicker{color:var(--aqua); text-shadow:0 0 8px rgba(25,230,140,.6)}
+.banner.first{position:relative; overflow:hidden}
+.banner.first .banner-inner{position:relative; z-index:2}
+.hero-hellos{position:absolute; z-index:1; right:clamp(10px,4vw,90px); top:50%; transform:translateY(-50%); width:clamp(220px,30vw,520px); pointer-events:none}
+.hero-hellos svg{display:block; width:100%; height:auto}
+.hero-hellos .hb{animation:hbPop 6s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%}
+@keyframes hbPop{0%,100%{transform:scale(1); opacity:.9} 8%{transform:scale(1.08); opacity:1} 16%{transform:scale(1); opacity:.9}}
+@media (max-width:800px){.hero-hellos{opacity:.28; width:280px}}
+@media (prefers-reduced-motion:reduce){.hero-hellos .hb,.banner::before,.banner::after{animation:none}}
+.lessonbar{display:flex; flex-wrap:wrap; gap:8px 10px; padding:12px clamp(20px,3vw,60px); background:#121a18; border-bottom:1px solid #26332f; font-size:clamp(14px,.95vw,19px)}
+.lessonbar a{padding:6px 14px; border-radius:20px; background:transparent; border:1px solid #3c4c47; color:#e7efec; text-decoration:none; font-weight:600; white-space:nowrap}
+.lessonbar a:hover{border-color:var(--neonG); box-shadow:0 0 8px rgba(25,230,140,.5)}
+.lessonbar a.on{background:var(--neonG); border-color:var(--neonG); color:#06241a; box-shadow:0 0 10px rgba(25,230,140,.7)}
+.lessonbar .tlink{color:#e7efec}
+#index{background:#ffffff; border-left-color:var(--neonR); box-shadow:0 1px 0 var(--edge)}
+h2.topic{color:#10241d; border-bottom:3px solid transparent; border-image:linear-gradient(90deg,var(--neonR),var(--neonG)) 1; padding-bottom:8px}
+h2.topic .num{background:var(--action); color:#fff; box-shadow:0 0 0 2px #fff,0 0 12px rgba(255,46,77,.65)}
+#index .num{box-shadow:0 0 8px rgba(255,46,77,.5)}
+ol.points li{background:var(--card-a); border:1px solid var(--edge); box-shadow:0 1px 0 #e3ebe8}
+ol.points li::before{border-color:var(--action); color:var(--deep)}
+.activity{background:var(--sage-bg); border-color:#b7e3cd}
+a.term{text-decoration-color:var(--action)}
+.gerry-bubble{border-color:var(--deep)}
+.home{background:var(--deep); box-shadow:0 0 12px rgba(25,230,140,.45)}
+.ext-play{background:var(--deep); color:#fff}
+.ext-play:hover,.ext-play:focus{background:#0e7550}
+.docs{background:#fbfffd; border-color:#d3eadf; border-left-color:var(--action)}
+.zoombox .zclose{color:var(--deep)}
+.gpop{border-color:var(--deep)}
+.gpop .gp-term{color:var(--deep)}
+.t-demo .t-sub{color:var(--deep)}
+.vid-row{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+strong.motto{color:#d81e3c; font-weight:900; font-size:1.15em; text-shadow:0 0 10px rgba(255,46,77,.35)}
+.card-pic.photo img{max-height:clamp(180px,22vw,300px); width:auto; max-width:100%; margin:0 auto; display:block; object-fit:cover; border-radius:8px}
+
+/* opening video: big, nothing beside it */
+.vid.opener .video{max-width:calc((100vh - 60px) * 16 / 9); box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.vid.opener .vid-title{text-align:center; font-size:1.1em}
+
+/* greeting cards (Good Morning) */
+.greet-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr)); gap:18px; margin:18px 0}
+.greet{background:var(--card-a); border:1px solid var(--edge); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 2px 0 #ece1cf}
+.greet .g-pic{aspect-ratio:4/3; background:#e9dfcf}
+.greet .g-pic img{width:100%; height:100%; object-fit:cover; display:block}
+.greet .g-body{padding:12px 16px 14px}
+.greet .g-lang{margin:0; font-size:.8em; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--action)}
+.greet .g-words{margin:4px 0 2px; font-size:1.25em; font-weight:700; color:var(--deep); line-height:1.25}
+.greet .g-say{margin:0 0 10px; color:var(--soft-ink); font-size:.9em}
+.greet .g-who{font-size:.75em; color:var(--soft-ink); margin-left:6px}
+.greet.playing{outline:4px solid #19c37d}
+.greet-all{margin:6px 0 4px}
+
+/* Auslan sign grid */
+.sign-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr)); gap:18px; margin:18px 0}
+.sign{background:var(--card-a); border:2px solid var(--edge); border-radius:14px; overflow:hidden}
+.sign .s-head{display:flex; align-items:center; gap:12px; padding:10px 14px}
+.sign .s-num{flex:0 0 auto; width:2.2em; height:2.2em; border-radius:50%; background:var(--action); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:1.2em}
+.sign .s-word{font-size:1.35em; font-weight:800; color:var(--deep)}
+.sign video{display:block; width:100%; aspect-ratio:1512/1060; background:#2a3bcf; object-fit:cover}
+.sign:target{border-color:#19c37d; box-shadow:0 0 0 5px rgba(233,162,59,.35)}
+.sign-jump{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
+.sign-jump a{display:inline-flex; width:2.4em; height:2.4em; align-items:center; justify-content:center; border-radius:50%; background:#fff; border:2px solid var(--action); color:var(--action); font-weight:800; text-decoration:none}
+.sign-jump a:hover{background:var(--action); color:#fff}
+
+/* give out the numbers (teacher tool on the page) */
+.giveout-btn{background:#0b5a3c; color:#fff; border:0; border-radius:24px; padding:10px 20px; font:inherit; font-weight:700; cursor:pointer}
+.giveout{position:fixed; inset:0; z-index:80; background:#0d1312; color:#fff; padding:clamp(14px,2vw,30px); overflow:auto}
+.giveout h3{margin:0 0 6px; color:#7dffc0}
+.giveout .go-help{margin:0 0 14px; color:#d9ece9; font-size:.85em}
+.giveout .go-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px}
+.giveout .go-cell{background:#0b5a3c; border-radius:12px; padding:10px 12px}
+.giveout .go-n{font-size:2.2em; font-weight:800; color:#7dffc0; line-height:1}
+.giveout .go-w{font-weight:700; font-size:1.05em}
+.giveout input{width:100%; margin-top:6px; font:inherit; font-size:.85em; padding:6px 8px; border-radius:6px; border:0}
+.giveout .go-bar{display:flex; gap:10px; margin:0 0 14px; flex-wrap:wrap}
+.giveout .go-bar button{font:inherit; border:0; border-radius:20px; padding:8px 16px; font-weight:700; cursor:pointer}
+.giveout .go-close{background:#7dffc0; color:#0d1312}
+.giveout .go-clear{background:var(--action); color:#fff}
+
+/* language flags grid (South Africa) */
+.flag-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; margin:14px 0}
+.flag-grid figure{margin:0; background:var(--card-a); border:1px solid var(--edge); border-radius:10px; overflow:hidden; text-align:center}
+.flag-grid img{width:100%; aspect-ratio:3/2; object-fit:cover; display:block}
+.flag-grid figcaption{padding:6px; font-weight:700; color:var(--deep)}
+
+/* timeline cards */
+.tl{overflow-x:auto; margin:16px 0}
+.tl table{border-collapse:separate; border-spacing:6px; min-width:760px; width:100%}
+.tl th{background:var(--deep); color:#fff; padding:8px 10px; border-radius:8px; font-size:.9em}
+.tl th.asp{background:var(--action)}
+.tl td{background:var(--card-a); border:1px solid var(--edge); border-radius:8px; padding:8px 10px; vertical-align:top; font-size:.85em}
+.tl td ul{margin:0; padding-left:1.1em}
+section.slide.hide-notes > :is(.tl, .greet-grid, .flag-grid, .sign-grid){filter:blur(7px); pointer-events:none}
+
+
+.greet-all-btn{background:var(--action); color:#fff; border:0; border-radius:24px; padding:10px 20px; font:inherit; font-weight:700; cursor:pointer}
+.greet-all-btn.playing{background:#0b5a3c}
+.giveout-btn{display:none}
+body.teacher .giveout-btn, body.presenting .giveout-btn{display:inline-block}
+.sign-tools{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px}
+
+.greet .g-pic{overflow:hidden; position:relative}
+.greet .g-pic img{position:absolute; inset:0; width:100% !important; height:100% !important; max-width:none !important; object-fit:cover}
+.greet .g-who{display:block; margin:6px 0 0}
+
+@media (max-width:700px){
+  .tl table{min-width:0; border-spacing:0}
+  .tl thead{display:none}
+  .tl tr{display:block; margin:0 0 14px}
+  .tl th.asp{display:block; border-radius:8px 8px 0 0; text-align:left}
+  .tl td{display:block; border-radius:0; margin:0}
+  .tl td::before{content:attr(data-col); display:block; font-weight:800; color:var(--deep); margin:0 0 4px}
+  .tl td:last-child{border-radius:0 0 8px 8px}
+}
+
+/* Discussion prompts and timers (Lessons 6 and 7) */
+.discuss{display:grid; gap:12px; margin:14px 0}
+.dq{background:var(--card,#fff); border:1px solid #d9e6e0; border-left:5px solid #19a865; border-radius:10px; padding:12px 16px}
+.dq-q{margin:0 0 6px; font-weight:600}
+.dq-n{display:inline-block; background:#e8344f; color:#fff; border-radius:999px; padding:1px 10px; font-size:.85em; margin-right:6px}
+.dq-t{margin:6px 0 2px; color:#4a5a55; font-size:.95em}
+.dq ul{margin:0; padding-left:22px}
+.timers{display:flex; flex-wrap:wrap; gap:14px; margin:14px 0}
+.timer{flex:1 1 240px; background:#0d1614; color:#fff; border-radius:14px; padding:14px 18px; text-align:center; box-shadow:0 0 0 2px #19e68c, 0 0 18px rgba(25,230,140,.35)}
+.timer.low{box-shadow:0 0 0 2px #ffb020, 0 0 18px rgba(255,176,32,.45)}
+.timer.done{box-shadow:0 0 0 2px #ff2e4d, 0 0 22px rgba(255,46,77,.6)}
+.tm-label{margin:0; font-weight:700}
+.tm-time{margin:4px 0 8px; font-size:3rem; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:2px}
+.tm-btns{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; align-items:center}
+.tm-btns button{background:#e8344f; color:#fff; border:0; border-radius:8px; padding:8px 16px; font-weight:700; cursor:pointer}
+.tm-btns .tm-reset{background:transparent; border:2px solid #19e68c; color:#19e68c}
+.tm-snd{font-size:.85em; color:#cfe}
+
+.tm-set{display:flex; flex-wrap:wrap; gap:10px 16px; justify-content:center; margin-bottom:4px}
+.tm-set label{font-size:.9em; color:#cfe}
+.tm-set input{background:#16231f; color:#fff; border:1px solid #19e68c; border-radius:6px; padding:5px 8px; font:inherit}
+.tm-set .tm-name{width:min(260px,60vw)} .tm-set .tm-min{width:80px}
+.tm-time{font-size:clamp(3rem,9vw,5.5rem)}
+.tm-presets{display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin-top:10px}
+.tm-presets button{background:transparent; color:#cfe; border:1px solid #3a5a50; border-radius:999px; padding:4px 10px; font-size:.82em; cursor:pointer}
+.tm-presets button:hover{border-color:#19e68c; color:#fff}
+.tm-mini{position:fixed; left:16px; bottom:16px; z-index:60; background:#0d1614; color:#fff; border-radius:999px; padding:8px 16px; text-decoration:none; box-shadow:0 0 0 2px #19e68c, 0 0 16px rgba(25,230,140,.4); font-variant-numeric:tabular-nums}
+.tm-mini.low{box-shadow:0 0 0 2px #ff2e4d, 0 0 16px rgba(255,46,77,.5)}
+.tm-mini[hidden]{display:none}
+.tm-link{margin:8px 0 0}
+.rule-box{border:3px solid #e8344f; background:#fff4f6; border-radius:12px; padding:12px 16px; margin:12px 0; font-size:1.1em}
+.docbox{border:1px solid #cfdcd6; background:#fff; border-radius:12px; padding:14px 18px; margin:12px 0; box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.docbox h3{margin-top:0}
+
+/* ===================== CHCCCS031 CHCCCS040 water theme (30 Oct 2026): watery, washy, shiny tiles, readable ===================== */
+:root{
+  --ink:#10232c; --soft-ink:#3f5560; --paper:#f3fafc;
+  --deep:#0b4f66; --aqua:#9ff0f7; --action:#0a7f9c;
+  --card-a:#ffffff; --card-b:#e8f6fa; --edge:#cfe6ee;
+  --wood:#0b4f66; --sage-bg:#eaf8fb; --clay:#e86a2f; --neonR:#2bb8d6; --neonG:#7fe0f0;
+}
+body{background-color:var(--paper);
+  background-image:radial-gradient(ellipse 60% 40% at 0% 0%,rgba(143,227,232,.18),transparent 70%),radial-gradient(ellipse 50% 40% at 100% 30%,rgba(43,184,214,.10),transparent 70%)}
+.banner{background-color:#0b4f66; background-image:
+  linear-gradient(180deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,0) 40%),
+  radial-gradient(ellipse 50% 70% at 15% 120%,rgba(143,227,232,.45),transparent 70%),
+  linear-gradient(120deg,#0b4f66 0%,#0e6f8c 55%,#1592ad 100%);
+  border-bottom:6px solid transparent; border-image:linear-gradient(90deg,#9ff0f7,#ffffff,#2bb8d6) 1;
+  box-shadow:0 6px 26px rgba(11,79,102,.35)}
+.banner::before,.banner::after{background-image:radial-gradient(3px 3px at 10% 30%,rgba(255,255,255,.8),transparent 60%),radial-gradient(2px 2px at 30% 70%,rgba(255,255,255,.7),transparent 60%),radial-gradient(3px 3px at 52% 22%,rgba(255,255,255,.8),transparent 60%),radial-gradient(2px 2px at 62% 80%,rgba(255,255,255,.6),transparent 60%)}
+.banner h1{color:#fff; text-shadow:0 2px 0 rgba(0,0,0,.15),0 0 22px rgba(159,240,247,.55)}
+.banner .kicker{color:#c9f7fb; text-shadow:none}
+.banner .sub{color:#e6f7fb}
+.hero-water{position:absolute; z-index:1; right:clamp(0px,2vw,60px); bottom:0; width:clamp(240px,34vw,560px); pointer-events:none}
+.hero-water svg{display:block; width:100%; height:auto}
+.hero-water .bub{animation:bubUp 7s ease-in infinite}
+@keyframes bubUp{0%{transform:translateY(0); opacity:0} 10%{opacity:1} 100%{transform:translateY(-230px); opacity:0}}
+@media (max-width:800px){.hero-water{opacity:.35; width:300px}}
+@media (prefers-reduced-motion:reduce){.hero-water .bub{animation:none}}
+.lessonbar{background:linear-gradient(180deg,#e9f8fc,#d4eef6); border-bottom:1px solid #b9dde8}
+.lessonbar a{background:linear-gradient(180deg,#ffffff,#eaf7fb); border:1px solid #b9dde8; color:var(--deep); box-shadow:inset 0 1px 0 #fff}
+.lessonbar a:hover{border-color:var(--action); box-shadow:0 0 8px rgba(43,184,214,.45)}
+.lessonbar a.on{background:linear-gradient(180deg,#2bb8d6,#0a7f9c); border-color:#0a7f9c; color:#fff; box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 2px 8px rgba(10,127,156,.4)}
+.lessonbar .tlink{color:var(--deep)}
+#index{background:linear-gradient(180deg,#ffffff,#f1fafd); border-left:6px solid var(--action); box-shadow:0 2px 12px rgba(11,79,102,.08); border-radius:12px}
+/* wet, shiny tile headings */
+h2.topic{position:relative; color:#fff; background:linear-gradient(180deg,#2bb8d6 0%,#0a7f9c 60%,#0b6f88 100%); border:0; border-image:none;
+  border-radius:14px; padding:12px 18px; box-shadow:inset 0 2px 0 rgba(255,255,255,.45),inset 0 -3px 0 rgba(0,0,0,.12),0 6px 16px rgba(10,127,156,.25); overflow:hidden}
+h2.topic::after{content:""; position:absolute; left:10px; right:40%; top:5px; height:38%; border-radius:12px; background:linear-gradient(180deg,rgba(255,255,255,.45),rgba(255,255,255,0)); pointer-events:none}
+h2.topic .num{background:#fff; color:var(--deep); box-shadow:0 0 0 3px rgba(255,255,255,.35)}
+h2.topic a.star{color:#fff; opacity:.8}
+#index .num{box-shadow:none}
+ol.points li{background:linear-gradient(180deg,#ffffff,#f6fcfe); border:1px solid var(--edge); box-shadow:0 1px 0 #dcedf3}
+ol.points li::before{border-color:var(--action); color:var(--deep)}
+.card,.docbox,.dq{box-shadow:0 2px 12px rgba(11,79,102,.08)}
+.activity{background:linear-gradient(180deg,#f3fcff,#e6f6fb); border-color:#b9e3ee; border-radius:14px}
+a.term{text-decoration-color:var(--action)}
+.gerry-bubble{border-color:var(--deep)}
+.home{background:linear-gradient(180deg,#2bb8d6,#0a7f9c); box-shadow:0 4px 14px rgba(10,127,156,.4)}
+.ext-play{background:var(--deep); color:#fff}
+.ext-play:hover,.ext-play:focus{background:#0a7f9c}
+.timer{background:#0b2f3c; box-shadow:0 0 0 2px #7fe0f0,0 0 18px rgba(127,224,240,.35)}
+.tm-btns button{background:#0a7f9c}
+.tm-btns .tm-reset{border-color:#7fe0f0; color:#7fe0f0}
+.tm-set input{background:#0e3a49; border-color:#7fe0f0}
+.tm-mini{background:#0b2f3c; box-shadow:0 0 0 2px #7fe0f0}
+.rule-box{border-color:#d93a3a; background:#fff5f5}
+.dq{border-left-color:#2bb8d6}
+.dq-n{background:#0a7f9c}
+strong.motto{color:#0a7f9c; text-shadow:none}
+
+/* case study people (Lesson 1) */
+.people{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr)); gap:18px; margin:16px 0}
+.person{background:#fff; border:1px solid var(--edge); border-radius:16px; overflow:hidden; box-shadow:0 4px 18px rgba(11,79,102,.10)}
+.person img{display:block; width:100%; aspect-ratio:16/9; object-fit:cover}
+.person .pp{padding:12px 18px 16px}
+.person .tag{display:inline-block; background:#e6f6fb; color:var(--deep); border-radius:20px; padding:2px 12px; font-size:.8em; font-weight:700; margin-bottom:6px}
+.person h3{margin:4px 0 8px}
+.person ul{margin:0; padding-left:1.2em}
+
+/* real photo behind a button (pressure injuries) */
+.reveal{margin:10px 0}
+.reveal-btn{font:inherit; font-weight:700; cursor:pointer; border:2px solid #b45309; background:#fff7ed; color:#7c2d12; border-radius:24px; padding:8px 16px}
+.reveal-box{margin-top:10px}
+.reveal-box img{max-width:100%; max-height:60vh; border-radius:10px; display:block}
+.reveal-warn{font-size:.85em; color:#7c2d12; margin:0 0 6px}
+.link-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr)); gap:12px; margin:10px 0 30px}
+.link-grid .ext-play{display:flex; gap:12px; align-items:center; padding:12px 16px; border-radius:12px; text-decoration:none}
+.link-grid small{display:block; opacity:.85; font-weight:400}
+.source{background:linear-gradient(180deg,#f2fbfe,#e4f5fa); border-left-color:var(--action)}
+.source a{border-color:#b9dde8}
+.source a:hover{background:#e6f6fb}
+/* card photos bigger (picture cards) */
+.card .card-pic.photo{width:clamp(140px,40%,420px)}
+.card .card-pic.photo img{max-height:none; width:100%; height:auto; object-fit:cover}
+.big .body .card-pic.photo{width:45%}
+@media (max-width:700px){.card .card-pic.photo{float:none; width:100%; margin:6px 0 10px}}
+/* one person only: picture beside the story */
+.people:has(.person:only-child){grid-template-columns:1fr}
+.person:only-child{display:grid; grid-template-columns:minmax(220px,38%) 1fr}
+.person:only-child img{aspect-ratio:auto; height:100%; min-height:100%}
+@media (max-width:760px){.person:only-child{display:block} .person:only-child img{aspect-ratio:16/9; height:auto}}
+
+/* KAMA policy buttons (link to kama-policies.html) */
+.policy-links{margin:14px 0;padding:12px 14px;border:2px dashed #0a7f9c;border-radius:14px;background:#f0fbfe}
+.policy-links .pl-title{margin:0 0 8px}
+.pl-btn{display:inline-block;margin:4px 8px 4px 0;padding:8px 14px;border-radius:22px;background:#0a7f9c;color:#fff;font-weight:700;text-decoration:none}
+.pl-btn:hover{background:#0b4f66}
+
+.lessons{list-style:none; padding:0; margin:20px 0; display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(18em,1fr))}
+.lessons li{border:1px solid var(--edge); border-radius:10px; padding:16px 18px; background:var(--card-a); box-shadow:0 1px 0 #e6d9c4}
+.lessons li.soon{opacity:.55}
+.lessons a{font-weight:700; text-decoration:none; font-size:1.05em; color:var(--wood)}
+.lessons .np{display:block; font-size:.8em; color:var(--soft-ink); margin-top:4px}
+.lessons{align-items:start}
+.lessons details{margin-top:8px}
+.lessons summary{cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; font-size:.85em; font-weight:600; color:var(--action); padding:4px 10px 4px 6px; border-radius:16px; border:1px solid var(--edge); background:#fff}
+.lessons summary::-webkit-details-marker{display:none}
+.lessons summary .arr{display:inline-block; transition:transform .15s; font-size:.8em}
+.lessons details[open] summary .arr{transform:rotate(90deg)}
+.lessons details ol{list-style:none; margin:8px 0 0; padding:0}
+.lessons details li{border:0; padding:3px 0; background:none; box-shadow:none; border-radius:0; font-size:.9em}
+.lessons details li a{font-weight:600; font-size:1em; color:var(--ink)}
+.lessons details li a:hover{color:var(--wood)}
+.lessons details .num{display:inline-grid; place-items:center; min-width:1.6em; height:1.6em; margin-right:6px; border-radius:50%; background:var(--wood); color:#fff; font-size:.8em}
+.refhow{background:var(--card-a); border:1px solid var(--edge); border-radius:10px; padding:10px 16px}
+@media (prefers-reduced-motion: reduce){ .lessons summary .arr{transition:none} }
+@media print{ .lessons details > ol{display:block} }
+dl.gloss{margin:10px 0 40px}
+dl.gloss dt{font-weight:700; margin-top:14px; scroll-margin-top:20px; color:var(--wood)}
+dl.gloss dd{margin:2px 0 0 0; color:var(--soft-ink)}
+dl.gloss dt:target{background:#fdf0dc}
+</style></head>
+<body>
+<main>
+<header class="banner first"><div class="banner-inner"><p class="kicker">CHCCCS031 CHCCCS040</p><h1>Individual Support and Wellbeing Cluster</h1><p class="sub">Your lessons and the glossary for this unit.</p></div><div class="hero-water" aria-hidden="true"><svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg"><rect x="220" y="10" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M226 20 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="270" y="10" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M276 20 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="320" y="10" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M326 20 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="370" y="10" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M376 20 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="420" y="10" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M426 20 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="470" y="10" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M476 20 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="220" y="60" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M226 70 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="270" y="60" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M276 70 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="320" y="60" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M326 70 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="370" y="60" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M376 70 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="420" y="60" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M426 70 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="470" y="60" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M476 70 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="220" y="110" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M226 120 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="270" y="110" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M276 120 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="320" y="110" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M326 120 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="370" y="110" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M376 120 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="420" y="110" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M426 120 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="470" y="110" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M476 120 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="220" y="160" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M226 170 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="270" y="160" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M276 170 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="320" y="160" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M326 170 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="370" y="160" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M376 170 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="420" y="160" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M426 170 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="470" y="160" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M476 170 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="220" y="210" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M226 220 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="270" y="210" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M276 220 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="320" y="210" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M326 220 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="370" y="210" width="46" height="46" rx="6" fill="rgba(255,255,255,0.15000000000000002)" stroke="rgba(255,255,255,.35)"/><path d="M376 220 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="420" y="210" width="46" height="46" rx="6" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,.35)"/><path d="M426 220 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="470" y="210" width="46" height="46" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,.35)"/><path d="M476 220 q10 -6 24 -2" stroke="rgba(255,255,255,.55)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M0 250 q40 -16 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 v60 h-560z" fill="rgba(143,227,232,.35)"/>
+  <path d="M0 268 q40 -14 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 v40 h-560z" fill="rgba(255,255,255,.18)"/>
+  <g class="bub" style="animation-delay:0s"><circle cx="60" cy="230" r="14" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.75)" stroke-width="2"/><path d="M53 227.2 q2.8000000000000003 -7 8.4 -7.700000000000001" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g><g class="bub" style="animation-delay:1.2s"><circle cx="120" cy="250" r="9" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.75)" stroke-width="2"/><path d="M115.5 248.2 q1.8 -4.5 5.3999999999999995 -4.95" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g><g class="bub" style="animation-delay:2.4s"><circle cx="170" cy="240" r="18" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.75)" stroke-width="2"/><path d="M161 236.4 q3.6 -9 10.799999999999999 -9.9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g><g class="bub" style="animation-delay:0.6s"><circle cx="250" cy="260" r="11" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.75)" stroke-width="2"/><path d="M244.5 257.8 q2.2 -5.5 6.6 -6.050000000000001" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g><g class="bub" style="animation-delay:1.8s"><circle cx="330" cy="250" r="15" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.75)" stroke-width="2"/><path d="M322.5 247 q3 -7.5 9 -8.25" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g><g class="bub" style="animation-delay:3s"><circle cx="420" cy="255" r="10" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.75)" stroke-width="2"/><path d="M415 253 q2 -5 6 -5.5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g><g class="bub" style="animation-delay:0.9s"><circle cx="470" cy="245" r="13" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.75)" stroke-width="2"/><path d="M463.5 242.4 q2.6 -6.5 7.8 -7.15" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></g></svg></div></header>
+<nav class="lessonbar" aria-label="Lessons in this unit"><a href="#index" class="on" aria-current="page">&#8962; Lessons</a><a href="1-needs-health-and-wellbeing.html">1 Needs and wellbeing</a><a href="2-seeing-the-whole-person.html">2 The whole person</a><a href="3-services-standards-team-tools.html">3 Services and tools</a><a href="4-moving-people-safely.html">4 Moving people</a><a href="5-personal-care-with-juan.html">5 Personal care</a><a href="6-helping-with-medication.html">6 Medication</a><a href="7-safe-fair-and-lawful.html">7 Safe and lawful</a><a href="8-practical-skills-day.html">8 Practical day</a><a href="#glossary">Glossary</a></nav>
+<div class="wrap">
+  <h2 class="topic" id="index"><span class="num">&#9733;</span> Lessons</h2>
+  <p>Open the lesson your teacher tells you. Each lesson opens in this window. Use the bar at the top of every page to move between lessons.</p>
+  <ul class="lessons">
+  <li class=""><a href="1-needs-health-and-wellbeing.html">Lesson 1: Needs, health and wellbeing</a><span class="np">Nearpod 3</span><details><summary><span class="arr" aria-hidden="true">&#9654;</span> In this lesson (10 sections)</summary><ol><li><a href="1-needs-health-and-wellbeing.html#s1"><span class="num">1</span>Meet Solomon, the person in your case study</a></li><li><a href="1-needs-health-and-wellbeing.html#s2"><span class="num">2</span>Needs and wants: the five categories of human needs</a></li><li><a href="1-needs-health-and-wellbeing.html#s3"><span class="num">3</span>Maslow's hierarchy of needs: self-actualisation</a></li><li><a href="1-needs-health-and-wellbeing.html#s4"><span class="num">4</span>Erikson's stages: how people grow through life</a></li><li><a href="1-needs-health-and-wellbeing.html#s5"><span class="num">5</span>Where is Solomon in life?</a></li><li><a href="1-needs-health-and-wellbeing.html#s6"><span class="num">6</span>Seven categories of wellbeing, and the support you can give</a></li><li><a href="1-needs-health-and-wellbeing.html#s7"><span class="num">7</span>Good health: one strategy for each life domain</a></li><li><a href="1-needs-health-and-wellbeing.html#s8"><span class="num">8</span>How Solomon's life can affect his health</a></li><li><a href="1-needs-health-and-wellbeing.html#s9"><span class="num">9</span>Common mental health conditions and daily life</a></li><li><a href="1-needs-health-and-wellbeing.html#s10"><span class="num">10</span>Risk factors and protective factors</a></li></ol></details></li><li class=""><a href="2-seeing-the-whole-person.html">Lesson 2: Seeing the whole person</a><span class="np">Nearpod 5</span><details><summary><span class="arr" aria-hidden="true">&#9654;</span> In this lesson (7 sections)</summary><ol><li><a href="2-seeing-the-whole-person.html#s1"><span class="num">1</span>Myths and stereotypes</a></li><li><a href="2-seeing-the-whole-person.html#s2"><span class="num">2</span>How community values, attitudes, myths and stereotypes affect a person</a></li><li><a href="2-seeing-the-whole-person.html#s3"><span class="num">3</span>What makes Solomon unique</a></li><li><a href="2-seeing-the-whole-person.html#s4"><span class="num">4</span>How Solomon's differences connect</a></li><li><a href="2-seeing-the-whole-person.html#s5"><span class="num">5</span>Identity, sexuality and sexual expression</a></li><li><a href="2-seeing-the-whole-person.html#s6"><span class="num">6</span>Unmet needs: spot them, write them, say them</a></li><li><a href="2-seeing-the-whole-person.html#s7"><span class="num">7</span>Working WITH Solomon: person-centred, strengths-based, active support</a></li></ol></details></li><li class=""><a href="3-services-standards-team-tools.html">Lesson 3: Services, standards, the team and the tools</a><span class="np">Nearpod 7</span><details><summary><span class="arr" aria-hidden="true">&#9654;</span> In this lesson (9 sections)</summary><ol><li><a href="3-services-standards-team-tools.html#s1"><span class="num">1</span>Service delivery models: how support reaches the person</a></li><li><a href="3-services-standards-team-tools.html#s2"><span class="num">2</span>The standards every aged care service must meet</a></li><li><a href="3-services-standards-team-tools.html#s3"><span class="num">3</span>Who pays? Funding for Solomon</a></li><li><a href="3-services-standards-team-tools.html#s4"><span class="num">4</span>Agencies and networks in your region</a></li><li><a href="3-services-standards-team-tools.html#s5"><span class="num">5</span>Cecilia and Ruth: who is in the team?</a></li><li><a href="3-services-standards-team-tools.html#s6"><span class="num">6</span>How a good team communicates</a></li><li><a href="3-services-standards-team-tools.html#s7"><span class="num">7</span>Assistive technology: the categories</a></li><li><a href="3-services-standards-team-tools.html#s8"><span class="num">8</span>Choosing technology for Solomon</a></li><li><a href="3-services-standards-team-tools.html#s9"><span class="num">9</span>How do you know what equipment to use, and how?</a></li></ol></details></li><li class=""><a href="4-moving-people-safely.html">Lesson 4: Moving people safely</a><span class="np">Nearpod 9</span><details><summary><span class="arr" aria-hidden="true">&#9654;</span> In this lesson (10 sections)</summary><ol><li><a href="4-moving-people-safely.html#s1"><span class="num">1</span>Manual handling: before you move anyone</a></li><li><a href="4-moving-people-safely.html#s2"><span class="num">2</span>Equipment and aids for moving people</a></li><li><a href="4-moving-people-safely.html#s3"><span class="num">3</span>Slide sheets: why, and who pulls which layer</a></li><li><a href="4-moving-people-safely.html#s4"><span class="num">4</span>Helping a person stand up: the 9 instructions</a></li><li><a href="4-moving-people-safely.html#s5"><span class="num">5</span>Bed to wheelchair: set it up, mind the parts that hurt</a></li><li><a href="4-moving-people-safely.html#s6"><span class="num">6</span>Juan and the weight bearing hoist</a></li><li><a href="4-moving-people-safely.html#s7"><span class="num">7</span>Getting into a car</a></li><li><a href="4-moving-people-safely.html#s8"><span class="num">8</span>Bill has fallen: what do you do?</a></li><li><a href="4-moving-people-safely.html#s9"><span class="num">9</span>Mobility aids: follow the plan</a></li><li><a href="4-moving-people-safely.html#s10"><span class="num">10</span>Pressure injuries: how they happen, the stages, and prevention</a></li></ol></details></li><li class=""><a href="5-personal-care-with-juan.html">Lesson 5: Personal care with Juan</a><span class="np">Nearpod 11</span><details><summary><span class="arr" aria-hidden="true">&#9654;</span> In this lesson (14 sections)</summary><ol><li><a href="5-personal-care-with-juan.html#s1"><span class="num">1</span>Juan's morning: getting ready</a></li><li><a href="5-personal-care-with-juan.html#s2"><span class="num">2</span>Helping Juan use the urine bottle</a></li><li><a href="5-personal-care-with-juan.html#s3"><span class="num">3</span>What is normal? Stools and urine</a></li><li><a href="5-personal-care-with-juan.html#s4"><span class="num">4</span>Hand hygiene: every moment this morning</a></li><li><a href="5-personal-care-with-juan.html#s5"><span class="num">5</span>Swallowing safely: dysphagia and IDDSI</a></li><li><a href="5-personal-care-with-juan.html#s6"><span class="num">6</span>A pleasant mealtime, and aids for eating</a></li><li><a href="5-personal-care-with-juan.html#s7"><span class="num">7</span>Setting up so Juan can shave himself</a></li><li><a href="5-personal-care-with-juan.html#s8"><span class="num">8</span>The shower: the help Juan needs, and his privacy</a></li><li><a href="5-personal-care-with-juan.html#s9"><span class="num">9</span>The bed bath</a></li><li><a href="5-personal-care-with-juan.html#s10"><span class="num">10</span>Grooming, and letting Juan choose his clothes</a></li><li><a href="5-personal-care-with-juan.html#s11"><span class="num">11</span>Dentures and the mouth</a></li><li><a href="5-personal-care-with-juan.html#s12"><span class="num">12</span>Reporting the denture problem: write it AND say it</a></li><li><a href="5-personal-care-with-juan.html#s13"><span class="num">13</span>What did Juan do himself?</a></li><li><a href="5-personal-care-with-juan.html#s14"><span class="num">14</span>Leo asks about Juan</a></li></ol></details></li><li class=""><a href="6-helping-with-medication.html">Lesson 6: Helping with medication</a><span class="np">Nearpod 13</span><details><summary><span class="arr" aria-hidden="true">&#9654;</span> In this lesson (8 sections)</summary><ol><li><a href="6-helping-with-medication.html#s1"><span class="num">1</span>Your role, the Rights, and the RIGHT person</a></li><li><a href="6-helping-with-medication.html#s2"><span class="num">2</span>Reading the chart: times and route</a></li><li><a href="6-helping-with-medication.html#s3"><span class="num">3</span>Pain at 10.30: can she have the 12 pm tablets now?</a></li><li><a href="6-helping-with-medication.html#s4"><span class="num">4</span>Checking the blister pack before you open it</a></li><li><a href="6-helping-with-medication.html#s5"><span class="num">5</span>"What is Metformin?" Staying in your scope</a></li><li><a href="6-helping-with-medication.html#s6"><span class="num">6</span>When the person says no</a></li><li><a href="6-helping-with-medication.html#s7"><span class="num">7</span>Jacob's pack: spot the faults</a></li><li><a href="6-helping-with-medication.html#s8"><span class="num">8</span>Jasper cannot swallow: respond, record, report</a></li></ol></details></li><li class=""><a href="7-safe-fair-and-lawful.html">Lesson 7: Safe, fair and lawful</a><span class="np">Nearpod 15</span><details><summary><span class="arr" aria-hidden="true">&#9654;</span> In this lesson (8 sections)</summary><ol><li><a href="7-safe-fair-and-lawful.html#s1"><span class="num">1</span>Abuse: the types and the signs</a></li><li><a href="7-safe-fair-and-lawful.html#s2"><span class="num">2</span>What you do when you see signs</a></li><li><a href="7-safe-fair-and-lawful.html#s3"><span class="num">3</span>Restrictive practices: what they are, and the five types</a></li><li><a href="7-safe-fair-and-lawful.html#s4"><span class="num">4</span>Changed behaviour: positive, proactive support</a></li><li><a href="7-safe-fair-and-lawful.html#s5"><span class="num">5</span>Behaviour support plans: what, how, who</a></li><li><a href="7-safe-fair-and-lawful.html#s6"><span class="num">6</span>Norelle: when a friend does the wrong thing</a></li><li><a href="7-safe-fair-and-lawful.html#s7"><span class="num">7</span>Ten legal and ethical words</a></li><li><a href="7-safe-fair-and-lawful.html#s8"><span class="num">8</span>Risks at work, and how you respond</a></li></ol></details></li><li class=""><a href="8-practical-skills-day.html">Lesson 8: Practical skills day: Ren's Morning Care</a><span class="np">Nearpod 17</span><details><summary><span class="arr" aria-hidden="true">&#9654;</span> In this lesson (10 sections)</summary><ol><li><a href="8-practical-skills-day.html#s1"><span class="num">1</span>Ren's story</a></li><li><a href="8-practical-skills-day.html#s2"><span class="num">2</span>Your team, the golden rules and the equipment</a></li><li><a href="8-practical-skills-day.html#s3"><span class="num">3</span>How the day works</a></li><li><a href="8-practical-skills-day.html#s4"><span class="num">4</span>The timer</a></li><li><a href="8-practical-skills-day.html#s5"><span class="num">5</span>Part 1 PREP and Part 2 WET</a></li><li><a href="8-practical-skills-day.html#s6"><span class="num">6</span>Part 3 GROOM: hair, teeth and shave</a></li><li><a href="8-practical-skills-day.html#s7"><span class="num">7</span>Part 4 MED: both carers give the medication</a></li><li><a href="8-practical-skills-day.html#s8"><span class="num">8</span>Part 4 REPORT: tell the supervisor, then write your own note</a></li><li><a href="8-practical-skills-day.html#s9"><span class="num">9</span>What students often miss</a></li><li><a href="8-practical-skills-day.html#s10"><span class="num">10</span>Your handouts</a></li></ol></details></li>
+  </ul>
+  <p class="policy-links"><b>KAMA Community policies and procedures</b> (from your AT2 assessment): search them and copy the original procedure, word for word.<br><a class="pl-btn" href="kama-policies.html" target="_blank" rel="noopener">&#128203; Open the KAMA policies</a></p>
+  <p class="refhow"><b>How to write a reference:</b> <b>NP4 S5 P1</b> means <b>Nearpod 4, Section 5, Point 1</b>. <b>C</b> means Card: NP4 S4 C2 is Nearpod 4, Section 4, Card 2. The Nearpod number is under each lesson above. The section number is the number in the circle next to each heading on the lesson page.</p>
+  <h2 class="topic" id="glossary"><span class="num">A</span> Glossary: the words in plain English</h2>
+  <p>These are words you will see in the lessons and in your assessment. The lessons link to this list.</p>
+  <dl class="gloss">
+  <dt id="g-adls">ADLs</dt><dd>Activities of daily living: the everyday tasks of looking after yourself, such as showering, dressing, eating and using the toilet.</dd><dt id="g-anxiety">Anxiety</dt><dd>Strong worry or fear that does not go away and makes daily life hard.</dd><dt id="g-assistive-technology">Assistive technology</dt><dd>Any tool, equipment or change that helps a person do something more easily or more safely, from a curved spoon to a hoist or a ramp.</dd><dt id="g-bipolar-disorder">Bipolar disorder</dt><dd>A mental health condition with big mood changes: very high moods (mania) and very low moods (depression).</dd><dt id="g-confidentiality">Confidentiality</dt><dd>Keeping a person's personal information private. You only share it with people who need it for their care, or with the person's permission.</dd><dt id="g-conflict">Conflict</dt><dd>In Erikson's stages, the main challenge a person faces at an age, for example trust or mistrust for a baby.</dd><dt id="g-depression">Depression</dt><dd>Feeling very sad or empty for a long time, and losing interest in things the person used to enjoy.</dd><dt id="g-down-syndrome">Down syndrome</dt><dd>A genetic condition a person is born with. It can affect learning and health. Every person with Down syndrome is different.</dd><dt id="g-dysphagia">Dysphagia</dt><dd>Difficulty swallowing. Food or drink can go into the lungs. A speech pathologist decides the safe food texture and drink thickness.</dd><dt id="g-enduring-power-of-attorney">Enduring Power of Attorney</dt><dd>A legal document. It names a person who can make some decisions for someone if they cannot make them any more.</dd><dt id="g-hemiplegia">Hemiplegia</dt><dd>Weakness or paralysis on one side of the body, often after a stroke.</dd><dt id="g-iddsi">IDDSI</dt><dd>The International Dysphagia Diet Standardisation Initiative: the numbered levels for food textures (3 to 7) and drink thickness (0 to 4).</dd><dt id="g-intellectual-disability">Intellectual disability</dt><dd>A disability that affects how a person learns, understands and solves problems. It can be mild, moderate or severe.</dd><dt id="g-kosher">Kosher</dt><dd>Food that follows Jewish food laws.</dd><dt id="g-life-domain">Life domain</dt><dd>One area of a person's life that affects health, for example exercise, hygiene or food.</dd><dt id="g-mental-health-condition">Mental health condition</dt><dd>An illness that affects how a person thinks, feels and acts, for example depression or anxiety.</dd><dt id="g-modified-foods">Modified foods</dt><dd>Food made softer or smooth so a person with swallowing problems can eat it safely.</dd><dt id="g-ndis">NDIS</dt><dd>The National Disability Insurance Scheme. It funds support for people with disability under 65.</dd><dt id="g-need">Need</dt><dd>Something a person must have to live and be well, for example food, water, safety and love.</dd><dt id="g-network">Network</dt><dd>A group of services, workers and people who share information, resources and ideas, so they can support people better.</dd><dt id="g-occupational-therapist">Occupational therapist</dt><dd>A health professional (OT) who helps people do everyday activities, for example with special equipment or by changing the home.</dd><dt id="g-progress-note">Progress note</dt><dd>A short written record in the person's file of what you saw, did and were told during your shift.</dd><dt id="g-protective-factor">Protective factor</dt><dd>Something in a person's life that helps keep them well, for example family, friends or a strong faith.</dd><dt id="g-psychosocial">Psychosocial</dt><dd>About the mind (psycho) and about people around us (social). Erikson's stages are psychosocial: they are about how we grow inside and with others.</dd><dt id="g-respite">Respite</dt><dd>A short break. For example, the person goes to a respite centre for a day so they can socialise and their carer can rest.</dd><dt id="g-risk-factor">Risk factor</dt><dd>Something in a person's life that makes a problem more likely, for example being alone or losing a loved one.</dd><dt id="g-schizophrenia">Schizophrenia</dt><dd>A mental health condition that changes how a person sees what is real. They may hear voices or believe things that are not true.</dd><dt id="g-self-actualisation">Self-actualisation</dt><dd>The top of Maslow's hierarchy: becoming the best you can be, using your strengths and feeling your life has purpose.</dd><dt id="g-service-delivery-model">Service delivery model</dt><dd>The way a program delivers support to a person, for example Support at Home (help in your own home) or residential aged care.</dd><dt id="g-shabbat">Shabbat</dt><dd>The Jewish day of rest, from Friday sunset to Saturday night.</dd><dt id="g-stroke">Stroke</dt><dd>When blood stops flowing to part of the brain. It can affect movement, speech, swallowing and memory.</dd><dt id="g-synagogue">Synagogue</dt><dd>A Jewish place of worship.</dd><dt id="g-uridome">Uridome</dt><dd>A soft sheath that fits over the penis and drains urine into a bag strapped to the leg.</dd><dt id="g-want">Want</dt><dd>Something a person would like to have, but can live without.</dd><dt id="g-wellbeing">Wellbeing</dt><dd>How well a person is in body, mind and life: feeling healthy, safe, connected and happy with their life.</dd>
+  </dl>
+  <footer class="foot"><p>CHCCCS031 CHCCCS040 Individual Support and Wellbeing Cluster · Built from TAFE Queensland learning resources, 30 Oct 2026.</p></footer>
+</div>
+<a href="#index" class="home"><span aria-hidden="true">&#8679;</span> Home</a>
+</main>
+</body></html>
