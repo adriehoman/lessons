@@ -1,4 +1,284 @@
-<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CHCCCS038 Stefan shift: seat page (coming)</title>
-<style>body{margin:0;font-family:"Segoe UI",Arial,sans-serif;background:linear-gradient(180deg,#0b3d91,#2f80ed 60%,#8fd3ff);color:#fff;min-height:100vh;display:grid;place-items:center;text-align:center;padding:20px}
-.box{background:#14213d;border:4px solid #ffd23f;border-radius:16px;padding:30px 36px;max-width:640px;box-shadow:8px 8px 0 rgba(0,0,0,.3)}h1{font-family:Impact,"Arial Black",sans-serif;font-weight:400;letter-spacing:.04em;text-transform:uppercase;margin:0 0 10px}p{font-size:1.1em}a{color:#ffd23f}</style></head>
-<body><div class="box"><h1>The Stefan shift</h1><p>This is the <b>seat page</b> for the CHCCCS038 simulated shift. It is being built. Your teacher will tell you when it is ready.</p><p><a href="../7-practical-stefan-and-falls.html">Back to the practical day page</a></p></div></body></html>
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CHCCCS038 Facilitate the empowerment of people receiving support: the Stefan shift (your seat)</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--navy:#14213d;--blue:#2f80ed;--yellow:#ffd23f;--red:#d62828;--teal:#11a5a5;--paper:#fffdf5}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Arial,sans-serif;background:linear-gradient(180deg,#0b3d91 0%,#2f80ed 55%,#8fd3ff 100%);min-height:100vh;color:#14213d}
+header{padding:14px 16px 6px;color:#fff}
+header .unit{font-size:.8em;color:var(--yellow);font-weight:700;letter-spacing:.04em}
+header h1{font-family:Impact,"Arial Black","Segoe UI",sans-serif;font-weight:400;letter-spacing:.03em;text-transform:uppercase;margin:2px 0 0;font-size:clamp(1.5em,5vw,2.4em);text-shadow:3px 3px 0 #14213d}
+main{max-width:760px;margin:0 auto;padding:10px 16px 40px}
+.box{background:var(--paper);border:4px solid var(--navy);border-radius:16px;padding:18px 20px;box-shadow:8px 8px 0 rgba(0,0,0,.25);margin:12px 0}
+.box h2{margin:0 0 8px;font-family:Impact,"Arial Black",sans-serif;font-weight:400;letter-spacing:.03em;text-transform:uppercase;color:var(--navy)}
+label{display:block;font-weight:700;margin:10px 0 4px}
+input[type=text]{width:100%;font-size:1.3em;padding:10px 12px;border:3px solid var(--navy);border-radius:10px;font-family:inherit}
+input.code{text-transform:uppercase;letter-spacing:.25em;font-family:Impact,"Arial Black",sans-serif;font-size:1.8em;text-align:center}
+button{font-family:inherit;font-size:1.05em;font-weight:700;padding:12px 18px;border-radius:12px;border:3px solid var(--navy);background:var(--yellow);color:var(--navy);cursor:pointer;box-shadow:4px 4px 0 var(--navy)}
+button:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--navy)}
+button:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+button.big{width:100%;font-size:1.3em;padding:16px}
+button.mic{background:var(--red);color:#fff}
+button.mic.on{background:#2e7d32;animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{box-shadow:4px 4px 0 var(--navy)}50%{box-shadow:4px 4px 0 var(--navy),0 0 0 10px rgba(46,125,50,.25)}}
+.status{font-size:1.15em;font-weight:700;padding:12px 14px;border-radius:12px;background:#e8f1ff;border:2px dashed var(--blue);margin:8px 0}
+.status.wait{background:#fff6d6;border-color:#c98a12}
+.status.go{background:#e4f8e4;border-color:#2e7d32}
+.status.off{background:#fde2e2;border-color:var(--red)}
+.meters{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.meter{flex:1;min-width:120px;background:var(--navy);color:#fff;border-radius:12px;padding:10px 12px;text-align:center}
+.meter b{display:block;font-size:1.8em;font-family:Impact,"Arial Black",sans-serif;font-weight:400;color:var(--yellow)}
+.lines{max-height:46vh;overflow:auto;background:#fff;border:2px solid #b0bec5;border-radius:12px;padding:10px 12px;font-size:1.05em;line-height:1.45}
+.line{margin:6px 0;padding:6px 10px;border-radius:10px}
+.line.you{background:#fff6d6;border-left:5px solid #c98a12}
+.line.them{background:#e8f1ff;border-left:5px solid var(--blue)}
+.line.nar{background:#f1f1f1;color:#555;font-style:italic}
+.line b{color:var(--navy)}
+.heard{min-height:1.4em;color:#555;font-style:italic;margin:6px 0}
+textarea{width:100%;font-size:1.15em;padding:10px 12px;border:3px solid var(--navy);border-radius:10px;font-family:inherit;min-height:80px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:8px 0}
+.small{font-size:.9em;color:#555}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:10px 16px;border-radius:10px;opacity:0;transition:.25s;pointer-events:none;max-width:90vw}
+#toast.show{opacity:1;transform:translateX(-50%)}
+.hidden{display:none !important}
+.mascots{display:flex;justify-content:space-between;align-items:flex-end;margin-top:-6px}
+.mascots svg{width:90px;height:auto}
+footer{color:#fff;text-align:center;font-size:.85em;padding:10px;opacity:.85}
+</style>
+</head>
+<body>
+<header>
+  <div class="unit">CHCCCS038 Facilitate the empowerment of people receiving support</div>
+  <h1>The Stefan shift: your seat</h1>
+</header>
+<main>
+  <section class="box" id="join">
+    <h2>Join the session</h2>
+    <p>Your teacher shows a session code on the screen. Type it here with your first name. Then wait: your teacher unlocks your seat when it is your turn.</p>
+    <label for="code">Session code</label>
+    <input type="text" id="code" class="code" maxlength="6" autocomplete="off" placeholder="CODE">
+    <label for="name">Your first name</label>
+    <input type="text" id="name" maxlength="30" autocomplete="off" placeholder="First name">
+    <div class="row" style="margin-top:14px"><button class="big" id="btnJoin">Join</button></div>
+    <p class="small">This page works in Google Chrome or Microsoft Edge. Allow the microphone when the browser asks. You can also type what you want to say.</p>
+  </section>
+
+  <section class="box hidden" id="room">
+    <h2 id="roomTitle">Waiting for your turn</h2>
+    <div class="status wait" id="status">Your teacher will unlock your seat when it is your turn.</div>
+    <div class="meters hidden" id="meters">
+      <div class="meter">Part <b id="mPart">A</b></div>
+      <div class="meter">Time left <b id="mTime">10:00</b></div>
+      <div class="meter">Tries left <b id="mTries">12</b></div>
+    </div>
+    <div id="talk" class="hidden">
+      <div class="row">
+        <button class="mic" id="btnMic">🎤 Hold to speak</button>
+        <span class="small">Hold the button, speak clearly, let go. Check the words, then press Send.</span>
+      </div>
+      <div class="heard" id="heard"></div>
+      <textarea id="text" placeholder="What do you say? (or use the microphone)"></textarea>
+      <div class="row">
+        <button class="big" id="btnSend">Send</button>
+      </div>
+      <p class="small">What you send is read out loud on the big screen. Stefan, Maya and Derk answer there too. Everyone hears it, like in the real room.</p>
+    </div>
+    <h3 style="margin:14px 0 6px">What has been said</h3>
+    <div class="lines" id="lines"><div class="line nar">Nothing yet.</div></div>
+    <div class="row" style="margin-top:12px"><button id="btnLeave" style="background:#fff">Leave the session</button></div>
+  </section>
+</main>
+<footer>A3 Homan Intelligence Systems. Students hear "simulated shift". No names are sent to the AI.</footer>
+<script>
+const FIREBASE = { projectId: "a3-lessons-live", databaseURL: "https://a3-lessons-live-default-rtdb.asia-southeast1.firebasedatabase.app" };
+const MADE = "2026-11-02";
+const SCENARIO = {"title":"Stefan, Maya and Derk at Forever Young","unit":"CHCCCS038","characters":{"stefan":{"name":"Stefan","role":"Resident"},"maya":{"name":"Maya","role":"Daughter"},"derk":{"name":"Derk","role":"Organisation manager"}},"parts":{"A":25,"B":4},"timing":{"meetingMinutes":10,"managerMinutes":5}};
+/* Shared by stage.html and seat.html (inlined by _build/build-ai-shift.js). */
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const LS = {
+  get(k, d) { try { const v = localStorage.getItem('shift_' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem('shift_' + k, JSON.stringify(v)); } catch (e) {} },
+  del(k) { try { localStorage.removeItem('shift_' + k); } catch (e) {} }
+};
+function rid(n) { const c = 'abcdefghjkmnpqrstuvwxyz23456789'; const a = new Uint8Array(n); crypto.getRandomValues(a); return Array.from(a, x => c[x % c.length]).join(''); }
+function mmss(ms) { ms = Math.max(0, ms); const m = Math.floor(ms / 60000), s = Math.floor(ms / 1000) % 60; return m + ':' + (s < 10 ? '0' : '') + s; }
+function cleanCode(s) { return String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6); }
+function toast(msg, ms) { let t = $('toast'); if (!t) { t = document.createElement('div'); t.id = 'toast'; document.body.appendChild(t); } t.textContent = msg; t.classList.add('show'); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('show'), ms || 3200); }
+
+/* ---------- Firebase Realtime Database (the same project as the Presenting view) ---------- */
+const SDK = 'https://www.gstatic.com/firebasejs/10.12.2/';
+let DB = null;
+function loadScript(src) { return new Promise((ok, bad) => { const s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = () => bad(new Error('Could not load ' + src)); document.head.appendChild(s); }); }
+async function dbReady() {
+  if (DB) return DB;
+  await loadScript(SDK + 'firebase-app-compat.js'); await loadScript(SDK + 'firebase-database-compat.js');
+  const app = firebase.apps.length ? firebase.app() : firebase.initializeApp(FIREBASE);
+  const db = firebase.database(app);
+  DB = {
+    ref: p => db.ref(p),
+    get: async p => (await db.ref(p).get()).val(),
+    set: (p, v) => db.ref(p).set(v),
+    update: (p, v) => db.ref(p).update(v),
+    push: (p, v) => db.ref(p).push(v),
+    watch: (p, cb) => { const r = db.ref(p); const h = r.on('value', s => cb(s.val())); return () => r.off('value', h); },
+    onChild: (p, cb) => { const r = db.ref(p); const h = r.on('child_added', s => cb(s.key, s.val())); return () => r.off('child_added', h); },
+    now: () => firebase.database.ServerValue.TIMESTAMP
+  };
+  return DB;
+}
+const ROOT = 'shift/';           /* database rule: shift/$code is read and write for everyone (see README) */
+
+/* ---------- Speech out (the browser's own voices; Microsoft Edge has Natasha and William) ---------- */
+let VOICES = [];
+function refreshVoices() { VOICES = (window.speechSynthesis ? speechSynthesis.getVoices() : []) || []; }
+if (window.speechSynthesis) { refreshVoices(); speechSynthesis.onvoiceschanged = refreshVoices; }
+const FEM = /natasha|catherine|hayley|female|karen|zira|jenny|libby|sonia|mia|aria|samantha|kate|annie|clara|emily/i;
+const MAL = /william|james|male|daniel|ryan|guy|thomas|george|neil|richard|mark|david|liam|duncan/i;
+function voiceByName(name) { return VOICES.find(v => v.name === name) || null; }
+function autoVoice(gender, avoid) {
+  avoid = avoid || [];
+  const ok = v => !avoid.includes(v.name) && (gender === 'female' ? (FEM.test(v.name) && !MAL.test(v.name)) : (MAL.test(v.name) && !FEM.test(v.name)));
+  const au = VOICES.filter(v => /en[-_]AU/i.test(v.lang)), en = VOICES.filter(v => /^en/i.test(v.lang));
+  return au.find(ok) || en.find(ok) || au.find(v => !avoid.includes(v.name)) || en[0] || VOICES[0] || null;
+}
+let speakQueue = [], speaking = false, speakToken = 0, onSpeakState = null;
+function speak(text, voice, opts) {
+  opts = opts || {};
+  return new Promise(resolve => {
+    if (!window.speechSynthesis || !text) return resolve();
+    speakQueue.push({ text: String(text), voice, rate: opts.rate || 1, pitch: opts.pitch || 1, who: opts.who || '', resolve });
+    pump();
+  });
+}
+function pump() {
+  if (speaking || !speakQueue.length) return;
+  const it = speakQueue.shift(); speaking = true;
+  const u = new SpeechSynthesisUtterance(it.text);
+  if (it.voice) u.voice = it.voice; u.rate = it.rate; u.pitch = it.pitch; u.lang = (it.voice && it.voice.lang) || 'en-AU';
+  const tok = ++speakToken; let done = false;
+  const finish = () => { if (done) return; done = true; clearTimeout(guard); speaking = false; if (onSpeakState) onSpeakState(''); it.resolve(); pump(); };
+  u.onstart = () => { if (onSpeakState) onSpeakState(it.who); };
+  u.onend = finish; u.onerror = finish;
+  const words = it.text.split(/\s+/).length;
+  const guard = setTimeout(finish, words * 520 / it.rate + 3000);     /* browsers sometimes never say "end" */
+  try { speechSynthesis.speak(u); } catch (e) { finish(); }
+}
+function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = []; try { speechSynthesis.cancel(); } catch (e) {} speaking = false; if (onSpeakState) onSpeakState(''); }
+
+(function () {
+  'use strict';
+  const SEAT = LS.get('seatId') || (function () { const s = rid(10); LS.set('seatId', s); return s; })();
+  let code = '', name = '', session = null, unwatch = null, lastLines = '', timer = null, sending = false;
+  let recog = null, listening = false, interim = '';
+
+  function partLabel(p) { return p === 'B' ? 'B: report to Derk' : 'A: the meeting'; }
+  function render() {
+    const s = session;
+    const meters = $('meters'), talk = $('talk'), st = $('status');
+    if (!s || !s.open || (s.expires && Date.now() > s.expires)) {
+      st.className = 'status off'; st.textContent = 'The session is closed. Ask your teacher.';
+      meters.classList.add('hidden'); talk.classList.add('hidden'); $('roomTitle').textContent = 'Session closed'; stopListening(); return;
+    }
+    const mine = s.seat === SEAT;
+    const turn = s.turn || {};
+    const timeLeft = turn.deadline ? turn.deadline - Date.now() : 0;
+    const over = mine && (turn.tries <= 0 || timeLeft <= 0);
+    if (mine && !over) {
+      $('roomTitle').textContent = 'Your turn, ' + name;
+      st.className = 'status go';
+      st.textContent = s.busy ? 'Wait: the people in the room are answering...' : (turn.phase === 'B' ? 'You are with Derk, the manager. Report what happened.' : 'You are with Stefan and Maya. What do you say?');
+      meters.classList.remove('hidden'); talk.classList.remove('hidden');
+      $('mPart').textContent = turn.phase || 'A'; $('mTime').textContent = mmss(timeLeft); $('mTries').textContent = String(turn.tries == null ? '' : turn.tries);
+      const can = !s.busy && !sending;
+      $('btnSend').disabled = !can; $('btnMic').disabled = !can;
+    } else if (mine && over) {
+      $('roomTitle').textContent = 'Your turn has finished';
+      st.className = 'status wait'; st.textContent = 'Well done. Your teacher will talk about it now.';
+      meters.classList.add('hidden'); talk.classList.add('hidden'); stopListening();
+    } else {
+      $('roomTitle').textContent = 'Waiting for your turn';
+      st.className = 'status wait';
+      st.textContent = s.seatName ? ('It is ' + s.seatName + "'s turn now. Follow along on the big screen.") : 'Your teacher will unlock your seat when it is your turn.';
+      meters.classList.add('hidden'); talk.classList.add('hidden'); stopListening();
+    }
+    const lines = Array.isArray(s.lines) ? s.lines : Object.values(s.lines || {});
+    const key = JSON.stringify(lines.slice(-40));
+    if (key !== lastLines) {
+      lastLines = key;
+      const box = $('lines');
+      box.innerHTML = lines.length ? lines.slice(-40).map(l => {
+        const cls = l.who === 'student' ? 'you' : (l.who === 'narrator' ? 'nar' : 'them');
+        const who = l.who === 'student' ? (l.name || 'Support worker') : (l.who === 'narrator' ? '' : l.who);
+        return '<div class="line ' + cls + '">' + (who ? '<b>' + esc(who) + ':</b> ' : '') + esc(l.text) + '</div>';
+      }).join('') : '<div class="line nar">Nothing yet.</div>';
+      box.scrollTop = box.scrollHeight;
+    }
+  }
+
+  async function join() {
+    code = cleanCode($('code').value); name = $('name').value.trim().slice(0, 30);
+    if (code.length < 4) return toast('Type the session code from the screen.');
+    if (!name) return toast('Type your first name.');
+    $('btnJoin').disabled = true;
+    try {
+      const db = await dbReady();
+      const s = await db.get(ROOT + code + '/session');
+      if (!s || !s.open) { toast('No open session has that code. Check the screen.'); $('btnJoin').disabled = false; return; }
+      await db.set(ROOT + code + '/seats/' + SEAT, { name, at: db.now(), ua: (navigator.userAgent || '').slice(0, 60) });
+      LS.set('lastCode', code); LS.set('lastName', name);
+      $('join').classList.add('hidden'); $('room').classList.remove('hidden');
+      if (unwatch) unwatch();
+      unwatch = db.watch(ROOT + code + '/session', v => { session = v; render(); });
+      clearInterval(timer); timer = setInterval(render, 1000);
+    } catch (e) { toast('Could not join: ' + e.message); $('btnJoin').disabled = false; }
+  }
+  async function send() {
+    const text = $('text').value.trim();
+    if (!text) return toast('Say or type something first.');
+    if (!session || session.seat !== SEAT) return toast('It is not your turn.');
+    if (text.length > 600) return toast('Keep it shorter: one or two sentences.');
+    sending = true; render();
+    try {
+      const db = await dbReady();
+      await db.push(ROOT + code + '/say/' + SEAT, { text, t: db.now(), n: (session.turn && session.turn.n) || 0 });
+      $('text').value = ''; $('heard').textContent = '';
+    } catch (e) { toast('Could not send: ' + e.message); }
+    sending = false; render();
+  }
+  /* microphone: hold the button */
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  function startListening() {
+    if (!SR) return toast('This browser has no microphone input. Type instead, or use Chrome or Edge.');
+    if (listening) return;
+    recog = new SR(); recog.lang = 'en-AU'; recog.interimResults = true; recog.continuous = true; interim = '';
+    recog.onresult = ev => {
+      let fin = '', tmp = '';
+      for (let i = 0; i < ev.results.length; i++) { const r = ev.results[i]; if (r.isFinal) fin += r[0].transcript + ' '; else tmp += r[0].transcript; }
+      interim = fin; $('heard').textContent = (fin + tmp).trim() || 'Listening...';
+    };
+    recog.onerror = e => { if (e.error !== 'no-speech') toast('Microphone: ' + e.error); };
+    recog.onend = () => { listening = false; $('btnMic').classList.remove('on'); $('btnMic').textContent = '🎤 Hold to speak'; const heard = $('heard').textContent.replace(/^Listening\.\.\.$/, '').trim(); if (heard) { $('text').value = ($('text').value ? $('text').value + ' ' : '') + heard; } $('heard').textContent = ''; };
+    try { recog.start(); listening = true; $('btnMic').classList.add('on'); $('btnMic').textContent = '🎤 Listening... let go when done'; $('heard').textContent = 'Listening...'; } catch (e) { toast('Microphone: ' + e.message); }
+  }
+  function stopListening() { if (recog && listening) { try { recog.stop(); } catch (e) {} } }
+  const mic = $('btnMic');
+  mic.addEventListener('pointerdown', e => { e.preventDefault(); startListening(); });
+  ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev => mic.addEventListener(ev, stopListening));
+  mic.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); listening ? stopListening() : startListening(); } });
+  $('btnSend').onclick = send;
+  $('text').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } });
+  $('btnJoin').onclick = join;
+  $('code').addEventListener('keydown', e => { if (e.key === 'Enter') $('name').focus(); });
+  $('name').addEventListener('keydown', e => { if (e.key === 'Enter') join(); });
+  $('btnLeave').onclick = () => { if (unwatch) unwatch(); clearInterval(timer); stopListening(); $('room').classList.add('hidden'); $('join').classList.remove('hidden'); $('btnJoin').disabled = false; };
+  $('code').value = cleanCode(LS.get('lastCode', '')); $('name').value = LS.get('lastName', '');
+  const q = new URLSearchParams(location.search).get('code'); if (q) $('code').value = cleanCode(q);
+})();
+</script>
+</body>
+</html>
