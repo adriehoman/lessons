@@ -66,6 +66,11 @@ button.tiny{font-size:.72em;padding:2px 8px;box-shadow:2px 2px 0 var(--navy);bor
 .groups{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0}
 .groups button{font-size:.78em;padding:4px 8px;box-shadow:2px 2px 0 var(--navy);border-width:2px;background:#fff}
 .groups button.ok{background:#e4f8e4;border-color:#2e7d32}
+.groups button .cnt{font-weight:400;opacity:.75;font-size:.9em}
+.groups button.always{border-style:dashed}
+.groups button.next{background:var(--yellow);border-color:var(--red);animation:nextpulse 1.4s infinite}
+@keyframes nextpulse{0%,100%{box-shadow:2px 2px 0 var(--navy)}50%{box-shadow:2px 2px 0 var(--navy),0 0 0 6px rgba(214,40,40,.3)}}
+#nextHint{margin:2px 0 4px;min-height:1.2em}
 .groups button.empty{opacity:.55}
 .prep{margin:8px 0;padding:8px 10px;border:2px solid #b0bec5;border-radius:10px;background:#fff}
 .prep b{display:block}
@@ -144,6 +149,7 @@ footer{color:#fff;text-align:center;font-size:.85em;padding:10px;opacity:.85}
           </div>
           <div class="heard" id="heard"></div>
           <div class="groups" id="groups"></div>
+          <div class="small" id="nextHint"></div>
           <div class="prepview hidden" id="prepView">
             <div class="pvhead"><b>My prepared words</b> <span class="small">(not sent: read them out loud, or press Copy)</span>
               <button type="button" class="tiny" id="btnCopyPrep">Copy into my box</button><button type="button" class="tiny" id="btnHidePrep">Hide</button></div>
@@ -290,7 +296,7 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
     const turn = s.turn || {};
     const timeLeft = turn.deadline ? turn.deadline - Date.now() : 0;
     const over = mine && (turn.tries <= 0 || timeLeft <= 0);
-    renderCrit(mine, s.crit);
+    renderCrit(mine, s.crit); renderGroups(mine ? s.crit : []);
     $('myDone').classList.toggle('hidden', !done);
     if (mine && !over) {
       $('roomTitle').textContent = 'Your turn, ' + name;
@@ -390,9 +396,10 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
 
   /* ---------- my preparation: saved on this laptop (localStorage), never sent until the student presses Send ---------- */
   const GROUPS = SCENARIO.groups || [];
+  const gname = g => (GROUPS.indexOf(g) + 1) + '. ' + g.title;
   const PREP = LS.get('prep', {});
   function renderPrep() {
-    $('prepForm').innerHTML = GROUPS.map(g => '<div class="prep"><b>' + esc(g.title) + ' <span class="small">(points ' + esc(g.ids.join(', ')) + ')</span></b>' +
+    $('prepForm').innerHTML = GROUPS.map(g => '<div class="prep"><b>' + esc(gname(g)) + ' <span class="small">(points ' + esc(g.ids.join(', ')) + ')</span></b>' +
       '<p class="small">' + esc(g.plan) + '</p>' +
       '<ul class="ask">' + (g.ask || []).map(q => '<li>' + esc(q) + '</li>').join('') + '</ul>' +
       '<div class="starters"><span class="small">Start with:</span> ' + (g.starters || []).map((t, i) => '<button type="button" class="st" data-g="' + g.id + '" data-i="' + i + '">' + esc(t) + '</button>').join('') + '</div>' +
@@ -414,11 +421,31 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
   $('btnHidePrep').onclick = () => $('prepView').classList.add('hidden');
   $('btnCopyPrep').onclick = () => { const t = $('prepText').textContent.trim(); if (!t) return; $('text').value = ($('text').value.trim() ? $('text').value.trim() + ' ' : '') + t; $('text').focus(); };
   let groupsKey = '';
+  /* Which group to use next. Groups 2 and 3 are skills for the whole meeting; 1, 4, 5, 6 and 7 come roughly in that order.
+     Part B is always group 8. Near the end of Part A, if the closing is not done yet, group 7 lights up. Uses only the ticks: no AI cost. */
+  function nextGroup(set) {
+    const s = session || {}, t = s.turn || {};
+    if (!s.seat || s.seat !== SEAT) return null;
+    const done = g => g.ids.every(i => set.has(i)), any = g => g.ids.some(i => set.has(i));
+    const byId = id => GROUPS.find(g => g.id === id);
+    if (t.phase === 'B') return done(byId('g8')) ? null : { id: 'g8', why: 'Now: report to Derk' };
+    const left = t.deadline ? t.deadline - Date.now() : 1e9;
+    if (!done(byId('g7')) && (left < 180000 || (t.tries != null && t.tries <= 3))) return { id: 'g7', why: 'Time to close the meeting' };
+    const seq = ['g1', 'g4', 'g5', 'g6', 'g7'].map(byId);
+    let far = 0; seq.forEach((g, i) => { if (any(g)) far = i; });
+    for (let i = far; i < seq.length; i++) if (!done(seq[i])) return { id: seq[i].id, why: 'Next' };
+    return null;
+  }
   function renderGroups(ids) {
-    const k = JSON.stringify([ids || [], PREP]); if (k === groupsKey) return; groupsKey = k;
-    const set = new Set(ids || []);
-    $('groups').innerHTML = GROUPS.map(g => { const txt = (PREP[g.id] || '').trim(); const ok = g.ids.every(i => set.has(i)); return '<button type="button" data-g="' + g.id + '" class="' + (ok ? 'ok ' : '') + (txt ? '' : 'empty') + '" title="' + esc(txt || 'Nothing prepared for this group yet') + '">' + (ok ? '✔ ' : '') + esc(g.title) + '</button>'; }).join('');
-    $('groups').querySelectorAll('button').forEach(b => b.onclick = () => { const txt = (PREP[b.dataset.g] || '').trim(); const g = GROUPS.find(x => x.id === b.dataset.g); showPrep(txt || ((g.starters || []).join('\n')), g.title + (txt ? '' : ' (sentence starters: nothing prepared yet)')); });
+    const set = new Set(ids || []), nx = nextGroup(set);
+    const k = JSON.stringify([ids || [], PREP, nx]); if (k === groupsKey) return; groupsKey = k;
+    $('groups').innerHTML = GROUPS.map(g => {
+      const txt = (PREP[g.id] || '').trim(), have = g.ids.filter(i => set.has(i)).length, ok = have === g.ids.length;
+      const cls = (ok ? 'ok ' : '') + (txt ? '' : 'empty ') + (nx && nx.id === g.id ? 'next' : '') + (['g2', 'g3'].includes(g.id) && !ok ? ' always' : '');
+      return '<button type="button" data-g="' + g.id + '" class="' + cls + '" title="' + esc(txt || 'Nothing prepared for this group yet') + '">' + (ok ? '✔ ' : '') + esc(gname(g)) + ' <span class="cnt">' + have + '/' + g.ids.length + '</span></button>';
+    }).join('');
+    $('nextHint').innerHTML = nx ? '<b>' + esc(nx.why) + ':</b> ' + esc(gname(GROUPS.find(g => g.id === nx.id))) + '. Groups 2 and 3 are for the whole meeting.' : (set.size ? 'Groups 2 and 3 are for the whole meeting.' : '');
+    $('groups').querySelectorAll('button').forEach(b => b.onclick = () => { const txt = (PREP[b.dataset.g] || '').trim(); const g = GROUPS.find(x => x.id === b.dataset.g); showPrep(txt || ((g.starters || []).join('\n')), gname(g) + (txt ? '' : ' (sentence starters: nothing prepared yet)')); });
   }
 
   /* ---------- check my preparation: sent to the teacher's stage page, which asks the AI and answers this seat only ---------- */
@@ -427,7 +454,7 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
   async function askCheck() {
     const c = cleanCode($('code').value);
     if (c.length < 4) { toast('Type the session code in the box at the top first.'); $('code').focus(); return; }
-    const empty = GROUPS.filter(g => !(PREP[g.id] || '').trim()).map(g => g.title);
+    const empty = GROUPS.filter(g => !(PREP[g.id] || '').trim()).map(gname);
     if (empty.length === GROUPS.length) return toast('Write your preparation first.');
     $('btnCheck').disabled = true;
     $('checkOut').innerHTML = '<div class="status wait">Checking... this takes about 20 seconds.' + (empty.length ? ' Nothing written yet for: ' + esc(empty.join(', ')) + '.' : '') + '</div>';
@@ -453,7 +480,7 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
     document.querySelectorAll('.prep').forEach((el, i) => { el.classList.remove('good', 'partly', 'missing'); const g = (r.groups || [])[i]; if (g) el.classList.add(g.status); });
     $('checkOut').innerHTML = '<div class="status go">' + esc(r.overall || 'Here is your check.') + (v.left != null ? ' Checks left: ' + v.left + '.' : '') + '</div>' +
       (r.groups || []).map(g => { const G = GROUPS.find(x => x.id === g.id) || { title: g.id };
-        return '<div class="chk ' + g.status + '"><b>' + label[g.status] + ': ' + esc(G.title) + '</b>' +
+        return '<div class="chk ' + g.status + '"><b>' + label[g.status] + ': ' + esc(G.title ? gname(G) : g.id) + '</b>' +
           (g.missing && g.missing.length ? '<div class="small">Still to cover: ' + g.missing.map(id => esc(short(id))).join('; ') + '</div>' : '') +
           (g.tip ? '<div>' + esc(g.tip) + '</div>' : '') + (g.example ? '<div class="ex">For example: "' + esc(g.example) + '"</div>' : '') + '</div>'; }).join('') +
       '<p class="small">Change your preparation above, then check again if you have checks left. The coloured edges show each group.</p>';
