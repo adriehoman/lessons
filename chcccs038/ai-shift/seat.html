@@ -45,6 +45,12 @@ textarea{width:100%;font-size:1.15em;padding:10px 12px;border:3px solid var(--na
 #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:10px 16px;border-radius:10px;opacity:0;transition:.25s;pointer-events:none;max-width:90vw}
 #toast.show{opacity:1;transform:translateX(-50%)}
 .hidden{display:none !important}
+.crit{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.crit .c{padding:4px 9px;border-radius:8px;border:2px solid #b0bec5;background:#fff;font-size:.9em}
+.crit .c.ok{background:#e4f8e4;border-color:#2e7d32;font-weight:700}
+.crit .c.part{width:100%;background:none;border:0;font-weight:700;color:#fff;padding:4px 0 0;font-family:Impact,"Arial Black",sans-serif;font-weight:400;letter-spacing:.03em}
+.critbox{background:#fffdf5;border:3px solid var(--navy);border-radius:12px;padding:8px 12px;margin:10px 0}
+.critbox .crit .c.part{color:var(--navy)}
 .mascots{display:flex;justify-content:space-between;align-items:flex-end;margin-top:-6px}
 .mascots svg{width:90px;height:auto}
 footer{color:#fff;text-align:center;font-size:.85em;padding:10px;opacity:.85}
@@ -83,10 +89,17 @@ footer{color:#fff;text-align:center;font-size:.85em;padding:10px;opacity:.85}
       <div class="heard" id="heard"></div>
       <textarea id="text" placeholder="What do you say? (or use the microphone)"></textarea>
       <div class="row">
-        <button class="big" id="btnSend">Send</button>
+        <button class="big" id="btnSend" style="width:auto;flex:1">Send</button>
+        <button id="btnAgain" style="background:#fff">Say that again</button>
       </div>
       <p class="small">What you send is read out loud on the big screen. Stefan, Maya and Derk answer there too. Everyone hears it, like in the real room.</p>
     </div>
+    <div class="critbox">
+      <b id="critTitle">The checklist for this shift</b> <span class="small" id="critCount"></span>
+      <div class="crit" id="crit"></div>
+      <p class="small" id="critNote">These are the things the assessor looks for. Prepare with the <a id="prepLink" href="../media/CHCCCS038_Stefan_shift_preparation_notes.docx" target="_blank">preparation notes (Word)</a>. During your turn, the ones you have shown turn green.</p>
+    </div>
+    <div class="row hidden" id="myDone"><button class="big" id="btnMyScript">Download my script and checklist (Word)</button></div>
     <h3 style="margin:14px 0 6px">What has been said</h3>
     <div class="lines" id="lines"><div class="line nar">Nothing yet.</div></div>
     <div class="row" style="margin-top:12px"><button id="btnLeave" style="background:#fff">Leave the session</button></div>
@@ -95,8 +108,8 @@ footer{color:#fff;text-align:center;font-size:.85em;padding:10px;opacity:.85}
 <footer>A3 Homan Intelligence Systems. Students hear "simulated shift". No names are sent to the AI.</footer>
 <script>
 const FIREBASE = { projectId: "a3-lessons-live", databaseURL: "https://a3-lessons-live-default-rtdb.asia-southeast1.firebasedatabase.app" };
-const MADE = "2026-11-02";
-const SCENARIO = {"title":"Stefan, Maya and Derk at Forever Young","unit":"CHCCCS038","characters":{"stefan":{"name":"Stefan","role":"Resident"},"maya":{"name":"Maya","role":"Daughter"},"derk":{"name":"Derk","role":"Organisation manager"}},"parts":{"A":25,"B":4},"timing":{"meetingMinutes":10,"managerMinutes":5}};
+const MADE = "2026-11-03";
+const SCENARIO = {"title":"Stefan, Maya and Derk at Forever Young","unit":"CHCCCS038","characters":{"stefan":{"name":"Stefan","role":"Resident"},"maya":{"name":"Maya","role":"Daughter"},"derk":{"name":"Derk","role":"Organisation manager"}},"criteria":[{"id":"1","part":"A","text":"Introduced self and confirmed purpose of meeting"},{"id":"2","part":"A","text":"Consulted the person: environment suitable, comfortable to speak freely, location and cultural requirements"},{"id":"3a","part":"A","text":"Active listening"},{"id":"3b","part":"A","text":"Curious questioning"},{"id":"3c","part":"A","text":"Empathy"},{"id":"3d","part":"A","text":"Appropriate terminology"},{"id":"3e","part":"A","text":"Open and closed questions"},{"id":"3f","part":"A","text":"Supported the use of assistive devices"},{"id":"4","part":"A","text":"Empowering environment: collaboration, consideration, constructive feedback, respect"},{"id":"5","part":"A","text":"Identified barriers to communication and empowerment; flexible person-centred strategies"},{"id":"6","part":"A","text":"Identified indicators of abuse, neglect and breaches of human rights"},{"id":"7","part":"A","text":"Calmly and sensitively asked a range of open and closed questions"},{"id":"8","part":"A","text":"Helped the person and family identify and understand breaches of rights and signs of abuse; provided information"},{"id":"9","part":"A","text":"Options: internal complaints pathway, external agencies, advocacy"},{"id":"10a","part":"A","text":"Closing: comfortable with the information discussed"},{"id":"10b","part":"A","text":"Closing: confident about the complaints pathway and how to contact advocacy"},{"id":"10c","part":"A","text":"Closing: aware staff can provide further assistance"},{"id":"10d","part":"A","text":"Closing: satisfied the conversation changed to address an unmet need"},{"id":"10e","part":"A","text":"Closing: no longer wanting major changes to the plan"},{"id":"11","part":"A","text":"Explained privacy, confidentiality, disclosure, the duty to report, and how confidentiality is kept"},{"id":"12a","part":"A","text":"Flexibility and adaptability"},{"id":"12b","part":"A","text":"Person-centred practices"},{"id":"12c","part":"A","text":"Strength-based approach"},{"id":"12d","part":"A","text":"Rights-based approach"},{"id":"12e","part":"A","text":"Informed choice"},{"id":"13","part":"B","text":"Professional, non-judgemental manner"},{"id":"14","part":"B","text":"Objective facts from the meeting"},{"id":"15a","part":"B","text":"Relayed a breach of human rights"},{"id":"15b","part":"B","text":"Relayed signs of abuse or neglect"}],"timing":{"meetingMinutes":10,"managerMinutes":5}};
 /* Shared by stage.html and seat.html (inlined by _build/build-ai-shift.js). */
 const $ = id => document.getElementById(id);
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -176,6 +189,24 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
   let code = '', name = '', session = null, unwatch = null, lastLines = '', timer = null, sending = false;
   let recog = null, listening = false, interim = '';
 
+  let done = null, unwatchDone = null;
+  function renderCrit(mine, ids) {
+    const set = new Set(ids || []); let part = '';
+    $('crit').innerHTML = SCENARIO.criteria.map(c => (c.part !== part ? ((part = c.part), '<span class="c part">Part ' + c.part + (c.part === 'A' ? ': the meeting' : ': report to the manager') + '</span>') : '') + '<span class="c' + (mine && set.has(c.id) ? ' ok' : '') + '">' + (mine && set.has(c.id) ? '✔ ' : '') + esc(c.id + ' ' + c.text) + '</span>').join('');
+    $('critCount').textContent = mine ? set.size + ' of ' + SCENARIO.criteria.length + ' shown so far' : SCENARIO.criteria.length + ' points';
+    $('critTitle').textContent = mine ? 'Your checklist: how you are doing' : 'The checklist for this shift';
+  }
+  function myScriptDoc() {
+    const d = done; const set = new Set(d.crit || []);
+    const lines = Array.isArray(d.lines) ? d.lines : Object.values(d.lines || {});
+    const row = c => '<tr><td>' + esc(c.id + ' ' + c.text) + '</td><td style="text-align:center">' + (set.has(c.id) ? 'Yes' : '') + '</td><td></td></tr>';
+    return '<html><head><meta charset="utf-8"><title>My Stefan shift</title></head><body style="font-family:Calibri,Arial;font-size:11pt">' +
+      '<h1>CHCCCS038 simulated shift: ' + esc(d.name || name) + '</h1><p>' + new Date(d.at || Date.now()).toLocaleString('en-AU') + '. Shown: ' + set.size + ' of ' + SCENARIO.criteria.length + ' checklist points. This is your practice record, not the assessment result.</p>' +
+      '<h2>Still to practise</h2><ul>' + (SCENARIO.criteria.filter(c => !set.has(c.id)).map(c => '<li>' + esc(c.id + ' ' + c.text) + '</li>').join('') || '<li>Nothing: every point was shown.</li>') + '</ul>' +
+      '<h2>Checklist</h2><table border="1" cellpadding="4" style="border-collapse:collapse;width:100%"><tr><th>Point</th><th>Shown</th><th>My note: what I will do next time</th></tr>' + SCENARIO.criteria.map(row).join('') + '</table>' +
+      '<h2>What was said</h2>' + lines.map(l => '<p><b>' + esc(l.who === 'student' ? (l.name || 'Me') : l.who === 'narrator' ? 'Narrator' : l.who) + ':</b> ' + esc(l.text) + '</p>').join('') + '</body></html>';
+  }
+  function download(fname, html) { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['\ufeff' + html], { type: 'application/msword' })); a.download = fname; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); }
   function partLabel(p) { return p === 'B' ? 'B: report to Derk' : 'A: the meeting'; }
   function render() {
     const s = session;
@@ -188,6 +219,8 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
     const turn = s.turn || {};
     const timeLeft = turn.deadline ? turn.deadline - Date.now() : 0;
     const over = mine && (turn.tries <= 0 || timeLeft <= 0);
+    renderCrit(mine, s.crit);
+    $('myDone').classList.toggle('hidden', !done);
     if (mine && !over) {
       $('roomTitle').textContent = 'Your turn, ' + name;
       st.className = 'status go';
@@ -234,6 +267,8 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
       $('join').classList.add('hidden'); $('room').classList.remove('hidden');
       if (unwatch) unwatch();
       unwatch = db.watch(ROOT + code + '/session', v => { session = v; render(); });
+      if (unwatchDone) unwatchDone();
+      unwatchDone = db.watch(ROOT + code + '/done/' + SEAT, v => { done = v; $('myDone').classList.toggle('hidden', !done); });
       clearInterval(timer); timer = setInterval(render, 1000);
     } catch (e) { toast('Could not join: ' + e.message); $('btnJoin').disabled = false; }
   }
@@ -271,11 +306,14 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
   ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev => mic.addEventListener(ev, stopListening));
   mic.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); listening ? stopListening() : startListening(); } });
   $('btnSend').onclick = send;
+  $('btnMyScript').onclick = () => { if (done) download('My_Stefan_shift_' + (name || 'student') + '.doc', myScriptDoc()); };
+  $('btnAgain').onclick = () => { $('text').value = ''; $('heard').textContent = ''; $('text').focus(); };
   $('text').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } });
   $('btnJoin').onclick = join;
   $('code').addEventListener('keydown', e => { if (e.key === 'Enter') $('name').focus(); });
   $('name').addEventListener('keydown', e => { if (e.key === 'Enter') join(); });
   $('btnLeave').onclick = () => { if (unwatch) unwatch(); clearInterval(timer); stopListening(); $('room').classList.add('hidden'); $('join').classList.remove('hidden'); $('btnJoin').disabled = false; };
+  renderCrit(false, []);
   $('code').value = cleanCode(LS.get('lastCode', '')); $('name').value = LS.get('lastName', '');
   const q = new URLSearchParams(location.search).get('code'); if (q) $('code').value = cleanCode(q);
 })();
