@@ -51,6 +51,12 @@ textarea{width:100%;font-size:1.15em;padding:10px 12px;border:3px solid var(--na
 .crit .c.ok{background:#e4f8e4;border-color:#2e7d32;font-weight:700}
 .crit .c.part{width:100%;background:none;border:0;font-weight:700;color:#fff;padding:4px 0 0;font-family:Impact,"Arial Black",sans-serif;font-weight:400;letter-spacing:.03em}
 button.tiny{font-size:.72em;padding:2px 8px;box-shadow:2px 2px 0 var(--navy);border-width:2px;background:#fff;float:right}
+.prepview{background:#fff6d6;border:2px dashed #c98a12;border-radius:10px;padding:6px 10px;margin:4px 0}
+.prepview .pvhead{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.prepview .pvhead button.tiny{float:none;margin-left:auto}
+.prepview .pvhead button.tiny + button.tiny{margin-left:0}
+#prepText{white-space:pre-wrap;font-size:1.05em;line-height:1.4;max-height:22vh;overflow:auto;margin-top:4px}
+.saylbl{margin:6px 0 2px;font-weight:700}
 .groups{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0}
 .groups button{font-size:.78em;padding:4px 8px;box-shadow:2px 2px 0 var(--navy);border-width:2px;background:#fff}
 .groups button.ok{background:#e4f8e4;border-color:#2e7d32}
@@ -109,7 +115,7 @@ footer{color:#fff;text-align:center;font-size:.85em;padding:10px;opacity:.85}
 
   <section class="box" id="prepBox">
     <h2>My preparation <button class="tiny" id="btnPrepToggle" style="float:right">Open</button></h2>
-    <p class="small">Answer the questions for each group. Press a sentence starter to put it in the box, then finish it in your own words. It is saved on this laptop only. During your turn, press a group button and your sentence appears in the box. Change it, or say anything else, then press Send. Only what you send goes to the meeting.</p>
+    <p class="small">Answer the questions for each group. Press a sentence starter to put it in the box, then finish it in your own words. It is saved on this laptop only. During your turn, press a group button to see your prepared words. Read them out loud with the microphone, or copy them into your box. Only the "What I say" box is sent.</p>
     <div id="prepForm" class="hidden"></div>
   </section>
   <section class="box hidden" id="room">
@@ -129,7 +135,13 @@ footer{color:#fff;text-align:center;font-size:.85em;padding:10px;opacity:.85}
           </div>
           <div class="heard" id="heard"></div>
           <div class="groups" id="groups"></div>
-          <textarea id="text" placeholder="What do you say? (or use the microphone)"></textarea>
+          <div class="prepview hidden" id="prepView">
+            <div class="pvhead"><b>My prepared words</b> <span class="small">(not sent: read them out loud, or press Copy)</span>
+              <button type="button" class="tiny" id="btnCopyPrep">Copy into my box</button><button type="button" class="tiny" id="btnHidePrep">Hide</button></div>
+            <div id="prepText"></div>
+          </div>
+          <label for="text" class="saylbl">What I say <span class="small">(only this box is sent)</span></label>
+          <textarea id="text" placeholder="Speak with the microphone, or type here"></textarea>
           <div class="row">
             <button class="big" id="btnSend" style="width:auto;flex:1">Send</button>
             <button id="btnAgain" style="background:#fff">Say that again</button>
@@ -386,12 +398,18 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
       save(t);
     });
   }
+  function showPrep(txt, title) {
+    $('prepText').textContent = txt; $('prepView').classList.remove('hidden');
+    $('prepView').querySelector('b').textContent = 'My prepared words: ' + title;
+  }
+  $('btnHidePrep').onclick = () => $('prepView').classList.add('hidden');
+  $('btnCopyPrep').onclick = () => { const t = $('prepText').textContent.trim(); if (!t) return; $('text').value = ($('text').value.trim() ? $('text').value.trim() + ' ' : '') + t; $('text').focus(); };
   let groupsKey = '';
   function renderGroups(ids) {
     const k = JSON.stringify([ids || [], PREP]); if (k === groupsKey) return; groupsKey = k;
     const set = new Set(ids || []);
     $('groups').innerHTML = GROUPS.map(g => { const txt = (PREP[g.id] || '').trim(); const ok = g.ids.every(i => set.has(i)); return '<button type="button" data-g="' + g.id + '" class="' + (ok ? 'ok ' : '') + (txt ? '' : 'empty') + '" title="' + esc(txt || 'Nothing prepared for this group yet') + '">' + (ok ? '✔ ' : '') + esc(g.title) + '</button>'; }).join('');
-    $('groups').querySelectorAll('button').forEach(b => b.onclick = () => { const txt = (PREP[b.dataset.g] || '').trim(); const g = GROUPS.find(x => x.id === b.dataset.g); if (!txt) { $('text').value = (g.starters && g.starters[0]) || ''; toast('Nothing prepared for this group. Finish the sentence, or say it your own way.'); } else $('text').value = txt; $('text').focus(); });
+    $('groups').querySelectorAll('button').forEach(b => b.onclick = () => { const txt = (PREP[b.dataset.g] || '').trim(); const g = GROUPS.find(x => x.id === b.dataset.g); showPrep(txt || ((g.starters || []).join('\n')), g.title + (txt ? '' : ' (sentence starters: nothing prepared yet)')); });
   }
   $('btnPrepToggle').onclick = () => { const f = $('prepForm'); f.classList.toggle('hidden'); $('btnPrepToggle').textContent = f.classList.contains('hidden') ? 'Open' : 'Close'; };
   renderPrep(); renderGroups([]);
