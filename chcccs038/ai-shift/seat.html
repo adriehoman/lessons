@@ -68,6 +68,7 @@ button.tiny{font-size:.72em;padding:2px 8px;box-shadow:2px 2px 0 var(--navy);bor
 .groups button.ok{background:#e4f8e4;border-color:#2e7d32}
 .groups button .cnt{font-weight:400;opacity:.75;font-size:.9em}
 .groups button.always{border-style:dashed}
+.groups button.later{border-color:#c98a12;background:#fff6d6}
 .groups button.next{background:var(--yellow);border-color:var(--red);animation:nextpulse 1.4s infinite}
 @keyframes nextpulse{0%,100%{box-shadow:2px 2px 0 var(--navy)}50%{box-shadow:2px 2px 0 var(--navy),0 0 0 6px rgba(214,40,40,.3)}}
 #nextHint{margin:2px 0 4px;min-height:1.2em}
@@ -361,6 +362,7 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
       const db = await dbReady();
       await db.push(ROOT + code + '/say/' + SEAT, { text, t: db.now(), n: (session.turn && session.turn.n) || 0 });
       $('text').value = ''; $('heard').textContent = '';
+      sentCount++;
       pending = { at: Date.now(), lines: (session && session.lines ? Object.keys(session.lines).length : 0) }; toast('Sent. Listen to the big screen.');
     } catch (e) { toast('Could not send: ' + e.message + '. Tell your teacher.'); }
     sending = false; render();
@@ -423,28 +425,36 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
   let groupsKey = '';
   /* Which group to use next. Groups 2 and 3 are skills for the whole meeting; 1, 4, 5, 6 and 7 come roughly in that order.
      Part B is always group 8. Near the end of Part A, if the closing is not done yet, group 7 lights up. Uses only the ticks: no AI cost. */
+  let sentCount = 0, hl = null, skipped = new Set(), hlTurn = '';
   function nextGroup(set) {
     const s = session || {}, t = s.turn || {};
     if (!s.seat || s.seat !== SEAT) return null;
-    const done = g => g.ids.every(i => set.has(i)), any = g => g.ids.some(i => set.has(i));
+    const tk = (t.n || 0) + '/' + (t.phase || 'A');
+    if (tk !== hlTurn) { hlTurn = tk; sentCount = 0; hl = null; skipped = new Set(); }
+    const have = g => g.ids.filter(i => set.has(i)).length, done = g => have(g) === g.ids.length;
     const byId = id => GROUPS.find(g => g.id === id);
     if (t.phase === 'B') return done(byId('g8')) ? null : { id: 'g8', why: 'Now: report to Derk' };
     const left = t.deadline ? t.deadline - Date.now() : 1e9;
     if (!done(byId('g7')) && (left < 180000 || (t.tries != null && t.tries <= 3))) return { id: 'g7', why: 'Time to close the meeting' };
-    const seq = ['g1', 'g4', 'g5', 'g6', 'g7'].map(byId);
-    let far = 0; seq.forEach((g, i) => { if (any(g)) far = i; });
-    for (let i = far; i < seq.length; i++) if (!done(seq[i])) return { id: seq[i].id, why: 'Next' };
+    /* strict order 1, 4, 5, 6, 7: stay on a group until it is complete, or until 3 messages pass with no new tick in it */
+    for (const g of ['g1', 'g4', 'g5', 'g6', 'g7'].map(byId)) {
+      if (done(g) || skipped.has(g.id)) continue;
+      if (!hl || hl.id !== g.id) hl = { id: g.id, at: sentCount, ticks: have(g) };
+      else if (have(g) > hl.ticks) { hl.at = sentCount; hl.ticks = have(g); }
+      else if (sentCount - hl.at >= 3) { skipped.add(g.id); hl = null; continue; }
+      return { id: g.id, why: 'Next' };
+    }
     return null;
   }
   function renderGroups(ids) {
     const set = new Set(ids || []), nx = nextGroup(set);
-    const k = JSON.stringify([ids || [], PREP, nx]); if (k === groupsKey) return; groupsKey = k;
+    const k = JSON.stringify([ids || [], PREP, nx, [...skipped]]); if (k === groupsKey) return; groupsKey = k;
     $('groups').innerHTML = GROUPS.map(g => {
       const txt = (PREP[g.id] || '').trim(), have = g.ids.filter(i => set.has(i)).length, ok = have === g.ids.length;
-      const cls = (ok ? 'ok ' : '') + (txt ? '' : 'empty ') + (nx && nx.id === g.id ? 'next' : '') + (['g2', 'g3'].includes(g.id) && !ok ? ' always' : '');
+      const cls = (ok ? 'ok ' : '') + (txt ? '' : 'empty ') + (nx && nx.id === g.id ? 'next' : '') + (!ok && skipped.has(g.id) ? ' later' : '') + (['g2', 'g3'].includes(g.id) && !ok ? ' always' : '');
       return '<button type="button" data-g="' + g.id + '" class="' + cls + '" title="' + esc(txt || 'Nothing prepared for this group yet') + '">' + (ok ? '✔ ' : '') + esc(gname(g)) + ' <span class="cnt">' + have + '/' + g.ids.length + '</span></button>';
     }).join('');
-    $('nextHint').innerHTML = nx ? '<b>' + esc(nx.why) + ':</b> ' + esc(gname(GROUPS.find(g => g.id === nx.id))) + '. Groups 2 and 3 are for the whole meeting.' : (set.size ? 'Groups 2 and 3 are for the whole meeting.' : '');
+    $('nextHint').innerHTML = nx ? '<b>' + esc(nx.why) + ':</b> ' + esc(gname(GROUPS.find(g => g.id === nx.id))) + '. Groups 2 and 3 are for the whole meeting.' + (skipped.size ? ' Orange: still open, come back to it if you can.' : '') : (set.size ? 'Groups 2 and 3 are for the whole meeting.' : '');
     $('groups').querySelectorAll('button').forEach(b => b.onclick = () => { const txt = (PREP[b.dataset.g] || '').trim(); const g = GROUPS.find(x => x.id === b.dataset.g); showPrep(txt || ((g.starters || []).join('\n')), gname(g) + (txt ? '' : ' (sentence starters: nothing prepared yet)')); });
   }
 
