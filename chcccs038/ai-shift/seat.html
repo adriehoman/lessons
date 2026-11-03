@@ -62,7 +62,12 @@ button.tiny{font-size:.72em;padding:2px 8px;box-shadow:2px 2px 0 var(--navy);bor
 .prepview .pvhead button.tiny{float:none;margin-left:auto}
 .prepview .pvhead button.tiny + button.tiny{margin-left:0}
 #prepText{white-space:pre-wrap;font-size:1.05em;line-height:1.4;max-height:22vh;overflow:auto;margin-top:4px}
-.saylbl{margin:6px 0 2px;font-weight:700}
+.saylbl{margin:6px 0 2px;font-weight:700;display:block}
+.sayblock{position:sticky;bottom:0;background:var(--paper);padding:6px 0 4px;border-top:3px solid var(--navy);z-index:5}
+.sayblock textarea{min-height:64px}
+.sayrow{margin:6px 0 2px}
+.sayrow button.mic{padding:14px 16px}
+.sayblock .heard{margin:2px 0;min-height:0}
 .groups{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0}
 .groups button{font-size:.78em;padding:4px 8px;box-shadow:2px 2px 0 var(--navy);border-width:2px;background:#fff}
 .groups button.ok{background:#e4f8e4;border-color:#2e7d32}
@@ -97,9 +102,8 @@ button.tiny{font-size:.72em;padding:2px 8px;box-shadow:2px 2px 0 var(--navy);bor
   .lines{max-height:34vh}
 }
 @media (max-width:859px){
-  #talk{position:sticky;bottom:0;background:var(--paper);padding:6px 0 4px;border-top:3px solid var(--navy);z-index:5}
-  #talk textarea{min-height:56px}
-  #talk p.small{display:none}
+  .sayblock textarea{min-height:56px}
+  .sayblock p.small{display:none}
   .colR .critbox{max-height:40vh;overflow:auto}
 }
 .critbox .crit .c.part{color:var(--navy)}
@@ -144,11 +148,6 @@ footer{color:#fff;text-align:center;font-size:.85em;padding:10px;opacity:.85}
           <div class="meter">Tries left <b id="mTries">12</b></div>
         </div>
         <div id="talk" class="hidden">
-          <div class="row">
-            <button class="mic" id="btnMic">🎤 Hold to speak</button>
-            <span class="small">Hold the button, speak clearly, let go. Check the words, then press Send.</span>
-          </div>
-          <div class="heard" id="heard"></div>
           <div class="groups" id="groups"></div>
           <div class="small" id="nextHint"></div>
           <div class="prepview hidden" id="prepView">
@@ -156,13 +155,17 @@ footer{color:#fff;text-align:center;font-size:.85em;padding:10px;opacity:.85}
               <button type="button" class="tiny" id="btnCopyPrep">Copy into my box</button><button type="button" class="tiny" id="btnHidePrep">Hide</button></div>
             <div id="prepText"></div>
           </div>
-          <label for="text" class="saylbl">What I say <span class="small">(only this box is sent)</span></label>
-          <textarea id="text" placeholder="Speak with the microphone, or type here"></textarea>
-          <div class="row">
-            <button class="big" id="btnSend" style="width:auto;flex:1">Send</button>
-            <button id="btnAgain" style="background:#fff">Say that again</button>
+          <div class="sayblock">
+            <label for="text" class="saylbl">What I say <span class="small">(only this box is sent)</span></label>
+            <div class="heard" id="heard"></div>
+            <textarea id="text" placeholder="Speak with the microphone, or type here"></textarea>
+            <div class="row sayrow">
+              <button class="mic" id="btnMic">🎤 Hold to speak</button>
+              <button class="big" id="btnSend" style="width:auto;flex:1">Send</button>
+              <button id="btnAgain" style="background:#fff">Say that again</button>
+            </div>
+            <p class="small">Hold the microphone, speak, let go. Check the words, then press Send. Everyone hears it on the big screen.</p>
           </div>
-          <p class="small">What you send is read out loud on the big screen. Stefan, Maya and Derk answer there too. Everyone hears it, like in the real room.</p>
         </div>
         <div class="row hidden" id="myDone"><button class="big" id="btnMyScript">Download my script and checklist (Word)</button></div>
         <h3 style="margin:14px 0 6px">What has been said</h3>
