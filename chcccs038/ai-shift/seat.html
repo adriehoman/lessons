@@ -51,6 +51,12 @@ textarea{width:100%;font-size:1.15em;padding:10px 12px;border:3px solid var(--na
 .crit .c.ok{background:#e4f8e4;border-color:#2e7d32;font-weight:700}
 .crit .c.part{width:100%;background:none;border:0;font-weight:700;color:#fff;padding:4px 0 0;font-family:Impact,"Arial Black",sans-serif;font-weight:400;letter-spacing:.03em}
 button.tiny{font-size:.72em;padding:2px 8px;box-shadow:2px 2px 0 var(--navy);border-width:2px;background:#fff;float:right}
+.chk{border-radius:10px;padding:8px 10px;margin:6px 0;border:2px solid #b0bec5;background:#fff}
+.chk.good{border-color:#2e7d32;background:#e4f8e4}
+.chk.partly{border-color:#c98a12;background:#fff6d6}
+.chk.missing{border-color:var(--red);background:#fde2e2}
+.chk .ex{font-style:italic;color:#0b3d91}
+.prep.good{border-color:#2e7d32}.prep.partly{border-color:#c98a12}.prep.missing{border-color:var(--red)}
 .prepview{background:#fff6d6;border:2px dashed #c98a12;border-radius:10px;padding:6px 10px;margin:4px 0}
 .prepview .pvhead{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .prepview .pvhead button.tiny{float:none;margin-left:auto}
@@ -117,6 +123,9 @@ footer{color:#fff;text-align:center;font-size:.85em;padding:10px;opacity:.85}
     <h2>My preparation <button class="tiny" id="btnPrepToggle" style="float:right">Open</button></h2>
     <p class="small">Answer the questions for each group. Press a sentence starter to put it in the box, then finish it in your own words. It is saved on this laptop only. During your turn, press a group button to see your prepared words. Read them out loud with the microphone, or copy them into your box. Only the "What I say" box is sent.</p>
     <div id="prepForm" class="hidden"></div>
+    <div class="row hidden" id="checkRow"><button id="btnCheck" class="big" style="background:#e4f8e4">✔ Check my preparation</button></div>
+    <p class="small hidden" id="checkHelp">The check needs the session code (type it in the box above). Your teacher's screen asks the AI to read your preparation and tells you which points are still missing. You only have a few checks, so write as much as you can first.</p>
+    <div id="checkOut"></div>
   </section>
   <section class="box hidden" id="room">
     <div class="cols">
@@ -411,7 +420,46 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
     $('groups').innerHTML = GROUPS.map(g => { const txt = (PREP[g.id] || '').trim(); const ok = g.ids.every(i => set.has(i)); return '<button type="button" data-g="' + g.id + '" class="' + (ok ? 'ok ' : '') + (txt ? '' : 'empty') + '" title="' + esc(txt || 'Nothing prepared for this group yet') + '">' + (ok ? '✔ ' : '') + esc(g.title) + '</button>'; }).join('');
     $('groups').querySelectorAll('button').forEach(b => b.onclick = () => { const txt = (PREP[b.dataset.g] || '').trim(); const g = GROUPS.find(x => x.id === b.dataset.g); showPrep(txt || ((g.starters || []).join('\n')), g.title + (txt ? '' : ' (sentence starters: nothing prepared yet)')); });
   }
-  $('btnPrepToggle').onclick = () => { const f = $('prepForm'); f.classList.toggle('hidden'); $('btnPrepToggle').textContent = f.classList.contains('hidden') ? 'Open' : 'Close'; };
+
+  /* ---------- check my preparation: sent to the teacher's stage page, which asks the AI and answers this seat only ---------- */
+  let unwatchCheck = null, checkKey = '';
+  function setCheckUI() { const open = !$('prepForm').classList.contains('hidden'); $('checkRow').classList.toggle('hidden', !open); $('checkHelp').classList.toggle('hidden', !open); }
+  async function askCheck() {
+    const c = cleanCode($('code').value);
+    if (c.length < 4) { toast('Type the session code in the box at the top first.'); $('code').focus(); return; }
+    const empty = GROUPS.filter(g => !(PREP[g.id] || '').trim()).map(g => g.title);
+    if (empty.length === GROUPS.length) return toast('Write your preparation first.');
+    $('btnCheck').disabled = true;
+    $('checkOut').innerHTML = '<div class="status wait">Checking... this takes about 20 seconds.' + (empty.length ? ' Nothing written yet for: ' + esc(empty.join(', ')) + '.' : '') + '</div>';
+    try {
+      const db = await dbReady();
+      const s = await db.get(ROOT + c + '/session');
+      if (!s || !s.open) { $('checkOut').innerHTML = ''; $('btnCheck').disabled = false; return toast('No open session has that code. Check the screen.'); }
+      const groups = {}; GROUPS.forEach(g => groups[g.id] = String(PREP[g.id] || '').slice(0, 1500));
+      const ref = await db.push(ROOT + c + '/checkq', { seat: SEAT, groups, at: db.now() });
+      checkKey = ref.key;
+      if (unwatchCheck) unwatchCheck();
+      unwatchCheck = db.watch(ROOT + c + '/checkres/' + SEAT, v => showCheck(v));
+      setTimeout(() => { if ($('btnCheck').disabled && /Checking/.test($('checkOut').textContent)) { $('checkOut').innerHTML = '<div class="status off">No answer yet. Your teacher\'s screen must be open with the session running. Ask your teacher.</div>'; $('btnCheck').disabled = false; } }, 60000);
+    } catch (e) { $('checkOut').innerHTML = ''; $('btnCheck').disabled = false; toast('Could not send: ' + e.message); }
+  }
+  function showCheck(v) {
+    if (!v || v.key !== checkKey) return;
+    if (v.status === 'checking') return;
+    $('btnCheck').disabled = false;
+    if (v.error) { $('checkOut').innerHTML = '<div class="status off">' + esc(v.error) + '</div>'; return; }
+    const r = v.result || {}, short = id => { const c = SCENARIO.criteria.find(x => x.id === id); return id + ' ' + (c ? (c.short || c.text) : ''); };
+    const label = { good: '✔ Good', partly: '◐ Nearly there', missing: '✖ Missing' };
+    document.querySelectorAll('.prep').forEach((el, i) => { el.classList.remove('good', 'partly', 'missing'); const g = (r.groups || [])[i]; if (g) el.classList.add(g.status); });
+    $('checkOut').innerHTML = '<div class="status go">' + esc(r.overall || 'Here is your check.') + (v.left != null ? ' Checks left: ' + v.left + '.' : '') + '</div>' +
+      (r.groups || []).map(g => { const G = GROUPS.find(x => x.id === g.id) || { title: g.id };
+        return '<div class="chk ' + g.status + '"><b>' + label[g.status] + ': ' + esc(G.title) + '</b>' +
+          (g.missing && g.missing.length ? '<div class="small">Still to cover: ' + g.missing.map(id => esc(short(id))).join('; ') + '</div>' : '') +
+          (g.tip ? '<div>' + esc(g.tip) + '</div>' : '') + (g.example ? '<div class="ex">For example: "' + esc(g.example) + '"</div>' : '') + '</div>'; }).join('') +
+      '<p class="small">Change your preparation above, then check again if you have checks left. The coloured edges show each group.</p>';
+  }
+  $('btnCheck').onclick = askCheck;
+  $('btnPrepToggle').onclick = () => { const f = $('prepForm'); f.classList.toggle('hidden'); $('btnPrepToggle').textContent = f.classList.contains('hidden') ? 'Open' : 'Close'; setCheckUI(); };
   renderPrep(); renderGroups([]);
   $('btnFull').onclick = () => { fullText = !fullText; critKey = ''; $('btnFull').textContent = fullText ? 'Short text' : 'Full text'; renderCrit(lastCrit[0], lastCrit[1]); };
   renderCrit(false, []);
