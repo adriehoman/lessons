@@ -13,6 +13,7 @@ header{padding:14px 16px 6px;color:#fff}
 header .unit{font-size:.8em;color:var(--yellow);font-weight:700;letter-spacing:.04em}
 header h1{font-family:Impact,"Arial Black","Segoe UI",sans-serif;font-weight:400;letter-spacing:.03em;text-transform:uppercase;margin:2px 0 0;font-size:clamp(1.5em,5vw,2.4em);text-shadow:3px 3px 0 #14213d}
 main{max-width:760px;margin:0 auto;padding:10px 16px 40px}
+main.wide{max-width:1240px}
 .box{background:var(--paper);border:4px solid var(--navy);border-radius:16px;padding:18px 20px;box-shadow:8px 8px 0 rgba(0,0,0,.25);margin:12px 0}
 .box h2{margin:0 0 8px;font-family:Impact,"Arial Black",sans-serif;font-weight:400;letter-spacing:.03em;text-transform:uppercase;color:var(--navy)}
 label{display:block;font-weight:700;margin:10px 0 4px}
@@ -49,7 +50,29 @@ textarea{width:100%;font-size:1.15em;padding:10px 12px;border:3px solid var(--na
 .crit .c{padding:4px 9px;border-radius:8px;border:2px solid #b0bec5;background:#fff;font-size:.9em}
 .crit .c.ok{background:#e4f8e4;border-color:#2e7d32;font-weight:700}
 .crit .c.part{width:100%;background:none;border:0;font-weight:700;color:#fff;padding:4px 0 0;font-family:Impact,"Arial Black",sans-serif;font-weight:400;letter-spacing:.03em}
+button.tiny{font-size:.72em;padding:2px 8px;box-shadow:2px 2px 0 var(--navy);border-width:2px;background:#fff;float:right}
 .critbox{background:#fffdf5;border:3px solid var(--navy);border-radius:12px;padding:8px 12px;margin:10px 0}
+.cols{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){
+  .cols{grid-template-columns:minmax(0,1fr) 400px;align-items:start}
+  .colR{position:sticky;top:6px}
+  .colR .critbox{margin:0;max-height:calc(100vh - 24px);overflow:auto;padding:6px 10px}
+  .colR .crit{display:block;margin:2px 0}
+  .colR .crit .c{display:block;margin:1px 0;width:auto;font-size:.76em;line-height:1.2;padding:1px 6px}
+  .colR .crit .c.part{padding:3px 0 0;font-size:.9em}
+  .colR #critNote{margin:4px 0 0;font-size:.78em}
+  header{padding:6px 16px 0}
+  header h1{font-size:1.3em}
+  body.inroom header .unit{display:none}
+  main.wide{padding-top:6px}
+  .lines{max-height:34vh}
+}
+@media (max-width:859px){
+  #talk{position:sticky;bottom:0;background:var(--paper);padding:6px 0 4px;border-top:3px solid var(--navy);z-index:5}
+  #talk textarea{min-height:56px}
+  #talk p.small{display:none}
+  .colR .critbox{max-height:40vh;overflow:auto}
+}
 .critbox .crit .c.part{color:var(--navy)}
 .mascots{display:flex;justify-content:space-between;align-items:flex-end;margin-top:-6px}
 .mascots svg{width:90px;height:auto}
@@ -74,42 +97,48 @@ footer{color:#fff;text-align:center;font-size:.85em;padding:10px;opacity:.85}
   </section>
 
   <section class="box hidden" id="room">
-    <h2 id="roomTitle">Waiting for your turn</h2>
-    <div class="status wait" id="status">Your teacher will unlock your seat when it is your turn.</div>
-    <div class="meters hidden" id="meters">
-      <div class="meter">Part <b id="mPart">A</b></div>
-      <div class="meter">Time left <b id="mTime">10:00</b></div>
-      <div class="meter">Tries left <b id="mTries">12</b></div>
-    </div>
-    <div id="talk" class="hidden">
-      <div class="row">
-        <button class="mic" id="btnMic">🎤 Hold to speak</button>
-        <span class="small">Hold the button, speak clearly, let go. Check the words, then press Send.</span>
+    <div class="cols">
+      <div class="colL">
+        <h2 id="roomTitle">Waiting for your turn</h2>
+        <div class="status wait" id="status">Your teacher will unlock your seat when it is your turn.</div>
+        <div class="meters hidden" id="meters">
+          <div class="meter">Part <b id="mPart">A</b></div>
+          <div class="meter">Time left <b id="mTime">10:00</b></div>
+          <div class="meter">Tries left <b id="mTries">12</b></div>
+        </div>
+        <div id="talk" class="hidden">
+          <div class="row">
+            <button class="mic" id="btnMic">🎤 Hold to speak</button>
+            <span class="small">Hold the button, speak clearly, let go. Check the words, then press Send.</span>
+          </div>
+          <div class="heard" id="heard"></div>
+          <textarea id="text" placeholder="What do you say? (or use the microphone)"></textarea>
+          <div class="row">
+            <button class="big" id="btnSend" style="width:auto;flex:1">Send</button>
+            <button id="btnAgain" style="background:#fff">Say that again</button>
+          </div>
+          <p class="small">What you send is read out loud on the big screen. Stefan, Maya and Derk answer there too. Everyone hears it, like in the real room.</p>
+        </div>
+        <div class="row hidden" id="myDone"><button class="big" id="btnMyScript">Download my script and checklist (Word)</button></div>
+        <h3 style="margin:14px 0 6px">What has been said</h3>
+        <div class="lines" id="lines"><div class="line nar">Nothing yet.</div></div>
+        <div class="row" style="margin-top:12px"><button id="btnLeave" style="background:#fff">Leave the session</button></div>
       </div>
-      <div class="heard" id="heard"></div>
-      <textarea id="text" placeholder="What do you say? (or use the microphone)"></textarea>
-      <div class="row">
-        <button class="big" id="btnSend" style="width:auto;flex:1">Send</button>
-        <button id="btnAgain" style="background:#fff">Say that again</button>
-      </div>
-      <p class="small">What you send is read out loud on the big screen. Stefan, Maya and Derk answer there too. Everyone hears it, like in the real room.</p>
+      <aside class="colR">
+        <div class="critbox">
+          <b id="critTitle">The checklist for this shift</b> <span class="small" id="critCount"></span> <button id="btnFull" class="tiny" title="Show the full wording">Full text</button>
+          <div class="crit" id="crit"></div>
+          <p class="small" id="critNote">These are the things the assessor looks for. Prepare with the <a id="prepLink" href="../media/CHCCCS038_Stefan_shift_preparation_notes.docx" target="_blank">preparation notes (Word)</a>. During your turn, the ones you have shown turn green.</p>
+        </div>
+      </aside>
     </div>
-    <div class="critbox">
-      <b id="critTitle">The checklist for this shift</b> <span class="small" id="critCount"></span>
-      <div class="crit" id="crit"></div>
-      <p class="small" id="critNote">These are the things the assessor looks for. Prepare with the <a id="prepLink" href="../media/CHCCCS038_Stefan_shift_preparation_notes.docx" target="_blank">preparation notes (Word)</a>. During your turn, the ones you have shown turn green.</p>
-    </div>
-    <div class="row hidden" id="myDone"><button class="big" id="btnMyScript">Download my script and checklist (Word)</button></div>
-    <h3 style="margin:14px 0 6px">What has been said</h3>
-    <div class="lines" id="lines"><div class="line nar">Nothing yet.</div></div>
-    <div class="row" style="margin-top:12px"><button id="btnLeave" style="background:#fff">Leave the session</button></div>
   </section>
 </main>
 <footer>A3 Homan Intelligence Systems. Students hear "simulated shift". No names are sent to the AI.</footer>
 <script>
 const FIREBASE = { projectId: "a3-lessons-live", databaseURL: "https://a3-lessons-live-default-rtdb.asia-southeast1.firebasedatabase.app" };
 const MADE = "2026-11-03";
-const SCENARIO = {"title":"Stefan, Maya and Derk at Forever Young","unit":"CHCCCS038","characters":{"stefan":{"name":"Stefan","role":"Resident"},"maya":{"name":"Maya","role":"Daughter"},"derk":{"name":"Derk","role":"Organisation manager"}},"criteria":[{"id":"1","part":"A","text":"Introduced self and confirmed purpose of meeting"},{"id":"2","part":"A","text":"Consulted the person: environment suitable, comfortable to speak freely, location and cultural requirements"},{"id":"3a","part":"A","text":"Active listening"},{"id":"3b","part":"A","text":"Curious questioning"},{"id":"3c","part":"A","text":"Empathy"},{"id":"3d","part":"A","text":"Appropriate terminology"},{"id":"3e","part":"A","text":"Open and closed questions"},{"id":"3f","part":"A","text":"Supported the use of assistive devices"},{"id":"4","part":"A","text":"Empowering environment: collaboration, consideration, constructive feedback, respect"},{"id":"5","part":"A","text":"Identified barriers to communication and empowerment; flexible person-centred strategies"},{"id":"6","part":"A","text":"Identified indicators of abuse, neglect and breaches of human rights"},{"id":"7","part":"A","text":"Calmly and sensitively asked a range of open and closed questions"},{"id":"8","part":"A","text":"Helped the person and family identify and understand breaches of rights and signs of abuse; provided information"},{"id":"9","part":"A","text":"Options: internal complaints pathway, external agencies, advocacy"},{"id":"10a","part":"A","text":"Closing: comfortable with the information discussed"},{"id":"10b","part":"A","text":"Closing: confident about the complaints pathway and how to contact advocacy"},{"id":"10c","part":"A","text":"Closing: aware staff can provide further assistance"},{"id":"10d","part":"A","text":"Closing: satisfied the conversation changed to address an unmet need"},{"id":"10e","part":"A","text":"Closing: no longer wanting major changes to the plan"},{"id":"11","part":"A","text":"Explained privacy, confidentiality, disclosure, the duty to report, and how confidentiality is kept"},{"id":"12a","part":"A","text":"Flexibility and adaptability"},{"id":"12b","part":"A","text":"Person-centred practices"},{"id":"12c","part":"A","text":"Strength-based approach"},{"id":"12d","part":"A","text":"Rights-based approach"},{"id":"12e","part":"A","text":"Informed choice"},{"id":"13","part":"B","text":"Professional, non-judgemental manner"},{"id":"14","part":"B","text":"Objective facts from the meeting"},{"id":"15a","part":"B","text":"Relayed a breach of human rights"},{"id":"15b","part":"B","text":"Relayed signs of abuse or neglect"}],"timing":{"meetingMinutes":10,"managerMinutes":5}};
+const SCENARIO = {"title":"Stefan, Maya and Derk at Forever Young","unit":"CHCCCS038","characters":{"stefan":{"name":"Stefan","role":"Resident"},"maya":{"name":"Maya","role":"Daughter"},"derk":{"name":"Derk","role":"Organisation manager"}},"criteria":[{"id":"1","part":"A","text":"Introduced self and confirmed purpose of meeting","short":"Introduce yourself and the purpose"},{"id":"2","part":"A","text":"Consulted the person: environment suitable, comfortable to speak freely, location and cultural requirements","short":"Check the room, comfort, place and culture"},{"id":"3a","part":"A","text":"Active listening","short":"Active listening"},{"id":"3b","part":"A","text":"Curious questioning","short":"Curious questions"},{"id":"3c","part":"A","text":"Empathy","short":"Empathy"},{"id":"3d","part":"A","text":"Appropriate terminology","short":"Respectful words"},{"id":"3e","part":"A","text":"Open and closed questions","short":"Open and closed questions"},{"id":"3f","part":"A","text":"Supported the use of assistive devices","short":"Support assistive devices"},{"id":"4","part":"A","text":"Empowering environment: collaboration, consideration, constructive feedback, respect","short":"Empowering: work together, respect, feedback"},{"id":"5","part":"A","text":"Identified barriers to communication and empowerment; flexible person-centred strategies","short":"Barriers found, person centred strategies"},{"id":"6","part":"A","text":"Identified indicators of abuse, neglect and breaches of human rights","short":"Spot abuse, neglect, breach of rights"},{"id":"7","part":"A","text":"Calmly and sensitively asked a range of open and closed questions","short":"Calm, sensitive open and closed questions"},{"id":"8","part":"A","text":"Helped the person and family identify and understand breaches of rights and signs of abuse; provided information","short":"Help them understand rights and abuse, give information"},{"id":"9","part":"A","text":"Options: internal complaints pathway, external agencies, advocacy","short":"Options: internal, external, advocacy"},{"id":"10a","part":"A","text":"Closing: comfortable with the information discussed","short":"Closing: comfortable with the information"},{"id":"10b","part":"A","text":"Closing: confident about the complaints pathway and how to contact advocacy","short":"Closing: confident about complaints and advocacy"},{"id":"10c","part":"A","text":"Closing: aware staff can provide further assistance","short":"Closing: staff can help further"},{"id":"10d","part":"A","text":"Closing: satisfied the conversation changed to address an unmet need","short":"Closing: the unmet need is addressed"},{"id":"10e","part":"A","text":"Closing: no longer wanting major changes to the plan","short":"Closing: no longer wants major plan changes"},{"id":"11","part":"A","text":"Explained privacy, confidentiality, disclosure, the duty to report, and how confidentiality is kept","short":"Privacy, confidentiality, duty to report"},{"id":"12a","part":"A","text":"Flexibility and adaptability","short":"Flexible and adaptable"},{"id":"12b","part":"A","text":"Person-centred practices","short":"Person centred"},{"id":"12c","part":"A","text":"Strength-based approach","short":"Strength based"},{"id":"12d","part":"A","text":"Rights-based approach","short":"Rights based"},{"id":"12e","part":"A","text":"Informed choice","short":"Informed choice"},{"id":"13","part":"B","text":"Professional, non-judgemental manner","short":"Professional, non judgemental"},{"id":"14","part":"B","text":"Objective facts from the meeting","short":"Objective facts"},{"id":"15a","part":"B","text":"Relayed a breach of human rights","short":"Relay the breach of rights"},{"id":"15b","part":"B","text":"Relayed signs of abuse or neglect","short":"Relay signs of abuse or neglect"}],"timing":{"meetingMinutes":10,"managerMinutes":5}};
 /* Shared by stage.html and seat.html (inlined by _build/build-ai-shift.js). */
 const $ = id => document.getElementById(id);
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -190,9 +219,11 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
   let recog = null, listening = false, interim = '';
 
   let done = null, unwatchDone = null;
+  let fullText = false, lastCrit = [false, []];
   function renderCrit(mine, ids) {
+    lastCrit = [mine, ids];
     const set = new Set(ids || []); let part = '';
-    $('crit').innerHTML = SCENARIO.criteria.map(c => (c.part !== part ? ((part = c.part), '<span class="c part">Part ' + c.part + (c.part === 'A' ? ': the meeting' : ': report to the manager') + '</span>') : '') + '<span class="c' + (mine && set.has(c.id) ? ' ok' : '') + '">' + (mine && set.has(c.id) ? '✔ ' : '') + esc(c.id + ' ' + c.text) + '</span>').join('');
+    $('crit').innerHTML = SCENARIO.criteria.map(c => (c.part !== part ? ((part = c.part), '<span class="c part">Part ' + c.part + (c.part === 'A' ? ': the meeting' : ': report to the manager') + '</span>') : '') + '<span class="c' + (mine && set.has(c.id) ? ' ok' : '') + '" title="' + esc(c.text) + '">' + (mine && set.has(c.id) ? '✔ ' : '') + esc(c.id + ' ' + (fullText ? c.text : (c.short || c.text))) + '</span>').join('');
     $('critCount').textContent = mine ? set.size + ' of ' + SCENARIO.criteria.length + ' shown so far' : SCENARIO.criteria.length + ' points';
     $('critTitle').textContent = mine ? 'Your checklist: how you are doing' : 'The checklist for this shift';
   }
@@ -264,7 +295,7 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
       if (!s || !s.open) { toast('No open session has that code. Check the screen.'); $('btnJoin').disabled = false; return; }
       await db.set(ROOT + code + '/seats/' + SEAT, { name, at: db.now(), ua: (navigator.userAgent || '').slice(0, 60) });
       LS.set('lastCode', code); LS.set('lastName', name);
-      $('join').classList.add('hidden'); $('room').classList.remove('hidden');
+      $('join').classList.add('hidden'); $('room').classList.remove('hidden'); document.querySelector('main').classList.add('wide'); document.body.classList.add('inroom');
       if (unwatch) unwatch();
       unwatch = db.watch(ROOT + code + '/session', v => { session = v; render(); });
       if (unwatchDone) unwatchDone();
@@ -312,7 +343,8 @@ function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = [];
   $('btnJoin').onclick = join;
   $('code').addEventListener('keydown', e => { if (e.key === 'Enter') $('name').focus(); });
   $('name').addEventListener('keydown', e => { if (e.key === 'Enter') join(); });
-  $('btnLeave').onclick = () => { if (unwatch) unwatch(); clearInterval(timer); stopListening(); $('room').classList.add('hidden'); $('join').classList.remove('hidden'); $('btnJoin').disabled = false; };
+  $('btnLeave').onclick = () => { if (unwatch) unwatch(); clearInterval(timer); stopListening(); $('room').classList.add('hidden'); $('join').classList.remove('hidden'); document.querySelector('main').classList.remove('wide'); document.body.classList.remove('inroom'); $('btnJoin').disabled = false; };
+  $('btnFull').onclick = () => { fullText = !fullText; $('btnFull').textContent = fullText ? 'Short text' : 'Full text'; renderCrit(lastCrit[0], lastCrit[1]); };
   renderCrit(false, []);
   $('code').value = cleanCode(LS.get('lastCode', '')); $('name').value = LS.get('lastName', '');
   const q = new URLSearchParams(location.search).get('code'); if (q) $('code').value = cleanCode(q);
