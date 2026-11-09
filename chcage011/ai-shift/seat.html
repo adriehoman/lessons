@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CHCAGE011 Provide support to people living with dementia: the family meeting (your seat)</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--navy:#2e2148;--blue:#6a4f9c;--yellow:#ffd23f;--red:#d62828;--teal:#11a5a5;--paper:#fffdf5}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Arial,sans-serif;background:linear-gradient(180deg,#3b2b5e 0%,#6a4f9c 55%,#c9b6ea 100%);min-height:100vh;color:#2e2148}
+header{padding:14px 16px 6px;color:#fff}
+header .unit{font-size:.8em;color:var(--yellow);font-weight:700;letter-spacing:.04em}
+header h1{font-family:Impact,"Arial Black","Segoe UI",sans-serif;font-weight:400;letter-spacing:.03em;text-transform:uppercase;margin:2px 0 0;font-size:clamp(1.5em,5vw,2.4em);text-shadow:3px 3px 0 #2e2148}
+main{max-width:760px;margin:0 auto;padding:10px 16px 40px}
+main.wide{max-width:1240px}
+.box{background:var(--paper);border:4px solid var(--navy);border-radius:16px;padding:18px 20px;box-shadow:8px 8px 0 rgba(0,0,0,.25);margin:12px 0}
+.box h2{margin:0 0 8px;font-family:Impact,"Arial Black",sans-serif;font-weight:400;letter-spacing:.03em;text-transform:uppercase;color:var(--navy)}
+label{display:block;font-weight:700;margin:10px 0 4px}
+input[type=text]{width:100%;font-size:1.3em;padding:10px 12px;border:3px solid var(--navy);border-radius:10px;font-family:inherit}
+input.code{text-transform:uppercase;letter-spacing:.25em;font-family:Impact,"Arial Black",sans-serif;font-size:1.8em;text-align:center}
+button{font-family:inherit;font-size:1.05em;font-weight:700;padding:12px 18px;border-radius:12px;border:3px solid var(--navy);background:var(--yellow);color:var(--navy);cursor:pointer;box-shadow:4px 4px 0 var(--navy)}
+button:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--navy)}
+button:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+button.big{width:100%;font-size:1.3em;padding:16px}
+button.mic{background:var(--red);color:#fff}
+button.mic.on{background:#2e7d32;animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{box-shadow:4px 4px 0 var(--navy)}50%{box-shadow:4px 4px 0 var(--navy),0 0 0 10px rgba(46,125,50,.25)}}
+.status{font-size:1.15em;font-weight:700;padding:12px 14px;border-radius:12px;background:#e8f1ff;border:2px dashed var(--blue);margin:8px 0}
+.status.wait{background:#fff6d6;border-color:#c98a12}
+.status.go{background:#e4f8e4;border-color:#2e7d32}
+.status.off{background:#fde2e2;border-color:var(--red)}
+.meters{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.meter{flex:1;min-width:120px;background:var(--navy);color:#fff;border-radius:12px;padding:10px 12px;text-align:center}
+.meter b{display:block;font-size:1.8em;font-family:Impact,"Arial Black",sans-serif;font-weight:400;color:var(--yellow)}
+.lines{max-height:46vh;overflow:auto;background:#fff;border:2px solid #b0bec5;border-radius:12px;padding:10px 12px;font-size:1.05em;line-height:1.45}
+.line{margin:6px 0;padding:6px 10px;border-radius:10px}
+.line.you{background:#fff6d6;border-left:5px solid #c98a12}
+.line.them{background:#e8f1ff;border-left:5px solid var(--blue)}
+.line.nar{background:#f1f1f1;color:#555;font-style:italic}
+.line b{color:var(--navy)}
+.heard{min-height:1.4em;color:#555;font-style:italic;margin:6px 0}
+textarea{width:100%;font-size:1.15em;padding:10px 12px;border:3px solid var(--navy);border-radius:10px;font-family:inherit;min-height:80px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:8px 0}
+.small{font-size:.9em;color:#555}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:10px 16px;border-radius:10px;opacity:0;transition:.25s;pointer-events:none;max-width:90vw}
+#toast.show{opacity:1;transform:translateX(-50%)}
+.hidden{display:none !important}
+.crit{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.crit .c{padding:4px 9px;border-radius:8px;border:2px solid #b0bec5;background:#fff;font-size:.9em}
+.crit .c.ok{background:#e4f8e4;border-color:#2e7d32;font-weight:700}
+.crit .c.part{width:100%;background:none;border:0;font-weight:700;color:#fff;padding:4px 0 0;font-family:Impact,"Arial Black",sans-serif;font-weight:400;letter-spacing:.03em}
+button.tiny{font-size:.72em;padding:2px 8px;box-shadow:2px 2px 0 var(--navy);border-width:2px;background:#fff;float:right}
+.chk{border-radius:10px;padding:8px 10px;margin:6px 0;border:2px solid #b0bec5;background:#fff}
+.chk.good{border-color:#2e7d32;background:#e4f8e4}
+.chk.partly{border-color:#c98a12;background:#fff6d6}
+.chk.missing{border-color:var(--red);background:#fde2e2}
+.chk .ex{font-style:italic;color:#3b2b5e}
+.prep.good{border-color:#2e7d32}.prep.partly{border-color:#c98a12}.prep.missing{border-color:var(--red)}
+.prepview{background:#fff6d6;border:2px dashed #c98a12;border-radius:10px;padding:6px 10px;margin:4px 0}
+.prepview .pvhead{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.prepview .pvhead button.tiny{float:none;margin-left:auto}
+.prepview .pvhead button.tiny + button.tiny{margin-left:0}
+#prepText{white-space:pre-wrap;font-size:1.05em;line-height:1.4;max-height:22vh;overflow:auto;margin-top:4px}
+.saylbl{margin:6px 0 2px;font-weight:700;display:block}
+.sayblock{position:sticky;bottom:0;background:var(--paper);padding:6px 0 4px;border-top:3px solid var(--navy);z-index:5}
+.sayblock textarea{min-height:64px}
+.sayrow{margin:6px 0 2px}
+.sayrow button.mic{padding:14px 16px}
+.sayblock .heard{margin:2px 0;min-height:0}
+.groups{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0}
+.groups button{font-size:.78em;padding:4px 8px;box-shadow:2px 2px 0 var(--navy);border-width:2px;background:#fff}
+.groups button.ok{background:#e4f8e4;border-color:#2e7d32}
+.groups button .cnt{font-weight:400;opacity:.75;font-size:.9em}
+.groups button.always{border-style:dashed}
+.groups button.later{border-color:#c98a12;background:#fff6d6}
+.groups button.next{background:var(--yellow);border-color:var(--red);animation:nextpulse 1.4s infinite}
+@keyframes nextpulse{0%,100%{box-shadow:2px 2px 0 var(--navy)}50%{box-shadow:2px 2px 0 var(--navy),0 0 0 6px rgba(214,40,40,.3)}}
+#nextHint{margin:2px 0 4px;min-height:1.2em}
+.groups button.empty{opacity:.55}
+.prep{margin:8px 0;padding:8px 10px;border:2px solid #b0bec5;border-radius:10px;background:#fff}
+.prep b{display:block}
+.prep .small{margin:2px 0 4px}
+.prep textarea{min-height:70px;font-size:1em}
+.prep ul.ask{margin:4px 0 6px 18px;padding:0;font-size:.92em}
+.starters{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin:4px 0 6px}
+.starters button.st{font-size:.8em;padding:3px 8px;box-shadow:2px 2px 0 var(--navy);border-width:2px;background:#e8f1ff;font-weight:600}
+.critbox{background:#fffdf5;border:3px solid var(--navy);border-radius:12px;padding:8px 12px;margin:10px 0}
+.cols{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){
+  .cols{grid-template-columns:minmax(0,1fr) 400px;align-items:start}
+  .colR{position:sticky;top:6px}
+  .colR .critbox{margin:0;max-height:calc(100vh - 24px);overflow:auto;padding:6px 10px}
+  .colR .crit{display:block;margin:2px 0}
+  .colR .crit .c{display:block;margin:1px 0;width:auto;font-size:.76em;line-height:1.2;padding:1px 6px}
+  .colR .crit .c.part{padding:3px 0 0;font-size:.9em}
+  .colR #critNote{margin:4px 0 0;font-size:.78em}
+  header{padding:6px 16px 0}
+  header h1{font-size:1.3em}
+  body.inroom header .unit{display:none}
+  main.wide{padding-top:6px}
+  .lines{max-height:34vh}
+}
+@media (max-width:859px){
+  .sayblock textarea{min-height:56px}
+  .sayblock p.small{display:none}
+  .colR .critbox{max-height:40vh;overflow:auto}
+}
+.critbox .crit .c.part{color:var(--navy)}
+.mascots{display:flex;justify-content:space-between;align-items:flex-end;margin-top:-6px}
+.mascots svg{width:90px;height:auto}
+footer{color:#fff;text-align:center;font-size:.85em;padding:10px;opacity:.85}
+</style>
+</head>
+<body>
+<header>
+  <div class="unit">CHCAGE011 Provide support to people living with dementia</div>
+  <h1>The family meeting: your seat</h1>
+</header>
+<main>
+  <section class="box" id="join">
+    <h2>Join the session</h2>
+    <p>Your teacher shows a session code on the screen. Type it here with your first name. Then wait: your teacher unlocks your seat when it is your turn.</p>
+    <label for="code">Session code</label>
+    <input type="text" id="code" class="code" maxlength="6" autocomplete="off" placeholder="CODE">
+    <label for="name">Your first name</label>
+    <input type="text" id="name" maxlength="30" autocomplete="off" placeholder="First name">
+    <div class="row" style="margin-top:14px"><button class="big" id="btnJoin">Join</button></div>
+    <p class="small">This page works in Google Chrome or Microsoft Edge. Allow the microphone when the browser asks. You can also type what you want to say.</p>
+  </section>
+
+  <section class="box" id="prepBox">
+    <h2>My preparation <button class="tiny" id="btnPrepToggle" style="float:right">Open</button></h2>
+    <p class="small">Answer the questions for each group. Press a sentence starter to put it in the box, then finish it in your own words. It is saved on this computer only. During your turn, press a group button to see your prepared words. Read them out loud with the microphone, or copy them into your box. Only the "What I say" box is sent.</p>
+    <div id="prepForm" class="hidden"></div>
+    <div class="row hidden" id="checkRow"><button id="btnCheck" class="big" style="background:#e4f8e4">✔ Check my preparation</button></div>
+    <p class="small hidden" id="checkHelp">The check needs the session code (type it in the box above). Your teacher's screen asks the AI to read your preparation and tells you which points are still missing. You only have a few checks, so write as much as you can first.</p>
+    <div id="checkOut"></div>
+  </section>
+  <section class="box hidden" id="room">
+    <div class="cols">
+      <div class="colL">
+        <h2 id="roomTitle">Waiting for your turn</h2>
+        <div class="status wait" id="status">Your teacher will unlock your seat when it is your turn.</div>
+        <div class="meters hidden" id="meters">
+          <div class="meter" style="display:none">Part <b id="mPart">A</b></div>
+          <div class="meter">Time left <b id="mTime">8:00</b></div>
+          <div class="meter">Turns left <b id="mTries">7</b></div>
+        </div>
+        <div id="talk" class="hidden">
+          <div class="groups" id="groups"></div>
+          <div class="small" id="nextHint"></div>
+          <div class="prepview hidden" id="prepView">
+            <div class="pvhead"><b>My prepared words</b> <span class="small">(not sent: read them out loud, or press Copy)</span>
+              <button type="button" class="tiny" id="btnCopyPrep">Copy into my box</button><button type="button" class="tiny" id="btnHidePrep">Hide</button></div>
+            <div id="prepText"></div>
+          </div>
+          <div class="sayblock">
+            <label for="text" class="saylbl">What I say <span class="small">(only this box is sent)</span></label>
+            <div class="heard" id="heard"></div>
+            <textarea id="text" placeholder="Speak with the microphone, or type here"></textarea>
+            <div class="row sayrow">
+              <button class="mic" id="btnMic">🎤 Hold to speak</button>
+              <button class="big" id="btnSend" style="width:auto;flex:1">Send</button>
+              <button id="btnAgain" style="background:#fff">Say that again</button>
+            </div>
+            <p class="small">Hold the microphone, speak, let go. Check the words, then press Send. Everyone hears it on the big screen.</p>
+          </div>
+        </div>
+        <div class="row hidden" id="myDone"><button class="big" id="btnMyScript">Download my script and checklist (Word)</button></div>
+        <h3 style="margin:14px 0 6px">What has been said</h3>
+        <div class="lines" id="lines"><div class="line nar">Nothing yet.</div></div>
+        <div class="row" style="margin-top:12px"><button id="btnLeave" style="background:#fff">Leave the session</button></div>
+      </div>
+      <aside class="colR">
+        <div class="critbox">
+          <b id="critTitle">The checklist for this meeting</b> <span class="small" id="critCount"></span> <button id="btnFull" class="tiny" title="Show the full wording">Full text</button>
+          <div class="crit" id="crit"></div>
+          <p class="small" id="critNote">These are the things the assessor looks for (Part A of your assessment). Prepare with <b>My preparation</b> and lesson 11. During your turn, the ones you have shown turn green.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+<footer>A3 Homan Intelligence Systems. Your name is not sent to the AI.</footer>
+<script>
+const FIREBASE = { projectId: "a3-lessons-live", databaseURL: "https://a3-lessons-live-default-rtdb.asia-southeast1.firebasedatabase.app" };
+const MADE = "2026-11-09";
+const SCENARIO = {"title":"The family meeting for Wilson Blue","unit":"CHCAGE011","characters":{"rosie":{"name":"Rosie","role":"Wilson's wife"},"clifton":{"name":"Clifton","role":"Wilson's son"}},"criteria":[{"id":"1","part":"A","text":"Introduced self and confirmed the purpose for the discussion","short":"Introduce yourself and the purpose"},{"id":"2","part":"A","text":"Consulted the family so the setting was suitable and they felt comfortable to speak freely, including location and cultural requirements","short":"Check the place, comfort, privacy and culture"},{"id":"3a","part":"A","text":"Active listening","short":"Active listening"},{"id":"3b","part":"A","text":"Curious questioning","short":"Curious questions"},{"id":"3c","part":"A","text":"Empathy","short":"Empathy"},{"id":"3d","part":"A","text":"Appropriate terminology","short":"Respectful words"},{"id":"3e","part":"A","text":"Open and closed questions","short":"Open and closed questions"},{"id":"3f","part":"A","text":"Respectful non-verbal language (the teacher ticks this one)","short":"Respectful body language (teacher ticks)"},{"id":"4","part":"A","text":"Kept the interaction positive and respectful","short":"Positive and respectful"},{"id":"5","part":"A","text":"Showed respect for the family and their role in Wilson's life and the care team","short":"Respect the family and their role"},{"id":"6","part":"A","text":"Calmly and sensitively asked a range of open and closed questions to gather relevant information","short":"Calm, sensitive questions to gather information"},{"id":"7","part":"A","text":"Gave reassurance and validation","short":"Reassure and validate"}],"timing":{"meetingMinutes":8,"turns":7},"groups":[{"id":"g1","part":"A","title":"The opening","ids":["1","2"],"plan":"Say your name, your role and why you are meeting. Check the place, comfort, privacy and culture.","ask":["How will you introduce yourself and your role?","How will you say why you are meeting?","What will you check about the place, comfort, privacy and culture?"],"starters":["Hello, my name is ... and I am ...","Thank you for coming in. I would like to talk about ...","Is this a good place to talk? Are you both ...","Is there anything about your culture or beliefs that ...","What you tell me stays ..."],"examples":["Good morning, my name is ... I am one of the support workers here. Thank you for coming in. I would like to learn about Wilson so we can support him well.","Is this room all right for you both? Can you hear me well? Are you comfortable to talk here?","Is there anything about your family, culture or beliefs we should know? What you tell me stays private within the care team."]},{"id":"g2","part":"A","title":"Ask and listen","ids":["3a","3b","3e","6"],"plan":"Ask open questions to learn about the person. Ask closed questions to check. Follow up on what they say. Repeat back the key points.","ask":["Which open questions will help the family tell you about the person: life, likes, dislikes, routines?","What will you ask about the evenings, and about what the family tried at home?","How will you check that you understood?"],"starters":["Can you tell me about ...","What does he enjoy ...","What happens in the late afternoon and evening ...","What did you try at home, and what ...","So what I hear is ... Is that right?"],"examples":["Can you tell me a bit about Wilson's life before he moved in?","What did you try at home in the evenings? What helped, and what did not help?","So what I hear is ... Did I get that right?"]},{"id":"g3","part":"A","title":"Care and respect","ids":["3c","3d","3f","4","5"],"plan":"Show you care about the person and the family. Use respectful, plain words. Thank the family and do not judge, even if you do not agree.","ask":["How will you show empathy for the family?","How will you thank them for their role in the person's life and in the care team?","If a family member asks for something staff cannot do, how will you answer respectfully?"],"starters":["That must have been ...","Thank you for ...","You know him best, so ...","I can hear that you are worried about ...","I understand why you would ask that. Here we need to ..."],"examples":["That must have been very tiring for you.","Thank you both. You know Wilson best, and you are part of his care team.","I understand why you ask. I cannot do that here, but I will pass it on to my supervisor and we will find a safe way to help."]},{"id":"g4","part":"A","title":"Reassure and close","ids":["7"],"plan":"Reassure the family. Say what happens next. Thank them and close the meeting.","ask":["What will you say to reassure the family?","What will you tell them happens next?","How will you close the meeting?"],"starters":["You have done a great job ...","What happens next is ...","I will talk to my supervisor about ...","Thank you for ..."],"examples":["You have looked after him so well. We will use what you told us to help him settle in.","I will write this in his notes and talk to my supervisor today.","Thank you both for your time. You can talk to us any time."]}]};
+/* Shared by stage.html and seat.html (inlined by _build/build-ai-shift.js). */
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const LS = {
+  get(k, d) { try { const v = localStorage.getItem('fm_' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem('fm_' + k, JSON.stringify(v)); } catch (e) {} },
+  del(k) { try { localStorage.removeItem('fm_' + k); } catch (e) {} }
+};
+function rid(n) { const c = 'abcdefghjkmnpqrstuvwxyz23456789'; const a = new Uint8Array(n); crypto.getRandomValues(a); return Array.from(a, x => c[x % c.length]).join(''); }
+function mmss(ms) { ms = Math.max(0, ms); const m = Math.floor(ms / 60000), s = Math.floor(ms / 1000) % 60; return m + ':' + (s < 10 ? '0' : '') + s; }
+function cleanCode(s) { return String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6); }
+function toast(msg, ms) { let t = $('toast'); if (!t) { t = document.createElement('div'); t.id = 'toast'; document.body.appendChild(t); } t.textContent = msg; t.classList.add('show'); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('show'), ms || 3200); }
+
+/* ---------- Firebase Realtime Database (the same project as the Presenting view) ---------- */
+const SDK = 'https://www.gstatic.com/firebasejs/10.12.2/';
+let DB = null;
+function loadScript(src) { return new Promise((ok, bad) => { const s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = () => bad(new Error('Could not load ' + src)); document.head.appendChild(s); }); }
+async function dbReady() {
+  if (DB) return DB;
+  await loadScript(SDK + 'firebase-app-compat.js'); await loadScript(SDK + 'firebase-database-compat.js');
+  const app = firebase.apps.length ? firebase.app() : firebase.initializeApp(FIREBASE);
+  const db = firebase.database(app);
+  DB = {
+    ref: p => db.ref(p),
+    get: async p => (await db.ref(p).get()).val(),
+    set: (p, v) => db.ref(p).set(v),
+    update: (p, v) => db.ref(p).update(v),
+    push: (p, v) => db.ref(p).push(v),
+    watch: (p, cb) => { const r = db.ref(p); const h = r.on('value', s => cb(s.val())); return () => r.off('value', h); },
+    onChild: (p, cb) => { const r = db.ref(p); const h = r.on('child_added', s => cb(s.key, s.val())); return () => r.off('child_added', h); },
+    now: () => firebase.database.ServerValue.TIMESTAMP
+  };
+  return DB;
+}
+const ROOT = 'shift/';           /* database rule: shift/$code is read and write for everyone (see README) */
+
+/* ---------- Speech out (the browser's own voices; Microsoft Edge has Natasha and William) ---------- */
+let VOICES = [];
+function refreshVoices() { VOICES = (window.speechSynthesis ? speechSynthesis.getVoices() : []) || []; }
+if (window.speechSynthesis) { refreshVoices(); speechSynthesis.onvoiceschanged = refreshVoices; }
+const FEM = /natasha|catherine|hayley|female|karen|zira|jenny|libby|sonia|mia|aria|samantha|kate|annie|clara|emily/i;
+const MAL = /william|james|male|daniel|ryan|guy|thomas|george|neil|richard|mark|david|liam|duncan/i;
+function voiceByName(name) { return VOICES.find(v => v.name === name) || null; }
+function autoVoice(gender, avoid) {
+  avoid = avoid || [];
+  const ok = v => !avoid.includes(v.name) && (gender === 'female' ? (FEM.test(v.name) && !MAL.test(v.name)) : (MAL.test(v.name) && !FEM.test(v.name)));
+  const au = VOICES.filter(v => /en[-_]AU/i.test(v.lang)), en = VOICES.filter(v => /^en/i.test(v.lang));
+  return au.find(ok) || en.find(ok) || au.find(v => !avoid.includes(v.name)) || en[0] || VOICES[0] || null;
+}
+let speakQueue = [], speaking = false, speakToken = 0, onSpeakState = null;
+function speak(text, voice, opts) {
+  opts = opts || {};
+  return new Promise(resolve => {
+    if (!window.speechSynthesis || !text) return resolve();
+    speakQueue.push({ text: String(text), voice, rate: opts.rate || 1, pitch: opts.pitch || 1, who: opts.who || '', resolve });
+    pump();
+  });
+}
+function pump() {
+  if (speaking || !speakQueue.length) return;
+  const it = speakQueue.shift(); speaking = true;
+  const u = new SpeechSynthesisUtterance(it.text);
+  if (it.voice) u.voice = it.voice; u.rate = it.rate; u.pitch = it.pitch; u.lang = (it.voice && it.voice.lang) || 'en-AU';
+  const tok = ++speakToken; let done = false;
+  const finish = () => { if (done) return; done = true; clearTimeout(guard); speaking = false; if (onSpeakState) onSpeakState(''); it.resolve(); pump(); };
+  u.onstart = () => { if (onSpeakState) onSpeakState(it.who); };
+  u.onend = finish; u.onerror = finish;
+  const words = it.text.split(/\s+/).length;
+  const guard = setTimeout(finish, words * 520 / it.rate + 3000);     /* browsers sometimes never say "end" */
+  try { speechSynthesis.speak(u); } catch (e) { finish(); }
+}
+function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = []; try { speechSynthesis.cancel(); } catch (e) {} speaking = false; if (onSpeakState) onSpeakState(''); }
+
+(function () {
+  'use strict';
+  const SEAT = LS.get('seatId') || (function () { const s = rid(10); LS.set('seatId', s); return s; })();
+  let code = '', name = '', session = null, unwatch = null, lastLines = '', timer = null, sending = false;
+  let recog = null, listening = false, interim = '';
+
+  let done = null, unwatchDone = null;
+  let fullText = false, lastCrit = [false, []];
+  let critKey = '';
+  function renderCrit(mine, ids) {
+    lastCrit = [mine, ids];
+    const ck = JSON.stringify([mine, ids || [], fullText]); if (ck === critKey) return; critKey = ck; if (typeof GROUPS !== 'undefined') renderGroups(mine ? ids : []);
+    const set = new Set(ids || []); let part = '';
+    $('crit').innerHTML = SCENARIO.criteria.map(c => '<span class="c' + (mine && set.has(c.id) ? ' ok' : '') + '" title="' + esc(c.text) + '">' + (mine && set.has(c.id) ? '✔ ' : '') + esc(c.id + ' ' + (fullText ? c.text : (c.short || c.text))) + '</span>').join('');
+    $('critCount').textContent = mine ? set.size + ' of ' + SCENARIO.criteria.length + ' shown so far' : SCENARIO.criteria.length + ' points';
+    $('critTitle').textContent = mine ? 'Your checklist: how you are doing' : 'The checklist for this meeting';
+  }
+  function myScriptDoc() {
+    const d = done; const set = new Set(d.crit || []);
+    const lines = Array.isArray(d.lines) ? d.lines : Object.values(d.lines || {});
+    const row = c => '<tr><td>' + esc(c.id + ' ' + c.text) + '</td><td style="text-align:center">' + (set.has(c.id) ? 'Yes' : '') + '</td><td></td></tr>';
+    return '<html><head><meta charset="utf-8"><title>My family meeting</title></head><body style="font-family:Calibri,Arial;font-size:11pt">' +
+      '<h1>CHCAGE011 family meeting: ' + esc(d.name || name) + '</h1><p>' + new Date(d.at || Date.now()).toLocaleString('en-AU') + '. Shown: ' + set.size + ' of ' + SCENARIO.criteria.length + ' checklist points. This is your practice record, not the assessment result.</p>' +
+      '<h2>Still to practise</h2><ul>' + (SCENARIO.criteria.filter(c => !set.has(c.id)).map(c => '<li>' + esc(c.id + ' ' + c.text) + '</li>').join('') || '<li>Nothing: every point was shown.</li>') + '</ul>' +
+      '<h2>Checklist</h2><table border="1" cellpadding="4" style="border-collapse:collapse;width:100%"><tr><th>Point</th><th>Shown</th><th>My note: what I will do next time</th></tr>' + SCENARIO.criteria.map(row).join('') + '</table>' +
+      '<h2>What was said</h2>' + lines.map(l => '<p><b>' + esc(l.who === 'student' ? (l.name || 'Me') : l.who === 'narrator' ? 'Narrator' : l.who) + ':</b> ' + esc(l.text) + '</p>').join('') + '</body></html>';
+  }
+  function download(fname, html) { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['\ufeff' + html], { type: 'application/msword' })); a.download = fname; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); }
+  function partLabel(p) { return 'the meeting'; }
+  function render() {
+    const s = session;
+    const meters = $('meters'), talk = $('talk'), st = $('status');
+    if (!s || !s.open || (s.expires && Date.now() > s.expires)) {
+      st.className = 'status off'; st.textContent = 'The session is closed. Ask your teacher.';
+      meters.classList.add('hidden'); talk.classList.add('hidden'); $('roomTitle').textContent = 'Session closed'; stopListening(); return;
+    }
+    const mine = s.seat === SEAT;
+    const turn = s.turn || {};
+    const timeLeft = turn.deadline ? turn.deadline - Date.now() : 0;
+    const over = mine && (turn.tries <= 0 || timeLeft <= 0);
+    renderCrit(mine, s.crit); renderGroups(mine ? s.crit : []);
+    $('myDone').classList.toggle('hidden', !done);
+    if (mine && !over) {
+      $('roomTitle').textContent = 'Your turn, ' + name;
+      st.className = 'status go';
+      st.textContent = s.busy ? 'Wait: the people in the room are answering...' : ('You are with Rosie and Clifton. What do you say? (' + (turn.tries == null ? '' : turn.tries) + (turn.tries === 1 ? ' turn left)' : ' turns left)'));
+      meters.classList.remove('hidden'); talk.classList.remove('hidden');
+      $('mPart').textContent = turn.phase || 'A'; $('mTime').textContent = mmss(timeLeft); $('mTries').textContent = String(turn.tries == null ? '' : turn.tries);
+      if (pending) { const n = s.lines ? Object.keys(s.lines).length : 0; if (s.busy || n > pending.lines) pending = null; else if (Date.now() - pending.at > 12000) { st.className = 'status off'; st.textContent = 'The big screen has not picked up your words yet. Tell your teacher.'; } }
+      const can = !s.busy && !sending;
+      $('btnSend').disabled = !can; $('btnMic').disabled = !can;
+    } else if (mine && over) {
+      $('roomTitle').textContent = 'Your turn has finished';
+      st.className = 'status wait'; st.textContent = 'Well done. Your teacher will talk about it now.';
+      meters.classList.add('hidden'); talk.classList.add('hidden'); stopListening();
+    } else {
+      $('roomTitle').textContent = 'Waiting for your turn';
+      st.className = 'status wait';
+      st.textContent = s.seatName ? ('It is ' + s.seatName + "'s turn now. Follow along on the big screen.") : 'Your teacher will unlock your seat when it is your turn.';
+      meters.classList.add('hidden'); talk.classList.add('hidden'); stopListening();
+    }
+    const lines = Array.isArray(s.lines) ? s.lines : Object.values(s.lines || {});
+    const key = JSON.stringify(lines.slice(-40));
+    if (key !== lastLines) {
+      lastLines = key;
+      const box = $('lines');
+      box.innerHTML = lines.length ? lines.slice(-40).map(l => {
+        const cls = l.who === 'student' ? 'you' : (l.who === 'narrator' ? 'nar' : 'them');
+        const who = l.who === 'student' ? (l.name || 'Support worker') : (l.who === 'narrator' ? '' : l.who);
+        return '<div class="line ' + cls + '">' + (who ? '<b>' + esc(who) + ':</b> ' : '') + esc(l.text) + '</div>';
+      }).join('') : '<div class="line nar">Nothing yet.</div>';
+      box.scrollTop = box.scrollHeight;
+    }
+  }
+
+  async function join() {
+    code = cleanCode($('code').value); name = $('name').value.trim().slice(0, 30);
+    if (code.length < 4) return toast('Type the session code from the screen.');
+    if (!name) return toast('Type your first name.');
+    $('btnJoin').disabled = true;
+    try {
+      const db = await dbReady();
+      const s = await db.get(ROOT + code + '/session');
+      if (!s || !s.open) { toast('No open session has that code. Check the screen.'); $('btnJoin').disabled = false; return; }
+      await db.set(ROOT + code + '/seats/' + SEAT, { name, at: db.now(), ua: (navigator.userAgent || '').slice(0, 60) });
+      LS.set('lastCode', code); LS.set('lastName', name);
+      $('join').classList.add('hidden'); $('prepBox').classList.add('hidden'); $('room').classList.remove('hidden'); document.querySelector('main').classList.add('wide'); document.body.classList.add('inroom');
+      if (unwatch) unwatch();
+      unwatch = db.watch(ROOT + code + '/session', v => { session = v; render(); });
+      if (unwatchDone) unwatchDone();
+      unwatchDone = db.watch(ROOT + code + '/done/' + SEAT, v => { done = v; $('myDone').classList.toggle('hidden', !done); });
+      clearInterval(timer); timer = setInterval(render, 1000);
+    } catch (e) { toast('Could not join: ' + e.message); $('btnJoin').disabled = false; }
+  }
+  let pending = null;
+  async function send() {
+    const text = $('text').value.trim();
+    if (!text) return toast('Say or type something first.');
+    if (!session || session.seat !== SEAT) return toast('It is not your turn.');
+    if (text.length > 600) return toast('Keep it shorter: one or two sentences.');
+    sending = true; render();
+    try {
+      const db = await dbReady();
+      await db.push(ROOT + code + '/say/' + SEAT, { text, t: db.now(), n: (session.turn && session.turn.n) || 0 });
+      $('text').value = ''; $('heard').textContent = '';
+      sentCount++;
+      pending = { at: Date.now(), lines: (session && session.lines ? Object.keys(session.lines).length : 0) }; toast('Sent. Listen to the big screen.');
+    } catch (e) { toast('Could not send: ' + e.message + '. Tell your teacher.'); }
+    sending = false; render();
+  }
+  /* microphone: hold the button */
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  function startListening() {
+    if (!SR) return toast('This browser has no microphone input. Type instead, or use Chrome or Edge.');
+    if (listening) return;
+    recog = new SR(); recog.lang = 'en-AU'; recog.interimResults = true; recog.continuous = true; interim = '';
+    recog.onresult = ev => {
+      let fin = '', tmp = '';
+      for (let i = 0; i < ev.results.length; i++) { const r = ev.results[i]; if (r.isFinal) fin += r[0].transcript + ' '; else tmp += r[0].transcript; }
+      interim = fin; $('heard').textContent = (fin + tmp).trim() || 'Listening...';
+    };
+    recog.onerror = e => { if (e.error !== 'no-speech') toast('Microphone: ' + e.error); };
+    recog.onend = () => { listening = false; $('btnMic').classList.remove('on'); $('btnMic').textContent = '🎤 Hold to speak'; const heard = $('heard').textContent.replace(/^Listening\.\.\.$/, '').trim(); if (heard) { $('text').value = ($('text').value ? $('text').value + ' ' : '') + heard; } $('heard').textContent = ''; };
+    try { recog.start(); listening = true; $('btnMic').classList.add('on'); $('btnMic').textContent = '🎤 Listening... let go when done'; $('heard').textContent = 'Listening...'; } catch (e) { toast('Microphone: ' + e.message); }
+  }
+  function stopListening() { if (recog && listening) { try { recog.stop(); } catch (e) {} } }
+  const mic = $('btnMic');
+  mic.addEventListener('pointerdown', e => { e.preventDefault(); startListening(); });
+  ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev => mic.addEventListener(ev, stopListening));
+  mic.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); listening ? stopListening() : startListening(); } });
+  $('btnSend').onclick = send;
+  $('btnMyScript').onclick = () => { if (done) download('My_family_meeting_' + (name || 'student') + '.doc', myScriptDoc()); };
+  $('btnAgain').onclick = () => { $('text').value = ''; $('heard').textContent = ''; $('text').focus(); };
+  $('text').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } });
+  $('btnJoin').onclick = join;
+  $('code').addEventListener('keydown', e => { if (e.key === 'Enter') $('name').focus(); });
+  $('name').addEventListener('keydown', e => { if (e.key === 'Enter') join(); });
+  $('btnLeave').onclick = () => { if (unwatch) unwatch(); clearInterval(timer); stopListening(); $('room').classList.add('hidden'); $('join').classList.remove('hidden'); $('prepBox').classList.remove('hidden'); document.querySelector('main').classList.remove('wide'); document.body.classList.remove('inroom'); $('btnJoin').disabled = false; };
+
+  /* ---------- my preparation: saved on this computer (localStorage), never sent until the student presses Send ---------- */
+  const GROUPS = SCENARIO.groups || [];
+  const gname = g => (GROUPS.indexOf(g) + 1) + '. ' + g.title;
+  const PREP = LS.get('prep', {});
+  function renderPrep() {
+    $('prepForm').innerHTML = GROUPS.map(g => '<div class="prep"><b>' + esc(gname(g)) + ' <span class="small">(points ' + esc(g.ids.join(', ')) + ')</span></b>' +
+      '<p class="small">' + esc(g.plan) + '</p>' +
+      '<ul class="ask">' + (g.ask || []).map(q => '<li>' + esc(q) + '</li>').join('') + '</ul>' +
+      '<div class="starters"><span class="small">Start with:</span> ' + (g.starters || []).map((t, i) => '<button type="button" class="st" data-g="' + g.id + '" data-i="' + i + '">' + esc(t) + '</button>').join('') + '</div>' +
+      '<textarea data-prep="' + g.id + '" placeholder="Finish the sentences in your own words">' + esc(PREP[g.id] || '') + '</textarea></div>').join('') +
+      '<p class="small">Saved on this computer as you type.</p>';
+    const save = t => { PREP[t.dataset.prep] = t.value; LS.set('prep', PREP); groupsKey = ''; renderGroups(lastCrit[0] ? lastCrit[1] : []); };
+    $('prepForm').querySelectorAll('textarea[data-prep]').forEach(t => t.oninput = () => save(t));
+    $('prepForm').querySelectorAll('button.st').forEach(b => b.onclick = () => {
+      const g = GROUPS.find(x => x.id === b.dataset.g), t = $('prepForm').querySelector('textarea[data-prep="' + b.dataset.g + '"]');
+      t.value = (t.value.trim() ? t.value.replace(/\s+$/, '') + '\n' : '') + g.starters[+b.dataset.i] + ' ';
+      t.focus(); const at = t.value.indexOf('...', t.value.length - g.starters[+b.dataset.i].length - 2); if (at >= 0) t.setSelectionRange(at, at + 3);
+      save(t);
+    });
+  }
+  function showPrep(txt, title) {
+    $('prepText').textContent = txt; $('prepView').classList.remove('hidden');
+    $('prepView').querySelector('b').textContent = 'My prepared words: ' + title;
+  }
+  $('btnHidePrep').onclick = () => $('prepView').classList.add('hidden');
+  $('btnCopyPrep').onclick = () => { const t = $('prepText').textContent.trim(); if (!t) return; $('text').value = ($('text').value.trim() ? $('text').value.trim() + ' ' : '') + t; $('text').focus(); };
+  let groupsKey = '';
+  /* Which group to use next (see nextGroup). */
+  let sentCount = 0, hl = null, skipped = new Set(), hlTurn = '';
+  function nextGroup(set) {
+    /* The family meeting (CHCAGE011): group 1 first, then 2 and 3 for the whole meeting, and group 4 for the last turns. Uses only the ticks: no AI cost. */
+    const s = session || {}, t = s.turn || {};
+    if (!s.seat || s.seat !== SEAT) return null;
+    const have = g => g.ids.filter(i => set.has(i)).length, done = g => have(g) === g.ids.length;
+    const byId = id => GROUPS.find(g => g.id === id);
+    const left = t.deadline ? t.deadline - Date.now() : 1e9;
+    if (!done(byId('g4')) && (left < 120000 || (t.tries != null && t.tries <= 2))) return { id: 'g4', why: 'Time to reassure and close' };
+    if (!done(byId('g1'))) return { id: 'g1', why: 'Start with' };
+    if (have(byId('g2')) < 2) return { id: 'g2', why: 'Next' };
+    return null;
+  }
+  function renderGroups(ids) {
+    const set = new Set(ids || []), nx = nextGroup(set);
+    const k = JSON.stringify([ids || [], PREP, nx, [...skipped]]); if (k === groupsKey) return; groupsKey = k;
+    $('groups').innerHTML = GROUPS.map(g => {
+      const txt = (PREP[g.id] || '').trim(), have = g.ids.filter(i => set.has(i)).length, ok = have === g.ids.length;
+      const cls = (ok ? 'ok ' : '') + (txt ? '' : 'empty ') + (nx && nx.id === g.id ? 'next' : '') + (!ok && skipped.has(g.id) ? ' later' : '') + (['g2', 'g3'].includes(g.id) && !ok ? ' always' : '');
+      return '<button type="button" data-g="' + g.id + '" class="' + cls + '" title="' + esc(txt || 'Nothing prepared for this group yet') + '">' + (ok ? '✔ ' : '') + esc(gname(g)) + ' <span class="cnt">' + have + '/' + g.ids.length + '</span></button>';
+    }).join('');
+    $('nextHint').innerHTML = nx ? '<b>' + esc(nx.why) + ':</b> ' + esc(gname(GROUPS.find(g => g.id === nx.id))) + '. Groups 2 and 3 are for the whole meeting.' : (set.size ? 'Groups 2 and 3 are for the whole meeting.' : '');
+    $('groups').querySelectorAll('button').forEach(b => b.onclick = () => { const txt = (PREP[b.dataset.g] || '').trim(); const g = GROUPS.find(x => x.id === b.dataset.g); showPrep(txt || ((g.starters || []).join('\n')), gname(g) + (txt ? '' : ' (sentence starters: nothing prepared yet)')); });
+  }
+
+  /* ---------- check my preparation: sent to the teacher's stage page, which asks the AI and answers this seat only ---------- */
+  let unwatchCheck = null, checkKey = '';
+  function setCheckUI() { const open = !$('prepForm').classList.contains('hidden'); $('checkRow').classList.toggle('hidden', !open); $('checkHelp').classList.toggle('hidden', !open); }
+  async function askCheck() {
+    const c = cleanCode($('code').value);
+    if (c.length < 4) { toast('Type the session code in the box at the top first.'); $('code').focus(); return; }
+    const empty = GROUPS.filter(g => !(PREP[g.id] || '').trim()).map(gname);
+    if (empty.length === GROUPS.length) return toast('Write your preparation first.');
+    $('btnCheck').disabled = true;
+    $('checkOut').innerHTML = '<div class="status wait">Checking... this takes about 20 seconds.' + (empty.length ? ' Nothing written yet for: ' + esc(empty.join(', ')) + '.' : '') + '</div>';
+    try {
+      const db = await dbReady();
+      const s = await db.get(ROOT + c + '/session');
+      if (!s || !s.open) { $('checkOut').innerHTML = ''; $('btnCheck').disabled = false; return toast('No open session has that code. Check the screen.'); }
+      const groups = {}; GROUPS.forEach(g => groups[g.id] = String(PREP[g.id] || '').slice(0, 1500));
+      const ref = await db.push(ROOT + c + '/checkq', { seat: SEAT, groups, at: db.now() });
+      checkKey = ref.key;
+      if (unwatchCheck) unwatchCheck();
+      unwatchCheck = db.watch(ROOT + c + '/checkres/' + SEAT, v => showCheck(v));
+      setTimeout(() => { if ($('btnCheck').disabled && /Checking/.test($('checkOut').textContent)) { $('checkOut').innerHTML = '<div class="status off">No answer yet. Your teacher\'s screen must be open with the session running. Ask your teacher.</div>'; $('btnCheck').disabled = false; } }, 60000);
+    } catch (e) { $('checkOut').innerHTML = ''; $('btnCheck').disabled = false; toast('Could not send: ' + e.message); }
+  }
+  function showCheck(v) {
+    if (!v || v.key !== checkKey) return;
+    if (v.status === 'checking') return;
+    $('btnCheck').disabled = false;
+    if (v.error) { $('checkOut').innerHTML = '<div class="status off">' + esc(v.error) + '</div>'; return; }
+    const r = v.result || {}, short = id => { const c = SCENARIO.criteria.find(x => x.id === id); return id + ' ' + (c ? (c.short || c.text) : ''); };
+    const label = { good: '✔ Good', partly: '◐ Nearly there', missing: '✖ Missing' };
+    document.querySelectorAll('.prep').forEach((el, i) => { el.classList.remove('good', 'partly', 'missing'); const g = (r.groups || [])[i]; if (g) el.classList.add(g.status); });
+    $('checkOut').innerHTML = '<div class="status go">' + esc(r.overall || 'Here is your check.') + (v.left != null ? ' Checks left: ' + v.left + '.' : '') + '</div>' +
+      (r.groups || []).map(g => { const G = GROUPS.find(x => x.id === g.id) || { title: g.id };
+        return '<div class="chk ' + g.status + '"><b>' + label[g.status] + ': ' + esc(G.title ? gname(G) : g.id) + '</b>' +
+          (g.missing && g.missing.length ? '<div class="small">Still to cover: ' + g.missing.map(id => esc(short(id))).join('; ') + '</div>' : '') +
+          (g.tip ? '<div>' + esc(g.tip) + '</div>' : '') + (g.example ? '<div class="ex">For example: "' + esc(g.example) + '"</div>' : '') + '</div>'; }).join('') +
+      '<p class="small">Change your preparation above, then check again if you have checks left. The coloured edges show each group.</p>';
+  }
+  $('btnCheck').onclick = askCheck;
+  $('btnPrepToggle').onclick = () => { const f = $('prepForm'); f.classList.toggle('hidden'); $('btnPrepToggle').textContent = f.classList.contains('hidden') ? 'Open' : 'Close'; setCheckUI(); };
+  renderPrep(); renderGroups([]);
+  $('btnFull').onclick = () => { fullText = !fullText; critKey = ''; $('btnFull').textContent = fullText ? 'Short text' : 'Full text'; renderCrit(lastCrit[0], lastCrit[1]); };
+  renderCrit(false, []);
+  $('code').value = cleanCode(LS.get('lastCode', '')); $('name').value = LS.get('lastName', '');
+  const q = new URLSearchParams(location.search).get('code'); if (q) $('code').value = cleanCode(q);
+})();
+</script>
+</body>
+</html>
