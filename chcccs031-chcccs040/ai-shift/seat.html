@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CHCCCS031 CHCCCS040: the visit with Cherry (your seat)</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--navy:#123c3a;--teal:#1b7f79;--yellow:#ffd23f;--red:#d62828;--paper:#fffdf5}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Arial,sans-serif;background:linear-gradient(180deg,#123c3a 0%,#1b7f79 55%,#bfe6e2 100%);min-height:100vh;color:var(--navy)}
+header{padding:14px 16px 6px;color:#fff;max-width:1100px;margin:0 auto}
+header .unit{font-size:.8em;color:var(--yellow);font-weight:700;letter-spacing:.04em}
+header h1{font-family:Impact,"Arial Black","Segoe UI",sans-serif;font-weight:400;letter-spacing:.03em;text-transform:uppercase;margin:2px 0 0;font-size:clamp(1.5em,5vw,2.4em);text-shadow:3px 3px 0 #0b2826}
+main{max-width:760px;margin:0 auto;padding:10px 16px 40px}
+main.wide{max-width:1100px}
+.box{background:var(--paper);border:4px solid var(--navy);border-radius:16px;padding:16px 18px;box-shadow:8px 8px 0 rgba(0,0,0,.25);margin:12px 0}
+.box h2{margin:0 0 8px;font-family:Impact,"Arial Black",sans-serif;font-weight:400;letter-spacing:.03em;text-transform:uppercase}
+label{display:block;font-weight:700;margin:10px 0 4px}
+input[type=text]{width:100%;font-size:1.3em;padding:10px 12px;border:3px solid var(--navy);border-radius:10px;font-family:inherit}
+input.code{text-transform:uppercase;letter-spacing:.25em;font-family:Impact,"Arial Black",sans-serif;font-size:1.8em;text-align:center}
+button{font-family:inherit;font-size:1.05em;font-weight:700;padding:12px 18px;border-radius:12px;border:3px solid var(--navy);background:var(--yellow);color:var(--navy);cursor:pointer;box-shadow:4px 4px 0 var(--navy)}
+button:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--navy)}
+button:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+button.big{width:100%;font-size:1.3em;padding:16px}
+button.do{background:#fff}
+button.mic{background:var(--red);color:#fff}
+button.mic.on{background:#2e7d32}
+.status{font-size:1.15em;font-weight:700;padding:12px 14px;border-radius:12px;background:#e8f1ff;border:2px dashed var(--teal);margin:8px 0}
+.status.wait{background:#fff6d6;border-color:#c98a12}
+.status.go{background:#e4f8e4;border-color:#2e7d32}
+.status.off{background:#fde2e2;border-color:var(--red)}
+.grid{display:grid;grid-template-columns:1fr;gap:0 18px}
+@media(min-width:900px){.grid{grid-template-columns:3fr 2fr}}
+.see{background:#f1f1f1;border-left:5px solid #888;padding:8px 12px;border-radius:10px;font-style:italic;margin:8px 0}
+.calm{display:flex;gap:6px;align-items:center;font-weight:700;margin:6px 0}
+.calm i{width:22px;height:12px;border-radius:6px;background:#d9d9d9;display:inline-block}
+.calm i.on{background:var(--teal)}
+.lines{max-height:44vh;overflow:auto;background:#fff;border:2px solid #b0bec5;border-radius:12px;padding:8px 10px;font-size:1.05em;line-height:1.45}
+.line{margin:6px 0;padding:6px 10px;border-radius:10px}
+.line.you{background:#fff6d6;border-left:5px solid #c98a12}
+.line.them{background:#e3f4f2;border-left:5px solid var(--teal)}
+.line.nar{background:#f1f1f1;color:#555;font-style:italic}
+textarea{width:100%;font-size:1.15em;padding:10px 12px;border:3px solid var(--navy);border-radius:10px;font-family:inherit;min-height:80px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:8px 0}
+.small{font-size:.9em;color:#555}
+.dots{display:flex;gap:6px;margin:6px 0}
+.dots i{width:18px;height:18px;border-radius:50%;border:2px solid var(--navy);display:inline-block}
+.dots i.used{background:var(--navy)}
+ul.tasks{margin:6px 0;padding-left:20px}
+.cl{list-style:none;padding:0;margin:6px 0}
+.cl li{padding:5px 8px;border-radius:8px;margin:4px 0;border:2px solid #cfd8dc;background:#fff}
+.cl li.met{background:#e4f8e4;border-color:#2e7d32}
+.cl .how{font-size:.8em;background:var(--navy);color:#fff;border-radius:6px;padding:1px 6px;margin-left:6px}
+.cl .parts span{display:inline-block;font-size:.85em;border:1px solid #b0bec5;border-radius:6px;padding:0 6px;margin:2px 4px 0 0}
+.cl .parts span.met{background:#e4f8e4;border-color:#2e7d32}
+.hidden{display:none !important}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:10px 16px;border-radius:10px;opacity:0;transition:.25s;pointer-events:none;max-width:90vw}
+#toast.show{opacity:1;transform:translateX(-50%)}
+</style>
+</head>
+<body>
+<header><div class="unit">CHCCCS031 and CHCCCS040: simulated shift</div><h1>The visit with Cherry</h1></header>
+<main id="main">
+  <section class="box" id="joinBox">
+    <h2>Join the session</h2>
+    <p>Your teacher shows a session code on the screen. Type it here with your first name. Then wait. Your teacher unlocks your seat when it is your turn.</p>
+    <label for="code">Session code</label><input type="text" id="code" class="code" maxlength="6" autocomplete="off">
+    <label for="name">Your first name</label><input type="text" id="name" maxlength="30" autocomplete="off">
+    <div class="row"><button class="big" id="btnJoin">Join</button></div>
+    <p class="small">You are the support worker. The whole class is one support worker on one visit. Each student has a few turns, then the next student carries on from where you stopped. Watch and listen to the big screen.</p>
+  </section>
+
+  <section class="hidden" id="room">
+    <div class="status wait" id="status">Your teacher will unlock your seat when it is your turn.</div>
+    <div class="grid">
+      <div>
+        <div class="box">
+          <h2 id="partTitle">The visit</h2>
+          <div class="see" id="see"></div>
+          <div class="calm hidden" id="calm"></div>
+          <div class="lines" id="lines"></div>
+        </div>
+        <div class="box" id="talkBox">
+          <h2>Your turn</h2>
+          <div class="dots" id="dots"></div>
+          <label for="msg">What do you say, or what do you do?</label>
+          <textarea id="msg" placeholder="Type here, or press Speak."></textarea>
+          <div class="row">
+            <button class="mic" id="btnMic">Speak</button>
+            <button id="btnSay">Say</button>
+            <button class="do" id="btnDo">Do</button>
+          </div>
+          <p class="small"><b>Say</b> is for words you say to the person. <b>Do</b> is for an action. Start with "I", for example "I pass her a tissue" or "I sit down next to her". Then press Do.</p>
+        </div>
+      </div>
+      <div>
+        <div class="box">
+          <h2>Your tasks</h2>
+          <p class="small" id="intro"></p>
+          <ul class="tasks" id="tasks"></ul>
+        </div>
+        <div class="box">
+          <h2>Checklist for this part</h2>
+          <p class="small">The class shows these points together. Pick one that is not ticked yet.</p>
+          <ul class="cl" id="cl"></ul>
+        </div>
+        <div class="box hidden" id="myDone">
+          <h2>Your turn is finished</h2>
+          <p id="myPoints"></p>
+          <p class="small">Keep listening. You will need the whole visit for your progress note.</p>
+        </div>
+        <div class="row"><button id="btnLeave" style="background:#fff">Leave the session</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+const FIREBASE = { projectId: "a3-lessons-live", databaseURL: "https://a3-lessons-live-default-rtdb.asia-southeast1.firebasedatabase.app" };
+/* Shared by stage.html and seat.html (inlined by _build/build-ai-shift.js). */
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const LS = {
+  get(k, d) { try { const v = localStorage.getItem('fm_' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem('fm_' + k, JSON.stringify(v)); } catch (e) {} },
+  del(k) { try { localStorage.removeItem('fm_' + k); } catch (e) {} }
+};
+function rid(n) { const c = 'abcdefghjkmnpqrstuvwxyz23456789'; const a = new Uint8Array(n); crypto.getRandomValues(a); return Array.from(a, x => c[x % c.length]).join(''); }
+function mmss(ms) { ms = Math.max(0, ms); const m = Math.floor(ms / 60000), s = Math.floor(ms / 1000) % 60; return m + ':' + (s < 10 ? '0' : '') + s; }
+function cleanCode(s) { return String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6); }
+function toast(msg, ms) { let t = $('toast'); if (!t) { t = document.createElement('div'); t.id = 'toast'; document.body.appendChild(t); } t.textContent = msg; t.classList.add('show'); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('show'), ms || 3200); }
+
+/* ---------- Firebase Realtime Database (the same project as the Presenting view) ---------- */
+const SDK = 'https://www.gstatic.com/firebasejs/10.12.2/';
+let DB = null;
+function loadScript(src) { return new Promise((ok, bad) => { const s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = () => bad(new Error('Could not load ' + src)); document.head.appendChild(s); }); }
+async function dbReady() {
+  if (DB) return DB;
+  await loadScript(SDK + 'firebase-app-compat.js'); await loadScript(SDK + 'firebase-database-compat.js');
+  const app = firebase.apps.length ? firebase.app() : firebase.initializeApp(FIREBASE);
+  const db = firebase.database(app);
+  DB = {
+    ref: p => db.ref(p),
+    get: async p => (await db.ref(p).get()).val(),
+    set: (p, v) => db.ref(p).set(v),
+    update: (p, v) => db.ref(p).update(v),
+    push: (p, v) => db.ref(p).push(v),
+    watch: (p, cb) => { const r = db.ref(p); const h = r.on('value', s => cb(s.val())); return () => r.off('value', h); },
+    onChild: (p, cb) => { const r = db.ref(p); const h = r.on('child_added', s => cb(s.key, s.val())); return () => r.off('child_added', h); },
+    now: () => firebase.database.ServerValue.TIMESTAMP
+  };
+  return DB;
+}
+const ROOT = 'shift/';           /* database rule: shift/$code is read and write for everyone (see README) */
+
+/* ---------- Speech out (the browser's own voices; Microsoft Edge has Natasha and William) ---------- */
+let VOICES = [];
+function refreshVoices() { VOICES = (window.speechSynthesis ? speechSynthesis.getVoices() : []) || []; }
+if (window.speechSynthesis) { refreshVoices(); speechSynthesis.onvoiceschanged = refreshVoices; }
+const FEM = /natasha|catherine|hayley|female|karen|zira|jenny|libby|sonia|mia|aria|samantha|kate|annie|clara|emily/i;
+const MAL = /william|james|male|daniel|ryan|guy|thomas|george|neil|richard|mark|david|liam|duncan/i;
+function voiceByName(name) { return VOICES.find(v => v.name === name) || null; }
+function autoVoice(gender, avoid) {
+  avoid = avoid || [];
+  const ok = v => !avoid.includes(v.name) && (gender === 'female' ? (FEM.test(v.name) && !MAL.test(v.name)) : (MAL.test(v.name) && !FEM.test(v.name)));
+  const au = VOICES.filter(v => /en[-_]AU/i.test(v.lang)), en = VOICES.filter(v => /^en/i.test(v.lang));
+  return au.find(ok) || en.find(ok) || au.find(v => !avoid.includes(v.name)) || en[0] || VOICES[0] || null;
+}
+let speakQueue = [], speaking = false, speakToken = 0, onSpeakState = null;
+function speak(text, voice, opts) {
+  opts = opts || {};
+  return new Promise(resolve => {
+    if (!window.speechSynthesis || !text) return resolve();
+    speakQueue.push({ text: String(text), voice, rate: opts.rate || 1, pitch: opts.pitch || 1, who: opts.who || '', resolve });
+    pump();
+  });
+}
+function pump() {
+  if (speaking || !speakQueue.length) return;
+  const it = speakQueue.shift(); speaking = true;
+  const u = new SpeechSynthesisUtterance(it.text);
+  if (it.voice) u.voice = it.voice; u.rate = it.rate; u.pitch = it.pitch; u.lang = (it.voice && it.voice.lang) || 'en-AU';
+  const tok = ++speakToken; let done = false;
+  const finish = () => { if (done) return; done = true; clearTimeout(guard); speaking = false; if (onSpeakState) onSpeakState(''); it.resolve(); pump(); };
+  u.onstart = () => { if (onSpeakState) onSpeakState(it.who); };
+  u.onend = finish; u.onerror = finish;
+  const words = it.text.split(/\s+/).length;
+  const guard = setTimeout(finish, words * 520 / it.rate + 3000);     /* browsers sometimes never say "end" */
+  try { speechSynthesis.speak(u); } catch (e) { finish(); }
+}
+function stopSpeaking() { speakQueue.forEach(q => q.resolve()); speakQueue = []; try { speechSynthesis.cancel(); } catch (e) {} speaking = false; if (onSpeakState) onSpeakState(''); }
+
+(function () {
+  const SEAT = LS.get('seatId') || (function () { const s = rid(10); LS.set('seatId', s); return s; })();
+  let db = null, code = '', name = '', session = null, unwatch = null, unDone = null, sending = false, lastLinesKey = '';
+  $('code').value = LS.get('cwCode', ''); $('name').value = LS.get('cwName', '');
+
+  async function join() {
+    code = cleanCode($('code').value); name = $('name').value.trim().replace(/\s+/g, ' ').slice(0, 30);
+    if (code.length < 4) return toast('Type the session code from the screen.');
+    if (!name) return toast('Type your first name.');
+    $('btnJoin').disabled = true;
+    try {
+      db = await dbReady();
+      const s = await db.get(ROOT + code + '/session');
+      if (!s || !s.open) { toast('No open session has that code. Check the screen.'); $('btnJoin').disabled = false; return; }
+      await db.set(ROOT + code + '/seats/' + SEAT, { name, at: db.now() });
+      LS.set('cwCode', code); LS.set('cwName', name);
+      $('joinBox').classList.add('hidden'); $('room').classList.remove('hidden'); $('main').classList.add('wide');
+      unwatch = db.watch(ROOT + code + '/session', v => { session = v; render(); });
+      unDone = db.watch(ROOT + code + '/done/' + SEAT, v => showDone(v));
+    } catch (e) { toast('Could not join: ' + e.message); $('btnJoin').disabled = false; }
+  }
+  $('btnJoin').onclick = join;
+  $('name').addEventListener('keydown', e => { if (e.key === 'Enter') join(); });
+
+  function showDone(v) {
+    $('myDone').classList.toggle('hidden', !v);
+    if (!v) return;
+    const p = v.points || [];
+    $('myPoints').innerHTML = p.length ? 'Points you showed: <b>' + p.map(esc).join(', ') + '</b>. Well done.' : 'No new checklist points this time. Next time, choose a point that is not ticked yet.';
+  }
+
+  function render() {
+    const s = session;
+    const st = $('status');
+    if (!s || !s.open) { st.className = 'status off'; st.textContent = 'The session is closed. Ask your teacher.'; enable(false); return; }
+    const mine = s.seat === SEAT, t = s.turn || {};
+    if (s.done) { st.className = 'status off'; st.textContent = 'The visit is finished. Thank you. Your teacher gives you the session for your progress note.'; }
+    else if (mine) {
+      const left = (t.per || 0) - (t.q || 0);
+      st.className = 'status ' + (s.busy ? 'wait' : 'go');
+      st.textContent = s.busy ? 'Wait: listen to the big screen...' : 'Your turn. You are with ' + (s.person || 'the person') + '. What do you say or do? (' + left + (left === 1 ? ' turn left)' : ' turns left)');
+    } else { st.className = 'status wait'; st.textContent = s.seatName ? 'It is ' + s.seatName + "'s turn now. Listen to the big screen." : 'Your teacher will unlock your seat when it is your turn.'; }
+    $('partTitle').textContent = s.part || 'The visit';
+    $('see').textContent = s.see ? 'What you can see: ' + s.see : ''; $('see').classList.toggle('hidden', !s.see);
+    $('calm').classList.toggle('hidden', !s.calm);
+    if (s.calm) $('calm').innerHTML = esc(s.person) + ': ' + [1, 2, 3, 4, 5].map(i => '<i class="' + (i <= s.calm ? 'on' : '') + '"></i>').join('') + ' ' + esc(s.calmText);
+    $('intro').textContent = s.intro || '';
+    $('tasks').innerHTML = (s.tasks || []).map(x => '<li>' + esc(x) + '</li>').join('');
+    $('cl').innerHTML = (s.items || []).map(it => '<li class="' + (it.met ? 'met' : '') + '">' + (it.met ? '&#10003; ' : '') + esc(it.label) + (it.how ? '<span class="how">' + esc(it.how) + '</span>' : '') +
+      ((it.parts || []).length ? '<div class="parts">' + it.parts.map(p => '<span class="' + (p.met ? 'met' : '') + '">' + (p.met ? '&#10003; ' : '') + esc(p.label) + (p.how ? ' (' + esc(p.how) + ')' : '') + '</span>').join('') + '</div>' : '') + '</li>').join('') || '<li>Nothing to tick in this part.</li>';
+    const lines = s.lines || [], key = JSON.stringify(lines);
+    if (key !== lastLinesKey) {
+      lastLinesKey = key;
+      $('lines').innerHTML = lines.length ? lines.map(l => l.who === 'student' ? '<div class="line you"><b>' + esc(l.name) + (l.kind === 'do' ? ' did' : ' said') + ':</b> ' + esc(l.text) + '</div>'
+        : l.who === 'see' ? '<div class="line nar">' + esc(l.text) + '</div>' : '<div class="line them"><b>' + esc(l.name) + ':</b> ' + esc(l.text) + '</div>').join('') : '<div class="line nar">The visit has not started yet.</div>';
+      $('lines').scrollTop = 1e6;
+    }
+    const dots = []; for (let i = 0; i < (t.per || 0); i++) dots.push('<i class="' + (i < (t.q || 0) ? 'used' : '') + '"></i>');
+    $('dots').innerHTML = mine ? dots.join('') : '';
+    $('talkBox').classList.toggle('hidden', !mine);
+    enable(mine && !s.busy && !s.done && (t.q || 0) < (t.per || 0) && !sending);
+  }
+  function enable(on) { ['btnSay', 'btnDo', 'btnMic'].forEach(id => { $(id).disabled = !on && !(id === 'btnMic' && listening); }); }
+
+  async function send(kind) {
+    const text = $('msg').value.trim();
+    if (!text) return toast(kind === 'do' ? 'Type what you do first, for example: I sit down next to her.' : 'Type or speak what you say first.');
+    if (!session || session.seat !== SEAT) return toast('It is not your turn.');
+    stopListening(); sending = true; enable(false);
+    try {
+      await db.push(ROOT + code + '/say/' + SEAT, { text: text.slice(0, 600), kind, n: (session.turn && session.turn.n) || 0, t: db.now() });
+      $('msg').value = ''; toast('Sent. Listen to the big screen.');
+    } catch (e) { toast('Not sent: ' + e.message); }
+    sending = false; setTimeout(render, 400);
+  }
+  $('btnSay').onclick = () => send('say');
+  $('btnDo').onclick = () => send('do');
+
+  /* speech to text (works best in Microsoft Edge or Chrome) */
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  let recog = null, listening = false, base = '';
+  function startListening() {
+    if (!SR) return toast('Speaking does not work in this browser. Please type.');
+    recog = new SR(); recog.lang = 'en-AU'; recog.interimResults = true; recog.continuous = true;
+    base = $('msg').value ? $('msg').value.trim() + ' ' : '';
+    recog.onresult = e => { let txt = ''; for (let i = 0; i < e.results.length; i++) txt += e.results[i][0].transcript; $('msg').value = base + txt.trim(); };
+    recog.onend = () => { listening = false; $('btnMic').classList.remove('on'); $('btnMic').textContent = 'Speak'; render(); };
+    recog.onerror = () => {};
+    try { recog.start(); listening = true; $('btnMic').classList.add('on'); $('btnMic').textContent = 'Stop'; } catch (e) {}
+  }
+  function stopListening() { if (recog && listening) { try { recog.stop(); } catch (e) {} } }
+  $('btnMic').onclick = () => listening ? stopListening() : startListening();
+
+  $('btnLeave').onclick = async () => {
+    if (!confirm('Leave the session?')) return;
+    try { if (db && code) await db.set(ROOT + code + '/seats/' + SEAT, null); } catch (e) {}
+    if (unwatch) unwatch(); if (unDone) unDone(); session = null;
+    $('room').classList.add('hidden'); $('joinBox').classList.remove('hidden'); $('main').classList.remove('wide'); $('btnJoin').disabled = false;
+  };
+})();
+</script>
+</body>
+</html>
