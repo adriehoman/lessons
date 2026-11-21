@@ -152,6 +152,7 @@
     var btn = e.target.closest && e.target.closest('.act-go, .act-check, .act-peek');
     if(!btn) return;
     var act = btn.closest('.activity[id]'); if(!act) return;
+    if(btn.classList.contains('act-check') && act.querySelector('.act-result.need')) return;   /* Check with no answer yet: not a try (21 Nov 2026) */
     var id = act.id, r = mine.a[id] || (mine.a[id] = { s: 'w' });
     var undecided = r.f === undefined || r.f === null;
     if(btn.classList.contains('act-peek')){
